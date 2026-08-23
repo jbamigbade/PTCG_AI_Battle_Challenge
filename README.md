@@ -542,6 +542,12 @@ NumPy
 
 scikit-learn
 
+PyTorch — neural-network and PPO / reinforcement-learning components
+
+SciPy
+
+joblib — model serialization and loading
+
 Reinforcement-learning / PPO components
 
 Statistical evaluation
