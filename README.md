@@ -505,30 +505,61 @@ Behavioral equivalence analysis
 
 Deployment-interface testing
 
+## Results and Visual Evidence
+
+The project produced multiple layers of evaluation evidence spanning controlled benchmarking, developmental model explainability, and comparative baseline analysis. The figures below summarize selected results from the final validation workflow.
+
+### Final Controlled Benchmark Validation
+
+![Final controlled benchmark validation](docs/images/final_benchmark_validation.png)
+
+The certified 61-feature controlled adapter achieved a **61.0% win rate across 300 controlled matches**, with 183 wins and 117 losses. The 95% Wilson confidence interval was **55.37%–66.35%**.
+
+The controlled evaluation showed **96.33% outcome agreement** with the historical Notebook 48 evaluation context, with 11 of 300 match outcomes changing. The final certified Random Forest runtime used **61 features, 11 target classes, and 500 trees**. No retraining or model modification was performed during the final evaluation.
+
+### Developmental Model Explainability
+
+![Developmental model feature importance](docs/images/developmental_feature_importance.png)
+
+Feature-attribution analysis was used during development to investigate the battle-state, legal-action, active-card, and move-signature signals influencing policy decisions.
+
+The displayed feature-importance analysis represents the **64-feature developmental model from Notebook 57** and is retained as supporting explainability evidence. It should not be interpreted as feature importance for the final Notebook 60/61 certified 61-feature runtime model.
+
+### Controlled Baseline Comparison
+
+![Controlled benchmark baseline comparison](docs/images/controlled_baseline_comparison.png)
+
+The controlled 61-feature adapter achieved a **61.0% win rate** in the Notebook 60 benchmark. For descriptive comparison, the evaluated baselines produced win rates of **75.0% for the Random Baseline, 50.0% for the Greedy Damage Baseline, and 58.0% for the Depth-6 Search Baseline**.
+
+These baseline results are reported as controlled experimental evidence and should not be interpreted as universal rankings of agent strength across arbitrary environments, matchups, or evaluation protocols.
+
+---
+
 ## Repository Structure
 PTCG\_AI\_Battle\_Challenge/
 
 |
 
-|-- artifacts/      # Persisted notebook evidence and validation artifacts
+|-- artifacts/        # Persisted notebook evidence and validation artifacts
 
-|-- data/           # Project data
+|-- data/             # Project data
 
-|-- models/         # Model-related project structure
+|-- docs/             # Portfolio documentation and visual evidence
+|   `-- images/       # Benchmark and explainability figures
 
-|-- notebooks/      # Experimental and development notebooks
+|-- models/           # Model-related project structure
 
-|-- outputs/        # Generated evaluation outputs
+|-- notebooks/        # Experimental and development notebooks
 
-|-- reports/        # Analysis and certification reports
+|-- outputs/          # Generated evaluation outputs
 
-|-- scripts/        # Exported and reusable project scripts
+|-- reports/          # Analysis and certification reports
 
-|-- src/            # Reusable project source code
+|-- scripts/          # Exported and reusable project scripts
 
-|-- submission/     # Competition deployment source structure
+|-- src/              # Reusable project source code
 
-|
+|-- submission/       # Competition deployment source structure|
 
 |-- README.md
 
