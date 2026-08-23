@@ -1,12 +1,12 @@
-\# Pokémon TCG AI Battle Challenge
+# Pokémon TCG AI Battle Challenge
 
 
 
-\## End-to-End AI Battle Agent, Machine Learning, Reinforcement Learning, Explainability, and Competition Deployment
+## End-to-End AI Battle Agent, Machine Learning, Reinforcement Learning, Explainability, and Competition Deployment
 
 
 
-This repository documents an end-to-end artificial intelligence project developed for \*\*The Pokémon Company – PTCG AI Battle Challenge Simulation\*\*.
+This repository documents an end-to-end artificial intelligence project developed for **The Pokémon Company – PTCG AI Battle Challenge Simulation**.
 
 
 
@@ -14,11 +14,8 @@ The project explores data-driven and agentic decision-making for the Pokémon Tr
 
 
 
-\---
-
-
-
-\## Project Overview
+---
+## Project Overview
 
 
 
@@ -34,51 +31,48 @@ The complete workflow includes:
 
 
 
-\- Pokémon card-data ingestion and normalization
+- Pokémon card-data ingestion and normalization
 
-\- Card knowledge-base construction
+- Card knowledge-base construction
 
-\- Deck representation and validation
+- Deck representation and validation
 
-\- Battle-state representation
+- Battle-state representation
 
-\- Feature engineering
+- Feature engineering
 
-\- Legal-action modeling
+- Legal-action modeling
 
-\- Supervised machine-learning policies
+- Supervised machine-learning policies
 
-\- Reinforcement-learning / PPO components
+- Reinforcement-learning / PPO components
 
-\- Policy integration
+- Policy integration
 
-\- Battle simulation
+- Battle simulation
 
-\- Side-neutral evaluation
+- Side-neutral evaluation
 
-\- Feature ablation
+- Feature ablation
 
-\- Explainability and feature attribution
+- Explainability and feature attribution
 
-\- Robustness and calibration analysis
+- Robustness and calibration analysis
 
-\- Tournament-scale benchmarking
+- Tournament-scale benchmarking
 
-\- Deployment adaptation
+- Deployment adaptation
 
-\- Controlled end-to-end battle validation
+- Controlled end-to-end battle validation
 
-\- Official-engine integration testing
+- Official-engine integration testing
 
-\- Reproducible competition packaging and certification
-
-
-
-\---
+- Reproducible competition packaging and certification
 
 
 
-\## System Architecture
+---
+## System Architecture
 
 
 
@@ -86,93 +80,87 @@ The complete workflow includes:
 
 Raw Competition Data
 
-&#x20;       |
+        |
 
-&#x20;       v
+        v
 
 Card Knowledge Base
 
-&#x20;       |
+        |
 
-&#x20;       v
+        v
 
 Deck / Battle-State Representation
 
-&#x20;       |
+        |
 
-&#x20;       v
+        v
 
 Feature Engineering
 
-&#x20;       |
+        |
 
-&#x20;       v
+        v
 
 Legal Action Generation
 
-&#x20;       |
+        |
 
-&#x20;       +----------------------+
+        +----------------------+
 
-&#x20;       |                      |
+        |                      |
 
-&#x20;       v                      v
+        v                      v
 
 Supervised ML Policy       PPO / RL Policy
 
-&#x20;       |                      |
+        |                      |
 
-&#x20;       +----------+-----------+
+        +----------+-----------+
 
-&#x20;                  |
+                   |
 
-&#x20;                  v
+                   v
 
-&#x20;           Policy Integration
+            Policy Integration
 
-&#x20;                  |
+                   |
 
-&#x20;                  v
+                   v
 
-&#x20;           Battle Simulation
+            Battle Simulation
 
-&#x20;                  |
+                   |
 
-&#x20;                  v
+                   v
 
-&#x20;      Evaluation / Benchmarking
+       Evaluation / Benchmarking
 
-&#x20;                  |
+                   |
 
-&#x20;                  v
+                   v
 
-&#x20;       Explainability / Robustness
+        Explainability / Robustness
 
-&#x20;                  |
+                   |
 
-&#x20;                  v
+                   v
 
-&#x20;          Deployment Adapter
+           Deployment Adapter
 
-&#x20;                  |
+                   |
 
-&#x20;                  v
+                   v
 
-&#x20;      Competition Submission Agent
+       Competition Submission Agent
+```
 
-
-
-
-
-Development Roadmap
-
-
-
+## Development Roadmap
 The repository contains a long-form experimental and engineering trail implemented primarily through Jupyter notebooks.
 
 
 
-Phase 1 — Data and Game Foundations
+### Phase 1 — Data and Game Foundations
 
 
 
@@ -194,7 +182,7 @@ Legal-move handling
 
 Simulator foundations
 
-Phase 2 — Agent and Policy Development
+### Phase 2 — Agent and Policy Development
 
 
 
@@ -216,7 +204,7 @@ Simulator integration
 
 Policy evaluation
 
-Phase 3 — Competitive Policy Optimization
+### Phase 3 — Competitive Policy Optimization
 
 
 
@@ -240,7 +228,7 @@ Tournament-strength optimization
 
 Legality-aware optimization
 
-Phase 4 — Model Validation and Explainability
+### Phase 4 — Model Validation and Explainability
 
 
 
@@ -264,7 +252,7 @@ Calibration and stress testing
 
 Behavioral drift analysis
 
-Phase 5 — Competition Certification
+### Phase 5 — Competition Certification
 
 
 
@@ -286,7 +274,7 @@ Asset-integrity verification
 
 Deployment certification
 
-Phase 6 — Post-Certification Runtime Validation
+### Phase 6 — Post-Certification Runtime Validation
 
 
 
@@ -312,10 +300,7 @@ Matchup and strategic interpretation
 
 Controlled-environment limitation analysis
 
-Controlled Battle Campaign
-
-
-
+## Controlled Battle Campaign
 A controlled post-certification campaign was executed across:
 
 
@@ -364,11 +349,8 @@ Importantly, this campaign was not interpreted as proof of universal policy supe
 
 
 
-\---
-
-
-
-\## Official-Engine Validation
+---
+## Official-Engine Validation
 
 
 
@@ -389,13 +371,9 @@ Rejected decisions            : 0
 
 
 This provided end-to-end evidence that the packaged agent could participate through the expected competition interface.
+```
 
-
-
-Model Integrity and Reproducibility
-
-
-
+## Model Integrity and Reproducibility
 A major focus of the project was preserving validated assets and separating experimentation from certified deployment.
 
 
@@ -428,25 +406,27 @@ The engineering workflow follows the principle:
 
 
 
+```text
 EXPERIMENTATION
 
-&#x20;     |
+      |
 
-&#x20;     v
+      v
 
 VALIDATION
 
-&#x20;     |
+      |
 
-&#x20;     v
+      v
 
 CERTIFICATION
 
-&#x20;     |
+      |
 
-&#x20;     v
+      v
 
 FROZEN DEPLOYMENT
+```
 
 
 
@@ -454,10 +434,7 @@ Once final deployment assets were certified, subsequent analytical work was desi
 
 
 
-Explainability
-
-
-
+## Explainability
 The project includes multiple interpretability layers designed to investigate not only which actions were selected, but also the model behavior associated with those decisions.
 
 
@@ -482,10 +459,7 @@ Probability redistribution
 
 Model-behavior comparison
 
-Robustness and Evaluation
-
-
-
+## Robustness and Evaluation
 Evaluation extends beyond basic predictive performance.
 
 
@@ -516,8 +490,7 @@ Behavioral equivalence analysis
 
 Deployment-interface testing
 
-Repository Structure
-
+## Repository Structure
 PTCG\_AI\_Battle\_Challenge/
 
 |
@@ -554,10 +527,7 @@ Large competition reference files, local virtual environments, temporary files, 
 
 
 
-Technology Stack
-
-
-
+## Technology Stack
 Primary technologies used throughout the project include:
 
 
@@ -584,8 +554,7 @@ GitHub
 
 SHA-256 artifact verification
 
-Engineering Principles
-
+## Engineering Principles
 Reproducibility
 
 
@@ -634,10 +603,7 @@ The project evaluates not only model behavior but also packaging, imports, entry
 
 
 
-Important Limitation
-
-
-
+## Important Limitation
 The controlled post-certification simulation campaign is not a complete reproduction of all official Pokémon TCG gameplay mechanics.
 
 
@@ -666,8 +632,7 @@ Official hidden competition evaluation remains the authoritative measure of comp
 
 
 
-Project Status
-
+## Project Status
 Data pipeline                     COMPLETE
 
 Feature engineering               COMPLETE
@@ -696,10 +661,7 @@ GitHub preservation               COMPLETE
 
 
 
-Author
-
-
-
+## Author
 Oluwaseyi (John) Bamigbade
 
 
@@ -710,10 +672,7 @@ The Pokémon Company – PTCG AI Battle Challenge Simulation
 
 
 
-Repository Note
-
-
-
+## Repository Note
 This repository preserves the research, engineering, experimentation, validation, and deployment workflow developed during the project.
 
 
@@ -722,10 +681,7 @@ Some large competition assets, generated archives, model binaries, local runtime
 
 
 
-Disclaimer
-
-
-
+## Disclaimer
 Pokémon and Pokémon Trading Card Game are trademarks of their respective owners.
 
 
