@@ -19,15 +19,35 @@ This repository documents an end-to-end artificial intelligence project develope
 
 The project explores data-driven and agentic decision-making for the Pokémon Trading Card Game (PTCG), progressing from card-data engineering and battle-state representation through machine-learning policy development, reinforcement-learning components, explainability, robustness testing, tournament-scale evaluation, deployment adaptation, controlled battle validation, and final competition certification.
 
+## Key Results
+
+| Metric | Result |
+|---|---:|
+| Final controlled benchmark | **300 matches** |
+| Wins / Losses / Draws | **183 / 117 / 0** |
+| Controlled win rate | **61.0%** |
+| 95% Wilson confidence interval | **55.37%–66.35%** |
+| Historical outcome agreement | **96.33%** |
+| Changed outcomes vs. historical context | **11 / 300** |
+| Certified model | **RandomForestClassifier** |
+| Runtime feature count | **61** |
+| Runtime target classes | **11** |
+| Random Forest trees | **500** |
+| Final-evaluation retraining | **None** |
+| Final-evaluation model modification | **None** |
+
+The final benchmark used the frozen certified 61-feature runtime model. The historical comparison is retained as evaluation context; differences between the controlled and historical results include policy-path behavior and should not be interpreted as clean model degradation.
+
+
 ## Project Highlights
 
-- Built an end-to-end AI battle-agent pipeline spanning data engineering, modeling, simulation, evaluation, and deployment.
+- Built an end-to-end AI battle-agent pipeline spanning data engineering, modeling, simulation, evaluation, explainability, and competition deployment.
 - Developed supervised ML policies with scikit-learn and PPO / reinforcement-learning components with PyTorch.
-- Completed a controlled **240-battle evaluation campaign with 0 runtime failures**.
-- Validated **127 / 127 sequential decisions** through the competition-engine interface.
-- Implemented model explainability, feature attribution, ablation analysis, robustness testing, calibration, and behavioral analysis.
-- Used SHA-256 validation, frozen artifacts, manifests, and isolated runtime tests to preserve certified deployment assets.
-
+- Completed a final controlled **300-match benchmark**, producing **183 wins, 117 losses, and a 61.0% win rate**.
+- Certified a **RandomForestClassifier with 61 runtime features, 11 target classes, and 500 trees** for the final competition workflow.
+- Validated the competition interface and preserved a frozen certified model with **no retraining or model modification during final evaluation**.
+- Implemented model explainability, feature attribution, ablation analysis, robustness testing, calibration, behavioral analysis, and tournament-scale evaluation.
+- Used SHA-256 validation, frozen artifacts, manifests, and isolated runtime testing to preserve deployment integrity.
 
 ---
 ## Project Overview
@@ -570,6 +590,84 @@ PTCG\_AI\_Battle\_Challenge/
 
 
 Large competition reference files, local virtual environments, temporary files, selected model binaries, and certified archive backups may be intentionally excluded from GitHub.
+
+
+## Quick Start
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/jbamigbade/PTCG_AI_Battle_Challenge.git
+cd PTCG_AI_Battle_Challenge
+```
+
+### 2. Create a Python environment
+
+```bash
+python -m venv .venv
+```
+
+Activate the environment on Windows:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Explore the project
+
+The repository is organized as a notebook-driven AI/ML development pipeline.
+
+Key areas include:
+
+- `notebooks/` — experimental, modeling, validation, and certification notebooks
+- `src/` — reusable battle-state and supporting source code
+- `models/` — model-related artifacts
+- `reports/` — evaluation and certification evidence
+- `outputs/` — generated notebook outputs
+- `docs/images/` — portfolio-ready benchmark and explainability figures
+- `submission/` — competition deployment source structure
+
+### 5. Final Certified Model
+
+The final evaluation workflow uses the following frozen certified model:
+
+- **RandomForestClassifier**
+- **61 runtime features**
+- **11 target classes**
+- **500 trees**
+
+The final controlled benchmark evaluated **300 matches**, producing:
+
+- **183 wins**
+- **117 losses**
+- **0 draws**
+- **61.0% win rate**
+- **95% Wilson CI: 55.37%–66.35%**
+
+No retraining or model modification was performed during the final evaluation.
+
+## Reproducibility and Validation
+
+The project uses persisted artifacts, evaluation reports, model lineage records, and integrity checks to separate developmental experimentation from final certified evidence.
+
+The final competition-evaluation workflow preserves:
+
+- frozen model artifacts
+- SHA-256 integrity validation
+- runtime feature-contract validation
+- controlled benchmark evidence
+- model-lineage documentation
+- competition-interface validation
+- isolated deployment testing
+- persisted evaluation and certification outputs
+
+Developmental explainability results are retained as supporting evidence and are explicitly distinguished from the final certified 61-feature runtime model.
 
 
 
