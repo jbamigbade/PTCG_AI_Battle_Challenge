@@ -1,0 +1,49 @@
+scenario_id,scenario_name,current_player,policy_move,probability,is_legal,is_selected
+T52_S001,Bulbasaur_vs_Eevee_Player_Start,Player,Ascension,0.564,False,False
+T52_S001,Bulbasaur_vs_Eevee_Player_Start,Player,Bind Down,0.088,True,True
+T52_S001,Bulbasaur_vs_Eevee_Player_Start,Player,Live Coal,0.0,False,False
+T52_S001,Bulbasaur_vs_Eevee_Player_Start,Player,Pass,0.212,False,False
+T52_S001,Bulbasaur_vs_Eevee_Player_Start,Player,Quick Attack,0.136,False,False
+T52_S001,Bulbasaur_vs_Eevee_Player_Start,Player,Tuck Tail,0.0,False,False
+T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,Opponent,Ascension,0.19733333333333333,True,False
+T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,Opponent,Bind Down,0.0013333333333333333,False,False
+T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,Opponent,Live Coal,0.0,False,False
+T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,Opponent,Pass,0.14933333333333335,False,False
+T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,Opponent,Quick Attack,0.652,True,True
+T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,Opponent,Tuck Tail,0.0,False,False
+T52_S003,Charmander_vs_Eevee_Player_Start,Player,Ascension,0.6013333333333334,False,False
+T52_S003,Charmander_vs_Eevee_Player_Start,Player,Bind Down,0.0,False,False
+T52_S003,Charmander_vs_Eevee_Player_Start,Player,Live Coal,0.06266666666666666,True,True
+T52_S003,Charmander_vs_Eevee_Player_Start,Player,Pass,0.204,False,False
+T52_S003,Charmander_vs_Eevee_Player_Start,Player,Quick Attack,0.132,False,False
+T52_S003,Charmander_vs_Eevee_Player_Start,Player,Tuck Tail,0.0,False,False
+T52_S004,Charmander_vs_Eevee_Opponent_Start,Opponent,Ascension,0.184,True,False
+T52_S004,Charmander_vs_Eevee_Opponent_Start,Opponent,Bind Down,0.0,False,False
+T52_S004,Charmander_vs_Eevee_Opponent_Start,Opponent,Live Coal,0.008,False,False
+T52_S004,Charmander_vs_Eevee_Opponent_Start,Opponent,Pass,0.14,False,False
+T52_S004,Charmander_vs_Eevee_Opponent_Start,Opponent,Quick Attack,0.668,True,True
+T52_S004,Charmander_vs_Eevee_Opponent_Start,Opponent,Tuck Tail,0.0,False,False
+T52_S005,Meowth_vs_Bulbasaur_Player_Start,Player,Ascension,0.62,False,False
+T52_S005,Meowth_vs_Bulbasaur_Player_Start,Player,Bind Down,0.004,False,False
+T52_S005,Meowth_vs_Bulbasaur_Player_Start,Player,Live Coal,0.009333333333333334,False,False
+T52_S005,Meowth_vs_Bulbasaur_Player_Start,Player,Pass,0.236,False,False
+T52_S005,Meowth_vs_Bulbasaur_Player_Start,Player,Quick Attack,0.10133333333333333,False,False
+T52_S005,Meowth_vs_Bulbasaur_Player_Start,Player,Tuck Tail,0.029333333333333333,True,True
+T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,Opponent,Ascension,0.648,False,False
+T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,Opponent,Bind Down,0.0,True,True
+T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,Opponent,Live Coal,0.017333333333333333,False,False
+T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,Opponent,Pass,0.19333333333333333,False,False
+T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,Opponent,Quick Attack,0.11733333333333333,False,False
+T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,Opponent,Tuck Tail,0.024,False,False
+T52_S007,Critical_HP_Bulbasaur_vs_Eevee,Opponent,Ascension,0.0,True,False
+T52_S007,Critical_HP_Bulbasaur_vs_Eevee,Opponent,Bind Down,0.0,False,False
+T52_S007,Critical_HP_Bulbasaur_vs_Eevee,Opponent,Live Coal,0.0,False,False
+T52_S007,Critical_HP_Bulbasaur_vs_Eevee,Opponent,Pass,0.0,False,False
+T52_S007,Critical_HP_Bulbasaur_vs_Eevee,Opponent,Quick Attack,1.0,True,True
+T52_S007,Critical_HP_Bulbasaur_vs_Eevee,Opponent,Tuck Tail,0.0,False,False
+T52_S008,Low_Energy_Eevee_vs_Charmander,Player,Ascension,0.9893333333333333,True,True
+T52_S008,Low_Energy_Eevee_vs_Charmander,Player,Bind Down,0.0013333333333333333,False,False
+T52_S008,Low_Energy_Eevee_vs_Charmander,Player,Live Coal,0.005333333333333333,False,False
+T52_S008,Low_Energy_Eevee_vs_Charmander,Player,Pass,0.0,False,False
+T52_S008,Low_Energy_Eevee_vs_Charmander,Player,Quick Attack,0.004,False,False
+T52_S008,Low_Energy_Eevee_vs_Charmander,Player,Tuck Tail,0.0,False,False

@@ -1,0 +1,7 @@
+opponent,policy_type,chosen_move,score,reason
+Random,random,Retreat,0.0,Random legal move
+Greedy,greedy,Evolution Burst,80.0,Highest immediate value
+Heuristic,heuristic,Evolution Burst,70.0,Highest heuristic evaluation
+Search,search,Evolution Burst,90.0,Search engine recommendation
+Aggressive,aggressive,Evolution Burst,190.0,Highest damage and knockout value
+Defensive,defensive,Retreat,155.0,Highest defensive value

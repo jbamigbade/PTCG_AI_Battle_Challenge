@@ -1,0 +1,8 @@
+field,available_in_pdf,safe_to_use,details
+card_id,True,True,Directly present in the Card ID index.
+card_name,True,True,Directly present in the Card ID index.
+expansion,True,True,Expansion code is directly present.
+collection_number,True,True,Collection number is directly present.
+attacks,False,False,The Card ID index links to images but does not list attacks.
+damage,False,False,Damage must be obtained from the exact card image or metadata.
+hp,False,False,HP must be obtained from the exact card image or metadata.

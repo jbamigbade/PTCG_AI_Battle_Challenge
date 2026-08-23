@@ -1,0 +1,19 @@
+file_name,symbol_name,symbol_type,signature,line_number,docstring_summary
+advanced_search.py,BoundType,class,,26,Describes how a transposition-table score should be interpreted.
+advanced_search.py,TranspositionEntry,class,,36,One cached search result.
+advanced_search.py,ZobristHasher,class,,47,Deterministic 64-bit Zobrist hashing system.
+advanced_search.py,SearchStats,class,,138,Statistics collected during one complete search.
+advanced_search.py,SearchResult,class,,196,Final result returned by the search engine.
+advanced_search.py,AdvancedSearchEngine,class,,214,Advanced adversarial search engine with:
+advanced_search.py,search_for_time,function,"(self, state, seconds = 1.0, verbose = False, max_depth = 100, clear_table = True, clear_killers = True, clear_history = True)",640,Run iterative deepening until the time budget expires.
+agent_decision.py,AgentDecision,class,,10,Store one completed search decision.
+battle_agent.py,PokemonBattleAgent,class,,10,Use an AdvancedSearchEngine to choose Pokémon actions.
+battle_simulation.py,BattleTurnRecord,class,,15,Record one completed simulated battle turn.
+battle_simulation.py,BattleSimulationResult,class,,47,Store a complete simulated battle result.
+battle_simulation.py,determine_battle_winner,function,(state: BattleState) -> Optional[str],77,Return the winner when the battle reaches a terminal state.
+battle_simulation.py,simulate_ai_battle,function,"(initial_state: BattleState, agent: PokemonBattleAgent, search_depth: int = 6, max_turns: int = 20, verbose: bool = True) -> BattleSimulationResult",103,Run a complete alternating AI-versus-AI battle.
+battle_simulation.py,create_battle_transcript,function,(simulation: BattleSimulationResult) -> str,197,Create a readable text transcript for a simulation.
+battle_state.py,PokemonState,class,,10,Represents one Pokémon currently in play.
+battle_state.py,PlayerState,class,,22,Represents one player's current battlefield.
+battle_state.py,BattleState,class,,32,Complete position used by minimax and advanced search.
+simulator.py,apply_move,function,"(battle_state: BattleState, move: Move) -> BattleState",14,Apply one move for the side identified by current_player.

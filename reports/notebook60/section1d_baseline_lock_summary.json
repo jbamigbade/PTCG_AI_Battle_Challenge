@@ -1,0 +1,10 @@
+{
+  "source_notebook": 48,
+  "source_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook48\\competitive_policy_baseline_tournament_summary.json",
+  "baseline_type": "competitive_policy_baseline_tournament",
+  "overall_win_rate": 0.6466666666666666,
+  "overall_win_rate_percent": 64.66666666666666,
+  "baseline_locked": true,
+  "r3_model_modified": false,
+  "r3_retrained": false
+}

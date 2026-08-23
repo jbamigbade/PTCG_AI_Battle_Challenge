@@ -1,0 +1,107 @@
+match_id,agent_name,baseline_name,player_card,opponent_card,starting_side,winner,turns,stop_reason,agent_result,fallback_count,elapsed_seconds,evaluated_agent_side,baseline_result,draw,competitive_win,competitive_loss,normalized_side
+2,Competitive Policy,Random Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0009311999892815,Opponent,1.0,False,False,True,Opponent
+4,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0014380998909473,Opponent,1.0,False,False,True,Opponent
+6,Competitive Policy,Random Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0014873000327497,Opponent,1.0,False,False,True,Opponent
+10,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0009875999530777,Opponent,1.0,False,False,True,Opponent
+11,Competitive Policy,Random Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0009437999688088,Player,1.0,False,False,True,Player
+22,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.000907800043933,Opponent,1.0,False,False,True,Opponent
+30,Competitive Policy,Random Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0009652000153437,Opponent,1.0,False,False,True,Opponent
+34,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0009426000760868,Opponent,1.0,False,False,True,Opponent
+40,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0015104000922292,Opponent,1.0,False,False,True,Opponent
+42,Competitive Policy,Random Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0009072000393643,Opponent,1.0,False,False,True,Opponent
+46,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,0,0.0016519000055268,Opponent,1.0,False,False,True,Opponent
+52,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0015301998937502,Opponent,1.0,False,False,True,Opponent
+59,Competitive Policy,Random Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0010340999579057,Player,1.0,False,False,True,Player
+70,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,0,0.0016213000053539,Opponent,1.0,False,False,True,Opponent
+71,Competitive Policy,Random Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0007642999989911,Player,1.0,False,False,True,Player
+74,Competitive Policy,Random Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.000774799962528,Opponent,1.0,False,False,True,Opponent
+76,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0013916000025346,Opponent,1.0,False,False,True,Opponent
+82,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0007999000372365,Opponent,1.0,False,False,True,Opponent
+83,Competitive Policy,Random Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0007572999456897,Player,1.0,False,False,True,Player
+88,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0012931000674143,Opponent,1.0,False,False,True,Opponent
+94,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0007888000691309,Opponent,1.0,False,False,True,Opponent
+100,Competitive Policy,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0016931999707594,Opponent,1.0,False,False,True,Opponent
+102,Competitive Policy,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0007749000797048,Opponent,1.0,False,False,True,Opponent
+104,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0013660000404343,Opponent,1.0,False,False,True,Opponent
+106,Competitive Policy,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008703999919816,Opponent,1.0,False,False,True,Opponent
+110,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.000813000020571,Opponent,1.0,False,False,True,Opponent
+111,Competitive Policy,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0008817999623715,Player,1.0,False,False,True,Player
+114,Competitive Policy,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008261000039055,Opponent,1.0,False,False,True,Opponent
+116,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0014393999008461,Opponent,1.0,False,False,True,Opponent
+118,Competitive Policy,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008738000178709,Opponent,1.0,False,False,True,Opponent
+122,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0007603999692946,Opponent,1.0,False,False,True,Opponent
+123,Competitive Policy,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0008663999615237,Player,1.0,False,False,True,Player
+126,Competitive Policy,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008618000429123,Opponent,1.0,False,False,True,Opponent
+128,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0013121999800205,Opponent,1.0,False,False,True,Opponent
+130,Competitive Policy,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008117000106722,Opponent,1.0,False,False,True,Opponent
+134,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.000791999977082,Opponent,1.0,False,False,True,Opponent
+135,Competitive Policy,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0009215000318363,Player,1.0,False,False,True,Player
+138,Competitive Policy,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008926000446081,Opponent,1.0,False,False,True,Opponent
+140,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.001295700087212,Opponent,1.0,False,False,True,Opponent
+142,Competitive Policy,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0007679000264033,Opponent,1.0,False,False,True,Opponent
+146,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008122000144794,Opponent,1.0,False,False,True,Opponent
+147,Competitive Policy,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0008772000437602,Player,1.0,False,False,True,Player
+150,Competitive Policy,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008772999281063,Opponent,1.0,False,False,True,Opponent
+152,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0014550000196322,Opponent,1.0,False,False,True,Opponent
+154,Competitive Policy,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0007571000605821,Opponent,1.0,False,False,True,Opponent
+158,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008411000017076,Opponent,1.0,False,False,True,Opponent
+159,Competitive Policy,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0008389999857172,Player,1.0,False,False,True,Player
+162,Competitive Policy,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008798000635579,Opponent,1.0,False,False,True,Opponent
+164,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0020979000255465,Opponent,1.0,False,False,True,Opponent
+166,Competitive Policy,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008649999508634,Opponent,1.0,False,False,True,Opponent
+170,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0009279999649152,Opponent,1.0,False,False,True,Opponent
+171,Competitive Policy,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0008722000056877,Player,1.0,False,False,True,Player
+174,Competitive Policy,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008206999627873,Opponent,1.0,False,False,True,Opponent
+176,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0013481000205501,Opponent,1.0,False,False,True,Opponent
+178,Competitive Policy,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0009010999929159,Opponent,1.0,False,False,True,Opponent
+182,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008304000366479,Opponent,1.0,False,False,True,Opponent
+183,Competitive Policy,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0009117999579757,Player,1.0,False,False,True,Player
+186,Competitive Policy,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0009332000045105,Opponent,1.0,False,False,True,Opponent
+188,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0013021000195294,Opponent,1.0,False,False,True,Opponent
+190,Competitive Policy,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008497999515384,Opponent,1.0,False,False,True,Opponent
+194,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0007839000318199,Opponent,1.0,False,False,True,Opponent
+195,Competitive Policy,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0008671999676153,Player,1.0,False,False,True,Player
+198,Competitive Policy,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0008612000383436,Opponent,1.0,False,False,True,Opponent
+200,Competitive Policy,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0016574999317526,Opponent,1.0,False,False,True,Opponent
+202,Competitive Policy,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0046014999970793,Opponent,1.0,False,False,True,Opponent
+204,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0031745000742375,Opponent,1.0,False,False,True,Opponent
+206,Competitive Policy,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0036903000436723,Opponent,1.0,False,False,True,Opponent
+210,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,0,0.0044492000015452,Opponent,1.0,False,False,True,Opponent
+211,Competitive Policy,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0044063999084755,Player,1.0,False,False,True,Player
+214,Competitive Policy,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0040059000020846,Opponent,1.0,False,False,True,Opponent
+216,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0030632000416517,Opponent,1.0,False,False,True,Opponent
+218,Competitive Policy,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0034030000679194,Opponent,1.0,False,False,True,Opponent
+222,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,0,0.0041227000765502,Opponent,1.0,False,False,True,Opponent
+223,Competitive Policy,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0049062999896705,Player,1.0,False,False,True,Player
+226,Competitive Policy,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0041091999737545,Opponent,1.0,False,False,True,Opponent
+228,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0034207000862807,Opponent,1.0,False,False,True,Opponent
+230,Competitive Policy,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.003560799988918,Opponent,1.0,False,False,True,Opponent
+234,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,0,0.0039153000107035,Opponent,1.0,False,False,True,Opponent
+235,Competitive Policy,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0039454000070691,Player,1.0,False,False,True,Player
+238,Competitive Policy,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0037527000531554,Opponent,1.0,False,False,True,Opponent
+240,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0028544999659061,Opponent,1.0,False,False,True,Opponent
+242,Competitive Policy,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0032496999483555,Opponent,1.0,False,False,True,Opponent
+246,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,0,0.0041109999874606,Opponent,1.0,False,False,True,Opponent
+247,Competitive Policy,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0049001999432221,Player,1.0,False,False,True,Player
+250,Competitive Policy,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0037933000130578,Opponent,1.0,False,False,True,Opponent
+252,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0029734999407082,Opponent,1.0,False,False,True,Opponent
+254,Competitive Policy,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0033936999971047,Opponent,1.0,False,False,True,Opponent
+258,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,0,0.0047857000026851,Opponent,1.0,False,False,True,Opponent
+259,Competitive Policy,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0041096999775618,Player,1.0,False,False,True,Player
+262,Competitive Policy,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0040428000502288,Opponent,1.0,False,False,True,Opponent
+264,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0028415999840945,Opponent,1.0,False,False,True,Opponent
+266,Competitive Policy,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0034528999822214,Opponent,1.0,False,False,True,Opponent
+270,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,0,0.0039966000476852,Opponent,1.0,False,False,True,Opponent
+271,Competitive Policy,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0041872999863699,Player,1.0,False,False,True,Player
+274,Competitive Policy,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0038305000634863,Opponent,1.0,False,False,True,Opponent
+276,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0028831999516114,Opponent,1.0,False,False,True,Opponent
+278,Competitive Policy,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0033809000160545,Opponent,1.0,False,False,True,Opponent
+282,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,0,0.004114200011827,Opponent,1.0,False,False,True,Opponent
+283,Competitive Policy,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0044424999505281,Player,1.0,False,False,True,Player
+286,Competitive Policy,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0038115999195724,Opponent,1.0,False,False,True,Opponent
+288,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0029003999661654,Opponent,1.0,False,False,True,Opponent
+290,Competitive Policy,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.004348500049673,Opponent,1.0,False,False,True,Opponent
+294,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,0,0.0043623000383377,Opponent,1.0,False,False,True,Opponent
+295,Competitive Policy,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,0,0.0039052000502124,Player,1.0,False,False,True,Player
+298,Competitive Policy,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,0,0.0040196001064032,Opponent,1.0,False,False,True,Opponent
+300,Competitive Policy,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,0,0.0030014000367373,Opponent,1.0,False,False,True,Opponent

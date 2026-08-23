@@ -1,0 +1,21 @@
+{
+  "status": "FULL_LEGALITY_AWARE_TOURNAMENT_REPLAY_COMPLETE",
+  "battle_count": 24,
+  "battles_failed": 0,
+  "player_wins": 7,
+  "opponent_wins": 14,
+  "draws": 3,
+  "winner_agreement_rate": 1.0,
+  "turn_count_agreement_rate": 1.0,
+  "policy_decisions": 210,
+  "single_action_direct_decisions": 187,
+  "model_decisions": 23,
+  "selector_decisions": 0,
+  "fallback_decisions": 0,
+  "fallback_rate": 0.0,
+  "average_turns": 8.75,
+  "notebook52_outcomes_preserved": true,
+  "production_legality_preserved": true,
+  "ready_for_notebook53_final_validation": true,
+  "next_stage": "NOTEBOOK53_FINAL_VALIDATION_AND_HANDOFF"
+}

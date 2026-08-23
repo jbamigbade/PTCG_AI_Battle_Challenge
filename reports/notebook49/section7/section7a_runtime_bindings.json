@@ -1,0 +1,425 @@
+{
+    "scenario": {
+        "source_scenario_id": "NB48_LOSS_210",
+        "match_id": 210,
+        "agent_name": "Competitive Policy",
+        "baseline_name": "Depth-6 Search Baseline",
+        "player_card": "Bulbasaur",
+        "opponent_card": "Eevee",
+        "starting_side": "Player",
+        "evaluated_agent_side": "Opponent",
+        "normalized_side": "Opponent",
+        "winner": "Player",
+        "turns": 5,
+        "stop_reason": "Battle reached a terminal state.",
+        "fallback_count": 0,
+        "elapsed_seconds": 0.0044492000015452,
+        "baseline_strength": 3.0,
+        "side_priority": 2.0,
+        "turn_complexity": 1.5,
+        "hard_example_priority": 9.0,
+        "hard_example_rank": 1,
+        "replay_level": "LEVEL_1_SCENARIO_REGENERATION",
+        "mining_status": "PENDING_REPLAY",
+        "records_mined": 0,
+        "queue_position": 1
+    },
+    "dry_run_seed": 4907001,
+    "class_bindings": {
+        "simulator": {
+            "role": "simulator",
+            "status": "NOT_BOUND",
+            "attempts": [
+                {
+                    "module": "'src.simulator'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.adapters'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.battle_state'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.battle_state'",
+                    "class": "'PlayerState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "[]",
+                    "unresolved_required": "['active', 'bench']",
+                    "accepted_parameters": "['active', 'bench', 'prize_cards_remaining', 'hand_size']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.battle_state'",
+                    "class": "'PokemonState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['card']",
+                    "unresolved_required": "['current_hp']",
+                    "accepted_parameters": "['card', 'current_hp', 'attached_energy', 'status', 'damage', 'is_active']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.legal_moves'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                }
+            ]
+        },
+        "state": {
+            "role": "state",
+            "status": "NOT_BOUND",
+            "attempts": [
+                {
+                    "module": "'src.battle_state'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.battle_state'",
+                    "class": "'PlayerState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "[]",
+                    "unresolved_required": "['active', 'bench']",
+                    "accepted_parameters": "['active', 'bench', 'prize_cards_remaining', 'hand_size']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.battle_state'",
+                    "class": "'PokemonState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['card']",
+                    "unresolved_required": "['current_hp']",
+                    "accepted_parameters": "['card', 'current_hp', 'attached_energy', 'status', 'damage', 'is_active']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.adapters'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.legal_moves'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.legal_moves'",
+                    "class": "'PokemonState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['card']",
+                    "unresolved_required": "['current_hp']",
+                    "accepted_parameters": "['card', 'current_hp', 'attached_energy', 'status', 'damage', 'is_active']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.simulator'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                }
+            ]
+        },
+        "search": {
+            "role": "search",
+            "module": "src.engine.advanced_search",
+            "class": "SearchStats",
+            "role_score": 17.0,
+            "signature": "(nodes: 'int' = 0, leaf_nodes: 'int' = 0, terminal_nodes: 'int' = 0, cutoffs: 'int' = 0, transposition_hits: 'int' = 0, transposition_stores: 'int' = 0, transposition_cutoffs: 'int' = 0, killer_hits: 'int' = 0, killer_stores: 'int' = 0, history_hits: 'int' = 0, history_updates: 'int' = 0, completed_depth: 'int' = 0, elapsed_seconds: 'float' = 0.0, depth_nodes: 'Dict[int, int]' = <factory>, depth_times: 'Dict[int, float]' = <factory>) -> None",
+            "arguments": [],
+            "public_methods": [
+                "as_dict",
+                "reset"
+            ],
+            "attempts": [
+                {
+                    "module": "'src.engine.advanced_search'",
+                    "class": "'AdvancedSearchEngine'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['evaluate_state', 'state_key']",
+                    "unresolved_required": "['generate_moves', 'apply_move', 'is_terminal', 'current_player']",
+                    "accepted_parameters": "['generate_moves', 'apply_move', 'evaluate_state', 'is_terminal', 'current_player', 'move_to_string', 'state_key', 'use_transposition_table', 'move_order_score', 'use_move_ordering', 'move_key', 'use_killer_moves', 'killer_slots', 'use_history_heuristic', 'history_multiplier']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.engine.advanced_search'",
+                    "class": "'Any'",
+                    "status": "'INSTANTIATION_ERROR'",
+                    "arguments": "[]",
+                    "unresolved_required": "[]",
+                    "error": "'TypeError: Any cannot be instantiated'"
+                },
+                {
+                    "module": "'src.engine.advanced_search'",
+                    "class": "'BoundType'",
+                    "status": "'INSTANTIATION_ERROR'",
+                    "arguments": "[]",
+                    "unresolved_required": "[]",
+                    "error": "\"TypeError: EnumType.__call__() missing 1 required positional argument: 'value'\""
+                },
+                {
+                    "module": "'src.engine.advanced_search'",
+                    "class": "'Enum'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['start']",
+                    "unresolved_required": "['new_class_name', 'names']",
+                    "accepted_parameters": "['new_class_name', 'names', 'module', 'qualname', 'type', 'start', 'boundary']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.engine.advanced_search'",
+                    "class": "'SearchResult'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "[]",
+                    "unresolved_required": "['best_move', 'score', 'completed_depth']",
+                    "accepted_parameters": "['best_move', 'score', 'completed_depth', 'principal_variation', 'stats']",
+                    "error": "''"
+                }
+            ],
+            "status": "BOUND"
+        },
+        "agent": {
+            "role": "agent",
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyAgent",
+            "role_score": 28.0,
+            "signature": "(checkpoint_path: 'str | Path', device: 'str | None' = None, name: 'str' = 'Competitive Policy Agent') -> 'None'",
+            "arguments": [
+                "checkpoint_path",
+                "name"
+            ],
+            "public_methods": [
+                "act",
+                "choose_move",
+                "get_last_decision",
+                "select_move"
+            ],
+            "attempts": [
+                {
+                    "module": "'src.competitive.competitive_policy_agent'",
+                    "class": "'Any'",
+                    "status": "'INSTANTIATION_ERROR'",
+                    "arguments": "[]",
+                    "unresolved_required": "[]",
+                    "error": "'TypeError: Any cannot be instantiated'"
+                }
+            ],
+            "status": "BOUND"
+        },
+        "adapter": {
+            "role": "adapter",
+            "status": "NOT_BOUND",
+            "attempts": [
+                {
+                    "module": "'src.adapters'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.battle_state'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.battle_state'",
+                    "class": "'PlayerState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "[]",
+                    "unresolved_required": "['active', 'bench']",
+                    "accepted_parameters": "['active', 'bench', 'prize_cards_remaining', 'hand_size']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.battle_state'",
+                    "class": "'PokemonState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['card']",
+                    "unresolved_required": "['current_hp']",
+                    "accepted_parameters": "['card', 'current_hp', 'attached_energy', 'status', 'damage', 'is_active']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.legal_moves'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.legal_moves'",
+                    "class": "'PokemonState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['card']",
+                    "unresolved_required": "['current_hp']",
+                    "accepted_parameters": "['card', 'current_hp', 'attached_energy', 'status', 'damage', 'is_active']",
+                    "error": "''"
+                },
+                {
+                    "module": "'src.simulator'",
+                    "class": "'BattleState'",
+                    "status": "'UNRESOLVED_ARGUMENTS'",
+                    "arguments": "['player', 'opponent']",
+                    "unresolved_required": "['turn_number', 'current_player']",
+                    "accepted_parameters": "['player', 'opponent', 'turn_number', 'current_player']",
+                    "error": "''"
+                }
+            ]
+        }
+    },
+    "method_bindings": {
+        "initialize": {
+            "role": "initialize",
+            "status": "BOUND",
+            "runtime_role": "search",
+            "module": "src.engine.advanced_search",
+            "class": "SearchStats",
+            "method": "reset",
+            "signature": "() -> 'None'",
+            "role_score": 9.0,
+            "attempts": [
+                {
+                    "runtime_role": "'search'",
+                    "module": "'src.engine.advanced_search'",
+                    "class": "'SearchStats'",
+                    "method": "'reset'",
+                    "signature": "\"() -> 'None'\"",
+                    "score": "9.0"
+                }
+            ]
+        },
+        "legal_moves": {
+            "role": "legal_moves",
+            "status": "NOT_BOUND",
+            "attempts": []
+        },
+        "transition": {
+            "role": "transition",
+            "status": "BOUND",
+            "runtime_role": "search",
+            "module": "src.engine.advanced_search",
+            "class": "SearchStats",
+            "method": "as_dict",
+            "signature": "() -> 'Dict[str, Any]'",
+            "role_score": 6.0,
+            "attempts": [
+                {
+                    "runtime_role": "'search'",
+                    "module": "'src.engine.advanced_search'",
+                    "class": "'SearchStats'",
+                    "method": "'as_dict'",
+                    "signature": "\"() -> 'Dict[str, Any]'\"",
+                    "score": "6.0"
+                }
+            ]
+        },
+        "terminal": {
+            "role": "terminal",
+            "status": "NOT_BOUND",
+            "attempts": []
+        },
+        "agent_action": {
+            "role": "agent_action",
+            "status": "BOUND",
+            "runtime_role": "agent",
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyAgent",
+            "method": "choose_move",
+            "signature": "(state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'",
+            "role_score": 14.0,
+            "attempts": [
+                {
+                    "runtime_role": "'agent'",
+                    "module": "'src.competitive.competitive_policy_agent'",
+                    "class": "'CompetitivePolicyAgent'",
+                    "method": "'choose_move'",
+                    "signature": "\"(state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'\"",
+                    "score": "14.0"
+                }
+            ]
+        },
+        "search_action": {
+            "role": "search_action",
+            "status": "BOUND",
+            "runtime_role": "search",
+            "module": "src.engine.advanced_search",
+            "class": "SearchStats",
+            "method": "as_dict",
+            "signature": "() -> 'Dict[str, Any]'",
+            "role_score": 10.0,
+            "attempts": [
+                {
+                    "runtime_role": "'search'",
+                    "module": "'src.engine.advanced_search'",
+                    "class": "'SearchStats'",
+                    "method": "'as_dict'",
+                    "signature": "\"() -> 'Dict[str, Any]'\"",
+                    "score": "10.0"
+                }
+            ]
+        },
+        "observation": {
+            "role": "observation",
+            "status": "NOT_BOUND",
+            "attempts": []
+        }
+    },
+    "class_binding_checks": {
+        "simulator": false,
+        "search": true,
+        "agent": true
+    },
+    "method_binding_checks": {
+        "initialize": true,
+        "legal_moves": false,
+        "transition": true,
+        "agent_action": true,
+        "search_action": true
+    },
+    "binding_pass_count": 6,
+    "binding_total_count": 8
+}

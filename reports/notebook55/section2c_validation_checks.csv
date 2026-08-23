@@ -1,0 +1,11 @@
+check,passed,value,expected
+all_64_features_partitioned,True,64,64
+every_feature_has_family,True,64,64
+feature_names_unique,True,64,64
+legal_signature_features_found,True,6,> 0
+compatibility_features_found,True,6,> 0
+r0_preserves_all_features,True,64,64
+r1_removes_signature_features,True,58,< 64
+r2_removes_more_than_r1,True,"{'r1': 58, 'r2': 52}",R2 < R1
+r3_state_centric_partition_created,True,46,Less than R2
+next_stage_recognized,True,RECOVER_TRAINING_AND_VALIDATION_MATRICES,RECOVER_TRAINING_AND_VALIDATION_MATRICES

@@ -1,0 +1,17 @@
+field,category
+sample_id,identifier
+game_index,identifier
+turn,state
+actor,state
+observation_vector,state
+legal_moves,action_space
+legal_move_mask,action_space
+chosen_move,target
+chosen_move_index,target
+search_score,optional
+search_depth,optional
+nodes_searched,optional
+reward,training
+done,training
+winner,training
+source_dataset,metadata

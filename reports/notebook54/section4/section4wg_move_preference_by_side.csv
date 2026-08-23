@@ -1,0 +1,3 @@
+evaluation_side,selected_move,decisions,mirror_pairs,average_confidence,minimum_confidence,maximum_confidence,average_acting_energy,fallback_decisions,side_move_share
+Opponent,Quick Attack,92,92,0.8893913043478261,0.824,0.976,2.5,0,1.0
+Player,Quick Attack,92,92,0.8924347826086957,0.826,0.978,2.5,0,1.0

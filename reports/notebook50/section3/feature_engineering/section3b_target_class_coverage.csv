@@ -1,0 +1,2 @@
+policy_target,train_rows,validation_rows,test_rows,present_in_train,present_in_validation,present_in_test
+pass_0_0_0_no_legal_attack_was_available,740,160,160,True,True,True

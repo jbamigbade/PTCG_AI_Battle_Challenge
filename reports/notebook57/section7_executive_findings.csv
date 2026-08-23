@@ -1,0 +1,13 @@
+finding_id,finding,result
+F01,Predicted action stability,All four frozen policies preserved identical predicted actions across all 184 controlled evaluation cases.
+F02,Probability sensitivity,The largest observed case-level probability drift was 0.168.
+F03,Most important shared feature,numeric__is_legal__pass had the highest mean importance when retained across the strategy set (0.0554).
+F04,Dominant R3 feature,categorical__active_card_Bulbasaur was the strongest feature in R3_STATE_CENTRIC_POLICY with importance 0.0863.
+F05,Largest ablation stage,R2_TO_R3 removed 30.22% of the prior model importance.
+F06,Most sensitive action on average,Quick Attack had the largest mean probability drift (0.0534).
+F07,Largest single-action drift,Ascension produced the largest observed single-action probability drift (0.168).
+F08,Primary probability gain,Ascension gained the most probability on average (+0.0471).
+F09,Primary probability loss,Quick Attack lost the most probability on average (-0.0475).
+F10,Most drift-sensitive variant,V03 had the largest mean case-level drift (0.0776).
+F11,Probability mass conservation,"Signed action shifts sum to approximately zero for every strategy pair, confirming numerically stable probability redistribution."
+F12,Interpretability conclusion,Removing explicit legality and compatibility signals changes policy confidence substantially while preserving the decision boundary.

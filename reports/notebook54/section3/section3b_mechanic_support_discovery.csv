@@ -1,0 +1,13 @@
+mechanic,source_keyword_detected,matched_keywords,implementation_confirmed,confirmation_status
+damage,True,"[""damage""]",False,KEYWORD_PRESENT_REQUIRES_INTERFACE_TEST
+energy_cost,True,"[""attached_energy""]",False,KEYWORD_PRESENT_REQUIRES_INTERFACE_TEST
+healing,False,[],False,NOT_DETECTED
+retreat,False,[],False,NOT_DETECTED
+bench,True,"[""bench""]",False,KEYWORD_PRESENT_REQUIRES_INTERFACE_TEST
+status,True,"[""status""]",False,KEYWORD_PRESENT_REQUIRES_INTERFACE_TEST
+evolution,False,[],False,NOT_DETECTED
+pass_action,False,[],False,NOT_DETECTED
+draw_cards,True,"[""draw"", ""hand_size""]",False,KEYWORD_PRESENT_REQUIRES_INTERFACE_TEST
+prize_cards,True,"[""prize"", ""prize_cards_remaining""]",False,KEYWORD_PRESENT_REQUIRES_INTERFACE_TEST
+switch_active,True,"[""is_active""]",False,KEYWORD_PRESENT_REQUIRES_INTERFACE_TEST
+copy_state,True,"[""deepcopy"", ""copy""]",False,KEYWORD_PRESENT_REQUIRES_INTERFACE_TEST

@@ -1,0 +1,25 @@
+configuration_item,configuration_value
+notebook_id,55
+experiment_name,CONTROLLED_FEATURE_ABLATION_RETRAINING
+random_seed,42
+test_size,0.2
+primary_strategies,"[""R0_CURRENT_BASELINE"", ""R1_REMOVE_LEGAL_SIGNATURE"", ""R2_REMOVE_SIGNATURE_AND_COMPATIBILITY"", ""R3_STATE_CENTRIC_POLICY""]"
+baseline_strategy,R0_CURRENT_BASELINE
+primary_remediation_strategy,R1_REMOVE_LEGAL_SIGNATURE
+secondary_remediation_strategy,R2_REMOVE_SIGNATURE_AND_COMPATIBILITY
+aggressive_remediation_strategy,R3_STATE_CENTRIC_POLICY
+fixed_training_rows,True
+fixed_validation_rows,True
+fixed_random_seed,True
+fixed_estimator_parameters,True
+external_hard_legality_filter_preserved,True
+original_notebook53_model_modified,False
+original_notebook54_reports_modified,False
+required_expanded_cases,184
+required_mirror_pairs,92
+maximum_allowed_validation_accuracy_drop,0.02
+maximum_allowed_battle_win_rate_drop,0.02
+minimum_required_normalized_move_entropy,0.1
+minimum_required_ascension_selections,1
+maximum_accepted_quick_attack_share,0.9
+minimum_probability_margin_reduction,0.05

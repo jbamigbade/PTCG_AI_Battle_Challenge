@@ -1,0 +1,4 @@
+counterfactual_group,counterfactual_cases,unique_interventions,average_score_margin_change,average_absolute_score_margin_change,maximum_absolute_score_margin_change,predicted_action_changes,ascension_overtake_cases,predicted_action_change_rate
+LEGAL_STRUCTURE,368,2,-0.9895652173913044,0.9895652173913042,1.2440000000000002,368,368,1.0
+ENERGY_STATE,736,4,4.347826086956284e-05,0.014500000000000011,0.04400000000000004,0,0,0.0
+TURN_STATE,368,2,0.009652173913043474,0.011043478260869561,0.03200000000000003,0,0,0.0

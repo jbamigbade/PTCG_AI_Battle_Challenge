@@ -1,0 +1,11 @@
+member_name,size_bytes,is_file,is_directory
+cg,0,False,True
+cg/__init__.py,0,True,False
+cg/api.py,26933,True,False
+cg/cg.dll,1523200,True,False
+cg/game.py,2225,True,False
+cg/libcg.so,1338304,True,False
+cg/sim.py,1966,True,False
+cg/utils.py,1970,True,False
+deck.csv,245,True,False
+main.py,19781,True,False

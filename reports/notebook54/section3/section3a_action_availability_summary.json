@@ -1,0 +1,20 @@
+{
+  "status": "PLAYER_ACTION_AVAILABILITY_ANALYSIS_COMPLETE",
+  "player_decisions": 103,
+  "opponent_decisions": 107,
+  "deterministic_player_decisions": 103,
+  "player_multi_action_decisions": 0,
+  "player_choice_rate": 0.0,
+  "repeated_single_move_scenarios": 22,
+  "player_losses": 14,
+  "close_loss_count": 5,
+  "one_attack_swing_candidates": 5,
+  "dominant_bottleneck": "PLAYER_ACTION_AVAILABILITY",
+  "bottleneck_diagnosis": "The Player receives no genuine multi-action states. Policy ranking cannot improve outcomes until additional legal tactical options become available.",
+  "recommended_architecture": "Preserve Notebook 53 legality routing, then introduce a state-aware action generator and tactical value evaluator for newly available Player actions.",
+  "validation_checks_passed": 10,
+  "validation_checks_failed": 0,
+  "frozen_benchmark_modified": false,
+  "ready_for_action_generation_design": true,
+  "next_stage": "TACTICAL_ACTION_GENERATION_DESIGN"
+}

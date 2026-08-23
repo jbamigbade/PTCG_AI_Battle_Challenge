@@ -1,0 +1,25 @@
+module,symbol,symbol_type,signature,defined_in_module
+src.adapters,BattleState,class,"(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",False
+src.adapters,current_player_adapter,function,(battle_state: 'BattleState') -> 'str',True
+src.adapters,evaluate_position,function,(battle_state: 'BattleState') -> 'float',False
+src.adapters,evaluate_state_adapter,function,"(battle_state: 'BattleState', root_player: 'str') -> 'float'",True
+src.adapters,generate_moves_adapter,function,(battle_state: 'BattleState'),True
+src.adapters,get_current_legal_moves,function,(battle_state: 'BattleState') -> 'List[Move]',False
+src.adapters,pokemon_state_features,function,"(battle_state: 'BattleState') -> 'Tuple[Hashable, ...]'",True
+src.adapters,terminal_state_adapter,function,(battle_state: 'BattleState') -> 'bool',True
+src.battle_state,BattleState,class,"(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",True
+src.battle_state,PlayerState,class,"(active: 'PokemonState', bench: 'List[PokemonState]', prize_cards_remaining: 'int' = 6, hand_size: 'int' = 7) -> None",True
+src.battle_state,PokemonState,class,"(card: 'dict', current_hp: 'float', attached_energy: 'int' = 0, status: 'Optional[str]' = None, damage: 'float' = 0.0, is_active: 'bool' = False) -> None",True
+src.battle_state,dataclass,function,"(cls=None, /, *, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False)",False
+src.competitive.competitive_policy_agent,dataclass,function,"(cls=None, /, *, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False)",False
+src.competitive.competitive_policy_agent,get_current_legal_moves,function,(battle_state: 'BattleState') -> 'List[Move]',False
+src.competitive.competitive_policy_engine,actor_and_defender,function,"(battle_state: 'Any') -> 'tuple[Any, Any, str]'",True
+src.competitive.competitive_policy_engine,encode_move,function,"(battle_state: 'Any', move: 'Any') -> 'np.ndarray'",True
+src.competitive.competitive_policy_engine,encode_state,function,(battle_state: 'Any') -> 'np.ndarray',True
+src.engine.advanced_search,dataclass,function,"(cls=None, /, *, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False)",False
+src.legal_moves,BattleState,class,"(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",False
+src.legal_moves,get_current_legal_moves,function,(battle_state: 'BattleState') -> 'List[Move]',True
+src.legal_moves,get_current_side_pokemon,function,(battle_state: 'BattleState') -> 'PokemonState',True
+src.simulator,BattleState,class,"(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",False
+src.simulator,apply_move,function,"(battle_state: 'BattleState', move: 'Move') -> 'BattleState'",True
+src.simulator,deepcopy,function,"(x, memo=None, _nil=[])",False

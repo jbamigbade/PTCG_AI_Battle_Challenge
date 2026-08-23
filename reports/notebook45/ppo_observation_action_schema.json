@@ -1,0 +1,73 @@
+{
+  "top_level_keys": [
+    "metadata",
+    "ppo_batch"
+  ],
+  "metadata": {
+    "num_samples": 3,
+    "observation_dim": 4,
+    "action_dim": 4,
+    "num_batches": 2
+  },
+  "batch_keys": [
+    "observations",
+    "action_masks",
+    "actions",
+    "rewards",
+    "dones"
+  ],
+  "observation_shape": [
+    3,
+    4
+  ],
+  "action_mask_shape": [
+    3,
+    4
+  ],
+  "sample_observations": [
+    [
+      0.10000000149011612,
+      0.25,
+      0.75,
+      1.0
+    ],
+    [
+      0.10000000149011612,
+      0.25,
+      0.75,
+      1.0
+    ],
+    [
+      0.10000000149011612,
+      0.25,
+      0.75,
+      1.0
+    ]
+  ],
+  "sample_action_masks": [
+    [
+      1.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "sample_actions": [
+    0,
+    1,
+    2
+  ],
+  "discovered_schema": {}
+}

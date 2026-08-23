@@ -1,0 +1,15 @@
+{
+  "status": "SIMULATOR_MODULES_BOUND",
+  "package_name": "notebook51_simulator_runtime",
+  "package_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src",
+  "source_files_loaded": 5,
+  "runtime_symbols_loaded": 11,
+  "runtime_symbols_required": 11,
+  "relative_imports_resolved": true,
+  "battle_state_class": "BattleState",
+  "player_state_class": "PlayerState",
+  "pokemon_state_class": "PokemonState",
+  "apply_move_callable": true,
+  "battle_runner_callable": true,
+  "next_stage": "SIMULATOR_STATE_CONSTRUCTION"
+}

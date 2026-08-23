@@ -1,0 +1,3 @@
+condition_id,strategic_decisions,scenarios,player_wins,player_losses,draws,average_confidence,average_priority_score
+HP_PRESSURE,9,5,0,9,0,0.9746666666666667,9.050666666666666
+BASELINE,14,5,5,9,0,0.9187142857142857,4.734

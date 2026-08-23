@@ -1,0 +1,3 @@
+evidence_source,path,exists,size_bytes
+English Card ID PDF,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\data\raw\Card_ID List_EN.pdf,True,137654485
+Japanese Card ID PDF,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\data\raw\Card_ID List_JP.pdf,True,182284028

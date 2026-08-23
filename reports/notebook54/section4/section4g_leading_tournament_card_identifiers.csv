@@ -1,0 +1,5 @@
+card_name,leading_card_id,candidate_count,evidence_records,complete_object_records,total_evidence_weight,candidate_status,requires_pdf_validation
+Bulbasaur,1.0,1,2,1,4,LEADING_COMPLETE_OBJECT_CANDIDATE,True
+Charmander,,0,0,0,0,NO_IDENTIFIER_RECOVERED,True
+Eevee,,0,0,0,0,NO_IDENTIFIER_RECOVERED,True
+Meowth,,0,0,0,0,NO_IDENTIFIER_RECOVERED,True

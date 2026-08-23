@@ -1,0 +1,245 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 4: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.73
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.70
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.68
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 7: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.64
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 8: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.65
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 9: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 10: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 11: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 12: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 13: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 14: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 15: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 16: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 17: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 18: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 19: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 20: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 21: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 22: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 23: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 24: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 25: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 26: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 27: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 28: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 29: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 30: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 31: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 32: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 33: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 0.62
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: None
+Stop reason: Maximum turn limit reached.

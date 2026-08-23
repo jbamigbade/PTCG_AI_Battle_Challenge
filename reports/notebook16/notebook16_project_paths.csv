@@ -1,0 +1,8 @@
+resource,path,exists
+project_root,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge,True
+notebooks_dir,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\notebooks,True
+src_dir,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\src,True
+data_dir,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\data,True
+submission_work_dir,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission_work,True
+submission_dir,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission_work\submission,False
+submission_archive,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission_work\submission.tar.gz,False

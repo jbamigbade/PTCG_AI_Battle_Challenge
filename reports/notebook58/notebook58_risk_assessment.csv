@@ -1,0 +1,5 @@
+strategy,feature_reduction_percent,maximum_reproduction_error,agreement_with_r0,maximum_confidence_difference_vs_r0,feature_risk,reproduction_risk,decision_risk,confidence_risk,overall_controlled_validation_risk
+R0_CURRENT_BASELINE,0.0,0.0,1.0,0.0,LOW,LOW,LOW,LOW,LOW
+R1_REMOVE_LEGAL_SIGNATURE,9.375,0.0,1.0,0.1060000000000001,LOW,LOW,LOW,LOW,LOW
+R2_REMOVE_SIGNATURE_AND_COMPATIBILITY,18.75,0.0,1.0,0.07399999999999995,LOW,LOW,LOW,LOW,LOW
+R3_STATE_CENTRIC_POLICY,28.125,0.0,1.0,0.15000000000000002,LOW,LOW,LOW,LOW,LOW

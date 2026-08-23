@@ -1,0 +1,4 @@
+baseline_name,matches,wins,losses,draws,win_rate,average_turns
+Random Baseline,100,75,25,0,0.75,3.71
+Greedy Damage Baseline,100,50,50,0,0.5,3.34
+Depth-6 Search Baseline,100,58,42,0,0.58,3.58

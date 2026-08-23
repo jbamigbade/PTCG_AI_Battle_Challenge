@@ -1,0 +1,25 @@
+======================================================================
+PRODUCTION TOURNAMENT REPORT
+======================================================================
+
+Matches played: 2
+
+Baseline AI
+  Record: 1-1-0
+  Win rate: 50.0%
+  Average turns: 3.00
+  Average score: 0.00
+
+Optimized AI
+  Record: 1-1-0
+  Win rate: 50.0%
+  Average turns: 3.00
+  Average score: 0.00
+
+======================================================================
+
+LEADERBOARD
+
+        name  matches  wins  losses  draws  win_rate  average_turns  average_score
+ Baseline AI        2     1       1      0       0.5            3.0            0.0
+Optimized AI        2     1       1      0       0.5            3.0            0.0

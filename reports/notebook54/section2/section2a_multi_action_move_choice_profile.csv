@@ -1,0 +1,2 @@
+legal_moves,selected_move,decisions,scenarios,player_wins,player_losses,draws,average_confidence
+"[""Ascension"", ""Quick Attack""]",Quick Attack,23,10,5,18,0,0.940608695652174

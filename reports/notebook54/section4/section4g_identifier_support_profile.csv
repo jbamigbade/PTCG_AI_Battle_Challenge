@@ -1,0 +1,2 @@
+card_name,card_id,evidence_records,notebooks,complete_object_records,proximity_records,total_evidence_weight,expansions,hp_values,attack_records
+Bulbasaur,1,2,"[""notebook04""]",1,1,4,[],[70.0],"[[{""Move Name"": ""Vine Whip"", ""damage_numeric"": 30, ""energy_cost"": 2}]]"

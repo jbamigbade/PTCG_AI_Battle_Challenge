@@ -1,0 +1,22 @@
+{
+  "status": "CONTROLLED_EVALUATION_CONTRACT_FROZEN",
+  "balanced_evaluation_cases": 184,
+  "unique_comparison_cases": 184,
+  "models_to_compare": 4,
+  "model_strategies": [
+    "R0_CURRENT_BASELINE",
+    "R1_REMOVE_LEGAL_SIGNATURE",
+    "R2_REMOVE_SIGNATURE_AND_COMPATIBILITY",
+    "R3_STATE_CENTRIC_POLICY"
+  ],
+  "r0_prediction_agreement_with_original": 1.0,
+  "r0_accuracy_difference_from_original": 0.0,
+  "historical_notebook54_probability_reconstruction_required": false,
+  "historical_probability_drift_documented": true,
+  "exact_historical_estimator_snapshot_available": false,
+  "canonical_legal_move_signature": "ascension | quick attack",
+  "evaluation_representation": "TRAINING_COMPATIBLE_CANONICAL_FEATURES",
+  "comparison_rule": "Score R0, R1, R2, and R3 on the same 184 balanced cases using each strategy's frozen estimator and feature subset.",
+  "interpretation_rule": "Use Notebook 55 R0 as the controlled comparison baseline. Notebook 54 remains historical behavioral evidence; exact historical probability calibration is not required because the original runtime estimator snapshot was not preserved.",
+  "next_stage": "NOTEBOOK_56_FOUR_MODEL_CONTROLLED_POLICY_EVALUATION"
+}

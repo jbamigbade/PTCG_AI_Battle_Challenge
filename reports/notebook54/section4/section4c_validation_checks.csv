@@ -1,0 +1,7 @@
+check,passed,value,expected
+previous_candidates_audited,True,32,32
+numeric_vectors_detected,True,32,> 0
+generated_sources_detected,True,32,> 0
+false_candidates_rejected,True,32,> 0
+remaining_names_plausible,True,0,All remaining names plausible
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

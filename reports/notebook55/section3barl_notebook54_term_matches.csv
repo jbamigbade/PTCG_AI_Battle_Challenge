@@ -1,0 +1,1472 @@
+code_cell_index,matched_terms,source_length,source_preview
+29,"[""notebook53_legality_model"", ""notebook53_preprocessor""]",9957,"# ======================================================================================
+# SECTION 4U-B — NOTEBOOK 53 RUNTIME BINDING REPAIR
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4U-B — NOTEBOOK 53 RUNTIME BINDING REPAIR"")
+print(""="" * 100)
+
+from pathlib import Path
+import importlib.util
+import inspect
+import json
+import sys
+import types
+import joblib
+import nbformat
+import pandas as pd
+
+
+# --------------------------------------------------------------------------------------
+# 1. Resolve project paths
+# --------------------------------------------------------------------------------------
+
+PROJECT_ROOT_4U = Path(
+    r""D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge""
+)
+
+NOTEBOOK_DIR_4U = PROJECT_ROOT_4U / ""notebooks""
+SRC_DIR_4U = PROJECT_ROOT_4U / ""src""
+MODEL53_DIR_4U = PROJECT_ROOT_4U / ""models"" / ""notebook53""
+REPORT53_DIR_4U = PROJECT_ROOT_4U / ""reports"" / ""notebook53""
+
+assert PROJECT_ROOT_4U.exists()
+assert NOTEBOOK_DIR_4U.exists()
+assert SRC_DIR_4U.exists()
+assert MODEL53_DIR_4U.exists()
+
+
+# --------------------------------------------------------------------------------------
+# 2. Locate Notebook 53
+# --------------------------------------------------------------------------------------
+
+notebook53_candidates = sorted(
+    NOTEBOOK_DIR_4U.glob(""53*.ipynb"")
+)
+
+print()
+print(""NOTEBOOK 53 CANDIDATES"")
+print(""-"" * 100)
+
+for candidate_path in notebook53_candidates:
+    print(candidate_path)
+
+assert notebook53_candidates, (
+    ""Notebook 53 could not be located in the notebooks directory.""
+)
+
+NOTEBOOK53_PATH_4U = notebook53_candidates[0]
+
+print()
+print(f""Resolved Notebook 53: {NOTEBOOK53_PATH_4U}"")
+
+
+# --------------------------------------------------------------------------------------
+# 3. Create an isolated runtime package
+# --------------------------------------------------------------------------------------
+
+RUNTIME_PACKAGE_NAME_4U = ""notebook54_simulator_runtime""
+
+runtime_package = types.ModuleType(
+    RUNTIME_PACKAGE_NAME_4U
+)
+
+runtime_package.__path__ = [
+    str(SRC_DIR_4U)
+]
+
+sys.modules[
+    RUNTIME_PACKAGE_NAME_4U
+] = runtime_package
+
+
+def load_runtime_module(
+    module_name: str,
+    source_filename: str,
+):
+    """"""
+    Load one simulator source file as part of an isolated runtime package.
+    """"""
+
+    qualified_name = (
+        f""{RUNTIME_PACKAGE_NAME_4U}.{module_name}""
+    )
+
+    source_path = (
+        SRC_DIR_4U / source_filename
+    )
+
+    assert source_path.exists(), (
+        f""Missing runtime source: {source_path}""
+    )
+
+    module_spec = importlib.util.spec_from_file_location(
+        qualified_name,
+        source_path,
+    )
+
+    assert module_spec is not None
+    assert module_spec.loader is not None
+
+    runtime_module = importlib.util.module_from_spec(
+        module_spec
+    )
+
+    runtime_module.__package__ = (
+        RUNTIME_PACKAGE_NAME_4U
+    )
+
+    sys.modules[
+        qualified_name
+    ] = runtime_module
+
+    mod"
+30,"[""notebook53_legality_model"", ""notebook53_preprocessor""]",23257,"# ======================================================================================
+# SECTION 4U-C — NOTEBOOK 53 PRODUCTION ADAPTER RECONSTRUCTION
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4U-C — NOTEBOOK 53 PRODUCTION ADAPTER RECONSTRUCTION"")
+print(""="" * 100)
+
+
+# --------------------------------------------------------------------------------------
+# 1. Validate Section 4U-B
+# --------------------------------------------------------------------------------------
+
+assert section4ub_summary[
+    ""status""
+] == ""SIMULATOR_RUNTIME_REBOUND""
+
+assert section4ub_summary[
+    ""runtime_symbols_loaded""
+] == 11
+
+assert section4ub_summary[
+    ""model_loaded""
+] is True
+
+assert section4ub_summary[
+    ""preprocessor_loaded""
+] is True
+
+assert section4ub_summary[
+    ""production_adapter_instantiated""
+] is False
+
+assert section4ub_summary[
+    ""next_stage""
+] == ""PRODUCTION_ADAPTER_RECONSTRUCTION""
+
+
+# --------------------------------------------------------------------------------------
+# 2. Definitions we need from Notebook 53
+# --------------------------------------------------------------------------------------
+
+TARGET_ADAPTER_CLASSES_4UC = {
+    ""LegalityAwarePolicyAgent"",
+    ""LegalityAwareBattleRunnerAgent"",
+}
+
+# --------------------------------------------------------------------------------------
+# 3. Build a safe definition-only reconstruction module
+# --------------------------------------------------------------------------------------
+
+definition_module_4uc = ast.Module(
+    body=[],
+    type_ignores=[],
+)
+
+definition_inventory_rows_4uc = []
+definition_error_rows_4uc = []
+
+
+for cell_index, notebook_cell in enumerate(
+    notebook53_document.cells
+):
+
+    if notebook_cell.cell_type != ""code"":
+
+        continue
+
+    source_text = str(
+        notebook_cell.source
+    )
+
+    if not source_text.strip():
+
+        continue
+
+    try:
+
+        parsed_cell = ast.parse(
+            source_text
+        )
+
+    except SyntaxError as error:
+
+        definition_error_rows_4uc.append(
+            {
+                ""cell_index"":
+                    int(
+                        cell_index
+                    ),
+
+                ""stage"":
+                    ""AST_PARSE"",
+
+                ""error_type"":
+                    type(
+                        error
+                    ).__name__,
+
+                ""error_message"":
+                    str(
+                        error
+                    ),
+            }
+        )
+
+        continue
+
+    for node in parsed_cell.body:
+
+        keep_node = isinstance(
+            node,
+            (
+                ast.Import,
+                ast.ImportFrom,
+                ast.FunctionDef,
+                ast.AsyncFunctionDef,
+                ast.ClassDef,
+            ),
+        )
+
+        if not keep_node:
+
+            continue
+
+        node_name = """"
+
+        if isinstance(
+            node,
+            (
+                ast.FunctionDef,
+           "
+32,"[""notebook53_legality_model"", ""notebook53_preprocessor""]",28946,"# ======================================================================================
+# SECTION 4U-D — PRODUCTION ADAPTER INSTANTIATION
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4U-D — PRODUCTION ADAPTER INSTANTIATION"")
+print(""="" * 100)
+
+
+# --------------------------------------------------------------------------------------
+# 1. Validate Section 4U-C readiness
+# --------------------------------------------------------------------------------------
+
+assert section4uc_summary[
+    ""status""
+] == ""PRODUCTION_ADAPTER_DEFINITIONS_RECONSTRUCTED""
+
+assert section4uc_summary[
+    ""target_adapter_classes_reconstructed""
+] == 2
+
+assert section4uc_summary[
+    ""policy_class""
+] == ""LegalityAwarePolicyAgent""
+
+assert section4uc_summary[
+    ""runner_class""
+] == ""LegalityAwareBattleRunnerAgent""
+
+assert section4uc_summary[
+    ""definition_errors""
+] == 0
+
+assert section4uc_summary[
+    ""adapter_instance_created""
+] is False
+
+assert section4uc_summary[
+    ""next_stage""
+] == ""PRODUCTION_ADAPTER_INSTANTIATION""
+
+
+# --------------------------------------------------------------------------------------
+# 2. Preserve frozen artifact fingerprints
+# --------------------------------------------------------------------------------------
+
+import hashlib
+
+
+def file_sha256(
+    file_path: Any,
+) -> str:
+    """"""
+    Calculate a SHA-256 digest for a local file.
+    """"""
+
+    path_object = Path(
+        file_path
+    )
+
+    digest = hashlib.sha256()
+
+    with open(
+        path_object,
+        ""rb"",
+    ) as file:
+
+        for chunk in iter(
+            lambda: file.read(
+                1024 * 1024
+            ),
+            b"""",
+        ):
+
+            digest.update(
+                chunk
+            )
+
+    return digest.hexdigest()
+
+
+section4ud_frozen_artifact_rows = []
+
+
+for artifact_name, artifact_path in {
+    ""legality_aware_model"":
+        MODEL53_FILE_4U,
+
+    ""legality_aware_preprocessor"":
+        PREPROCESSOR53_FILE_4U,
+
+    ""encoded_feature_names"":
+        ENCODED_FEATURES53_FILE_4U,
+
+    ""raw_feature_schema"":
+        RAW_SCHEMA53_FILE_4U,
+}.items():
+
+    artifact_path = Path(
+        artifact_path
+    )
+
+    section4ud_frozen_artifact_rows.append(
+        {
+            ""artifact_name"":
+                artifact_name,
+
+            ""artifact_path"":
+                str(
+                    artifact_path
+                ),
+
+            ""exists"":
+                artifact_path.exists(),
+
+            ""size_bytes"":
+                (
+                    int(
+                        artifact_path.stat().st_size
+                    )
+                    if artifact_path.exists()
+                    else 0
+                ),
+
+            ""sha256_before"":
+                (
+                    file_sha256(
+                        artifact_path
+                    )
+                    if artifact_path.exists()
+                    else """"
+                ),
+        }
+    )
+
+
+section4ud_frozen_artifacts_df"
+37,"[""build_legality_aware_feature_row""]",7167,"# ======================================================================================
+# SECTION 4V-B REPAIR — RESTORE POLICY ACTION CLASSES
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4V-B REPAIR — RESTORE POLICY ACTION CLASSES"")
+print(""="" * 100)
+
+import ast
+
+
+# --------------------------------------------------------------------------------------
+# 1. Recover the original POLICY_ACTION_CLASSES assignment from Notebook 53
+# --------------------------------------------------------------------------------------
+
+policy_action_assignment_rows = []
+recovered_policy_action_classes = None
+
+
+for cell_index, notebook_cell in enumerate(
+    notebook53_document.cells
+):
+
+    if notebook_cell.cell_type != ""code"":
+        continue
+
+    source_text = str(
+        notebook_cell.source
+    )
+
+    if ""POLICY_ACTION_CLASSES"" not in source_text:
+        continue
+
+    try:
+
+        parsed_cell = ast.parse(
+            source_text
+        )
+
+    except SyntaxError:
+
+        continue
+
+    for node in ast.walk(
+        parsed_cell
+    ):
+
+        assignment_name = None
+        value_node = None
+
+        if isinstance(
+            node,
+            ast.Assign,
+        ):
+
+            for target in node.targets:
+
+                if (
+                    isinstance(
+                        target,
+                        ast.Name,
+                    )
+                    and
+                    target.id
+                    == ""POLICY_ACTION_CLASSES""
+                ):
+
+                    assignment_name = target.id
+                    value_node = node.value
+                    break
+
+        elif (
+            isinstance(
+                node,
+                ast.AnnAssign,
+            )
+            and isinstance(
+                node.target,
+                ast.Name,
+            )
+            and node.target.id
+            == ""POLICY_ACTION_CLASSES""
+        ):
+
+            assignment_name = node.target.id
+            value_node = node.value
+
+        if assignment_name is None or value_node is None:
+            continue
+
+        try:
+
+            value_source = ast.unparse(
+                value_node
+            )
+
+        except Exception:
+
+            value_source = """"
+
+        try:
+
+            literal_value = ast.literal_eval(
+                value_node
+            )
+
+            literal_recovered = True
+
+        except Exception:
+
+            literal_value = None
+            literal_recovered = False
+
+        policy_action_assignment_rows.append(
+            {
+                ""cell_index"":
+                    int(
+                        cell_index
+                    ),
+
+                ""line_number"":
+                    int(
+                        getattr(
+                            node,
+                            ""lineno"",
+                            0,
+                        )
+                    ),
+
+                ""value_source"":
+                    value_source,
+
+      "
+41,"[""build_legality_aware_feature_row""]",10278,"# ======================================================================================
+# SECTION 4V-B REPAIR — REBUILD TRAINING ACTIVE-CARD ACTION MAP FROM VERIFIED REPLAY
+# ======================================================================================
+
+print(""="" * 100)
+print(
+    ""SECTION 4V-B REPAIR — ""
+    ""REBUILD TRAINING ACTIVE-CARD ACTION MAP FROM VERIFIED REPLAY""
+)
+print(""="" * 100)
+
+
+# --------------------------------------------------------------------------------------
+# 1. Confirm required verified replay objects
+# --------------------------------------------------------------------------------------
+
+assert ""section4vb_scenario_source_df"" in globals(), (
+    ""section4vb_scenario_source_df is missing.""
+)
+
+assert ""scenario_side_legal_moves"" in globals(), (
+    ""scenario_side_legal_moves is missing.""
+)
+
+assert isinstance(
+    scenario_side_legal_moves,
+    dict,
+)
+
+assert len(
+    section4vb_scenario_source_df
+) == 24
+
+
+# --------------------------------------------------------------------------------------
+# 2. Resolve required scenario columns
+# --------------------------------------------------------------------------------------
+
+def resolve_verified_replay_column_4vb(
+    candidates,
+):
+    for column_name in candidates:
+
+        if column_name in section4vb_scenario_source_df.columns:
+
+            return column_name
+
+    raise KeyError(
+        ""Unable to resolve verified replay column from: ""
+        f""{candidates}""
+    )
+
+
+ACTION_MAP_SCENARIO_COLUMN_4VB = (
+    resolve_verified_replay_column_4vb(
+        [
+            ""scenario_id"",
+            ""expanded_scenario_id"",
+            ""battle_id"",
+        ]
+    )
+)
+
+ACTION_MAP_PLAYER_CARD_COLUMN_4VB = (
+    resolve_verified_replay_column_4vb(
+        [
+            ""player_card"",
+            ""player_pokemon"",
+        ]
+    )
+)
+
+ACTION_MAP_OPPONENT_CARD_COLUMN_4VB = (
+    resolve_verified_replay_column_4vb(
+        [
+            ""opponent_card"",
+            ""opponent_pokemon"",
+        ]
+    )
+)
+
+
+print()
+print(""RESOLVED VERIFIED REPLAY COLUMNS"")
+print(""-"" * 100)
+
+print(
+    ""scenario_id  :"",
+    ACTION_MAP_SCENARIO_COLUMN_4VB,
+)
+
+print(
+    ""player_card  :"",
+    ACTION_MAP_PLAYER_CARD_COLUMN_4VB,
+)
+
+print(
+    ""opponent_card:"",
+    ACTION_MAP_OPPONENT_CARD_COLUMN_4VB,
+)
+
+
+# --------------------------------------------------------------------------------------
+# 3. Build card-to-action evidence from all 24 verified scenarios
+# --------------------------------------------------------------------------------------
+
+section4vb_card_action_evidence_rows = []
+
+
+for _, scenario_row in (
+    section4vb_scenario_source_df.iterrows()
+):
+
+    scenario_id = str(
+        scenario_row[
+            ACTION_MAP_SCENARIO_COLUMN_4VB
+        ]
+    )
+
+    player_card = str(
+        scenario_row[
+            ACTION_MAP_PLAYER_CARD_COLUMN_4VB
+        ]
+    ).strip()
+
+    opponent_card = str(
+        scenario_row[
+            ACTION_MAP_OPPONENT_CARD_COLUMN_4VB
+        ]
+    ).strip()
+
+    for side_n"
+42,"[""build_legality_aware_feature_row""]",18191,"# ======================================================================================
+# SECTION 4V-B FINAL RUNTIME BOOTSTRAP — RESTORE POLICY FEATURE DEPENDENCIES
+# ======================================================================================
+
+print(""="" * 100)
+print(
+    ""SECTION 4V-B FINAL RUNTIME BOOTSTRAP — ""
+    ""RESTORE POLICY FEATURE DEPENDENCIES""
+)
+print(""="" * 100)
+
+import ast
+import re
+from copy import deepcopy
+
+
+# --------------------------------------------------------------------------------------
+# 1. Confirm the reconstructed Notebook 53 runtime exists
+# --------------------------------------------------------------------------------------
+
+assert ""notebook53_document"" in globals(), (
+    ""notebook53_document is missing. Rerun Section 4U-B.""
+)
+
+assert ""adapter_namespace_4uc"" in globals(), (
+    ""adapter_namespace_4uc is missing. Rerun Section 4U-C.""
+)
+
+assert ""notebook54_legality_policy"" in globals(), (
+    ""notebook54_legality_policy is missing. Rerun Section 4U-D.""
+)
+
+assert ""notebook54_battle_runner_agent"" in globals(), (
+    ""notebook54_battle_runner_agent is missing. Rerun Section 4U-D.""
+)
+
+assert callable(
+    globals().get(""normalize_action_name"")
+), (
+    ""normalize_action_name is missing from the reconstructed Notebook 53 runtime.""
+)
+
+
+# --------------------------------------------------------------------------------------
+# 2. Recover the exact action_feature_name function from Notebook 53
+# --------------------------------------------------------------------------------------
+
+recovered_action_feature_name = None
+action_feature_source_rows = []
+
+
+for cell_index, notebook_cell in enumerate(
+    notebook53_document.cells
+):
+
+    if notebook_cell.cell_type != ""code"":
+        continue
+
+    source_text = str(
+        notebook_cell.source
+    )
+
+    if ""action_feature_name"" not in source_text:
+        continue
+
+    try:
+
+        parsed_cell = ast.parse(
+            source_text
+        )
+
+    except SyntaxError:
+
+        continue
+
+    for node in parsed_cell.body:
+
+        if (
+            isinstance(node, ast.FunctionDef)
+            and node.name == ""action_feature_name""
+        ):
+
+            function_module = ast.Module(
+                body=[
+                    node
+                ],
+                type_ignores=[],
+            )
+
+            ast.fix_missing_locations(
+                function_module
+            )
+
+            recovery_namespace = dict(
+                adapter_namespace_4uc
+            )
+
+            recovery_namespace.update(
+                globals()
+            )
+
+            exec(
+                compile(
+                    function_module,
+                    filename=(
+                        ""notebook53_recovered_""
+                        ""action_feature_name.py""
+                    ),
+                    mode=""exec"",
+                ),
+                recovery_namespace,
+                recovery_namespace,
+            )
+
+            recovered_action_feature_name = (
+                re"
+46,"[""build_legality_aware_feature_row""]",12827,"# ======================================================================================
+# SECTION 4V-B REPAIR — RESTORE TRAINING ACTIVE-CARD ACTION MAP
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4V-B REPAIR — RESTORE TRAINING ACTIVE-CARD ACTION MAP"")
+print(""="" * 100)
+
+import ast
+from copy import deepcopy
+
+
+# --------------------------------------------------------------------------------------
+# 1. Confirm the missing dependency
+# --------------------------------------------------------------------------------------
+
+TARGET_DEPENDENCY_4VB = ""training_active_card_action_map""
+
+print()
+print(""CURRENT DEPENDENCY STATUS"")
+print(""-"" * 100)
+
+print(
+    f""{TARGET_DEPENDENCY_4VB}:"",
+    TARGET_DEPENDENCY_4VB in globals(),
+)
+
+
+# --------------------------------------------------------------------------------------
+# 2. Search Notebook 53 for the original assignment
+# --------------------------------------------------------------------------------------
+
+section4vb_action_map_assignment_rows = []
+section4vb_recovered_action_map = None
+
+
+for cell_index, notebook_cell in enumerate(
+    notebook53_document.cells
+):
+
+    if notebook_cell.cell_type != ""code"":
+        continue
+
+    source_text = str(
+        notebook_cell.source
+    )
+
+    if TARGET_DEPENDENCY_4VB not in source_text:
+        continue
+
+    try:
+
+        parsed_cell = ast.parse(
+            source_text
+        )
+
+    except SyntaxError:
+        continue
+
+    for node in ast.walk(
+        parsed_cell
+    ):
+
+        assignment_found = False
+        value_node = None
+
+        if isinstance(
+            node,
+            ast.Assign,
+        ):
+
+            for target_node in node.targets:
+
+                if (
+                    isinstance(
+                        target_node,
+                        ast.Name,
+                    )
+                    and
+                    target_node.id
+                    == TARGET_DEPENDENCY_4VB
+                ):
+
+                    assignment_found = True
+                    value_node = node.value
+                    break
+
+        elif (
+            isinstance(
+                node,
+                ast.AnnAssign,
+            )
+            and isinstance(
+                node.target,
+                ast.Name,
+            )
+            and node.target.id
+            == TARGET_DEPENDENCY_4VB
+        ):
+
+            assignment_found = True
+            value_node = node.value
+
+        if not assignment_found or value_node is None:
+            continue
+
+        try:
+
+            assignment_source = ast.get_source_segment(
+                source_text,
+                node,
+            )
+
+        except Exception:
+
+            assignment_source = None
+
+        if not assignment_source:
+
+            assignment_source = ast.unparse(
+                node
+            )
+
+        try:
+
+            value_source = ast.unparse(
+                value_node
+            )
+
+        except Exception:
+"
+66,"[""predict_proba"", ""notebook53_legality_model"", ""notebook53_preprocessor"", ""section4wh_model"", ""section4wh_preprocessor"", ""model_source"", ""preprocessor_source""]",33326,"# ======================================================================================
+# SECTION 4W-H-A — QUICK ATTACK DOMINANCE ROOT-CAUSE PREFLIGHT
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4W-H-A — QUICK ATTACK DOMINANCE ROOT-CAUSE PREFLIGHT"")
+print(""="" * 100)
+
+from pathlib import Path
+import inspect
+import json
+
+import numpy as np
+import pandas as pd
+
+
+# --------------------------------------------------------------------------------------
+# 1. Confirm the permanent D-drive report directory
+# --------------------------------------------------------------------------------------
+
+assert ""NOTEBOOK54_SECTION4_REPORT_DIRECTORY"" in globals(), (
+    ""NOTEBOOK54_SECTION4_REPORT_DIRECTORY is missing. ""
+    ""Run the permanent Notebook 54 report-path cell first.""
+)
+
+SECTION4WH_REPORT_DIRECTORY = Path(
+    NOTEBOOK54_SECTION4_REPORT_DIRECTORY
+)
+
+SECTION4WH_REPORT_DIRECTORY.mkdir(
+    parents=True,
+    exist_ok=True,
+)
+
+assert SECTION4WH_REPORT_DIRECTORY.exists()
+
+
+print()
+print(""SECTION 4W-H REPORT DIRECTORY"")
+print(""-"" * 100)
+
+print(
+    SECTION4WH_REPORT_DIRECTORY
+)
+
+
+expected_report_root_4wh = Path(
+    r""D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge""
+    r""\reports\notebook54\section4""
+)
+
+
+assert (
+    SECTION4WH_REPORT_DIRECTORY.resolve()
+    ==
+    expected_report_root_4wh.resolve()
+), (
+    ""Section 4W-H is not pointing to the correct D-drive project folder.\n""
+    f""Resolved path: {SECTION4WH_REPORT_DIRECTORY.resolve()}""
+)
+
+
+# --------------------------------------------------------------------------------------
+# 2. Validate Section 4W-G evidence
+# --------------------------------------------------------------------------------------
+
+REQUIRED_SECTION4WH_OBJECTS = [
+    ""section4wg_case_df"",
+    ""section4wg_diversity_summary"",
+    ""notebook54_legality_policy"",
+]
+
+
+missing_section4wh_objects = [
+    object_name
+    for object_name in REQUIRED_SECTION4WH_OBJECTS
+    if object_name not in globals()
+]
+
+
+assert not missing_section4wh_objects, (
+    ""Required Section 4W-G/runtime objects are missing: ""
+    f""{missing_section4wh_objects}""
+)
+
+
+assert len(
+    section4wg_case_df
+) == 184
+
+
+assert (
+    section4wg_diversity_summary[
+        ""diversity_diagnosis""
+    ]
+    ==
+    ""COMPLETE_MOVE_PREFERENCE_COLLAPSE""
+)
+
+
+assert (
+    section4wg_diversity_summary[
+        ""dominant_move""
+    ]
+    ==
+    ""Quick Attack""
+)
+
+
+assert (
+    section4wg_diversity_summary[
+        ""quick_attack_count""
+    ]
+    == 184
+)
+
+
+assert (
+    section4wg_diversity_summary[
+        ""ascension_count""
+    ]
+    == 0
+)
+
+
+print()
+print(""SECTION 4W-G EVIDENCE CONFIRMATION"")
+print(""-"" * 100)
+
+for key in [
+    ""evaluated_cases"",
+    ""evaluated_mirror_pairs"",
+    ""unique_selected_moves"",
+    ""dominant_move"",
+    ""dominant_move_count"",
+    ""dominant_move_share"",
+    ""quick_attack_count"",
+    ""ascension_count"",
+    ""normalized_entropy"",
+    ""diversity_diagnosis"",
+    ""next_stage"",
+]:
+
+    pr"
+67,"[""predict_proba"", ""model_source"", ""preprocessor_source""]",621,"print(""="" * 100)
+print(""SECTION 4W-H-A FINAL ROOT-CAUSE BRANCH"")
+print(""="" * 100)
+
+for key in [
+    ""model_source"",
+    ""model_type"",
+    ""preprocessor_source"",
+    ""preprocessor_available"",
+    ""model_class_count"",
+    ""quick_attack_class_present"",
+    ""ascension_class_present"",
+    ""predict_proba_available"",
+    ""decision_function_available"",
+    ""training_label_evidence_available"",
+    ""training_label_dataframe_candidates"",
+    ""feature_importance_mode"",
+    ""root_cause_preflight_diagnosis"",
+    ""next_stage"",
+]:
+    print(
+        f""{key:62}: ""
+        f""{section4wh_root_cause_preflight_summary.get(key)}""
+    )"
+69,"[""build_legality_aware_feature_row""]",10467,"# ======================================================================================
+# SECTION 4W-H-B REPAIR — RESTORE LEGALITY-AWARE FEATURE ROW BUILDER
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4W-H-B REPAIR — RESTORE LEGALITY-AWARE FEATURE ROW BUILDER"")
+print(""="" * 100)
+
+from typing import Any, Sequence
+
+import pandas as pd
+
+
+# --------------------------------------------------------------------------------------
+# 1. Validate required feature-builder dependencies
+# --------------------------------------------------------------------------------------
+
+SECTION4WHB_FEATURE_BUILDER_DEPENDENCIES = [
+    ""get_state_value"",
+    ""get_card_name"",
+    ""get_attached_energy"",
+    ""get_pokemon_damage"",
+    ""extract_move_name"",
+    ""normalize_action_name"",
+    ""canonical_move_signature"",
+    ""classify_turn_phase"",
+    ""classify_energy_band"",
+    ""classify_damage_band"",
+    ""POLICY_ACTION_CLASSES"",
+    ""action_feature_name"",
+    ""training_active_card_action_map"",
+    ""legality_training_numeric_features"",
+    ""legality_training_categorical_features"",
+    ""PREPROCESS_RAW_FEATURES"",
+]
+
+
+section4whb_missing_feature_builder_dependencies = [
+    dependency_name
+    for dependency_name in SECTION4WHB_FEATURE_BUILDER_DEPENDENCIES
+    if dependency_name not in globals()
+]
+
+
+print()
+print(""FEATURE-BUILDER DEPENDENCY VALIDATION"")
+print(""-"" * 100)
+
+for dependency_name in SECTION4WHB_FEATURE_BUILDER_DEPENDENCIES:
+
+    print(
+        f""{dependency_name:48}: ""
+        f""{dependency_name in globals()}""
+    )
+
+
+assert not section4whb_missing_feature_builder_dependencies, (
+    ""Feature-builder dependencies are still missing: ""
+    f""{section4whb_missing_feature_builder_dependencies}""
+)
+
+
+# --------------------------------------------------------------------------------------
+# 2. Restore the Notebook 53 legality-aware feature builder
+# --------------------------------------------------------------------------------------
+
+def build_legality_aware_feature_row(
+    battle_state: Any,
+    legal_moves: Sequence[Any],
+    side_mode: str = ""PRESERVE"",
+) -> pd.DataFrame:
+    """"""
+    Convert a production battle state into the Notebook 53 raw feature schema.
+    """"""
+
+    current_side = str(
+        get_state_value(
+            battle_state,
+            ""current_player"",
+            ""Player"",
+        )
+    )
+
+    player_state = get_state_value(
+        battle_state,
+        ""player"",
+    )
+
+    opponent_state = get_state_value(
+        battle_state,
+        ""opponent"",
+    )
+
+    player_active = get_state_value(
+        player_state,
+        ""active"",
+    )
+
+    opponent_active = get_state_value(
+        opponent_state,
+        ""active"",
+    )
+
+    player_card = get_card_name(
+        player_active
+    )
+
+    opponent_card = get_card_name(
+        opponent_active
+    )
+
+    player_energy = get_attached_energy(
+        player_active
+    )
+
+    opponent_energy = get_attached_energy(
+        opponent_ac"
+70,"[""section4whb_case_probability_scores"", ""predict_proba"", ""section4wh_model"", ""section4wh_preprocessor"", ""build_legality_aware_feature_row""]",37175,"# ======================================================================================
+# SECTION 4W-H-B — QUICK ATTACK VERSUS ASCENSION SCORE AND LABEL ANALYSIS
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4W-H-B — QUICK ATTACK VERSUS ASCENSION SCORE AND LABEL ANALYSIS"")
+print(""="" * 100)
+
+from pathlib import Path
+import json
+
+import numpy as np
+import pandas as pd
+
+
+# --------------------------------------------------------------------------------------
+# 1. Validate Section 4W-H-A and expanded-evaluation dependencies
+# --------------------------------------------------------------------------------------
+
+REQUIRED_SECTION4WHB_OBJECTS = [
+    ""section4wh_model"",
+    ""section4wh_preprocessor"",
+    ""section4wh_model_classes"",
+    ""section4wh_training_label_inventory_df"",
+    ""section4wh_root_cause_preflight_summary"",
+    ""section4wf_design_df"",
+    ""build_section4wf_evaluation_state"",
+    ""build_legality_aware_feature_row"",
+    ""NOTEBOOK54_SECTION4_REPORT_DIRECTORY"",
+]
+
+
+missing_section4whb_objects = [
+    object_name
+    for object_name in REQUIRED_SECTION4WHB_OBJECTS
+    if object_name not in globals()
+]
+
+
+assert not missing_section4whb_objects, (
+    ""Required Section 4W-H-B objects are missing: ""
+    f""{missing_section4whb_objects}""
+)
+
+
+assert (
+    section4wh_root_cause_preflight_summary[
+        ""next_stage""
+    ]
+    ==
+    ""QUICK_ATTACK_VERSUS_ASCENSION_SCORE_AND_LABEL_ANALYSIS""
+)
+
+
+assert len(
+    section4wf_design_df
+) == 184
+
+
+assert hasattr(
+    section4wh_model,
+    ""predict_proba"",
+)
+
+
+assert section4wh_preprocessor is not None
+
+
+SECTION4WHB_REPORT_DIRECTORY = Path(
+    NOTEBOOK54_SECTION4_REPORT_DIRECTORY
+)
+
+
+SECTION4WHB_REPORT_DIRECTORY.mkdir(
+    parents=True,
+    exist_ok=True,
+)
+
+
+expected_report_directory_4whb = Path(
+    r""D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge""
+    r""\reports\notebook54\section4""
+)
+
+
+assert (
+    SECTION4WHB_REPORT_DIRECTORY.resolve()
+    ==
+    expected_report_directory_4whb.resolve()
+)
+
+
+print()
+print(""SECTION 4W-H-B REPORT DIRECTORY"")
+print(""-"" * 100)
+print(SECTION4WHB_REPORT_DIRECTORY)
+
+
+# --------------------------------------------------------------------------------------
+# 2. Resolve model-class positions
+# --------------------------------------------------------------------------------------
+
+section4whb_model_classes = [
+    str(
+        class_name
+    ).strip()
+    for class_name in section4wh_model_classes
+]
+
+
+section4whb_normalized_classes = [
+    class_name.lower()
+    for class_name in section4whb_model_classes
+]
+
+
+assert ""quick attack"" in section4whb_normalized_classes, (
+    ""Quick Attack is not represented in the model classes.""
+)
+
+
+assert ""ascension"" in section4whb_normalized_classes, (
+    ""Ascension is not represented in the model classes.""
+)
+
+
+SECTION4WHB_QUICK_ATTACK_INDEX = (
+    section4whb_normalized_classes.index(
+        ""quick attack""
+    )
+)
+
+
+SECTION4WHB_ASCENSION_INDEX = (
+    sec"
+73,"[""notebook53_preprocessor""]",194,"try:
+
+    transformed_feature_names = (
+        notebook53_preprocessor
+        .get_feature_names_out()
+        .tolist()
+    )
+
+except Exception:
+
+    transformed_feature_names = feature_names"
+74,"[""notebook53_legality_model""]",192,"feature_importance_df = pd.DataFrame(
+    {
+        ""feature"":
+            transformed_feature_names,
+
+        ""importance"":
+            notebook53_legality_model.feature_importances_,
+    }
+)"
+84,"[""predict_proba"", ""section4wh_model"", ""section4wh_preprocessor"", ""build_legality_aware_feature_row""]",42663,"# ======================================================================================
+# SECTION 4W-H-E — COUNTERFACTUAL LEGAL-SIGNATURE AND STATE-FEATURE TESTING
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4W-H-E — COUNTERFACTUAL LEGAL-SIGNATURE AND STATE-FEATURE TESTING"")
+print(""="" * 100)
+
+from pathlib import Path
+import json
+
+import numpy as np
+import pandas as pd
+
+
+# --------------------------------------------------------------------------------------
+# 1. Validate required runtime objects
+# --------------------------------------------------------------------------------------
+
+SECTION4WHE_REQUIRED_OBJECTS = [
+    ""section4whb_score_df"",
+    ""section4whd_summary"",
+    ""section4wf_design_df"",
+    ""section4wh_model"",
+    ""section4wh_preprocessor"",
+    ""section4wh_model_classes"",
+    ""build_section4wf_evaluation_state"",
+    ""build_legality_aware_feature_row"",
+    ""NOTEBOOK54_SECTION4_REPORT_DIRECTORY"",
+]
+
+
+section4whe_missing_objects = [
+    object_name
+    for object_name in SECTION4WHE_REQUIRED_OBJECTS
+    if object_name not in globals()
+]
+
+
+print()
+print(""SECTION 4W-H-E OBJECT VALIDATION"")
+print(""-"" * 100)
+
+for object_name in SECTION4WHE_REQUIRED_OBJECTS:
+
+    print(
+        f""{object_name:48}: ""
+        f""{object_name in globals()}""
+    )
+
+
+assert not section4whe_missing_objects, (
+    ""Required Section 4W-H-E objects are missing: ""
+    f""{section4whe_missing_objects}""
+)
+
+
+assert (
+    section4whd_summary[
+        ""next_stage""
+    ]
+    ==
+    ""COUNTERFACTUAL_LEGAL_SIGNATURE_AND_STATE_FEATURE_TESTING""
+)
+
+
+assert len(
+    section4wf_design_df
+) == 184
+
+
+assert hasattr(
+    section4wh_model,
+    ""predict_proba"",
+)
+
+
+# --------------------------------------------------------------------------------------
+# 2. Confirm the permanent D-drive report directory
+# --------------------------------------------------------------------------------------
+
+SECTION4WHE_REPORT_DIRECTORY = Path(
+    NOTEBOOK54_SECTION4_REPORT_DIRECTORY
+)
+
+
+SECTION4WHE_REPORT_DIRECTORY.mkdir(
+    parents=True,
+    exist_ok=True,
+)
+
+
+SECTION4WHE_EXPECTED_REPORT_DIRECTORY = Path(
+    r""D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge""
+    r""\reports\notebook54\section4""
+)
+
+
+assert (
+    SECTION4WHE_REPORT_DIRECTORY.resolve()
+    ==
+    SECTION4WHE_EXPECTED_REPORT_DIRECTORY.resolve()
+), (
+    ""Section 4W-H-E is not using the correct D-drive report directory.\n""
+    f""Resolved path: {SECTION4WHE_REPORT_DIRECTORY.resolve()}""
+)
+
+
+print()
+print(""SECTION 4W-H-E REPORT DIRECTORY"")
+print(""-"" * 100)
+
+print(
+    SECTION4WHE_REPORT_DIRECTORY
+)
+
+
+# --------------------------------------------------------------------------------------
+# 3. Resolve Quick Attack and Ascension model-class positions
+# --------------------------------------------------------------------------------------
+
+section4whe_model_classes = [
+    str(
+        class_name
+    ).strip()
+    for class_name in section4wh_model_classes
+]"

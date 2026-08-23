@@ -1,0 +1,4 @@
+decision_category,decisions,average_confidence,minimum_confidence,maximum_confidence,average_legal_move_count,raw_predictions_legal,decision_fraction,raw_legality_rate
+DIRECT,59,0.784090395480226,0.536,1.0,1.3898305084745763,59,0.28095238095238095,1.0
+FALLBACK,1,0.648,0.648,0.648,1.0,0,0.004761904761904762,0.0
+MASKED,150,0.6054311111111111,0.452,0.9453333333333334,1.0,0,0.7142857142857143,0.0

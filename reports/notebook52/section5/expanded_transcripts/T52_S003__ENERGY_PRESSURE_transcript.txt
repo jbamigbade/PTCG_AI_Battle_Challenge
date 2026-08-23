@@ -1,0 +1,45 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 3: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 0.80
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.86
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 0.77
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.77
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 7: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 0.64
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.

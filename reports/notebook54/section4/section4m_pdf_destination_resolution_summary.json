@@ -1,0 +1,29 @@
+{
+  "status": "PDF_DESTINATION_TARGET_RESOLUTION_COMPLETE",
+  "annotation_destinations_processed": 264,
+  "resolved_annotation_destinations": 264,
+  "unresolved_annotation_destinations": 0,
+  "unique_destination_pages": 8,
+  "card_rows_processed": 8,
+  "resolved_card_destinations": 8,
+  "valid_card_destinations": 8,
+  "card_destinations_with_images": 8,
+  "duplicate_destination_assignments": 0,
+  "cards_with_valid_destinations": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "cards_without_valid_destinations": [],
+  "resolution_status": "ALL_CARD_DESTINATIONS_RESOLVED_WITH_IMAGE_TARGETS",
+  "external_actions_executed": false,
+  "files_downloaded": false,
+  "images_extracted": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_expand_actions": false,
+  "validation_checks_passed": 7,
+  "validation_checks_failed": 0,
+  "next_stage": "TARGETED_DESTINATION_IMAGE_EXTRACTION"
+}

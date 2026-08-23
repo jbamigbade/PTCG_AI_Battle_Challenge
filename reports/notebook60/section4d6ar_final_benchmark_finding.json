@@ -1,0 +1,25 @@
+{
+  "historical_matches": 300,
+  "historical_wins": 194,
+  "historical_win_rate": 0.6466666666666666,
+  "controlled_matches": 300,
+  "controlled_wins": 183,
+  "controlled_win_rate": 0.61,
+  "benchmark_delta_percentage_points": -3.6666666666666625,
+  "changed_match_count": 11,
+  "historical_wins_to_controlled_losses": 11,
+  "historical_losses_to_controlled_wins": 0,
+  "all_changed_player_side": true,
+  "all_changed_eevee_charmander": true,
+  "changed_by_baseline": {
+    "Greedy Damage Baseline": 8,
+    "Random Baseline": 3
+  },
+  "different_selected_moves": 2,
+  "historical_fallbacks": 2,
+  "controlled_fallbacks": 0,
+  "retraining_recommended": false,
+  "model_modification_recommended": false,
+  "scientific_conclusion": "PRESERVE_CONTROLLED_61_FEATURE_MODEL_AND_REPORT_POLICY_PATH_DIFFERENCE",
+  "interpretation": "The historical 64.67% benchmark and the controlled 61.00% benchmark do not represent behaviorally identical evaluated-agent policies. Match-level comparison shows that 289 of 300 outcomes are identical, while exactly 11 historical wins become controlled losses. All 11 differences occur when the evaluated agent is Player in the Eevee-vs-Charmander matchup. Decision-level diagnostics on identical source-proven states show that the historical adapter invokes fallback behavior and selects different moves from the controlled adapter. The controlled adapter makes direct predictions using the certified 61-feature, 11-class RandomForest model without fallback. Therefore the 3.67 percentage-point benchmark difference must not be treated as evidence that the frozen certified model requires retraining or modification."
+}

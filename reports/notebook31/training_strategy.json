@@ -1,0 +1,12 @@
+{
+  "name": "Round Robin",
+  "description": "Each opponent is used the same number of times during replay generation.",
+  "opponents": [
+    "Random",
+    "Greedy",
+    "Heuristic",
+    "Search",
+    "Aggressive",
+    "Defensive"
+  ]
+}

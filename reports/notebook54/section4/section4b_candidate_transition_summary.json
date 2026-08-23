@@ -1,0 +1,29 @@
+{
+  "status": "ISOLATED_CANDIDATE_TRANSITION_VALIDATION_COMPLETE",
+  "candidate_moves_tested": 32,
+  "candidate_transitions_passed": 32,
+  "candidate_transitions_failed": 0,
+  "transition_pass_rate": 1.0,
+  "cards_tested": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "minimum_candidate_damage": 8.0,
+  "maximum_candidate_damage": 60.0,
+  "damage_improving_candidates": 22,
+  "cards_with_damage_improvement": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "unsupported_fields_required": false,
+  "tournament_move_sets_modified": false,
+  "strategic_legality_confirmed": false,
+  "validation_checks_passed": 14,
+  "validation_checks_failed": 0,
+  "ready_for_counterfactual_scenario_testing": true,
+  "next_stage": "COUNTERFACTUAL_SCENARIO_MOVE_EVALUATION"
+}

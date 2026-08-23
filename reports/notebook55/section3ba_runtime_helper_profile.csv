@@ -1,0 +1,13 @@
+helper_name,exists,callable,object_type
+build_section4wf_evaluation_state,False,False,MISSING
+build_legality_aware_feature_row,True,True,function
+get_state_value,True,True,function
+get_card_name,True,True,function
+get_attached_energy,True,True,function
+get_pokemon_damage,True,True,function
+extract_move_name,True,True,function
+normalize_action_name,True,True,function
+canonical_move_signature,True,True,function
+classify_turn_phase,True,True,function
+classify_energy_band,True,True,function
+classify_damage_band,True,True,function

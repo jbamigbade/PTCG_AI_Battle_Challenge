@@ -1,0 +1,8 @@
+module,class,method,signature
+src.competitive.competitive_policy_agent,CompetitivePolicyAgent,choose_move,"(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'"
+src.competitive.competitive_policy_agent,CompetitivePolicyAgent,select_move,"(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'"
+src.competitive.competitive_policy_agent,CompetitivePolicyEngine,choose_move,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'"
+src.competitive.competitive_policy_engine,CompetitivePolicyEngine,choose_move,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'"
+src.engine.advanced_search,AdvancedSearchEngine,search_depth,"(self, state: 'State', depth: 'int', root_player: 'Optional[Player]' = None, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'"
+src.engine.advanced_search,AdvancedSearchEngine,search_for_time,"(self, state, seconds=1.0, verbose=False, max_depth=100, clear_table=True, clear_killers=True, clear_history=True)"
+src.engine.advanced_search,SearchStats,reset,(self) -> 'None'

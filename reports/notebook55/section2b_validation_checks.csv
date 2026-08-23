@@ -1,0 +1,4 @@
+check,passed
+model_exists,True
+preprocessor_exists,True
+feature_inventory,True

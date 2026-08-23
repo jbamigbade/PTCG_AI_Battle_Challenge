@@ -1,0 +1,32 @@
+{
+  "status": "SOURCE_BACKED_CANDIDATE_MOVE_VALIDATION_COMPLETE",
+  "tournament_cards": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "tournament_source_records": 1582,
+  "simulator_supported_records": 1297,
+  "validated_unique_moves": 159,
+  "current_benchmark_moves": 5,
+  "additional_source_backed_moves": 32,
+  "cards_with_additional_candidates": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "damage_conflict_moves": 119,
+  "manual_review_moves": 122,
+  "safe_action_catalog_rows": 37,
+  "candidate_expansion_status": "SOURCE_BACKED_CANDIDATES_AVAILABLE",
+  "recommended_next_action": "Test each additional source-backed move in isolated simulator transitions before adding it to any tournament scenario.",
+  "unsupported_mechanics_enabled": false,
+  "custom_moves_invented": false,
+  "frozen_benchmark_modified": false,
+  "validation_checks_passed": 9,
+  "validation_checks_failed": 0,
+  "ready_for_counterfactual_testing": true,
+  "next_stage": "COUNTERFACTUAL_CANDIDATE_MOVE_EVALUATION"
+}

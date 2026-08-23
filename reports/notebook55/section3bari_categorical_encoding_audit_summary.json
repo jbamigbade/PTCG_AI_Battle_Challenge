@@ -1,0 +1,18 @@
+{
+  "status": "CATEGORICAL_ENCODING_AUDIT_COMPLETE_WITH_RESIDUAL_DRIFT",
+  "categorical_feature_count": 10,
+  "categorical_features_with_unknown_values": 2,
+  "unknown_category_mappings_available": 1,
+  "applied_category_repair_map": {
+    "legal_move_signature": {
+      "Ascension | Quick Attack": "ascension | quick attack"
+    }
+  },
+  "mean_quick_attack_probability_difference": 0.14843478260869564,
+  "maximum_quick_attack_probability_difference": 0.17199999999999993,
+  "mean_ascension_probability_difference": 0.08217391304347825,
+  "maximum_ascension_probability_difference": 0.11,
+  "prediction_agreement_rate": 1.0,
+  "exact_probability_agreement": false,
+  "next_stage": "AUDIT_MODEL_AND_PREPROCESSOR_SNAPSHOT_IDENTITY"
+}

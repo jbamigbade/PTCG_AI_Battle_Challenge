@@ -1,0 +1,13 @@
+finding,value
+Evaluation cases,184
+Models compared,4
+Prediction agreement across all model pairs,100%
+Total pairwise prediction disagreements,0
+Largest case-level probability drift,0.168
+Largest mean maximum case drift,0.107
+Most divergent strategy comparison,R0_CURRENT_BASELINE vs R3_STATE_CENTRIC_POLICY
+Additional features removed in most divergent comparison,18
+Top drifting action,Quick Attack
+Top action mean probability drift,0.101
+Top action maximum probability drift,0.15
+Probability mass conserved,True

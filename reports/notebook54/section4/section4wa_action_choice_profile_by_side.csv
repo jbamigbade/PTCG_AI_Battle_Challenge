@@ -1,0 +1,3 @@
+acting_side,decisions,scenarios,cards_used,unique_moves,legal_decisions,single_action_decisions,model_choice_decisions,average_legal_moves,average_confidence,average_acting_energy,average_energy_difference,average_turn_number,legal_decision_rate,model_choice_rate
+Opponent,92,24,3,5,92,69,23,1.25,0.9836521739130434,1.3695652173913044,-0.8913043478260869,6.239130434782608,1.0,0.25
+Player,88,22,4,4,88,88,0,1.0,1.0,2.25,0.9772727272727273,6.215909090909091,1.0,0.0

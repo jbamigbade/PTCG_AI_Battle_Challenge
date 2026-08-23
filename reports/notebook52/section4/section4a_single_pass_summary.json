@@ -1,0 +1,17 @@
+{
+  "status": "SINGLE_PASS_TOURNAMENT_COMPLETED",
+  "battle_count": 8,
+  "battles_completed": 8,
+  "battles_failed": 0,
+  "player_wins": 2,
+  "opponent_wins": 6,
+  "draws": 0,
+  "starter_wins": 4,
+  "starter_win_rate": 0.5,
+  "average_turns": 7.0,
+  "total_policy_decisions": 56,
+  "total_fallback_decisions": 1,
+  "overall_fallback_rate": 0.017857142857142856,
+  "average_confidence": 0.7357380952380953,
+  "next_stage": "TOURNAMENT_RESULT_ANALYSIS"
+}

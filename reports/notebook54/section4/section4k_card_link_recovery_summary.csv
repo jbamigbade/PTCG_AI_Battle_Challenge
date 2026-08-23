@@ -1,0 +1,5 @@
+card_name,official_candidate_rows,links_recovered,valid_links_recovered,unique_image_uris,card_ids,match_statuses,all_candidate_links_valid
+Bulbasaur,1,0,0,0,[650],"[""NO_URI_ANNOTATIONS_ON_PAGE""]",False
+Charmander,2,0,0,0,"[788, 926]","[""NO_URI_ANNOTATIONS_ON_PAGE""]",False
+Eevee,4,0,0,0,"[43, 145, 249, 317]","[""NO_URI_ANNOTATIONS_ON_PAGE""]",False
+Meowth,1,0,0,0,[1071],"[""NO_URI_ANNOTATIONS_ON_PAGE""]",False

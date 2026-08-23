@@ -1,0 +1,11 @@
+{
+  "status": "CONTROLLED_FEATURE_ABLATION_MODELS_TRAINED",
+  "models_trained": 4,
+  "baseline_strategy": "R0_CURRENT_BASELINE",
+  "primary_remediation_strategy": "R1_REMOVE_LEGAL_SIGNATURE",
+  "r0_prediction_agreement_with_original": 1.0,
+  "r0_accuracy_difference_from_original": 0.0,
+  "best_test_accuracy_strategy": "R0_CURRENT_BASELINE",
+  "best_test_accuracy": 1.0,
+  "next_stage": "EVALUATE_MOVE_DIVERSITY_AND_QUICK_ATTACK_ASCENSION_BEHAVIOR"
+}

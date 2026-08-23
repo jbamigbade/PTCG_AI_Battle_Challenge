@@ -1,0 +1,5 @@
+strategy_id,retained_features,train_rows,train_columns,validation_rows,validation_columns,test_rows,test_columns
+R0_CURRENT_BASELINE,64,840,64,110,64,110,64
+R1_REMOVE_LEGAL_SIGNATURE,58,840,58,110,58,110,58
+R2_REMOVE_SIGNATURE_AND_COMPATIBILITY,52,840,52,110,52,110,52
+R3_STATE_CENTRIC_POLICY,46,840,46,110,46,110,46

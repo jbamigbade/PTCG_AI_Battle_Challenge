@@ -1,0 +1,12 @@
+{
+    "notebook": 58,
+    "status": "FINAL_COMPETITIVE_VALIDATION_COMPLETE",
+    "release_decision": "GO",
+    "production_policy": "R3_STATE_CENTRIC_POLICY",
+    "feature_count": 46,
+    "feature_reduction_vs_r0_percent": 28.125,
+    "controlled_validation_risk": "LOW",
+    "action_agreement_with_r0": 1.0,
+    "maximum_reproduction_error": 0.0,
+    "ready_for_next_stage": true
+}

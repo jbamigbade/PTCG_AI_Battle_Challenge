@@ -1,0 +1,11 @@
+state_field,source_occurrences,referenced_by_apply_move
+current_hp,3,True
+attached_energy,0,False
+damage,1,True
+status,0,False
+bench,0,False
+prize_cards_remaining,2,True
+hand_size,0,False
+turn_number,1,True
+current_player,3,True
+active,4,True

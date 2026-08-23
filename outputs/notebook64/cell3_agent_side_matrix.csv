@@ -1,0 +1,7 @@
+agent_variant,side_mode,battle_count,player_wins,opponent_wins,timeouts,runtime_failures,player_win_rate,opponent_win_rate,timeout_rate,mean_turn_count,total_moves,mean_moves_per_battle,total_damage,mean_damage_per_battle,mean_damage_per_move,unknown_move_count,unknown_move_rate,positive_damage_move_count,positive_damage_move_rate,mean_player_final_hp,mean_opponent_final_hp,mean_final_hp_margin
+DEPLOYMENT_POLICY,NORMAL,40,30,10,0,0,0.75,0.25,0.0,11.25,450,11.25,6250.0,156.25,13.88888888888889,0,0.0,450,1.0,18.75,10.0,8.75
+DEPLOYMENT_POLICY,SWAPPED,40,30,10,0,0,0.75,0.25,0.0,11.25,450,11.25,6250.0,156.25,13.88888888888889,0,0.0,450,1.0,18.75,10.0,8.75
+FIRST_LEGAL_MOVE,NORMAL,40,30,10,0,0,0.75,0.25,0.0,11.25,450,11.25,6250.0,156.25,13.88888888888889,0,0.0,450,1.0,18.75,10.0,8.75
+FIRST_LEGAL_MOVE,SWAPPED,40,30,10,0,0,0.75,0.25,0.0,11.25,450,11.25,6250.0,156.25,13.88888888888889,0,0.0,450,1.0,18.75,10.0,8.75
+MAX_DAMAGE_LEGAL_MOVE,NORMAL,40,30,10,0,0,0.75,0.25,0.0,5.75,230,5.75,6200.0,155.0,26.956521739130434,0,0.0,230,1.0,25.0,7.5,17.5
+MAX_DAMAGE_LEGAL_MOVE,SWAPPED,40,30,10,0,0,0.75,0.25,0.0,5.75,230,5.75,6200.0,155.0,26.956521739130434,0,0.0,230,1.0,25.0,7.5,17.5

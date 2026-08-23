@@ -1,0 +1,9 @@
+scenario_id,scenario_name,player_card,opponent_card,current_player,turn_number,player_hp,opponent_hp,player_energy,opponent_energy,player_prizes,opponent_prizes,player_hand,opponent_hand,player_damage,opponent_damage,player_legal_moves,opponent_legal_moves
+T52_S001,Bulbasaur_vs_Eevee_Player_Start,Bulbasaur,Eevee,Player,1,80.0,50.0,3,3,1,1,5,5,0.0,0.0,['Bind Down'],[]
+T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,Bulbasaur,Eevee,Opponent,1,80.0,50.0,3,3,1,1,5,5,0.0,0.0,[],"['Ascension', 'Quick Attack']"
+T52_S003,Charmander_vs_Eevee_Player_Start,Charmander,Eevee,Player,1,80.0,50.0,3,3,1,1,5,5,0.0,0.0,['Live Coal'],[]
+T52_S004,Charmander_vs_Eevee_Opponent_Start,Charmander,Eevee,Opponent,1,80.0,50.0,3,3,1,1,5,5,0.0,0.0,[],"['Ascension', 'Quick Attack']"
+T52_S005,Meowth_vs_Bulbasaur_Player_Start,Meowth,Bulbasaur,Player,1,60.0,80.0,2,2,2,2,4,4,0.0,0.0,['Tuck Tail'],[]
+T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,Meowth,Bulbasaur,Opponent,1,60.0,80.0,2,2,2,2,4,4,0.0,0.0,[],['Bind Down']
+T52_S007,Critical_HP_Bulbasaur_vs_Eevee,Bulbasaur,Eevee,Opponent,9,20.0,20.0,3,3,1,1,3,3,60.0,30.0,[],"['Ascension', 'Quick Attack']"
+T52_S008,Low_Energy_Eevee_vs_Charmander,Eevee,Charmander,Player,2,50.0,80.0,1,1,4,4,6,6,0.0,0.0,['Ascension'],[]

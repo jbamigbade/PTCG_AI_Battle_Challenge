@@ -1,0 +1,4 @@
+source_name,rows,columns,direct_raw_feature_matches,suffix_or_prefixed_matches,direct_matching_columns,prefixed_matching_columns
+score_cases,184,22,1,2,"[""acting_energy""]","[""source_turn_number"", ""acting_energy""]"
+counterfactual_cases,1656,31,1,5,"[""legal_move_signature""]","[""source_turn_number"", ""legal_move_signature"", ""observed_turn_number"", ""observed_acting_energy"", ""observed_energy_difference""]"
+expanded_case_results,184,34,1,2,"[""acting_energy""]","[""source_turn_number"", ""acting_energy""]"

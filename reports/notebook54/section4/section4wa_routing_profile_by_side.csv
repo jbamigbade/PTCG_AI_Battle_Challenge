@@ -1,0 +1,4 @@
+acting_side,routing_reason,decisions,average_confidence,average_legal_moves,routing_share
+Opponent,ONLY_LEGAL_MOVE,69,1.0,1.0,0.75
+Opponent,LEGAL_MODEL_PREDICTION,23,0.9346086956521739,2.0,0.25
+Player,ONLY_LEGAL_MOVE,88,1.0,1.0,1.0

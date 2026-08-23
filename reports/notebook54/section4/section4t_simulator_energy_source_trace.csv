@@ -1,0 +1,2 @@
+source_name,source_path,line_number,matched_terms,line_text
+battle_state,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\src\battle_state.py,15,"[""energy"", ""attached_energy"", ""attach""]",attached_energy: int = 0

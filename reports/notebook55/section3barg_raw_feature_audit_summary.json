@@ -1,0 +1,11 @@
+{
+  "status": "RAW_FEATURE_VALUE_DIFFERENCES_IDENTIFIED",
+  "cases_reconstructed": 184,
+  "raw_feature_count": 41,
+  "best_saved_source": "counterfactual_cases",
+  "direct_raw_features_compared": 1,
+  "features_with_value_differences": 1,
+  "case_level_feature_differences": 184,
+  "scenario_profiles_created": 10,
+  "next_stage": "REPAIR_IDENTIFIED_RAW_FEATURES"
+}

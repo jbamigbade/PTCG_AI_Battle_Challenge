@@ -1,0 +1,8 @@
+check,passed,value,expected,details
+simulator_move_profile_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+simulator_hp_profile_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+candidate_comparison_covers_all_official_rows,True,8,8,
+leading_summary_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+unconfirmed_candidates_not_treated_as_exact,True,True,True,
+version_matching_status_recognized,True,SIMULATOR_VERSIONS_NOT_SOURCE_CONFIRMED,Recognized simulator-version status,
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",

@@ -1,0 +1,16 @@
+{
+  "total_matches": 300,
+  "baseline_count": 3,
+  "matches_per_baseline": 100,
+  "matches_per_side_per_baseline": 50,
+  "sides": [
+    "Player",
+    "Opponent"
+  ],
+  "alternate_starting_side": true,
+  "depth_search_baseline_label": "Depth-6 Search Baseline",
+  "greedy_baseline_label": "Greedy Damage Baseline",
+  "random_baseline_label": "Random Baseline",
+  "r3_retraining": false,
+  "r3_model_modification": false
+}

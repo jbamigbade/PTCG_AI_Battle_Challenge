@@ -1,0 +1,331 @@
+{
+  "notebook": 63,
+  "cell": 13,
+  "campaign_configuration_sha256": "901d90eb6bb39b6de10848ddd30de86bd64ee9bcadd35f4cf2e638c2b72a2301",
+  "battle_count": 240,
+  "overall_summary": {
+    "DEPLOYMENT_POLICY": {
+      "battles": 80,
+      "player_wins": 60,
+      "opponent_wins": 20,
+      "timeouts": 0,
+      "runtime_failures": 0,
+      "decisive_games": 80,
+      "player_win_rate_all": 0.75,
+      "player_win_rate_all_ci95": {
+        "rate": 0.75,
+        "lower": 0.6551119080179183,
+        "upper": 0.8448880919820817
+      },
+      "player_win_rate_decisive": 0.75,
+      "player_win_rate_decisive_ci95": {
+        "rate": 0.75,
+        "lower": 0.6551119080179183,
+        "upper": 0.8448880919820817
+      },
+      "timeout_rate": 0.0,
+      "mean_turn_count": 11.25,
+      "median_turn_count": 10.5,
+      "total_moves": 900,
+      "mean_moves_per_battle": 11.25,
+      "unknown_move_count": 0,
+      "unknown_move_rate": 0.0,
+      "zero_damage_move_count": 0,
+      "zero_damage_move_rate": 0.0,
+      "positive_damage_move_count": 900,
+      "positive_damage_move_rate": 1.0,
+      "total_damage": 12500.0,
+      "mean_damage_per_move": 13.88888888888889,
+      "mean_damage_per_battle": 156.25
+    },
+    "FIRST_LEGAL_MOVE": {
+      "battles": 80,
+      "player_wins": 60,
+      "opponent_wins": 20,
+      "timeouts": 0,
+      "runtime_failures": 0,
+      "decisive_games": 80,
+      "player_win_rate_all": 0.75,
+      "player_win_rate_all_ci95": {
+        "rate": 0.75,
+        "lower": 0.6551119080179183,
+        "upper": 0.8448880919820817
+      },
+      "player_win_rate_decisive": 0.75,
+      "player_win_rate_decisive_ci95": {
+        "rate": 0.75,
+        "lower": 0.6551119080179183,
+        "upper": 0.8448880919820817
+      },
+      "timeout_rate": 0.0,
+      "mean_turn_count": 11.25,
+      "median_turn_count": 10.5,
+      "total_moves": 900,
+      "mean_moves_per_battle": 11.25,
+      "unknown_move_count": 0,
+      "unknown_move_rate": 0.0,
+      "zero_damage_move_count": 0,
+      "zero_damage_move_rate": 0.0,
+      "positive_damage_move_count": 900,
+      "positive_damage_move_rate": 1.0,
+      "total_damage": 12500.0,
+      "mean_damage_per_move": 13.88888888888889,
+      "mean_damage_per_battle": 156.25
+    },
+    "MAX_DAMAGE_LEGAL_MOVE": {
+      "battles": 80,
+      "player_wins": 60,
+      "opponent_wins": 20,
+      "timeouts": 0,
+      "runtime_failures": 0,
+      "decisive_games": 80,
+      "player_win_rate_all": 0.75,
+      "player_win_rate_all_ci95": {
+        "rate": 0.75,
+        "lower": 0.6551119080179183,
+        "upper": 0.8448880919820817
+      },
+      "player_win_rate_decisive": 0.75,
+      "player_win_rate_decisive_ci95": {
+        "rate": 0.75,
+        "lower": 0.6551119080179183,
+        "upper": 0.8448880919820817
+      },
+      "timeout_rate": 0.0,
+      "mean_turn_count": 5.75,
+      "median_turn_count": 5.5,
+      "total_moves": 460,
+      "mean_moves_per_battle": 5.75,
+      "unknown_move_count": 0,
+      "unknown_move_rate": 0.0,
+      "zero_damage_move_count": 0,
+      "zero_damage_move_rate": 0.0,
+      "positive_damage_move_count": 460,
+      "positive_damage_move_rate": 1.0,
+      "total_damage": 12400.0,
+      "mean_damage_per_move": 26.956521739130434,
+      "mean_damage_per_battle": 155.0
+    }
+  },
+  "scenario_summary": {
+    "S1_BALANCED_LOW_HP": {
+      "DEPLOYMENT_POLICY": {
+        "battles": 20,
+        "player_wins": 20,
+        "opponent_wins": 0,
+        "timeouts": 0,
+        "player_win_rate": 1.0,
+        "mean_turn_count": 11.0,
+        "mean_damage_per_move": 10.0,
+        "mean_damage_per_battle": 110.0
+      },
+      "FIRST_LEGAL_MOVE": {
+        "battles": 20,
+        "player_wins": 20,
+        "opponent_wins": 0,
+        "timeouts": 0,
+        "player_win_rate": 1.0,
+        "mean_turn_count": 11.0,
+        "mean_damage_per_move": 10.0,
+        "mean_damage_per_battle": 110.0
+      },
+      "MAX_DAMAGE_LEGAL_MOVE": {
+        "battles": 20,
+        "player_wins": 20,
+        "opponent_wins": 0,
+        "timeouts": 0,
+        "player_win_rate": 1.0,
+        "mean_turn_count": 5.0,
+        "mean_damage_per_move": 20.0,
+        "mean_damage_per_battle": 100.0
+      }
+    },
+    "S2_BALANCED_HIGH_HP": {
+      "DEPLOYMENT_POLICY": {
+        "battles": 20,
+        "player_wins": 20,
+        "opponent_wins": 0,
+        "timeouts": 0,
+        "player_win_rate": 1.0,
+        "mean_turn_count": 15.0,
+        "mean_damage_per_move": 15.0,
+        "mean_damage_per_battle": 225.0
+      },
+      "FIRST_LEGAL_MOVE": {
+        "battles": 20,
+        "player_wins": 20,
+        "opponent_wins": 0,
+        "timeouts": 0,
+        "player_win_rate": 1.0,
+        "mean_turn_count": 15.0,
+        "mean_damage_per_move": 15.0,
+        "mean_damage_per_battle": 225.0
+      },
+      "MAX_DAMAGE_LEGAL_MOVE": {
+        "battles": 20,
+        "player_wins": 20,
+        "opponent_wins": 0,
+        "timeouts": 0,
+        "player_win_rate": 1.0,
+        "mean_turn_count": 7.0,
+        "mean_damage_per_move": 30.0,
+        "mean_damage_per_battle": 210.0
+      }
+    },
+    "S3_PLAYER_DAMAGE_ADVANTAGE": {
+      "DEPLOYMENT_POLICY": {
+        "battles": 20,
+        "player_wins": 10,
+        "opponent_wins": 10,
+        "timeouts": 0,
+        "player_win_rate": 0.5,
+        "mean_turn_count": 9.5,
+        "mean_damage_per_move": 15.263157894736842,
+        "mean_damage_per_battle": 145.0
+      },
+      "FIRST_LEGAL_MOVE": {
+        "battles": 20,
+        "player_wins": 10,
+        "opponent_wins": 10,
+        "timeouts": 0,
+        "player_win_rate": 0.5,
+        "mean_turn_count": 9.5,
+        "mean_damage_per_move": 15.263157894736842,
+        "mean_damage_per_battle": 145.0
+      },
+      "MAX_DAMAGE_LEGAL_MOVE": {
+        "battles": 20,
+        "player_wins": 10,
+        "opponent_wins": 10,
+        "timeouts": 0,
+        "player_win_rate": 0.5,
+        "mean_turn_count": 5.5,
+        "mean_damage_per_move": 28.181818181818183,
+        "mean_damage_per_battle": 155.0
+      }
+    },
+    "S4_OPPONENT_DAMAGE_ADVANTAGE": {
+      "DEPLOYMENT_POLICY": {
+        "battles": 20,
+        "player_wins": 10,
+        "opponent_wins": 10,
+        "timeouts": 0,
+        "player_win_rate": 0.5,
+        "mean_turn_count": 9.5,
+        "mean_damage_per_move": 15.263157894736842,
+        "mean_damage_per_battle": 145.0
+      },
+      "FIRST_LEGAL_MOVE": {
+        "battles": 20,
+        "player_wins": 10,
+        "opponent_wins": 10,
+        "timeouts": 0,
+        "player_win_rate": 0.5,
+        "mean_turn_count": 9.5,
+        "mean_damage_per_move": 15.263157894736842,
+        "mean_damage_per_battle": 145.0
+      },
+      "MAX_DAMAGE_LEGAL_MOVE": {
+        "battles": 20,
+        "player_wins": 10,
+        "opponent_wins": 10,
+        "timeouts": 0,
+        "player_win_rate": 0.5,
+        "mean_turn_count": 5.5,
+        "mean_damage_per_move": 28.181818181818183,
+        "mean_damage_per_battle": 155.0
+      }
+    }
+  },
+  "side_summary": {
+    "NORMAL": {
+      "DEPLOYMENT_POLICY": {
+        "battles": 40,
+        "player_wins": 30,
+        "player_win_rate": 0.75,
+        "mean_turn_count": 11.25
+      },
+      "FIRST_LEGAL_MOVE": {
+        "battles": 40,
+        "player_wins": 30,
+        "player_win_rate": 0.75,
+        "mean_turn_count": 11.25
+      },
+      "MAX_DAMAGE_LEGAL_MOVE": {
+        "battles": 40,
+        "player_wins": 30,
+        "player_win_rate": 0.75,
+        "mean_turn_count": 5.75
+      }
+    },
+    "SWAPPED": {
+      "DEPLOYMENT_POLICY": {
+        "battles": 40,
+        "player_wins": 30,
+        "player_win_rate": 0.75,
+        "mean_turn_count": 11.25
+      },
+      "FIRST_LEGAL_MOVE": {
+        "battles": 40,
+        "player_wins": 30,
+        "player_win_rate": 0.75,
+        "mean_turn_count": 11.25
+      },
+      "MAX_DAMAGE_LEGAL_MOVE": {
+        "battles": 40,
+        "player_wins": 30,
+        "player_win_rate": 0.75,
+        "mean_turn_count": 5.75
+      }
+    }
+  },
+  "deployment_vs_baselines": {
+    "deployment_minus_first_legal_win_rate": 0.0,
+    "deployment_minus_max_damage_win_rate": 0.0,
+    "deployment_minus_first_legal_damage_per_move": 0.0,
+    "deployment_minus_max_damage_damage_per_move": -13.067632850241544,
+    "deployment_minus_first_legal_mean_turns": 0.0,
+    "deployment_minus_max_damage_mean_turns": 5.5
+  },
+  "side_swap_delta": {
+    "DEPLOYMENT_POLICY": {
+      "normal_win_rate": 0.75,
+      "swapped_win_rate": 0.75,
+      "normal_minus_swapped": 0.0
+    },
+    "FIRST_LEGAL_MOVE": {
+      "normal_win_rate": 0.75,
+      "swapped_win_rate": 0.75,
+      "normal_minus_swapped": 0.0
+    },
+    "MAX_DAMAGE_LEGAL_MOVE": {
+      "normal_win_rate": 0.75,
+      "swapped_win_rate": 0.75,
+      "normal_minus_swapped": 0.0
+    }
+  },
+  "behavioral_equivalence": {
+    "paired_battles": 80,
+    "deployment_matches_first_legal": 80,
+    "deployment_matches_first_legal_rate": 1.0,
+    "deployment_matches_max_damage": 0,
+    "deployment_matches_max_damage_rate": 0.0
+  },
+  "strategic_flags": {
+    "deployment_runtime_stable": true,
+    "deployment_unknown_move_free": true,
+    "deployment_all_moves_positive_damage": true,
+    "deployment_has_no_timeouts": true,
+    "deployment_outperforms_first_legal_on_win_rate": false,
+    "deployment_outperforms_max_damage_on_win_rate": false,
+    "deployment_identical_to_first_legal_all_paired_battles": true,
+    "max_damage_more_damage_efficient_than_deployment": true
+  },
+  "analysis_classification": {
+    "campaign_execution": "VALID",
+    "campaign_semantics": "VALID",
+    "deployment_runtime": "STABLE",
+    "deployment_behavior_classification": "DEPLOYMENT_POLICY_BEHAVIORALLY_EQUIVALENT_TO_FIRST_LEGAL_UNDER_CONTROLLED_ATTACK_ONLY_CAMPAIGN",
+    "interpretation_scope": "CONTROLLED_ATTACK_ONLY_SYNTHETIC_BATTLE_STATES; NOT FULL OFFICIAL PTCG GAMEPLAY"
+  }
+}

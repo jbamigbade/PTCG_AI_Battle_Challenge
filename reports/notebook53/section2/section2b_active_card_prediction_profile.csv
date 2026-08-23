@@ -1,0 +1,6 @@
+active_card,raw_predicted_move,decisions,masked_decisions,legal_raw_predictions,fallback_decisions,average_confidence,average_legal_move_count,masking_rate,raw_legality_rate,fallback_rate
+Bulbasaur,Ascension,70,70,0,1,0.5996952380952382,1.0,1.0,0.0,0.014285714285714285
+Meowth,Ascension,46,46,0,0,0.5568115942028985,1.0,1.0,0.0,0.0
+Charmander,Ascension,35,35,0,0,0.6820190476190475,1.0,1.0,0.0,0.0
+Eevee,Ascension,36,0,36,0,0.7476296296296296,1.0,0.0,1.0,0.0
+Eevee,Quick Attack,23,0,23,0,0.8411594202898551,2.0,0.0,1.0,0.0

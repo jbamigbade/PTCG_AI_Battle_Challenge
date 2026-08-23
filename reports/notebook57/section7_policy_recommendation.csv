@@ -1,0 +1,4 @@
+recommendation,strategy,rationale
+Primary candidate,R3_STATE_CENTRIC_POLICY,R3 preserves action decisions across the controlled benchmark while relying more strongly on intrinsic battle-state features rather than handcrafted legality/signature signals.
+Validation requirement,R3_STATE_CENTRIC_POLICY,"R3 should proceed to robustness, calibration, SHAP, and large-scale tournament evaluation before final submission selection."
+Fallback reference,R0_CURRENT_BASELINE,R0 remains the reference policy for measuring the effect of progressive feature removal and confidence redistribution.

@@ -1,0 +1,8 @@
+state,count
+"{'pokemon': 'Eevee ex', 'damage': 60.0, 'nodes_searched': 17, 'player_hp_after': 200.0, 'opponent_hp_after': 10.0, 'next_side': 'Opponent'}",50
+"{'pokemon': 'Electrike', 'damage': 30.0, 'nodes_searched': 10, 'player_hp_after': 170.0, 'opponent_hp_after': 10.0, 'next_side': 'Player'}",50
+"{'pokemon': 'Eevee ex', 'damage': 60.0, 'nodes_searched': 10, 'player_hp_after': 170.0, 'opponent_hp_after': 0.0, 'next_side': 'Opponent'}",50
+"{'pokemon': 'Electrike', 'damage': 30.0, 'nodes_searched': 16, 'player_hp_after': 170.0, 'opponent_hp_after': 70.0, 'next_side': 'Player'}",50
+"{'pokemon': 'Eevee ex', 'damage': 60.0, 'nodes_searched': 17, 'player_hp_after': 170.0, 'opponent_hp_after': 10.0, 'next_side': 'Opponent'}",50
+"{'pokemon': 'Electrike', 'damage': 30.0, 'nodes_searched': 10, 'player_hp_after': 140.0, 'opponent_hp_after': 10.0, 'next_side': 'Player'}",50
+"{'pokemon': 'Eevee ex', 'damage': 60.0, 'nodes_searched': 10, 'player_hp_after': 140.0, 'opponent_hp_after': 0.0, 'next_side': 'Opponent'}",50

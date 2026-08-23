@@ -1,0 +1,5 @@
+card_name,benchmark_moves,metadata_moves,matched_moves,missing_benchmark_moves,additional_metadata_moves,exact_benchmark_move_coverage,metadata_card_versions,exact_version_ambiguous,metadata_identification_status
+Bulbasaur,"[""Bind Down""]",[],[],"[""Bind Down""]",[],0.0,0,False,NO_METADATA_RECORD
+Charmander,"[""Live Coal""]",[],[],"[""Live Coal""]",[],0.0,0,False,NO_METADATA_RECORD
+Eevee,"[""Ascension"", ""Quick Attack""]",[],[],"[""Ascension"", ""Quick Attack""]",[],0.0,0,False,NO_METADATA_RECORD
+Meowth,"[""Pass"", ""Tuck Tail""]",[],[],"[""Pass"", ""Tuck Tail""]",[],0.0,0,False,NO_METADATA_RECORD

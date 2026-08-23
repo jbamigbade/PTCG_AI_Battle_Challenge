@@ -1,0 +1,1559 @@
+cell_index,line_number,variable_name,assignment_source
+0,100,MODELS_DIR,"MODELS_DIR = (
+    PROJECT_ROOT
+    / ""models""
+)"
+0,120,NOTEBOOK50_MODEL_DIR,"NOTEBOOK50_MODEL_DIR = (
+    MODELS_DIR
+    / ""notebook50""
+)"
+0,145,NOTEBOOK53_MODEL_DIR,"NOTEBOOK53_MODEL_DIR = (
+    MODELS_DIR
+    / ""notebook53""
+)"
+1,45,NOTEBOOK52_OPTIMIZATION_TARGETS_FILE,"NOTEBOOK52_OPTIMIZATION_TARGETS_FILE = (
+    NOTEBOOK52_SECTION7_DIR
+    / ""section7a_optimization_targets.csv""
+)"
+1,70,NOTEBOOK52_EXPANDED_POLICY_HISTORY_FILE,"NOTEBOOK52_EXPANDED_POLICY_HISTORY_FILE = (
+    NOTEBOOK52_SECTION5_DIR
+    / ""section5b_expanded_policy_history.csv""
+)"
+1,257,notebook52_optimization_targets_df,"notebook52_optimization_targets_df = pd.read_csv(
+    NOTEBOOK52_OPTIMIZATION_TARGETS_FILE
+)"
+1,273,notebook52_policy_history_df,"notebook52_policy_history_df = pd.read_csv(
+    NOTEBOOK52_EXPANDED_POLICY_HISTORY_FILE
+)"
+1,298,policy_decisions,"policy_decisions = int(
+    notebook52_handoff_manifest[
+        ""policy_decisions""
+    ]
+)"
+1,352,primary_optimization_target,"primary_optimization_target = str(
+    notebook52_handoff_manifest[
+        ""primary_optimization_target""
+    ]
+)"
+2,196,required_policy_history_columns,"required_policy_history_columns = [
+    ""scenario_id"",
+    ""condition_id"",
+    ""turn_number"",
+    ""current_player"",
+    ""legal_moves"",
+    ""selected_move"",
+    ""raw_predicted_move"",
+    ""confidence"",
+    ""fallback_used"",
+]"
+2,208,missing_policy_history_columns,"missing_policy_history_columns = [
+    column_name
+    for column_name in required_policy_history_columns
+    if column_name not in masking_analysis_df.columns
+]"
+4,29,POLICY_ACTION_CLASSES,"POLICY_ACTION_CLASSES = [
+    ""Ascension"",
+    ""Bind Down"",
+    ""Live Coal"",
+    ""Pass"",
+    ""Quick Attack"",
+    ""Tuck Tail"",
+]"
+4,611,multi_action_model_decisions,"multi_action_model_decisions = int(
+    (
+        routing_analysis_df[
+            ""routing_mode""
+        ]
+        == ""MULTI_LEGAL_MODEL""
+    ).sum()
+)"
+5,14,legality_feature_df,"legality_feature_df = (
+    routing_analysis_df.copy()
+)"
+5,150,numeric_base_features,"numeric_base_features = [
+    ""turn_number"",
+    ""legal_move_count_recomputed"",
+    ""acting_energy"",
+    ""defending_energy"",
+    ""acting_damage"",
+    ""defending_damage"",
+    ""confidence"",
+]"
+5,248,categorical_base_features,"categorical_base_features = [
+    ""current_player"",
+    ""condition_id"",
+    ""active_card"",
+    ""inactive_card"",
+    ""legal_move_signature"",
+    ""battle_phase"",
+    ""energy_band"",
+    ""damage_band"",
+    ""confidence_band"",
+    ""routing_mode"",
+]"
+5,390,legality_numeric_features,"legality_numeric_features = [
+    ""turn_number"",
+    ""legal_move_count_recomputed"",
+    ""acting_energy"",
+    ""defending_energy"",
+    ""energy_difference"",
+    ""absolute_energy_difference"",
+    ""acting_damage"",
+    ""defending_damage"",
+    ""damage_difference"",
+    ""absolute_damage_difference"",
+    ""single_legal_move_flag"",
+    ""multi_legal_move_flag"",
+    ""model_choice_required_flag"",
+    ""legacy_selector_required_flag"",
+    ""confidence"",
+]"
+5,417,legality_categorical_features,"legality_categorical_features = [
+    ""current_player"",
+    ""condition_id"",
+    ""active_card"",
+    ""inactive_card"",
+    ""legal_move_signature"",
+    ""battle_phase"",
+    ""energy_band"",
+    ""damage_band"",
+    ""confidence_band"",
+    ""routing_mode"",
+]"
+5,431,legality_target_columns,"legality_target_columns = [
+    ""selected_move"",
+    ""routed_move"",
+]"
+5,464,legality_model_feature_df,"legality_model_feature_df = legality_feature_df[
+    legality_numeric_features
+    + legality_categorical_features
+].copy()"
+5,470,legality_target_series,"legality_target_series = (
+    legality_feature_df[
+        ""routed_move""
+    ]
+    .astype(str)
+    .copy()
+)"
+5,488,feature_inventory_rows,feature_inventory_rows = []
+5,562,legality_feature_inventory_df,"legality_feature_inventory_df = pd.DataFrame(
+    feature_inventory_rows
+)"
+5,580,feature_family_summary_df,"feature_family_summary_df = pd.DataFrame(
+    [
+        {
+            ""feature_family"":
+                ""numeric_base_and_interactions"",
+
+            ""feature_count"":
+                len(
+                    legality_numeric_features
+                )
+                - len(
+                    legality_action_flag_columns
+                )
+                - len(
+                    active_card_compatibility_columns
+                ),
+        },
+        {
+            ""feature_family"":
+                ""legal_action_flags"",
+
+            ""feature_count"":
+                len(
+                    legality_action_flag_columns
+                ),
+        },
+        {
+            ""feature_family"":
+                ""active_card_compatibility_flags"",
+
+            ""feature_count"":
+                len(
+                    active_card_compatibility_columns
+                ),
+        },
+        {
+            ""feature_family"":
+                ""categorical_context"",
+
+            ""feature_count"":
+        "
+5,738,legality_target_distribution_df,"legality_target_distribution_df = (
+    legality_target_series
+    .value_counts(
+        dropna=False
+    )
+    .rename_axis(
+        ""target_move""
+    )
+    .reset_index(
+        name=""examples""
+    )
+)"
+5,875,SECTION3B_MODEL_FEATURES_FILE,"SECTION3B_MODEL_FEATURES_FILE = (
+    SECTION3_REPORT_DIR
+    / ""section3b_legality_aware_model_features.csv""
+)"
+5,880,SECTION3B_TARGETS_FILE,"SECTION3B_TARGETS_FILE = (
+    SECTION3_REPORT_DIR
+    / ""section3b_legality_aware_targets.csv""
+)"
+5,890,SECTION3B_FEATURE_INVENTORY_FILE,"SECTION3B_FEATURE_INVENTORY_FILE = (
+    SECTION3_REPORT_DIR
+    / ""section3b_feature_inventory.csv""
+)"
+5,895,SECTION3B_FEATURE_FAMILY_FILE,"SECTION3B_FEATURE_FAMILY_FILE = (
+    SECTION3_REPORT_DIR
+    / ""section3b_feature_family_summary.csv""
+)"
+5,910,SECTION3B_TARGET_DISTRIBUTION_FILE,"SECTION3B_TARGET_DISTRIBUTION_FILE = (
+    SECTION3_REPORT_DIR
+    / ""section3b_target_distribution.csv""
+)"
+6,34,candidate_policy_dataset_files,"candidate_policy_dataset_files = [
+    (
+        NOTEBOOK49_REPORT_DIR
+        / ""section8""
+        / ""policy_dataset""
+        / ""section8c_expert_policy_dataset.csv""
+    ),
+    (
+        NOTEBOOK49_REPORT_DIR
+        / ""section8""
+        / ""section8c_expert_policy_dataset.csv""
+    ),
+    (
+        NOTEBOOK50_REPORT_DIR
+        / ""section2""
+        / ""section2c_policy_dataset.csv""
+    ),
+    (
+        NOTEBOOK50_REPORT_DIR
+        / ""section3""
+        / ""section3a_policy_dataset.csv""
+    ),
+]"
+6,65,discovered_policy_files,discovered_policy_files = []
+6,96,candidate_policy_dataset_files,"candidate_policy_dataset_files = list(
+    dict.fromkeys(
+        Path(path).resolve()
+        for path in candidate_policy_dataset_files
+    )
+)"
+6,169,dataset_profile_rows,dataset_profile_rows = []
+6,321,section4a_dataset_profiles_df,"section4a_dataset_profiles_df = pd.DataFrame(
+    dataset_profile_rows
+)"
+6,394,section4a_dataset_profiles_df,"section4a_dataset_profiles_df = (
+    section4a_dataset_profiles_df
+    .sort_values(
+        [
+            ""readiness_score"",
+            ""rows"",
+        ],
+        ascending=[
+            False,
+            False,
+        ],
+    )
+    .reset_index(
+        drop=True
+    )
+)"
+6,425,selected_dataset_profile,"selected_dataset_profile = (
+    section4a_dataset_profiles_df.iloc[0]
+)"
+6,429,SOURCE_POLICY_DATASET_FILE,"SOURCE_POLICY_DATASET_FILE = Path(
+    selected_dataset_profile[
+        ""path""
+    ]
+)"
+6,435,source_policy_dataset_df,"source_policy_dataset_df = (
+    loaded_candidate_dataframes[
+        str(
+            SOURCE_POLICY_DATASET_FILE
+        )
+    ].copy()
+)"
+6,444,selected_target_candidates,"selected_target_candidates = list(
+    selected_dataset_profile[
+        ""target_candidates""
+    ]
+)"
+6,468,SOURCE_TARGET_COLUMN,"SOURCE_TARGET_COLUMN = (
+    selected_target_candidates[0]
+)"
+6,788,SECTION4A_DATASET_PROFILES_FILE,"SECTION4A_DATASET_PROFILES_FILE = (
+    SECTION4_REPORT_DIR
+    / ""section4a_dataset_profiles.csv""
+)"
+6,192,target_candidates,"target_candidates = [
+            column_name
+            for column_name in column_names
+            if column_name.lower() in {
+                ""expert_move"",
+                ""selected_move"",
+                ""policy_move"",
+                ""target_move"",
+                ""move"",
+                ""action"",
+            }
+        ]"
+7,14,legality_training_source_df,"legality_training_source_df = (
+    source_policy_dataset_df.copy()
+)"
+7,194,required_training_columns,"required_training_columns = [
+    ""example_id"",
+    ""variant_id"",
+    ""source_scenario_id"",
+    ""side_mode"",
+    ""current_side"",
+    ""player_card"",
+    ""opponent_card"",
+    ""turn_number"",
+    ""player_energy"",
+    ""opponent_energy"",
+    ""player_damage"",
+    ""opponent_damage"",
+    ""prize_cards_remaining"",
+    ""hand_size"",
+    ""legal_move_count"",
+    ""legal_moves"",
+    ""expert_move"",
+    ""sample_weight"",
+]"
+7,215,missing_training_columns,"missing_training_columns = [
+    column_name
+    for column_name in required_training_columns
+    if column_name not in legality_training_source_df.columns
+]"
+7,343,training_acting_side_is_player,"training_acting_side_is_player = (
+    legality_training_source_df[
+        ""current_side""
+    ]
+    .astype(str)
+    .str.strip()
+    .str.lower()
+    .eq(
+        ""player""
+    )
+)"
+7,526,training_legal_action_flag_columns,training_legal_action_flag_columns = []
+7,598,training_active_card_compatibility_columns,training_active_card_compatibility_columns = []
+7,647,legality_training_numeric_features,"legality_training_numeric_features = [
+    ""turn_number"",
+    ""player_energy"",
+    ""opponent_energy"",
+    ""player_damage"",
+    ""opponent_damage"",
+    ""prize_cards_remaining"",
+    ""hand_size"",
+    ""recomputed_legal_move_count"",
+    ""acting_energy"",
+    ""defending_energy"",
+    ""energy_difference"",
+    ""absolute_energy_difference"",
+    ""acting_damage"",
+    ""defending_damage"",
+    ""damage_difference"",
+    ""absolute_damage_difference"",
+    ""single_legal_move_flag"",
+    ""multi_legal_move_flag"",
+    ""model_choice_required_flag"",
+]"
+7,678,legality_training_categorical_features,"legality_training_categorical_features = [
+    ""current_side"",
+    ""side_mode"",
+    ""player_card"",
+    ""opponent_card"",
+    ""active_card"",
+    ""inactive_card"",
+    ""legal_move_signature"",
+    ""battle_phase"",
+    ""energy_band"",
+    ""damage_band"",
+]"
+7,692,legality_training_metadata_columns,"legality_training_metadata_columns = [
+    ""example_id"",
+    ""variant_id"",
+    ""source_scenario_id"",
+    ""source_match_id"",
+    ""variant_seed"",
+    ""queue_position"",
+    ""curriculum_priority"",
+    ""hard_example_rank"",
+    ""baseline_name"",
+    ""state_key"",
+    ""expert_move"",
+    ""sample_weight"",
+]"
+7,760,legality_training_features_df,"legality_training_features_df = (
+    legality_training_source_df[
+        legality_training_numeric_features
+        + legality_training_categorical_features
+    ]
+    .copy()
+)"
+7,768,legality_training_target_series,"legality_training_target_series = (
+    legality_training_source_df[
+        SOURCE_TARGET_COLUMN
+    ]
+    .astype(str)
+    .copy()
+)"
+7,776,legality_training_weight_series,"legality_training_weight_series = (
+    pd.to_numeric(
+        legality_training_source_df[
+            ""sample_weight""
+        ],
+        errors=""coerce"",
+    )
+    .fillna(
+        1.0
+    )
+    .clip(
+        lower=0.01
+    )
+    .astype(float)
+)"
+7,792,legality_training_metadata_df,"legality_training_metadata_df = (
+    legality_training_source_df[
+        [
+            column_name
+            for column_name in legality_training_metadata_columns
+            if column_name in legality_training_source_df.columns
+        ]
+    ]
+    .copy()
+)"
+7,808,legality_training_target_distribution_df,"legality_training_target_distribution_df = (
+    legality_training_source_df
+    .groupby(
+        SOURCE_TARGET_COLUMN,
+        as_index=False,
+    )
+    .agg(
+        examples=(
+            ""example_id"",
+            ""size"",
+        ),
+
+        total_sample_weight=(
+            ""sample_weight"",
+            ""sum"",
+        ),
+
+        average_sample_weight=(
+            ""sample_weight"",
+            ""mean"",
+        ),
+
+        single_action_examples=(
+            ""single_legal_move_flag"",
+            ""sum"",
+        ),
+
+        multi_action_examples=(
+            ""multi_legal_move_flag"",
+            ""sum"",
+        ),
+    )
+)"
+7,867,legality_training_signature_summary_df,"legality_training_signature_summary_df = (
+    legality_training_source_df
+    .groupby(
+        ""legal_move_signature"",
+        as_index=False,
+    )
+    .agg(
+        examples=(
+            ""example_id"",
+            ""size"",
+        ),
+
+        legal_move_count=(
+            ""recomputed_legal_move_count"",
+            ""first"",
+        ),
+
+        single_action_examples=(
+            ""single_legal_move_flag"",
+            ""sum"",
+        ),
+
+        multi_action_examples=(
+            ""multi_legal_move_flag"",
+            ""sum"",
+        ),
+
+        unique_expert_moves=(
+            SOURCE_TARGET_COLUMN,
+            ""nunique"",
+        ),
+    )
+    .sort_values(
+        [
+            ""examples"",
+            ""legal_move_count"",
+        ],
+        ascending=[
+            False,
+            True,
+        ],
+    )
+    .reset_index(
+        drop=True
+    )
+)"
+7,928,legality_training_active_card_summary_df,"legality_training_active_card_summary_df = (
+    legality_training_source_df
+    .groupby(
+        ""active_card"",
+        as_index=False,
+    )
+    .agg(
+        examples=(
+            ""example_id"",
+            ""size"",
+        ),
+
+        legal_move_signatures=(
+            ""legal_move_signature"",
+            ""nunique"",
+        ),
+
+        expert_move_classes=(
+            SOURCE_TARGET_COLUMN,
+            ""nunique"",
+        ),
+
+        single_action_examples=(
+            ""single_legal_move_flag"",
+            ""sum"",
+        ),
+
+        multi_action_examples=(
+            ""multi_legal_move_flag"",
+            ""sum"",
+        ),
+    )
+    .sort_values(
+        ""examples"",
+        ascending=False,
+    )
+    .reset_index(
+        drop=True
+    )
+)"
+7,983,section4b_feature_inventory_rows,section4b_feature_inventory_rows = []
+7,1057,section4b_feature_inventory_df,"section4b_feature_inventory_df = pd.DataFrame(
+    section4b_feature_inventory_rows
+)"
+7,1175,SECTION4B_REBUILT_FULL_DATASET_FILE,"SECTION4B_REBUILT_FULL_DATASET_FILE = (
+    SECTION4_REPORT_DIR
+    / ""section4b_legality_aware_full_dataset.csv""
+)"
+7,1180,SECTION4B_TRAINING_FEATURES_FILE,"SECTION4B_TRAINING_FEATURES_FILE = (
+    SECTION4_REPORT_DIR
+    / ""section4b_legality_aware_training_features.csv""
+)"
+7,1185,SECTION4B_TRAINING_TARGETS_FILE,"SECTION4B_TRAINING_TARGETS_FILE = (
+    SECTION4_REPORT_DIR
+    / ""section4b_legality_aware_training_targets.csv""
+)"
+7,1190,SECTION4B_TRAINING_WEIGHTS_FILE,"SECTION4B_TRAINING_WEIGHTS_FILE = (
+    SECTION4_REPORT_DIR
+    / ""section4b_legality_aware_training_weights.csv""
+)"
+7,1195,SECTION4B_TRAINING_METADATA_FILE,"SECTION4B_TRAINING_METADATA_FILE = (
+    SECTION4_REPORT_DIR
+    / ""section4b_legality_aware_training_metadata.csv""
+)"
+7,1200,SECTION4B_FEATURE_INVENTORY_FILE,"SECTION4B_FEATURE_INVENTORY_FILE = (
+    SECTION4_REPORT_DIR
+    / ""section4b_legality_aware_feature_inventory.csv""
+)"
+7,1205,SECTION4B_TARGET_DISTRIBUTION_FILE,"SECTION4B_TARGET_DISTRIBUTION_FILE = (
+    SECTION4_REPORT_DIR
+    / ""section4b_legality_aware_target_distribution.csv""
+)"
+7,1231,legality_training_export_df,"legality_training_export_df = (
+    legality_training_source_df.copy()
+)"
+7,1378,single_action_training_rows,"single_action_training_rows = int(
+    legality_training_source_df[
+        ""single_legal_move_flag""
+    ].sum()
+)"
+7,1384,multi_action_training_rows,"multi_action_training_rows = int(
+    legality_training_source_df[
+        ""multi_legal_move_flag""
+    ].sum()
+)"
+8,36,TRAIN_FRACTION,TRAIN_FRACTION = 0.80
+8,38,TEST_FRACTION,TEST_FRACTION = 0.10
+8,52,split_group_series,"split_group_series = (
+    legality_training_source_df[
+        ""source_scenario_id""
+    ]
+    .astype(str)
+    .copy()
+)"
+8,74,train_holdout_splitter,"train_holdout_splitter = GroupShuffleSplit(
+    n_splits=1,
+    train_size=TRAIN_FRACTION,
+    random_state=RANDOM_SEED,
+)"
+8,81,train_indices,"train_indices, holdout_indices = next(
+    train_holdout_splitter.split(
+        legality_training_features_df,
+        legality_training_target_series,
+        groups=split_group_series,
+    )
+)"
+8,94,holdout_feature_df,"holdout_feature_df = (
+    legality_training_features_df.iloc[
+        holdout_indices
+    ]
+)"
+8,100,holdout_target_series,"holdout_target_series = (
+    legality_training_target_series.iloc[
+        holdout_indices
+    ]
+)"
+8,122,validation_test_splitter,"validation_test_splitter = GroupShuffleSplit(
+    n_splits=1,
+    train_size=validation_share_of_holdout,
+    random_state=RANDOM_SEED + 1,
+)"
+8,129,test_relative_indices,"validation_relative_indices, test_relative_indices = next(
+    validation_test_splitter.split(
+        holdout_feature_df,
+        holdout_target_series,
+        groups=holdout_group_series,
+    )
+)"
+8,142,test_indices,"test_indices = holdout_indices[
+    test_relative_indices
+]"
+8,151,X_train,"X_train = (
+    legality_training_features_df.iloc[
+        train_indices
+    ]
+    .reset_index(
+        drop=True
+    )
+)"
+8,169,X_test,"X_test = (
+    legality_training_features_df.iloc[
+        test_indices
+    ]
+    .reset_index(
+        drop=True
+    )
+)"
+8,179,y_train,"y_train = (
+    legality_training_target_series.iloc[
+        train_indices
+    ]
+    .reset_index(
+        drop=True
+    )
+)"
+8,197,y_test,"y_test = (
+    legality_training_target_series.iloc[
+        test_indices
+    ]
+    .reset_index(
+        drop=True
+    )
+)"
+8,207,weight_train,"weight_train = (
+    legality_training_weight_series.iloc[
+        train_indices
+    ]
+    .reset_index(
+        drop=True
+    )
+)"
+8,225,weight_test,"weight_test = (
+    legality_training_weight_series.iloc[
+        test_indices
+    ]
+    .reset_index(
+        drop=True
+    )
+)"
+8,235,metadata_train,"metadata_train = (
+    legality_training_metadata_df.iloc[
+        train_indices
+    ]
+    .reset_index(
+        drop=True
+    )
+)"
+8,253,metadata_test,"metadata_test = (
+    legality_training_metadata_df.iloc[
+        test_indices
+    ]
+    .reset_index(
+        drop=True
+    )
+)"
+8,263,group_train,"group_train = (
+    split_group_series.iloc[
+        train_indices
+    ]
+    .reset_index(
+        drop=True
+    )
+)"
+8,281,group_test,"group_test = (
+    split_group_series.iloc[
+        test_indices
+    ]
+    .reset_index(
+        drop=True
+    )
+)"
+8,295,train_scenario_ids,"train_scenario_ids = set(
+    group_train.tolist()
+)"
+8,303,test_scenario_ids,"test_scenario_ids = set(
+    group_test.tolist()
+)"
+8,308,train_validation_overlap,"train_validation_overlap = (
+    train_scenario_ids
+    .intersection(
+        validation_scenario_ids
+    )
+)"
+8,315,train_test_overlap,"train_test_overlap = (
+    train_scenario_ids
+    .intersection(
+        test_scenario_ids
+    )
+)"
+8,322,validation_test_overlap,"validation_test_overlap = (
+    validation_scenario_ids
+    .intersection(
+        test_scenario_ids
+    )
+)"
+8,334,split_assignment_df,"split_assignment_df = pd.DataFrame(
+    {
+        ""row_index"":
+            np.arange(
+                len(
+                    legality_training_source_df
+                )
+            ),
+
+        ""source_scenario_id"":
+            split_group_series,
+
+        ""expert_move"":
+            legality_training_target_series,
+
+        ""legal_move_signature"":
+            legality_training_source_df[
+                ""legal_move_signature""
+            ],
+
+        ""sample_weight"":
+            legality_training_weight_series,
+
+        ""split"":
+            ""UNASSIGNED"",
+    }
+)"
+8,383,split_summary_df,"split_summary_df = pd.DataFrame(
+    [
+        {
+            ""split"":
+                ""Training"",
+
+            ""examples"":
+                len(
+                    X_train
+                ),
+
+            ""scenarios"":
+                len(
+                    train_scenario_ids
+                ),
+
+            ""fraction"":
+                len(
+                    X_train
+                )
+                / len(
+                    legality_training_features_df
+                ),
+
+            ""target_classes"":
+                y_train.nunique(),
+
+            ""legal_signatures"":
+                X_train[
+                    ""legal_move_signature""
+                ].nunique(),
+
+            ""total_sample_weight"":
+                weight_train.sum(),
+
+            ""average_sample_weight"":
+                weight_train.mean(),
+        },
+        {
+            ""split"":
+                ""Validation"",
+
+            ""examples"":
+                len(
+                    X_validation
+                ),
+
+      "
+8,510,target_split_summary_df,"target_split_summary_df = (
+    split_assignment_df
+    .groupby(
+        [
+            ""split"",
+            ""expert_move"",
+        ],
+        as_index=False,
+    )
+    .agg(
+        examples=(
+            ""row_index"",
+            ""size"",
+        ),
+
+        total_sample_weight=(
+            ""sample_weight"",
+            ""sum"",
+        ),
+
+        scenarios=(
+            ""source_scenario_id"",
+            ""nunique"",
+        ),
+    )
+)"
+8,567,signature_split_summary_df,"signature_split_summary_df = (
+    split_assignment_df
+    .groupby(
+        [
+            ""split"",
+            ""legal_move_signature"",
+        ],
+        as_index=False,
+    )
+    .agg(
+        examples=(
+            ""row_index"",
+            ""size"",
+        ),
+
+        scenarios=(
+            ""source_scenario_id"",
+            ""nunique"",
+        ),
+    )
+)"
+8,1040,SECTION5A_SPLIT_ASSIGNMENT_FILE,"SECTION5A_SPLIT_ASSIGNMENT_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_group_safe_split_assignments.csv""
+)"
+8,1045,SECTION5A_SPLIT_SUMMARY_FILE,"SECTION5A_SPLIT_SUMMARY_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_group_safe_split_summary.csv""
+)"
+8,1050,SECTION5A_TARGET_SUMMARY_FILE,"SECTION5A_TARGET_SUMMARY_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_target_distribution_by_split.csv""
+)"
+8,1070,SECTION5A_TRAIN_FEATURES_FILE,"SECTION5A_TRAIN_FEATURES_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_train_features.csv""
+)"
+8,1075,SECTION5A_VALIDATION_FEATURES_FILE,"SECTION5A_VALIDATION_FEATURES_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_validation_features.csv""
+)"
+8,1080,SECTION5A_TEST_FEATURES_FILE,"SECTION5A_TEST_FEATURES_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_test_features.csv""
+)"
+8,1085,SECTION5A_TRAIN_TARGETS_FILE,"SECTION5A_TRAIN_TARGETS_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_train_targets.csv""
+)"
+8,1090,SECTION5A_VALIDATION_TARGETS_FILE,"SECTION5A_VALIDATION_TARGETS_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_validation_targets.csv""
+)"
+8,1095,SECTION5A_TEST_TARGETS_FILE,"SECTION5A_TEST_TARGETS_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_test_targets.csv""
+)"
+8,1100,SECTION5A_TRAIN_WEIGHTS_FILE,"SECTION5A_TRAIN_WEIGHTS_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_train_weights.csv""
+)"
+8,1110,SECTION5A_TEST_WEIGHTS_FILE,"SECTION5A_TEST_WEIGHTS_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5a_test_weights.csv""
+)"
+8,1121,split_assignment_export_df,"split_assignment_export_df = (
+    split_assignment_df.copy()
+)"
+9,61,PREPROCESS_NUMERIC_FEATURES,"PREPROCESS_NUMERIC_FEATURES = list(
+    legality_training_numeric_features
+)"
+9,65,PREPROCESS_CATEGORICAL_FEATURES,"PREPROCESS_CATEGORICAL_FEATURES = list(
+    legality_training_categorical_features
+)"
+9,69,PREPROCESS_RAW_FEATURES,"PREPROCESS_RAW_FEATURES = (
+    PREPROCESS_NUMERIC_FEATURES
+    + PREPROCESS_CATEGORICAL_FEATURES
+)"
+9,116,numeric_preprocessing_pipeline,"numeric_preprocessing_pipeline = Pipeline(
+    steps=[
+        (
+            ""imputer"",
+            SimpleImputer(
+                strategy=""median"",
+            ),
+        ),
+    ]
+)"
+9,152,categorical_preprocessing_pipeline,"categorical_preprocessing_pipeline = Pipeline(
+    steps=[
+        (
+            ""imputer"",
+            SimpleImputer(
+                strategy=""most_frequent"",
+            ),
+        ),
+        (
+            ""one_hot_encoder"",
+            categorical_encoder,
+        ),
+    ]
+)"
+9,172,legality_preprocessor,"legality_preprocessor = ColumnTransformer(
+    transformers=[
+        (
+            ""numeric"",
+            numeric_preprocessing_pipeline,
+            PREPROCESS_NUMERIC_FEATURES,
+        ),
+        (
+            ""categorical"",
+            categorical_preprocessing_pipeline,
+            PREPROCESS_CATEGORICAL_FEATURES,
+        ),
+    ],
+    remainder=""drop"",
+    sparse_threshold=0.0,
+    verbose_feature_names_out=True,
+)"
+9,195,X_train_encoded,"X_train_encoded = legality_preprocessor.fit_transform(
+    X_train
+)"
+9,203,X_test_encoded,"X_test_encoded = legality_preprocessor.transform(
+    X_test
+)"
+9,208,X_train_encoded,"X_train_encoded = np.asarray(
+    X_train_encoded,
+    dtype=np.float64,
+)"
+9,218,X_test_encoded,"X_test_encoded = np.asarray(
+    X_test_encoded,
+    dtype=np.float64,
+)"
+9,228,encoded_feature_names,encoded_feature_names = legality_preprocessor.get_feature_names_out().tolist()
+9,230,ENCODED_FEATURE_COUNT,"ENCODED_FEATURE_COUNT = len(
+    encoded_feature_names
+)"
+9,246,X_train_encoded_df,"X_train_encoded_df = pd.DataFrame(
+    X_train_encoded,
+    columns=encoded_feature_names,
+)"
+9,256,X_test_encoded_df,"X_test_encoded_df = pd.DataFrame(
+    X_test_encoded,
+    columns=encoded_feature_names,
+)"
+9,291,encoded_feature_inventory_rows,encoded_feature_inventory_rows = []
+9,375,section5b_encoded_feature_inventory_df,"section5b_encoded_feature_inventory_df = pd.DataFrame(
+    encoded_feature_inventory_rows
+)"
+9,496,training_category_map,"training_category_map = {
+    feature_name:
+        set(
+            category_values.astype(str).tolist()
+        )
+    for feature_name, category_values in zip(
+        PREPROCESS_CATEGORICAL_FEATURES,
+        fitted_one_hot_encoder.categories_,
+    )
+}"
+9,998,SECTION5B_PREPROCESSOR_FILE,"SECTION5B_PREPROCESSOR_FILE = (
+    NOTEBOOK53_MODEL_DIR
+    / ""legality_aware_preprocessor.joblib""
+)"
+9,1003,SECTION5B_ENCODED_FEATURE_NAMES_FILE,"SECTION5B_ENCODED_FEATURE_NAMES_FILE = (
+    NOTEBOOK53_MODEL_DIR
+    / ""legality_aware_encoded_feature_names.json""
+)"
+9,1008,SECTION5B_RAW_FEATURE_SCHEMA_FILE,"SECTION5B_RAW_FEATURE_SCHEMA_FILE = (
+    NOTEBOOK53_MODEL_DIR
+    / ""legality_aware_raw_feature_schema.json""
+)"
+9,1013,SECTION5B_TRAIN_ENCODED_FILE,"SECTION5B_TRAIN_ENCODED_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5b_train_encoded_features.csv""
+)"
+9,1023,SECTION5B_TEST_ENCODED_FILE,"SECTION5B_TEST_ENCODED_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5b_test_encoded_features.csv""
+)"
+9,1028,SECTION5B_ENCODED_FEATURE_INVENTORY_FILE,"SECTION5B_ENCODED_FEATURE_INVENTORY_FILE = (
+    SECTION5_REPORT_DIR
+    / ""section5b_encoded_feature_inventory.csv""
+)"
+9,1084,section5b_raw_feature_schema,"section5b_raw_feature_schema = {
+    ""schema_name"":
+        ""notebook53_legality_aware_preprocessing_schema"",
+
+    ""schema_version"":
+        ""1.0"",
+
+    ""numeric_features"":
+        PREPROCESS_NUMERIC_FEATURES,
+
+    ""categorical_features"":
+        PREPROCESS_CATEGORICAL_FEATURES,
+
+    ""raw_features"":
+        PREPROCESS_RAW_FEATURES,
+
+    ""raw_feature_count"":
+        len(
+            PREPROCESS_RAW_FEATURES
+        ),
+
+    ""encoded_feature_count"":
+        ENCODED_FEATURE_COUNT,
+
+    ""fit_split"":
+        ""Training"",
+
+    ""training_rows"":
+        len(
+            X_train
+        ),
+
+    ""validation_rows"":
+        len(
+            X_validation
+        ),
+
+    ""test_rows"":
+        len(
+            X_test
+        ),
+
+    ""benchmark_rows_used_for_training"":
+        0,
+
+    ""scenario_overlap_count"":
+        0,
+}"
+9,301,feature_family,"feature_family = ""numeric"""
+9,521,split_categories,"split_categories = set(
+            split_dataframe[
+                feature_name
+            ]
+            .astype(str)
+            .unique()
+            .tolist()
+        )"
+9,307,feature_family,"feature_family = ""categorical_one_hot"""
+9,311,feature_family,"feature_family = ""other"""
+10,89,legality_aware_policy_model,"legality_aware_policy_model = RandomForestClassifier(
+    **LEGality_RF_CONFIG
+)"
+10,127,MODEL_CLASSES,"MODEL_CLASSES = (
+    legality_aware_policy_model
+    .classes_
+    .astype(str)
+    .tolist()
+)"
+10,169,train_predictions,"train_predictions = legality_aware_policy_model.predict(
+    X_train_encoded
+)"
+10,177,test_predictions,"test_predictions = legality_aware_policy_model.predict(
+    X_test_encoded
+)"
+10,182,train_probabilities,"train_probabilities = legality_aware_policy_model.predict_proba(
+    X_train_encoded
+)"
+10,190,test_probabilities,"test_probabilities = legality_aware_policy_model.predict_proba(
+    X_test_encoded
+)"
+10,338,train_legality_df,"train_legality_df = evaluate_prediction_legality(
+    X_train,
+    train_predictions,
+)"
+10,348,test_legality_df,"test_legality_df = evaluate_prediction_legality(
+    X_test,
+    test_predictions,
+)"
+10,448,section6a_split_metrics_df,"section6a_split_metrics_df = pd.DataFrame(
+    [
+        evaluate_policy_split(
+            ""Training"",
+            y_train,
+            train_predictions,
+            train_probabilities,
+            weight_train,
+            train_legality_df,
+        ),
+        evaluate_policy_split(
+            ""Validation"",
+            y_validation,
+            validation_predictions,
+            validation_probabilities,
+            weight_validation,
+            validation_legality_df,
+        ),
+        evaluate_policy_split(
+            ""Test"",
+            y_test,
+            test_predictions,
+            test_probabilities,
+            weight_test,
+            test_legality_df,
+        ),
+    ]
+)"
+10,528,test_classification_report_df,"test_classification_report_df = (
+    classification_report_dataframe(
+        y_test,
+        test_predictions,
+    )
+)"
+10,564,test_confusion_matrix,"test_confusion_matrix = confusion_matrix(
+    y_test,
+    test_predictions,
+    labels=MODEL_CLASSES,
+)"
+10,583,test_confusion_matrix_df,"test_confusion_matrix_df = pd.DataFrame(
+    test_confusion_matrix,
+    index=[
+        f""actual__{class_name}""
+        for class_name in MODEL_CLASSES
+    ],
+    columns=[
+        f""predicted__{class_name}""
+        for class_name in MODEL_CLASSES
+    ],
+)"
+10,789,section6a_feature_importance_df,"section6a_feature_importance_df = pd.DataFrame(
+    {
+        ""encoded_feature_name"":
+            encoded_feature_names,
+
+        ""importance"":
+            legality_aware_policy_model
+            .feature_importances_,
+    }
+)"
+10,813,section6a_feature_importance_df,"section6a_feature_importance_df = (
+    section6a_feature_importance_df
+    .sort_values(
+        ""importance"",
+        ascending=False,
+    )
+    .reset_index(
+        drop=True
+    )
+)"
+10,921,train_prediction_records_df,"train_prediction_records_df = build_prediction_records(
+    ""Training"",
+    metadata_train,
+    X_train,
+    y_train,
+    train_predictions,
+    train_probabilities,
+    train_legality_df,
+)"
+10,941,test_prediction_records_df,"test_prediction_records_df = build_prediction_records(
+    ""Test"",
+    metadata_test,
+    X_test,
+    y_test,
+    test_predictions,
+    test_probabilities,
+    test_legality_df,
+)"
+10,996,test_accuracy,"test_accuracy = float(
+    accuracy_score(
+        y_test,
+        test_predictions,
+    )
+)"
+10,1009,test_legality_rate,"test_legality_rate = float(
+    test_legality_df[
+        ""predicted_move_legal""
+    ].mean()
+)"
+10,1179,SECTION6A_MODEL_FILE,"SECTION6A_MODEL_FILE = (
+    NOTEBOOK53_MODEL_DIR
+    / ""legality_aware_random_forest.joblib""
+)"
+10,1184,SECTION6A_MODEL_METADATA_FILE,"SECTION6A_MODEL_METADATA_FILE = (
+    NOTEBOOK53_MODEL_DIR
+    / ""legality_aware_random_forest_metadata.json""
+)"
+10,1189,SECTION6A_SPLIT_METRICS_FILE,"SECTION6A_SPLIT_METRICS_FILE = (
+    SECTION6_REPORT_DIR
+    / ""section6a_split_metrics.csv""
+)"
+10,1199,SECTION6A_TEST_REPORT_FILE,"SECTION6A_TEST_REPORT_FILE = (
+    SECTION6_REPORT_DIR
+    / ""section6a_test_classification_report.csv""
+)"
+10,1209,SECTION6A_TEST_CONFUSION_FILE,"SECTION6A_TEST_CONFUSION_FILE = (
+    SECTION6_REPORT_DIR
+    / ""section6a_test_confusion_matrix.csv""
+)"
+10,1219,SECTION6A_FEATURE_IMPORTANCE_FILE,"SECTION6A_FEATURE_IMPORTANCE_FILE = (
+    SECTION6_REPORT_DIR
+    / ""section6a_feature_importance.csv""
+)"
+10,1224,SECTION6A_TRAIN_PREDICTIONS_FILE,"SECTION6A_TRAIN_PREDICTIONS_FILE = (
+    SECTION6_REPORT_DIR
+    / ""section6a_train_predictions.csv""
+)"
+10,1234,SECTION6A_TEST_PREDICTIONS_FILE,"SECTION6A_TEST_PREDICTIONS_FILE = (
+    SECTION6_REPORT_DIR
+    / ""section6a_test_predictions.csv""
+)"
+10,1256,section6a_model_metadata,"section6a_model_metadata = {
+    ""model_name"":
+        ""notebook53_legality_aware_random_forest"",
+
+    ""model_type"":
+        type(
+            legality_aware_policy_model
+        ).__name__,
+
+    ""model_configuration"":
+        LEGality_RF_CONFIG,
+
+    ""classes"":
+        MODEL_CLASSES,
+
+    ""raw_feature_count"":
+        41,
+
+    ""encoded_feature_count"":
+        64,
+
+    ""training_rows"":
+        840,
+
+    ""validation_rows"":
+        110,
+
+    ""test_rows"":
+        110,
+
+    ""oob_score"":
+        float(
+            legality_aware_policy_model.oob_score_
+        ),
+
+    ""validation_accuracy"":
+        validation_accuracy,
+
+    ""test_accuracy"":
+        test_accuracy,
+
+    ""validation_prediction_legality_rate"":
+        validation_legality_rate,
+
+    ""test_prediction_legality_rate"":
+        test_legality_rate,
+
+    ""preprocessor_file"":
+        str(
+            SECTION5B_PREPROCESSOR_FILE
+        ),
+
+    ""benchmark_rows_used_for_training"":
+        0,
+
+    ""scenario_overlap_count"":
+        0,
+}"
+11,532,notebook53_benchmark_features_df,"notebook53_benchmark_features_df = (
+    notebook53_benchmark_source_df[
+        legality_training_numeric_features
+        + legality_training_categorical_features
+    ]
+    .copy()
+)"
+11,618,notebook53_router_model_used,notebook53_router_model_used = []
+11,1450,SECTION6B_BENCHMARK_FEATURES_FILE,"SECTION6B_BENCHMARK_FEATURES_FILE = (
+    SECTION6_REPORT_DIR
+    / ""section6b_notebook52_benchmark_features.csv""
+)"
+11,638,model_prediction,"model_prediction = str(
+        notebook53_benchmark_predictions[
+            row_position
+        ]
+    )"
+11,644,normalized_model_prediction,"normalized_model_prediction = normalize_action_name(
+        model_prediction
+    )"
+11,660,model_used,model_used = False
+11,673,model_used,model_used = True
+11,688,model_used,model_used = True
+12,990,notebook53_policy_agent,"notebook53_policy_agent = (
+    LegalityAwarePolicyAgent(
+        model=legality_aware_policy_model,
+        preprocessor=legality_preprocessor,
+        side_mode=""PRESERVE"",
+    )
+)"
+12,307,feature_row,"feature_row = {
+        ""turn_number"":
+            float(
+                get_state_value(
+                    battle_state,
+                    ""turn_number"",
+                    1,
+                )
+            ),
+
+        ""player_energy"":
+            player_energy,
+
+        ""opponent_energy"":
+            opponent_energy,
+
+        ""player_damage"":
+            player_damage,
+
+        ""opponent_damage"":
+            opponent_damage,
+
+        ""prize_cards_remaining"":
+            float(
+                get_state_value(
+                    player_state,
+                    ""prize_cards_remaining"",
+                    6,
+                )
+            ),
+
+        ""hand_size"":
+            float(
+                get_state_value(
+                    player_state,
+                    ""hand_size"",
+                    7,
+                )
+            ),
+
+        ""recomputed_legal_move_count"":
+            float(
+                legal_move_count
+            ),
+
+        ""acting_energy"":
+            a"
+12,481,feature_dataframe,"feature_dataframe = pd.DataFrame(
+        [
+            feature_row
+        ]
+    )"
+12,520,feature_dataframe,"feature_dataframe = feature_dataframe[
+        PREPROCESS_RAW_FEATURES
+    ]"
+12,661,feature_dataframe,"feature_dataframe = (
+            build_legality_aware_feature_row(
+                battle_state=state,
+                legal_moves=legal_moves,
+                side_mode=self.side_mode,
+            )
+        )"
+12,694,encoded_features,"encoded_features = (
+                self.preprocessor.transform(
+                    feature_dataframe
+                )
+            )"
+12,700,encoded_features,"encoded_features = np.asarray(
+                encoded_features,
+                dtype=np.float64,
+            )"
+13,646,test_player_card,"test_player_card = {
+    ""name"":
+        ""Bulbasaur"",
+
+    ""hp"":
+        80.0,
+
+    ""moves"": [
+        {
+            ""name"":
+                ""Bind Down"",
+
+            ""damage"":
+                10.0,
+
+            ""energy_cost"":
+                3,
+        }
+    ],
+}"
+13,668,test_opponent_card,"test_opponent_card = {
+    ""name"":
+        ""Eevee"",
+
+    ""hp"":
+        50.0,
+
+    ""moves"": [
+        {
+            ""name"":
+                ""Ascension"",
+
+            ""damage"":
+                0.0,
+
+            ""energy_cost"":
+                1,
+        },
+        {
+            ""name"":
+                ""Quick Attack"",
+
+            ""damage"":
+                20.0,
+
+            ""energy_cost"":
+                3,
+        },
+    ],
+}"
+13,700,test_player_pokemon,"test_player_pokemon = PokemonState(
+    card=test_player_card,
+    current_hp=80.0,
+    attached_energy=3,
+    damage=0.0,
+    is_active=True,
+)"
+13,708,test_opponent_pokemon,"test_opponent_pokemon = PokemonState(
+    card=test_opponent_card,
+    current_hp=50.0,
+    attached_energy=3,
+    damage=0.0,
+    is_active=True,
+)"
+13,717,test_player_state,"test_player_state = PlayerState(
+    active=test_player_pokemon,
+    bench=[],
+    prize_cards_remaining=2,
+    hand_size=3,
+)"
+13,724,test_opponent_state,"test_opponent_state = PlayerState(
+    active=test_opponent_pokemon,
+    bench=[],
+    prize_cards_remaining=2,
+    hand_size=3,
+)"
+13,732,section6d_test_state,"section6d_test_state = BattleState(
+    player=test_player_state,
+    opponent=test_opponent_state,
+    turn_number=1,
+    current_player=""Player"",
+)"
+13,746,section6d_test_decision,"section6d_test_decision = (
+    notebook53_battle_runner_agent
+    .choose_move(
+        state=section6d_test_state,
+        depth=0,
+    )
+)"
+13,562,policy_statistics,"policy_statistics = (
+            self.policy_agent
+            .statistics()
+        )"
+15,730,section6e_policy_history_rows,section6e_policy_history_rows = []
+15,1081,section6e_policy_history_df,"section6e_policy_history_df = pd.DataFrame(
+    section6e_policy_history_rows
+)"
+15,1148,notebook53_model_decisions,"notebook53_model_decisions = int(
+    section6e_battle_results_df[
+        ""model_decisions""
+    ].sum()
+)"
+15,1503,SECTION6E_POLICY_HISTORY_FILE,"SECTION6E_POLICY_HISTORY_FILE = (
+    SECTION6_REPORT_DIR
+    / ""section6e_tournament_replay_policy_history.csv""
+)"
+15,1569,section6e_policy_history_export_df,"section6e_policy_history_export_df = (
+    section6e_policy_history_df.copy()
+)"
+15,996,policy_record_copy,"policy_record_copy = deepcopy(
+                policy_record
+            )"
+16,1132,section7a_optimization_targets_df,"section7a_optimization_targets_df = pd.DataFrame(
+    [
+        {
+            ""priority"":
+                1,
+
+            ""optimization_target"":
+                ""Improve tournament win rate"",
+
+            ""current_evidence"":
+                ""7 Player wins, 14 Opponent wins, 3 Draws"",
+
+            ""recommended_direction"":
+                ""Add strategic value evaluation for multi-action states"",
+        },
+        {
+            ""priority"":
+                2,
+
+            ""optimization_target"":
+                ""Improve HP_PRESSURE performance"",
+
+            ""current_evidence"":
+                ""0 Player wins in 8 HP_PRESSURE battles"",
+
+            ""recommended_direction"":
+                ""Train targeted HP-pressure curriculum and value estimates"",
+        },
+        {
+            ""priority"":
+                3,
+
+            ""optimization_target"":
+                ""Improve weak card performance"",
+
+            ""current_evidence"":
+                ""Eevee and Meowth showed weak Player-slot outcom"
+16,1533,SECTION7A_OPTIMIZATION_TARGETS_FILE,"SECTION7A_OPTIMIZATION_TARGETS_FILE = (
+    SECTION7_REPORT_DIR
+    / ""section7a_notebook54_optimization_targets.csv""
+)"

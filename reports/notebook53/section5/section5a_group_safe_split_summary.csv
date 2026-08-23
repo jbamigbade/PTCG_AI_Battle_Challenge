@@ -1,0 +1,4 @@
+split,examples,scenarios,fraction,target_classes,legal_signatures,total_sample_weight,average_sample_weight
+Training,840,84,0.7924528301886793,6,6,1270.9475000000002,1.5130327380952384
+Validation,110,11,0.10377358490566038,6,6,170.7275,1.5520681818181818
+Test,110,11,0.10377358490566038,6,6,173.613,1.5783

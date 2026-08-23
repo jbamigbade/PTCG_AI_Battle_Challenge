@@ -1,0 +1,85 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 3: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.89
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 50.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.77
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.88
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.71
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 7: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.86
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 8: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.70
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 20.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 9: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.78
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 10: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.64
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 11: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 0.75
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 12: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.61
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.

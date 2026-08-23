@@ -1,0 +1,4 @@
+baseline,target_records,average_score,total_losses,allocation_fraction
+Depth-6 Search Baseline,2173,0.58,42,0.54325
+Greedy Damage Baseline,1357,0.58,42,0.33925
+Random Baseline,470,0.78,22,0.1175

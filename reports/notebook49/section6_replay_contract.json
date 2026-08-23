@@ -1,0 +1,341 @@
+{
+    "replay_level": "LEVEL_1_SCENARIO_REGENERATION",
+    "replay_description": "Exact trajectories are not stored, but matching card and side scenarios can be regenerated and mined for new policy-search disagreements.",
+    "replay_evidence": {
+        "match_id_available": true,
+        "card_pair_available": true,
+        "side_available": true,
+        "seed_columns": [],
+        "seed_available": false,
+        "trajectory_columns": [],
+        "trajectory_available": false,
+        "replay_methods_found": true,
+        "search_labeling_methods_found": true,
+        "legal_move_methods_found": true,
+        "transition_methods_found": true
+    },
+    "loss_scenario_count": 106,
+    "opponent_loss_scenarios": 86,
+    "player_loss_scenarios": 20,
+    "acceptance_rules": {
+        "require_multi_action_state": true,
+        "minimum_legal_moves": 2,
+        "require_policy_search_disagreement": true,
+        "minimum_search_depth": 6,
+        "preferred_search_depth": 8,
+        "minimum_score_margin": 0.05,
+        "require_finite_search_score": true,
+        "reject_duplicate_observations": true,
+        "reject_illegal_search_labels": true,
+        "opponent_side_sampling_fraction": 0.7,
+        "player_side_sampling_fraction": 0.3,
+        "target_training_records": 4000,
+        "maximum_records_per_source_match": 100,
+        "preserve_original_dataset_replay_fraction": 0.3,
+        "hard_example_training_fraction": 0.7
+    },
+    "top_replay_methods": [
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyAgent",
+            "method": "act",
+            "signature": "(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'",
+            "parameter_names": [
+                "state",
+                "depth",
+                "battle_state",
+                "kwargs"
+            ],
+            "parameter_count": 4,
+            "replay_suitability_score": 4.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyAgent",
+            "method": "choose_move",
+            "signature": "(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'",
+            "parameter_names": [
+                "state",
+                "depth",
+                "battle_state",
+                "kwargs"
+            ],
+            "parameter_count": 4,
+            "replay_suitability_score": 4.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyAgent",
+            "method": "select_move",
+            "signature": "(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'",
+            "parameter_names": [
+                "state",
+                "depth",
+                "battle_state",
+                "kwargs"
+            ],
+            "parameter_count": 4,
+            "replay_suitability_score": 4.0
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "class": "SearchStats",
+            "method": "reset",
+            "signature": "(self) -> 'None'",
+            "parameter_names": [],
+            "parameter_count": 0,
+            "replay_suitability_score": 3.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyEngine",
+            "method": "choose_move",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'",
+            "parameter_names": [
+                "battle_state",
+                "legal_moves"
+            ],
+            "parameter_count": 2,
+            "replay_suitability_score": 2.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyEngine",
+            "method": "score_moves",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'",
+            "parameter_names": [
+                "battle_state",
+                "legal_moves"
+            ],
+            "parameter_count": 2,
+            "replay_suitability_score": 2.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "class": "CompetitivePolicyEngine",
+            "method": "choose_move",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'",
+            "parameter_names": [
+                "battle_state",
+                "legal_moves"
+            ],
+            "parameter_count": 2,
+            "replay_suitability_score": 2.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "class": "CompetitivePolicyEngine",
+            "method": "score_moves",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'",
+            "parameter_names": [
+                "battle_state",
+                "legal_moves"
+            ],
+            "parameter_count": 2,
+            "replay_suitability_score": 2.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "class": "CompetitivePolicyNetwork",
+            "method": "forward",
+            "signature": "(self, state_features: 'torch.Tensor', move_features: 'torch.Tensor', action_mask: 'torch.Tensor') -> 'torch.Tensor'",
+            "parameter_names": [
+                "state_features",
+                "move_features",
+                "action_mask"
+            ],
+            "parameter_count": 3,
+            "replay_suitability_score": 2.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "class": "CompetitivePolicyNetwork",
+            "method": "load_state_dict",
+            "signature": "(self, state_dict: collections.abc.Mapping[str, typing.Any], strict: bool = True, assign: bool = False)",
+            "parameter_names": [
+                "state_dict",
+                "typing.Any]",
+                "strict",
+                "assign"
+            ],
+            "parameter_count": 4,
+            "replay_suitability_score": 2.0
+        }
+    ],
+    "top_labeling_methods": [
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyAgent",
+            "method": "choose_move",
+            "signature": "(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'",
+            "parameter_names": [
+                "state",
+                "depth",
+                "battle_state",
+                "kwargs"
+            ],
+            "parameter_count": 4,
+            "replay_suitability_score": 4.0,
+            "labeling_suitability_score": 15.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyAgent",
+            "method": "select_move",
+            "signature": "(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'",
+            "parameter_names": [
+                "state",
+                "depth",
+                "battle_state",
+                "kwargs"
+            ],
+            "parameter_count": 4,
+            "replay_suitability_score": 4.0,
+            "labeling_suitability_score": 15.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyEngine",
+            "method": "choose_move",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'",
+            "parameter_names": [
+                "battle_state",
+                "legal_moves"
+            ],
+            "parameter_count": 2,
+            "replay_suitability_score": 2.0,
+            "labeling_suitability_score": 15.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "class": "CompetitivePolicyEngine",
+            "method": "choose_move",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'",
+            "parameter_names": [
+                "battle_state",
+                "legal_moves"
+            ],
+            "parameter_count": 2,
+            "replay_suitability_score": 2.0,
+            "labeling_suitability_score": 15.0
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "class": "AdvancedSearchEngine",
+            "method": "search_depth",
+            "signature": "(self, state: 'State', depth: 'int', root_player: 'Optional[Player]' = None, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'",
+            "parameter_names": [
+                "state",
+                "depth",
+                "root_player",
+                "clear_table",
+                "clear_killers",
+                "clear_history"
+            ],
+            "parameter_count": 6,
+            "replay_suitability_score": 2.0,
+            "labeling_suitability_score": 15.0
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "class": "AdvancedSearchEngine",
+            "method": "search_for_time",
+            "signature": "(self, state, seconds=1.0, verbose=False, max_depth=100, clear_table=True, clear_killers=True, clear_history=True)",
+            "parameter_names": [
+                "state",
+                "seconds",
+                "verbose",
+                "max_depth",
+                "clear_table",
+                "clear_killers",
+                "clear_history"
+            ],
+            "parameter_count": 7,
+            "replay_suitability_score": 2.0,
+            "labeling_suitability_score": 15.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyEngine",
+            "method": "score_moves",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'",
+            "parameter_names": [
+                "battle_state",
+                "legal_moves"
+            ],
+            "parameter_count": 2,
+            "replay_suitability_score": 2.0,
+            "labeling_suitability_score": 11.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "class": "CompetitivePolicyEngine",
+            "method": "score_moves",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'",
+            "parameter_names": [
+                "battle_state",
+                "legal_moves"
+            ],
+            "parameter_count": 2,
+            "replay_suitability_score": 2.0,
+            "labeling_suitability_score": 11.0
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "class": "AdvancedSearchEngine",
+            "method": "preview_move_order",
+            "signature": "(self, state: 'State', root_player: 'Optional[Player]' = None, ply: 'int' = 0) -> 'List[Move]'",
+            "parameter_names": [
+                "state",
+                "root_player",
+                "ply"
+            ],
+            "parameter_count": 3,
+            "replay_suitability_score": 2.0,
+            "labeling_suitability_score": 9.0
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyAgent",
+            "method": "act",
+            "signature": "(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'",
+            "parameter_names": [
+                "state",
+                "depth",
+                "battle_state",
+                "kwargs"
+            ],
+            "parameter_count": 4,
+            "replay_suitability_score": 4.0,
+            "labeling_suitability_score": 8.0
+        }
+    ],
+    "legal_move_candidates": [
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyEngine",
+            "method": "score_moves",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'"
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "class": "CompetitivePolicyEngine",
+            "method": "score_moves",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'"
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "class": "AdvancedSearchEngine",
+            "method": "clear_killer_moves",
+            "signature": "(self) -> 'None'"
+        }
+    ],
+    "transition_candidates": [
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "class": "CompetitivePolicyNetwork",
+            "method": "apply",
+            "signature": "(self, fn: collections.abc.Callable[['Module'], None]) -> Self"
+        }
+    ]
+}

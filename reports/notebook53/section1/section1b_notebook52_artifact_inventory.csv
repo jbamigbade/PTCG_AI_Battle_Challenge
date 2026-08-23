@@ -1,0 +1,12 @@
+artifact,exists,is_file,size_bytes,path,nonempty
+handoff_manifest,True,True,2062,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section7\section7a_handoff_manifest.json,True
+final_summary,True,True,391,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section7\section7a_final_summary.json,True
+final_profile,True,True,510,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section7\section7a_final_tournament_profile.csv,True
+optimization_targets,True,True,524,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section7\section7a_optimization_targets.csv,True
+validation_checks,True,True,1629,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section7\section7a_validation_checks.csv,True
+benchmark_profile,True,True,470,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section6\section6b_benchmark_profile.csv,True
+dashboard_summary,True,True,593,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section6\section6a_dashboard_summary.json,True
+expanded_battle_results,True,True,11140,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section5\section5b_expanded_battle_results.csv,True
+expanded_policy_history,True,True,28946,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section5\section5b_expanded_policy_history.csv,True
+condition_summary,True,True,598,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section5\section5b_condition_summary.csv,True
+tournament_summary,True,True,551,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section5\section5b_summary.json,True

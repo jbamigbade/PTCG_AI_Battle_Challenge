@@ -1,0 +1,57 @@
+{
+  "notebook": 63,
+  "cell": 8,
+  "purpose": "CONTROLLED_CAMPAIGN_PILOT",
+  "campaign_configuration_sha256": "acdeb20722ee3ba9b897b1ea0320e8162ac6f53f9fe4f8fca97e6039effd2ede",
+  "seed": 63001,
+  "requested_battles": 24,
+  "runtime_failures": 0,
+  "agent_summary": {
+    "DEPLOYMENT_POLICY": {
+      "battles": 8,
+      "runtime_failures": 0,
+      "outcomes": {
+        "TIMEOUT_DRAW": 8
+      },
+      "total_moves": 320,
+      "unknown_move_count": 320,
+      "unknown_move_rate": 1.0,
+      "zero_damage_move_count": 320,
+      "zero_damage_move_rate": 1.0,
+      "positive_damage_move_count": 0,
+      "positive_damage_move_rate": 0.0,
+      "total_damage": 0.0
+    },
+    "FIRST_LEGAL_MOVE": {
+      "battles": 8,
+      "runtime_failures": 0,
+      "outcomes": {
+        "TIMEOUT_DRAW": 8
+      },
+      "total_moves": 320,
+      "unknown_move_count": 320,
+      "unknown_move_rate": 1.0,
+      "zero_damage_move_count": 320,
+      "zero_damage_move_rate": 1.0,
+      "positive_damage_move_count": 0,
+      "positive_damage_move_rate": 0.0,
+      "total_damage": 0.0
+    },
+    "MAX_DAMAGE_LEGAL_MOVE": {
+      "battles": 8,
+      "runtime_failures": 0,
+      "outcomes": {
+        "TIMEOUT_DRAW": 8
+      },
+      "total_moves": 320,
+      "unknown_move_count": 320,
+      "unknown_move_rate": 1.0,
+      "zero_damage_move_count": 320,
+      "zero_damage_move_rate": 1.0,
+      "positive_damage_move_count": 0,
+      "positive_damage_move_rate": 0.0,
+      "total_damage": 0.0
+    }
+  },
+  "deployment_semantic_quality": "SEMANTIC_MAPPING_CONCERN"
+}

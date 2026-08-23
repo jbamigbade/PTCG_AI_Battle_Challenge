@@ -1,0 +1,6 @@
+card_name,official_card_id,printed_card_name,expansion,collection_number,attack_order,action_name,normalized_action_name,printed_damage,base_damage,variable_damage,energy_symbol_count,attack_effect_summary,action_source,source_confirmed,is_control_action
+Bulbasaur,650,Bulbasaur,MEG,1,1,Bind Down,bind down,10,10,False,1,Defending Pokémon cannot retreat during the opponent's next turn.,OFFICIAL_COMPETITION_CARD_IMAGE,True,False
+Charmander,788,Charmander,PFL,11,1,Live Coal,live coal,20,20,False,1,,OFFICIAL_COMPETITION_CARD_IMAGE,True,False
+Eevee,43,Eevee,TWM,135,1,Ascension,ascension,,0,False,1,Search the deck for a card that evolves from this Pokémon and evolve it.,OFFICIAL_COMPETITION_CARD_IMAGE,True,False
+Eevee,43,Eevee,TWM,135,2,Quick Attack,quick attack,20+,20,True,3,Coin flip may add 20 damage.,OFFICIAL_COMPETITION_CARD_IMAGE,True,False
+Meowth,1071,Meowth ex,POR,62,1,Tuck Tail,tuck tail,60,60,False,3,Return this Pokémon and all attached cards to the hand.,OFFICIAL_COMPETITION_CARD_IMAGE,True,False

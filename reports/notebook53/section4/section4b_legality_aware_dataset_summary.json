@@ -1,0 +1,19 @@
+{
+  "status": "LEGALITY_AWARE_DATASET_REBUILT",
+  "source_rows": 1060,
+  "rebuilt_rows": 1060,
+  "numeric_feature_count": 31,
+  "categorical_feature_count": 10,
+  "total_raw_feature_count": 41,
+  "legal_action_flag_count": 6,
+  "active_card_compatibility_flag_count": 6,
+  "single_action_training_rows": 742,
+  "multi_action_training_rows": 318,
+  "target_class_count": 6,
+  "expert_targets_legal": true,
+  "missing_feature_values": 0,
+  "benchmark_rows_used_for_training": 0,
+  "benchmark_scenario_overlap_count": 0,
+  "ready_for_model_training": true,
+  "next_stage": "LEGALITY_AWARE_TRAIN_VALIDATION_SPLIT"
+}

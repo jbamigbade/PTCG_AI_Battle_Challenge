@@ -1,0 +1,10 @@
+object_name,object_type,method_name,exists,callable,signature
+notebook54_legality_policy,LegalityAwarePolicyAgent,act,True,True,"(state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None) -> 'Any'"
+notebook54_legality_policy,LegalityAwarePolicyAgent,choose_move,True,True,"(state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None) -> 'Any'"
+notebook54_legality_policy,LegalityAwarePolicyAgent,choose_move_detailed,True,True,"(state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None) -> 'Dict[str, Any]'"
+notebook54_legality_policy,LegalityAwarePolicyAgent,reset,True,True,() -> 'None'
+notebook54_legality_policy,LegalityAwarePolicyAgent,select_action,True,True,"(state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None) -> 'Any'"
+notebook54_legality_policy,LegalityAwarePolicyAgent,statistics,True,True,"() -> 'Dict[str, Any]'"
+notebook54_battle_runner_agent,LegalityAwareBattleRunnerAgent,choose_move,True,True,"(state: 'Any', depth: 'Optional[int]' = None) -> 'Any'"
+notebook54_battle_runner_agent,LegalityAwareBattleRunnerAgent,reset,True,True,() -> 'None'
+notebook54_battle_runner_agent,LegalityAwareBattleRunnerAgent,statistics,True,True,"() -> 'Dict[str, Any]'"

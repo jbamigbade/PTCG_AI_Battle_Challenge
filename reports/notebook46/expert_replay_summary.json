@@ -1,0 +1,8 @@
+{
+    "examples": 1000,
+    "state_dimension": 8,
+    "move_dimension": 8,
+    "terminal_positions": 49,
+    "average_reward": -0.0061622327926789,
+    "search_depth": 6
+}

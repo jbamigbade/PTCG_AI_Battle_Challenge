@@ -1,0 +1,4 @@
+candidate_type,candidate_label,file_path,object_name,object_type,feature_count
+PREPROCESSOR,legality_aware_preprocessor.joblib::root_object,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook53\legality_aware_preprocessor.joblib,root_object,ColumnTransformer,41
+MODEL,legality_aware_random_forest.joblib::root_object,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook53\legality_aware_random_forest.joblib,root_object,RandomForestClassifier,64
+MODEL,section3a_r0_current_baseline_model.joblib::model,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook55\section3a_r0_current_baseline_model.joblib,model,RandomForestClassifier,64

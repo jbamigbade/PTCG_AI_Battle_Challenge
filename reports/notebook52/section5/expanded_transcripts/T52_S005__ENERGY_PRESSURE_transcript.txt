@@ -1,0 +1,245 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 3: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.57
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.59
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.57
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.56
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 7: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 8: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.52
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 9: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 10: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 11: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 12: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 13: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 14: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 15: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 16: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 17: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 18: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 19: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 20: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 21: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 22: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 23: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 24: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 25: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 26: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 27: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 28: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 29: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 30: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 31: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.48
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 32: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: None
+Stop reason: Maximum turn limit reached.

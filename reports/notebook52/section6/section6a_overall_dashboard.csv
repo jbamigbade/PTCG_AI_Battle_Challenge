@@ -1,0 +1,11 @@
+Metric,Value
+Battles,24.0
+Player Wins,7.0
+Opponent Wins,14.0
+Draws,3.0
+Starter Win Rate,0.4166666666666667
+Average Turns,8.75
+Average Confidence,0.6558285714285714
+Masking Rate,0.719047619047619
+Fallback Rate,0.004761904761904762
+Total Policy Decisions,210.0

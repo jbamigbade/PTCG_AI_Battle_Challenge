@@ -1,0 +1,23 @@
+{
+  "notebook_number": 50,
+  "notebook_name": "side_balanced_policy_fine_tuning",
+  "notebook_title": "Notebook 50 — Side-Balanced Policy Fine-Tuning",
+  "run_timestamp_utc": "2026-07-30T07:53:36.798170+00:00",
+  "random_seed": 20260730,
+  "python_version": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\johnb\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "project_root": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge",
+  "current_working_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\notebooks",
+  "notebooks_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\notebooks",
+  "scripts_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\scripts",
+  "source_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src",
+  "data_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\data",
+  "models_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models",
+  "reports_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports",
+  "notebook49_report_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook49\\section8",
+  "notebook50_report_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook50",
+  "handoff_artifact_count": 10,
+  "handoff_artifacts_found": 10,
+  "handoff_artifacts_missing": 0
+}

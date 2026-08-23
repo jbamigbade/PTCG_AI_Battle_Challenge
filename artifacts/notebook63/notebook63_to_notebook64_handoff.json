@@ -1,0 +1,22 @@
+{
+  "source_notebook": 63,
+  "target_notebook": 64,
+  "target_title": "MATCHUP_DECISION_STRATEGY_INTERPRETATION",
+  "campaign_configuration_sha256": "901d90eb6bb39b6de10848ddd30de86bd64ee9bcadd35f4cf2e638c2b72a2301",
+  "authoritative_campaign_analysis": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook63\\notebook63_full_campaign_analysis.json",
+  "authoritative_campaign_records": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\outputs\\notebook63\\cell12b_full_campaign_records.json",
+  "authoritative_corrected_scenarios": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell10_schema_correct_scenarios.json",
+  "key_runtime_result": "240/240 controlled battles completed with zero runtime failures.",
+  "key_semantic_result": "Unknown Move rate = 0.0 and positive-damage move rate = 1.0.",
+  "key_behavioral_result": "Deployment policy behaviorally matched FIRST_LEGAL_MOVE in all 80 paired controlled battles.",
+  "important_limitation": "Controlled attack-only synthetic environment; not full official Pok\u00e9mon TCG gameplay.",
+  "notebook64_required_focus": [
+    "matchup interpretation",
+    "scenario-level decision behavior",
+    "damage-efficiency comparison",
+    "side-neutrality evidence",
+    "deployment-policy limitations",
+    "integration with NB57-NB62 certified evidence",
+    "strategy-report evidence extraction"
+  ]
+}

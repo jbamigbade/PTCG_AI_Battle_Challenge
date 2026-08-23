@@ -1,0 +1,3 @@
+side,target_records,total_losses,average_score,allocation_fraction
+Opponent,2800,86,0.4266666666666667,0.7
+Player,1200,20,0.8666666666666667,0.3

@@ -1,0 +1,18 @@
+NOTEBOOK 13 TOURNAMENT SERIES REPORT
+======================================================================
+Matches played: 5
+Tournament AI A wins: 5
+Tournament AI B wins: 0
+Draws: 0
+Player win rate: 100.0%
+Opponent win rate: 0.0%
+Draw rate: 0.0%
+Average turns: 3.40
+Average score: 158.00
+
+ match_number          winner  turns  final_score  transcript_characters
+            1 Tournament AI A      3        170.0                   1024
+            2 Tournament AI A      4        140.0                   1288
+            3 Tournament AI A      3        170.0                   1024
+            4 Tournament AI A      4        140.0                   1288
+            5 Tournament AI A      3        170.0                   1024

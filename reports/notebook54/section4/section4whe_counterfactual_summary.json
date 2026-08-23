@@ -1,0 +1,17 @@
+{
+  "status": "COUNTERFACTUAL_LEGAL_SIGNATURE_AND_STATE_FEATURE_TESTING_COMPLETE",
+  "base_cases": 184,
+  "counterfactual_interventions": 9,
+  "counterfactual_result_rows": 1656,
+  "strongest_intervention": "LEGAL_SIGNATURE_ASCENSION_ONLY",
+  "strongest_intervention_group": "LEGAL_STRUCTURE",
+  "strongest_average_absolute_margin_change": 1.1672608695652174,
+  "legal_structure_average_absolute_effect": 0.9895652173913042,
+  "energy_state_average_absolute_effect": 0.014500000000000011,
+  "turn_state_average_absolute_effect": 0.011043478260869561,
+  "total_prediction_flips": 368,
+  "total_ascension_overtake_cases": 368,
+  "counterfactual_diagnosis": "LEGAL_STRUCTURE_CAUSAL_EFFECT_DOMINATES",
+  "counterfactual_diagnosis_text": "Counterfactual modifications to legal-move structure produced a larger average effect on the Quick Attack–Ascension score margin than energy or turn modifications. This supports legal-signature and action-identity features as the strongest tested cause of model preference.",
+  "next_stage": "LEGAL_SIGNATURE_DEPENDENCE_REMEDIATION_DESIGN"
+}

@@ -1,0 +1,2616 @@
+file,line_number,matched_line,context
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,1879,# 3.5 â€” Random baseline agent,"            ""damage_numeric"",
+            ""base_damage"",
+        ):
+            if key in move:
+                try:
+                    return float(
+                        move[key] or 0.0
+                    )
+                except (
+                    TypeError,
+                    ValueError,
+                ):
+                    return 0.0
+
+        return 0.0
+
+    for attribute_name in (
+        ""damage"",
+        ""damage_numeric"",
+        ""base_damage"",
+    ):
+        value = getattr(
+            move,
+            attribute_name,
+            None,
+        )
+
+        if value is not None:
+            try:
+                return float(value or 0.0)
+            except (
+                TypeError,
+                ValueError,
+            ):
+                return 0.0
+
+    return 0.0
+
+
+# ------------------------------------------------------------
+# 3.5 â€” Random baseline agent
+# ------------------------------------------------------------
+
+class RandomLegalMoveAgent:
+    def __init__(
+        self,
+        seed: int = RANDOM_SEED,
+        name: str = ""Random Legal Agent"",
+    ) -> None:
+        self.name = name
+        self.random = random.Random(
+            seed
+        )
+        self.last_decision = None
+
+    def choose_move(
+        self,
+        state: Any = None,
+        depth: int | None = None,
+        battle_state: Any = None,
+        **kwargs: Any,
+    ) -> TournamentDecision:
+        resolved_state = (
+            state
+            if state is not None
+            else battle_state
+        )
+
+        if resolved_state is None:
+            raise ValueError(
+                ""A battle state is required.""
+            )
+
+        legal_moves = (
+            get_current_legal_moves(
+                resolved_state
+            )
+        )
+
+        if not legal_moves:
+            self.last_decision = (
+                TournamentDecision(
+                    move=None,
+                    score=0.0,
+                    search_depth=int(
+                        depth or 0
+                    ),
+                    nodes=0,
+                    confidence=0.0,
+                    selected_move_name=None,
+                    fallback=True,
+                    reason=
+                        ""No legal moves available."",
+                )
+            )
+
+            return self.last_decision
+
+        selected_move = (
+            self.random.choice(
+                legal_moves
+            )
+        )
+
+        confidence = (
+            1.0
+            / len(legal_moves)
+        )
+
+        self.last_decision = (
+            TournamentDecision(
+                move=
+                    selected_move,
+
+                score=
+                    confidence,
+
+                search_depth=int(
+                    depth or 0
+                ),"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,1983,# 3.6 â€” Greedy damage baseline,"        confidence = (
+            1.0
+            / len(legal_moves)
+        )
+
+        self.last_decision = (
+            TournamentDecision(
+                move=
+                    selected_move,
+
+                score=
+                    confidence,
+
+                search_depth=int(
+                    depth or 0
+                ),
+
+                nodes=0,
+
+                confidence=
+                    confidence,
+
+                selected_move_name=
+                    tournament_move_name(
+                        selected_move
+                    ),
+
+                fallback=False,
+            )
+        )
+
+        return self.last_decision
+
+    def get_last_decision(
+        self,
+    ) -> TournamentDecision | None:
+        return self.last_decision
+
+
+# ------------------------------------------------------------
+# 3.6 â€” Greedy damage baseline
+# ------------------------------------------------------------
+
+class GreedyDamageAgent:
+    def __init__(
+        self,
+        name: str = ""Greedy Damage Agent"",
+    ) -> None:
+        self.name = name
+        self.last_decision = None
+
+    def choose_move(
+        self,
+        state: Any = None,
+        depth: int | None = None,
+        battle_state: Any = None,
+        **kwargs: Any,
+    ) -> TournamentDecision:
+        resolved_state = (
+            state
+            if state is not None
+            else battle_state
+        )
+
+        if resolved_state is None:
+            raise ValueError(
+                ""A battle state is required.""
+            )
+
+        legal_moves = (
+            get_current_legal_moves(
+                resolved_state
+            )
+        )
+
+        if not legal_moves:
+            self.last_decision = (
+                TournamentDecision(
+                    move=None,
+                    score=0.0,
+                    search_depth=int(
+                        depth or 0
+                    ),
+                    nodes=0,
+                    confidence=0.0,
+                    selected_move_name=None,
+                    fallback=True,
+                    reason=
+                        ""No legal moves available."",
+                )
+            )
+
+            return self.last_decision
+
+        selected_index = max(
+            range(
+                len(legal_moves)
+            ),
+            key=lambda index: (
+                tournament_move_damage(
+                    legal_moves[index]
+                ),
+                -index,
+            ),
+        )
+
+        selected_move = (
+            legal_moves[
+                selected_index
+            ]
+        )
+
+        maximum_damage = (
+            tournament_move_damage(
+                selected_move
+            )
+        )
+
+        self.last_decision = (
+            TournamentDecision("
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2964,"""Random Baseline"",","                agent_result
+            ),
+
+        fallback_count=
+            int(
+                side_agent
+                .fallback_count
+            ),
+
+        elapsed_seconds=
+            float(
+                elapsed_seconds
+            ),
+    )
+
+
+# ------------------------------------------------------------
+# 3.12 â€” Instantiate agents
+# ------------------------------------------------------------
+
+competitive_tournament_agent = (
+    CompetitivePolicyAgent(
+        checkpoint_path=
+            BEST_POLICY_CHECKPOINT,
+
+        device=str(
+            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+)
+
+random_baseline_agent = (
+    RandomLegalMoveAgent(
+        seed=
+            RANDOM_SEED,
+
+        name=
+            ""Random Baseline"",
+    )
+)
+
+greedy_baseline_agent = (
+    GreedyDamageAgent(
+        name=
+            ""Greedy Damage Baseline"",
+    )
+)
+
+search_baseline_agent = (
+    SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            ""Depth-6 Search Baseline"",
+    )
+)
+
+
+# ------------------------------------------------------------
+# 3.13 â€” Smoke-test one match per baseline
+# ------------------------------------------------------------
+
+smoke_test_results = []
+
+smoke_player_card = (
+    TOURNAMENT_CARD_TEMPLATES[0]
+)
+
+smoke_opponent_card = (
+    TOURNAMENT_CARD_TEMPLATES[1]
+)
+
+for smoke_index, baseline_agent in enumerate(
+    [
+        random_baseline_agent,
+        greedy_baseline_agent,
+        search_baseline_agent,
+    ],
+    start=1,
+):
+    smoke_result = run_tournament_match(
+        match_id=
+            smoke_index,
+
+        evaluated_agent=
+            competitive_tournament_agent,
+
+        baseline_agent=
+            baseline_agent,
+
+        player_card=
+            smoke_player_card,
+
+        opponent_card=
+            smoke_opponent_card,
+
+        starting_side=
+            ""Player"",
+
+        evaluated_agent_side=
+            ""Player"",
+
+        max_turns=
+            20,
+
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        verbose=False,
+    )
+
+    smoke_test_results.append(
+        dataclasses.asdict(
+            smoke_result
+        )
+    )"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2971,"""Greedy Damage Baseline"",","            ),
+
+        elapsed_seconds=
+            float(
+                elapsed_seconds
+            ),
+    )
+
+
+# ------------------------------------------------------------
+# 3.12 â€” Instantiate agents
+# ------------------------------------------------------------
+
+competitive_tournament_agent = (
+    CompetitivePolicyAgent(
+        checkpoint_path=
+            BEST_POLICY_CHECKPOINT,
+
+        device=str(
+            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+)
+
+random_baseline_agent = (
+    RandomLegalMoveAgent(
+        seed=
+            RANDOM_SEED,
+
+        name=
+            ""Random Baseline"",
+    )
+)
+
+greedy_baseline_agent = (
+    GreedyDamageAgent(
+        name=
+            ""Greedy Damage Baseline"",
+    )
+)
+
+search_baseline_agent = (
+    SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            ""Depth-6 Search Baseline"",
+    )
+)
+
+
+# ------------------------------------------------------------
+# 3.13 â€” Smoke-test one match per baseline
+# ------------------------------------------------------------
+
+smoke_test_results = []
+
+smoke_player_card = (
+    TOURNAMENT_CARD_TEMPLATES[0]
+)
+
+smoke_opponent_card = (
+    TOURNAMENT_CARD_TEMPLATES[1]
+)
+
+for smoke_index, baseline_agent in enumerate(
+    [
+        random_baseline_agent,
+        greedy_baseline_agent,
+        search_baseline_agent,
+    ],
+    start=1,
+):
+    smoke_result = run_tournament_match(
+        match_id=
+            smoke_index,
+
+        evaluated_agent=
+            competitive_tournament_agent,
+
+        baseline_agent=
+            baseline_agent,
+
+        player_card=
+            smoke_player_card,
+
+        opponent_card=
+            smoke_opponent_card,
+
+        starting_side=
+            ""Player"",
+
+        evaluated_agent_side=
+            ""Player"",
+
+        max_turns=
+            20,
+
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        verbose=False,
+    )
+
+    smoke_test_results.append(
+        dataclasses.asdict(
+            smoke_result
+        )
+    )
+
+
+smoke_test_df = pd.DataFrame(
+    smoke_test_results
+)
+
+"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2981,"""Depth-6 Search Baseline"",","# 3.12 â€” Instantiate agents
+# ------------------------------------------------------------
+
+competitive_tournament_agent = (
+    CompetitivePolicyAgent(
+        checkpoint_path=
+            BEST_POLICY_CHECKPOINT,
+
+        device=str(
+            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+)
+
+random_baseline_agent = (
+    RandomLegalMoveAgent(
+        seed=
+            RANDOM_SEED,
+
+        name=
+            ""Random Baseline"",
+    )
+)
+
+greedy_baseline_agent = (
+    GreedyDamageAgent(
+        name=
+            ""Greedy Damage Baseline"",
+    )
+)
+
+search_baseline_agent = (
+    SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            ""Depth-6 Search Baseline"",
+    )
+)
+
+
+# ------------------------------------------------------------
+# 3.13 â€” Smoke-test one match per baseline
+# ------------------------------------------------------------
+
+smoke_test_results = []
+
+smoke_player_card = (
+    TOURNAMENT_CARD_TEMPLATES[0]
+)
+
+smoke_opponent_card = (
+    TOURNAMENT_CARD_TEMPLATES[1]
+)
+
+for smoke_index, baseline_agent in enumerate(
+    [
+        random_baseline_agent,
+        greedy_baseline_agent,
+        search_baseline_agent,
+    ],
+    start=1,
+):
+    smoke_result = run_tournament_match(
+        match_id=
+            smoke_index,
+
+        evaluated_agent=
+            competitive_tournament_agent,
+
+        baseline_agent=
+            baseline_agent,
+
+        player_card=
+            smoke_player_card,
+
+        opponent_card=
+            smoke_opponent_card,
+
+        starting_side=
+            ""Player"",
+
+        evaluated_agent_side=
+            ""Player"",
+
+        max_turns=
+            20,
+
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        verbose=False,
+    )
+
+    smoke_test_results.append(
+        dataclasses.asdict(
+            smoke_result
+        )
+    )
+
+
+smoke_test_df = pd.DataFrame(
+    smoke_test_results
+)
+
+
+# ------------------------------------------------------------
+# 3.14 â€” Save adapter report
+# ------------------------------------------------------------
+
+MATCH_ADAPTER_REPORT_FILE = (
+    NOTEBOOK48_REPORT_DIR
+    / ""tournament_match_adapter_summary.json""
+)
+
+match_adapter_report = {"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3201,# - Random Baseline,"
+assert MATCH_ADAPTER_REPORT_FILE.exists()
+
+assert len(
+    smoke_test_df
+) == 3
+
+assert (
+    smoke_test_df[
+        ""turns""
+    ]
+    > 0
+).all()
+
+assert (
+    smoke_test_df[
+        ""fallback_count""
+    ]
+    == 0
+).all()
+
+assert smoke_test_df[
+    ""agent_result""
+].between(
+    0.0,
+    1.0,
+).all()
+
+print()
+print(
+    ""âœ… SECTION 3 TOURNAMENT MATCH ADAPTER PASSED""
+)
+
+
+# ## Section 4 â€” Full Baseline Tournament
+# 
+# #### Run repeated side-swapped matches between the Competitive Policy agent and each baseline.
+# 
+# #### The tournament evaluates:
+# 
+# - Random Baseline
+# - Greedy Damage Baseline
+# - Depth-6 Search Baseline
+# 
+# #### Each pairing uses multiple card matchups and both evaluated-agent sides.
+
+# In[6]:
+
+
+# ============================================================
+# NOTEBOOK 48
+# SECTION 4 â€” FULL BASELINE TOURNAMENT
+# ============================================================
+
+
+import dataclasses
+import json
+import math
+import random
+import time
+from collections import defaultdict
+from typing import Any
+
+import numpy as np
+import pandas as pd
+
+
+# ------------------------------------------------------------
+# 4.3 â€” Tournament configuration
+# ------------------------------------------------------------
+
+TOURNAMENT_MATCHES_PER_BASELINE = (
+    INITIAL_MATCHES_PER_PAIRING
+)
+
+TOURNAMENT_PROGRESS_INTERVAL = 25
+
+TOURNAMENT_RESULTS_FILE = (
+    TOURNAMENT_DATA_DIR
+    / ""competitive_policy_baseline_tournament.csv""
+)
+
+TOURNAMENT_SUMMARY_FILE = (
+    NOTEBOOK48_REPORT_DIR
+    / ""competitive_policy_baseline_tournament_summary.json""
+)
+
+TOURNAMENT_FAILURE_FILE = (
+    NOTEBOOK48_REPORT_DIR
+    / ""competitive_policy_baseline_tournament_failures.json""
+)
+
+TOURNAMENT_RANDOM_SEED = 4804
+
+tournament_random = random.Random(
+    TOURNAMENT_RANDOM_SEED
+)
+
+
+# ------------------------------------------------------------
+# 4.4 â€” Fresh-agent factory
+#
+# New instances prevent state, random-generator, or search
+# tables from leaking between matches.
+# ------------------------------------------------------------
+
+def create_competitive_agent() -> CompetitivePolicyAgent:
+    return CompetitivePolicyAgent(
+        checkpoint_path=
+            BEST_POLICY_CHECKPOINT,
+
+        device=str(
+            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+
+"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3202,# - Greedy Damage Baseline,"assert MATCH_ADAPTER_REPORT_FILE.exists()
+
+assert len(
+    smoke_test_df
+) == 3
+
+assert (
+    smoke_test_df[
+        ""turns""
+    ]
+    > 0
+).all()
+
+assert (
+    smoke_test_df[
+        ""fallback_count""
+    ]
+    == 0
+).all()
+
+assert smoke_test_df[
+    ""agent_result""
+].between(
+    0.0,
+    1.0,
+).all()
+
+print()
+print(
+    ""âœ… SECTION 3 TOURNAMENT MATCH ADAPTER PASSED""
+)
+
+
+# ## Section 4 â€” Full Baseline Tournament
+# 
+# #### Run repeated side-swapped matches between the Competitive Policy agent and each baseline.
+# 
+# #### The tournament evaluates:
+# 
+# - Random Baseline
+# - Greedy Damage Baseline
+# - Depth-6 Search Baseline
+# 
+# #### Each pairing uses multiple card matchups and both evaluated-agent sides.
+
+# In[6]:
+
+
+# ============================================================
+# NOTEBOOK 48
+# SECTION 4 â€” FULL BASELINE TOURNAMENT
+# ============================================================
+
+
+import dataclasses
+import json
+import math
+import random
+import time
+from collections import defaultdict
+from typing import Any
+
+import numpy as np
+import pandas as pd
+
+
+# ------------------------------------------------------------
+# 4.3 â€” Tournament configuration
+# ------------------------------------------------------------
+
+TOURNAMENT_MATCHES_PER_BASELINE = (
+    INITIAL_MATCHES_PER_PAIRING
+)
+
+TOURNAMENT_PROGRESS_INTERVAL = 25
+
+TOURNAMENT_RESULTS_FILE = (
+    TOURNAMENT_DATA_DIR
+    / ""competitive_policy_baseline_tournament.csv""
+)
+
+TOURNAMENT_SUMMARY_FILE = (
+    NOTEBOOK48_REPORT_DIR
+    / ""competitive_policy_baseline_tournament_summary.json""
+)
+
+TOURNAMENT_FAILURE_FILE = (
+    NOTEBOOK48_REPORT_DIR
+    / ""competitive_policy_baseline_tournament_failures.json""
+)
+
+TOURNAMENT_RANDOM_SEED = 4804
+
+tournament_random = random.Random(
+    TOURNAMENT_RANDOM_SEED
+)
+
+
+# ------------------------------------------------------------
+# 4.4 â€” Fresh-agent factory
+#
+# New instances prevent state, random-generator, or search
+# tables from leaking between matches.
+# ------------------------------------------------------------
+
+def create_competitive_agent() -> CompetitivePolicyAgent:
+    return CompetitivePolicyAgent(
+        checkpoint_path=
+            BEST_POLICY_CHECKPOINT,
+
+        device=str(
+            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+
+
+def create_random_baseline("
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3203,# - Depth-6 Search Baseline,"
+assert len(
+    smoke_test_df
+) == 3
+
+assert (
+    smoke_test_df[
+        ""turns""
+    ]
+    > 0
+).all()
+
+assert (
+    smoke_test_df[
+        ""fallback_count""
+    ]
+    == 0
+).all()
+
+assert smoke_test_df[
+    ""agent_result""
+].between(
+    0.0,
+    1.0,
+).all()
+
+print()
+print(
+    ""âœ… SECTION 3 TOURNAMENT MATCH ADAPTER PASSED""
+)
+
+
+# ## Section 4 â€” Full Baseline Tournament
+# 
+# #### Run repeated side-swapped matches between the Competitive Policy agent and each baseline.
+# 
+# #### The tournament evaluates:
+# 
+# - Random Baseline
+# - Greedy Damage Baseline
+# - Depth-6 Search Baseline
+# 
+# #### Each pairing uses multiple card matchups and both evaluated-agent sides.
+
+# In[6]:
+
+
+# ============================================================
+# NOTEBOOK 48
+# SECTION 4 â€” FULL BASELINE TOURNAMENT
+# ============================================================
+
+
+import dataclasses
+import json
+import math
+import random
+import time
+from collections import defaultdict
+from typing import Any
+
+import numpy as np
+import pandas as pd
+
+
+# ------------------------------------------------------------
+# 4.3 â€” Tournament configuration
+# ------------------------------------------------------------
+
+TOURNAMENT_MATCHES_PER_BASELINE = (
+    INITIAL_MATCHES_PER_PAIRING
+)
+
+TOURNAMENT_PROGRESS_INTERVAL = 25
+
+TOURNAMENT_RESULTS_FILE = (
+    TOURNAMENT_DATA_DIR
+    / ""competitive_policy_baseline_tournament.csv""
+)
+
+TOURNAMENT_SUMMARY_FILE = (
+    NOTEBOOK48_REPORT_DIR
+    / ""competitive_policy_baseline_tournament_summary.json""
+)
+
+TOURNAMENT_FAILURE_FILE = (
+    NOTEBOOK48_REPORT_DIR
+    / ""competitive_policy_baseline_tournament_failures.json""
+)
+
+TOURNAMENT_RANDOM_SEED = 4804
+
+tournament_random = random.Random(
+    TOURNAMENT_RANDOM_SEED
+)
+
+
+# ------------------------------------------------------------
+# 4.4 â€” Fresh-agent factory
+#
+# New instances prevent state, random-generator, or search
+# tables from leaking between matches.
+# ------------------------------------------------------------
+
+def create_competitive_agent() -> CompetitivePolicyAgent:
+    return CompetitivePolicyAgent(
+        checkpoint_path=
+            BEST_POLICY_CHECKPOINT,
+
+        device=str(
+            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+
+
+def create_random_baseline(
+    seed: int,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3286,"name=""Random Baseline"",",")
+
+TOURNAMENT_FAILURE_FILE = (
+    NOTEBOOK48_REPORT_DIR
+    / ""competitive_policy_baseline_tournament_failures.json""
+)
+
+TOURNAMENT_RANDOM_SEED = 4804
+
+tournament_random = random.Random(
+    TOURNAMENT_RANDOM_SEED
+)
+
+
+# ------------------------------------------------------------
+# 4.4 â€” Fresh-agent factory
+#
+# New instances prevent state, random-generator, or search
+# tables from leaking between matches.
+# ------------------------------------------------------------
+
+def create_competitive_agent() -> CompetitivePolicyAgent:
+    return CompetitivePolicyAgent(
+        checkpoint_path=
+            BEST_POLICY_CHECKPOINT,
+
+        device=str(
+            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+
+
+def create_random_baseline(
+    seed: int,
+) -> RandomLegalMoveAgent:
+    return RandomLegalMoveAgent(
+        seed=seed,
+        name=""Random Baseline"",
+    )
+
+
+def create_greedy_baseline() -> GreedyDamageAgent:
+    return GreedyDamageAgent(
+        name=""Greedy Damage Baseline"",
+    )
+
+
+def create_search_baseline() -> SearchAgentAdapter:
+    return SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            ""Depth-6 Search Baseline"",
+    )
+
+
+baseline_factories = {
+    ""Random Baseline"":
+        lambda seed:
+            create_random_baseline(
+                seed
+            ),
+
+    ""Greedy Damage Baseline"":
+        lambda seed:
+            create_greedy_baseline(),
+
+    ""Depth-6 Search Baseline"":
+        lambda seed:
+            create_search_baseline(),
+}
+
+
+# ------------------------------------------------------------
+# 4.5 â€” Balanced tournament schedule
+# ------------------------------------------------------------
+
+def build_balanced_schedule(
+    baseline_name: str,
+    match_count: int,
+) -> list[dict[str, Any]]:
+    schedule = []
+
+    card_count = len(
+        TOURNAMENT_CARD_TEMPLATES
+    )
+
+    for match_index in range(
+        match_count
+    ):
+        evaluated_side = (
+            ""Player""
+            if match_index % 2 == 0
+            else ""Opponent""
+        )
+
+        starting_side = (
+            ""Player""
+            if (
+                match_index // 2
+            ) % 2 == 0
+            else ""Opponent""
+        )
+
+        first_card_index = (
+            match_index
+            % card_count
+        )
+
+        second_card_index = (
+            (
+                match_index * 3
+            )
+            + 1
+        ) % card_count
+"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3292,"name=""Greedy Damage Baseline"",","
+TOURNAMENT_RANDOM_SEED = 4804
+
+tournament_random = random.Random(
+    TOURNAMENT_RANDOM_SEED
+)
+
+
+# ------------------------------------------------------------
+# 4.4 â€” Fresh-agent factory
+#
+# New instances prevent state, random-generator, or search
+# tables from leaking between matches.
+# ------------------------------------------------------------
+
+def create_competitive_agent() -> CompetitivePolicyAgent:
+    return CompetitivePolicyAgent(
+        checkpoint_path=
+            BEST_POLICY_CHECKPOINT,
+
+        device=str(
+            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+
+
+def create_random_baseline(
+    seed: int,
+) -> RandomLegalMoveAgent:
+    return RandomLegalMoveAgent(
+        seed=seed,
+        name=""Random Baseline"",
+    )
+
+
+def create_greedy_baseline() -> GreedyDamageAgent:
+    return GreedyDamageAgent(
+        name=""Greedy Damage Baseline"",
+    )
+
+
+def create_search_baseline() -> SearchAgentAdapter:
+    return SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            ""Depth-6 Search Baseline"",
+    )
+
+
+baseline_factories = {
+    ""Random Baseline"":
+        lambda seed:
+            create_random_baseline(
+                seed
+            ),
+
+    ""Greedy Damage Baseline"":
+        lambda seed:
+            create_greedy_baseline(),
+
+    ""Depth-6 Search Baseline"":
+        lambda seed:
+            create_search_baseline(),
+}
+
+
+# ------------------------------------------------------------
+# 4.5 â€” Balanced tournament schedule
+# ------------------------------------------------------------
+
+def build_balanced_schedule(
+    baseline_name: str,
+    match_count: int,
+) -> list[dict[str, Any]]:
+    schedule = []
+
+    card_count = len(
+        TOURNAMENT_CARD_TEMPLATES
+    )
+
+    for match_index in range(
+        match_count
+    ):
+        evaluated_side = (
+            ""Player""
+            if match_index % 2 == 0
+            else ""Opponent""
+        )
+
+        starting_side = (
+            ""Player""
+            if (
+                match_index // 2
+            ) % 2 == 0
+            else ""Opponent""
+        )
+
+        first_card_index = (
+            match_index
+            % card_count
+        )
+
+        second_card_index = (
+            (
+                match_index * 3
+            )
+            + 1
+        ) % card_count
+
+        if (
+            second_card_index
+            == first_card_index
+        ):
+            second_card_index = (
+                second_card_index + 1"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3302,"""Depth-6 Search Baseline"",","#
+# New instances prevent state, random-generator, or search
+# tables from leaking between matches.
+# ------------------------------------------------------------
+
+def create_competitive_agent() -> CompetitivePolicyAgent:
+    return CompetitivePolicyAgent(
+        checkpoint_path=
+            BEST_POLICY_CHECKPOINT,
+
+        device=str(
+            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+
+
+def create_random_baseline(
+    seed: int,
+) -> RandomLegalMoveAgent:
+    return RandomLegalMoveAgent(
+        seed=seed,
+        name=""Random Baseline"",
+    )
+
+
+def create_greedy_baseline() -> GreedyDamageAgent:
+    return GreedyDamageAgent(
+        name=""Greedy Damage Baseline"",
+    )
+
+
+def create_search_baseline() -> SearchAgentAdapter:
+    return SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            ""Depth-6 Search Baseline"",
+    )
+
+
+baseline_factories = {
+    ""Random Baseline"":
+        lambda seed:
+            create_random_baseline(
+                seed
+            ),
+
+    ""Greedy Damage Baseline"":
+        lambda seed:
+            create_greedy_baseline(),
+
+    ""Depth-6 Search Baseline"":
+        lambda seed:
+            create_search_baseline(),
+}
+
+
+# ------------------------------------------------------------
+# 4.5 â€” Balanced tournament schedule
+# ------------------------------------------------------------
+
+def build_balanced_schedule(
+    baseline_name: str,
+    match_count: int,
+) -> list[dict[str, Any]]:
+    schedule = []
+
+    card_count = len(
+        TOURNAMENT_CARD_TEMPLATES
+    )
+
+    for match_index in range(
+        match_count
+    ):
+        evaluated_side = (
+            ""Player""
+            if match_index % 2 == 0
+            else ""Opponent""
+        )
+
+        starting_side = (
+            ""Player""
+            if (
+                match_index // 2
+            ) % 2 == 0
+            else ""Opponent""
+        )
+
+        first_card_index = (
+            match_index
+            % card_count
+        )
+
+        second_card_index = (
+            (
+                match_index * 3
+            )
+            + 1
+        ) % card_count
+
+        if (
+            second_card_index
+            == first_card_index
+        ):
+            second_card_index = (
+                second_card_index + 1
+            ) % card_count
+
+        player_card = (
+            TOURNAMENT_CARD_TEMPLATES[
+                first_card_index
+            ]
+        )
+
+        opponent_card = (
+            TOURNAMENT_CARD_TEMPLATES["
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3307,"""Random Baseline"":","def create_competitive_agent() -> CompetitivePolicyAgent:
+    return CompetitivePolicyAgent(
+        checkpoint_path=
+            BEST_POLICY_CHECKPOINT,
+
+        device=str(
+            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+
+
+def create_random_baseline(
+    seed: int,
+) -> RandomLegalMoveAgent:
+    return RandomLegalMoveAgent(
+        seed=seed,
+        name=""Random Baseline"",
+    )
+
+
+def create_greedy_baseline() -> GreedyDamageAgent:
+    return GreedyDamageAgent(
+        name=""Greedy Damage Baseline"",
+    )
+
+
+def create_search_baseline() -> SearchAgentAdapter:
+    return SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            ""Depth-6 Search Baseline"",
+    )
+
+
+baseline_factories = {
+    ""Random Baseline"":
+        lambda seed:
+            create_random_baseline(
+                seed
+            ),
+
+    ""Greedy Damage Baseline"":
+        lambda seed:
+            create_greedy_baseline(),
+
+    ""Depth-6 Search Baseline"":
+        lambda seed:
+            create_search_baseline(),
+}
+
+
+# ------------------------------------------------------------
+# 4.5 â€” Balanced tournament schedule
+# ------------------------------------------------------------
+
+def build_balanced_schedule(
+    baseline_name: str,
+    match_count: int,
+) -> list[dict[str, Any]]:
+    schedule = []
+
+    card_count = len(
+        TOURNAMENT_CARD_TEMPLATES
+    )
+
+    for match_index in range(
+        match_count
+    ):
+        evaluated_side = (
+            ""Player""
+            if match_index % 2 == 0
+            else ""Opponent""
+        )
+
+        starting_side = (
+            ""Player""
+            if (
+                match_index // 2
+            ) % 2 == 0
+            else ""Opponent""
+        )
+
+        first_card_index = (
+            match_index
+            % card_count
+        )
+
+        second_card_index = (
+            (
+                match_index * 3
+            )
+            + 1
+        ) % card_count
+
+        if (
+            second_card_index
+            == first_card_index
+        ):
+            second_card_index = (
+                second_card_index + 1
+            ) % card_count
+
+        player_card = (
+            TOURNAMENT_CARD_TEMPLATES[
+                first_card_index
+            ]
+        )
+
+        opponent_card = (
+            TOURNAMENT_CARD_TEMPLATES[
+                second_card_index
+            ]
+        )
+
+        schedule.append("
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3313,"""Greedy Damage Baseline"":","            DEVICE
+        ),
+
+        name=
+            ""Competitive Policy"",
+    )
+
+
+def create_random_baseline(
+    seed: int,
+) -> RandomLegalMoveAgent:
+    return RandomLegalMoveAgent(
+        seed=seed,
+        name=""Random Baseline"",
+    )
+
+
+def create_greedy_baseline() -> GreedyDamageAgent:
+    return GreedyDamageAgent(
+        name=""Greedy Damage Baseline"",
+    )
+
+
+def create_search_baseline() -> SearchAgentAdapter:
+    return SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            ""Depth-6 Search Baseline"",
+    )
+
+
+baseline_factories = {
+    ""Random Baseline"":
+        lambda seed:
+            create_random_baseline(
+                seed
+            ),
+
+    ""Greedy Damage Baseline"":
+        lambda seed:
+            create_greedy_baseline(),
+
+    ""Depth-6 Search Baseline"":
+        lambda seed:
+            create_search_baseline(),
+}
+
+
+# ------------------------------------------------------------
+# 4.5 â€” Balanced tournament schedule
+# ------------------------------------------------------------
+
+def build_balanced_schedule(
+    baseline_name: str,
+    match_count: int,
+) -> list[dict[str, Any]]:
+    schedule = []
+
+    card_count = len(
+        TOURNAMENT_CARD_TEMPLATES
+    )
+
+    for match_index in range(
+        match_count
+    ):
+        evaluated_side = (
+            ""Player""
+            if match_index % 2 == 0
+            else ""Opponent""
+        )
+
+        starting_side = (
+            ""Player""
+            if (
+                match_index // 2
+            ) % 2 == 0
+            else ""Opponent""
+        )
+
+        first_card_index = (
+            match_index
+            % card_count
+        )
+
+        second_card_index = (
+            (
+                match_index * 3
+            )
+            + 1
+        ) % card_count
+
+        if (
+            second_card_index
+            == first_card_index
+        ):
+            second_card_index = (
+                second_card_index + 1
+            ) % card_count
+
+        player_card = (
+            TOURNAMENT_CARD_TEMPLATES[
+                first_card_index
+            ]
+        )
+
+        opponent_card = (
+            TOURNAMENT_CARD_TEMPLATES[
+                second_card_index
+            ]
+        )
+
+        schedule.append(
+            {
+                ""baseline_name"":
+                    baseline_name,
+
+                ""evaluated_agent_side"":
+                    evaluated_side,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3317,"""Depth-6 Search Baseline"":","            ""Competitive Policy"",
+    )
+
+
+def create_random_baseline(
+    seed: int,
+) -> RandomLegalMoveAgent:
+    return RandomLegalMoveAgent(
+        seed=seed,
+        name=""Random Baseline"",
+    )
+
+
+def create_greedy_baseline() -> GreedyDamageAgent:
+    return GreedyDamageAgent(
+        name=""Greedy Damage Baseline"",
+    )
+
+
+def create_search_baseline() -> SearchAgentAdapter:
+    return SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            ""Depth-6 Search Baseline"",
+    )
+
+
+baseline_factories = {
+    ""Random Baseline"":
+        lambda seed:
+            create_random_baseline(
+                seed
+            ),
+
+    ""Greedy Damage Baseline"":
+        lambda seed:
+            create_greedy_baseline(),
+
+    ""Depth-6 Search Baseline"":
+        lambda seed:
+            create_search_baseline(),
+}
+
+
+# ------------------------------------------------------------
+# 4.5 â€” Balanced tournament schedule
+# ------------------------------------------------------------
+
+def build_balanced_schedule(
+    baseline_name: str,
+    match_count: int,
+) -> list[dict[str, Any]]:
+    schedule = []
+
+    card_count = len(
+        TOURNAMENT_CARD_TEMPLATES
+    )
+
+    for match_index in range(
+        match_count
+    ):
+        evaluated_side = (
+            ""Player""
+            if match_index % 2 == 0
+            else ""Opponent""
+        )
+
+        starting_side = (
+            ""Player""
+            if (
+                match_index // 2
+            ) % 2 == 0
+            else ""Opponent""
+        )
+
+        first_card_index = (
+            match_index
+            % card_count
+        )
+
+        second_card_index = (
+            (
+                match_index * 3
+            )
+            + 1
+        ) % card_count
+
+        if (
+            second_card_index
+            == first_card_index
+        ):
+            second_card_index = (
+                second_card_index + 1
+            ) % card_count
+
+        player_card = (
+            TOURNAMENT_CARD_TEMPLATES[
+                first_card_index
+            ]
+        )
+
+        opponent_card = (
+            TOURNAMENT_CARD_TEMPLATES[
+                second_card_index
+            ]
+        )
+
+        schedule.append(
+            {
+                ""baseline_name"":
+                    baseline_name,
+
+                ""evaluated_agent_side"":
+                    evaluated_side,
+
+                ""starting_side"":
+                    starting_side,
+"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5190,"== ""Random Baseline""","    )
+)
+
+test_loss = float(
+    notebook47_test_report.get(
+        ""test_loss"",
+        float(""nan""),
+    )
+)
+
+training_best_accuracy = float(
+    notebook47_training_summary.get(
+        ""best_validation_accuracy"",
+        0.0,
+    )
+)
+
+training_best_multi_accuracy = float(
+    notebook47_training_summary.get(
+        ""best_multi_action_accuracy"",
+        0.0,
+    )
+)
+
+best_epoch = int(
+    notebook47_training_summary.get(
+        ""best_epoch"",
+        0,
+    )
+)
+
+
+# ------------------------------------------------------------
+# 6.5 â€” Collect tournament metrics
+# ------------------------------------------------------------
+
+random_row = baseline_summary_df[
+    baseline_summary_df[
+        ""baseline_name""
+    ]
+    == ""Random Baseline""
+].iloc[0]
+
+greedy_row = baseline_summary_df[
+    baseline_summary_df[
+        ""baseline_name""
+    ]
+    == ""Greedy Damage Baseline""
+].iloc[0]
+
+search_row = baseline_summary_df[
+    baseline_summary_df[
+        ""baseline_name""
+    ]
+    == ""Depth-6 Search Baseline""
+].iloc[0]
+
+random_win_rate = float(
+    random_row[
+        ""win_rate""
+    ]
+)
+
+greedy_win_rate = float(
+    greedy_row[
+        ""win_rate""
+    ]
+)
+
+search_win_rate = float(
+    search_row[
+        ""win_rate""
+    ]
+)
+
+final_competitive_elo = float(
+    final_elo_df[
+        final_elo_df[
+            ""agent_name""
+        ]
+        == ""Competitive Policy""
+    ][
+        ""final_elo""
+    ].iloc[0]
+)
+
+final_competitive_rank = int(
+    final_elo_df[
+        final_elo_df[
+            ""agent_name""
+        ]
+        == ""Competitive Policy""
+    ][
+        ""rank""
+    ].iloc[0]
+)
+
+
+# ------------------------------------------------------------
+# 6.6 â€” Strength classification
+# ------------------------------------------------------------
+
+if (
+    search_win_rate >= 0.60
+    and test_multi_action_accuracy >= 0.80
+):
+    strength_tier = (
+        ""Highly Competitive""
+    )
+
+elif (
+    search_win_rate >= 0.50
+    and test_multi_action_accuracy >= 0.70
+):
+    strength_tier = (
+        ""Competitive""
+    )
+
+elif (
+    random_win_rate >= 0.60"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5197,"== ""Greedy Damage Baseline""","    )
+)
+
+training_best_accuracy = float(
+    notebook47_training_summary.get(
+        ""best_validation_accuracy"",
+        0.0,
+    )
+)
+
+training_best_multi_accuracy = float(
+    notebook47_training_summary.get(
+        ""best_multi_action_accuracy"",
+        0.0,
+    )
+)
+
+best_epoch = int(
+    notebook47_training_summary.get(
+        ""best_epoch"",
+        0,
+    )
+)
+
+
+# ------------------------------------------------------------
+# 6.5 â€” Collect tournament metrics
+# ------------------------------------------------------------
+
+random_row = baseline_summary_df[
+    baseline_summary_df[
+        ""baseline_name""
+    ]
+    == ""Random Baseline""
+].iloc[0]
+
+greedy_row = baseline_summary_df[
+    baseline_summary_df[
+        ""baseline_name""
+    ]
+    == ""Greedy Damage Baseline""
+].iloc[0]
+
+search_row = baseline_summary_df[
+    baseline_summary_df[
+        ""baseline_name""
+    ]
+    == ""Depth-6 Search Baseline""
+].iloc[0]
+
+random_win_rate = float(
+    random_row[
+        ""win_rate""
+    ]
+)
+
+greedy_win_rate = float(
+    greedy_row[
+        ""win_rate""
+    ]
+)
+
+search_win_rate = float(
+    search_row[
+        ""win_rate""
+    ]
+)
+
+final_competitive_elo = float(
+    final_elo_df[
+        final_elo_df[
+            ""agent_name""
+        ]
+        == ""Competitive Policy""
+    ][
+        ""final_elo""
+    ].iloc[0]
+)
+
+final_competitive_rank = int(
+    final_elo_df[
+        final_elo_df[
+            ""agent_name""
+        ]
+        == ""Competitive Policy""
+    ][
+        ""rank""
+    ].iloc[0]
+)
+
+
+# ------------------------------------------------------------
+# 6.6 â€” Strength classification
+# ------------------------------------------------------------
+
+if (
+    search_win_rate >= 0.60
+    and test_multi_action_accuracy >= 0.80
+):
+    strength_tier = (
+        ""Highly Competitive""
+    )
+
+elif (
+    search_win_rate >= 0.50
+    and test_multi_action_accuracy >= 0.70
+):
+    strength_tier = (
+        ""Competitive""
+    )
+
+elif (
+    random_win_rate >= 0.60
+):
+    strength_tier = (
+        ""Developing Competitive""
+    )
+
+else:
+    strength_tier = ("
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5204,"== ""Depth-6 Search Baseline""","    )
+)
+
+training_best_multi_accuracy = float(
+    notebook47_training_summary.get(
+        ""best_multi_action_accuracy"",
+        0.0,
+    )
+)
+
+best_epoch = int(
+    notebook47_training_summary.get(
+        ""best_epoch"",
+        0,
+    )
+)
+
+
+# ------------------------------------------------------------
+# 6.5 â€” Collect tournament metrics
+# ------------------------------------------------------------
+
+random_row = baseline_summary_df[
+    baseline_summary_df[
+        ""baseline_name""
+    ]
+    == ""Random Baseline""
+].iloc[0]
+
+greedy_row = baseline_summary_df[
+    baseline_summary_df[
+        ""baseline_name""
+    ]
+    == ""Greedy Damage Baseline""
+].iloc[0]
+
+search_row = baseline_summary_df[
+    baseline_summary_df[
+        ""baseline_name""
+    ]
+    == ""Depth-6 Search Baseline""
+].iloc[0]
+
+random_win_rate = float(
+    random_row[
+        ""win_rate""
+    ]
+)
+
+greedy_win_rate = float(
+    greedy_row[
+        ""win_rate""
+    ]
+)
+
+search_win_rate = float(
+    search_row[
+        ""win_rate""
+    ]
+)
+
+final_competitive_elo = float(
+    final_elo_df[
+        final_elo_df[
+            ""agent_name""
+        ]
+        == ""Competitive Policy""
+    ][
+        ""final_elo""
+    ].iloc[0]
+)
+
+final_competitive_rank = int(
+    final_elo_df[
+        final_elo_df[
+            ""agent_name""
+        ]
+        == ""Competitive Policy""
+    ][
+        ""rank""
+    ].iloc[0]
+)
+
+
+# ------------------------------------------------------------
+# 6.6 â€” Strength classification
+# ------------------------------------------------------------
+
+if (
+    search_win_rate >= 0.60
+    and test_multi_action_accuracy >= 0.80
+):
+    strength_tier = (
+        ""Highly Competitive""
+    )
+
+elif (
+    search_win_rate >= 0.50
+    and test_multi_action_accuracy >= 0.70
+):
+    strength_tier = (
+        ""Competitive""
+    )
+
+elif (
+    random_win_rate >= 0.60
+):
+    strength_tier = (
+        ""Developing Competitive""
+    )
+
+else:
+    strength_tier = (
+        ""Prototype""
+    )
+
+
+# ------------------------------------------------------------
+# 6.7 â€” Replacement decision
+# ------------------------------------------------------------"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5299,"""the depth-6 search baseline.""","
+elif (
+    search_win_rate >= 0.50
+    and test_multi_action_accuracy >= 0.70
+):
+    strength_tier = (
+        ""Competitive""
+    )
+
+elif (
+    random_win_rate >= 0.60
+):
+    strength_tier = (
+        ""Developing Competitive""
+    )
+
+else:
+    strength_tier = (
+        ""Prototype""
+    )
+
+
+# ------------------------------------------------------------
+# 6.7 â€” Replacement decision
+# ------------------------------------------------------------
+
+replace_bootstrap_policy = bool(
+    test_accuracy >= 0.75
+    and test_multi_action_accuracy >= 0.70
+    and random_win_rate >= 0.65
+    and search_win_rate >= 0.50
+    and overall_fallbacks == 0
+)
+
+replacement_reason = (
+    ""The trained variable-action policy should replace ""
+    ""the earlier bootstrap PPO policy. It was trained on ""
+    ""real depth-4 search demonstrations, passed untouched ""
+    ""test evaluation, completed 300 tournament matches ""
+    ""without fallback, and achieved a positive score against ""
+    ""the depth-6 search baseline.""
+    if replace_bootstrap_policy
+    else
+    ""The trained policy should not yet replace the bootstrap ""
+    ""policy because one or more readiness thresholds were not met.""
+)
+
+
+# ------------------------------------------------------------
+# 6.8 â€” Identify weaknesses
+# ------------------------------------------------------------
+
+identified_weaknesses = []
+
+if opponent_side_score < 0.50:
+    identified_weaknesses.append(
+        {
+            ""issue"":
+                ""Opponent-side weakness"",
+
+            ""evidence"":
+                (
+                    f""Opponent-side score was ""
+                    f""{opponent_side_score:.4f}.""
+                ),
+
+            ""priority"":
+                ""Critical"",
+
+            ""recommended_fix"":
+                (
+                    ""Generate more actor-relative expert positions ""
+                    ""where the trained policy acts from the Opponent ""
+                    ""side, and rebalance training batches by side.""
+                ),
+        }
+    )
+
+if test_multi_action_accuracy < 0.85:
+    identified_weaknesses.append(
+        {
+            ""issue"":
+                ""Multi-action imitation gap"",
+
+            ""evidence"":
+                (
+                    f""Untouched-test multi-action accuracy was ""
+                    f""{test_multi_action_accuracy:.4f}.""
+                ),
+
+            ""priority"":
+                ""High"",
+
+            ""recommended_fix"":
+                (
+                    ""Increase expert dataset size and oversample ""
+                    ""positions containing two or more legal actions.""
+                ),
+        }
+    )
+
+if search_win_rate < 0.65:
+    identified_weaknesses.append(
+        {
+            ""issue"":
+                ""Search-baseline margin is modest"",
+
+            ""evidence"":
+                (
+                    f""Win rate against the depth-6 search baseline ""
+                    f""was {search_win_rate:.4f}.""
+                ),
+
+            ""priority"":
+                ""High"",
+
+            ""recommended_fix"":
+                (
+                    ""Use search-guided self-play and policy distillation ""
+                    ""from deeper or time-limited search."""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5368,"f""Win rate against the depth-6 search baseline ""","            ""recommended_fix"":
+                (
+                    ""Generate more actor-relative expert positions ""
+                    ""where the trained policy acts from the Opponent ""
+                    ""side, and rebalance training batches by side.""
+                ),
+        }
+    )
+
+if test_multi_action_accuracy < 0.85:
+    identified_weaknesses.append(
+        {
+            ""issue"":
+                ""Multi-action imitation gap"",
+
+            ""evidence"":
+                (
+                    f""Untouched-test multi-action accuracy was ""
+                    f""{test_multi_action_accuracy:.4f}.""
+                ),
+
+            ""priority"":
+                ""High"",
+
+            ""recommended_fix"":
+                (
+                    ""Increase expert dataset size and oversample ""
+                    ""positions containing two or more legal actions.""
+                ),
+        }
+    )
+
+if search_win_rate < 0.65:
+    identified_weaknesses.append(
+        {
+            ""issue"":
+                ""Search-baseline margin is modest"",
+
+            ""evidence"":
+                (
+                    f""Win rate against the depth-6 search baseline ""
+                    f""was {search_win_rate:.4f}.""
+                ),
+
+            ""priority"":
+                ""High"",
+
+            ""recommended_fix"":
+                (
+                    ""Use search-guided self-play and policy distillation ""
+                    ""from deeper or time-limited search.""
+                ),
+        }
+    )
+
+if estimated_side_advantage_elo > 100:
+    identified_weaknesses.append(
+        {
+            ""issue"":
+                ""Large first-player advantage"",
+
+            ""evidence"":
+                (
+                    f""Estimated side advantage was ""
+                    f""{estimated_side_advantage_elo:.2f} Elo.""
+                ),
+
+            ""priority"":
+                ""High"",
+
+            ""recommended_fix"":
+                (
+                    ""Evaluate balanced mirrored states and train with ""
+                    ""equal Player/Opponent examples for every matchup.""
+                ),
+        }
+    )
+
+
+# ------------------------------------------------------------
+# 6.9 â€” Competitive scorecard
+# ------------------------------------------------------------
+
+scorecard_rows = [
+    {
+        ""metric"":
+            ""Validation accuracy"",
+
+        ""value"":
+            training_best_accuracy,
+
+        ""target"":
+            0.80,
+
+        ""passed"":
+            training_best_accuracy
+            >= 0.80,
+    },
+
+    {
+        ""metric"":
+            ""Validation multi-action accuracy"",
+
+        ""value"":
+            training_best_multi_accuracy,
+
+        ""target"":
+            0.75,
+
+        ""passed"":
+            training_best_multi_accuracy
+            >= 0.75,
+    },
+
+    {
+        ""metric"":
+            ""Test accuracy"",
+
+        ""value"":
+            test_accuracy,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5474,"""Random baseline win rate"",","        ""target"":
+            0.75,
+
+        ""passed"":
+            training_best_multi_accuracy
+            >= 0.75,
+    },
+
+    {
+        ""metric"":
+            ""Test accuracy"",
+
+        ""value"":
+            test_accuracy,
+
+        ""target"":
+            0.80,
+
+        ""passed"":
+            test_accuracy
+            >= 0.80,
+    },
+
+    {
+        ""metric"":
+            ""Test multi-action accuracy"",
+
+        ""value"":
+            test_multi_action_accuracy,
+
+        ""target"":
+            0.75,
+
+        ""passed"":
+            test_multi_action_accuracy
+            >= 0.75,
+    },
+
+    {
+        ""metric"":
+            ""Random baseline win rate"",
+
+        ""value"":
+            random_win_rate,
+
+        ""target"":
+            0.70,
+
+        ""passed"":
+            random_win_rate
+            >= 0.70,
+    },
+
+    {
+        ""metric"":
+            ""Greedy baseline win rate"",
+
+        ""value"":
+            greedy_win_rate,
+
+        ""target"":
+            0.50,
+
+        ""passed"":
+            greedy_win_rate
+            >= 0.50,
+    },
+
+    {
+        ""metric"":
+            ""Depth-6 search win rate"",
+
+        ""value"":
+            search_win_rate,
+
+        ""target"":
+            0.50,
+
+        ""passed"":
+            search_win_rate
+            >= 0.50,
+    },
+
+    {
+        ""metric"":
+            ""Opponent-side score"",
+
+        ""value"":
+            opponent_side_score,
+
+        ""target"":
+            0.50,
+
+        ""passed"":
+            opponent_side_score
+            >= 0.50,
+    },
+
+    {
+        ""metric"":
+            ""Fallback-free tournament"",
+
+        ""value"":
+            float(
+                overall_fallbacks
+                == 0
+            ),
+
+        ""target"":
+            1.0,
+
+        ""passed"":
+            overall_fallbacks
+            == 0,
+    },
+]
+
+scorecard_df = pd.DataFrame(
+    scorecard_rows
+)"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5743,Random baseline win rate: {random_win_rate:.4f},"        ),
+}
+
+with open(
+    FINAL_STRENGTH_REPORT_FILE,
+    ""w"",
+    encoding=""utf-8"",
+) as file:
+    json.dump(
+        final_strength_report,
+        file,
+        indent=4,
+        default=str,
+    )
+
+
+# ------------------------------------------------------------
+# 6.11 â€” Recommendation text
+# ------------------------------------------------------------
+
+recommendation_text = f""""""
+NOTEBOOK 48 â€” FINAL COMPETITIVE RECOMMENDATION
+============================================================
+
+Policy: Competitive Policy
+Strength tier: {strength_tier}
+
+Replace bootstrap policy: {replace_bootstrap_policy}
+
+{replacement_reason}
+
+Measured results
+----------------
+Validation accuracy: {training_best_accuracy:.4f}
+Validation multi-action accuracy: {training_best_multi_accuracy:.4f}
+Test accuracy: {test_accuracy:.4f}
+Test multi-action accuracy: {test_multi_action_accuracy:.4f}
+
+Tournament matches: {overall_matches}
+Overall win rate: {overall_win_rate:.4f}
+Random baseline win rate: {random_win_rate:.4f}
+Greedy baseline win rate: {greedy_win_rate:.4f}
+Depth-6 search win rate: {search_win_rate:.4f}
+
+Final sequential Elo: {final_competitive_elo:.2f}
+Side-neutral Elo difference: {side_neutral_elo_difference:.2f}
+Estimated first-player advantage: {estimated_side_advantage_elo:.2f} Elo
+
+Player-side score: {player_side_score:.4f}
+Opponent-side score: {opponent_side_score:.4f}
+
+Readiness score: {passed_scorecard_items}/{total_scorecard_items}
+Readiness percentage: {readiness_percentage:.2%}
+
+Recommended next notebook
+-------------------------
+49_side_balanced_search_guided_self_play.ipynb
+"""""".strip()
+
+FINAL_RECOMMENDATION_FILE.write_text(
+    recommendation_text,
+    encoding=""utf-8"",
+)
+
+
+# ------------------------------------------------------------
+# 6.12 â€” Display final report
+# ------------------------------------------------------------
+
+print(
+    ""NOTEBOOK 48 â€” FINAL COMPETITIVE STRENGTH REPORT""
+)
+
+print(""="" * 110)
+
+print()
+print(
+    ""Strength tier              :"",
+    strength_tier,
+)
+
+print(
+    ""Replace bootstrap policy   :"",
+    replace_bootstrap_policy,
+)
+
+print(
+    ""Readiness score            :"",
+    (
+        f""{passed_scorecard_items}/""
+        f""{total_scorecard_items}""
+    ),
+)
+
+print(
+    ""Readiness percentage       :"",
+    f""{readiness_percentage:.2%}"",
+)
+
+print(
+    ""Final sequential Elo       :"",
+    round(
+        final_competitive_elo,
+        2,
+    ),
+)
+
+print(
+    ""Side-neutral Elo difference:"",
+    round(
+        side_neutral_elo_difference,
+        2,
+    ),
+)
+
+print()
+print(
+    ""COMPETITIVE SCORECARD""
+)
+"
+scripts\49_side_balanced_search_guided_self_play.py,16,# - Improve performance against the Depth-6 Search baseline,"#!/usr/bin/env python
+# coding: utf-8
+
+# # Notebook 49:  Side-Balanced Search-Guided Self-Play
+# 
+# ## Objective
+# 
+# #### Improve second-player performance and reduce the large side-performance gap identified in Notebook 48.
+# 
+# ### Primary targets
+# 
+# - Raise Opponent-side performance above 50%
+# - Improve side-neutral score toward 70%
+# - Reduce estimated first-player Elo advantage
+# - Maintain zero tournament failures
+# - Improve performance against the Depth-6 Search baseline
+# 
+
+# ## Section 1 — Setup and Baseline Validation
+# 
+# #### Load and validate the competitive-policy checkpoint, actor-relative dataset, production search engine, Notebook 48 tournament reports, and side-bias measurements.
+# #### This section establishes deterministic configuration for side-balanced search-guided self-play.
+
+# In[1]:
+
+
+# ============================================================
+# NOTEBOOK 49
+# SECTION 1 — SETUP AND ARTIFACT VALIDATION
+# ============================================================
+
+from __future__ import annotations
+
+import json
+import math
+import random
+import sys
+from pathlib import Path
+from typing import Any
+
+import numpy as np
+import pandas as pd
+import torch
+
+
+# ------------------------------------------------------------
+# 1.3 — Locate project root
+# ------------------------------------------------------------
+
+def find_project_root(
+    start_path: Path | None = None,
+) -> Path:
+    current = (
+        start_path
+        or Path.cwd()
+    ).resolve()
+
+    for candidate in [
+        current,
+        *current.parents,
+    ]:
+        required_paths = [
+            candidate / ""src"",
+            candidate / ""notebooks"",
+            candidate / ""models"",
+            candidate / ""reports"",
+            candidate / ""data"",
+        ]
+
+        if all(
+            path.exists()
+            for path in required_paths
+        ):
+            return candidate
+
+    raise FileNotFoundError(
+        ""Could not locate the project root.""
+    )
+
+
+PROJECT_ROOT = find_project_root()
+
+SRC_DIR = PROJECT_ROOT / ""src""
+
+COMPETITIVE_DATA_DIR = (
+    PROJECT_ROOT
+    / ""data""
+    / ""competitive""
+)
+
+SELF_PLAY_DATA_DIR = (
+    PROJECT_ROOT
+    / ""data""
+    / ""self_play""
+)"

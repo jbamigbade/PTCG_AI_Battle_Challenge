@@ -1,0 +1,36 @@
+source_name,class_name,attribute_name,annotation,line_number,energy_related
+agent_decision,AgentDecision,move,"dict[str, Any]",13,False
+agent_decision,AgentDecision,score,float,14,False
+agent_decision,AgentDecision,search_depth,int,15,False
+agent_decision,AgentDecision,nodes,int,16,False
+agent_decision,AgentDecision,principal_variation,"list[dict[str, Any]]",17,False
+battle_agent,PokemonBattleAgent,engine,,14,False
+battle_simulation,BattleSimulationResult,final_state,BattleState,50,False
+battle_simulation,BattleSimulationResult,turns,list[BattleTurnRecord],51,False
+battle_simulation,BattleSimulationResult,winner,Optional[str],52,False
+battle_simulation,BattleSimulationResult,stop_reason,str,53,False
+battle_simulation,BattleTurnRecord,turn_number,int,18,False
+battle_simulation,BattleTurnRecord,acting_side,str,19,False
+battle_simulation,BattleTurnRecord,pokemon_name,str,20,False
+battle_simulation,BattleTurnRecord,move_name,str,21,False
+battle_simulation,BattleTurnRecord,damage,float,22,False
+battle_simulation,BattleTurnRecord,score,float,23,False
+battle_simulation,BattleTurnRecord,search_depth,int,24,False
+battle_simulation,BattleTurnRecord,nodes,int,25,False
+battle_simulation,BattleTurnRecord,player_hp_after,float,26,False
+battle_simulation,BattleTurnRecord,opponent_hp_after,float,27,False
+battle_simulation,BattleTurnRecord,next_side,str,28,False
+battle_state,BattleState,player,PlayerState,35,False
+battle_state,BattleState,opponent,PlayerState,36,False
+battle_state,BattleState,turn_number,int,37,False
+battle_state,BattleState,current_player,str,38,False
+battle_state,PlayerState,active,PokemonState,25,False
+battle_state,PlayerState,bench,List[PokemonState],26,False
+battle_state,PlayerState,prize_cards_remaining,int,27,False
+battle_state,PlayerState,hand_size,int,28,False
+battle_state,PokemonState,card,dict,13,False
+battle_state,PokemonState,current_hp,float,14,False
+battle_state,PokemonState,attached_energy,int,15,True
+battle_state,PokemonState,status,Optional[str],16,False
+battle_state,PokemonState,damage,float,17,False
+battle_state,PokemonState,is_active,bool,18,False

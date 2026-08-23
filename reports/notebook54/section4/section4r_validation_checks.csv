@@ -1,0 +1,11 @@
+check,passed,value,expected
+decision_rows_preserved,True,210,210
+energy_readiness_rows_reconcile,True,269,269
+all_active_cards_verified,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']"
+control_actions_separated,True,True,True
+side_summary_created,True,2,> 0
+card_summary_created,True,7,> 0
+dominant_gap_recognized,True,ENERGY_COST_ENFORCEMENT_INCONSISTENCY,Recognized availability-gap category
+verified_action_catalog_unchanged,True,5,5
+tournament_move_sets_not_modified,True,False,False
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

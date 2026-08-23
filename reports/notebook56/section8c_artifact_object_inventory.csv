@@ -1,0 +1,16 @@
+object_name,object_type,rows_or_items,columns,available
+notebook56_predictions,dict,4,,True
+notebook56_feature_matrices,dict,4,,True
+section5a_agreement_df,DataFrame,6,5.0,True
+notebook56_probability_difference_df,DataFrame,6,7.0,True
+notebook56_case_probability_drift_df,DataFrame,1104,9.0,True
+section5d_pair_summary_df,DataFrame,6,10.0,True
+section5d_variant_summary_df,DataFrame,24,7.0,True
+section5d_side_summary_df,DataFrame,12,6.0,True
+section6a_action_drift_df,DataFrame,36,10.0,True
+section6b_signed_action_shift_df,DataFrame,36,14.0,True
+section6b_probability_balance_df,DataFrame,6,4.0,True
+feature_inventory_df,DataFrame,4,6.0,True
+section7b_feature_impact_df,DataFrame,6,13.0,True
+section7c_feature_family_df,DataFrame,6,3.0,True
+section8a_summary_df,DataFrame,12,2.0,True

@@ -1,0 +1,7 @@
+name,policy_type,description,seed,search_depth,aggression_weight,defense_weight,immediate_value_weight,metadata
+Random,random,Random legal moves,,0,1.0,1.0,1.0,{}
+Greedy,greedy,Immediate reward,,0,1.0,1.0,1.0,{}
+Heuristic,heuristic,Rule-based play,,0,1.0,1.0,1.0,{}
+Search,search,Tree search,,6,1.0,1.0,1.0,{}
+Aggressive,aggressive,Maximum damage,,0,1.5,1.0,1.0,{}
+Defensive,defensive,Preserve resources,,0,1.0,1.5,1.0,{}

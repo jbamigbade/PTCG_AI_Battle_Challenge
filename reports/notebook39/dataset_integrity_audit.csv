@@ -1,0 +1,4 @@
+sample_id,observation_valid,legal_moves_valid,mask_valid,index_in_range,chosen_move_matches,chosen_move_legal,sample_id_valid
+batch_game_001_turn_1_Player_0,True,True,True,True,True,True,True
+batch_game_001_turn_2_Opponent_1,True,True,True,True,True,True,True
+batch_game_001_turn_3_Player_1,True,True,True,True,True,True,True

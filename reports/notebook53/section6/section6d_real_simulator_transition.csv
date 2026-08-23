@@ -1,0 +1,2 @@
+initial_current_player,next_current_player,initial_turn_number,next_turn_number,selected_move,player_hp_before,player_hp_after,opponent_hp_before,opponent_hp_after,original_state_unchanged
+Player,Opponent,1,2,Bind Down,80.0,80.0,50.0,40.0,True

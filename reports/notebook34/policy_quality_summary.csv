@@ -1,0 +1,7 @@
+metric,value
+decision_rows,3500
+unique_games,1000
+unique_moves,2
+unique_actors,2
+missing_cells,0
+duplicate_game_turn_keys,0

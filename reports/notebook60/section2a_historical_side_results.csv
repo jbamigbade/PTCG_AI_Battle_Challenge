@@ -1,0 +1,7 @@
+baseline_name,evaluated_agent_side,matches,wins,losses,draws,score,average_turns,win_rate
+Depth-6 Search Baseline,Opponent,50,16,34,0,0.32,4.14,0.32
+Depth-6 Search Baseline,Player,50,42,8,0,0.84,3.34,0.84
+Greedy Damage Baseline,Opponent,50,16,34,0,0.32,3.18,0.32
+Greedy Damage Baseline,Player,50,42,8,0,0.84,3.34,0.84
+Random Baseline,Opponent,50,32,18,0,0.64,3.78,0.64
+Random Baseline,Player,50,46,4,0,0.92,3.42,0.92

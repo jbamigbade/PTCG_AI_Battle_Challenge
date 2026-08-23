@@ -1,0 +1,119 @@
+{
+    "checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\competitive\\competitive_policy_best.pt",
+    "best_epoch": 50,
+    "test_records": 128,
+    "test_loss": 0.34249061346054077,
+    "test_top1_accuracy": 0.828125,
+    "test_top2_accuracy": 1.0,
+    "test_multi_action_records": 100,
+    "test_multi_action_accuracy": 0.78,
+    "test_multi_action_loss": 0.4383879882097244,
+    "average_confidence": 0.7747107148170471,
+    "average_margin": 0.5494214594364166,
+    "errors": 22,
+    "accuracy_by_move_count": [
+        {
+            "legal_move_count": 1,
+            "records": 28,
+            "correct": 28,
+            "accuracy": 1.0,
+            "average_confidence": 1.0
+        },
+        {
+            "legal_move_count": 2,
+            "records": 100,
+            "correct": 78,
+            "accuracy": 0.78,
+            "average_confidence": 0.7116297304630279
+        }
+    ],
+    "accuracy_by_actor_side": [
+        {
+            "actor_side": "Opponent",
+            "records": 65,
+            "correct": 53,
+            "accuracy": 0.8153846153846154,
+            "average_confidence": 0.8088050484657288
+        },
+        {
+            "actor_side": "Player",
+            "records": 63,
+            "correct": 53,
+            "accuracy": 0.8412698412698413,
+            "average_confidence": 0.739534045968737
+        }
+    ],
+    "confidence_summary": [
+        {
+            "confidence_bin": "(-0.001, 0.55]",
+            "records": 10,
+            "accuracy": 0.5,
+            "average_confidence": 0.5184424936771392
+        },
+        {
+            "confidence_bin": "(0.55, 0.65]",
+            "records": 55,
+            "accuracy": 0.6909090909090909,
+            "average_confidence": 0.5762291106310757
+        },
+        {
+            "confidence_bin": "(0.65, 0.75]",
+            "records": 0,
+            "accuracy": NaN,
+            "average_confidence": NaN
+        },
+        {
+            "confidence_bin": "(0.75, 0.85]",
+            "records": 1,
+            "accuracy": 1.0,
+            "average_confidence": 0.8213021755218506
+        },
+        {
+            "confidence_bin": "(0.85, 0.95]",
+            "records": 3,
+            "accuracy": 1.0,
+            "average_confidence": 0.9051172931989034
+        },
+        {
+            "confidence_bin": "(0.95, 1.0]",
+            "records": 59,
+            "accuracy": 1.0,
+            "average_confidence": 0.9957507283000623
+        }
+    ],
+    "top_error_pairs": [
+        {
+            "target_move": "Quick Attack",
+            "predicted_move": "Thunderbolt",
+            "count": 5
+        },
+        {
+            "target_move": "Tail Whap",
+            "predicted_move": "Bite",
+            "count": 5
+        },
+        {
+            "target_move": "Scratch",
+            "predicted_move": "Flame Tail",
+            "count": 4
+        },
+        {
+            "target_move": "Razor Leaf",
+            "predicted_move": "Vine Whip",
+            "count": 3
+        },
+        {
+            "target_move": "Scratch",
+            "predicted_move": "Fury Swipes",
+            "count": 3
+        },
+        {
+            "target_move": "Tackle",
+            "predicted_move": "Water Pulse",
+            "count": 2
+        }
+    ],
+    "actor_relative": true,
+    "variable_action": true,
+    "test_split_untouched": true
+}

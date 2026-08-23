@@ -1,0 +1,12 @@
+logical_field,resolved_column,found,required
+variant_id,variant_id,True,True
+scenario_id,source_scenario_id,True,True
+side,current_side,True,True
+best_move,expert_move,True,True
+search_score,value_target,True,True
+legal_move_count,legal_move_count,True,True
+sample_weight,sample_weight,True,True
+matchup,,False,False
+variant_name,variant_name,True,False
+counterfactual,,False,False
+status,,False,False

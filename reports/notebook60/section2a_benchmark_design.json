@@ -1,0 +1,11 @@
+{
+  "historical_source_notebook": 48,
+  "historical_total_matches": 300,
+  "historical_matches_per_baseline": 100,
+  "historical_baseline_count": 3,
+  "historical_side_result_count": 6,
+  "historical_overall_win_rate": 0.6466666666666666,
+  "r3_retraining_allowed": false,
+  "r3_model_modification_allowed": false,
+  "comparison_mode": "MATCH_HISTORICAL_BENCHMARK_STRUCTURE"
+}

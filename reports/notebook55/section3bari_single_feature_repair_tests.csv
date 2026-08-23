@@ -1,0 +1,2 @@
+raw_feature,repair_map,evaluation_valid,mean_quick_attack_difference,maximum_quick_attack_difference,mean_ascension_difference,maximum_ascension_difference,prediction_agreement_rate
+legal_move_signature,"{""Ascension | Quick Attack"": ""ascension | quick attack""}",True,0.14843478260869564,0.17199999999999993,0.08217391304347825,0.11,1.0

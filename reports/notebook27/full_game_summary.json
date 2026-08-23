@@ -1,0 +1,12 @@
+{
+    "project": "PTCG AI Battle Challenge",
+    "team": "Team Jesus",
+    "simulation_scope": "Simplified full-game agent-versus-agent model",
+    "matches_played": 20,
+    "team_jesus_wins": 20,
+    "baseline_wins": 0,
+    "draws": 0,
+    "average_turns": 3.5,
+    "average_score": 155.0,
+    "elapsed_seconds": 0.06908200000179932
+}

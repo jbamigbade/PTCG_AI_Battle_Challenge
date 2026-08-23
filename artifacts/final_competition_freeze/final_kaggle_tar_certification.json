@@ -1,0 +1,23 @@
+﻿{
+    "project":  "The Pokémon Company - PTCG AI Battle Challenge Simulation",
+    "artifact_role":  "FINAL_KAGGLE_SUBMISSION_ARTIFACT",
+    "artifact":  "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\ptcg_final_agent.tar.gz",
+    "sha256":  "980795bf6e6a4d70c6df7d25616670d3606625303ebae4304f2ecadb6fa80cc8",
+    "bytes":  1295131,
+    "archive_format":  "tar.gz",
+    "top_level_main_py":  true,
+    "top_level_deck_csv":  true,
+    "embedded_zip_files":  false,
+    "cache_artifacts":  false,
+    "official_engine_full_battle_pass":  true,
+    "official_engine_decisions":  127,
+    "official_engine_decisions_accepted":  127,
+    "terminal_turn":  13,
+    "terminal_result":  1,
+    "training_during_final_review":  false,
+    "retraining_during_final_review":  false,
+    "model_mutation_during_final_review":  false,
+    "backup_artifact":  "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\backups\\final_competition_submission\\ptcg_final_agent_CERTIFIED.tar.gz",
+    "backup_sha256":  "980795bf6e6a4d70c6df7d25616670d3606625303ebae4304f2ecadb6fa80cc8",
+    "final_status":  "FROZEN_READY_FOR_SUBMISSION"
+}

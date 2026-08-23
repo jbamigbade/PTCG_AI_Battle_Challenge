@@ -1,0 +1,5 @@
+player_card,battles,wins,losses,draws,battles_with_player_choice,player_controlled_decisions,one_attack_swing_candidates,average_final_hp_margin,player_win_rate
+Bulbasaur,9,3,6,0,0,0,4,4.444444444444445,0.3333333333333333
+Charmander,6,4,2,0,0,0,1,30.0,0.6666666666666666
+Eevee,3,0,2,1,0,0,0,-63.333333333333336,0.0
+Meowth,6,0,4,2,0,0,0,-60.0,0.0

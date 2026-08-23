@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_BENCHMARK_COMPARISON_COMPLETE",
+  "benchmark_decisions": 210,
+  "single_action_decisions": 187,
+  "multi_action_decisions": 23,
+  "notebook52_raw_legality_rate": 0.28095238095238095,
+  "notebook52_masking_rate": 0.719047619047619,
+  "notebook53_raw_legality_rate": 0.8285714285714286,
+  "notebook53_raw_masking_rate": 0.17142857142857143,
+  "raw_legality_absolute_improvement": 0.5476190476190477,
+  "masking_absolute_reduction": 0.5476190476190477,
+  "notebook53_routed_legality_rate": 1.0,
+  "notebook53_selection_agreement_rate": 1.0,
+  "notebook53_average_confidence": 0.6877428571428571,
+  "notebook53_illegal_raw_predictions": 36,
+  "notebook53_selector_calls": 0,
+  "benchmark_rows_used_for_training": 0,
+  "benchmark_scenario_overlap_count": 0,
+  "ready_for_tournament_replay": true,
+  "next_stage": "LEGALITY_AWARE_TOURNAMENT_REPLAY"
+}

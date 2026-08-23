@@ -1,0 +1,14 @@
+field,expected_type,valid
+game_index,numeric,True
+turn,numeric,True
+chosen_move_index,numeric,True
+search_score,numeric,True
+search_depth,numeric,True
+nodes_searched,numeric,True
+reward,numeric,True
+sample_id,string,True
+actor,string,True
+chosen_move,string,True
+winner,string,True
+source_dataset,string,True
+done,boolean,True

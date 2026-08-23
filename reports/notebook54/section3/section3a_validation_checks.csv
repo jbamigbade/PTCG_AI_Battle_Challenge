@@ -1,0 +1,11 @@
+check,passed,value,expected,details
+all_decisions_reconcile,True,"{'player': 103, 'opponent': 107}",210,
+player_decisions_present,True,103,> 0,
+player_multi_action_count_confirmed,True,0,0,
+player_legal_move_count_positive,True,1,> 0,
+player_maximum_legal_move_count_valid,True,1,1,
+loss_count_valid,True,14,14,
+one_attack_swing_count_valid,True,5,5,
+all_losses_have_structural_choice_deficit,True,14,14,
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",
+dominant_bottleneck_identified,True,PLAYER_ACTION_AVAILABILITY,PLAYER_ACTION_AVAILABILITY,

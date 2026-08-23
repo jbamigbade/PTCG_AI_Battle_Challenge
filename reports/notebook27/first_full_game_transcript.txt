@@ -1,0 +1,29 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.

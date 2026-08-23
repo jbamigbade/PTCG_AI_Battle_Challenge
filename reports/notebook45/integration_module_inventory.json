@@ -1,0 +1,1470 @@
+[
+  {
+    "file": "src\\__init__.py",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "battle_state.BattleState",
+      "battle_state.PlayerState",
+      "battle_state.PokemonState",
+      "legal_moves.get_current_legal_moves",
+      "legal_moves.get_current_side_pokemon",
+      "legal_moves.get_legal_moves",
+      "evaluation.evaluate_position",
+      "simulator.apply_move",
+      "adapters.current_player_adapter",
+      "adapters.evaluate_state_adapter",
+      "adapters.generate_moves_adapter",
+      "adapters.pokemon_state_features",
+      "adapters.terminal_state_adapter",
+      "agent_decision.AgentDecision",
+      "battle_agent.PokemonBattleAgent",
+      "battle_simulation.BattleSimulationResult",
+      "battle_simulation.BattleTurnRecord",
+      "battle_simulation.create_battle_transcript",
+      "battle_simulation.determine_battle_winner",
+      "battle_simulation.simulate_ai_battle",
+      "engine.advanced_search.AdvancedSearchEngine",
+      "engine.advanced_search.BoundType",
+      "engine.advanced_search.SearchResult",
+      "engine.advanced_search.SearchStats",
+      "engine.advanced_search.TranspositionEntry",
+      "engine.advanced_search.ZobristHasher",
+      "tournament.TournamentMatch",
+      "tournament.TournamentResult",
+      "tournament.TournamentStatistics",
+      "tournament.run_two_agent_match",
+      "tournament.update_statistics",
+      "tournament.LEADERBOARD_COLUMNS",
+      "tournament.TournamentEntrant",
+      "tournament.TournamentManager",
+      "tournament.build_leaderboard_dataframe",
+      "tournament.create_round_robin_schedule",
+      "benchmark.BENCHMARK_COLUMNS",
+      "benchmark.DEFAULT_BENCHMARK_CONFIGURATIONS",
+      "benchmark.DEFAULT_BENCHMARK_DEPTHS",
+      "benchmark.DEFAULT_BENCHMARK_PAIRINGS",
+      "benchmark.DEPTH_SUMMARY_COLUMNS",
+      "benchmark.BenchmarkConfiguration",
+      "benchmark.build_benchmark_dataframe",
+      "benchmark.build_benchmark_report",
+      "benchmark.build_depth_summary",
+      "benchmark.build_overall_summary",
+      "benchmark.run_benchmark_match",
+      "benchmark.run_benchmark_matrix",
+      "benchmark.save_benchmark_reports",
+      "benchmark.validate_benchmark_reports"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\adapters.py",
+    "classes": [],
+    "functions": [
+      "generate_moves_adapter",
+      "evaluate_state_adapter",
+      "current_player_adapter",
+      "terminal_state_adapter",
+      "pokemon_state_features"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "typing.Hashable",
+      "typing.Tuple",
+      "battle_state.BattleState",
+      "evaluation.evaluate_position",
+      "legal_moves.get_current_legal_moves"
+    ],
+    "integration_symbols": [
+      "generate_moves_adapter",
+      "evaluate_state_adapter",
+      "current_player_adapter",
+      "terminal_state_adapter",
+      "pokemon_state_features"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\agent_decision.py",
+    "classes": [
+      "AgentDecision"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "typing.Any"
+    ],
+    "integration_symbols": [
+      "AgentDecision"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\agents\\__init__.py",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "base_agent.BaseAgent",
+      "configs.PolicyConfig",
+      "decisions.AgentDecision",
+      "factories.AgentFactory",
+      "factories.PolicyFactory",
+      "opponents.OpponentProfile",
+      "opponents.build_round_robin_schedule",
+      "opponents.create_opponent",
+      "policies.AggressivePolicy",
+      "policies.BasePolicy",
+      "policies.DefensivePolicy",
+      "policies.GreedyPolicy",
+      "policies.HeuristicPolicy",
+      "policies.RandomPolicy",
+      "policies.SearchPolicy"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\agents\\base_agent.py",
+    "classes": [
+      "BaseAgent"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "typing.Any",
+      "typing.Mapping",
+      "typing.Sequence",
+      "decisions.AgentDecision",
+      "policies.BasePolicy"
+    ],
+    "integration_symbols": [
+      "BaseAgent"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\agents\\configs.py",
+    "classes": [
+      "PolicyConfig"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "typing.Any",
+      "typing.Mapping"
+    ],
+    "integration_symbols": [
+      "PolicyConfig"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\agents\\decisions.py",
+    "classes": [
+      "AgentDecision"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "typing.Any"
+    ],
+    "integration_symbols": [
+      "AgentDecision"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\agents\\factories.py",
+    "classes": [
+      "PolicyFactory",
+      "AgentFactory"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "base_agent.BaseAgent",
+      "configs.PolicyConfig",
+      "policies.AggressivePolicy",
+      "policies.BasePolicy",
+      "policies.DefensivePolicy",
+      "policies.GreedyPolicy",
+      "policies.HeuristicPolicy",
+      "policies.RandomPolicy",
+      "policies.SearchPolicy"
+    ],
+    "integration_symbols": [
+      "PolicyFactory",
+      "AgentFactory"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\agents\\opponents.py",
+    "classes": [
+      "OpponentProfile"
+    ],
+    "functions": [
+      "create_opponent",
+      "build_round_robin_schedule"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "itertools.cycle",
+      "typing.Any",
+      "typing.Mapping",
+      "base_agent.BaseAgent",
+      "factories.AgentFactory"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\agents\\policies.py",
+    "classes": [
+      "BasePolicy",
+      "RandomPolicy",
+      "GreedyPolicy",
+      "HeuristicPolicy",
+      "SearchPolicy",
+      "AggressivePolicy",
+      "DefensivePolicy"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "random",
+      "abc.ABC",
+      "abc.abstractmethod",
+      "typing.Any",
+      "typing.Mapping",
+      "typing.Sequence",
+      "configs.PolicyConfig",
+      "decisions.AgentDecision"
+    ],
+    "integration_symbols": [
+      "BasePolicy",
+      "RandomPolicy",
+      "GreedyPolicy",
+      "HeuristicPolicy",
+      "SearchPolicy",
+      "AggressivePolicy",
+      "DefensivePolicy"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\battle_agent.py",
+    "classes": [
+      "PokemonBattleAgent"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "typing.Any",
+      "agent_decision.AgentDecision"
+    ],
+    "integration_symbols": [
+      "PokemonBattleAgent"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\battle_simulation.py",
+    "classes": [
+      "BattleTurnRecord",
+      "BattleSimulationResult"
+    ],
+    "functions": [
+      "determine_battle_winner",
+      "simulate_ai_battle",
+      "create_battle_transcript"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "copy.deepcopy",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "typing.Any",
+      "typing.Optional",
+      "battle_agent.PokemonBattleAgent",
+      "battle_state.BattleState",
+      "simulator.apply_move"
+    ],
+    "integration_symbols": [
+      "BattleTurnRecord",
+      "BattleSimulationResult",
+      "determine_battle_winner",
+      "simulate_ai_battle",
+      "create_battle_transcript"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\battle_state.py",
+    "classes": [
+      "PokemonState",
+      "PlayerState",
+      "BattleState"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "typing.List",
+      "typing.Optional"
+    ],
+    "integration_symbols": [
+      "PokemonState",
+      "PlayerState",
+      "BattleState"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\benchmark\\__init__.py",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "benchmark.DEFAULT_BENCHMARK_CONFIGURATIONS",
+      "benchmark.DEFAULT_BENCHMARK_DEPTHS",
+      "benchmark.DEFAULT_BENCHMARK_PAIRINGS",
+      "benchmark.BenchmarkConfiguration",
+      "reporting.build_benchmark_report",
+      "reporting.save_benchmark_reports",
+      "reporting.validate_benchmark_reports",
+      "runner.run_benchmark_match",
+      "runner.run_benchmark_matrix",
+      "statistics.BENCHMARK_COLUMNS",
+      "statistics.DEPTH_SUMMARY_COLUMNS",
+      "statistics.build_benchmark_dataframe",
+      "statistics.build_depth_summary",
+      "statistics.build_overall_summary"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\benchmark\\benchmark.py",
+    "classes": [
+      "BenchmarkConfiguration"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\benchmark\\reporting.py",
+    "classes": [],
+    "functions": [
+      "build_benchmark_report",
+      "save_benchmark_reports",
+      "validate_benchmark_reports"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "json",
+      "pathlib.Path",
+      "typing.Any",
+      "pandas"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\benchmark\\runner.py",
+    "classes": [],
+    "functions": [
+      "run_benchmark_match",
+      "run_benchmark_matrix"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "time",
+      "collections.abc.Callable",
+      "collections.abc.Iterable",
+      "collections.abc.Mapping",
+      "typing.Any",
+      "battle_agent.PokemonBattleAgent",
+      "battle_state.BattleState",
+      "tournament.TournamentMatch",
+      "tournament.run_two_agent_match"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\benchmark\\statistics.py",
+    "classes": [],
+    "functions": [
+      "build_benchmark_dataframe",
+      "build_depth_summary",
+      "build_overall_summary"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "collections.abc.Sequence",
+      "typing.Any",
+      "pandas"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\card_database\\__init__.py",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "constants.PROCESSED_CARD_FILE",
+      "constants.RAW_CARD_FILE",
+      "loader.build_card_records",
+      "loader.load_card_records",
+      "loader.load_processed_dataframe",
+      "models.CardMove",
+      "models.CardRecord",
+      "normalization.clean_optional_float",
+      "normalization.clean_optional_int",
+      "normalization.clean_optional_text",
+      "normalization.normalize_card_name",
+      "repository.CardRepository",
+      "repository.load_repository",
+      "search.energies",
+      "search.find_cards",
+      "search.get_card",
+      "search.get_repository",
+      "search.pokemon",
+      "search.search_cards",
+      "search.trainers",
+      "validation.assert_valid_card_database",
+      "validation.build_validation_report",
+      "validation.validate_deck_ids",
+      "validation.validate_repository"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\card_database\\constants.py",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "pathlib.Path"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\card_database\\loader.py",
+    "classes": [],
+    "functions": [
+      "load_processed_dataframe",
+      "row_to_move",
+      "group_to_card_record",
+      "build_card_records",
+      "load_card_records"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "pathlib.Path",
+      "pandas",
+      "constants.PROCESSED_CARD_FILE",
+      "models.CardMove",
+      "models.CardRecord",
+      "normalization.clean_optional_float",
+      "normalization.clean_optional_int",
+      "normalization.clean_optional_text"
+    ],
+    "integration_symbols": [
+      "row_to_move"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\card_database\\models.py",
+    "classes": [
+      "CardMove",
+      "CardRecord"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "dataclasses.field"
+    ],
+    "integration_symbols": [
+      "CardMove"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\card_database\\normalization.py",
+    "classes": [],
+    "functions": [
+      "clean_optional_text",
+      "clean_optional_int",
+      "clean_optional_float",
+      "normalize_card_name"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "re",
+      "typing.Any",
+      "pandas"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\card_database\\notebook17_export.py",
+    "classes": [
+      "CardMove",
+      "CardRecord",
+      "CardRepository"
+    ],
+    "functions": [
+      "find_project_root",
+      "card_file_score",
+      "preview_csv",
+      "choose_processed_card_file",
+      "clean_optional_text",
+      "clean_optional_int",
+      "clean_optional_float",
+      "row_to_move",
+      "group_to_card_record",
+      "normalize_card_name",
+      "normalized_stage_or_type",
+      "is_supporter",
+      "is_item",
+      "is_stadium",
+      "is_tool"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "csv",
+      "json",
+      "re",
+      "shutil",
+      "sys",
+      "collections.Counter",
+      "dataclasses.asdict",
+      "dataclasses.dataclass",
+      "pathlib.Path",
+      "typing.Any",
+      "typing.Iterable",
+      "pandas",
+      "shutil",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "typing.Any",
+      "re",
+      "collections.defaultdict"
+    ],
+    "integration_symbols": [
+      "CardMove",
+      "row_to_move"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\card_database\\repository.py",
+    "classes": [
+      "CardRepository"
+    ],
+    "functions": [
+      "load_repository"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "collections.defaultdict",
+      "pathlib.Path",
+      "constants.PROCESSED_CARD_FILE",
+      "loader.load_card_records",
+      "models.CardRecord",
+      "normalization.normalize_card_name"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\card_database\\search.py",
+    "classes": [],
+    "functions": [
+      "get_repository",
+      "get_card",
+      "find_cards",
+      "search_cards",
+      "pokemon",
+      "trainers",
+      "energies"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "functools.lru_cache",
+      "repository.CardRepository",
+      "repository.load_repository"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\card_database\\validation.py",
+    "classes": [],
+    "functions": [
+      "validate_dataframe_schema",
+      "validate_classification_flags",
+      "validate_repository",
+      "validate_deck_ids",
+      "build_validation_report",
+      "assert_valid_card_database"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "collections.Counter",
+      "pathlib.Path",
+      "pandas",
+      "constants.CLASSIFICATION_COLUMNS",
+      "constants.ENGINEERED_COLUMNS",
+      "constants.PROCESSED_CARD_FILE",
+      "constants.RAW_COLUMNS",
+      "repository.CardRepository",
+      "repository.load_repository"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\decision_features\\__init__.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\decision_features\\action_features.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\decision_features\\models.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\decision_features\\policy.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\decision_features\\scoring.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\decision_features\\state_features.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\decision_features\\validation.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\engine\\__init__.py",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "advanced_search.AdvancedSearchEngine",
+      "advanced_search.BoundType",
+      "advanced_search.SearchResult",
+      "advanced_search.SearchStats",
+      "advanced_search.TranspositionEntry",
+      "advanced_search.ZobristHasher",
+      "benchmark.EngineBenchmarkResult",
+      "benchmark.benchmark_engine",
+      "timer.SearchTimeLimit"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\engine\\advanced_search.py",
+    "classes": [
+      "BoundType",
+      "TranspositionEntry",
+      "ZobristHasher",
+      "SearchStats",
+      "SearchResult",
+      "AdvancedSearchEngine"
+    ],
+    "functions": [
+      "search_for_time"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "math",
+      "random",
+      "time",
+      "collections.defaultdict",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "enum.Enum",
+      "enum.auto",
+      "typing.Any",
+      "typing.Callable",
+      "typing.Dict",
+      "typing.Hashable",
+      "typing.List",
+      "typing.Optional",
+      "typing.Sequence",
+      "typing.Tuple",
+      "timer.SearchTimeLimit"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\engine\\benchmark.py",
+    "classes": [
+      "EngineBenchmarkResult"
+    ],
+    "functions": [
+      "benchmark_engine"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "typing.Any"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\engine\\timer.py",
+    "classes": [
+      "SearchTimeLimit"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "time",
+      "dataclasses.dataclass",
+      "dataclasses.field"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\evaluation.py",
+    "classes": [],
+    "functions": [
+      "_maximum_hp",
+      "_hp_ratio",
+      "_bench_strength",
+      "evaluate_position"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "battle_state.BattleState",
+      "battle_state.PokemonState"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\evaluation_harness\\notebook22_export.py",
+    "classes": [
+      "DeckRequest",
+      "EvaluationRecord",
+      "AgentEvaluationHarness"
+    ],
+    "functions": [
+      "find_project_root"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "sys",
+      "time",
+      "types",
+      "uuid",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "pathlib.Path",
+      "typing.Any",
+      "typing.Callable",
+      "typing.Iterable",
+      "typing.Sequence"
+    ],
+    "integration_symbols": [
+      "AgentEvaluationHarness"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\final_audit\\notebook25_export.py",
+    "classes": [],
+    "functions": [
+      "find_project_root"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "json",
+      "subprocess",
+      "sys",
+      "zipfile",
+      "dataclasses.dataclass",
+      "dataclasses.asdict",
+      "pathlib.Path",
+      "typing.Any"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\full_game_simulation\\notebook27_export.py",
+    "classes": [],
+    "functions": [
+      "find_project_root",
+      "load_export_module",
+      "inspect_source_structure"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "importlib.util",
+      "inspect",
+      "json",
+      "sys",
+      "time",
+      "types",
+      "uuid",
+      "dataclasses.asdict",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "dataclasses.is_dataclass",
+      "pathlib.Path",
+      "typing.Any",
+      "typing.Callable",
+      "ast",
+      "src",
+      "src.BattleSimulationResult",
+      "src.BattleState",
+      "src.BattleTurnRecord",
+      "src.PlayerState",
+      "src.PokemonBattleAgent",
+      "src.PokemonState",
+      "src.apply_move",
+      "src.create_battle_transcript",
+      "src.current_player_adapter",
+      "src.determine_battle_winner",
+      "src.evaluate_state_adapter",
+      "src.generate_moves_adapter",
+      "src.pokemon_state_features",
+      "src.simulate_ai_battle",
+      "src.terminal_state_adapter",
+      "src.engine.advanced_search.AdvancedSearchEngine",
+      "src.engine.advanced_search.ZobristHasher",
+      "src.tournament.runner.run_two_agent_match",
+      "dataclasses.MISSING",
+      "dataclasses.fields",
+      "dataclasses.MISSING",
+      "dataclasses.fields",
+      "src.TournamentMatch",
+      "src.TournamentResult",
+      "src.TournamentStatistics",
+      "src.TournamentMatch",
+      "pandas"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\kaggle_agent\\notebook21_export.py",
+    "classes": [
+      "AgentStats",
+      "KaggleBattleAgent",
+      "DeckRequest"
+    ],
+    "functions": [
+      "find_project_root",
+      "agent",
+      "production_agent"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "sys",
+      "time",
+      "types",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "pathlib.Path",
+      "typing.Any",
+      "typing.Sequence",
+      "sys",
+      "types",
+      "uuid",
+      "typing.Any",
+      "dataclasses.dataclass",
+      "pathlib.Path"
+    ],
+    "integration_symbols": [
+      "AgentStats",
+      "KaggleBattleAgent",
+      "agent",
+      "production_agent"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\legal_moves.py",
+    "classes": [],
+    "functions": [
+      "get_legal_moves",
+      "get_current_side_pokemon",
+      "get_current_legal_moves"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "typing.Dict",
+      "typing.List",
+      "battle_state.BattleState",
+      "battle_state.PokemonState"
+    ],
+    "integration_symbols": [
+      "get_legal_moves",
+      "get_current_legal_moves"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\observation_adapter\\__init__.py",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "battle_state_adapter.build_policy_state",
+      "battle_state_adapter.move_label",
+      "battle_state_adapter.numeric_move_value",
+      "policy_search_adapter.PolicySearchEngineAdapter"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\observation_adapter\\battle_state_adapter.py",
+    "classes": [],
+    "functions": [
+      "move_label",
+      "numeric_move_value",
+      "build_policy_state"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "typing.Any",
+      "src.battle_state.BattleState"
+    ],
+    "integration_symbols": [
+      "move_label",
+      "numeric_move_value",
+      "build_policy_state"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\observation_adapter\\policy_search_adapter.py",
+    "classes": [
+      "PolicySearchEngineAdapter"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "typing.Any",
+      "src.battle_state.BattleState",
+      "src.engine.SearchResult",
+      "src.engine.SearchStats",
+      "src.legal_moves.get_current_legal_moves",
+      "battle_state_adapter.build_policy_state"
+    ],
+    "integration_symbols": [
+      "PolicySearchEngineAdapter"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\placeholders\\agent_policy.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\placeholders\\card_database.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\placeholders\\deck_analysis.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\placeholders\\feature_engineering.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\policy_engine\\__init__.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\policy_engine\\debug.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\policy_engine\\fallback.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\policy_engine\\models.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\policy_engine\\notebook20_export.py",
+    "classes": [
+      "BattlePolicy",
+      "PolicyDecision",
+      "BattlePolicy",
+      "BattlePolicy"
+    ],
+    "functions": [
+      "find_project_root"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "importlib.util",
+      "sys",
+      "types",
+      "dataclasses.dataclass",
+      "pathlib.Path",
+      "typing.Any",
+      "pandas",
+      "sys",
+      "types",
+      "dataclasses.dataclass",
+      "typing.Any",
+      "src.card_database.load_repository"
+    ],
+    "integration_symbols": [
+      "BattlePolicy",
+      "PolicyDecision",
+      "BattlePolicy",
+      "BattlePolicy"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\policy_engine\\policy.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\policy_engine\\validation.py",
+    "classes": [],
+    "functions": [],
+    "imports": [],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\production_agent_benchmark\\notebook26_export.py",
+    "classes": [
+      "TournamentRecord"
+    ],
+    "functions": [
+      "find_project_root"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "importlib.util",
+      "json",
+      "statistics",
+      "subprocess",
+      "sys",
+      "time",
+      "types",
+      "uuid",
+      "dataclasses.asdict",
+      "dataclasses.dataclass",
+      "pathlib.Path",
+      "typing.Any",
+      "pandas"
+    ],
+    "integration_symbols": [
+      "TournamentRecord"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\simulator.py",
+    "classes": [],
+    "functions": [
+      "apply_move"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "copy.deepcopy",
+      "typing.Dict",
+      "battle_state.BattleState"
+    ],
+    "integration_symbols": [
+      "apply_move"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\submission_builder\\notebook23_export.py",
+    "classes": [],
+    "functions": [
+      "find_project_root"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "hashlib",
+      "json",
+      "shutil",
+      "subprocess",
+      "sys",
+      "zipfile",
+      "dataclasses.dataclass",
+      "dataclasses.asdict",
+      "pathlib.Path",
+      "typing.Any",
+      "pathlib.Path",
+      "shutil",
+      "json",
+      "zipfile"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\tournament\\__init__.py",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "leaderboard.LEADERBOARD_COLUMNS",
+      "leaderboard.build_leaderboard_dataframe",
+      "manager.TournamentEntrant",
+      "manager.TournamentManager",
+      "match.TournamentMatch",
+      "match.TournamentResult",
+      "runner.run_two_agent_match",
+      "scheduler.create_round_robin_schedule",
+      "statistics.TournamentStatistics",
+      "statistics.update_statistics"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\tournament\\leaderboard.py",
+    "classes": [],
+    "functions": [
+      "build_leaderboard_dataframe"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "pandas",
+      "manager.TournamentEntrant"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\tournament\\manager.py",
+    "classes": [
+      "TournamentEntrant",
+      "TournamentManager"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "battle_agent.PokemonBattleAgent",
+      "battle_state.BattleState",
+      "match.TournamentMatch",
+      "match.TournamentResult",
+      "runner.run_two_agent_match",
+      "statistics.TournamentStatistics",
+      "statistics.update_statistics"
+    ],
+    "integration_symbols": [
+      "TournamentEntrant",
+      "TournamentManager"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\tournament\\match.py",
+    "classes": [
+      "TournamentMatch",
+      "TournamentResult"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "battle_agent.PokemonBattleAgent"
+    ],
+    "integration_symbols": [
+      "TournamentMatch",
+      "TournamentResult"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\tournament\\runner.py",
+    "classes": [],
+    "functions": [
+      "run_two_agent_match"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "copy.deepcopy",
+      "battle_simulation.BattleSimulationResult",
+      "battle_simulation.BattleTurnRecord",
+      "battle_simulation.create_battle_transcript",
+      "battle_simulation.determine_battle_winner",
+      "battle_state.BattleState",
+      "simulator.apply_move",
+      "match.TournamentMatch",
+      "match.TournamentResult"
+    ],
+    "integration_symbols": [
+      "run_two_agent_match"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\tournament\\scheduler.py",
+    "classes": [],
+    "functions": [
+      "create_round_robin_schedule"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "typing.Any",
+      "manager.TournamentEntrant"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\tournament\\statistics.py",
+    "classes": [
+      "TournamentStatistics"
+    ],
+    "functions": [
+      "update_statistics"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "match.TournamentResult"
+    ],
+    "integration_symbols": [
+      "TournamentStatistics"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\training\\__init__.py",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "replay.ReplayGame",
+      "replay.ReplayRecorder",
+      "replay.ReplayStep",
+      "dataset.DATASET_COLUMNS",
+      "dataset.export_csv",
+      "dataset.replay_to_dataframe",
+      "statistics.SelfPlayStatistics",
+      "statistics.calculate_statistics",
+      "self_play.SelfPlayRunSummary",
+      "self_play.run_self_play_session"
+    ],
+    "integration_symbols": [],
+    "error": null
+  },
+  {
+    "file": "src\\training\\dataset.py",
+    "classes": [],
+    "functions": [
+      "replay_to_dataframe",
+      "export_csv"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "pathlib.Path",
+      "pandas",
+      "replay.ReplayRecorder"
+    ],
+    "integration_symbols": [
+      "replay_to_dataframe"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\training\\replay.py",
+    "classes": [
+      "ReplayStep",
+      "ReplayGame",
+      "ReplayRecorder"
+    ],
+    "functions": [],
+    "imports": [
+      "__future__.annotations",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "typing.Any",
+      "typing.Iterable"
+    ],
+    "integration_symbols": [
+      "ReplayStep",
+      "ReplayGame",
+      "ReplayRecorder"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\training\\self_play.py",
+    "classes": [
+      "SelfPlayRunSummary"
+    ],
+    "functions": [
+      "run_self_play_session"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "uuid",
+      "dataclasses.dataclass",
+      "src.tournament.match.TournamentMatch",
+      "src.tournament.runner.run_two_agent_match",
+      "replay.ReplayGame",
+      "replay.ReplayRecorder"
+    ],
+    "integration_symbols": [
+      "SelfPlayRunSummary",
+      "run_self_play_session"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\training\\statistics.py",
+    "classes": [
+      "SelfPlayStatistics"
+    ],
+    "functions": [
+      "calculate_statistics"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "collections.Counter",
+      "dataclasses.asdict",
+      "dataclasses.dataclass",
+      "replay.ReplayRecorder"
+    ],
+    "integration_symbols": [
+      "SelfPlayStatistics"
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\verification\\notebook24_export.py",
+    "classes": [
+      "DeckRequest"
+    ],
+    "functions": [
+      "find_project_root",
+      "sha256_file"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "hashlib",
+      "importlib.util",
+      "json",
+      "shutil",
+      "subprocess",
+      "sys",
+      "tempfile",
+      "types",
+      "uuid",
+      "zipfile",
+      "pathlib.Path",
+      "typing.Any",
+      "json"
+    ],
+    "integration_symbols": [],
+    "error": null
+  }
+]

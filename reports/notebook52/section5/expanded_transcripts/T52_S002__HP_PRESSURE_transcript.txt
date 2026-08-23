@@ -1,0 +1,29 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 5: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.78
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 50.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.57
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 7: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.89
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state.

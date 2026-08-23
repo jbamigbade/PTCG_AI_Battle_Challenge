@@ -1,0 +1,8 @@
+acting_side,acting_card,decisions,scenarios,unique_selected_moves,forced_decisions,genuine_choice_decisions,average_legal_moves,maximum_legal_moves,average_confidence,average_acting_energy,average_energy_difference,genuine_choice_rate
+Opponent,Eevee,39,15,2,16,23,1.5897435897435896,2,0.9614358974358975,2.1794871794871793,-0.8205128205128205,0.5897435897435898
+Opponent,Bulbasaur,38,6,2,38,0,1.0,1,1.0,0.9473684210526315,-1.0526315789473684,0.0
+Opponent,Charmander,15,3,2,15,0,1.0,1,1.0,0.3333333333333333,-0.6666666666666666,0.0
+Player,Meowth,36,6,1,36,0,1.0,1,1.0,2.0,1.1111111111111112,0.0
+Player,Bulbasaur,22,7,1,22,0,1.0,1,1.0,3.0,1.0909090909090908,0.0
+Player,Charmander,15,6,1,15,0,1.0,1,1.0,3.0,0.8,0.0
+Player,Eevee,15,3,1,15,0,1.0,1,1.0,1.0,0.6666666666666666,0.0

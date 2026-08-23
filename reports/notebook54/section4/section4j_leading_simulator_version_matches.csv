@@ -1,0 +1,5 @@
+card_name,leading_official_card_id,official_candidate_count,leading_evidence_score,top_score_candidate_count,exact_version_confirmed,version_matching_status
+Bulbasaur,650.0,1,0,1,False,SINGLE_OFFICIAL_VERSION_UNCONFIRMED
+Charmander,,2,0,2,False,AMBIGUOUS_OFFICIAL_VERSIONS
+Eevee,249.0,4,20,1,False,UNIQUE_LEADING_EVIDENCE_CANDIDATE
+Meowth,1071.0,1,0,1,False,SINGLE_OFFICIAL_VERSION_UNCONFIRMED

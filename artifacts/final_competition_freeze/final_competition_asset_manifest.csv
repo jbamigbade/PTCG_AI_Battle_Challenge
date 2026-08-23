@@ -1,0 +1,6 @@
+"Asset","Path","Bytes","SHA256","Status"
+"FINAL_SUBMISSION_ZIP","D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission\ptcg_final_agent.zip","1300906","36e0cc17e421ed8f8e1ca9dd1ec78c2a3f7f73802f090fc91b690a1469ef6a7f","CERTIFIED"
+"MAIN_PY","D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission\main.py","29464","e328508c39b6c48411f46ad43f5ec1ffe34f54f740aed24389f88d8166dc97cd","CERTIFIED"
+"DECK_CSV","D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission\deck.csv","245","b4464eb525a25e6598a972d00efc5e5b5156372e77f51853f4076d8ebb34fd7d","CERTIFIED"
+"CERTIFIED_RANDOM_FOREST","D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook60\notebook60_certified_61_feature_random_forest.joblib","22396321","615baf3d5725ccca0c1c94e37f62fb24a68613248e167bb566bef4a6d50f2581","PRESERVED"
+"DEPLOYMENT_PPO","D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission\final_agent\models\ppo_training_loop.pkl","232534","4e6a19861eb5be5f61bc86508dff07dd838a42df9350355d95e8f2dc436ae787","PRESERVED"

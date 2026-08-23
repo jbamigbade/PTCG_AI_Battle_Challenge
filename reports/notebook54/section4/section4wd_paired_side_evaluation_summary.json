@@ -1,0 +1,21 @@
+{
+  "status": "PAIRED_SIDE_POLICY_EVALUATION_COMPLETE",
+  "comparison_cases": 46,
+  "mirror_pairs": 23,
+  "valid_pairs": 23,
+  "move_agreement_count": 23,
+  "move_disagreement_count": 0,
+  "move_agreement_rate": 1.0,
+  "routing_agreement_count": 23,
+  "routing_agreement_rate": 1.0,
+  "legality_agreement_count": 23,
+  "fallback_agreement_count": 23,
+  "average_confidence_difference_player_minus_opponent": 0.0018260869565217407,
+  "average_absolute_confidence_difference": 0.0018260869565217407,
+  "maximum_absolute_confidence_difference": 0.0020000000000000018,
+  "opportunity_normalized_side_bias_diagnosis": "NO_OPPORTUNITY_NORMALIZED_SIDE_BIAS_DETECTED",
+  "opportunity_normalized_side_bias_text": "The policy selected the same legal action for every matched Player/Opponent state pair. Side alone did not change action choice.",
+  "all_moves_legal": true,
+  "all_contexts_matched": true,
+  "next_stage": "BALANCED_MULTI_ACTION_SCENARIO_EXPANSION"
+}

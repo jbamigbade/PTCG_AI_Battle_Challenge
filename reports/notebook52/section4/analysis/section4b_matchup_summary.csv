@@ -1,0 +1,5 @@
+player_card,opponent_card,battles,player_wins,opponent_wins,draws,starter_wins,average_turns,average_confidence,fallback_decisions,average_absolute_hp_margin,player_win_rate,opponent_win_rate,starter_win_rate
+Bulbasaur,Eevee,3,0,3,0,2,5.333333333333333,0.8102936507936508,0,16.666666666666668,0.0,1.0,0.6666666666666666
+Charmander,Eevee,2,2,0,0,1,5.5,0.7127555555555556,0,30.0,1.0,0.0,0.5
+Eevee,Charmander,1,0,1,0,0,6.0,0.9204444444444445,0,80.0,0.0,1.0,0.0
+Meowth,Bulbasaur,2,0,2,0,1,11.5,0.7005202020202019,1,80.0,0.0,1.0,0.5

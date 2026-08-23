@@ -1,0 +1,3 @@
+object_name,object_type,statistics
+notebook54_legality_policy,LegalityAwarePolicyAgent,"{""agent_name"": ""Notebook54InstrumentedLegalityAwarePolicy"", ""total_decisions"": 0, ""direct_single_action_decisions"": 0, ""model_decisions"": 0, ""selector_decisions"": 0, ""fallback_decisions"": 0, ""fallback_rate"": 0.0, ""history_rows"": 0}"
+notebook54_battle_runner_agent,LegalityAwareBattleRunnerAgent,"{""wrapper_total_decisions"": 0, ""policy_total_decisions"": 0, ""single_action_direct_decisions"": 0, ""model_decisions"": 0, ""selector_decisions"": 0, ""fallback_decisions"": 0, ""fallback_rate"": 0.0, ""runner_history_rows"": 0}"

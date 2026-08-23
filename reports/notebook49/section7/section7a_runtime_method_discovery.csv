@@ -1,0 +1,28 @@
+module,class,method,signature,runtime_score
+src.engine.advanced_search,SearchStats,reset,(self) -> 'None',15.0
+src.competitive.competitive_policy_agent,CompetitivePolicyEngine,choose_move,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'",5.0
+src.competitive.competitive_policy_agent,CompetitivePolicyEngine,score_moves,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'",5.0
+src.competitive.competitive_policy_engine,CompetitivePolicyEngine,choose_move,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'",5.0
+src.competitive.competitive_policy_engine,CompetitivePolicyEngine,score_moves,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'",5.0
+src.competitive.competitive_policy_agent,CompetitivePolicyAgent,act,"(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'",2.0
+src.competitive.competitive_policy_agent,CompetitivePolicyAgent,choose_move,"(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'",2.0
+src.competitive.competitive_policy_agent,CompetitivePolicyAgent,select_move,"(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'",2.0
+src.engine.advanced_search,AdvancedSearchEngine,iterative_deepening,"(self, state: 'State', max_depth: 'int', root_player: 'Optional[Player]' = None, verbose: 'bool' = True, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'",2.0
+src.engine.advanced_search,AdvancedSearchEngine,preview_move_order,"(self, state: 'State', root_player: 'Optional[Player]' = None, ply: 'int' = 0) -> 'List[Move]'",2.0
+src.engine.advanced_search,AdvancedSearchEngine,search_depth,"(self, state: 'State', depth: 'int', root_player: 'Optional[Player]' = None, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'",2.0
+src.engine.advanced_search,AdvancedSearchEngine,search_for_time,"(self, state, seconds=1.0, verbose=False, max_depth=100, clear_table=True, clear_killers=True, clear_history=True)",2.0
+src.engine.advanced_search,AdvancedSearchEngine,clear_history_table,(self) -> 'None',0.0
+src.engine.advanced_search,AdvancedSearchEngine,clear_killer_moves,(self) -> 'None',0.0
+src.engine.advanced_search,AdvancedSearchEngine,clear_transposition_table,(self) -> 'None',0.0
+src.engine.advanced_search,AdvancedSearchEngine,get_history_entries,"(self) -> 'List[Tuple[Player, Hashable, int]]'",0.0
+src.engine.advanced_search,AdvancedSearchEngine,get_history_score,"(self, player: 'Player', move: 'Move') -> 'int'",0.0
+src.engine.advanced_search,AdvancedSearchEngine,get_principal_variation,(self) -> 'List[Move]',0.0
+src.engine.advanced_search,AdvancedSearchEngine,history_table_size,(self) -> 'int',0.0
+src.engine.advanced_search,AdvancedSearchEngine,killer_move_count,(self) -> 'int',0.0
+src.engine.advanced_search,AdvancedSearchEngine,transposition_table_size,(self) -> 'int',0.0
+src.engine.advanced_search,SearchResult,as_dict,"(self, move_to_string: 'Optional[MoveToStringFn]' = None) -> 'Dict[str, Any]'",0.0
+src.engine.advanced_search,SearchStats,as_dict,"(self) -> 'Dict[str, Any]'",0.0
+src.engine.advanced_search,SearchTimeLimit,elapsed,(self) -> 'float',0.0
+src.engine.advanced_search,SearchTimeLimit,expired,(self) -> 'bool',0.0
+src.engine.advanced_search,SearchTimeLimit,remaining,(self) -> 'float',0.0
+src.engine.advanced_search,SearchTimeLimit,start,(self) -> 'None',0.0

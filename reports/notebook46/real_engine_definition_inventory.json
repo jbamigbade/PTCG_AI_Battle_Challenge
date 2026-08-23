@@ -1,0 +1,187 @@
+[
+    {
+        "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\simulator.py",
+        "module": "src.simulator",
+        "functions": [
+            "apply_move"
+        ],
+        "classes": []
+    },
+    {
+        "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\battle_simulation.py",
+        "module": "src.battle_simulation",
+        "functions": [
+            "determine_battle_winner",
+            "simulate_ai_battle",
+            "create_battle_transcript"
+        ],
+        "classes": [
+            {
+                "name": "BattleTurnRecord",
+                "methods": [
+                    "as_dict"
+                ]
+            },
+            {
+                "name": "BattleSimulationResult",
+                "methods": [
+                    "turn_count",
+                    "as_dict"
+                ]
+            }
+        ]
+    },
+    {
+        "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\battle_state.py",
+        "module": "src.battle_state",
+        "functions": [],
+        "classes": [
+            {
+                "name": "PokemonState",
+                "methods": []
+            },
+            {
+                "name": "PlayerState",
+                "methods": []
+            },
+            {
+                "name": "BattleState",
+                "methods": [
+                    "__post_init__"
+                ]
+            }
+        ]
+    },
+    {
+        "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\legal_moves.py",
+        "module": "src.legal_moves",
+        "functions": [
+            "get_legal_moves",
+            "get_current_side_pokemon",
+            "get_current_legal_moves"
+        ],
+        "classes": []
+    },
+    {
+        "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\adapters.py",
+        "module": "src.adapters",
+        "functions": [
+            "generate_moves_adapter",
+            "evaluate_state_adapter",
+            "current_player_adapter",
+            "terminal_state_adapter",
+            "pokemon_state_features"
+        ],
+        "classes": []
+    },
+    {
+        "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\engine\\advanced_search.py",
+        "module": "src.engine.advanced_search",
+        "functions": [
+            "search_for_time"
+        ],
+        "classes": [
+            {
+                "name": "BoundType",
+                "methods": []
+            },
+            {
+                "name": "TranspositionEntry",
+                "methods": []
+            },
+            {
+                "name": "ZobristHasher",
+                "methods": [
+                    "__init__",
+                    "clear",
+                    "feature_count",
+                    "_value_for_feature",
+                    "hash_features",
+                    "hash_state",
+                    "__call__"
+                ]
+            },
+            {
+                "name": "SearchStats",
+                "methods": [
+                    "reset",
+                    "nodes_per_second",
+                    "transposition_hit_rate",
+                    "as_dict"
+                ]
+            },
+            {
+                "name": "SearchResult",
+                "methods": [
+                    "as_dict"
+                ]
+            },
+            {
+                "name": "AdvancedSearchEngine",
+                "methods": [
+                    "__init__",
+                    "_default_state_key",
+                    "_default_move_key",
+                    "_validate_depth",
+                    "_safe_moves",
+                    "clear_transposition_table",
+                    "clear_killer_moves",
+                    "clear_history_table",
+                    "transposition_table_size",
+                    "killer_move_count",
+                    "history_table_size",
+                    "_find_transposition_move",
+                    "_moves_equal",
+                    "_is_killer_move",
+                    "_store_killer_move",
+                    "_history_key",
+                    "_get_history_score",
+                    "_update_history",
+                    "get_history_score",
+                    "get_history_entries",
+                    "_order_moves",
+                    "preview_move_order",
+                    "_probe_transposition_table",
+                    "_store_transposition_entry",
+                    "_alpha_beta",
+                    "search_depth",
+                    "iterative_deepening",
+                    "get_principal_variation"
+                ]
+            }
+        ]
+    },
+    {
+        "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\engine\\benchmark.py",
+        "module": "src.engine.benchmark",
+        "functions": [
+            "benchmark_engine"
+        ],
+        "classes": [
+            {
+                "name": "EngineBenchmarkResult",
+                "methods": [
+                    "as_dict"
+                ]
+            }
+        ]
+    },
+    {
+        "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\engine\\timer.py",
+        "module": "src.engine.timer",
+        "functions": [],
+        "classes": [
+            {
+                "name": "SearchTimeLimit",
+                "methods": [
+                    "__post_init__",
+                    "start",
+                    "_require_started",
+                    "elapsed",
+                    "remaining",
+                    "expired"
+                ]
+            }
+        ]
+    }
+]

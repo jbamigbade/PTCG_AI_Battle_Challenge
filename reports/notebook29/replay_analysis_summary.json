@@ -1,0 +1,17 @@
+{
+  "source_notebook": 28,
+  "total_games": 100,
+  "total_steps": 350,
+  "unique_winners": 1,
+  "unique_players": 2,
+  "unique_moves": 2,
+  "unique_states": 7,
+  "state_diversity": 0.02,
+  "move_diversity": 0.005714285714285714,
+  "average_steps_per_game": 3.5,
+  "duplicate_state_patterns": 7,
+  "most_common_state_frequency": 50,
+  "recommended_analysis_matches": 1000,
+  "recommended_training_matches": 2000,
+  "recommendation": "Introduce opponent diversity before generating the 2,000-game training dataset."
+}

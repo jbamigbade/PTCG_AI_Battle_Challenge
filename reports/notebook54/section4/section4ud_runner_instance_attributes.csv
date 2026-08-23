@@ -1,0 +1,5 @@
+attribute_name,attribute_type,attribute_value
+decision_history,list,[]
+default_search_depth,int,0
+policy_agent,LegalityAwarePolicyAgent,<LegalityAwarePolicyAgent>
+total_decisions,int,0

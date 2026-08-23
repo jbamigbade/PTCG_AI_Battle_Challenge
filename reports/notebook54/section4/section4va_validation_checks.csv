@@ -1,0 +1,9 @@
+check,passed,value,expected
+essential_interfaces_ready,True,6,6
+frozen_scenario_count_valid,True,24,24
+build_state_signature_resolved,True,(scenario_row: 'pd.Series') -> 'Any',Resolvable callable signature
+simulation_signature_resolved,True,"(initial_state: 'BattleState', agent: 'PokemonBattleAgent', search_depth: 'int' = 6, max_turns: 'int' = 20, verbose: 'bool' = True) -> 'BattleSimulationResult'",Resolvable callable signature
+runtime_energy_observed,True,2,2
+production_runner_bound,True,LegalityAwareBattleRunnerAgent,LegalityAwareBattleRunnerAgent
+resolution_status_recognized,True,FULL_INSTRUMENTED_REPLAY_INTERFACES_READY,Recognized interface-resolution status
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

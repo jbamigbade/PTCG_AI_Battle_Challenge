@@ -1,0 +1,17 @@
+{
+    "status": "READY_FOR_POLICY_TRAINING",
+    "notebook_complete": true,
+    "required_artifacts": 23,
+    "missing_artifacts": [],
+    "empty_artifacts": [],
+    "validation_checks": 21,
+    "validation_checks_passed": 21,
+    "validation_checks_failed": 0,
+    "final_dataset_rows": 1060,
+    "source_scenarios": 106,
+    "player_side_examples": 332,
+    "opponent_side_examples": 728,
+    "counterfactual_examples": 212,
+    "rejected_records": 0,
+    "next_stage": "POLICY_FINE_TUNING"
+}

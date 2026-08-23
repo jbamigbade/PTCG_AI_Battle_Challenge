@@ -1,0 +1,63 @@
+{
+  "classification": {
+    "cell8_runtime_infrastructure": "PASS",
+    "deployment_policy_only_failure": false,
+    "cross_agent_failure": true,
+    "first_legal_baseline_failed": true,
+    "max_damage_baseline_failed": true,
+    "all_agents_unknown_move_rate": 1.0,
+    "all_agents_zero_damage_rate": 1.0,
+    "full_campaign_authorized": false,
+    "root_cause_classification": "CAMPAIGN_SYNTHETIC_STATE_DOES_NOT_SATISFY_DEPLOYMENT_LEGAL_MOVE_CONTRACT",
+    "required_next_action": "BUILD_SCHEMA_CORRECT_SCENARIOS_FROM_AUTHORITATIVE_LEGAL_MOVE_CONTRACT"
+  },
+  "legal_move_function_source": "def get_current_legal_moves(\n    battle_state: BattleState,\n) -> List[Move]:\n    \"\"\"\n    Return legal moves for whichever side currently has the turn.\n\n    When no attack is available, return a Pass action so the search\n    tree can continue to the next turn.\n    \"\"\"\n\n    active_pokemon = get_current_side_pokemon(\n        battle_state\n    )\n\n    legal_moves = get_legal_moves(\n        active_pokemon\n    )\n\n    if not legal_moves:\n        return [\n            {\n                \"name\": \"Pass\",\n                \"damage\": 0.0,\n                \"energy_cost\": 0,\n                \"effect\": \"No legal attack was available.\",\n            }\n        ]\n\n    return legal_moves",
+  "legal_move_attribute_refs": [],
+  "legal_move_subscript_refs": [
+    "List[Move]"
+  ],
+  "legal_move_string_constants": [
+    "\n    Return legal moves for whichever side currently has the turn.\n\n    When no attack is available, return a Pass action so the search\n    tree can continue to the next turn.\n    ",
+    "No legal attack was available.",
+    "Pass",
+    "damage",
+    "effect",
+    "energy_cost",
+    "name"
+  ],
+  "synthetic_attack_keys": [
+    "damage",
+    "effect",
+    "energy_cost",
+    "name"
+  ],
+  "potential_missing_keys": [
+    "\n    Return legal moves for whichever side currently has the turn.\n\n    When no attack is available, return a Pass action so the search\n    tree can continue to the next turn.\n    ",
+    "No legal attack was available.",
+    "Pass"
+  ],
+  "apply_move_source": "def apply_move(\n    battle_state: BattleState,\n    move: Move,\n) -> BattleState:\n    \"\"\"\n    Apply one move for the side identified by current_player.\n\n    A new BattleState is returned. The original state is unchanged.\n    \"\"\"\n\n    future_state = deepcopy(battle_state)\n\n    if future_state.current_player == \"Player\":\n        acting_player = future_state.player\n        defending_player = future_state.opponent\n        next_player = \"Opponent\"\n\n    elif future_state.current_player == \"Opponent\":\n        acting_player = future_state.opponent\n        defending_player = future_state.player\n        next_player = \"Player\"\n\n    else:\n        raise ValueError(\n            \"current_player must be 'Player' or 'Opponent'.\"\n        )\n\n    try:\n        damage = float(\n            move.get(\"damage\", 0) or 0\n        )\n    except (TypeError, ValueError):\n        damage = 0.0\n\n    defending_player.active.current_hp = max(\n        0.0,\n        defending_player.active.current_hp - damage,\n    )\n\n    # Keep the separate damage field synchronized.\n    defending_player.active.damage += max(\n        0.0,\n        damage,\n    )\n\n    knockout_occurred = (\n        defending_player.active.current_hp <= 0\n    )\n\n    if knockout_occurred:\n        acting_player.prize_cards_remaining = max(\n            0,\n            acting_player.prize_cards_remaining - 1,\n        )\n\n    future_state.turn_number += 1\n    future_state.current_player = next_player\n\n    return future_state",
+  "agent_failure_summary": {
+    "DEPLOYMENT_POLICY": {
+      "battle_count": 8,
+      "all_timeout": true,
+      "all_unknown_moves": true,
+      "all_zero_damage": true,
+      "runtime_failures": 0
+    },
+    "FIRST_LEGAL_MOVE": {
+      "battle_count": 8,
+      "all_timeout": true,
+      "all_unknown_moves": true,
+      "all_zero_damage": true,
+      "runtime_failures": 0
+    },
+    "MAX_DAMAGE_LEGAL_MOVE": {
+      "battle_count": 8,
+      "all_timeout": true,
+      "all_unknown_moves": true,
+      "all_zero_damage": true,
+      "runtime_failures": 0
+    }
+  }
+}

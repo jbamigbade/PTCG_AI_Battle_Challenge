@@ -1,0 +1,5 @@
+name,loaded,value,error
+RANDOM_SEED,True,4801,
+MAX_TURNS_PER_MATCH,True,50,
+SIMULATOR_SEARCH_DEPTH,True,6,
+VERBOSE_MATCHES,True,False,

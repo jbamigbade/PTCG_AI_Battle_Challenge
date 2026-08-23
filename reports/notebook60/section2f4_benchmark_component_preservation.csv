@@ -1,0 +1,11 @@
+component,status,exact_historical
+Random Baseline,PRESERVED,True
+Greedy Damage Baseline,PRESERVED,True
+Depth-6 Search Baseline,PRESERVED,True
+Tournament card templates,PRESERVED,True
+Tournament state builder,PRESERVED,True
+Tournament match runner,PRESERVED,True
+300-match benchmark structure,PRESERVED,True
+50/50 Player/Opponent split per baseline,PRESERVED,True
+Historical CompetitivePolicyAgent,NOT RECREATED,False
+Current R3 evaluated policy,SUBSTITUTED AS EVALUATED AGENT,False

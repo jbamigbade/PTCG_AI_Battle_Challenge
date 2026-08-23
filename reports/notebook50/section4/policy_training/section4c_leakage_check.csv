@@ -1,0 +1,4 @@
+split,baseline_accuracy,without_variant_name_accuracy,without_variant_name_balanced_accuracy,without_variant_name_macro_f1
+Training,1.0,1.0,1.0,1.0
+Validation,1.0,1.0,1.0,1.0
+Test,1.0,1.0,1.0,1.0

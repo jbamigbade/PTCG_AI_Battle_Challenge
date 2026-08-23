@@ -1,0 +1,61 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Pikachu used Quick Attack
+  Damage: 30.0
+  Search score: -0.00
+  Search depth: 1
+  Nodes searched: 1
+  HP after move — Player: 120.0, Opponent: 70.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Charmander used Scratch
+  Damage: 20.0
+  Search score: 0.02
+  Search depth: 1
+  Nodes searched: 1
+  HP after move — Player: 100.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Pikachu used Quick Attack
+  Damage: 30.0
+  Search score: 0.01
+  Search depth: 1
+  Nodes searched: 1
+  HP after move — Player: 100.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Charmander used Scratch
+  Damage: 20.0
+  Search score: 0.04
+  Search depth: 1
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Pikachu used Quick Attack
+  Damage: 30.0
+  Search score: 0.02
+  Search depth: 1
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Charmander used Scratch
+  Damage: 20.0
+  Search score: 0.06
+  Search depth: 1
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 7: Player — Pikachu used Quick Attack
+  Damage: 30.0
+  Search score: 0.05
+  Search depth: 1
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.

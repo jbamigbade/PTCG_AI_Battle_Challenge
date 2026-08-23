@@ -1,0 +1,21 @@
+{
+  "status": "PRODUCTION_ADAPTER_INSTANTIATION_COMPLETE",
+  "policy_instance_type": "LegalityAwarePolicyAgent",
+  "runner_instance_type": "LegalityAwareBattleRunnerAgent",
+  "policy_agent_name": "Notebook54InstrumentedLegalityAwarePolicy",
+  "policy_side_mode": "PRESERVE",
+  "runner_default_search_depth": 0,
+  "model_identity_preserved": true,
+  "preprocessor_identity_preserved": true,
+  "required_interfaces_callable": true,
+  "frozen_artifacts_unchanged": true,
+  "instantiation_status": "PRODUCTION_ADAPTER_READY",
+  "adapter_instance_created": true,
+  "instrumented_replay_run": false,
+  "simulator_source_modified": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "validation_checks_passed": 10,
+  "validation_checks_failed": 0,
+  "next_stage": "INSTRUMENTED_REPLAY_RUNTIME_PREFLIGHT_RETRY"
+}

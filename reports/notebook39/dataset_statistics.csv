@@ -1,0 +1,9 @@
+Metric,Value
+Rows,3.0
+Columns,16.0
+Observation dimension,4.0
+Action vocabulary,4.0
+Terminal transitions,1.0
+Unique winners,1.0
+Average reward,1.0
+Average search score,13.333333333333334

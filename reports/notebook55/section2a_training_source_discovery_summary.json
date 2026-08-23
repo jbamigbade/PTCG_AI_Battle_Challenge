@@ -1,0 +1,13 @@
+{
+  "status": "NOTEBOOK53_TRAINING_SOURCE_DISCOVERY_COMPLETE",
+  "notebook53_code_cells": 18,
+  "source_matches": 682,
+  "training_related_assignments": 199,
+  "model_assignment_candidates": 18,
+  "preprocessor_assignment_candidates": 7,
+  "split_assignment_candidates": 24,
+  "training_assignment_candidates": 119,
+  "candidate_serialized_artifacts": 214,
+  "direct_referenced_files": 153,
+  "next_stage": "RECOVER_EXACT_TRAINING_OBJECTS_AND_SPLIT_CONTRACT"
+}

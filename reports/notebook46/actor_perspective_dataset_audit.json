@@ -1,0 +1,22 @@
+{
+    "records": 1000,
+    "player_turn_records": 485,
+    "opponent_turn_records": 515,
+    "structural_pass": true,
+    "state_dimension_failures": 0,
+    "move_dimension_failures": 0,
+    "selected_index_failures": 0,
+    "selected_name_failures": 0,
+    "current_player_feature_failures": 0,
+    "player_zero_damage_rate": 0.0,
+    "opponent_zero_damage_rate": 1.0,
+    "player_average_damage": 36.56082474226804,
+    "opponent_average_damage": 0.0,
+    "suspected_perspective_errors": 515,
+    "single_legal_move_rate": 0.296,
+    "multi_legal_move_rate": 0.704,
+    "selected_move_entropy_bits": 3.411946417611399,
+    "perspective_problem_detected": true,
+    "training_ready": false,
+    "recommended_action": "Regenerate the dataset using actor-relative state, move, and transition encoding."
+}

@@ -1,0 +1,5 @@
+check,passed,value,expected
+all_184_cases_validated,True,184,184
+signature_casing_restored,True,['Ascension | Quick Attack'],['Ascension | Quick Attack']
+prediction_agreement_complete,True,1.0,1.0
+evaluation_route_resolved,True,AUDIT_REMAINING_CATEGORICAL_FEATURE_VALUES,Recognized route

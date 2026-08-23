@@ -1,0 +1,8 @@
+check,passed,value,expected
+four_models_trained,True,4,4
+all_models_fitted,True,True,True
+all_train_rows_identical,True,[840],[840]
+all_test_metrics_available,True,4,4
+r0_reproduces_original_predictions,True,1.0,At least 0.99
+r0_accuracy_reproduced,True,0.0,0.0
+strategy_feature_counts_match_partition,True,True,True

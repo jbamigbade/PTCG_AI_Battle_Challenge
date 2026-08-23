@@ -1,0 +1,4 @@
+baseline_name,matches,wins,win_rate,average_turns,total_fallbacks,average_fallbacks,losses,win_percent
+Depth-6 Search Baseline,100,17,0.17,6.33,232,2.32,83,17.0
+Greedy Damage Baseline,100,0,0.0,4.18,141,1.41,100,0.0
+Random Baseline,100,10,0.1,5.58,203,2.03,90,10.0

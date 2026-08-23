@@ -1,0 +1,10 @@
+{
+  "training_rows": 740,
+  "validation_rows": 160,
+  "test_rows": 160,
+  "feature_count": 38,
+  "policy_classes": 1,
+  "validation_accuracy": 1.0,
+  "validation_top3_accuracy": 1.0,
+  "validation_top5_accuracy": 1.0
+}

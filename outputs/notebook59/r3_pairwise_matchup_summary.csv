@@ -1,0 +1,7 @@
+player_card,opponent_card,battles,player_wins,opponent_wins,draws,winner_consistent_across_start_side,average_turns
+Bulbasaur,Charmander,2,0,2,0,True,7.5
+Bulbasaur,Meowth,2,2,0,0,True,11.5
+Charmander,Meowth,2,2,0,0,True,5.5
+Eevee,Bulbasaur,2,2,0,0,True,7.5
+Eevee,Charmander,2,0,2,0,True,5.5
+Eevee,Meowth,2,2,0,0,True,5.5

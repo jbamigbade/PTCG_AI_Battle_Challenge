@@ -1,0 +1,25 @@
+{
+    "version": "2.0",
+    "state_features": [
+        "player_hp_ratio",
+        "player_energy",
+        "player_prizes_remaining",
+        "opponent_hp_ratio",
+        "opponent_energy",
+        "opponent_prizes_remaining",
+        "turn_number",
+        "current_player"
+    ],
+    "move_features": [
+        "damage",
+        "energy_cost",
+        "is_knockout",
+        "is_heal",
+        "is_switch",
+        "is_draw",
+        "is_status",
+        "expected_reward"
+    ],
+    "state_dimension": 8,
+    "move_dimension": 8
+}

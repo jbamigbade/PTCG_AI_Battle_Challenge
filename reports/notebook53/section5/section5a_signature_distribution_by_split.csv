@@ -1,0 +1,19 @@
+split,legal_move_signature,examples,scenarios,split_fraction
+Test,ascension,44,11,0.4
+Test,ascension | quick attack,33,11,0.3
+Test,bind down,16,8,0.14545454545454545
+Test,live coal,4,2,0.03636363636363636
+Test,pass,12,11,0.10909090909090909
+Test,tuck tail,1,1,0.00909090909090909
+Training,ascension,336,84,0.4
+Training,ascension | quick attack,252,84,0.3
+Training,bind down,66,33,0.07857142857142857
+Training,live coal,70,35,0.08333333333333333
+Training,pass,100,84,0.11904761904761904
+Training,tuck tail,16,16,0.01904761904761905
+Validation,ascension,44,11,0.4
+Validation,ascension | quick attack,33,11,0.3
+Validation,bind down,12,6,0.10909090909090909
+Validation,live coal,6,3,0.05454545454545454
+Validation,pass,13,11,0.11818181818181818
+Validation,tuck tail,2,2,0.01818181818181818

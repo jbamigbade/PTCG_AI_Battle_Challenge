@@ -1,0 +1,5 @@
+strategy,feature_count,feature_reduction_percent,production_ready,release_status
+R0_CURRENT_BASELINE,64,0.0,True,GO
+R1_REMOVE_LEGAL_SIGNATURE,58,9.375,True,GO
+R2_REMOVE_SIGNATURE_AND_COMPATIBILITY,52,18.75,True,GO
+R3_STATE_CENTRIC_POLICY,46,28.125,True,GO

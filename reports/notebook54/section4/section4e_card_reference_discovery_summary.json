@@ -1,0 +1,22 @@
+{
+  "status": "CARD_REFERENCE_SOURCE_DISCOVERY_COMPLETE",
+  "reference_files_discovered": 127,
+  "image_files_discovered": 1,
+  "pdf_files_discovered": 4,
+  "archive_files_discovered": 4,
+  "notebook_reference_files": 57,
+  "cards_with_image_matches": [],
+  "cards_with_text_references": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "all_tournament_card_images_found": false,
+  "reference_discovery_status": "REFERENCE_PDFS_AVAILABLE",
+  "recommended_next_action": "Inspect the highest-relevance competition PDFs for card identifiers, move definitions, and image mappings.",
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_expand_actions": false,
+  "next_stage": "REFERENCE_PDF_CARD_EXTRACTION"
+}

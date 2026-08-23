@@ -1,0 +1,97 @@
+{
+  "schema_name": "notebook53_legality_aware_training_schema",
+  "schema_version": "1.0",
+  "source_dataset": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook49\\section8\\policy_dataset\\section8c_expert_policy_dataset.csv",
+  "row_count": 1060,
+  "numeric_features": [
+    "turn_number",
+    "player_energy",
+    "opponent_energy",
+    "player_damage",
+    "opponent_damage",
+    "prize_cards_remaining",
+    "hand_size",
+    "recomputed_legal_move_count",
+    "acting_energy",
+    "defending_energy",
+    "energy_difference",
+    "absolute_energy_difference",
+    "acting_damage",
+    "defending_damage",
+    "damage_difference",
+    "absolute_damage_difference",
+    "single_legal_move_flag",
+    "multi_legal_move_flag",
+    "model_choice_required_flag",
+    "is_legal__ascension",
+    "is_legal__bind_down",
+    "is_legal__live_coal",
+    "is_legal__pass",
+    "is_legal__quick_attack",
+    "is_legal__tuck_tail",
+    "active_card_can_use__ascension",
+    "active_card_can_use__bind_down",
+    "active_card_can_use__live_coal",
+    "active_card_can_use__pass",
+    "active_card_can_use__quick_attack",
+    "active_card_can_use__tuck_tail"
+  ],
+  "categorical_features": [
+    "current_side",
+    "side_mode",
+    "player_card",
+    "opponent_card",
+    "active_card",
+    "inactive_card",
+    "legal_move_signature",
+    "battle_phase",
+    "energy_band",
+    "damage_band"
+  ],
+  "raw_feature_count": 41,
+  "target_column": "expert_move",
+  "weight_column": "sample_weight",
+  "legal_action_flags": [
+    "is_legal__ascension",
+    "is_legal__bind_down",
+    "is_legal__live_coal",
+    "is_legal__pass",
+    "is_legal__quick_attack",
+    "is_legal__tuck_tail"
+  ],
+  "active_card_compatibility_flags": [
+    "active_card_can_use__ascension",
+    "active_card_can_use__bind_down",
+    "active_card_can_use__live_coal",
+    "active_card_can_use__pass",
+    "active_card_can_use__quick_attack",
+    "active_card_can_use__tuck_tail"
+  ],
+  "policy_action_classes": [
+    "Ascension",
+    "Bind Down",
+    "Live Coal",
+    "Pass",
+    "Quick Attack",
+    "Tuck Tail"
+  ],
+  "active_card_action_map": {
+    "Bulbasaur": [
+      "bind down"
+    ],
+    "Charmander": [
+      "live coal"
+    ],
+    "Eevee": [
+      "ascension",
+      "pass",
+      "quick attack"
+    ],
+    "Meowth": [
+      "pass",
+      "tuck tail"
+    ]
+  },
+  "benchmark_rows_used_for_training": 0,
+  "benchmark_scenario_overlap_count": 0
+}

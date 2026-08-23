@@ -1,0 +1,4 @@
+resource,path,exists,size_bytes
+downloaded_main,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\data\raw\kaggle_sample_submission\main.py,True,19781
+downloaded_deck,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\data\raw\kaggle_sample_submission\deck.csv,True,245
+downloaded_archive,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\data\raw\kaggle_sample_submission\submission.tar.gz,True,1058289

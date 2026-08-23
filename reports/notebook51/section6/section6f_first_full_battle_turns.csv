@@ -1,0 +1,9 @@
+record_number,turn_number,acting_side,pokemon_name,move_name,score,player_hp,opponent_hp
+1,1,Player,Bulbasaur,Bind Down,0.564,,
+2,2,Opponent,Eevee,Quick Attack,0.7586666666666667,,
+3,3,Player,Bulbasaur,Bind Down,0.68,,
+4,4,Opponent,Eevee,Quick Attack,0.7706666666666667,,
+5,5,Player,Bulbasaur,Bind Down,0.632,,
+6,6,Opponent,Eevee,Quick Attack,0.8973333333333333,,
+7,7,Player,Bulbasaur,Bind Down,0.5013333333333333,,
+8,8,Opponent,Eevee,Quick Attack,0.912,,

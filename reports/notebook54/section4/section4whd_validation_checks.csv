@@ -1,0 +1,8 @@
+check,passed,value,expected
+correct_d_drive_report_directory,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4
+all_184_states_analyzed,True,184,184
+all_92_mirror_pairs_analyzed,True,92,92
+score_margins_complete,True,184,184
+global_top_feature_attached,True,categorical__legal_move_signature_ascension,categorical__legal_move_signature_ascension
+feature_importance_groups_created,True,10,> 0
+attribution_diagnosis_recognized,True,LEGALITY_AND_ACTION_IDENTITY_FEATURE_DOMINANCE,Recognized attribution diagnosis

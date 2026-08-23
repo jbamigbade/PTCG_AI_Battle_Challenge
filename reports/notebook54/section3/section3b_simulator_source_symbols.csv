@@ -1,0 +1,12 @@
+module_name,symbol_type,symbol_name,arguments,fields
+battle_state,class,PokemonState,[],"[""attached_energy"", ""card"", ""current_hp"", ""damage"", ""is_active"", ""status""]"
+battle_state,class,PlayerState,[],"[""active"", ""bench"", ""hand_size"", ""prize_cards_remaining""]"
+battle_state,class,BattleState,[],"[""current_player"", ""opponent"", ""player"", ""turn_number""]"
+agent_decision,class,AgentDecision,[],"[""move"", ""nodes"", ""principal_variation"", ""score"", ""search_depth""]"
+simulator,function,apply_move,"[""battle_state"", ""move""]",[]
+battle_agent,class,PokemonBattleAgent,[],[]
+battle_simulation,class,BattleTurnRecord,[],"[""acting_side"", ""damage"", ""move_name"", ""next_side"", ""nodes"", ""opponent_hp_after"", ""player_hp_after"", ""pokemon_name"", ""score"", ""search_depth"", ""turn_number""]"
+battle_simulation,class,BattleSimulationResult,[],"[""final_state"", ""stop_reason"", ""turns"", ""winner""]"
+battle_simulation,function,determine_battle_winner,"[""state""]",[]
+battle_simulation,function,simulate_ai_battle,"[""initial_state"", ""agent"", ""search_depth"", ""max_turns"", ""verbose""]",[]
+battle_simulation,function,create_battle_transcript,"[""simulation""]",[]

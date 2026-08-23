@@ -1,0 +1,5 @@
+check,passed,value,expected
+all_184_raw_rows_reconstructed,True,184,184
+raw_schema_contains_41_features,True,41,41
+encoded_schema_contains_64_features,True,64,64
+diagnostic_route_resolved,True,REPAIR_IDENTIFIED_RAW_FEATURES,Recognized diagnostic route

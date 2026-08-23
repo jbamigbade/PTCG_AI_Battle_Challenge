@@ -1,0 +1,6 @@
+optimization_window,recommended_intervention,losing_battles,player_cards,conditions,average_final_opponent_hp,average_hp_margin
+ONE_ATTACK_SWING,Add damage-maximizing or tempo-preserving alternative,5,"[""Bulbasaur"", ""Charmander""]","[""BASELINE"", ""HP_PRESSURE""]",16.0,16.0
+TWO_ATTACK_SWING,"Add survival, retreat, healing, or defensive tactical option",3,"[""Bulbasaur"", ""Charmander""]","[""HP_PRESSURE""]",33.333333333333336,33.333333333333336
+STRUCTURAL_GAP,"Add survival, retreat, healing, or defensive tactical option",3,"[""Eevee"", ""Meowth""]","[""HP_PRESSURE""]",80.0,80.0
+STRUCTURAL_GAP,Expand Meowth beyond deterministic Tuck Tail routing,2,"[""Meowth""]","[""BASELINE""]",80.0,80.0
+STRUCTURAL_GAP,Expand Player legal-action set and evaluate alternatives,1,"[""Eevee""]","[""BASELINE""]",80.0,80.0

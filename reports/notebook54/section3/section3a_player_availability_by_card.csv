@@ -1,0 +1,5 @@
+active_card,decisions,scenarios,unique_legal_move_sets,average_legal_move_count,maximum_legal_move_count,multi_action_decisions,player_wins,player_losses,draws,choice_rate
+Bulbasaur,22,7,1,1.0,1,0,12,10,0,0.0
+Charmander,15,6,1,1.0,1,0,12,3,0,0.0
+Eevee,20,3,1,1.0,1,0,0,5,15,0.0
+Meowth,46,6,1,1.0,1,0,0,16,30,0.0

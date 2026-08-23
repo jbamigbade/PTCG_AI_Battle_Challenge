@@ -1,0 +1,15 @@
+name,object_type,line_number,recovered
+TournamentDecision,CLASS,1789,True
+tournament_move_name,FUNCTION,1805,True
+tournament_move_damage,FUNCTION,1833,True
+RandomLegalMoveAgent,CLASS,1882,True
+GreedyDamageAgent,CLASS,1986,True
+tournament_state_key,FUNCTION,2114,True
+tournament_move_key,FUNCTION,2267,True
+SearchAgentAdapter,CLASS,2329,True
+create_tournament_state,FUNCTION,2591,True
+TournamentMatchResult,CLASS,2677,True
+run_tournament_match,FUNCTION,2696,True
+create_random_baseline,FUNCTION,3281,True
+create_greedy_baseline,FUNCTION,3290,True
+create_search_baseline,FUNCTION,3296,True

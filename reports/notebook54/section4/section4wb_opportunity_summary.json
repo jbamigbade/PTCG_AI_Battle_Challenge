@@ -1,0 +1,21 @@
+{
+  "status": "PLAYER_VERSUS_OPPONENT_DECISION_OPPORTUNITY_DECOMPOSITION_COMPLETE",
+  "instrumented_decisions": 180,
+  "player_decisions": 88,
+  "opponent_decisions": 92,
+  "player_forced_decisions": 88,
+  "opponent_forced_decisions": 69,
+  "player_genuine_choice_decisions": 0,
+  "opponent_genuine_choice_decisions": 23,
+  "player_forced_decision_rate": 1.0,
+  "opponent_forced_decision_rate": 0.75,
+  "player_genuine_choice_rate": 0.0,
+  "opponent_genuine_choice_rate": 0.25,
+  "genuine_choice_opportunity_gap": 23,
+  "environment_opportunity_imbalance": true,
+  "direct_side_policy_bias_measurable": false,
+  "opportunity_diagnosis": "DECISION_OPPORTUNITY_IMBALANCE_CONFIRMED",
+  "opportunity_diagnosis_text": "The Player received no genuine multi-action decisions, while the Opponent received repeated genuine choices. Direct policy-quality comparison by side is therefore not valid on this replay set.",
+  "all_selected_moves_legal": true,
+  "next_stage": "OPPORTUNITY_NORMALIZED_POLICY_COMPARISON_DESIGN"
+}

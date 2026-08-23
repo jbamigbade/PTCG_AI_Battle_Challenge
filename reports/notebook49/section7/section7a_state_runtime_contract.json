@@ -1,0 +1,179 @@
+{
+    "architecture": "STATE_BASED_DECISION_PIPELINE",
+    "replay_level": "LEVEL_1_SCENARIO_REGENERATION",
+    "scenario_count": 106,
+    "pipeline": [
+        "BattleState",
+        "get_current_legal_moves",
+        "CompetitivePolicyEngine",
+        "AdvancedSearchEngine"
+    ],
+    "simulator_required": false,
+    "simulator_available": false,
+    "state_construction_status": "STATE_FACTORY_REQUIRED",
+    "state_factory_candidates": [],
+    "existing_state_candidates": [],
+    "module_status": [
+        {
+            "runtime_name": "battle_state_module",
+            "module": "src.battle_state",
+            "loaded": true,
+            "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\battle_state.py",
+            "error": ""
+        },
+        {
+            "runtime_name": "legal_moves_module",
+            "module": "src.legal_moves",
+            "loaded": true,
+            "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\legal_moves.py",
+            "error": ""
+        },
+        {
+            "runtime_name": "adapters_module",
+            "module": "src.adapters",
+            "loaded": true,
+            "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\adapters.py",
+            "error": ""
+        },
+        {
+            "runtime_name": "policy_engine_module",
+            "module": "src.competitive.competitive_policy_engine",
+            "loaded": true,
+            "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\competitive\\competitive_policy_engine.py",
+            "error": ""
+        },
+        {
+            "runtime_name": "policy_agent_module",
+            "module": "src.competitive.competitive_policy_agent",
+            "loaded": true,
+            "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\competitive\\competitive_policy_agent.py",
+            "error": ""
+        },
+        {
+            "runtime_name": "search_module",
+            "module": "src.engine.advanced_search",
+            "loaded": true,
+            "file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\engine\\advanced_search.py",
+            "error": ""
+        }
+    ],
+    "symbol_status": [
+        {
+            "symbol": "BattleState",
+            "available": true,
+            "object_type": "type",
+            "module": "src.battle_state",
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None"
+        },
+        {
+            "symbol": "PlayerState",
+            "available": true,
+            "object_type": "type",
+            "module": "src.battle_state",
+            "signature": "(active: 'PokemonState', bench: 'List[PokemonState]', prize_cards_remaining: 'int' = 6, hand_size: 'int' = 7) -> None"
+        },
+        {
+            "symbol": "PokemonState",
+            "available": true,
+            "object_type": "type",
+            "module": "src.battle_state",
+            "signature": "(card: 'dict', current_hp: 'float', attached_energy: 'int' = 0, status: 'Optional[str]' = None, damage: 'float' = 0.0, is_active: 'bool' = False) -> None"
+        },
+        {
+            "symbol": "get_current_legal_moves",
+            "available": true,
+            "object_type": "function",
+            "module": "src.legal_moves",
+            "signature": "(battle_state: 'BattleState') -> 'List[Move]'"
+        },
+        {
+            "symbol": "generate_moves_adapter",
+            "available": true,
+            "object_type": "function",
+            "module": "src.adapters",
+            "signature": "(battle_state: 'BattleState')"
+        },
+        {
+            "symbol": "terminal_state_adapter",
+            "available": true,
+            "object_type": "function",
+            "module": "src.adapters",
+            "signature": "(battle_state: 'BattleState') -> 'bool'"
+        },
+        {
+            "symbol": "evaluate_state_adapter",
+            "available": true,
+            "object_type": "function",
+            "module": "src.adapters",
+            "signature": "(battle_state: 'BattleState', root_player: 'str') -> 'float'"
+        },
+        {
+            "symbol": "current_player_adapter",
+            "available": true,
+            "object_type": "function",
+            "module": "src.adapters",
+            "signature": "(battle_state: 'BattleState') -> 'str'"
+        },
+        {
+            "symbol": "CompetitivePolicyEngine",
+            "available": true,
+            "object_type": "type",
+            "module": "src.competitive.competitive_policy_engine",
+            "signature": "(checkpoint_path: 'str | Path', device: 'str | torch.device | None' = None) -> 'None'"
+        },
+        {
+            "symbol": "CompetitivePolicyAgent",
+            "available": true,
+            "object_type": "type",
+            "module": "src.competitive.competitive_policy_agent",
+            "signature": "(checkpoint_path: 'str | Path', device: 'str | None' = None, name: 'str' = 'Competitive Policy Agent') -> 'None'"
+        },
+        {
+            "symbol": "AdvancedSearchEngine",
+            "available": true,
+            "object_type": "type",
+            "module": "src.engine.advanced_search",
+            "signature": "(generate_moves: 'GenerateMovesFn', apply_move: 'ApplyMoveFn', evaluate_state: 'EvaluateFn', is_terminal: 'IsTerminalFn', current_player: 'CurrentPlayerFn', move_to_string: 'Optional[MoveToStringFn]' = None, state_key: 'Optional[Callable[[State], Hashable]]' = None, use_transposition_table: 'bool' = True, move_order_score: 'Optional[MoveOrderScoreFn]' = None, use_move_ordering: 'bool' = True, move_key: 'Optional[MoveKeyFn]' = None, use_killer_moves: 'bool' = True, killer_slots: 'int' = 2, use_history_heuristic: 'bool' = True, history_multiplier: 'float' = 1000.0) -> 'None'"
+        }
+    ],
+    "method_contracts": [
+        {
+            "class": "CompetitivePolicyEngine",
+            "method": "choose_move",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'",
+            "status": "PASS"
+        },
+        {
+            "class": "CompetitivePolicyEngine",
+            "method": "score_moves",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'",
+            "status": "PASS"
+        },
+        {
+            "class": "AdvancedSearchEngine",
+            "method": "iterative_deepening",
+            "signature": "(self, state: 'State', max_depth: 'int', root_player: 'Optional[Player]' = None, verbose: 'bool' = True, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'",
+            "status": "PASS"
+        },
+        {
+            "class": "AdvancedSearchEngine",
+            "method": "search_depth",
+            "signature": "(self, state: 'State', depth: 'int', root_player: 'Optional[Player]' = None, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'",
+            "status": "PASS"
+        },
+        {
+            "class": "AdvancedSearchEngine",
+            "method": "search_for_time",
+            "signature": "(self, state, seconds=1.0, verbose=False, max_depth=100, clear_table=True, clear_killers=True, clear_history=True)",
+            "status": "PASS"
+        }
+    ],
+    "legal_move_smoke_test": {
+        "executed": false,
+        "passed": false,
+        "state_source": null,
+        "legal_move_count": null,
+        "error": null
+    },
+    "next_stage": "BUILD_SCENARIO_STATE_FACTORY"
+}

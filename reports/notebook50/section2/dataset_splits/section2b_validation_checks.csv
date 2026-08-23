@@ -1,0 +1,40 @@
+check_name,passed,observed_value,expected_value
+only_recognized_side_labels,True,"['opponent', 'player']","['opponent', 'player']"
+full_dataset_contains_player_rows,True,332,> 0
+full_dataset_contains_opponent_rows,True,728,> 0
+train_contains_player_rows,True,220,>= 10
+train_contains_opponent_rows,True,520,>= 10
+train_player_fraction_drift_acceptable,True,0.01591,<= 0.12
+train_opponent_fraction_drift_acceptable,True,0.01591,<= 0.12
+validation_contains_player_rows,True,50,>= 10
+validation_contains_opponent_rows,True,110,>= 10
+validation_player_fraction_drift_acceptable,True,0.000708,<= 0.12
+validation_opponent_fraction_drift_acceptable,True,0.000708,<= 0.12
+test_contains_player_rows,True,62,>= 10
+test_contains_opponent_rows,True,98,>= 10
+test_player_fraction_drift_acceptable,True,0.074292,<= 0.12
+test_opponent_fraction_drift_acceptable,True,0.074292,<= 0.12
+train_minimum_scenario_coverage,True,74,>= 10
+train_variant_ids_unique,True,0,0
+train_scenario_ids_complete,True,0,0
+train_variant_ids_complete,True,0,0
+train_expert_moves_complete,True,0,0
+train_search_targets_complete,True,0,0
+validation_minimum_scenario_coverage,True,16,>= 10
+validation_variant_ids_unique,True,0,0
+validation_scenario_ids_complete,True,0,0
+validation_variant_ids_complete,True,0,0
+validation_expert_moves_complete,True,0,0
+validation_search_targets_complete,True,0,0
+test_minimum_scenario_coverage,True,16,>= 10
+test_variant_ids_unique,True,0,0
+test_scenario_ids_complete,True,0,0
+test_variant_ids_complete,True,0,0
+test_expert_moves_complete,True,0,0
+test_search_targets_complete,True,0,0
+train_validation_scenario_overlap_zero,True,0,0
+train_test_scenario_overlap_zero,True,0,0
+validation_test_scenario_overlap_zero,True,0,0
+all_rows_still_assigned,True,1060,1060
+all_106_scenarios_preserved,True,106,106
+all_1060_rows_preserved,True,1060,1060

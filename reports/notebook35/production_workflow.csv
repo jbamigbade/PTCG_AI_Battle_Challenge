@@ -1,0 +1,12 @@
+Step,Operation
+1,Reset environment
+2,Observe game state
+3,Extract observation vector
+4,Collect legal actions
+5,Build legal-action mask
+6,Select action
+7,Execute action
+8,Receive reward
+9,Check terminal state
+10,Store training sample
+11,Repeat

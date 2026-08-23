@@ -1,0 +1,10 @@
+acting_side,selected_move,decisions,scenarios,average_confidence,average_energy,model_choice_decisions,side_move_share
+Opponent,Pass,30,3,1.0,0.0,0,0.32608695652173914
+Opponent,Quick Attack,23,10,0.9346086956521739,3.0,23,0.25
+Opponent,Bind Down,18,4,1.0,2.0,0,0.1956521739130435
+Opponent,Ascension,16,5,1.0,1.0,0,0.17391304347826086
+Opponent,Live Coal,5,2,1.0,1.0,0,0.05434782608695652
+Player,Tuck Tail,36,6,1.0,2.0,0,0.4090909090909091
+Player,Bind Down,22,7,1.0,3.0,0,0.25
+Player,Ascension,15,3,1.0,1.0,0,0.17045454545454544
+Player,Live Coal,15,6,1.0,3.0,0,0.17045454545454544

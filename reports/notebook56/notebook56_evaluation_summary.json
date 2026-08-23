@@ -1,0 +1,20 @@
+{
+  "notebook": 56,
+  "title": "Four Model Controlled Policy Evaluation",
+  "status": "CONTROLLED_FEATURE_ABLATION_EVALUATION_COMPLETE",
+  "evaluation_cases": 184,
+  "strategies": [
+    "R0_CURRENT_BASELINE",
+    "R1_REMOVE_LEGAL_SIGNATURE",
+    "R2_REMOVE_SIGNATURE_AND_COMPATIBILITY",
+    "R3_STATE_CENTRIC_POLICY"
+  ],
+  "models_compared": 4,
+  "prediction_agreement": 1.0,
+  "prediction_disagreements": 0,
+  "largest_case_probability_drift": 0.168,
+  "most_divergent_comparison": "R0_CURRENT_BASELINE vs R3_STATE_CENTRIC_POLICY",
+  "top_drifting_action": "Quick Attack",
+  "probability_mass_conserved": true,
+  "csv_reports_exported": 14
+}

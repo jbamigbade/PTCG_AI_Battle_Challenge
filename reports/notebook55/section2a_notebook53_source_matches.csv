@@ -1,0 +1,683 @@
+cell_index,line_number,matched_terms,source_line
+1,45,target,NOTEBOOK52_OPTIMIZATION_TARGETS_FILE = (
+1,47,target,"/ ""section7a_optimization_targets.csv"""
+1,96,target,"""optimization_targets"":"
+1,97,target,"NOTEBOOK52_OPTIMIZATION_TARGETS_FILE,"
+1,257,target,notebook52_optimization_targets_df = pd.read_csv(
+1,258,target,NOTEBOOK52_OPTIMIZATION_TARGETS_FILE
+1,352,target,primary_optimization_target = str(
+1,354,target,"""primary_optimization_target"""
+1,471,target,assert primary_optimization_target == (
+1,502,target,"print(""NOTEBOOK 52 OPTIMIZATION TARGETS"")"
+1,506,target,notebook52_optimization_targets_df
+1,603,target,"""metric"": ""primary_optimization_target"","
+1,604,target,"""value"": primary_optimization_target,"
+1,654,target,"""primary_optimization_target"":"
+1,655,target,"primary_optimization_target,"
+2,202,selected_move,"""selected_move"","
+2,245,selected_move,"""normalized_selected_move"""
+2,247,selected_move,"""selected_move"""
+2,286,selected_move,"""normalized_selected_move"""
+2,539,selected_move,"""selected_move"","
+2,614,selected_move,"""selected_move"","
+2,704,selected_move,"""selected_move"","
+2,775,selected_move,"""selected_move"","
+2,854,selected_move,"""selected_move"","
+2,898,selected_move,"""selected_move"""
+2,1019,selected_move,"""selected_move"","
+2,1024,selected_move,"""selected_move"","
+2,1109,selected_move,"""selected_move"","
+2,1524,selected_move,"""selected_move"""
+3,64,target,"target_column: str,"
+3,69,target,Ensure that target_column exists as numeric data.
+3,75,target,if target_column in dataframe.columns:
+3,77,target,dataframe[target_column] = pd.to_numeric(
+3,78,target,"dataframe[target_column],"
+3,88,target,dataframe[target_column] = pd.to_numeric(
+3,94,target,"f""Restored {target_column!r} from """
+3,100,target,dataframe[target_column] = pd.Series(
+3,107,target,"f""Created unavailable feature {target_column!r} """
+3,367,selected_move,"""selected_move"","
+3,717,selected_move,"""selected_move"""
+4,76,selected_move,"""normalized_selected_move"""
+4,78,selected_move,"""selected_move"""
+4,193,selected_move,existing_selected_move = row[
+4,194,selected_move,"""selected_move"""
+4,241,selected_move,existing_selected_move
+4,309,selected_move,"""normalized_selected_move"""
+4,550,selected_move,"""normalized_selected_move"""
+5,41,selected_move,"""selected_move"","
+5,431,target,legality_target_columns = [
+5,432,selected_move,"""selected_move"","
+5,449,selected_move,"""selected_move"","
+5,470,target,legality_target_series = (
+5,735,target,# 15. Target distribution
+5,738,target,legality_target_distribution_df = (
+5,739,target,legality_target_series
+5,744,target,"""target_move"""
+5,751,target,legality_target_distribution_df[
+5,754,target,legality_target_distribution_df[
+5,758,target,legality_target_series
+5,764,target,"print(""ROUTED TARGET DISTRIBUTION"")"
+5,768,target,legality_target_distribution_df
+5,781,target,legality_target_series
+5,792,target,assert legality_target_series.notna().all()
+5,794,target,assert legality_target_series.astype(str).str.len().gt(
+5,829,target,legality_target_series.unique()
+5,880,target,SECTION3B_TARGETS_FILE = (
+5,882,target,"/ ""section3b_legality_aware_targets.csv"""
+5,910,target,SECTION3B_TARGET_DISTRIBUTION_FILE = (
+5,912,target,"/ ""section3b_target_distribution.csv"""
+5,931,target,legality_target_series.to_frame(
+5,934,target,"SECTION3B_TARGETS_FILE,"
+5,978,target,legality_target_distribution_df.to_csv(
+5,979,target,"SECTION3B_TARGET_DISTRIBUTION_FILE,"
+5,1004,target,"""target_column"":"
+5,1129,target,"""target_class_count"":"
+5,1131,target,legality_target_series.nunique()
+5,1137,dataset,"""ready_for_dataset_rebuild"":"
+5,1141,dataset,"""LEGALITY_AWARE_DATASET_REBUILD"","
+5,1161,target,"SECTION3B_TARGETS_FILE,"
+5,1167,target,"SECTION3B_TARGET_DISTRIBUTION_FILE,"
+6,2,dataset,# SECTION 4A — SOURCE DATASET DISCOVERY AND REBUILD READINESS
+6,6,dataset,"print(""SECTION 4A — SOURCE DATASET DISCOVERY AND REBUILD READINESS"")"
+6,31,dataset,# 2. Candidate upstream policy-dataset files
+6,34,dataset,candidate_policy_dataset_files = [
+6,38,dataset,"/ ""policy_dataset"""
+6,39,dataset,"/ ""section8c_expert_policy_dataset.csv"""
+6,44,dataset,"/ ""section8c_expert_policy_dataset.csv"""
+6,49,dataset,"/ ""section2c_policy_dataset.csv"""
+6,54,dataset,"/ ""section3a_policy_dataset.csv"""
+6,79,dataset,"""policy_dataset"","
+6,81,dataset,"""training_dataset"","
+6,90,dataset,candidate_policy_dataset_files.extend(
+6,96,dataset,candidate_policy_dataset_files = list(
+6,99,dataset,for path in candidate_policy_dataset_files
+6,110,dataset,for candidate_path in candidate_policy_dataset_files:
+6,142,dataset,"print(""CANDIDATE POLICY DATASETS"")"
+6,161,dataset,"""No upstream expert-policy dataset was found."""
+6,169,dataset,dataset_profile_rows = []
+6,192,target,target_candidates = [
+6,197,selected_move,"""selected_move"","
+6,199,target,"""target_move"","
+6,226,dataset,dataset_profile_rows.append(
+6,237,target,"""target_candidates"":"
+6,238,target,"target_candidates,"
+6,274,dataset,dataset_profile_rows.append(
+6,285,target,"""target_candidates"":"
+6,321,dataset,section4a_dataset_profiles_df = pd.DataFrame(
+6,322,dataset,dataset_profile_rows
+6,327,dataset,"print(""DATASET PROFILES"")"
+6,331,dataset,section4a_dataset_profiles_df
+6,339,dataset,section4a_dataset_profiles_df[
+6,342,dataset,section4a_dataset_profiles_df[
+6,346,dataset,section4a_dataset_profiles_df[
+6,347,target,"""target_candidates"""
+6,354,dataset,section4a_dataset_profiles_df[
+6,362,dataset,section4a_dataset_profiles_df[
+6,370,dataset,section4a_dataset_profiles_df[
+6,374,dataset,section4a_dataset_profiles_df[
+6,378,dataset,section4a_dataset_profiles_df[
+6,382,dataset,section4a_dataset_profiles_df[
+6,387,dataset,section4a_dataset_profiles_df[
+6,394,dataset,section4a_dataset_profiles_df = (
+6,395,dataset,section4a_dataset_profiles_df
+6,413,dataset,"print(""RANKED DATASET CANDIDATES"")"
+6,417,dataset,section4a_dataset_profiles_df
+6,422,dataset,# 6. Select the strongest source dataset
+6,425,dataset,selected_dataset_profile = (
+6,426,dataset,section4a_dataset_profiles_df.iloc[0]
+6,429,dataset,SOURCE_POLICY_DATASET_FILE = Path(
+6,430,dataset,selected_dataset_profile[
+6,435,dataset,source_policy_dataset_df = (
+6,438,dataset,SOURCE_POLICY_DATASET_FILE
+6,444,target,selected_target_candidates = list(
+6,445,dataset,selected_dataset_profile[
+6,446,target,"""target_candidates"""
+6,451,dataset,selected_dataset_profile[
+6,457,dataset,selected_dataset_profile[
+6,463,target,"assert selected_target_candidates, ("
+6,464,dataset | target,"""The selected source dataset has no recognizable target column."""
+6,468,target,SOURCE_TARGET_COLUMN = (
+6,469,target,selected_target_candidates[0]
+6,486,dataset,# 7. Source dataset schema
+6,497,dataset,source_policy_dataset_df[
+6,504,dataset,source_policy_dataset_df[
+6,511,dataset,source_policy_dataset_df[
+6,519,dataset,source_policy_dataset_df.columns
+6,526,dataset,"print(""SELECTED SOURCE DATASET"")"
+6,531,dataset,"f""{SOURCE_POLICY_DATASET_FILE}"""
+6,536,dataset,"f""{len(source_policy_dataset_df)}"""
+6,541,dataset,"f""{len(source_policy_dataset_df.columns)}"""
+6,545,target,"f""Target column            : """
+6,546,target,"f""{SOURCE_TARGET_COLUMN}"""
+6,574,dataset,source_policy_dataset_df.head(
+6,595,dataset,column_name in source_policy_dataset_df.columns
+6,604,dataset,in source_policy_dataset_df.columns
+6,607,dataset,in source_policy_dataset_df.columns
+6,612,dataset,in source_policy_dataset_df.columns
+6,651,dataset,"if ""scenario_id"" in source_policy_dataset_df.columns:"
+6,654,dataset,source_policy_dataset_df[
+6,678,dataset,source_policy_dataset_df
+6,741,dataset,assert SOURCE_POLICY_DATASET_FILE.exists()
+6,743,dataset,assert SOURCE_POLICY_DATASET_FILE.is_file()
+6,746,dataset,source_policy_dataset_df
+6,750,dataset,source_policy_dataset_df.columns
+6,753,target,assert SOURCE_TARGET_COLUMN in (
+6,754,dataset,source_policy_dataset_df.columns
+6,757,dataset,assert source_policy_dataset_df[
+6,758,target,SOURCE_TARGET_COLUMN
+6,785,dataset,"/ ""section4a_candidate_dataset_inventory.csv"""
+6,788,dataset,SECTION4A_DATASET_PROFILES_FILE = (
+6,790,dataset,"/ ""section4a_dataset_profiles.csv"""
+6,795,dataset,"/ ""section4a_selected_dataset_columns.csv"""
+6,805,dataset,"/ ""section4a_dataset_discovery_summary.json"""
+6,814,dataset,section4a_dataset_profiles_df.to_csv(
+6,815,dataset,"SECTION4A_DATASET_PROFILES_FILE,"
+6,832,dataset,"""SOURCE_POLICY_DATASET_DISCOVERED"","
+6,834,dataset,"""source_dataset_file"":"
+6,836,dataset,SOURCE_POLICY_DATASET_FILE
+6,842,dataset,source_policy_dataset_df
+6,849,dataset,source_policy_dataset_df.columns
+6,853,target,"""target_column"":"
+6,854,target,"SOURCE_TARGET_COLUMN,"
+6,895,dataset,"""FULL_LEGALITY_AWARE_DATASET_REBUILD"""
+6,918,dataset,"SECTION4A_DATASET_PROFILES_FILE,"
+6,959,dataset,"""✅ SECTION 4A SOURCE DATASET DISCOVERY PASSED"""
+7,2,dataset,# SECTION 4B — FULL LEGALITY-AWARE DATASET REBUILD
+7,6,dataset,"print(""SECTION 4B — FULL LEGALITY-AWARE DATASET REBUILD"")"
+7,11,dataset,# 1. Copy the validated Notebook 49 expert-policy dataset
+7,14,y_train,legality_training_source_df = (
+7,15,dataset,source_policy_dataset_df.copy()
+7,20,y_train,legality_training_source_df
+7,23,target,"assert SOURCE_TARGET_COLUMN == ""expert_move"""
+7,218,y_train,if column_name not in legality_training_source_df.columns
+7,222,dataset,"""The expert dataset is missing required columns: """
+7,241,y_train,legality_training_source_df[
+7,244,y_train,legality_training_source_df[
+7,261,y_train,legality_training_source_df[
+7,264,y_train,legality_training_source_df[
+7,279,y_train,legality_training_source_df[
+7,281,y_train,] = legality_training_source_df[
+7,287,y_train,legality_training_source_df[
+7,289,y_train,] = legality_training_source_df[
+7,300,y_train,legality_training_source_df[
+7,302,y_train,] = legality_training_source_df[
+7,308,y_train,legality_training_source_df[
+7,310,y_train,] = legality_training_source_df[
+7,316,y_train,legality_training_source_df[
+7,318,y_train,] = legality_training_source_df[
+7,319,target,SOURCE_TARGET_COLUMN
+7,324,y_train,legality_training_source_df[
+7,326,y_train,] = legality_training_source_df.apply(
+7,344,y_train,legality_training_source_df[
+7,356,y_train,legality_training_source_df[
+7,360,y_train,legality_training_source_df[
+7,363,y_train,legality_training_source_df[
+7,368,y_train,legality_training_source_df[
+7,372,y_train,legality_training_source_df[
+7,375,y_train,legality_training_source_df[
+7,380,y_train,legality_training_source_df[
+7,384,y_train,legality_training_source_df[
+7,387,y_train,legality_training_source_df[
+7,392,y_train,legality_training_source_df[
+7,396,y_train,legality_training_source_df[
+7,399,y_train,legality_training_source_df[
+7,404,y_train,legality_training_source_df[
+7,408,y_train,legality_training_source_df[
+7,411,y_train,legality_training_source_df[
+7,416,y_train,legality_training_source_df[
+7,420,y_train,legality_training_source_df[
+7,423,y_train,legality_training_source_df[
+7,433,y_train,legality_training_source_df[
+7,436,y_train,legality_training_source_df[
+7,439,y_train,- legality_training_source_df[
+7,444,y_train,legality_training_source_df[
+7,446,y_train,] = legality_training_source_df[
+7,450,y_train,legality_training_source_df[
+7,453,y_train,legality_training_source_df[
+7,456,y_train,- legality_training_source_df[
+7,461,y_train,legality_training_source_df[
+7,463,y_train,] = legality_training_source_df[
+7,467,y_train,legality_training_source_df[
+7,470,y_train,legality_training_source_df[
+7,479,y_train,legality_training_source_df[
+7,482,y_train,legality_training_source_df[
+7,491,y_train,legality_training_source_df[
+7,493,y_train,] = legality_training_source_df[
+7,497,y_train,legality_training_source_df[
+7,499,y_train,] = legality_training_source_df[
+7,505,y_train,legality_training_source_df[
+7,507,y_train,] = legality_training_source_df[
+7,513,y_train,legality_training_source_df[
+7,515,y_train,] = legality_training_source_df[
+7,541,y_train,legality_training_source_df[
+7,543,y_train,] = legality_training_source_df[
+7,557,y_train,legality_training_source_df[
+7,559,y_train,] = legality_training_source_df[
+7,573,y_train,legality_training_source_df.groupby(
+7,613,y_train,legality_training_source_df[
+7,615,y_train,] = legality_training_source_df[
+7,639,target,"# - value_target,"
+7,647,legality_training_numeric_features | y_train,legality_training_numeric_features = [
+7,669,legality_training_numeric_features | y_train,legality_training_numeric_features += (
+7,673,legality_training_numeric_features | y_train,legality_training_numeric_features += (
+7,678,legality_training_categorical_features | y_train,legality_training_categorical_features = [
+7,692,y_train,legality_training_metadata_columns = [
+7,712,legality_training_numeric_features | y_train,for column_name in legality_training_numeric_features:
+7,714,y_train,legality_training_source_df[
+7,717,y_train,legality_training_source_df[
+7,728,legality_training_categorical_features | y_train,for column_name in legality_training_categorical_features:
+7,730,y_train,legality_training_source_df[
+7,733,y_train,legality_training_source_df[
+7,738,y_train,legality_training_source_df[
+7,760,y_train,legality_training_features_df = (
+7,761,y_train,legality_training_source_df[
+7,762,legality_training_numeric_features | y_train,legality_training_numeric_features
+7,763,legality_training_categorical_features | y_train,+ legality_training_categorical_features
+7,768,y_train | target,legality_training_target_series = (
+7,769,y_train,legality_training_source_df[
+7,770,target,SOURCE_TARGET_COLUMN
+7,776,y_train,legality_training_weight_series = (
+7,778,y_train,legality_training_source_df[
+7,792,y_train,legality_training_metadata_df = (
+7,793,y_train,legality_training_source_df[
+7,796,y_train,for column_name in legality_training_metadata_columns
+7,797,y_train,if column_name in legality_training_source_df.columns
+7,805,dataset,# 12. Dataset profile
+7,808,y_train | target,legality_training_target_distribution_df = (
+7,809,y_train,legality_training_source_df
+7,811,target,"SOURCE_TARGET_COLUMN,"
+7,842,y_train | target,legality_training_target_distribution_df[
+7,845,y_train | target,legality_training_target_distribution_df[
+7,849,y_train,legality_training_source_df
+7,855,target,"print(""LEGALITY-AWARE TARGET DISTRIBUTION"")"
+7,859,y_train | target,legality_training_target_distribution_df
+7,867,y_train,legality_training_signature_summary_df = (
+7,868,y_train,legality_training_source_df
+7,895,target,"SOURCE_TARGET_COLUMN,"
+7,920,y_train,legality_training_signature_summary_df
+7,928,y_train,legality_training_active_card_summary_df = (
+7,929,y_train,legality_training_source_df
+7,946,target,"SOURCE_TARGET_COLUMN,"
+7,975,y_train,legality_training_active_card_summary_df
+7,985,legality_training_numeric_features | y_train,for feature_name in legality_training_numeric_features:
+7,997,y_train,legality_training_features_df[
+7,1004,y_train,legality_training_features_df[
+7,1011,y_train,legality_training_features_df[
+7,1021,legality_training_categorical_features | y_train,for feature_name in legality_training_categorical_features:
+7,1033,y_train,legality_training_features_df[
+7,1040,y_train,legality_training_features_df[
+7,1047,y_train,legality_training_features_df[
+7,1076,y_train,legality_training_source_df
+7,1080,y_train,legality_training_features_df
+7,1084,y_train | target,legality_training_target_series
+7,1088,y_train,legality_training_weight_series
+7,1091,y_train,assert legality_training_features_df.columns.is_unique
+7,1093,y_train,assert not legality_training_features_df.isna().any().any()
+7,1095,y_train | target,assert legality_training_target_series.notna().all()
+7,1097,y_train,assert legality_training_weight_series.gt(
+7,1101,y_train,assert legality_training_source_df[
+7,1104,y_train,legality_training_source_df[
+7,1109,y_train,assert legality_training_source_df[
+7,1112,y_train,legality_training_source_df[
+7,1117,y_train,assert legality_training_source_df[
+7,1120,target,"""At least one expert target is not present in its legal-action set."""
+7,1123,y_train,assert legality_training_source_df[
+7,1130,y_train | target,legality_training_target_series.unique()
+7,1139,y_train,in legality_training_features_df.columns
+7,1145,y_train,in legality_training_features_df.columns
+7,1150,legality_training_numeric_features | y_train,legality_training_numeric_features
+7,1154,legality_training_categorical_features | y_train,legality_training_categorical_features
+7,1158,y_train,legality_training_features_df.columns
+7,1172,dataset,# 17. Save rebuilt dataset artifacts
+7,1175,dataset,SECTION4B_REBUILT_FULL_DATASET_FILE = (
+7,1177,dataset,"/ ""section4b_legality_aware_full_dataset.csv"""
+7,1185,target,SECTION4B_TRAINING_TARGETS_FILE = (
+7,1187,target,"/ ""section4b_legality_aware_training_targets.csv"""
+7,1205,target,SECTION4B_TARGET_DISTRIBUTION_FILE = (
+7,1207,target,"/ ""section4b_legality_aware_target_distribution.csv"""
+7,1227,dataset,"/ ""section4b_legality_aware_dataset_summary.json"""
+7,1231,y_train,legality_training_export_df = (
+7,1232,y_train,legality_training_source_df.copy()
+7,1240,y_train,legality_training_export_df[
+7,1242,y_train,] = legality_training_export_df[
+7,1252,y_train,legality_training_export_df.to_csv(
+7,1253,dataset,"SECTION4B_REBUILT_FULL_DATASET_FILE,"
+7,1257,y_train,legality_training_features_df.to_csv(
+7,1262,y_train | target,legality_training_target_series.to_frame(
+7,1265,target,"SECTION4B_TRAINING_TARGETS_FILE,"
+7,1269,y_train,legality_training_weight_series.to_frame(
+7,1276,y_train,legality_training_metadata_df.to_csv(
+7,1286,y_train | target,legality_training_target_distribution_df.to_csv(
+7,1287,target,"SECTION4B_TARGET_DISTRIBUTION_FILE,"
+7,1291,y_train,legality_training_signature_summary_df.to_csv(
+7,1296,y_train,legality_training_active_card_summary_df.to_csv(
+7,1309,dataset,"""source_dataset"":"
+7,1311,dataset,SOURCE_POLICY_DATASET_FILE
+7,1317,y_train,legality_training_features_df
+7,1322,legality_training_numeric_features | y_train,"legality_training_numeric_features,"
+7,1325,legality_training_categorical_features | y_train,"legality_training_categorical_features,"
+7,1330,y_train,legality_training_features_df.columns
+7,1334,target,"""target_column"":"
+7,1335,target,"SOURCE_TARGET_COLUMN,"
+7,1379,y_train,legality_training_source_df[
+7,1385,y_train,legality_training_source_df[
+7,1393,dataset,"""LEGALITY_AWARE_DATASET_REBUILT"","
+7,1398,dataset,source_policy_dataset_df
+7,1405,y_train,legality_training_features_df
+7,1412,legality_training_numeric_features | y_train,legality_training_numeric_features
+7,1419,legality_training_categorical_features | y_train,legality_training_categorical_features
+7,1426,y_train,legality_training_features_df.columns
+7,1450,target,"""target_class_count"":"
+7,1452,y_train | target,legality_training_target_series.nunique()
+7,1455,target,"""expert_targets_legal"":"
+7,1457,y_train,legality_training_source_df[
+7,1464,y_train,legality_training_features_df
+7,1503,dataset,"SECTION4B_REBUILT_FULL_DATASET_FILE,"
+7,1505,target,"SECTION4B_TRAINING_TARGETS_FILE,"
+7,1509,target,"SECTION4B_TARGET_DISTRIBUTION_FILE,"
+7,1551,dataset,"""✅ SECTION 4B FULL LEGALITY-AWARE DATASET REBUILD PASSED"""
+8,53,y_train,legality_training_source_df[
+8,83,y_train,"legality_training_features_df,"
+8,84,y_train | target,"legality_training_target_series,"
+8,95,y_train,legality_training_features_df.iloc[
+8,100,target,holdout_target_series = (
+8,101,y_train | target,legality_training_target_series.iloc[
+8,132,target,"holdout_target_series,"
+8,151,X_train,X_train = (
+8,152,y_train,legality_training_features_df.iloc[
+8,161,y_train,legality_training_features_df.iloc[
+8,169,X_test,X_test = (
+8,170,y_train,legality_training_features_df.iloc[
+8,179,y_train,y_train = (
+8,180,y_train | target,legality_training_target_series.iloc[
+8,189,y_train | target,legality_training_target_series.iloc[
+8,197,y_test,y_test = (
+8,198,y_train | target,legality_training_target_series.iloc[
+8,208,y_train,legality_training_weight_series.iloc[
+8,217,y_train,legality_training_weight_series.iloc[
+8,226,y_train,legality_training_weight_series.iloc[
+8,236,y_train,legality_training_metadata_df.iloc[
+8,245,y_train,legality_training_metadata_df.iloc[
+8,254,y_train,legality_training_metadata_df.iloc[
+8,339,y_train,legality_training_source_df
+8,347,y_train | target,"legality_training_target_series,"
+8,350,y_train,legality_training_source_df[
+8,355,y_train,"legality_training_weight_series,"
+8,391,X_train,X_train
+8,401,X_train,X_train
+8,404,y_train,legality_training_features_df
+8,407,target,"""target_classes"":"
+8,408,y_train,"y_train.nunique(),"
+8,411,X_train,X_train[
+8,440,y_train,legality_training_features_df
+8,443,target,"""target_classes"":"
+8,463,X_test,X_test
+8,473,X_test,X_test
+8,476,y_train,legality_training_features_df
+8,479,target,"""target_classes"":"
+8,480,y_test,"y_test.nunique(),"
+8,483,X_test,X_test[
+8,507,target,# 11. Target distribution by split
+8,510,target,target_split_summary_df = (
+8,538,target,target_split_summary_df[
+8,541,target,target_split_summary_df[
+8,544,target,/ target_split_summary_df.groupby(
+8,555,target,"print(""TARGET DISTRIBUTION BY SPLIT"")"
+8,559,target,target_split_summary_df
+8,736,X_train,X_train
+8,742,X_test,X_test
+8,748,X_train,X_train
+8,754,X_test,X_test
+8,824,y_train,y_train.unique()
+8,830,y_train,y_train.unique().tolist()
+8,838,target,"""validation_targets_known"","
+8,843,y_train,y_train.unique()
+8,849,target,"""Subset of training targets"","
+8,853,target,"""test_targets_known"","
+8,855,y_test,y_test.unique()
+8,858,y_train,y_train.unique()
+8,862,y_test,y_test.unique().tolist()
+8,864,target,"""Subset of training targets"","
+8,875,X_train,X_train[
+8,891,X_test,X_test[
+8,896,X_train,X_train[
+8,902,X_test,X_test[
+8,913,X_train,X_train.columns
+8,919,X_test,X_test.columns
+8,923,X_train,X_train.columns
+8,930,X_train,"not X_train.isna().any().any(),"
+8,932,X_train,X_train.isna().sum().sum()
+8,948,X_test,"not X_test.isna().any().any(),"
+8,950,X_test,X_test.isna().sum().sum()
+8,1028,X_train,X_train
+8,1032,X_test,X_test
+8,1050,target,SECTION5A_TARGET_SUMMARY_FILE = (
+8,1052,target,"/ ""section5a_target_distribution_by_split.csv"""
+8,1085,target,SECTION5A_TRAIN_TARGETS_FILE = (
+8,1087,target,"/ ""section5a_train_targets.csv"""
+8,1090,target,SECTION5A_VALIDATION_TARGETS_FILE = (
+8,1092,target,"/ ""section5a_validation_targets.csv"""
+8,1095,target,SECTION5A_TEST_TARGETS_FILE = (
+8,1097,target,"/ ""section5a_test_targets.csv"""
+8,1135,target,target_split_summary_df.to_csv(
+8,1136,target,"SECTION5A_TARGET_SUMMARY_FILE,"
+8,1171,X_train,X_train.to_csv(
+8,1181,X_test,X_test.to_csv(
+8,1186,y_train,y_train.to_frame(
+8,1189,target,"SECTION5A_TRAIN_TARGETS_FILE,"
+8,1196,target,"SECTION5A_VALIDATION_TARGETS_FILE,"
+8,1200,y_test,y_test.to_frame(
+8,1203,target,"SECTION5A_TEST_TARGETS_FILE,"
+8,1257,X_train,X_train
+8,1285,X_test,X_test
+8,1298,X_train,X_train.shape[1]
+8,1301,target,"""training_target_classes"":"
+8,1303,y_train,y_train.nunique()
+8,1308,X_train,X_train[
+8,1360,target,"SECTION5A_TARGET_SUMMARY_FILE,"
+8,1367,target,"SECTION5A_TRAIN_TARGETS_FILE,"
+8,1368,target,"SECTION5A_VALIDATION_TARGETS_FILE,"
+8,1369,target,"SECTION5A_TEST_TARGETS_FILE,"
+9,37,X_train,X_train
+9,45,X_test,X_test
+9,49,X_train,X_train.columns
+9,53,X_test,X_test.columns
+9,61,PREPROCESS_NUMERIC_FEATURES,PREPROCESS_NUMERIC_FEATURES = list(
+9,62,legality_training_numeric_features | y_train,legality_training_numeric_features
+9,65,PREPROCESS_CATEGORICAL_FEATURES,PREPROCESS_CATEGORICAL_FEATURES = list(
+9,66,legality_training_categorical_features | y_train,legality_training_categorical_features
+9,69,PREPROCESS_RAW_FEATURES,PREPROCESS_RAW_FEATURES = (
+9,70,PREPROCESS_NUMERIC_FEATURES,PREPROCESS_NUMERIC_FEATURES
+9,71,PREPROCESS_CATEGORICAL_FEATURES,+ PREPROCESS_CATEGORICAL_FEATURES
+9,76,PREPROCESS_NUMERIC_FEATURES,PREPROCESS_NUMERIC_FEATURES
+9,80,PREPROCESS_CATEGORICAL_FEATURES,PREPROCESS_CATEGORICAL_FEATURES
+9,84,PREPROCESS_RAW_FEATURES,PREPROCESS_RAW_FEATURES
+9,87,PREPROCESS_RAW_FEATURES,assert PREPROCESS_RAW_FEATURES == list(
+9,88,X_train,X_train.columns
+9,98,PREPROCESS_NUMERIC_FEATURES,"f""{len(PREPROCESS_NUMERIC_FEATURES)}"""
+9,103,PREPROCESS_CATEGORICAL_FEATURES,"f""{len(PREPROCESS_CATEGORICAL_FEATURES)}"""
+9,108,PREPROCESS_RAW_FEATURES,"f""{len(PREPROCESS_RAW_FEATURES)}"""
+9,177,PREPROCESS_NUMERIC_FEATURES,"PREPROCESS_NUMERIC_FEATURES,"
+9,182,PREPROCESS_CATEGORICAL_FEATURES,"PREPROCESS_CATEGORICAL_FEATURES,"
+9,195,X_train,X_train_encoded = legality_preprocessor.fit_transform(
+9,196,X_train,X_train
+9,203,X_test,X_test_encoded = legality_preprocessor.transform(
+9,204,X_test,X_test
+9,208,X_train,X_train_encoded = np.asarray(
+9,209,X_train,"X_train_encoded,"
+9,218,X_test,X_test_encoded = np.asarray(
+9,219,X_test,"X_test_encoded,"
+9,235,X_train,assert X_train_encoded.shape[1] == ENCODED_FEATURE_COUNT
+9,239,X_test,assert X_test_encoded.shape[1] == ENCODED_FEATURE_COUNT
+9,246,X_train,X_train_encoded_df = pd.DataFrame(
+9,247,X_train,"X_train_encoded,"
+9,256,X_test,X_test_encoded_df = pd.DataFrame(
+9,257,X_test,"X_test_encoded,"
+9,268,X_train,"f""{X_train_encoded_df.shape}"""
+9,278,X_test,"f""{X_test_encoded_df.shape}"""
+9,326,X_train,X_train_encoded_df[
+9,333,X_train,X_train_encoded_df[
+9,340,X_train,X_train_encoded_df[
+9,347,X_train,X_train_encoded_df[
+9,365,X_test,X_test_encoded_df[
+9,454,PREPROCESS_CATEGORICAL_FEATURES,"PREPROCESS_CATEGORICAL_FEATURES,"
+9,502,PREPROCESS_CATEGORICAL_FEATURES,"PREPROCESS_CATEGORICAL_FEATURES,"
+9,515,X_test,"X_test,"
+9,519,PREPROCESS_CATEGORICAL_FEATURES,for feature_name in PREPROCESS_CATEGORICAL_FEATURES:
+9,579,X_train,"X_train_encoded_df,"
+9,587,X_test,"X_test_encoded_df,"
+9,715,X_train,X_train_encoded_df
+9,717,X_train,X_train
+9,720,X_train,X_train_encoded_df
+9,723,X_train,X_train
+9,745,X_test,X_test_encoded_df
+9,747,X_test,X_test
+9,750,X_test,X_test_encoded_df
+9,753,X_test,X_test
+9,760,X_train,X_train_encoded_df.shape[1]
+9,762,X_test,== X_test_encoded_df.shape[1]
+9,766,X_train,"X_train_encoded_df.shape[1],"
+9,772,X_test,"X_test_encoded_df.shape[1],"
+9,800,X_train,X_train_encoded
+9,805,X_train,X_train_encoded
+9,809,X_train,X_train_encoded.size
+9,834,X_test,X_test_encoded
+9,839,X_test,X_test_encoded
+9,843,X_test,X_test_encoded.size
+9,849,X_train,"not X_train_encoded_df.isna().any().any(),"
+9,851,X_train,X_train_encoded_df
+9,873,X_test,"not X_test_encoded_df.isna().any().any(),"
+9,875,X_test,X_test_encoded_df
+9,918,PREPROCESS_RAW_FEATURES,PREPROCESS_RAW_FEATURES
+9,921,PREPROCESS_RAW_FEATURES,PREPROCESS_RAW_FEATURES
+9,973,X_train,assert X_train_encoded_df.shape[0] == 840
+9,977,X_test,assert X_test_encoded_df.shape[0] == 110
+9,979,X_train,assert X_train_encoded_df.shape[1] > 41
+9,982,X_train,X_train_encoded
+9,990,X_test,X_test_encoded
+9,1092,PREPROCESS_NUMERIC_FEATURES,"PREPROCESS_NUMERIC_FEATURES,"
+9,1095,PREPROCESS_CATEGORICAL_FEATURES,"PREPROCESS_CATEGORICAL_FEATURES,"
+9,1098,PREPROCESS_RAW_FEATURES,"PREPROCESS_RAW_FEATURES,"
+9,1102,PREPROCESS_RAW_FEATURES,PREPROCESS_RAW_FEATURES
+9,1113,X_train,X_train
+9,1123,X_test,X_test
+9,1148,X_train,X_train_encoded_df.to_csv(
+9,1158,X_test,X_test_encoded_df.to_csv(
+9,1248,PREPROCESS_RAW_FEATURES,PREPROCESS_RAW_FEATURES
+9,1255,PREPROCESS_NUMERIC_FEATURES,PREPROCESS_NUMERIC_FEATURES
+9,1262,PREPROCESS_CATEGORICAL_FEATURES,PREPROCESS_CATEGORICAL_FEATURES
+9,1273,X_train,X_train_encoded_df.shape[0]
+9,1283,X_test,X_test_encoded_df.shape[0]
+9,1289,X_train,X_train_encoded
+9,1303,X_test,X_test_encoded
+10,14,RandomForestClassifier,from sklearn.ensemble import RandomForestClassifier
+10,55,X_train,assert X_train_encoded_df.shape == (
+10,65,X_test,assert X_test_encoded_df.shape == (
+10,89,RandomForestClassifier,legality_aware_policy_model = RandomForestClassifier(
+10,109,fit(,legality_aware_policy_model.fit(
+10,110,X_train,"X_train_encoded,"
+10,111,y_train,"y_train,"
+10,146,X_train,"f""{len(X_train_encoded_df)}"""
+10,151,X_train,"f""{X_train_encoded_df.shape[1]}"""
+10,170,X_train,X_train_encoded
+10,178,X_test,X_test_encoded
+10,182,predict_proba,train_probabilities = legality_aware_policy_model.predict_proba(
+10,183,X_train,X_train_encoded
+10,186,predict_proba,validation_probabilities = legality_aware_policy_model.predict_proba(
+10,190,predict_proba,test_probabilities = legality_aware_policy_model.predict_proba(
+10,191,X_test,X_test_encoded
+10,339,X_train,"X_train,"
+10,349,X_test,"X_test,"
+10,452,y_train,"y_train,"
+10,468,y_test,"y_test,"
+10,530,y_test,"y_test,"
+10,565,y_test,"y_test,"
+10,752,X_train,"X_train,"
+10,753,y_train,"y_train,"
+10,766,X_test,"X_test,"
+10,767,y_test,"y_test,"
+10,924,X_train,"X_train,"
+10,925,y_train,"y_train,"
+10,944,X_test,"X_test,"
+10,945,y_test,"y_test,"
+10,998,y_test,"y_test,"
+10,1438,y_train,"y_train,"
+10,1460,y_test,"y_test,"
+11,510,legality_training_numeric_features | y_train,for column_name in legality_training_numeric_features:
+11,524,legality_training_categorical_features | y_train,for column_name in legality_training_categorical_features:
+11,534,legality_training_numeric_features | y_train,legality_training_numeric_features
+11,535,legality_training_categorical_features | y_train,+ legality_training_categorical_features
+11,543,PREPROCESS_RAW_FEATURES,) == PREPROCESS_RAW_FEATURES
+11,588,predict_proba,legality_aware_policy_model.predict_proba(
+11,680,selected_move,"""selected_move"""
+11,765,selected_move,"""notebook52_selected_move"":"
+11,767,selected_move,"""selected_move"""
+11,827,selected_move,"""selected_move"""
+11,858,selected_move,"""notebook52_selected_move"""
+11,958,selected_move,"""selected_move_agreement_rate"","
+12,488,legality_training_numeric_features | y_train,legality_training_numeric_features
+12,505,legality_training_categorical_features | y_train,legality_training_categorical_features
+12,521,PREPROCESS_RAW_FEATURES,PREPROCESS_RAW_FEATURES
+12,680,selected_move,selected_move = legal_moves[0]
+12,683,selected_move,selected_move
+12,706,predict_proba,self.model.predict_proba(
+12,742,selected_move,selected_move = (
+12,792,selected_move,selected_move = (
+12,806,selected_move,selected_move = legal_moves[0]
+12,816,selected_move,selected_move_name = extract_move_name(
+12,817,selected_move,selected_move
+12,856,selected_move,"""selected_move"":"
+12,857,selected_move,"selected_move_name,"
+12,868,selected_move,"""selected_move_legal"":"
+12,870,selected_move,selected_move_name
+12,881,selected_move,"selected_move,"
+12,884,selected_move,"selected_move_name,"
+12,898,selected_move,"""selected_move_legal"":"
+12,1020,PREPROCESS_RAW_FEATURES,"f""{len(PREPROCESS_RAW_FEATURES)}"""
+12,1091,selected_move,"""selected_move"""
+12,1103,selected_move,"""selected_move"":"
+12,1111,selected_move,"""selected_move_legal"":"
+12,1113,selected_move,"""selected_move_legal"""
+12,1162,selected_move,"""selected_move_legal"","
+12,1212,selected_move,"""selected_move_legal"""
+12,1361,selected_move,"""selected_move_legal"""
+12,1399,selected_move,"""selected_move_legal"""
+13,461,selected_move,selected_move = detailed_decision[
+13,465,selected_move,selected_move_name = detailed_decision[
+13,484,selected_move,"move=selected_move,"
+13,489,selected_move,selected_move_name
+13,524,selected_move,"""selected_move"":"
+13,525,selected_move,"selected_move_name,"
+13,815,selected_move,"""selected_move"":"
+13,1059,selected_move,"""selected_move"":"
+13,1064,selected_move,"""selected_move_legal"":"
+16,119,dataset,"""SOURCE_POLICY_DATASET_DISCOVERED"","
+16,122,dataset,"""LEGALITY_AWARE_DATASET_REBUILT"","
+16,214,dataset,"""dataset_summary"":"
+16,445,dataset,"""source_dataset_row_count_valid"","
+16,884,dataset,"""source_dataset_rows"","
+16,1129,target,# 7. Optimization targets for Notebook 54
+16,1132,target,section7a_optimization_targets_df = pd.DataFrame(
+16,1138,target,"""optimization_target"":"
+16,1151,target,"""optimization_target"":"
+16,1158,target,"""Train targeted HP-pressure curriculum and value estimates"","
+16,1164,target,"""optimization_target"":"
+16,1177,target,"""optimization_target"":"
+16,1190,target,"""optimization_target"":"
+16,1204,target,"print(""NOTEBOOK 54 OPTIMIZATION TARGETS"")"
+16,1208,target,section7a_optimization_targets_df
+16,1245,dataset,"""source_dataset_rows"":"
+16,1495,target,"""primary_optimization_target"":"
+16,1533,target,SECTION7A_OPTIMIZATION_TARGETS_FILE = (
+16,1535,target,"/ ""section7a_notebook54_optimization_targets.csv"""
+16,1569,target,section7a_optimization_targets_df.to_csv(
+16,1570,target,"SECTION7A_OPTIMIZATION_TARGETS_FILE,"
+16,1598,dataset,"""source_dataset_rows"":"
+16,1600,dataset,"""source_dataset_rows"""
+16,1704,target,"SECTION7A_OPTIMIZATION_TARGETS_FILE,"
+16,1730,dataset,"f""Source dataset rows              : """
+16,1731,dataset,"f""{notebook53_handoff_manifest['source_dataset_rows']}"""
+16,1825,target,"f""Primary optimization target      : """
+16,1826,target,"f""{notebook53_handoff_manifest['primary_optimization_target']}"""

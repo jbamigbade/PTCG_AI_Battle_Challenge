@@ -1,0 +1,19 @@
+split,expert_move,examples,total_sample_weight,scenarios,split_fraction
+Test,Ascension,44,71.874,11,0.4
+Test,Bind Down,16,15.84,8,0.14545454545454545
+Test,Live Coal,4,3.96,2,0.03636363636363636
+Test,Pass,12,18.9585,11,0.10909090909090909
+Test,Quick Attack,33,61.990500000000004,11,0.3
+Test,Tuck Tail,1,0.99,1,0.00909090909090909
+Training,Ascension,336,516.67,84,0.4
+Training,Bind Down,66,65.34,33,0.07857142857142857
+Training,Live Coal,70,82.467,35,0.08333333333333333
+Training,Pass,100,145.0075,84,0.11904761904761904
+Training,Quick Attack,252,445.623,84,0.3
+Training,Tuck Tail,16,15.84,16,0.01904761904761905
+Validation,Ascension,44,70.17999999999999,11,0.4
+Validation,Bind Down,12,11.879999999999999,6,0.10909090909090909
+Validation,Live Coal,6,6.633,3,0.05454545454545454
+Validation,Pass,13,19.525,11,0.11818181818181818
+Validation,Quick Attack,33,60.5295,11,0.3
+Validation,Tuck Tail,2,1.98,2,0.01818181818181818

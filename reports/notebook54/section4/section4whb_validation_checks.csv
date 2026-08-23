@@ -1,0 +1,6 @@
+check,passed,value,expected
+correct_d_drive_save_directory,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4
+all_184_cases_scored,True,"{'completed': 184, 'failed': 0}","{'completed': 184, 'failed': 0}"
+probabilities_within_bounds,True,True,True
+target_move_classes_resolved,True,"{'quick_attack_index': 4, 'ascension_index': 0}",Distinct class positions
+root_cause_diagnosis_recognized,True,MODEL_SCORE_DOMINANCE_CONFIRMED_LABEL_CAUSE_NOT_PROVEN,Recognized Quick Attack root-cause diagnosis

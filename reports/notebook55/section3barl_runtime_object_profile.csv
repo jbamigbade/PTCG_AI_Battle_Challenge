@@ -1,0 +1,8 @@
+object_name,available,object_type,feature_count,has_predict_proba,has_transform
+baseline_policy_model,True,RandomForestClassifier,64.0,True,False
+baseline_preprocessor,True,ColumnTransformer,41.0,False,True
+legality_aware_policy_model,True,RandomForestClassifier,64.0,True,False
+legality_preprocessor,True,ColumnTransformer,41.0,False,True
+notebook53_legality_model,False,MISSING,,False,False
+notebook53_preprocessor,False,MISSING,,False,False
+section4wh_model,False,MISSING,,False,False

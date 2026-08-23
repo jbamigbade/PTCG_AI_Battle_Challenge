@@ -1,0 +1,4 @@
+name,object_type,line_number,recovered
+encode_r3_feature_row,FUNCTION,3287,True
+R3LivePolicyEngine,CLASS,6432,True
+R3LiveBattleAgent,CLASS,7654,True

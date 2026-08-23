@@ -1,0 +1,9 @@
+card_name,official_card_id,expansion,collection_number,pdf_page_number,simulator_moves,simulator_hp_values,direct_upstream_card_id_match,upstream_id_evidence_records,matched_simulator_moves,expected_simulator_moves,full_move_profile_match,evidence_score,exact_version_confirmed
+Bulbasaur,650,MEG,1,20,"[""Bind Down"", ""Pass""]",[],False,0,0,1,False,0,False
+Charmander,788,PFL,11,24,"[""Live Coal"", ""Pass""]",[],False,0,0,1,False,0,False
+Charmander,926,ASC,20,29,"[""Live Coal"", ""Pass""]",[],False,0,0,1,False,0,False
+Eevee,249,EX,PRE,8,"[""Ascension"", ""Quick Attack""]",[],True,4,0,2,False,20,False
+Eevee,43,TWM,135,2,"[""Ascension"", ""Quick Attack""]",[],False,0,0,2,False,0,False
+Eevee,145,SFA,50,5,"[""Ascension"", ""Quick Attack""]",[],False,0,0,2,False,0,False
+Eevee,317,SSP,143,10,"[""Ascension"", ""Quick Attack""]",[],False,0,0,2,False,0,False
+Meowth,1071,EX,POR,33,"[""Tuck Tail""]",[],False,0,0,2,False,0,False

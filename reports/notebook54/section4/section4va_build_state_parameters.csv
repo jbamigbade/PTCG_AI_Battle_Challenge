@@ -1,0 +1,2 @@
+parameter_name,parameter_kind,required,default_value,annotation
+scenario_row,POSITIONAL_OR_KEYWORD,True,<REQUIRED>,pd.Series

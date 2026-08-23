@@ -1,0 +1,11 @@
+check,passed,value,expected,details
+decision_count_valid,True,210,210,
+single_action_count_valid,True,187,187,
+multi_action_count_valid,True,23,23,
+decision_outcomes_complete,True,"['DRAW', 'LOSS', 'WIN']","['DRAW', 'LOSS', 'WIN']",
+legal_move_counts_positive,True,1,> 0,
+multi_action_counts_greater_than_one,True,2,> 1,
+confidence_values_valid,True,"{'minimum': 0.858, 'maximum': 1.0}",Between 0 and 1,
+scenario_context_complete,True,0,0,
+priority_scores_finite,True,23,23,
+frozen_replay_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",

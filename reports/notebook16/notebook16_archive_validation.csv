@@ -1,0 +1,2 @@
+valid,member_count,deck_size,deck_count_method,deck_raw_rows,deck_path_used,archive_size_bytes,archive_path,kaggle_upload_ready
+True,10,60,headerless_raw_row_count,60,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission_work\team_jesus_baseline\deck.csv,1058382,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission_work\team_jesus_baseline.tar.gz,True

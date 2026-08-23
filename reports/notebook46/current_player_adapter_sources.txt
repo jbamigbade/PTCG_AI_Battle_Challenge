@@ -1,0 +1,79 @@
+ADVANCED SEARCH ENGINE __INIT__
+====================================================================================================
+    def __init__(self, generate_moves: GenerateMovesFn, apply_move: ApplyMoveFn, evaluate_state: EvaluateFn, is_terminal: IsTerminalFn, current_player: CurrentPlayerFn, move_to_string: Optional[MoveToStringFn]=None, state_key: Optional[Callable[[State], Hashable]]=None, use_transposition_table: bool=True, move_order_score: Optional[MoveOrderScoreFn]=None, use_move_ordering: bool=True, move_key: Optional[MoveKeyFn]=None, use_killer_moves: bool=True, killer_slots: int=2, use_history_heuristic: bool=True, history_multiplier: float=1000.0) -> None:
+        self.generate_moves = generate_moves
+        self.apply_move = apply_move
+        self.evaluate_state = evaluate_state
+        self.is_terminal = is_terminal
+        self.current_player = current_player
+        self.move_to_string = move_to_string or str
+        self.state_key = state_key or self._default_state_key
+        self.use_transposition_table = use_transposition_table
+        self.move_order_score = move_order_score
+        self.use_move_ordering = use_move_ordering
+        self.move_key = move_key or self._default_move_key
+        self.use_killer_moves = use_killer_moves
+        if killer_slots < 1:
+            raise ValueError('killer_slots must be at least 1.')
+        self.killer_slots = killer_slots
+        self.use_history_heuristic = use_history_heuristic
+        if history_multiplier < 0:
+            raise ValueError('history_multiplier cannot be negative.')
+        self.history_multiplier = float(history_multiplier)
+        self.stats = SearchStats()
+        self.transposition_table: Dict[Hashable, TranspositionEntry] = {}
+        self.killer_moves: Dict[int, List[Move]] = {}
+        self.history_table: Dict[Tuple[Player, Hashable], int] = {}
+        self._principal_variation: List[Move] = []
+        self._previous_iteration_pv: List[Move] = []
+
+
+CURRENT-PLAYER CANDIDATES
+====================================================================================================
+
+src.adapters.current_player_adapter
+Score: 205
+Signature: (battle_state: 'BattleState') -> 'str'
+----------------------------------------------------------------------------------------------------
+def current_player_adapter(
+    battle_state: BattleState,
+) -> str:
+    """Return the side whose turn it is."""
+
+    return battle_state.current_player
+
+
+src.adapters.get_current_legal_moves
+Score: 45
+Signature: (battle_state: 'BattleState') -> 'List[Move]'
+----------------------------------------------------------------------------------------------------
+def get_current_legal_moves(
+    battle_state: BattleState,
+) -> List[Move]:
+    """
+    Return legal moves for whichever side currently has the turn.
+
+    When no attack is available, return a Pass action so the search
+    tree can continue to the next turn.
+    """
+
+    active_pokemon = get_current_side_pokemon(
+        battle_state
+    )
+
+    legal_moves = get_legal_moves(
+        active_pokemon
+    )
+
+    if not legal_moves:
+        return [
+            {
+                "name": "Pass",
+                "damage": 0.0,
+                "energy_cost": 0,
+                "effect": "No legal attack was available.",
+            }
+        ]
+
+    return legal_moves
+

@@ -1,0 +1,14 @@
+{
+  "status": "EXACT_300_MATCH_CONTROLLED_ADAPTER_BENCHMARK_COMPLETE",
+  "matches": 300,
+  "wins": 183,
+  "losses": 117,
+  "draws": 0,
+  "overall_win_rate": 0.61,
+  "overall_win_rate_percent": 61.0,
+  "average_turns": 3.5433333333333334,
+  "fit_calls_executed": 0,
+  "retraining": false,
+  "model_modified": false,
+  "historical_adapter_touched": false
+}

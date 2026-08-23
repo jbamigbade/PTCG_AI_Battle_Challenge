@@ -1,0 +1,72 @@
+{
+    "policy_name": "Competitive Policy",
+    "strength_tier": "Competitive",
+    "replace_bootstrap_policy": true,
+    "replacement_reason": "The trained variable-action policy should replace the earlier bootstrap PPO policy. It was trained on real depth-4 search demonstrations, passed untouched test evaluation, completed 300 tournament matches without fallback, and achieved a positive score against the depth-6 search baseline.",
+    "training": {
+        "best_epoch": 50,
+        "best_validation_accuracy": 0.8493150684931506,
+        "best_validation_multi_action_accuracy": 0.7864077669902912
+    },
+    "test": {
+        "records": 128,
+        "loss": 0.34249061346054077,
+        "top1_accuracy": 0.828125,
+        "multi_action_accuracy": 0.78
+    },
+    "tournament": {
+        "matches": 300,
+        "wins": 194,
+        "losses": 106,
+        "draws": 0,
+        "overall_win_rate": 0.6466666666666666,
+        "random_baseline_win_rate": 0.78,
+        "greedy_baseline_win_rate": 0.58,
+        "depth6_search_win_rate": 0.58,
+        "fallback_count": 0
+    },
+    "elo": {
+        "final_sequential_elo": 1050.8019349568963,
+        "final_rank": 1,
+        "raw_elo_difference": 104.99834586618229,
+        "side_neutral_elo_difference": 104.99834586618238,
+        "estimated_side_advantage_elo": 188.24636678050723
+    },
+    "side_performance": {
+        "player_score": 0.8666666666666667,
+        "opponent_score": 0.4266666666666667,
+        "side_neutral_score": 0.6466666666666667
+    },
+    "readiness": {
+        "passed_items": 8,
+        "total_items": 9,
+        "readiness_percentage": 0.8888888888888888
+    },
+    "identified_weaknesses": [
+        {
+            "issue": "Opponent-side weakness",
+            "evidence": "Opponent-side score was 0.4267.",
+            "priority": "Critical",
+            "recommended_fix": "Generate more actor-relative expert positions where the trained policy acts from the Opponent side, and rebalance training batches by side."
+        },
+        {
+            "issue": "Multi-action imitation gap",
+            "evidence": "Untouched-test multi-action accuracy was 0.7800.",
+            "priority": "High",
+            "recommended_fix": "Increase expert dataset size and oversample positions containing two or more legal actions."
+        },
+        {
+            "issue": "Search-baseline margin is modest",
+            "evidence": "Win rate against the depth-6 search baseline was 0.5800.",
+            "priority": "High",
+            "recommended_fix": "Use search-guided self-play and policy distillation from deeper or time-limited search."
+        },
+        {
+            "issue": "Large first-player advantage",
+            "evidence": "Estimated side advantage was 188.25 Elo.",
+            "priority": "High",
+            "recommended_fix": "Evaluate balanced mirrored states and train with equal Player/Opponent examples for every matchup."
+        }
+    ],
+    "recommended_next_notebook": "49_side_balanced_search_guided_self_play.ipynb"
+}

@@ -1,0 +1,8 @@
+card_name,action_name,normalized_action_name,is_control_action,simulator_observed,simulator_source
+Bulbasaur,Bind Down,bind down,False,True,NOTEBOOK53_FROZEN_POLICY_HISTORY
+Bulbasaur,Pass,pass,True,True,NOTEBOOK53_FROZEN_POLICY_HISTORY
+Charmander,Live Coal,live coal,False,True,NOTEBOOK53_FROZEN_POLICY_HISTORY
+Charmander,Pass,pass,True,True,NOTEBOOK53_FROZEN_POLICY_HISTORY
+Eevee,Ascension,ascension,False,True,NOTEBOOK53_FROZEN_POLICY_HISTORY
+Eevee,Quick Attack,quick attack,False,True,NOTEBOOK53_FROZEN_POLICY_HISTORY
+Meowth,Tuck Tail,tuck tail,False,True,NOTEBOOK53_FROZEN_POLICY_HISTORY

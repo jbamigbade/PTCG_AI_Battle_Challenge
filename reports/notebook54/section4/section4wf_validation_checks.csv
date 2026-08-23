@@ -1,0 +1,9 @@
+check,passed,value,expected
+all_184_cases_executed,True,"{'completed': 184, 'failed': 0}","{'completed': 184, 'failed': 0}"
+all_92_pairs_valid,True,92,92
+all_selected_moves_legal,True,184,184
+all_legal_move_sets_match_design,True,184,184
+all_acting_cards_match_design,True,184,184
+all_acting_energy_matches_design,True,184,184
+all_pair_contexts_matched,True,92,92
+expanded_policy_diagnosis_recognized,True,NO_EXPANDED_OPPORTUNITY_NORMALIZED_SIDE_BIAS_DETECTED,Recognized expanded-side diagnosis

@@ -1,0 +1,11 @@
+{
+  "status": "EXPANDED_TOURNAMENT_MATRIX_READY",
+  "base_scenario_count": 8,
+  "condition_count": 3,
+  "expanded_scenario_count": 24,
+  "expanded_states_valid": 24,
+  "expanded_states_failed": 0,
+  "fallback_scenarios": 1,
+  "average_confidence": 0.7482777777777777,
+  "next_stage": "EXPANDED_TOURNAMENT_EXECUTION"
+}

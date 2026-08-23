@@ -1,0 +1,5 @@
+card_name,candidate_moves,transitions_passed,transitions_failed,minimum_damage,maximum_damage,average_damage,unique_damage_values,transition_pass_rate
+Bulbasaur,8,8,0,28.0,46.0,33.5,3,1.0
+Charmander,8,8,0,16.0,50.0,34.0,3,1.0
+Eevee,8,8,0,18.0,31.0,22.25,3,1.0
+Meowth,8,8,0,8.0,60.0,30.25,4,1.0

@@ -1,0 +1,11 @@
+{
+  "matches_played": 5,
+  "player_wins": 5,
+  "opponent_wins": 0,
+  "draws": 0,
+  "player_win_rate": 1.0,
+  "opponent_win_rate": 0.0,
+  "draw_rate": 0.0,
+  "average_turns": 3.4,
+  "average_score": 158.0
+}

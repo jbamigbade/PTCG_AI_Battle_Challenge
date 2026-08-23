@@ -1,0 +1,37 @@
+{
+  "model_name": "notebook53_legality_aware_random_forest",
+  "model_type": "RandomForestClassifier",
+  "model_configuration": {
+    "n_estimators": 500,
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "class_weight": "balanced_subsample",
+    "bootstrap": true,
+    "oob_score": true,
+    "n_jobs": -1,
+    "random_state": 53
+  },
+  "classes": [
+    "Ascension",
+    "Bind Down",
+    "Live Coal",
+    "Pass",
+    "Quick Attack",
+    "Tuck Tail"
+  ],
+  "raw_feature_count": 41,
+  "encoded_feature_count": 64,
+  "training_rows": 840,
+  "validation_rows": 110,
+  "test_rows": 110,
+  "oob_score": 1.0,
+  "validation_accuracy": 1.0,
+  "test_accuracy": 1.0,
+  "validation_prediction_legality_rate": 1.0,
+  "test_prediction_legality_rate": 1.0,
+  "preprocessor_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook53\\legality_aware_preprocessor.joblib",
+  "benchmark_rows_used_for_training": 0,
+  "scenario_overlap_count": 0
+}

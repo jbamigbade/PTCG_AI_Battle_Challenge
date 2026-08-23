@@ -1,0 +1,19 @@
+{
+  "status": "SOURCE_POLICY_DATASET_DISCOVERED",
+  "source_dataset_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook49\\section8\\policy_dataset\\section8c_expert_policy_dataset.csv",
+  "source_rows": 1060,
+  "source_columns": 37,
+  "target_column": "expert_move",
+  "legal_moves_column": "legal_moves",
+  "legal_move_count_column": "legal_move_count",
+  "has_explicit_legal_moves": true,
+  "has_legal_move_count": true,
+  "has_card_context": true,
+  "has_side_context": true,
+  "has_turn_context": true,
+  "full_legality_rebuild_ready": true,
+  "partial_rebuild_ready": true,
+  "benchmark_scenario_overlap_count": 0,
+  "benchmark_rows_used_for_training": 0,
+  "next_stage": "FULL_LEGALITY_AWARE_DATASET_REBUILD"
+}

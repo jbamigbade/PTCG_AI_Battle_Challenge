@@ -1,0 +1,11 @@
+scenario_id,condition_id,player_card,opponent_card,starting_side,battle_winner,player_outcome,strategic_decisions,first_strategic_turn,last_strategic_turn,average_confidence,minimum_confidence,maximum_priority_score,selected_moves,scenario_priority
+T52_S004__HP_PRESSURE,HP_PRESSURE,Charmander,Eevee,Opponent,Opponent,LOSS,2,1,3,0.974,0.962,9.076,"[""Quick Attack"", ""Quick Attack""]",CRITICAL
+T52_S002__HP_PRESSURE,HP_PRESSURE,Bulbasaur,Eevee,Opponent,Opponent,LOSS,2,1,3,0.975,0.964,9.072,"[""Quick Attack"", ""Quick Attack""]",CRITICAL
+T52_S003__HP_PRESSURE,HP_PRESSURE,Charmander,Eevee,Player,Opponent,LOSS,2,2,4,0.968,0.968,9.064,"[""Quick Attack"", ""Quick Attack""]",CRITICAL
+T52_S007__HP_PRESSURE,HP_PRESSURE,Bulbasaur,Eevee,Opponent,Opponent,LOSS,1,1,1,0.968,0.968,9.064,"[""Quick Attack""]",CRITICAL
+T52_S001__HP_PRESSURE,HP_PRESSURE,Bulbasaur,Eevee,Player,Opponent,LOSS,2,2,4,0.985,0.984,9.032,"[""Quick Attack"", ""Quick Attack""]",CRITICAL
+T52_S002__BASELINE,BASELINE,Bulbasaur,Eevee,Opponent,Opponent,LOSS,4,1,7,0.9325,0.858,6.284,"[""Quick Attack"", ""Quick Attack"", ""Quick Attack"", ""Quick Attack""]",HIGH
+T52_S001__BASELINE,BASELINE,Bulbasaur,Eevee,Player,Opponent,LOSS,4,2,8,0.9325,0.874,6.252,"[""Quick Attack"", ""Quick Attack"", ""Quick Attack"", ""Quick Attack""]",HIGH
+T52_S007__BASELINE,BASELINE,Bulbasaur,Eevee,Opponent,Opponent,LOSS,1,1,1,0.968,0.968,6.064,"[""Quick Attack""]",HIGH
+T52_S004__BASELINE,BASELINE,Charmander,Eevee,Opponent,Player,WIN,3,1,5,0.8959999999999999,0.858,2.284,"[""Quick Attack"", ""Quick Attack"", ""Quick Attack""]",MEDIUM
+T52_S003__BASELINE,BASELINE,Charmander,Eevee,Player,Player,WIN,2,2,4,0.873,0.872,2.2560000000000002,"[""Quick Attack"", ""Quick Attack""]",MEDIUM

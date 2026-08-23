@@ -1,0 +1,34 @@
+{
+    "current_player_type": "None",
+    "battle_state_signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+    "battle_state_annotations": {
+        "player": "'PlayerState'",
+        "opponent": "'PlayerState'",
+        "turn_number": "'int'",
+        "current_player": "'str'"
+    },
+    "battle_state_attributes": [],
+    "resolved_candidate": {
+        "module": "src.adapters",
+        "name": "current_player_adapter",
+        "signature": "(battle_state: 'BattleState') -> 'str'",
+        "qualname": "current_player_adapter",
+        "score": 205
+    },
+    "candidates": [
+        {
+            "module": "src.adapters",
+            "name": "current_player_adapter",
+            "signature": "(battle_state: 'BattleState') -> 'str'",
+            "qualname": "current_player_adapter",
+            "score": 205
+        },
+        {
+            "module": "src.adapters",
+            "name": "get_current_legal_moves",
+            "signature": "(battle_state: 'BattleState') -> 'List[Move]'",
+            "qualname": "get_current_legal_moves",
+            "score": 45
+        }
+    ]
+}

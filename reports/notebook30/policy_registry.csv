@@ -1,0 +1,5 @@
+policy_type,purpose,uses_search
+random,Baseline exploration,False
+greedy,Highest immediate value,False
+heuristic,Weighted board evaluation,False
+search,Search engine evaluation,True

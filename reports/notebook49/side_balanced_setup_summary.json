@@ -1,0 +1,31 @@
+{
+    "project_root": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge",
+    "device": "cpu",
+    "random_seed": 4901,
+    "base_checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\competitive\\competitive_policy_best.pt",
+    "base_checkpoint_epoch": 50,
+    "original_dataset": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\data\\competitive\\actor_relative_search_expert_dataset.parquet",
+    "original_dataset_records": 1000,
+    "original_side_counts": {
+        "Player": 501,
+        "Opponent": 499
+    },
+    "original_multi_action_fraction": 0.7,
+    "baseline_player_score": 0.8666666666666667,
+    "baseline_opponent_score": 0.4266666666666667,
+    "baseline_side_neutral_score": 0.6466666666666667,
+    "baseline_side_advantage_elo": 188.24636678050723,
+    "baseline_side_neutral_elo": 104.99834586618238,
+    "baseline_search_win_rate": 0.58,
+    "target_player_records": 2000,
+    "target_opponent_records": 2000,
+    "target_total_records": 4000,
+    "minimum_multi_action_fraction": 0.75,
+    "search_depth": 6,
+    "max_self_play_turns": 30,
+    "fine_tuning_epochs": 40,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "upgraded_checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\competitive\\competitive_policy_side_balanced.pt",
+    "all_required_artifacts_exist": true
+}

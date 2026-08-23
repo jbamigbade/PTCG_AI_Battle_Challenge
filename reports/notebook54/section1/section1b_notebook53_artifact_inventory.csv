@@ -1,0 +1,16 @@
+artifact,path,exists,is_file,size_bytes,nonempty
+handoff_manifest,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook53\section7\section7a_handoff_manifest.json,True,True,2987,True
+final_summary,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook53\section7\section7a_final_summary.json,True,True,743,True
+validation_checks,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook53\section7\section7a_validation_checks.csv,True,True,1880,True
+final_profile,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook53\section7\section7a_final_integration_profile.csv,True,True,667,True
+optimization_targets,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook53\section7\section7a_notebook54_optimization_targets.csv,True,True,747,True
+replay_summary,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook53\section6\section6e_tournament_replay_summary.json,True,True,640,True
+replay_battles,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook53\section6\section6e_tournament_replay_battles.csv,True,True,4072,True
+replay_turns,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook53\section6\section6e_tournament_replay_turns.csv,True,True,20936,True
+policy_history,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook53\section6\section6e_tournament_replay_policy_history.csv,True,True,26972,True
+benchmark_comparison,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook53\section6\section6b_notebook52_vs_notebook53_comparison.csv,True,True,39325,True
+legality_aware_model,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook53\legality_aware_random_forest.joblib,True,True,1218918,True
+preprocessor,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook53\legality_aware_preprocessor.joblib,True,True,8008,True
+encoded_feature_names,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook53\legality_aware_encoded_feature_names.json,True,True,2502,True
+raw_feature_schema,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook53\legality_aware_raw_feature_schema.json,True,True,2662,True
+adapter_metadata,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook53\legality_aware_policy_adapter_metadata.json,True,True,906,True

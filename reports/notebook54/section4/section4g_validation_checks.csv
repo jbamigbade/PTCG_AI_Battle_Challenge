@@ -1,0 +1,6 @@
+check,passed,value,expected
+all_reference_notebooks_processed,True,7,7
+leading_identifier_summary_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']"
+recovered_ids_positive,True,[1.0],All recovered identifiers > 0
+all_candidates_require_pdf_validation,True,4,4
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

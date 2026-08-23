@@ -1,0 +1,25 @@
+Notebook 17 — Official Card Database Integration
+
+Status: Export completed successfully.
+
+Notebook:
+notebooks\17_official_card_knowledge_base.ipynb
+
+Exported script:
+scripts\17_official_card_knowledge_base.py
+
+Package reference export:
+src\card_database\notebook17_export.py
+
+Canonical processed dataset:
+data\processed\pokemon_cards_processed.csv
+
+Validated:
+- 2022 processed rows
+- 1267 unique Card IDs
+- 43 processed columns
+- Card ID lookup
+- Name lookup
+- Multi-move card grouping
+- Trainer subtype classification
+- All baseline deck Card IDs resolved

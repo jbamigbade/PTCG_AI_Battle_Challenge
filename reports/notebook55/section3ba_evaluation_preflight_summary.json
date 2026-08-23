@@ -1,0 +1,10 @@
+{
+  "status": "BALANCED_MULTI_ACTION_EVALUATION_PREFLIGHT_COMPLETE",
+  "score_case_rows": 184,
+  "unique_comparison_cases": 184,
+  "unique_mirror_pairs": 92,
+  "state_builder_ready": false,
+  "feature_builder_ready": true,
+  "evaluation_route": "RESTORE_NOTEBOOK54_EVALUATION_BUILDERS",
+  "next_stage": "BOOTSTRAP_REQUIRED_NOTEBOOK54_EVALUATION_HELPERS"
+}

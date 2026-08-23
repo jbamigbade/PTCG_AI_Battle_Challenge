@@ -1,0 +1,28 @@
+check_name,passed,observed_value,expected_value
+full_feature_row_count_expected,True,1060,1060
+train_feature_row_count_expected,True,740,740
+validation_feature_row_count_expected,True,160,160
+test_feature_row_count_expected,True,160,160
+full_train_schema_match,True,True,True
+full_validation_schema_match,True,True,True
+full_test_schema_match,True,True,True
+all_schema_columns_present_everywhere,True,49,49
+numeric_features_have_no_missing_values,True,0,0
+numeric_features_have_no_positive_infinity,True,0,0
+numeric_features_have_no_negative_infinity,True,0,0
+categorical_features_have_no_missing_values,True,0,0
+categorical_features_have_no_blank_values,True,0,0
+train_targets_complete,True,0,0
+validation_targets_complete,True,0,0
+test_targets_complete,True,0,0
+training_contains_policy_classes,True,1,> 0
+validation_unseen_target_fraction_acceptable,True,0.0,<= 0.1
+test_unseen_target_fraction_acceptable,True,0.0,<= 0.1
+no_direct_target_leakage_in_model_features,True,0,0
+target_column_not_in_model_features,True,False,False
+search_target_not_in_model_features,True,False,False
+train_validation_scenario_overlap_zero,True,0,0
+train_test_scenario_overlap_zero,True,0,0
+validation_test_scenario_overlap_zero,True,0,0
+all_feature_scenarios_preserved,True,106,106
+feature_variant_ids_unique,True,0,0

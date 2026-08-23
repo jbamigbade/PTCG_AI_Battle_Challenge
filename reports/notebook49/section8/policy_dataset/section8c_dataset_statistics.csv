@@ -1,0 +1,13 @@
+metric,value
+search_label_rows,1060.0
+accepted_policy_examples,1060.0
+rejected_examples,0.0
+duplicates_removed,0.0
+source_scenarios,106.0
+unique_matchups,4.0
+opponent_side_examples,728.0
+player_side_examples,332.0
+average_value_target,-1.1774056603773593
+average_search_depth_reached,4.0
+average_search_seconds,0.0067275805661854045
+average_sample_weight,1.523856603773585

@@ -1,0 +1,17 @@
+{
+  "status": "SIMULATOR_BATTLE_RUNNER_VALIDATED",
+  "runtime_package": "notebook53_simulator_runtime",
+  "runtime_symbols_loaded": 11,
+  "relative_imports_resolved": true,
+  "wrapper_type": "LegalityAwareBattleRunnerAgent",
+  "production_decision_type": "AgentDecision",
+  "selected_move": "Bind Down",
+  "selected_move_legal": true,
+  "state_transition_valid": true,
+  "original_state_preserved": true,
+  "turn_advanced": true,
+  "side_switched": true,
+  "fallback_decisions": 0,
+  "ready_for_full_tournament_replay": true,
+  "next_stage": "FULL_LEGALITY_AWARE_TOURNAMENT_REPLAY"
+}

@@ -1,0 +1,5 @@
+configuration,value,expected,matches_expected
+policy_side_mode,PRESERVE,PRESERVE,True
+policy_agent_name,Notebook54InstrumentedLegalityAwarePolicy,Notebook54InstrumentedLegalityAwarePolicy,True
+runner_default_search_depth,0,0,True
+runner_policy_binding,LegalityAwarePolicyAgent,LegalityAwarePolicyAgent,True

@@ -1,0 +1,6 @@
+opponent_profile,num_matches,purpose
+random,400,Increase action and state variety
+aggressive,400,Test damage-first strategies
+defensive,400,Test survival and resource conservation
+greedy,400,Test immediate-value decisions
+search_based,400,Test stronger calculated play

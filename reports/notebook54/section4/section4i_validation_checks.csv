@@ -1,0 +1,10 @@
+check,passed,value,expected,details
+header_false_positive_removed,True,3,All Link tokens removed,
+all_target_pages_processed,True,9,9,
+target_page_extraction_errors_zero,True,0,0,
+all_extracted_card_ids_numeric,True,8,All IDs numeric,
+all_extracted_cards_in_scope,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+version_summary_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+unsupported_card_details_not_claimed,True,True,True,
+resolution_status_recognized,True,OFFICIAL_ROWS_RECOVERED_VERSION_AMBIGUITY_REMAINS,Recognized resolution status,
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",

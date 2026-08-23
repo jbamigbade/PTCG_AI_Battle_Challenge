@@ -1,0 +1,11 @@
+check,passed,value,expected
+verified_versions_cover_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']"
+verified_card_ids_unique,True,4,4
+printed_attack_catalog_reconciles,True,5,5
+all_printed_attacks_source_confirmed,True,5,5
+control_actions_not_treated_as_printed_attacks,True,2,All control actions explicitly classified
+availability_rows_cover_all_printed_attacks,True,5,5
+card_availability_summary_complete,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']"
+catalog_status_recognized,True,SIMULATOR_ALREADY_EXPOSES_ALL_VERIFIED_PRINTED_ATTACKS,Recognized catalog status
+action_sets_not_modified,True,False,False
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

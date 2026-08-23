@@ -1,0 +1,5 @@
+source_condition_id,evaluation_side,cases,mirror_pairs,source_scenarios,average_turn,average_acting_energy
+BASELINE,Opponent,14,14,5,3.7142857142857144,3.0
+BASELINE,Player,14,14,5,3.7142857142857144,3.0
+HP_PRESSURE,Opponent,9,9,5,2.3333333333333335,3.0
+HP_PRESSURE,Player,9,9,5,2.3333333333333335,3.0

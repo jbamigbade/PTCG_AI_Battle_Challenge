@@ -1,0 +1,9 @@
+check,passed,value,expected
+correct_d_drive_report_directory,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4
+all_64_features_classified,True,64,64
+six_remediation_strategies_defined,True,6,6
+control_strategy_present,True,True,True
+primary_signature_ablation_present,True,R1_REMOVE_LEGAL_SIGNATURE,R1_REMOVE_LEGAL_SIGNATURE
+legal_enforcement_preserved,True,True,True
+original_model_not_modified,True,False,False
+remediation_design_ready,True,CONTROLLED_FEATURE_ABLATION_RETRAINING_DESIGN_READY,CONTROLLED_FEATURE_ABLATION_RETRAINING_DESIGN_READY

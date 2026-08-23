@@ -1,0 +1,17 @@
+{
+  "inputs": [
+    "Observation Pipeline (Notebook 33)",
+    "Battle Engine",
+    "Policy Agent",
+    "Search Agent"
+  ],
+  "outputs": [
+    "Observation vectors",
+    "Legal move lists",
+    "Legal move masks",
+    "Chosen actions",
+    "Rewards",
+    "Terminal flags",
+    "Training dataset"
+  ]
+}

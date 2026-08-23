@@ -1,0 +1,6 @@
+check,passed,value,expected
+correct_d_drive_report_directory,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4
+all_184_cases_confirmed,True,184,184
+quick_attack_collapse_confirmed,True,"{'quick_attack': 184, 'ascension': 0}","{'quick_attack': 184, 'ascension': 0}"
+live_policy_model_resolved,True,globals.notebook53_legality_model,Resolved fitted estimator
+root_cause_branch_resolved,True,PROBABILITY_AND_TRAINING_DISTRIBUTION_ANALYSIS_READY,Recognized root-cause preflight diagnosis

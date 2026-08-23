@@ -1,0 +1,9 @@
+scenario_id,scenario_name,player_card,opponent_card,current_player,turn_number,legal_move_count,legal_moves,raw_predicted_move,selected_move,raw_confidence,selected_probability,selected_masked_probability,fallback_used,fallback_reason,probability_sum,agent_decision_type,selected_move_legal,state_unchanged,validation_passed,error_type,error_message
+T52_S001,Bulbasaur_vs_Eevee_Player_Start,Bulbasaur,Eevee,Player,1,1,['Bind Down'],Ascension,Bind Down,0.564,0.088,1.0,False,,1.0,AgentDecision,True,True,True,,
+T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,Bulbasaur,Eevee,Opponent,1,2,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,0.652,0.652,0.7676609105180534,False,,1.0,AgentDecision,True,True,True,,
+T52_S003,Charmander_vs_Eevee_Player_Start,Charmander,Eevee,Player,1,1,['Live Coal'],Ascension,Live Coal,0.6013333333333334,0.06266666666666666,1.0,False,,1.0,AgentDecision,True,True,True,,
+T52_S004,Charmander_vs_Eevee_Opponent_Start,Charmander,Eevee,Opponent,1,2,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,0.668,0.668,0.784037558685446,False,,1.0,AgentDecision,True,True,True,,
+T52_S005,Meowth_vs_Bulbasaur_Player_Start,Meowth,Bulbasaur,Player,1,1,['Tuck Tail'],Ascension,Tuck Tail,0.62,0.029333333333333333,1.0,False,,1.0,AgentDecision,True,True,True,,
+T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,Meowth,Bulbasaur,Opponent,1,1,['Bind Down'],Ascension,Bind Down,0.648,0.0,0.0,True,All matching legal actions had zero policy probability.,1.0,AgentDecision,True,True,True,,
+T52_S007,Critical_HP_Bulbasaur_vs_Eevee,Bulbasaur,Eevee,Opponent,9,2,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,1.0,1.0,1.0,False,,1.0,AgentDecision,True,True,True,,
+T52_S008,Low_Energy_Eevee_vs_Charmander,Eevee,Charmander,Player,2,1,['Ascension'],Ascension,Ascension,0.9893333333333333,0.9893333333333333,1.0,False,,1.0,AgentDecision,True,True,True,,

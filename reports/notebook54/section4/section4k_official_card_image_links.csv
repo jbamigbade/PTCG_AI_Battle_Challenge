@@ -1,0 +1,9 @@
+card_id,card_name,expansion,collection_number,page_number,card_text_x,card_text_y,annotation_index,image_uri,uri_present,page_uri_candidate_count,vertical_distance,horizontal_distance,match_method,match_status,complete_row_text,duplicate_uri_assignment,link_recovery_valid
+650,Bulbasaur,MEG,1,20,76.12799999999999,280.0,,,False,0,,,,NO_URI_ANNOTATIONS_ON_PAGE,650 Bulbasaur MEG 1 View Image,False,False
+788,Charmander,PFL,11,24,76.12799999999959,172.0,,,False,0,,,,NO_URI_ANNOTATIONS_ON_PAGE,788 Charmander PFL 11 View Image,False,False
+926,Charmander,ASC,20,29,76.12799999999999,658.0,,,False,0,,,,NO_URI_ANNOTATIONS_ON_PAGE,926 Charmander ASC 20 View Image,False,False
+43,Eevee,TWM,135,2,78.35200000000037,514.0,,,False,0,,,,NO_URI_ANNOTATIONS_ON_PAGE,43 Eevee TWM 135 View Image,False,False
+145,Eevee,SFA,50,5,76.12799999999993,460.0,,,False,0,,,,NO_URI_ANNOTATIONS_ON_PAGE,145 Eevee SFA 50 View Image,False,False
+249,Eevee,EX,PRE,8,76.12799999999959,370.0,,,False,0,,,,NO_URI_ANNOTATIONS_ON_PAGE,249 Eevee ex PRE,False,False
+317,Eevee,SSP,143,10,76.12800000000004,334.0,,,False,0,,,,NO_URI_ANNOTATIONS_ON_PAGE,317 Eevee SSP 143 View Image,False,False
+1071,Meowth,EX,POR,33,73.90400000000005,424.0,,,False,0,,,,NO_URI_ANNOTATIONS_ON_PAGE,1071 Meowth ex POR,False,False

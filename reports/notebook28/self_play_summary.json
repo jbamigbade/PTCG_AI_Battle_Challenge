@@ -1,0 +1,17 @@
+{
+  "notebook": 28,
+  "project": "PTCG AI Battle Challenge",
+  "team": "Team Jesus",
+  "session_id": "f49b7dce-dd65-4367-abb0-5210ad4e8783",
+  "random_seed": 42,
+  "requested_games": 100,
+  "completed_games": 100,
+  "total_replay_steps": 350,
+  "average_turns": 3.5,
+  "average_score": 155.0,
+  "winner_counts": {
+    "TrainingAgent": 100
+  },
+  "parse_failures": [],
+  "elapsed_seconds": 0.33350229999632575
+}

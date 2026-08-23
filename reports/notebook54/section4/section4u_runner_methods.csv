@@ -1,0 +1,7 @@
+method_name,exists,callable,signature
+choose_move,True,True,"(state: 'Any', depth: 'Optional[int]' = None) -> 'Any'"
+select_move,False,False,
+decide,False,False,
+make_decision,False,False,
+act,False,False,
+take_turn,False,False,

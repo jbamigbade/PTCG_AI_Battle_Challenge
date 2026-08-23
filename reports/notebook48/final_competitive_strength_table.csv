@@ -1,0 +1,10 @@
+metric,value,target,passed
+Validation accuracy,0.8493150684931506,0.8,True
+Validation multi-action accuracy,0.7864077669902912,0.75,True
+Test accuracy,0.828125,0.8,True
+Test multi-action accuracy,0.78,0.75,True
+Random baseline win rate,0.78,0.7,True
+Greedy baseline win rate,0.58,0.5,True
+Depth-6 search win rate,0.58,0.5,True
+Opponent-side score,0.4266666666666667,0.5,False
+Fallback-free tournament,1.0,1.0,True

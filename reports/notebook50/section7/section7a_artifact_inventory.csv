@@ -1,0 +1,11 @@
+artifact_name,path,exists,is_file,size_bytes,nonempty
+final_policy_model,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook50\final_side_balanced_policy.joblib,True,True,2754409,True
+preprocessor,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook50\leakage_safe_preprocessor.joblib,True,True,4861,True
+label_encoder,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook50\policy_label_encoder.joblib,True,True,543,True
+feature_names,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook50\feature_names.json,True,True,637,True
+model_metadata,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\models\notebook50\model_metadata.json,True,True,2555,True
+model_comparison,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook50\section6\section6a_model_comparison.csv,True,True,303,True
+side_weight_summary,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook50\section6\section6a_side_weight_summary.csv,True,True,170,True
+weight_profile,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook50\section6\section6a_weight_profile.csv,True,True,320,True
+policy_class_lookup,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook50\section6\section6a_policy_class_lookup.csv,True,True,98,True
+deployment_smoke_test,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook50\section6\section6b_deployment_smoke_test.csv,True,True,945,True

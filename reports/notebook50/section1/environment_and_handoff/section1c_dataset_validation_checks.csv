@@ -1,0 +1,19 @@
+check_name,passed,observed_value,expected_value,severity
+required_columns_present,True,[],No missing required logical fields,ERROR
+dataset_row_count_matches_handoff,True,1060,1060,ERROR
+source_scenario_count_matches_handoff,True,106,106,ERROR
+variant_ids_unique,True,0,0,ERROR
+no_fully_empty_rows,True,0,0,ERROR
+no_full_duplicate_rows,True,0,0,ERROR
+no_missing_best_moves,True,0,0,ERROR
+no_blank_best_moves,True,0,0,ERROR
+search_scores_numeric,True,0,0,ERROR
+legal_move_counts_numeric,True,0,0,ERROR
+legal_move_counts_positive,True,0,0,ERROR
+sample_weights_numeric,True,0,0,ERROR
+sample_weights_positive,True,0,0,ERROR
+all_sides_recognized,True,0,0,ERROR
+player_side_rows_match_handoff,True,332,332,ERROR
+opponent_side_rows_match_handoff,True,728,728,ERROR
+opponent_side_fraction_matches_handoff,True,0.6867924528301886,Approximately 0.6868,ERROR
+counterfactual_rows_match_handoff,True,212,212,ERROR

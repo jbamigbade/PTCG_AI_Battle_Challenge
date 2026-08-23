@@ -1,0 +1,27 @@
+{
+    "records": 1000,
+    "player_records": 501,
+    "opponent_records": 499,
+    "available_numeric_features": [
+        "legal_move_count",
+        "search_score"
+    ],
+    "summary": [
+        {
+            "feature": "legal_move_count",
+            "player_mean": 1.7045908183632734,
+            "opponent_mean": 1.6953907815631262,
+            "difference": 0.009200036800147249,
+            "player_std": 0.45668247419353525,
+            "opponent_std": 0.4607035801360688
+        },
+        {
+            "feature": "search_score",
+            "player_mean": 573.3321756487027,
+            "opponent_mean": 401.95010020040075,
+            "difference": 171.38207544830192,
+            "player_std": 4786.688570888674,
+            "opponent_std": 4957.275794471476
+        }
+    ]
+}

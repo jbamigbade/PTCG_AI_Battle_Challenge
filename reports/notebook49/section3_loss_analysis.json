@@ -1,0 +1,192 @@
+{
+    "games": 300,
+    "wins": 194,
+    "losses": 106,
+    "draws": 0,
+    "overall_win_rate": 0.6466666666666666,
+    "side_summary": [
+        {
+            "side": "Opponent",
+            "games": 150,
+            "wins": 64,
+            "losses": 86,
+            "draws": 0,
+            "score": 0.4266666666666667,
+            "average_turns": 3.7,
+            "average_elapsed_seconds": 0.0021313493396155014,
+            "fallbacks": 0
+        },
+        {
+            "side": "Player",
+            "games": 150,
+            "wins": 130,
+            "losses": 20,
+            "draws": 0,
+            "score": 0.8666666666666667,
+            "average_turns": 3.3666666666666667,
+            "average_elapsed_seconds": 0.0022069813334382586,
+            "fallbacks": 0
+        }
+    ],
+    "baseline_summary": [
+        {
+            "baseline": "Depth-6 Search Baseline",
+            "games": 100,
+            "wins": 58,
+            "losses": 42,
+            "draws": 0,
+            "score": 0.58,
+            "average_turns": 3.74,
+            "average_elapsed_seconds": 0.0037415050039998708,
+            "fallbacks": 0
+        },
+        {
+            "baseline": "Greedy Damage Baseline",
+            "games": 100,
+            "wins": 58,
+            "losses": 42,
+            "draws": 0,
+            "score": 0.58,
+            "average_turns": 3.26,
+            "average_elapsed_seconds": 0.0012270470045040798,
+            "fallbacks": 0
+        },
+        {
+            "baseline": "Random Baseline",
+            "games": 100,
+            "wins": 78,
+            "losses": 22,
+            "draws": 0,
+            "score": 0.78,
+            "average_turns": 3.6,
+            "average_elapsed_seconds": 0.001538944001076689,
+            "fallbacks": 0
+        }
+    ],
+    "side_by_baseline_summary": [
+        {
+            "side": "Opponent",
+            "baseline": "Depth-6 Search Baseline",
+            "games": 50,
+            "wins": 16,
+            "losses": 34,
+            "draws": 0,
+            "score": 0.32,
+            "average_turns": 4.14
+        },
+        {
+            "side": "Opponent",
+            "baseline": "Greedy Damage Baseline",
+            "games": 50,
+            "wins": 16,
+            "losses": 34,
+            "draws": 0,
+            "score": 0.32,
+            "average_turns": 3.18
+        },
+        {
+            "side": "Opponent",
+            "baseline": "Random Baseline",
+            "games": 50,
+            "wins": 32,
+            "losses": 18,
+            "draws": 0,
+            "score": 0.64,
+            "average_turns": 3.78
+        },
+        {
+            "side": "Player",
+            "baseline": "Depth-6 Search Baseline",
+            "games": 50,
+            "wins": 42,
+            "losses": 8,
+            "draws": 0,
+            "score": 0.84,
+            "average_turns": 3.34
+        },
+        {
+            "side": "Player",
+            "baseline": "Greedy Damage Baseline",
+            "games": 50,
+            "wins": 42,
+            "losses": 8,
+            "draws": 0,
+            "score": 0.84,
+            "average_turns": 3.34
+        },
+        {
+            "side": "Player",
+            "baseline": "Random Baseline",
+            "games": 50,
+            "wins": 46,
+            "losses": 4,
+            "draws": 0,
+            "score": 0.92,
+            "average_turns": 3.42
+        }
+    ],
+    "turn_statistics": {
+        "average_winning_turns": 3.597938144329897,
+        "median_winning_turns": 3.0,
+        "average_losing_turns": 3.4150943396226414,
+        "median_losing_turns": 3.0,
+        "minimum_losing_turns": 3,
+        "maximum_losing_turns": 5
+    },
+    "runtime_summary": {
+        "average_elapsed_seconds": 0.00216916533652688,
+        "maximum_elapsed_seconds": 0.0054535999661311,
+        "total_fallbacks": 0,
+        "loss_fallbacks": 0
+    },
+    "priority_loss_groups": [
+        {
+            "normalized_side": "Opponent",
+            "baseline_name": "Depth-6 Search Baseline",
+            "losses": 34,
+            "average_turns": 3.735294117647059,
+            "average_elapsed_seconds": 0.003688732367556718,
+            "total_fallbacks": 0
+        },
+        {
+            "normalized_side": "Opponent",
+            "baseline_name": "Greedy Damage Baseline",
+            "losses": 34,
+            "average_turns": 3.264705882352941,
+            "average_elapsed_seconds": 0.0010076264768619236,
+            "total_fallbacks": 0
+        },
+        {
+            "normalized_side": "Opponent",
+            "baseline_name": "Random Baseline",
+            "losses": 18,
+            "average_turns": 3.5555555555555554,
+            "average_elapsed_seconds": 0.0012012333415137666,
+            "total_fallbacks": 0
+        },
+        {
+            "normalized_side": "Player",
+            "baseline_name": "Depth-6 Search Baseline",
+            "losses": 8,
+            "average_turns": 3.0,
+            "average_elapsed_seconds": 0.004350374976638675,
+            "total_fallbacks": 0
+        },
+        {
+            "normalized_side": "Player",
+            "baseline_name": "Greedy Damage Baseline",
+            "losses": 8,
+            "average_turns": 3.0,
+            "average_elapsed_seconds": 0.00087963748956095,
+            "total_fallbacks": 0
+        },
+        {
+            "normalized_side": "Player",
+            "baseline_name": "Random Baseline",
+            "losses": 4,
+            "average_turns": 3.0,
+            "average_elapsed_seconds": 0.000874874967848825,
+            "total_fallbacks": 0
+        }
+    ]
+}

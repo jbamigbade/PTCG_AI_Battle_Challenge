@@ -1,0 +1,211 @@
+row_index,legal_moves,selected_move,expected_move,selected_move_legal,matches_expected_move,routing_reason,fallback_used
+0,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+1,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+2,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+3,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+4,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+5,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+6,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+7,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+8,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+9,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+10,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+11,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+12,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+13,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+14,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+15,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+16,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+17,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+18,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+19,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+20,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+21,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+22,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+23,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+24,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+25,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+26,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+27,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+28,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+29,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+30,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+31,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+32,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+33,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+34,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+35,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+36,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+37,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+38,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+39,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+40,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+41,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+42,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+43,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+44,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+45,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+46,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+47,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+48,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+49,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+50,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+51,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+52,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+53,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+54,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+55,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+56,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+57,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+58,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+59,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+60,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+61,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+62,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+63,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+64,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+65,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+66,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+67,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+68,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+69,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+70,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+71,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+72,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+73,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+74,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+75,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+76,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+77,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+78,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+79,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+80,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+81,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+82,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+83,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+84,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+85,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+86,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+87,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+88,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+89,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+90,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+91,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+92,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+93,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+94,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+95,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+96,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+97,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+98,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+99,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+100,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+101,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+102,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+103,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+104,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+105,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+106,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+107,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+108,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+109,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+110,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+111,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+112,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+113,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+114,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+115,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+116,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+117,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+118,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+119,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+120,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+121,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+122,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+123,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+124,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+125,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+126,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+127,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+128,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+129,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+130,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+131,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+132,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+133,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+134,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+135,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+136,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+137,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+138,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+139,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+140,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+141,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+142,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+143,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+144,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+145,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+146,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+147,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+148,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+149,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+150,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+151,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+152,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+153,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+154,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+155,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+156,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+157,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+158,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+159,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+160,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+161,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+162,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+163,['Tuck Tail'],Tuck Tail,Tuck Tail,True,True,ONLY_LEGAL_MOVE,False
+164,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+165,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,True,True,LEGAL_MODEL_PREDICTION,False
+166,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+167,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+168,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+169,['Bind Down'],Bind Down,Bind Down,True,True,ONLY_LEGAL_MOVE,False
+170,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+171,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+172,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+173,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+174,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+175,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+176,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+177,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+178,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+179,['Live Coal'],Live Coal,Live Coal,True,True,ONLY_LEGAL_MOVE,False
+180,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+181,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+182,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+183,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+184,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+185,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+186,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+187,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+188,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+189,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+190,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+191,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+192,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+193,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+194,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+195,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+196,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+197,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+198,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+199,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+200,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+201,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+202,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+203,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+204,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+205,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+206,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+207,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False
+208,['Ascension'],Ascension,Ascension,True,True,ONLY_LEGAL_MOVE,False
+209,['Pass'],Pass,Pass,True,True,ONLY_LEGAL_MOVE,False

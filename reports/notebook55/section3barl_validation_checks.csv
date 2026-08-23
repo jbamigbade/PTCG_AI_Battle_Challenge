@@ -1,0 +1,6 @@
+check,passed,value,expected
+notebook54_source_loaded,True,89,> 0
+scoring_cells_located,True,"[66, 67, 70, 84]",At least one scoring cell
+predict_proba_call_located,True,2,> 0
+primary_model_expression_resolved,True,section4wh_model,Nonempty expression
+next_stage_resolved,True,RESTORE_EXACT_NOTEBOOK54_SCORING_RUNTIME_OBJECT,RESTORE_EXACT_NOTEBOOK54_SCORING_RUNTIME_OBJECT

@@ -1,0 +1,6 @@
+check,passed,value,expected
+eight_images_verified,True,8,8
+all_images_have_dimensions,True,8,8
+contact_sheet_saved,True,1886502,> 0
+image_hashes_unique,True,8,8
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

@@ -1,0 +1,5 @@
+feature_family,feature_count
+numeric_base_and_interactions,15
+legal_action_flags,6
+active_card_compatibility_flags,6
+categorical_context,10

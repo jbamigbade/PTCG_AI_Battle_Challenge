@@ -1,0 +1,16 @@
+{
+  "training_examples": 840,
+  "player_training_examples": 270,
+  "opponent_training_examples": 570,
+  "side_balancing_enabled": true,
+  "opponent_total_combined_weight": 420.00000000000006,
+  "player_total_combined_weight": 419.99999999999994,
+  "relative_weighted_side_gap": 2.7068294695622867e-16,
+  "validation_accuracy": 1.0,
+  "validation_balanced_accuracy": 1.0,
+  "validation_macro_f1": 1.0,
+  "test_accuracy": 1.0,
+  "test_balanced_accuracy": 1.0,
+  "test_macro_f1": 1.0,
+  "next_stage": "MODEL_ARTIFACT_EXPORT"
+}

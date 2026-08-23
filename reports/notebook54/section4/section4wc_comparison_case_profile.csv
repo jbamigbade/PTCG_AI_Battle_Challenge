@@ -1,0 +1,3 @@
+evaluation_side,case_role,cases,mirror_pairs,scenarios,conditions,unique_acting_cards,average_acting_energy,average_opposing_energy,average_legal_moves,ready_cases
+Opponent,OBSERVED,23,23,10,2,1,3.0,3.0,2.0,23
+Player,MIRRORED,23,23,10,2,1,3.0,3.0,2.0,23

@@ -1,0 +1,18 @@
+{
+  "notebook": 39,
+  "name": "Production Dataset Loader",
+  "dataset_status": "VALIDATION_FIXTURE",
+  "production_simulator_data": false,
+  "row_count": 3,
+  "column_count": 16,
+  "observation_dimension": 4,
+  "action_mask_dimension": 4,
+  "train_count": 3,
+  "validation_count": 0,
+  "test_count": 0,
+  "duplicate_sample_ids": 0,
+  "terminal_transitions": 1,
+  "all_integrity_checks_passed": true,
+  "all_type_checks_passed": true,
+  "all_readiness_checks_passed": true
+}

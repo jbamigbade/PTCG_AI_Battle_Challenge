@@ -1,0 +1,61 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.65
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 50.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.71
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.77
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.64
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.82
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.53
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 20.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 7: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.89
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state.

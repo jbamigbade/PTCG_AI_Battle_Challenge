@@ -1,0 +1,23 @@
+{
+  "status": "QUICK_ATTACK_VERSUS_ASCENSION_SCORE_AND_LABEL_ANALYSIS_COMPLETE",
+  "evaluated_cases": 184,
+  "quick_attack_score_advantage_cases": 184,
+  "ascension_score_advantage_cases": 0,
+  "score_tie_cases": 0,
+  "average_quick_attack_probability": 0.7474782608695653,
+  "average_ascension_probability": 0.16378260869565214,
+  "average_quick_attack_minus_ascension": 0.5836956521739131,
+  "minimum_quick_attack_minus_ascension": 0.51,
+  "maximum_quick_attack_minus_ascension": 0.6880000000000001,
+  "probability_dominance_complete": true,
+  "primary_label_dataframe": "notebook53_policy_history_df",
+  "primary_label_column": "selected_move",
+  "primary_quick_attack_rows": 23,
+  "primary_ascension_rows": 36,
+  "primary_quick_attack_target_share": 0.3898305084745763,
+  "training_imbalance_detected": false,
+  "feature_importance_rows": 64,
+  "root_cause_diagnosis": "MODEL_SCORE_DOMINANCE_CONFIRMED_LABEL_CAUSE_NOT_PROVEN",
+  "root_cause_diagnosis_text": "Quick Attack received a higher model probability than Ascension in every expanded state. Available label evidence does not yet prove that training-label imbalance is the cause.",
+  "next_stage": "QUICK_ATTACK_SCORE_FEATURE_ATTRIBUTION"
+}

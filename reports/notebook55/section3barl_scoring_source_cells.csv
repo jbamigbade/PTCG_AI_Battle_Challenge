@@ -1,0 +1,5097 @@
+code_cell_index,source_length,full_source
+66,33326,"# ======================================================================================
+# SECTION 4W-H-A — QUICK ATTACK DOMINANCE ROOT-CAUSE PREFLIGHT
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4W-H-A — QUICK ATTACK DOMINANCE ROOT-CAUSE PREFLIGHT"")
+print(""="" * 100)
+
+from pathlib import Path
+import inspect
+import json
+
+import numpy as np
+import pandas as pd
+
+
+# --------------------------------------------------------------------------------------
+# 1. Confirm the permanent D-drive report directory
+# --------------------------------------------------------------------------------------
+
+assert ""NOTEBOOK54_SECTION4_REPORT_DIRECTORY"" in globals(), (
+    ""NOTEBOOK54_SECTION4_REPORT_DIRECTORY is missing. ""
+    ""Run the permanent Notebook 54 report-path cell first.""
+)
+
+SECTION4WH_REPORT_DIRECTORY = Path(
+    NOTEBOOK54_SECTION4_REPORT_DIRECTORY
+)
+
+SECTION4WH_REPORT_DIRECTORY.mkdir(
+    parents=True,
+    exist_ok=True,
+)
+
+assert SECTION4WH_REPORT_DIRECTORY.exists()
+
+
+print()
+print(""SECTION 4W-H REPORT DIRECTORY"")
+print(""-"" * 100)
+
+print(
+    SECTION4WH_REPORT_DIRECTORY
+)
+
+
+expected_report_root_4wh = Path(
+    r""D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge""
+    r""\reports\notebook54\section4""
+)
+
+
+assert (
+    SECTION4WH_REPORT_DIRECTORY.resolve()
+    ==
+    expected_report_root_4wh.resolve()
+), (
+    ""Section 4W-H is not pointing to the correct D-drive project folder.\n""
+    f""Resolved path: {SECTION4WH_REPORT_DIRECTORY.resolve()}""
+)
+
+
+# --------------------------------------------------------------------------------------
+# 2. Validate Section 4W-G evidence
+# --------------------------------------------------------------------------------------
+
+REQUIRED_SECTION4WH_OBJECTS = [
+    ""section4wg_case_df"",
+    ""section4wg_diversity_summary"",
+    ""notebook54_legality_policy"",
+]
+
+
+missing_section4wh_objects = [
+    object_name
+    for object_name in REQUIRED_SECTION4WH_OBJECTS
+    if object_name not in globals()
+]
+
+
+assert not missing_section4wh_objects, (
+    ""Required Section 4W-G/runtime objects are missing: ""
+    f""{missing_section4wh_objects}""
+)
+
+
+assert len(
+    section4wg_case_df
+) == 184
+
+
+assert (
+    section4wg_diversity_summary[
+        ""diversity_diagnosis""
+    ]
+    ==
+    ""COMPLETE_MOVE_PREFERENCE_COLLAPSE""
+)
+
+
+assert (
+    section4wg_diversity_summary[
+        ""dominant_move""
+    ]
+    ==
+    ""Quick Attack""
+)
+
+
+assert (
+    section4wg_diversity_summary[
+        ""quick_attack_count""
+    ]
+    == 184
+)
+
+
+assert (
+    section4wg_diversity_summary[
+        ""ascension_count""
+    ]
+    == 0
+)
+
+
+print()
+print(""SECTION 4W-G EVIDENCE CONFIRMATION"")
+print(""-"" * 100)
+
+for key in [
+    ""evaluated_cases"",
+    ""evaluated_mirror_pairs"",
+    ""unique_selected_moves"",
+    ""dominant_move"",
+    ""dominant_move_count"",
+    ""dominant_move_share"",
+    ""quick_attack_count"",
+    ""ascension_count"",
+    ""normalized_entropy"",
+    ""diversity_diagnosis"",
+    ""next_stage"",
+]:
+
+    print(
+        f""{key:54}: ""
+        f""{section4wg_diversity_summary.get(key)}""
+    )
+
+
+# --------------------------------------------------------------------------------------
+# 3. Inventory candidate model, preprocessor, and feature-schema objects
+# --------------------------------------------------------------------------------------
+
+SECTION4WH_MODEL_CANDIDATE_NAMES = [
+    ""legality_aware_model"",
+    ""legality_model"",
+    ""policy_model"",
+    ""trained_model"",
+    ""model"",
+    ""notebook53_legality_model"",
+    ""notebook54_legality_model"",
+]
+
+
+SECTION4WH_PREPROCESSOR_CANDIDATE_NAMES = [
+    ""legality_preprocessor"",
+    ""preprocessor"",
+    ""policy_preprocessor"",
+    ""notebook53_preprocessor"",
+    ""notebook54_preprocessor"",
+]
+
+
+SECTION4WH_FEATURE_NAME_CANDIDATE_NAMES = [
+    ""encoded_feature_names"",
+    ""feature_names"",
+    ""model_feature_names"",
+    ""PREPROCESS_RAW_FEATURES"",
+]
+
+
+section4wh_runtime_inventory_rows = []
+
+
+for object_name in sorted(
+    set(
+        SECTION4WH_MODEL_CANDIDATE_NAMES
+        +
+        SECTION4WH_PREPROCESSOR_CANDIDATE_NAMES
+        +
+        SECTION4WH_FEATURE_NAME_CANDIDATE_NAMES
+    )
+):
+
+    object_exists = object_name in globals()
+
+    object_value = globals().get(
+        object_name
+    )
+
+    section4wh_runtime_inventory_rows.append(
+        {
+            ""object_name"":
+                object_name,
+
+            ""exists"":
+                bool(
+                    object_exists
+                ),
+
+            ""object_type"":
+                (
+                    type(
+                        object_value
+                    ).__name__
+                    if object_exists
+                    else """"
+                ),
+
+            ""callable"":
+                bool(
+                    callable(
+                        object_value
+                    )
+                )
+                if object_exists
+                else False,
+
+            ""has_predict"":
+                bool(
+                    hasattr(
+                        object_value,
+                        ""predict"",
+                    )
+                )
+                if object_exists
+                else False,
+
+            ""has_predict_proba"":
+                bool(
+                    hasattr(
+                        object_value,
+                        ""predict_proba"",
+                    )
+                )
+                if object_exists
+                else False,
+
+            ""has_decision_function"":
+                bool(
+                    hasattr(
+                        object_value,
+                        ""decision_function"",
+                    )
+                )
+                if object_exists
+                else False,
+
+            ""has_feature_importances"":
+                bool(
+                    hasattr(
+                        object_value,
+                        ""feature_importances_"",
+                    )
+                )
+                if object_exists
+                else False,
+
+            ""has_coef"":
+                bool(
+                    hasattr(
+                        object_value,
+                        ""coef_"",
+                    )
+                )
+                if object_exists
+                else False,
+
+            ""has_classes"":
+                bool(
+                    hasattr(
+                        object_value,
+                        ""classes_"",
+                    )
+                )
+                if object_exists
+                else False,
+        }
+    )
+
+
+section4wh_runtime_inventory_df = pd.DataFrame(
+    section4wh_runtime_inventory_rows
+)
+
+
+print()
+print(""ROOT-CAUSE RUNTIME OBJECT INVENTORY"")
+print(""-"" * 100)
+
+display(
+    section4wh_runtime_inventory_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 4. Resolve the live trained policy model
+# --------------------------------------------------------------------------------------
+
+def resolve_section4wh_model():
+    """"""
+    Resolve the most likely live estimator used by the legality-aware policy.
+    """"""
+
+    candidate_objects = []
+
+
+    # Direct notebook globals.
+    for object_name in SECTION4WH_MODEL_CANDIDATE_NAMES:
+
+        object_value = globals().get(
+            object_name
+        )
+
+        if object_value is not None:
+
+            candidate_objects.append(
+                (
+                    f""globals.{object_name}"",
+                    object_value,
+                )
+            )
+
+
+    # Attributes attached to the live policy.
+    for attribute_name in [
+        ""model"",
+        ""classifier"",
+        ""estimator"",
+        ""policy_model"",
+        ""legality_model"",
+        ""trained_model"",
+    ]:
+
+        object_value = getattr(
+            notebook54_legality_policy,
+            attribute_name,
+            None,
+        )
+
+        if object_value is not None:
+
+            candidate_objects.append(
+                (
+                    f""notebook54_legality_policy.{attribute_name}"",
+                    object_value,
+                )
+            )
+
+
+    # Select an object that looks like a fitted estimator.
+    for object_source, object_value in candidate_objects:
+
+        if (
+            hasattr(
+                object_value,
+                ""predict"",
+            )
+            or
+            hasattr(
+                object_value,
+                ""predict_proba"",
+            )
+            or
+            hasattr(
+                object_value,
+                ""decision_function"",
+            )
+        ):
+
+            return (
+                object_source,
+                object_value,
+            )
+
+
+    return (
+        """",
+        None,
+    )
+
+
+(
+    SECTION4WH_MODEL_SOURCE,
+    section4wh_model,
+) = resolve_section4wh_model()
+
+
+print()
+print(""RESOLVED LIVE POLICY MODEL"")
+print(""-"" * 100)
+
+print(
+    ""Model source:"",
+    SECTION4WH_MODEL_SOURCE
+    if SECTION4WH_MODEL_SOURCE
+    else ""NOT RESOLVED"",
+)
+
+print(
+    ""Model type:"",
+    type(
+        section4wh_model
+    ).__name__
+    if section4wh_model is not None
+    else """",
+)
+
+
+assert section4wh_model is not None, (
+    ""A fitted policy model could not be resolved. ""
+    ""Review the runtime inventory table above.""
+)
+
+
+# --------------------------------------------------------------------------------------
+# 5. Resolve the live preprocessor
+# --------------------------------------------------------------------------------------
+
+def resolve_section4wh_preprocessor():
+
+    candidate_objects = []
+
+
+    for object_name in (
+        SECTION4WH_PREPROCESSOR_CANDIDATE_NAMES
+    ):
+
+        object_value = globals().get(
+            object_name
+        )
+
+        if object_value is not None:
+
+            candidate_objects.append(
+                (
+                    f""globals.{object_name}"",
+                    object_value,
+                )
+            )
+
+
+    for attribute_name in [
+        ""preprocessor"",
+        ""transformer"",
+        ""feature_preprocessor"",
+        ""pipeline"",
+    ]:
+
+        object_value = getattr(
+            notebook54_legality_policy,
+            attribute_name,
+            None,
+        )
+
+        if object_value is not None:
+
+            candidate_objects.append(
+                (
+                    f""notebook54_legality_policy.{attribute_name}"",
+                    object_value,
+                )
+            )
+
+
+    for object_source, object_value in candidate_objects:
+
+        if (
+            hasattr(
+                object_value,
+                ""transform"",
+            )
+            or
+            hasattr(
+                object_value,
+                ""fit_transform"",
+            )
+        ):
+
+            return (
+                object_source,
+                object_value,
+            )
+
+
+    return (
+        """",
+        None,
+    )
+
+
+(
+    SECTION4WH_PREPROCESSOR_SOURCE,
+    section4wh_preprocessor,
+) = resolve_section4wh_preprocessor()
+
+
+print()
+print(""RESOLVED LIVE PREPROCESSOR"")
+print(""-"" * 100)
+
+print(
+    ""Preprocessor source:"",
+    SECTION4WH_PREPROCESSOR_SOURCE
+    if SECTION4WH_PREPROCESSOR_SOURCE
+    else ""NOT RESOLVED"",
+)
+
+print(
+    ""Preprocessor type:"",
+    type(
+        section4wh_preprocessor
+    ).__name__
+    if section4wh_preprocessor is not None
+    else """",
+)
+
+
+# --------------------------------------------------------------------------------------
+# 6. Inspect model classes and supported scoring interfaces
+# --------------------------------------------------------------------------------------
+
+section4wh_model_classes = []
+
+
+if hasattr(
+    section4wh_model,
+    ""classes_"",
+):
+
+    section4wh_model_classes = [
+        str(
+            class_name
+        )
+        for class_name in np.asarray(
+            section4wh_model.classes_
+        ).tolist()
+    ]
+
+
+section4wh_model_interface_df = pd.DataFrame(
+    [
+        {
+            ""model_source"":
+                SECTION4WH_MODEL_SOURCE,
+
+            ""model_type"":
+                type(
+                    section4wh_model
+                ).__name__,
+
+            ""has_predict"":
+                hasattr(
+                    section4wh_model,
+                    ""predict"",
+                ),
+
+            ""has_predict_proba"":
+                hasattr(
+                    section4wh_model,
+                    ""predict_proba"",
+                ),
+
+            ""has_decision_function"":
+                hasattr(
+                    section4wh_model,
+                    ""decision_function"",
+                ),
+
+            ""has_feature_importances"":
+                hasattr(
+                    section4wh_model,
+                    ""feature_importances_"",
+                ),
+
+            ""has_coef"":
+                hasattr(
+                    section4wh_model,
+                    ""coef_"",
+                ),
+
+            ""has_classes"":
+                hasattr(
+                    section4wh_model,
+                    ""classes_"",
+                ),
+
+            ""class_count"":
+                len(
+                    section4wh_model_classes
+                ),
+
+            ""classes"":
+                section4wh_model_classes,
+        }
+    ]
+)
+
+
+print()
+print(""LIVE MODEL INTERFACE PROFILE"")
+print(""-"" * 100)
+
+display(
+    section4wh_model_interface_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 7. Determine whether Ascension and Quick Attack are represented as model classes
+# --------------------------------------------------------------------------------------
+
+normalized_model_classes_4wh = {
+    str(
+        class_name
+    )
+    .strip()
+    .lower()
+    for class_name in section4wh_model_classes
+}
+
+
+section4wh_quick_attack_class_present = (
+    ""quick attack""
+    in normalized_model_classes_4wh
+)
+
+
+section4wh_ascension_class_present = (
+    ""ascension""
+    in normalized_model_classes_4wh
+)
+
+
+section4wh_class_coverage_df = pd.DataFrame(
+    [
+        {
+            ""action_name"":
+                ""Quick Attack"",
+
+            ""present_in_model_classes"":
+                section4wh_quick_attack_class_present,
+        },
+        {
+            ""action_name"":
+                ""Ascension"",
+
+            ""present_in_model_classes"":
+                section4wh_ascension_class_present,
+        },
+    ]
+)
+
+
+print()
+print(""TARGET MOVE CLASS COVERAGE"")
+print(""-"" * 100)
+
+display(
+    section4wh_class_coverage_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 8. Search live dataframes for training-label evidence
+# --------------------------------------------------------------------------------------
+
+SECTION4WH_LABEL_COLUMN_CANDIDATES = [
+    ""selected_move"",
+    ""action"",
+    ""move"",
+    ""target"",
+    ""label"",
+    ""policy_action"",
+    ""chosen_action"",
+    ""best_action"",
+]
+
+
+section4wh_training_dataframe_rows = []
+
+
+for object_name, object_value in list(
+    globals().items()
+):
+
+    if not isinstance(
+        object_value,
+        pd.DataFrame,
+    ):
+
+        continue
+
+
+    matching_label_columns = [
+        column_name
+        for column_name in SECTION4WH_LABEL_COLUMN_CANDIDATES
+        if column_name in object_value.columns
+    ]
+
+
+    if not matching_label_columns:
+        continue
+
+
+    for label_column in matching_label_columns:
+
+        label_values = (
+            object_value[
+                label_column
+            ]
+            .dropna()
+            .astype(str)
+            .str.strip()
+        )
+
+
+        normalized_labels = (
+            label_values
+            .str.lower()
+        )
+
+
+        quick_attack_rows = int(
+            normalized_labels.eq(
+                ""quick attack""
+            ).sum()
+        )
+
+
+        ascension_rows = int(
+            normalized_labels.eq(
+                ""ascension""
+            ).sum()
+        )
+
+
+        if (
+            quick_attack_rows == 0
+            and
+            ascension_rows == 0
+        ):
+
+            continue
+
+
+        section4wh_training_dataframe_rows.append(
+            {
+                ""dataframe_name"":
+                    object_name,
+
+                ""rows"":
+                    int(
+                        len(
+                            object_value
+                        )
+                    ),
+
+                ""label_column"":
+                    label_column,
+
+                ""nonmissing_labels"":
+                    int(
+                        len(
+                            label_values
+                        )
+                    ),
+
+                ""unique_labels"":
+                    int(
+                        label_values.nunique()
+                    ),
+
+                ""quick_attack_rows"":
+                    quick_attack_rows,
+
+                ""ascension_rows"":
+                    ascension_rows,
+
+                ""quick_attack_minus_ascension"":
+                    int(
+                        quick_attack_rows
+                        -
+                        ascension_rows
+                    ),
+            }
+        )
+
+
+section4wh_training_label_inventory_df = pd.DataFrame(
+    section4wh_training_dataframe_rows,
+    columns=[
+        ""dataframe_name"",
+        ""rows"",
+        ""label_column"",
+        ""nonmissing_labels"",
+        ""unique_labels"",
+        ""quick_attack_rows"",
+        ""ascension_rows"",
+        ""quick_attack_minus_ascension"",
+    ],
+)
+
+
+print()
+print(""LIVE DATAFRAMES WITH QUICK ATTACK / ASCENSION LABEL EVIDENCE"")
+print(""-"" * 100)
+
+if section4wh_training_label_inventory_df.empty:
+
+    print(
+        ""No live dataframe with identifiable Quick Attack or Ascension ""
+        ""training labels was found.""
+    )
+
+else:
+
+    display(
+        section4wh_training_label_inventory_df
+        .sort_values(
+            [
+                ""quick_attack_rows"",
+                ""ascension_rows"",
+            ],
+            ascending=[
+                False,
+                False,
+            ],
+        )
+        .reset_index(drop=True)
+    )
+
+
+# --------------------------------------------------------------------------------------
+# 9. Inspect policy history for probability or score fields
+# --------------------------------------------------------------------------------------
+
+section4wh_history_source = None
+
+
+for candidate_name in [
+    ""history"",
+    ""decision_history"",
+    ""policy_history"",
+    ""routing_history"",
+]:
+
+    candidate_value = getattr(
+        notebook54_legality_policy,
+        candidate_name,
+        None,
+    )
+
+    if isinstance(
+        candidate_value,
+        list,
+    ):
+
+        section4wh_history_source = (
+            candidate_name,
+            candidate_value,
+        )
+
+        break
+
+
+section4wh_history_field_rows = []
+
+
+if section4wh_history_source is not None:
+
+    history_attribute_name, history_rows = (
+        section4wh_history_source
+    )
+
+
+    for history_index, history_record in enumerate(
+        history_rows[-25:],
+        start=max(
+            len(
+                history_rows
+            ) - 25,
+            0,
+        ),
+    ):
+
+        if isinstance(
+            history_record,
+            dict,
+        ):
+
+            record_items = history_record.items()
+
+        else:
+
+            try:
+
+                record_items = vars(
+                    history_record
+                ).items()
+
+            except Exception:
+
+                record_items = []
+
+
+        for field_name, field_value in record_items:
+
+            normalized_field_name = str(
+                field_name
+            ).strip().lower()
+
+
+            if any(
+                token in normalized_field_name
+                for token in [
+                    ""prob"",
+                    ""score"",
+                    ""logit"",
+                    ""confidence"",
+                    ""prediction"",
+                ]
+            ):
+
+                section4wh_history_field_rows.append(
+                    {
+                        ""history_attribute"":
+                            history_attribute_name,
+
+                        ""history_index"":
+                            int(
+                                history_index
+                            ),
+
+                        ""field_name"":
+                            str(
+                                field_name
+                            ),
+
+                        ""field_type"":
+                            type(
+                                field_value
+                            ).__name__,
+
+                        ""field_preview"":
+                            str(
+                                field_value
+                            )[:500],
+                    }
+                )
+
+
+section4wh_history_scoring_fields_df = pd.DataFrame(
+    section4wh_history_field_rows,
+    columns=[
+        ""history_attribute"",
+        ""history_index"",
+        ""field_name"",
+        ""field_type"",
+        ""field_preview"",
+    ],
+)
+
+
+print()
+print(""POLICY-HISTORY PROBABILITY / SCORE FIELD INVENTORY"")
+print(""-"" * 100)
+
+if section4wh_history_scoring_fields_df.empty:
+
+    print(
+        ""No explicit probability, score, logit, or prediction fields ""
+        ""were found in the recent live policy history.""
+    )
+
+else:
+
+    display(
+        section4wh_history_scoring_fields_df
+        .drop_duplicates(
+            subset=[
+                ""field_name"",
+                ""field_type"",
+            ]
+        )
+        .reset_index(drop=True)
+    )
+
+
+# --------------------------------------------------------------------------------------
+# 10. Inspect feature-importance support
+# --------------------------------------------------------------------------------------
+
+section4wh_feature_importance_mode = ""UNAVAILABLE""
+
+
+if hasattr(
+    section4wh_model,
+    ""feature_importances_"",
+):
+
+    section4wh_feature_importance_mode = (
+        ""TREE_FEATURE_IMPORTANCES""
+    )
+
+elif hasattr(
+    section4wh_model,
+    ""coef_"",
+):
+
+    section4wh_feature_importance_mode = (
+        ""LINEAR_MODEL_COEFFICIENTS""
+    )
+
+elif (
+    section4wh_preprocessor is not None
+    and
+    hasattr(
+        section4wh_model,
+        ""predict_proba"",
+    )
+):
+
+    section4wh_feature_importance_mode = (
+        ""PERMUTATION_OR_PERTURBATION_REQUIRED""
+    )
+
+
+section4wh_feature_importance_support_df = pd.DataFrame(
+    [
+        {
+            ""importance_mode"":
+                section4wh_feature_importance_mode,
+
+            ""model_has_feature_importances"":
+                hasattr(
+                    section4wh_model,
+                    ""feature_importances_"",
+                ),
+
+            ""model_has_coefficients"":
+                hasattr(
+                    section4wh_model,
+                    ""coef_"",
+                ),
+
+            ""model_has_predict_proba"":
+                hasattr(
+                    section4wh_model,
+                    ""predict_proba"",
+                ),
+
+            ""preprocessor_available"":
+                section4wh_preprocessor
+                is not None,
+        }
+    ]
+)
+
+
+print()
+print(""FEATURE-IMPORTANCE ANALYSIS SUPPORT"")
+print(""-"" * 100)
+
+display(
+    section4wh_feature_importance_support_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 11. Determine the next exact root-cause branch
+# --------------------------------------------------------------------------------------
+
+section4wh_probability_interface_available = bool(
+    hasattr(
+        section4wh_model,
+        ""predict_proba"",
+    )
+    or
+    hasattr(
+        section4wh_model,
+        ""decision_function"",
+    )
+)
+
+
+section4wh_training_label_evidence_available = bool(
+    not section4wh_training_label_inventory_df.empty
+)
+
+
+section4wh_feature_importance_available = bool(
+    section4wh_feature_importance_mode
+    !=
+    ""UNAVAILABLE""
+)
+
+
+if (
+    section4wh_probability_interface_available
+    and
+    section4wh_training_label_evidence_available
+):
+
+    section4wh_root_cause_preflight_diagnosis = (
+        ""PROBABILITY_AND_TRAINING_DISTRIBUTION_ANALYSIS_READY""
+    )
+
+    section4wh_next_stage = (
+        ""QUICK_ATTACK_VERSUS_ASCENSION_SCORE_AND_LABEL_ANALYSIS""
+    )
+
+elif section4wh_probability_interface_available:
+
+    section4wh_root_cause_preflight_diagnosis = (
+        ""MODEL_SCORE_ANALYSIS_READY_TRAINING_LABEL_RECOVERY_REQUIRED""
+    )
+
+    section4wh_next_stage = (
+        ""QUICK_ATTACK_VERSUS_ASCENSION_SCORE_ANALYSIS""
+    )
+
+elif section4wh_training_label_evidence_available:
+
+    section4wh_root_cause_preflight_diagnosis = (
+        ""TRAINING_DISTRIBUTION_ANALYSIS_READY_MODEL_SCORE_INTERFACE_LIMITED""
+    )
+
+    section4wh_next_stage = (
+        ""TRAINING_LABEL_IMBALANCE_ROOT_CAUSE_ANALYSIS""
+    )
+
+else:
+
+    section4wh_root_cause_preflight_diagnosis = (
+        ""ROOT_CAUSE_DEPENDENCY_RECOVERY_REQUIRED""
+    )
+
+    section4wh_next_stage = (
+        ""MODEL_SCORE_AND_TRAINING_LABEL_DEPENDENCY_RECOVERY""
+    )
+
+
+section4wh_root_cause_preflight_summary = {
+    ""status"":
+        ""QUICK_ATTACK_DOMINANCE_ROOT_CAUSE_PREFLIGHT_COMPLETE"",
+
+    ""evaluated_cases"":
+        int(
+            section4wg_diversity_summary[
+                ""evaluated_cases""
+            ]
+        ),
+
+    ""dominant_move"":
+        section4wg_diversity_summary[
+            ""dominant_move""
+        ],
+
+    ""dominant_move_share"":
+        float(
+            section4wg_diversity_summary[
+                ""dominant_move_share""
+            ]
+        ),
+
+    ""ascension_selected_count"":
+        int(
+            section4wg_diversity_summary[
+                ""ascension_count""
+            ]
+        ),
+
+    ""model_source"":
+        SECTION4WH_MODEL_SOURCE,
+
+    ""model_type"":
+        type(
+            section4wh_model
+        ).__name__,
+
+    ""preprocessor_source"":
+        SECTION4WH_PREPROCESSOR_SOURCE,
+
+    ""preprocessor_available"":
+        section4wh_preprocessor
+        is not None,
+
+    ""model_class_count"":
+        int(
+            len(
+                section4wh_model_classes
+            )
+        ),
+
+    ""quick_attack_class_present"":
+        section4wh_quick_attack_class_present,
+
+    ""ascension_class_present"":
+        section4wh_ascension_class_present,
+
+    ""predict_proba_available"":
+        hasattr(
+            section4wh_model,
+            ""predict_proba"",
+        ),
+
+    ""decision_function_available"":
+        hasattr(
+            section4wh_model,
+            ""decision_function"",
+        ),
+
+    ""training_label_evidence_available"":
+        section4wh_training_label_evidence_available,
+
+    ""training_label_dataframe_candidates"":
+        int(
+            len(
+                section4wh_training_label_inventory_df
+            )
+        ),
+
+    ""feature_importance_mode"":
+        section4wh_feature_importance_mode,
+
+    ""root_cause_preflight_diagnosis"":
+        section4wh_root_cause_preflight_diagnosis,
+
+    ""next_stage"":
+        section4wh_next_stage,
+}
+
+
+print()
+print(""SECTION 4W-H-A ROOT-CAUSE PREFLIGHT SUMMARY"")
+print(""-"" * 100)
+
+for key, value in (
+    section4wh_root_cause_preflight_summary.items()
+):
+
+    print(
+        f""{key:62}: {value}""
+    )
+
+
+# --------------------------------------------------------------------------------------
+# 12. Validation checks
+# --------------------------------------------------------------------------------------
+
+section4wh_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""correct_d_drive_report_directory"",
+
+            ""passed"":
+                (
+                    SECTION4WH_REPORT_DIRECTORY.resolve()
+                    ==
+                    expected_report_root_4wh.resolve()
+                ),
+
+            ""value"":
+                str(
+                    SECTION4WH_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""expected"":
+                str(
+                    expected_report_root_4wh.resolve()
+                ),
+        },
+        {
+            ""check"":
+                ""all_184_cases_confirmed"",
+
+            ""passed"":
+                section4wg_diversity_summary[
+                    ""evaluated_cases""
+                ] == 184,
+
+            ""value"":
+                section4wg_diversity_summary[
+                    ""evaluated_cases""
+                ],
+
+            ""expected"":
+                184,
+        },
+        {
+            ""check"":
+                ""quick_attack_collapse_confirmed"",
+
+            ""passed"":
+                (
+                    section4wg_diversity_summary[
+                        ""quick_attack_count""
+                    ] == 184
+                    and
+                    section4wg_diversity_summary[
+                        ""ascension_count""
+                    ] == 0
+                ),
+
+            ""value"":
+                {
+                    ""quick_attack"":
+                        section4wg_diversity_summary[
+                            ""quick_attack_count""
+                        ],
+
+                    ""ascension"":
+                        section4wg_diversity_summary[
+                            ""ascension_count""
+                        ],
+                },
+
+            ""expected"":
+                {
+                    ""quick_attack"":
+                        184,
+
+                    ""ascension"":
+                        0,
+                },
+        },
+        {
+            ""check"":
+                ""live_policy_model_resolved"",
+
+            ""passed"":
+                section4wh_model is not None,
+
+            ""value"":
+                SECTION4WH_MODEL_SOURCE,
+
+            ""expected"":
+                ""Resolved fitted estimator"",
+        },
+        {
+            ""check"":
+                ""root_cause_branch_resolved"",
+
+            ""passed"":
+                section4wh_root_cause_preflight_diagnosis
+                in {
+                    ""PROBABILITY_AND_TRAINING_DISTRIBUTION_ANALYSIS_READY"",
+                    ""MODEL_SCORE_ANALYSIS_READY_TRAINING_LABEL_RECOVERY_REQUIRED"",
+                    ""TRAINING_DISTRIBUTION_ANALYSIS_READY_MODEL_SCORE_INTERFACE_LIMITED"",
+                    ""ROOT_CAUSE_DEPENDENCY_RECOVERY_REQUIRED"",
+                },
+
+            ""value"":
+                section4wh_root_cause_preflight_diagnosis,
+
+            ""expected"":
+                ""Recognized root-cause preflight diagnosis"",
+        },
+    ]
+)
+
+
+print()
+print(""SECTION 4W-H-A VALIDATION CHECKS"")
+print(""-"" * 100)
+
+display(
+    section4wh_validation_checks_df
+)
+
+
+section4wh_checks_failed = int(
+    (
+        ~section4wh_validation_checks_df[
+            ""passed""
+        ].astype(bool)
+    ).sum()
+)
+
+
+assert section4wh_checks_failed == 0, (
+    ""One or more Section 4W-H-A root-cause preflight checks failed.""
+)
+
+
+# --------------------------------------------------------------------------------------
+# 13. Save reports directly to the correct D-drive project folder
+# --------------------------------------------------------------------------------------
+
+SECTION4WH_RUNTIME_INVENTORY_FILE = (
+    SECTION4WH_REPORT_DIRECTORY
+    /
+    ""section4wha_runtime_object_inventory.csv""
+)
+
+SECTION4WH_MODEL_INTERFACE_FILE = (
+    SECTION4WH_REPORT_DIRECTORY
+    /
+    ""section4wha_model_interface_profile.csv""
+)
+
+SECTION4WH_CLASS_COVERAGE_FILE = (
+    SECTION4WH_REPORT_DIRECTORY
+    /
+    ""section4wha_target_move_class_coverage.csv""
+)
+
+SECTION4WH_TRAINING_LABEL_INVENTORY_FILE = (
+    SECTION4WH_REPORT_DIRECTORY
+    /
+    ""section4wha_training_label_inventory.csv""
+)
+
+SECTION4WH_HISTORY_SCORE_FIELDS_FILE = (
+    SECTION4WH_REPORT_DIRECTORY
+    /
+    ""section4wha_policy_history_score_fields.csv""
+)
+
+SECTION4WH_FEATURE_IMPORTANCE_SUPPORT_FILE = (
+    SECTION4WH_REPORT_DIRECTORY
+    /
+    ""section4wha_feature_importance_support.csv""
+)
+
+SECTION4WH_VALIDATION_FILE = (
+    SECTION4WH_REPORT_DIRECTORY
+    /
+    ""section4wha_validation_checks.csv""
+)
+
+SECTION4WH_SUMMARY_FILE = (
+    SECTION4WH_REPORT_DIRECTORY
+    /
+    ""section4wha_root_cause_preflight_summary.json""
+)
+
+
+section4wh_runtime_inventory_df.to_csv(
+    SECTION4WH_RUNTIME_INVENTORY_FILE,
+    index=False,
+)
+
+section4wh_model_interface_df.to_csv(
+    SECTION4WH_MODEL_INTERFACE_FILE,
+    index=False,
+)
+
+section4wh_class_coverage_df.to_csv(
+    SECTION4WH_CLASS_COVERAGE_FILE,
+    index=False,
+)
+
+section4wh_training_label_inventory_df.to_csv(
+    SECTION4WH_TRAINING_LABEL_INVENTORY_FILE,
+    index=False,
+)
+
+section4wh_history_scoring_fields_df.to_csv(
+    SECTION4WH_HISTORY_SCORE_FIELDS_FILE,
+    index=False,
+)
+
+section4wh_feature_importance_support_df.to_csv(
+    SECTION4WH_FEATURE_IMPORTANCE_SUPPORT_FILE,
+    index=False,
+)
+
+section4wh_validation_checks_df.to_csv(
+    SECTION4WH_VALIDATION_FILE,
+    index=False,
+)
+
+
+with open(
+    SECTION4WH_SUMMARY_FILE,
+    ""w"",
+    encoding=""utf-8"",
+) as file:
+
+    json.dump(
+        section4wh_root_cause_preflight_summary,
+        file,
+        indent=2,
+        ensure_ascii=False,
+    )
+
+
+section4wh_saved_files = [
+    SECTION4WH_RUNTIME_INVENTORY_FILE,
+    SECTION4WH_MODEL_INTERFACE_FILE,
+    SECTION4WH_CLASS_COVERAGE_FILE,
+    SECTION4WH_TRAINING_LABEL_INVENTORY_FILE,
+    SECTION4WH_HISTORY_SCORE_FIELDS_FILE,
+    SECTION4WH_FEATURE_IMPORTANCE_SUPPORT_FILE,
+    SECTION4WH_VALIDATION_FILE,
+    SECTION4WH_SUMMARY_FILE,
+]
+
+
+assert all(
+    file_path.exists()
+    and file_path.stat().st_size > 0
+    for file_path in section4wh_saved_files
+)
+
+
+assert all(
+    expected_report_root_4wh.resolve()
+    in file_path.resolve().parents
+    for file_path in section4wh_saved_files
+)
+
+
+print()
+print(""SAVED SECTION 4W-H-A REPORTS"")
+print(""-"" * 100)
+
+for file_path in section4wh_saved_files:
+
+    print(
+        file_path
+    )
+
+
+print()
+print(
+    ""✅ SECTION 4W-H-A QUICK ATTACK DOMINANCE ""
+    ""ROOT-CAUSE PREFLIGHT PASSED""
+)"
+67,621,"print(""="" * 100)
+print(""SECTION 4W-H-A FINAL ROOT-CAUSE BRANCH"")
+print(""="" * 100)
+
+for key in [
+    ""model_source"",
+    ""model_type"",
+    ""preprocessor_source"",
+    ""preprocessor_available"",
+    ""model_class_count"",
+    ""quick_attack_class_present"",
+    ""ascension_class_present"",
+    ""predict_proba_available"",
+    ""decision_function_available"",
+    ""training_label_evidence_available"",
+    ""training_label_dataframe_candidates"",
+    ""feature_importance_mode"",
+    ""root_cause_preflight_diagnosis"",
+    ""next_stage"",
+]:
+    print(
+        f""{key:62}: ""
+        f""{section4wh_root_cause_preflight_summary.get(key)}""
+    )"
+70,37175,"# ======================================================================================
+# SECTION 4W-H-B — QUICK ATTACK VERSUS ASCENSION SCORE AND LABEL ANALYSIS
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4W-H-B — QUICK ATTACK VERSUS ASCENSION SCORE AND LABEL ANALYSIS"")
+print(""="" * 100)
+
+from pathlib import Path
+import json
+
+import numpy as np
+import pandas as pd
+
+
+# --------------------------------------------------------------------------------------
+# 1. Validate Section 4W-H-A and expanded-evaluation dependencies
+# --------------------------------------------------------------------------------------
+
+REQUIRED_SECTION4WHB_OBJECTS = [
+    ""section4wh_model"",
+    ""section4wh_preprocessor"",
+    ""section4wh_model_classes"",
+    ""section4wh_training_label_inventory_df"",
+    ""section4wh_root_cause_preflight_summary"",
+    ""section4wf_design_df"",
+    ""build_section4wf_evaluation_state"",
+    ""build_legality_aware_feature_row"",
+    ""NOTEBOOK54_SECTION4_REPORT_DIRECTORY"",
+]
+
+
+missing_section4whb_objects = [
+    object_name
+    for object_name in REQUIRED_SECTION4WHB_OBJECTS
+    if object_name not in globals()
+]
+
+
+assert not missing_section4whb_objects, (
+    ""Required Section 4W-H-B objects are missing: ""
+    f""{missing_section4whb_objects}""
+)
+
+
+assert (
+    section4wh_root_cause_preflight_summary[
+        ""next_stage""
+    ]
+    ==
+    ""QUICK_ATTACK_VERSUS_ASCENSION_SCORE_AND_LABEL_ANALYSIS""
+)
+
+
+assert len(
+    section4wf_design_df
+) == 184
+
+
+assert hasattr(
+    section4wh_model,
+    ""predict_proba"",
+)
+
+
+assert section4wh_preprocessor is not None
+
+
+SECTION4WHB_REPORT_DIRECTORY = Path(
+    NOTEBOOK54_SECTION4_REPORT_DIRECTORY
+)
+
+
+SECTION4WHB_REPORT_DIRECTORY.mkdir(
+    parents=True,
+    exist_ok=True,
+)
+
+
+expected_report_directory_4whb = Path(
+    r""D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge""
+    r""\reports\notebook54\section4""
+)
+
+
+assert (
+    SECTION4WHB_REPORT_DIRECTORY.resolve()
+    ==
+    expected_report_directory_4whb.resolve()
+)
+
+
+print()
+print(""SECTION 4W-H-B REPORT DIRECTORY"")
+print(""-"" * 100)
+print(SECTION4WHB_REPORT_DIRECTORY)
+
+
+# --------------------------------------------------------------------------------------
+# 2. Resolve model-class positions
+# --------------------------------------------------------------------------------------
+
+section4whb_model_classes = [
+    str(
+        class_name
+    ).strip()
+    for class_name in section4wh_model_classes
+]
+
+
+section4whb_normalized_classes = [
+    class_name.lower()
+    for class_name in section4whb_model_classes
+]
+
+
+assert ""quick attack"" in section4whb_normalized_classes, (
+    ""Quick Attack is not represented in the model classes.""
+)
+
+
+assert ""ascension"" in section4whb_normalized_classes, (
+    ""Ascension is not represented in the model classes.""
+)
+
+
+SECTION4WHB_QUICK_ATTACK_INDEX = (
+    section4whb_normalized_classes.index(
+        ""quick attack""
+    )
+)
+
+
+SECTION4WHB_ASCENSION_INDEX = (
+    section4whb_normalized_classes.index(
+        ""ascension""
+    )
+)
+
+
+section4whb_class_position_df = pd.DataFrame(
+    [
+        {
+            ""action_name"":
+                class_name,
+
+            ""class_index"":
+                int(
+                    class_index
+                ),
+
+            ""target_action"":
+                class_name.lower()
+                in {
+                    ""quick attack"",
+                    ""ascension"",
+                },
+        }
+        for class_index, class_name
+        in enumerate(
+            section4whb_model_classes
+        )
+    ]
+)
+
+
+print()
+print(""MODEL CLASS POSITIONS"")
+print(""-"" * 100)
+
+display(
+    section4whb_class_position_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 3. Transform one raw policy feature row safely
+# --------------------------------------------------------------------------------------
+
+def transform_section4whb_feature_row(
+    raw_feature_df,
+):
+    """"""
+    Transform one raw Notebook 53 feature row using the live preprocessor.
+    """"""
+
+    transformed_features = (
+        section4wh_preprocessor.transform(
+            raw_feature_df
+        )
+    )
+
+    return transformed_features
+
+
+# --------------------------------------------------------------------------------------
+# 4. Score all 184 expanded multi-action cases
+# --------------------------------------------------------------------------------------
+
+section4whb_score_rows = []
+section4whb_score_error_rows = []
+
+
+for case_index, design_row in (
+    section4wf_design_df.iterrows()
+):
+
+    try:
+
+        evaluation_state = (
+            build_section4wf_evaluation_state(
+                design_row
+            )
+        )
+
+
+        legal_moves = design_row[
+            ""legal_moves""
+        ]
+
+
+        raw_feature_df = (
+            build_legality_aware_feature_row(
+                battle_state=evaluation_state,
+                legal_moves=legal_moves,
+                side_mode=""PRESERVE"",
+            )
+        )
+
+
+        transformed_features = (
+            transform_section4whb_feature_row(
+                raw_feature_df
+            )
+        )
+
+
+        probability_matrix = (
+            section4wh_model.predict_proba(
+                transformed_features
+            )
+        )
+
+
+        probability_vector = np.asarray(
+            probability_matrix
+        )[0]
+
+
+        quick_attack_probability = float(
+            probability_vector[
+                SECTION4WHB_QUICK_ATTACK_INDEX
+            ]
+        )
+
+
+        ascension_probability = float(
+            probability_vector[
+                SECTION4WHB_ASCENSION_INDEX
+            ]
+        )
+
+
+        predicted_class_index = int(
+            np.argmax(
+                probability_vector
+            )
+        )
+
+
+        predicted_action = (
+            section4whb_model_classes[
+                predicted_class_index
+            ]
+        )
+
+
+        quick_attack_minus_ascension = float(
+            quick_attack_probability
+            -
+            ascension_probability
+        )
+
+
+        target_probability_total = float(
+            quick_attack_probability
+            +
+            ascension_probability
+        )
+
+
+        conditional_quick_attack_share = float(
+            quick_attack_probability
+            /
+            target_probability_total
+        ) if target_probability_total > 0 else np.nan
+
+
+        conditional_ascension_share = float(
+            ascension_probability
+            /
+            target_probability_total
+        ) if target_probability_total > 0 else np.nan
+
+
+        section4whb_score_rows.append(
+            {
+                ""expanded_pair_id"":
+                    str(
+                        design_row[
+                            ""expanded_pair_id""
+                        ]
+                    ),
+
+                ""comparison_case_id"":
+                    str(
+                        design_row[
+                            ""comparison_case_id""
+                        ]
+                    ),
+
+                ""evaluation_side"":
+                    str(
+                        design_row[
+                            ""evaluation_side""
+                        ]
+                    ),
+
+                ""source_pair_id"":
+                    str(
+                        design_row[
+                            ""source_pair_id""
+                        ]
+                    ),
+
+                ""source_scenario_id"":
+                    str(
+                        design_row[
+                            ""source_scenario_id""
+                        ]
+                    ),
+
+                ""source_condition_id"":
+                    str(
+                        design_row[
+                            ""source_condition_id""
+                        ]
+                    ),
+
+                ""source_turn_number"":
+                    int(
+                        design_row[
+                            ""source_turn_number""
+                        ]
+                    ),
+
+                ""expansion_variant_id"":
+                    str(
+                        design_row[
+                            ""expansion_variant_id""
+                        ]
+                    ),
+
+                ""acting_card"":
+                    str(
+                        design_row[
+                            ""acting_card""
+                        ]
+                    ),
+
+                ""opposing_card"":
+                    str(
+                        design_row[
+                            ""opposing_card""
+                        ]
+                    ),
+
+                ""acting_energy"":
+                    float(
+                        design_row[
+                            ""acting_energy""
+                        ]
+                    ),
+
+                ""opposing_energy"":
+                    float(
+                        design_row[
+                            ""opposing_energy""
+                        ]
+                    ),
+
+                ""predicted_action"":
+                    predicted_action,
+
+                ""quick_attack_probability"":
+                    quick_attack_probability,
+
+                ""ascension_probability"":
+                    ascension_probability,
+
+                ""quick_attack_minus_ascension"":
+                    quick_attack_minus_ascension,
+
+                ""target_probability_total"":
+                    target_probability_total,
+
+                ""conditional_quick_attack_share"":
+                    conditional_quick_attack_share,
+
+                ""conditional_ascension_share"":
+                    conditional_ascension_share,
+
+                ""quick_attack_score_advantage"":
+                    bool(
+                        quick_attack_probability
+                        >
+                        ascension_probability
+                    ),
+
+                ""ascension_score_advantage"":
+                    bool(
+                        ascension_probability
+                        >
+                        quick_attack_probability
+                    ),
+
+                ""score_tie"":
+                    bool(
+                        np.isclose(
+                            quick_attack_probability,
+                            ascension_probability,
+                        )
+                    ),
+            }
+        )
+
+
+        print(
+            f""[{case_index + 1:03d}/184] ""
+            f""{design_row['comparison_case_id']} — ""
+            f""QA={quick_attack_probability:.4f} — ""
+            f""ASC={ascension_probability:.4f} — ""
+            f""GAP={quick_attack_minus_ascension:.4f}""
+        )
+
+
+    except Exception as error:
+
+        section4whb_score_error_rows.append(
+            {
+                ""comparison_case_id"":
+                    str(
+                        design_row[
+                            ""comparison_case_id""
+                        ]
+                    ),
+
+                ""expanded_pair_id"":
+                    str(
+                        design_row[
+                            ""expanded_pair_id""
+                        ]
+                    ),
+
+                ""error_type"":
+                    type(
+                        error
+                    ).__name__,
+
+                ""error_message"":
+                    str(
+                        error
+                    ),
+            }
+        )
+
+
+section4whb_score_df = pd.DataFrame(
+    section4whb_score_rows
+)
+
+
+section4whb_score_errors_df = pd.DataFrame(
+    section4whb_score_error_rows,
+    columns=[
+        ""comparison_case_id"",
+        ""expanded_pair_id"",
+        ""error_type"",
+        ""error_message"",
+    ],
+)
+
+
+print()
+print(""SECTION 4W-H-B SCORE ERRORS"")
+print(""-"" * 100)
+
+if section4whb_score_errors_df.empty:
+
+    print(
+        ""No model-score extraction errors were recorded.""
+    )
+
+else:
+
+    display(
+        section4whb_score_errors_df
+    )
+
+
+assert section4whb_score_errors_df.empty, (
+    ""One or more probability-score cases failed.""
+)
+
+
+assert len(
+    section4whb_score_df
+) == 184
+
+
+# --------------------------------------------------------------------------------------
+# 5. Overall Quick Attack versus Ascension probability profile
+# --------------------------------------------------------------------------------------
+
+section4whb_overall_score_profile_df = pd.DataFrame(
+    [
+        {
+            ""action_name"":
+                ""Quick Attack"",
+
+            ""average_probability"":
+                float(
+                    section4whb_score_df[
+                        ""quick_attack_probability""
+                    ].mean()
+                ),
+
+            ""median_probability"":
+                float(
+                    section4whb_score_df[
+                        ""quick_attack_probability""
+                    ].median()
+                ),
+
+            ""minimum_probability"":
+                float(
+                    section4whb_score_df[
+                        ""quick_attack_probability""
+                    ].min()
+                ),
+
+            ""maximum_probability"":
+                float(
+                    section4whb_score_df[
+                        ""quick_attack_probability""
+                    ].max()
+                ),
+
+            ""score_advantage_cases"":
+                int(
+                    section4whb_score_df[
+                        ""quick_attack_score_advantage""
+                    ].astype(bool).sum()
+                ),
+        },
+        {
+            ""action_name"":
+                ""Ascension"",
+
+            ""average_probability"":
+                float(
+                    section4whb_score_df[
+                        ""ascension_probability""
+                    ].mean()
+                ),
+
+            ""median_probability"":
+                float(
+                    section4whb_score_df[
+                        ""ascension_probability""
+                    ].median()
+                ),
+
+            ""minimum_probability"":
+                float(
+                    section4whb_score_df[
+                        ""ascension_probability""
+                    ].min()
+                ),
+
+            ""maximum_probability"":
+                float(
+                    section4whb_score_df[
+                        ""ascension_probability""
+                    ].max()
+                ),
+
+            ""score_advantage_cases"":
+                int(
+                    section4whb_score_df[
+                        ""ascension_score_advantage""
+                    ].astype(bool).sum()
+                ),
+        },
+    ]
+)
+
+
+print()
+print(""OVERALL QUICK ATTACK VERSUS ASCENSION SCORE PROFILE"")
+print(""-"" * 100)
+
+display(
+    section4whb_overall_score_profile_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 6. Score profile by energy variant and side
+# --------------------------------------------------------------------------------------
+
+section4whb_variant_side_score_df = (
+    section4whb_score_df
+    .groupby(
+        [
+            ""expansion_variant_id"",
+            ""evaluation_side"",
+        ],
+        dropna=False,
+    )
+    .agg(
+        cases=(
+            ""comparison_case_id"",
+            ""size"",
+        ),
+
+        average_quick_attack_probability=(
+            ""quick_attack_probability"",
+            ""mean"",
+        ),
+
+        average_ascension_probability=(
+            ""ascension_probability"",
+            ""mean"",
+        ),
+
+        average_score_gap=(
+            ""quick_attack_minus_ascension"",
+            ""mean"",
+        ),
+
+        minimum_score_gap=(
+            ""quick_attack_minus_ascension"",
+            ""min"",
+        ),
+
+        maximum_score_gap=(
+            ""quick_attack_minus_ascension"",
+            ""max"",
+        ),
+
+        quick_attack_advantage_cases=(
+            ""quick_attack_score_advantage"",
+            ""sum"",
+        ),
+
+        ascension_advantage_cases=(
+            ""ascension_score_advantage"",
+            ""sum"",
+        ),
+    )
+    .reset_index()
+)
+
+
+print()
+print(""SCORE PROFILE BY ENERGY VARIANT AND SIDE"")
+print(""-"" * 100)
+
+display(
+    section4whb_variant_side_score_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 7. Identify the closest Ascension challenge cases
+# --------------------------------------------------------------------------------------
+
+section4whb_closest_ascension_cases_df = (
+    section4whb_score_df
+    .sort_values(
+        [
+            ""quick_attack_minus_ascension"",
+            ""comparison_case_id"",
+        ],
+        ascending=[
+            True,
+            True,
+        ],
+    )
+    .head(25)
+    .reset_index(drop=True)
+)
+
+
+print()
+print(""CASES WHERE ASCENSION CAME CLOSEST TO QUICK ATTACK"")
+print(""-"" * 100)
+
+display(
+    section4whb_closest_ascension_cases_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 8. Training-label evidence inventory
+# --------------------------------------------------------------------------------------
+
+section4whb_label_inventory_df = (
+    section4wh_training_label_inventory_df
+    .copy()
+    .reset_index(drop=True)
+)
+
+
+if not section4whb_label_inventory_df.empty:
+
+    section4whb_label_inventory_df[
+        ""target_label_rows""
+    ] = (
+        section4whb_label_inventory_df[
+            ""quick_attack_rows""
+        ]
+        +
+        section4whb_label_inventory_df[
+            ""ascension_rows""
+        ]
+    )
+
+
+    section4whb_label_inventory_df[
+        ""quick_attack_target_share""
+    ] = np.where(
+        section4whb_label_inventory_df[
+            ""target_label_rows""
+        ] > 0,
+
+        section4whb_label_inventory_df[
+            ""quick_attack_rows""
+        ]
+        /
+        section4whb_label_inventory_df[
+            ""target_label_rows""
+        ],
+
+        np.nan,
+    )
+
+
+    section4whb_label_inventory_df[
+        ""ascension_target_share""
+    ] = np.where(
+        section4whb_label_inventory_df[
+            ""target_label_rows""
+        ] > 0,
+
+        section4whb_label_inventory_df[
+            ""ascension_rows""
+        ]
+        /
+        section4whb_label_inventory_df[
+            ""target_label_rows""
+        ],
+
+        np.nan,
+    )
+
+
+    section4whb_label_inventory_df = (
+        section4whb_label_inventory_df
+        .sort_values(
+            [
+                ""target_label_rows"",
+                ""dataframe_name"",
+            ],
+            ascending=[
+                False,
+                True,
+            ],
+        )
+        .reset_index(drop=True)
+    )
+
+
+print()
+print(""QUICK ATTACK / ASCENSION LABEL-EVIDENCE INVENTORY"")
+print(""-"" * 100)
+
+if section4whb_label_inventory_df.empty:
+
+    print(
+        ""No identifiable live training-label evidence was available.""
+    )
+
+else:
+
+    display(
+        section4whb_label_inventory_df
+    )
+
+
+# --------------------------------------------------------------------------------------
+# 9. Select the strongest candidate label source without double-counting
+# --------------------------------------------------------------------------------------
+
+section4whb_primary_label_source = """"
+section4whb_primary_label_column = """"
+section4whb_primary_quick_attack_rows = 0
+section4whb_primary_ascension_rows = 0
+section4whb_primary_target_rows = 0
+section4whb_primary_quick_attack_share = np.nan
+
+
+if not section4whb_label_inventory_df.empty:
+
+    likely_training_mask_4whb = (
+        section4whb_label_inventory_df[
+            ""dataframe_name""
+        ]
+        .astype(str)
+        .str.lower()
+        .str.contains(
+            ""train|training|curriculum|policy|replay"",
+            regex=True,
+        )
+    )
+
+
+    likely_training_candidates_4whb = (
+        section4whb_label_inventory_df.loc[
+            likely_training_mask_4whb
+        ]
+        .copy()
+    )
+
+
+    if likely_training_candidates_4whb.empty:
+
+        likely_training_candidates_4whb = (
+            section4whb_label_inventory_df
+            .copy()
+        )
+
+
+    primary_label_row_4whb = (
+        likely_training_candidates_4whb
+        .sort_values(
+            [
+                ""target_label_rows"",
+                ""rows"",
+            ],
+            ascending=[
+                False,
+                False,
+            ],
+        )
+        .iloc[0]
+    )
+
+
+    section4whb_primary_label_source = str(
+        primary_label_row_4whb[
+            ""dataframe_name""
+        ]
+    )
+
+
+    section4whb_primary_label_column = str(
+        primary_label_row_4whb[
+            ""label_column""
+        ]
+    )
+
+
+    section4whb_primary_quick_attack_rows = int(
+        primary_label_row_4whb[
+            ""quick_attack_rows""
+        ]
+    )
+
+
+    section4whb_primary_ascension_rows = int(
+        primary_label_row_4whb[
+            ""ascension_rows""
+        ]
+    )
+
+
+    section4whb_primary_target_rows = int(
+        primary_label_row_4whb[
+            ""target_label_rows""
+        ]
+    )
+
+
+    section4whb_primary_quick_attack_share = float(
+        primary_label_row_4whb[
+            ""quick_attack_target_share""
+        ]
+    )
+
+
+section4whb_primary_label_source_df = pd.DataFrame(
+    [
+        {
+            ""primary_dataframe"":
+                section4whb_primary_label_source,
+
+            ""primary_label_column"":
+                section4whb_primary_label_column,
+
+            ""quick_attack_rows"":
+                section4whb_primary_quick_attack_rows,
+
+            ""ascension_rows"":
+                section4whb_primary_ascension_rows,
+
+            ""target_label_rows"":
+                section4whb_primary_target_rows,
+
+            ""quick_attack_target_share"":
+                section4whb_primary_quick_attack_share,
+        }
+    ]
+)
+
+
+print()
+print(""PRIMARY TRAINING-LABEL EVIDENCE CANDIDATE"")
+print(""-"" * 100)
+
+display(
+    section4whb_primary_label_source_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 10. Inspect global tree feature importances
+# --------------------------------------------------------------------------------------
+
+section4whb_feature_names = []
+
+
+if hasattr(
+    section4wh_preprocessor,
+    ""get_feature_names_out"",
+):
+
+    try:
+
+        section4whb_feature_names = [
+            str(
+                feature_name
+            )
+            for feature_name in (
+                section4wh_preprocessor
+                .get_feature_names_out()
+            )
+        ]
+
+    except Exception:
+
+        section4whb_feature_names = []
+
+
+section4whb_feature_importances = np.asarray(
+    section4wh_model.feature_importances_
+)
+
+
+if (
+    len(
+        section4whb_feature_names
+    )
+    !=
+    len(
+        section4whb_feature_importances
+    )
+):
+
+    section4whb_feature_names = [
+        f""feature_{feature_index:04d}""
+        for feature_index in range(
+            len(
+                section4whb_feature_importances
+            )
+        )
+    ]
+
+
+section4whb_feature_importance_df = pd.DataFrame(
+    {
+        ""feature_name"":
+            section4whb_feature_names,
+
+        ""feature_importance"":
+            section4whb_feature_importances,
+    }
+)
+
+
+section4whb_feature_importance_df = (
+    section4whb_feature_importance_df
+    .sort_values(
+        ""feature_importance"",
+        ascending=False,
+    )
+    .reset_index(drop=True)
+)
+
+
+section4whb_feature_importance_df[
+    ""importance_rank""
+] = (
+    np.arange(
+        len(
+            section4whb_feature_importance_df
+        )
+    )
+    +
+    1
+)
+
+
+section4whb_top_feature_importance_df = (
+    section4whb_feature_importance_df
+    .head(30)
+    .copy()
+    .reset_index(drop=True)
+)
+
+
+print()
+print(""TOP GLOBAL RANDOM-FOREST FEATURE IMPORTANCES"")
+print(""-"" * 100)
+
+display(
+    section4whb_top_feature_importance_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 11. Calculate core root-cause metrics
+# --------------------------------------------------------------------------------------
+
+section4whb_quick_attack_advantage_cases = int(
+    section4whb_score_df[
+        ""quick_attack_score_advantage""
+    ].astype(bool).sum()
+)
+
+
+section4whb_ascension_advantage_cases = int(
+    section4whb_score_df[
+        ""ascension_score_advantage""
+    ].astype(bool).sum()
+)
+
+
+section4whb_score_tie_cases = int(
+    section4whb_score_df[
+        ""score_tie""
+    ].astype(bool).sum()
+)
+
+
+section4whb_average_quick_attack_probability = float(
+    section4whb_score_df[
+        ""quick_attack_probability""
+    ].mean()
+)
+
+
+section4whb_average_ascension_probability = float(
+    section4whb_score_df[
+        ""ascension_probability""
+    ].mean()
+)
+
+
+section4whb_average_score_gap = float(
+    section4whb_score_df[
+        ""quick_attack_minus_ascension""
+    ].mean()
+)
+
+
+section4whb_minimum_score_gap = float(
+    section4whb_score_df[
+        ""quick_attack_minus_ascension""
+    ].min()
+)
+
+
+section4whb_maximum_score_gap = float(
+    section4whb_score_df[
+        ""quick_attack_minus_ascension""
+    ].max()
+)
+
+
+section4whb_probability_dominance_complete = bool(
+    section4whb_quick_attack_advantage_cases == 184
+)
+
+
+section4whb_training_imbalance_detected = bool(
+    not np.isnan(
+        section4whb_primary_quick_attack_share
+    )
+    and
+    section4whb_primary_quick_attack_share
+    >=
+    0.75
+)
+
+
+# --------------------------------------------------------------------------------------
+# 12. Diagnose the most strongly supported root cause
+# --------------------------------------------------------------------------------------
+
+if (
+    section4whb_probability_dominance_complete
+    and
+    section4whb_training_imbalance_detected
+):
+
+    section4whb_root_cause_diagnosis = (
+        ""MODEL_SCORE_DOMINANCE_WITH_TRAINING_LABEL_IMBALANCE""
+    )
+
+    section4whb_root_cause_text = (
+        ""Quick Attack received a higher model probability than Ascension ""
+        ""in every expanded state. The strongest available label source also ""
+        ""favored Quick Attack, supporting training-distribution imbalance as ""
+        ""a contributing cause.""
+    )
+
+    section4whb_next_stage = (
+        ""ASCENSION_TARGETED_REBALANCING_AND_COUNTERFACTUAL_DESIGN""
+    )
+
+
+elif section4whb_probability_dominance_complete:
+
+    section4whb_root_cause_diagnosis = (
+        ""MODEL_SCORE_DOMINANCE_CONFIRMED_LABEL_CAUSE_NOT_PROVEN""
+    )
+
+    section4whb_root_cause_text = (
+        ""Quick Attack received a higher model probability than Ascension ""
+        ""in every expanded state. Available label evidence does not yet prove ""
+        ""that training-label imbalance is the cause.""
+    )
+
+    section4whb_next_stage = (
+        ""QUICK_ATTACK_SCORE_FEATURE_ATTRIBUTION""
+    )
+
+
+elif section4whb_quick_attack_advantage_cases > 138:
+
+    section4whb_root_cause_diagnosis = (
+        ""SEVERE_QUICK_ATTACK_SCORE_CONCENTRATION""
+    )
+
+    section4whb_root_cause_text = (
+        ""Quick Attack usually received the higher model score, but Ascension ""
+        ""was competitive in some contexts.""
+    )
+
+    section4whb_next_stage = (
+        ""CONTEXTUAL_ASCENSION_OPPORTUNITY_ANALYSIS""
+    )
+
+
+else:
+
+    section4whb_root_cause_diagnosis = (
+        ""ROUTING_OR_POSTPROCESSING_DOMINANCE_SUSPECTED""
+    )
+
+    section4whb_root_cause_text = (
+        ""Raw model probabilities do not fully explain the observed 184-of-184 ""
+        ""Quick Attack selections. Routing or legality postprocessing requires ""
+        ""additional investigation.""
+    )
+
+    section4whb_next_stage = (
+        ""ROUTING_POSTPROCESSING_ROOT_CAUSE_ANALYSIS""
+    )
+
+
+section4whb_root_cause_summary = {
+    ""status"":
+        ""QUICK_ATTACK_VERSUS_ASCENSION_SCORE_AND_LABEL_ANALYSIS_COMPLETE"",
+
+    ""evaluated_cases"":
+        int(
+            len(
+                section4whb_score_df
+            )
+        ),
+
+    ""quick_attack_score_advantage_cases"":
+        section4whb_quick_attack_advantage_cases,
+
+    ""ascension_score_advantage_cases"":
+        section4whb_ascension_advantage_cases,
+
+    ""score_tie_cases"":
+        section4whb_score_tie_cases,
+
+    ""average_quick_attack_probability"":
+        section4whb_average_quick_attack_probability,
+
+    ""average_ascension_probability"":
+        section4whb_average_ascension_probability,
+
+    ""average_quick_attack_minus_ascension"":
+        section4whb_average_score_gap,
+
+    ""minimum_quick_attack_minus_ascension"":
+        section4whb_minimum_score_gap,
+
+    ""maximum_quick_attack_minus_ascension"":
+        section4whb_maximum_score_gap,
+
+    ""probability_dominance_complete"":
+        section4whb_probability_dominance_complete,
+
+    ""primary_label_dataframe"":
+        section4whb_primary_label_source,
+
+    ""primary_label_column"":
+        section4whb_primary_label_column,
+
+    ""primary_quick_attack_rows"":
+        section4whb_primary_quick_attack_rows,
+
+    ""primary_ascension_rows"":
+        section4whb_primary_ascension_rows,
+
+    ""primary_quick_attack_target_share"":
+        (
+            section4whb_primary_quick_attack_share
+            if not np.isnan(
+                section4whb_primary_quick_attack_share
+            )
+            else None
+        ),
+
+    ""training_imbalance_detected"":
+        section4whb_training_imbalance_detected,
+
+    ""feature_importance_rows"":
+        int(
+            len(
+                section4whb_feature_importance_df
+            )
+        ),
+
+    ""root_cause_diagnosis"":
+        section4whb_root_cause_diagnosis,
+
+    ""root_cause_diagnosis_text"":
+        section4whb_root_cause_text,
+
+    ""next_stage"":
+        section4whb_next_stage,
+}
+
+
+print()
+print(""SECTION 4W-H-B SCORE AND LABEL ROOT-CAUSE SUMMARY"")
+print(""-"" * 100)
+
+for key, value in (
+    section4whb_root_cause_summary.items()
+):
+
+    print(
+        f""{key:66}: {value}""
+    )
+
+
+# --------------------------------------------------------------------------------------
+# 13. Validation checks
+# --------------------------------------------------------------------------------------
+
+section4whb_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""correct_d_drive_save_directory"",
+
+            ""passed"":
+                (
+                    SECTION4WHB_REPORT_DIRECTORY.resolve()
+                    ==
+                    expected_report_directory_4whb.resolve()
+                ),
+
+            ""value"":
+                str(
+                    SECTION4WHB_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""expected"":
+                str(
+                    expected_report_directory_4whb.resolve()
+                ),
+        },
+        {
+            ""check"":
+                ""all_184_cases_scored"",
+
+            ""passed"":
+                len(
+                    section4whb_score_df
+                ) == 184
+                and
+                section4whb_score_errors_df.empty,
+
+            ""value"":
+                {
+                    ""completed"":
+                        len(
+                            section4whb_score_df
+                        ),
+
+                    ""failed"":
+                        len(
+                            section4whb_score_errors_df
+                        ),
+                },
+
+            ""expected"":
+                {
+                    ""completed"":
+                        184,
+
+                    ""failed"":
+                        0,
+                },
+        },
+        {
+            ""check"":
+                ""probabilities_within_bounds"",
+
+            ""passed"":
+                (
+                    section4whb_score_df[
+                        ""quick_attack_probability""
+                    ].between(
+                        0.0,
+                        1.0,
+                        inclusive=""both"",
+                    ).all()
+                    and
+                    section4whb_score_df[
+                        ""ascension_probability""
+                    ].between(
+                        0.0,
+                        1.0,
+                        inclusive=""both"",
+                    ).all()
+                ),
+
+            ""value"":
+                True,
+
+            ""expected"":
+                True,
+        },
+        {
+            ""check"":
+                ""target_move_classes_resolved"",
+
+            ""passed"":
+                (
+                    SECTION4WHB_QUICK_ATTACK_INDEX
+                    !=
+                    SECTION4WHB_ASCENSION_INDEX
+                ),
+
+            ""value"":
+                {
+                    ""quick_attack_index"":
+                        SECTION4WHB_QUICK_ATTACK_INDEX,
+
+                    ""ascension_index"":
+                        SECTION4WHB_ASCENSION_INDEX,
+                },
+
+            ""expected"":
+                ""Distinct class positions"",
+        },
+        {
+            ""check"":
+                ""root_cause_diagnosis_recognized"",
+
+            ""passed"":
+                section4whb_root_cause_diagnosis
+                in {
+                    ""MODEL_SCORE_DOMINANCE_WITH_TRAINING_LABEL_IMBALANCE"",
+                    ""MODEL_SCORE_DOMINANCE_CONFIRMED_LABEL_CAUSE_NOT_PROVEN"",
+                    ""SEVERE_QUICK_ATTACK_SCORE_CONCENTRATION"",
+                    ""ROUTING_OR_POSTPROCESSING_DOMINANCE_SUSPECTED"",
+                },
+
+            ""value"":
+                section4whb_root_cause_diagnosis,
+
+            ""expected"":
+                ""Recognized Quick Attack root-cause diagnosis"",
+        },
+    ]
+)
+
+
+print()
+print(""SECTION 4W-H-B VALIDATION CHECKS"")
+print(""-"" * 100)
+
+display(
+    section4whb_validation_checks_df
+)
+
+
+section4whb_checks_failed = int(
+    (
+        ~section4whb_validation_checks_df[
+            ""passed""
+        ].astype(bool)
+    ).sum()
+)
+
+
+assert section4whb_checks_failed == 0, (
+    ""One or more Section 4W-H-B checks failed.""
+)
+
+
+# --------------------------------------------------------------------------------------
+# 14. Save all reports to the correct D-drive folder
+# --------------------------------------------------------------------------------------
+
+SECTION4WHB_CASE_SCORES_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_case_probability_scores.csv""
+)
+
+SECTION4WHB_SCORE_ERRORS_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_score_errors.csv""
+)
+
+SECTION4WHB_OVERALL_SCORE_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_overall_action_score_profile.csv""
+)
+
+SECTION4WHB_VARIANT_SIDE_SCORE_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_score_profile_by_variant_and_side.csv""
+)
+
+SECTION4WHB_CLOSEST_ASCENSION_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_closest_ascension_cases.csv""
+)
+
+SECTION4WHB_LABEL_INVENTORY_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_training_label_evidence.csv""
+)
+
+SECTION4WHB_PRIMARY_LABEL_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_primary_label_source.csv""
+)
+
+SECTION4WHB_FEATURE_IMPORTANCE_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_global_feature_importance.csv""
+)
+
+SECTION4WHB_TOP_FEATURE_IMPORTANCE_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_top_feature_importance.csv""
+)
+
+SECTION4WHB_VALIDATION_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_validation_checks.csv""
+)
+
+SECTION4WHB_SUMMARY_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_score_label_root_cause_summary.json""
+)
+
+
+section4whb_score_df.to_csv(
+    SECTION4WHB_CASE_SCORES_FILE,
+    index=False,
+)
+
+section4whb_score_errors_df.to_csv(
+    SECTION4WHB_SCORE_ERRORS_FILE,
+    index=False,
+)
+
+section4whb_overall_score_profile_df.to_csv(
+    SECTION4WHB_OVERALL_SCORE_FILE,
+    index=False,
+)
+
+section4whb_variant_side_score_df.to_csv(
+    SECTION4WHB_VARIANT_SIDE_SCORE_FILE,
+    index=False,
+)
+
+section4whb_closest_ascension_cases_df.to_csv(
+    SECTION4WHB_CLOSEST_ASCENSION_FILE,
+    index=False,
+)
+
+section4whb_label_inventory_df.to_csv(
+    SECTION4WHB_LABEL_INVENTORY_FILE,
+    index=False,
+)
+
+section4whb_primary_label_source_df.to_csv(
+    SECTION4WHB_PRIMARY_LABEL_FILE,
+    index=False,
+)
+
+section4whb_feature_importance_df.to_csv(
+    SECTION4WHB_FEATURE_IMPORTANCE_FILE,
+    index=False,
+)
+
+section4whb_top_feature_importance_df.to_csv(
+    SECTION4WHB_TOP_FEATURE_IMPORTANCE_FILE,
+    index=False,
+)
+
+section4whb_validation_checks_df.to_csv(
+    SECTION4WHB_VALIDATION_FILE,
+    index=False,
+)
+
+
+with open(
+    SECTION4WHB_SUMMARY_FILE,
+    ""w"",
+    encoding=""utf-8"",
+) as file:
+
+    json.dump(
+        section4whb_root_cause_summary,
+        file,
+        indent=2,
+        ensure_ascii=False,
+    )
+
+
+section4whb_saved_files = [
+    SECTION4WHB_CASE_SCORES_FILE,
+    SECTION4WHB_SCORE_ERRORS_FILE,
+    SECTION4WHB_OVERALL_SCORE_FILE,
+    SECTION4WHB_VARIANT_SIDE_SCORE_FILE,
+    SECTION4WHB_CLOSEST_ASCENSION_FILE,
+    SECTION4WHB_LABEL_INVENTORY_FILE,
+    SECTION4WHB_PRIMARY_LABEL_FILE,
+    SECTION4WHB_FEATURE_IMPORTANCE_FILE,
+    SECTION4WHB_TOP_FEATURE_IMPORTANCE_FILE,
+    SECTION4WHB_VALIDATION_FILE,
+    SECTION4WHB_SUMMARY_FILE,
+]
+
+
+assert all(
+    file_path.exists()
+    and file_path.stat().st_size > 0
+    for file_path in section4whb_saved_files
+)
+
+
+assert all(
+    expected_report_directory_4whb.resolve()
+    in file_path.resolve().parents
+    for file_path in section4whb_saved_files
+)
+
+
+print()
+print(""SAVED SECTION 4W-H-B REPORTS"")
+print(""-"" * 100)
+
+for file_path in section4whb_saved_files:
+
+    print(
+        file_path
+    )
+
+
+print()
+print(
+    ""✅ SECTION 4W-H-B QUICK ATTACK VERSUS ASCENSION ""
+    ""SCORE AND LABEL ANALYSIS PASSED""
+)"
+84,42663,"# ======================================================================================
+# SECTION 4W-H-E — COUNTERFACTUAL LEGAL-SIGNATURE AND STATE-FEATURE TESTING
+# ======================================================================================
+
+print(""="" * 100)
+print(""SECTION 4W-H-E — COUNTERFACTUAL LEGAL-SIGNATURE AND STATE-FEATURE TESTING"")
+print(""="" * 100)
+
+from pathlib import Path
+import json
+
+import numpy as np
+import pandas as pd
+
+
+# --------------------------------------------------------------------------------------
+# 1. Validate required runtime objects
+# --------------------------------------------------------------------------------------
+
+SECTION4WHE_REQUIRED_OBJECTS = [
+    ""section4whb_score_df"",
+    ""section4whd_summary"",
+    ""section4wf_design_df"",
+    ""section4wh_model"",
+    ""section4wh_preprocessor"",
+    ""section4wh_model_classes"",
+    ""build_section4wf_evaluation_state"",
+    ""build_legality_aware_feature_row"",
+    ""NOTEBOOK54_SECTION4_REPORT_DIRECTORY"",
+]
+
+
+section4whe_missing_objects = [
+    object_name
+    for object_name in SECTION4WHE_REQUIRED_OBJECTS
+    if object_name not in globals()
+]
+
+
+print()
+print(""SECTION 4W-H-E OBJECT VALIDATION"")
+print(""-"" * 100)
+
+for object_name in SECTION4WHE_REQUIRED_OBJECTS:
+
+    print(
+        f""{object_name:48}: ""
+        f""{object_name in globals()}""
+    )
+
+
+assert not section4whe_missing_objects, (
+    ""Required Section 4W-H-E objects are missing: ""
+    f""{section4whe_missing_objects}""
+)
+
+
+assert (
+    section4whd_summary[
+        ""next_stage""
+    ]
+    ==
+    ""COUNTERFACTUAL_LEGAL_SIGNATURE_AND_STATE_FEATURE_TESTING""
+)
+
+
+assert len(
+    section4wf_design_df
+) == 184
+
+
+assert hasattr(
+    section4wh_model,
+    ""predict_proba"",
+)
+
+
+# --------------------------------------------------------------------------------------
+# 2. Confirm the permanent D-drive report directory
+# --------------------------------------------------------------------------------------
+
+SECTION4WHE_REPORT_DIRECTORY = Path(
+    NOTEBOOK54_SECTION4_REPORT_DIRECTORY
+)
+
+
+SECTION4WHE_REPORT_DIRECTORY.mkdir(
+    parents=True,
+    exist_ok=True,
+)
+
+
+SECTION4WHE_EXPECTED_REPORT_DIRECTORY = Path(
+    r""D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge""
+    r""\reports\notebook54\section4""
+)
+
+
+assert (
+    SECTION4WHE_REPORT_DIRECTORY.resolve()
+    ==
+    SECTION4WHE_EXPECTED_REPORT_DIRECTORY.resolve()
+), (
+    ""Section 4W-H-E is not using the correct D-drive report directory.\n""
+    f""Resolved path: {SECTION4WHE_REPORT_DIRECTORY.resolve()}""
+)
+
+
+print()
+print(""SECTION 4W-H-E REPORT DIRECTORY"")
+print(""-"" * 100)
+
+print(
+    SECTION4WHE_REPORT_DIRECTORY
+)
+
+
+# --------------------------------------------------------------------------------------
+# 3. Resolve Quick Attack and Ascension model-class positions
+# --------------------------------------------------------------------------------------
+
+section4whe_model_classes = [
+    str(
+        class_name
+    ).strip()
+    for class_name in section4wh_model_classes
+]
+
+
+section4whe_normalized_model_classes = [
+    class_name.lower()
+    for class_name in section4whe_model_classes
+]
+
+
+assert ""quick attack"" in section4whe_normalized_model_classes
+assert ""ascension"" in section4whe_normalized_model_classes
+
+
+SECTION4WHE_QUICK_ATTACK_INDEX = (
+    section4whe_normalized_model_classes.index(
+        ""quick attack""
+    )
+)
+
+
+SECTION4WHE_ASCENSION_INDEX = (
+    section4whe_normalized_model_classes.index(
+        ""ascension""
+    )
+)
+
+
+print()
+print(""TARGET MODEL CLASS POSITIONS"")
+print(""-"" * 100)
+
+print(
+    ""Quick Attack index:"",
+    SECTION4WHE_QUICK_ATTACK_INDEX,
+)
+
+print(
+    ""Ascension index:"",
+    SECTION4WHE_ASCENSION_INDEX,
+)
+
+
+# --------------------------------------------------------------------------------------
+# 4. Safe scoring helper
+# --------------------------------------------------------------------------------------
+
+def score_section4whe_raw_feature_row(
+    raw_feature_df,
+):
+    """"""
+    Transform and score one raw feature row.
+    """"""
+
+    transformed_features = (
+        section4wh_preprocessor.transform(
+            raw_feature_df
+        )
+    )
+
+
+    probability_vector = np.asarray(
+        section4wh_model.predict_proba(
+            transformed_features
+        )
+    )[0]
+
+
+    quick_attack_probability = float(
+        probability_vector[
+            SECTION4WHE_QUICK_ATTACK_INDEX
+        ]
+    )
+
+
+    ascension_probability = float(
+        probability_vector[
+            SECTION4WHE_ASCENSION_INDEX
+        ]
+    )
+
+
+    predicted_action = section4whe_model_classes[
+        int(
+            np.argmax(
+                probability_vector
+            )
+        )
+    ]
+
+
+    return {
+        ""quick_attack_probability"":
+            quick_attack_probability,
+
+        ""ascension_probability"":
+            ascension_probability,
+
+        ""quick_attack_minus_ascension"":
+            float(
+                quick_attack_probability
+                -
+                ascension_probability
+            ),
+
+        ""predicted_action"":
+            predicted_action,
+    }
+
+
+# --------------------------------------------------------------------------------------
+# 5. Define controlled counterfactual interventions
+# --------------------------------------------------------------------------------------
+
+SECTION4WHE_COUNTERFACTUALS = [
+    {
+        ""counterfactual_id"":
+            ""BASELINE"",
+
+        ""counterfactual_group"":
+            ""BASELINE"",
+
+        ""description"":
+            ""Preserve the original expanded case exactly."",
+
+        ""legal_moves"":
+            ""SOURCE"",
+
+        ""acting_energy"":
+            ""SOURCE"",
+
+        ""opposing_energy"":
+            ""SOURCE"",
+
+        ""turn_number"":
+            ""SOURCE"",
+    },
+    {
+        ""counterfactual_id"":
+            ""LEGAL_SIGNATURE_ASCENSION_ONLY"",
+
+        ""counterfactual_group"":
+            ""LEGAL_STRUCTURE"",
+
+        ""description"":
+            ""Expose Ascension as the only legal action."",
+
+        ""legal_moves"":
+            [
+                ""Ascension"",
+            ],
+
+        ""acting_energy"":
+            ""SOURCE"",
+
+        ""opposing_energy"":
+            ""SOURCE"",
+
+        ""turn_number"":
+            ""SOURCE"",
+    },
+    {
+        ""counterfactual_id"":
+            ""LEGAL_SIGNATURE_QUICK_ATTACK_ONLY"",
+
+        ""counterfactual_group"":
+            ""LEGAL_STRUCTURE"",
+
+        ""description"":
+            ""Expose Quick Attack as the only legal action."",
+
+        ""legal_moves"":
+            [
+                ""Quick Attack"",
+            ],
+
+        ""acting_energy"":
+            ""SOURCE"",
+
+        ""opposing_energy"":
+            ""SOURCE"",
+
+        ""turn_number"":
+            ""SOURCE"",
+    },
+    {
+        ""counterfactual_id"":
+            ""LOW_ACTING_ENERGY"",
+
+        ""counterfactual_group"":
+            ""ENERGY_STATE"",
+
+        ""description"":
+            ""Reduce the acting Pokémon to one attached energy."",
+
+        ""legal_moves"":
+            ""SOURCE"",
+
+        ""acting_energy"":
+            1.0,
+
+        ""opposing_energy"":
+            ""SOURCE"",
+
+        ""turn_number"":
+            ""SOURCE"",
+    },
+    {
+        ""counterfactual_id"":
+            ""HIGH_ACTING_ENERGY"",
+
+        ""counterfactual_group"":
+            ""ENERGY_STATE"",
+
+        ""description"":
+            ""Increase the acting Pokémon to four attached energy."",
+
+        ""legal_moves"":
+            ""SOURCE"",
+
+        ""acting_energy"":
+            4.0,
+
+        ""opposing_energy"":
+            ""SOURCE"",
+
+        ""turn_number"":
+            ""SOURCE"",
+    },
+    {
+        ""counterfactual_id"":
+            ""ACTING_ENERGY_DISADVANTAGE"",
+
+        ""counterfactual_group"":
+            ""ENERGY_STATE"",
+
+        ""description"":
+            ""Set acting energy to two and opposing energy to four."",
+
+        ""legal_moves"":
+            ""SOURCE"",
+
+        ""acting_energy"":
+            2.0,
+
+        ""opposing_energy"":
+            4.0,
+
+        ""turn_number"":
+            ""SOURCE"",
+    },
+    {
+        ""counterfactual_id"":
+            ""ACTING_ENERGY_ADVANTAGE"",
+
+        ""counterfactual_group"":
+            ""ENERGY_STATE"",
+
+        ""description"":
+            ""Set acting energy to four and opposing energy to one."",
+
+        ""legal_moves"":
+            ""SOURCE"",
+
+        ""acting_energy"":
+            4.0,
+
+        ""opposing_energy"":
+            1.0,
+
+        ""turn_number"":
+            ""SOURCE"",
+    },
+    {
+        ""counterfactual_id"":
+            ""EARLY_TURN"",
+
+        ""counterfactual_group"":
+            ""TURN_STATE"",
+
+        ""description"":
+            ""Force the decision context to turn one."",
+
+        ""legal_moves"":
+            ""SOURCE"",
+
+        ""acting_energy"":
+            ""SOURCE"",
+
+        ""opposing_energy"":
+            ""SOURCE"",
+
+        ""turn_number"":
+            1,
+    },
+    {
+        ""counterfactual_id"":
+            ""LATE_TURN"",
+
+        ""counterfactual_group"":
+            ""TURN_STATE"",
+
+        ""description"":
+            ""Force the decision context to turn twelve."",
+
+        ""legal_moves"":
+            ""SOURCE"",
+
+        ""acting_energy"":
+            ""SOURCE"",
+
+        ""opposing_energy"":
+            ""SOURCE"",
+
+        ""turn_number"":
+            12,
+    },
+]
+
+
+section4whe_counterfactual_catalog_df = pd.DataFrame(
+    SECTION4WHE_COUNTERFACTUALS
+)
+
+
+print()
+print(""COUNTERFACTUAL INTERVENTION CATALOG"")
+print(""-"" * 100)
+
+display(
+    section4whe_counterfactual_catalog_df
+)
+
+
+assert len(
+    section4whe_counterfactual_catalog_df
+) == 9
+
+
+# --------------------------------------------------------------------------------------
+# 6. Helpers for modifying one reconstructed state
+# --------------------------------------------------------------------------------------
+
+def get_section4whe_active_pokemon(
+    battle_state,
+    evaluation_side,
+):
+    evaluation_side = str(
+        evaluation_side
+    ).strip().title()
+
+
+    side_state = (
+        getattr(
+            battle_state,
+            ""player"",
+        )
+        if evaluation_side == ""Player""
+        else
+        getattr(
+            battle_state,
+            ""opponent"",
+        )
+    )
+
+
+    return getattr(
+        side_state,
+        ""active"",
+    )
+
+
+def get_section4whe_opposing_pokemon(
+    battle_state,
+    evaluation_side,
+):
+    evaluation_side = str(
+        evaluation_side
+    ).strip().title()
+
+
+    side_state = (
+        getattr(
+            battle_state,
+            ""opponent"",
+        )
+        if evaluation_side == ""Player""
+        else
+        getattr(
+            battle_state,
+            ""player"",
+        )
+    )
+
+
+    return getattr(
+        side_state,
+        ""active"",
+    )
+
+
+def apply_section4whe_state_counterfactual(
+    evaluation_state,
+    design_row,
+    counterfactual,
+):
+    """"""
+    Apply energy and turn changes directly to one copied evaluation state.
+    """"""
+
+    evaluation_side = str(
+        design_row[
+            ""evaluation_side""
+        ]
+    ).strip().title()
+
+
+    acting_active = get_section4whe_active_pokemon(
+        evaluation_state,
+        evaluation_side,
+    )
+
+
+    opposing_active = get_section4whe_opposing_pokemon(
+        evaluation_state,
+        evaluation_side,
+    )
+
+
+    acting_energy_mode = counterfactual[
+        ""acting_energy""
+    ]
+
+
+    opposing_energy_mode = counterfactual[
+        ""opposing_energy""
+    ]
+
+
+    turn_mode = counterfactual[
+        ""turn_number""
+    ]
+
+
+    if acting_energy_mode != ""SOURCE"":
+
+        setattr(
+            acting_active,
+            ""attached_energy"",
+            int(
+                float(
+                    acting_energy_mode
+                )
+            ),
+        )
+
+
+    if opposing_energy_mode != ""SOURCE"":
+
+        setattr(
+            opposing_active,
+            ""attached_energy"",
+            int(
+                float(
+                    opposing_energy_mode
+                )
+            ),
+        )
+
+
+    if turn_mode != ""SOURCE"":
+
+        setattr(
+            evaluation_state,
+            ""turn_number"",
+            int(
+                turn_mode
+            ),
+        )
+
+
+    return evaluation_state
+
+
+# --------------------------------------------------------------------------------------
+# 7. Execute all counterfactual tests
+# --------------------------------------------------------------------------------------
+
+section4whe_result_rows = []
+section4whe_error_rows = []
+
+
+for case_index, design_row in (
+    section4wf_design_df.iterrows()
+):
+
+    for counterfactual in SECTION4WHE_COUNTERFACTUALS:
+
+        try:
+
+            evaluation_state = (
+                build_section4wf_evaluation_state(
+                    design_row
+                )
+            )
+
+
+            evaluation_state = (
+                apply_section4whe_state_counterfactual(
+                    evaluation_state,
+                    design_row,
+                    counterfactual,
+                )
+            )
+
+
+            counterfactual_legal_moves = (
+                design_row[
+                    ""legal_moves""
+                ]
+                if counterfactual[
+                    ""legal_moves""
+                ] == ""SOURCE""
+                else counterfactual[
+                    ""legal_moves""
+                ]
+            )
+
+
+            raw_feature_df = (
+                build_legality_aware_feature_row(
+                    battle_state=evaluation_state,
+                    legal_moves=counterfactual_legal_moves,
+                    side_mode=""PRESERVE"",
+                )
+            )
+
+
+            score_result = (
+                score_section4whe_raw_feature_row(
+                    raw_feature_df
+                )
+            )
+
+
+            evaluation_side = str(
+                design_row[
+                    ""evaluation_side""
+                ]
+            ).strip().title()
+
+
+            acting_active = get_section4whe_active_pokemon(
+                evaluation_state,
+                evaluation_side,
+            )
+
+
+            opposing_active = get_section4whe_opposing_pokemon(
+                evaluation_state,
+                evaluation_side,
+            )
+
+
+            observed_acting_energy = float(
+                get_attached_energy(
+                    acting_active
+                )
+            )
+
+
+            observed_opposing_energy = float(
+                get_attached_energy(
+                    opposing_active
+                )
+            )
+
+
+            section4whe_result_rows.append(
+                {
+                    ""expanded_pair_id"":
+                        str(
+                            design_row[
+                                ""expanded_pair_id""
+                            ]
+                        ),
+
+                    ""comparison_case_id"":
+                        str(
+                            design_row[
+                                ""comparison_case_id""
+                            ]
+                        ),
+
+                    ""evaluation_side"":
+                        evaluation_side,
+
+                    ""source_scenario_id"":
+                        str(
+                            design_row[
+                                ""source_scenario_id""
+                            ]
+                        ),
+
+                    ""source_condition_id"":
+                        str(
+                            design_row[
+                                ""source_condition_id""
+                            ]
+                        ),
+
+                    ""source_turn_number"":
+                        int(
+                            design_row[
+                                ""source_turn_number""
+                            ]
+                        ),
+
+                    ""expansion_variant_id"":
+                        str(
+                            design_row[
+                                ""expansion_variant_id""
+                            ]
+                        ),
+
+                    ""counterfactual_id"":
+                        str(
+                            counterfactual[
+                                ""counterfactual_id""
+                            ]
+                        ),
+
+                    ""counterfactual_group"":
+                        str(
+                            counterfactual[
+                                ""counterfactual_group""
+                            ]
+                        ),
+
+                    ""counterfactual_description"":
+                        str(
+                            counterfactual[
+                                ""description""
+                            ]
+                        ),
+
+                    ""legal_moves"":
+                        list(
+                            counterfactual_legal_moves
+                        ),
+
+                    ""legal_move_signature"":
+                        canonical_move_signature(
+                            counterfactual_legal_moves
+                        ),
+
+                    ""observed_turn_number"":
+                        int(
+                            getattr(
+                                evaluation_state,
+                                ""turn_number"",
+                            )
+                        ),
+
+                    ""observed_acting_energy"":
+                        observed_acting_energy,
+
+                    ""observed_opposing_energy"":
+                        observed_opposing_energy,
+
+                    ""observed_energy_difference"":
+                        float(
+                            observed_acting_energy
+                            -
+                            observed_opposing_energy
+                        ),
+
+                    ""predicted_action"":
+                        score_result[
+                            ""predicted_action""
+                        ],
+
+                    ""quick_attack_probability"":
+                        score_result[
+                            ""quick_attack_probability""
+                        ],
+
+                    ""ascension_probability"":
+                        score_result[
+                            ""ascension_probability""
+                        ],
+
+                    ""quick_attack_minus_ascension"":
+                        score_result[
+                            ""quick_attack_minus_ascension""
+                        ],
+
+                    ""quick_attack_score_advantage"":
+                        bool(
+                            score_result[
+                                ""quick_attack_minus_ascension""
+                            ] > 0
+                        ),
+
+                    ""ascension_score_advantage"":
+                        bool(
+                            score_result[
+                                ""quick_attack_minus_ascension""
+                            ] < 0
+                        ),
+                }
+            )
+
+
+        except Exception as error:
+
+            section4whe_error_rows.append(
+                {
+                    ""comparison_case_id"":
+                        str(
+                            design_row[
+                                ""comparison_case_id""
+                            ]
+                        ),
+
+                    ""expanded_pair_id"":
+                        str(
+                            design_row[
+                                ""expanded_pair_id""
+                            ]
+                        ),
+
+                    ""counterfactual_id"":
+                        str(
+                            counterfactual[
+                                ""counterfactual_id""
+                            ]
+                        ),
+
+                    ""error_type"":
+                        type(
+                            error
+                        ).__name__,
+
+                    ""error_message"":
+                        str(
+                            error
+                        ),
+                }
+            )
+
+
+section4whe_counterfactual_results_df = pd.DataFrame(
+    section4whe_result_rows
+)
+
+
+section4whe_counterfactual_errors_df = pd.DataFrame(
+    section4whe_error_rows,
+    columns=[
+        ""comparison_case_id"",
+        ""expanded_pair_id"",
+        ""counterfactual_id"",
+        ""error_type"",
+        ""error_message"",
+    ],
+)
+
+
+print()
+print(""COUNTERFACTUAL EXECUTION ERRORS"")
+print(""-"" * 100)
+
+if section4whe_counterfactual_errors_df.empty:
+
+    print(
+        ""No counterfactual execution errors were recorded.""
+    )
+
+else:
+
+    display(
+        section4whe_counterfactual_errors_df
+    )
+
+
+assert section4whe_counterfactual_errors_df.empty, (
+    ""One or more Section 4W-H-E counterfactual cases failed.""
+)
+
+
+expected_counterfactual_rows_4whe = int(
+    184
+    *
+    len(
+        SECTION4WHE_COUNTERFACTUALS
+    )
+)
+
+
+assert len(
+    section4whe_counterfactual_results_df
+) == expected_counterfactual_rows_4whe
+
+
+# --------------------------------------------------------------------------------------
+# 8. Join each counterfactual against its baseline score
+# --------------------------------------------------------------------------------------
+
+section4whe_baseline_scores_df = (
+    section4whe_counterfactual_results_df.loc[
+        section4whe_counterfactual_results_df[
+            ""counterfactual_id""
+        ].eq(""BASELINE""),
+        [
+            ""comparison_case_id"",
+            ""quick_attack_probability"",
+            ""ascension_probability"",
+            ""quick_attack_minus_ascension"",
+            ""predicted_action"",
+        ],
+    ]
+    .rename(
+        columns={
+            ""quick_attack_probability"":
+                ""baseline_quick_attack_probability"",
+
+            ""ascension_probability"":
+                ""baseline_ascension_probability"",
+
+            ""quick_attack_minus_ascension"":
+                ""baseline_quick_attack_minus_ascension"",
+
+            ""predicted_action"":
+                ""baseline_predicted_action"",
+        }
+    )
+)
+
+
+assert len(
+    section4whe_baseline_scores_df
+) == 184
+
+
+section4whe_counterfactual_results_df = (
+    section4whe_counterfactual_results_df.merge(
+        section4whe_baseline_scores_df,
+        on=""comparison_case_id"",
+        how=""left"",
+        validate=""many_to_one"",
+    )
+)
+
+
+section4whe_counterfactual_results_df[
+    ""quick_attack_probability_change""
+] = (
+    section4whe_counterfactual_results_df[
+        ""quick_attack_probability""
+    ]
+    -
+    section4whe_counterfactual_results_df[
+        ""baseline_quick_attack_probability""
+    ]
+)
+
+
+section4whe_counterfactual_results_df[
+    ""ascension_probability_change""
+] = (
+    section4whe_counterfactual_results_df[
+        ""ascension_probability""
+    ]
+    -
+    section4whe_counterfactual_results_df[
+        ""baseline_ascension_probability""
+    ]
+)
+
+
+section4whe_counterfactual_results_df[
+    ""score_margin_change""
+] = (
+    section4whe_counterfactual_results_df[
+        ""quick_attack_minus_ascension""
+    ]
+    -
+    section4whe_counterfactual_results_df[
+        ""baseline_quick_attack_minus_ascension""
+    ]
+)
+
+
+section4whe_counterfactual_results_df[
+    ""predicted_action_changed""
+] = (
+    section4whe_counterfactual_results_df[
+        ""predicted_action""
+    ]
+    !=
+    section4whe_counterfactual_results_df[
+        ""baseline_predicted_action""
+    ]
+)
+
+
+section4whe_counterfactual_results_df[
+    ""ascension_overtook_quick_attack""
+] = (
+    section4whe_counterfactual_results_df[
+        ""ascension_probability""
+    ]
+    >
+    section4whe_counterfactual_results_df[
+        ""quick_attack_probability""
+    ]
+)
+
+
+# --------------------------------------------------------------------------------------
+# 9. Summarize counterfactual impact
+# --------------------------------------------------------------------------------------
+
+section4whe_counterfactual_summary_df = (
+    section4whe_counterfactual_results_df
+    .groupby(
+        [
+            ""counterfactual_group"",
+            ""counterfactual_id"",
+        ],
+        dropna=False,
+    )
+    .agg(
+        cases=(
+            ""comparison_case_id"",
+            ""size"",
+        ),
+
+        average_quick_attack_probability=(
+            ""quick_attack_probability"",
+            ""mean"",
+        ),
+
+        average_ascension_probability=(
+            ""ascension_probability"",
+            ""mean"",
+        ),
+
+        average_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""mean"",
+        ),
+
+        minimum_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""min"",
+        ),
+
+        maximum_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""max"",
+        ),
+
+        average_quick_attack_probability_change=(
+            ""quick_attack_probability_change"",
+            ""mean"",
+        ),
+
+        average_ascension_probability_change=(
+            ""ascension_probability_change"",
+            ""mean"",
+        ),
+
+        average_score_margin_change=(
+            ""score_margin_change"",
+            ""mean"",
+        ),
+
+        minimum_score_margin_change=(
+            ""score_margin_change"",
+            ""min"",
+        ),
+
+        maximum_score_margin_change=(
+            ""score_margin_change"",
+            ""max"",
+        ),
+
+        predicted_action_changes=(
+            ""predicted_action_changed"",
+            ""sum"",
+        ),
+
+        ascension_overtake_cases=(
+            ""ascension_overtook_quick_attack"",
+            ""sum"",
+        ),
+    )
+    .reset_index()
+)
+
+
+section4whe_counterfactual_summary_df[
+    ""predicted_action_change_rate""
+] = (
+    section4whe_counterfactual_summary_df[
+        ""predicted_action_changes""
+    ]
+    /
+    section4whe_counterfactual_summary_df[
+        ""cases""
+    ]
+)
+
+
+section4whe_counterfactual_summary_df[
+    ""ascension_overtake_rate""
+] = (
+    section4whe_counterfactual_summary_df[
+        ""ascension_overtake_cases""
+    ]
+    /
+    section4whe_counterfactual_summary_df[
+        ""cases""
+    ]
+)
+
+
+section4whe_counterfactual_summary_df[
+    ""average_absolute_score_margin_change""
+] = (
+    section4whe_counterfactual_results_df
+    .groupby(
+        [
+            ""counterfactual_group"",
+            ""counterfactual_id"",
+        ],
+        dropna=False,
+    )[
+        ""score_margin_change""
+    ]
+    .apply(
+        lambda values: float(
+            np.abs(
+                values
+            ).mean()
+        )
+    )
+    .reset_index(drop=True)
+)
+
+
+section4whe_counterfactual_summary_df = (
+    section4whe_counterfactual_summary_df
+    .sort_values(
+        [
+            ""average_absolute_score_margin_change"",
+            ""counterfactual_id"",
+        ],
+        ascending=[
+            False,
+            True,
+        ],
+    )
+    .reset_index(drop=True)
+)
+
+
+print()
+print(""COUNTERFACTUAL IMPACT SUMMARY"")
+print(""-"" * 100)
+
+display(
+    section4whe_counterfactual_summary_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 10. Compare conceptual counterfactual groups
+# --------------------------------------------------------------------------------------
+
+section4whe_group_summary_df = (
+    section4whe_counterfactual_results_df.loc[
+        ~section4whe_counterfactual_results_df[
+            ""counterfactual_group""
+        ].eq(""BASELINE"")
+    ]
+    .groupby(
+        ""counterfactual_group"",
+        dropna=False,
+    )
+    .agg(
+        counterfactual_cases=(
+            ""comparison_case_id"",
+            ""size"",
+        ),
+
+        unique_interventions=(
+            ""counterfactual_id"",
+            ""nunique"",
+        ),
+
+        average_score_margin_change=(
+            ""score_margin_change"",
+            ""mean"",
+        ),
+
+        average_absolute_score_margin_change=(
+            ""score_margin_change"",
+            lambda values: float(
+                np.abs(
+                    values
+                ).mean()
+            ),
+        ),
+
+        maximum_absolute_score_margin_change=(
+            ""score_margin_change"",
+            lambda values: float(
+                np.abs(
+                    values
+                ).max()
+            ),
+        ),
+
+        predicted_action_changes=(
+            ""predicted_action_changed"",
+            ""sum"",
+        ),
+
+        ascension_overtake_cases=(
+            ""ascension_overtook_quick_attack"",
+            ""sum"",
+        ),
+    )
+    .reset_index()
+)
+
+
+section4whe_group_summary_df[
+    ""predicted_action_change_rate""
+] = (
+    section4whe_group_summary_df[
+        ""predicted_action_changes""
+    ]
+    /
+    section4whe_group_summary_df[
+        ""counterfactual_cases""
+    ]
+)
+
+
+section4whe_group_summary_df = (
+    section4whe_group_summary_df
+    .sort_values(
+        ""average_absolute_score_margin_change"",
+        ascending=False,
+    )
+    .reset_index(drop=True)
+)
+
+
+print()
+print(""COUNTERFACTUAL IMPACT BY CONCEPTUAL FEATURE GROUP"")
+print(""-"" * 100)
+
+display(
+    section4whe_group_summary_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 11. Identify strongest Ascension-promoting counterfactual cases
+# --------------------------------------------------------------------------------------
+
+section4whe_ascension_promoting_cases_df = (
+    section4whe_counterfactual_results_df.loc[
+        ~section4whe_counterfactual_results_df[
+            ""counterfactual_id""
+        ].eq(""BASELINE"")
+    ]
+    .sort_values(
+        [
+            ""score_margin_change"",
+            ""quick_attack_minus_ascension"",
+        ],
+        ascending=[
+            True,
+            True,
+        ],
+    )
+    .head(50)
+    .reset_index(drop=True)
+)
+
+
+print()
+print(""STRONGEST ASCENSION-PROMOTING COUNTERFACTUAL CASES"")
+print(""-"" * 100)
+
+display(
+    section4whe_ascension_promoting_cases_df
+)
+
+
+# --------------------------------------------------------------------------------------
+# 12. Identify actual prediction-flip cases
+# --------------------------------------------------------------------------------------
+
+section4whe_prediction_flip_cases_df = (
+    section4whe_counterfactual_results_df.loc[
+        section4whe_counterfactual_results_df[
+            ""predicted_action_changed""
+        ].astype(bool)
+    ]
+    .copy()
+    .sort_values(
+        [
+            ""counterfactual_id"",
+            ""comparison_case_id"",
+        ]
+    )
+    .reset_index(drop=True)
+)
+
+
+print()
+print(""COUNTERFACTUAL PREDICTION-FLIP CASES"")
+print(""-"" * 100)
+
+if section4whe_prediction_flip_cases_df.empty:
+
+    print(
+        ""No counterfactual intervention changed the model's predicted class.""
+    )
+
+else:
+
+    display(
+        section4whe_prediction_flip_cases_df
+    )
+
+
+# --------------------------------------------------------------------------------------
+# 13. Determine strongest causal intervention
+# --------------------------------------------------------------------------------------
+
+section4whe_nonbaseline_summary_df = (
+    section4whe_counterfactual_summary_df.loc[
+        ~section4whe_counterfactual_summary_df[
+            ""counterfactual_id""
+        ].eq(""BASELINE"")
+    ]
+    .copy()
+    .reset_index(drop=True)
+)
+
+
+section4whe_strongest_intervention_row = (
+    section4whe_nonbaseline_summary_df.iloc[0]
+)
+
+
+section4whe_strongest_intervention = str(
+    section4whe_strongest_intervention_row[
+        ""counterfactual_id""
+    ]
+)
+
+
+section4whe_strongest_intervention_group = str(
+    section4whe_strongest_intervention_row[
+        ""counterfactual_group""
+    ]
+)
+
+
+section4whe_strongest_average_absolute_margin_change = float(
+    section4whe_strongest_intervention_row[
+        ""average_absolute_score_margin_change""
+    ]
+)
+
+
+section4whe_total_prediction_flips = int(
+    section4whe_counterfactual_results_df[
+        ""predicted_action_changed""
+    ].astype(bool).sum()
+)
+
+
+section4whe_total_ascension_overtakes = int(
+    section4whe_counterfactual_results_df[
+        ""ascension_overtook_quick_attack""
+    ].astype(bool).sum()
+)
+
+
+section4whe_legal_group_effect = float(
+    section4whe_group_summary_df.loc[
+        section4whe_group_summary_df[
+            ""counterfactual_group""
+        ].eq(""LEGAL_STRUCTURE""),
+        ""average_absolute_score_margin_change"",
+    ].sum()
+)
+
+
+section4whe_energy_group_effect = float(
+    section4whe_group_summary_df.loc[
+        section4whe_group_summary_df[
+            ""counterfactual_group""
+        ].eq(""ENERGY_STATE""),
+        ""average_absolute_score_margin_change"",
+    ].sum()
+)
+
+
+section4whe_turn_group_effect = float(
+    section4whe_group_summary_df.loc[
+        section4whe_group_summary_df[
+            ""counterfactual_group""
+        ].eq(""TURN_STATE""),
+        ""average_absolute_score_margin_change"",
+    ].sum()
+)
+
+
+# --------------------------------------------------------------------------------------
+# 14. Counterfactual diagnosis
+# --------------------------------------------------------------------------------------
+
+if (
+    section4whe_legal_group_effect
+    >
+    section4whe_energy_group_effect
+    and
+    section4whe_legal_group_effect
+    >
+    section4whe_turn_group_effect
+):
+
+    section4whe_counterfactual_diagnosis = (
+        ""LEGAL_STRUCTURE_CAUSAL_EFFECT_DOMINATES""
+    )
+
+    section4whe_counterfactual_text = (
+        ""Counterfactual modifications to legal-move structure produced a larger ""
+        ""average effect on the Quick Attack–Ascension score margin than energy ""
+        ""or turn modifications. This supports legal-signature and action-identity ""
+        ""features as the strongest tested cause of model preference.""
+    )
+
+    section4whe_next_stage = (
+        ""LEGAL_SIGNATURE_DEPENDENCE_REMEDIATION_DESIGN""
+    )
+
+
+elif section4whe_energy_group_effect >= section4whe_legal_group_effect:
+
+    section4whe_counterfactual_diagnosis = (
+        ""ENERGY_STATE_CAUSAL_EFFECT_MATCHES_OR_EXCEEDS_LEGAL_STRUCTURE""
+    )
+
+    section4whe_counterfactual_text = (
+        ""Energy modifications produced an effect equal to or larger than the ""
+        ""legal-structure interventions. The model preference may be jointly driven ""
+        ""by legality structure and energy state.""
+    )
+
+    section4whe_next_stage = (
+        ""ENERGY_AND_LEGAL_STRUCTURE_REMEDIATION_DESIGN""
+    )
+
+
+else:
+
+    section4whe_counterfactual_diagnosis = (
+        ""MIXED_COUNTERFACTUAL_DRIVER_PATTERN""
+    )
+
+    section4whe_counterfactual_text = (
+        ""No single tested conceptual feature group clearly dominated the ""
+        ""counterfactual score changes.""
+    )
+
+    section4whe_next_stage = (
+        ""MULTIFACTOR_REMEDIATION_DESIGN""
+    )
+
+
+section4whe_summary = {
+    ""status"":
+        ""COUNTERFACTUAL_LEGAL_SIGNATURE_AND_STATE_FEATURE_TESTING_COMPLETE"",
+
+    ""base_cases"":
+        int(
+            section4wf_design_df.shape[0]
+        ),
+
+    ""counterfactual_interventions"":
+        int(
+            len(
+                SECTION4WHE_COUNTERFACTUALS
+            )
+        ),
+
+    ""counterfactual_result_rows"":
+        int(
+            len(
+                section4whe_counterfactual_results_df
+            )
+        ),
+
+    ""strongest_intervention"":
+        section4whe_strongest_intervention,
+
+    ""strongest_intervention_group"":
+        section4whe_strongest_intervention_group,
+
+    ""strongest_average_absolute_margin_change"":
+        section4whe_strongest_average_absolute_margin_change,
+
+    ""legal_structure_average_absolute_effect"":
+        section4whe_legal_group_effect,
+
+    ""energy_state_average_absolute_effect"":
+        section4whe_energy_group_effect,
+
+    ""turn_state_average_absolute_effect"":
+        section4whe_turn_group_effect,
+
+    ""total_prediction_flips"":
+        section4whe_total_prediction_flips,
+
+    ""total_ascension_overtake_cases"":
+        section4whe_total_ascension_overtakes,
+
+    ""counterfactual_diagnosis"":
+        section4whe_counterfactual_diagnosis,
+
+    ""counterfactual_diagnosis_text"":
+        section4whe_counterfactual_text,
+
+    ""next_stage"":
+        section4whe_next_stage,
+}
+
+
+print()
+print(""SECTION 4W-H-E COUNTERFACTUAL SUMMARY"")
+print(""-"" * 100)
+
+for key, value in section4whe_summary.items():
+
+    print(
+        f""{key:70}: {value}""
+    )
+
+
+# --------------------------------------------------------------------------------------
+# 15. Validation checks
+# --------------------------------------------------------------------------------------
+
+section4whe_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""correct_d_drive_report_directory"",
+
+            ""passed"":
+                (
+                    SECTION4WHE_REPORT_DIRECTORY.resolve()
+                    ==
+                    SECTION4WHE_EXPECTED_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""value"":
+                str(
+                    SECTION4WHE_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""expected"":
+                str(
+                    SECTION4WHE_EXPECTED_REPORT_DIRECTORY.resolve()
+                ),
+        },
+        {
+            ""check"":
+                ""all_counterfactual_rows_created"",
+
+            ""passed"":
+                len(
+                    section4whe_counterfactual_results_df
+                )
+                ==
+                expected_counterfactual_rows_4whe,
+
+            ""value"":
+                len(
+                    section4whe_counterfactual_results_df
+                ),
+
+            ""expected"":
+                expected_counterfactual_rows_4whe,
+        },
+        {
+            ""check"":
+                ""no_counterfactual_execution_errors"",
+
+            ""passed"":
+                section4whe_counterfactual_errors_df.empty,
+
+            ""value"":
+                len(
+                    section4whe_counterfactual_errors_df
+                ),
+
+            ""expected"":
+                0,
+        },
+        {
+            ""check"":
+                ""all_probability_values_valid"",
+
+            ""passed"":
+                (
+                    section4whe_counterfactual_results_df[
+                        ""quick_attack_probability""
+                    ].between(
+                        0.0,
+                        1.0,
+                        inclusive=""both"",
+                    ).all()
+                    and
+                    section4whe_counterfactual_results_df[
+                        ""ascension_probability""
+                    ].between(
+                        0.0,
+                        1.0,
+                        inclusive=""both"",
+                    ).all()
+                ),
+
+            ""value"":
+                True,
+
+            ""expected"":
+                True,
+        },
+        {
+            ""check"":
+                ""baseline_rows_complete"",
+
+            ""passed"":
+                len(
+                    section4whe_baseline_scores_df
+                ) == 184,
+
+            ""value"":
+                len(
+                    section4whe_baseline_scores_df
+                ),
+
+            ""expected"":
+                184,
+        },
+        {
+            ""check"":
+                ""counterfactual_diagnosis_recognized"",
+
+            ""passed"":
+                section4whe_counterfactual_diagnosis
+                in {
+                    ""LEGAL_STRUCTURE_CAUSAL_EFFECT_DOMINATES"",
+                    ""ENERGY_STATE_CAUSAL_EFFECT_MATCHES_OR_EXCEEDS_LEGAL_STRUCTURE"",
+                    ""MIXED_COUNTERFACTUAL_DRIVER_PATTERN"",
+                },
+
+            ""value"":
+                section4whe_counterfactual_diagnosis,
+
+            ""expected"":
+                ""Recognized counterfactual diagnosis"",
+        },
+    ]
+)
+
+
+print()
+print(""SECTION 4W-H-E VALIDATION CHECKS"")
+print(""-"" * 100)
+
+display(
+    section4whe_validation_checks_df
+)
+
+
+section4whe_checks_failed = int(
+    (
+        ~section4whe_validation_checks_df[
+            ""passed""
+        ].astype(bool)
+    ).sum()
+)
+
+
+assert section4whe_checks_failed == 0, (
+    ""One or more Section 4W-H-E validation checks failed.""
+)
+
+
+# --------------------------------------------------------------------------------------
+# 16. Save Section 4W-H-E reports
+# --------------------------------------------------------------------------------------
+
+SECTION4WHE_COUNTERFACTUAL_RESULTS_FILE = (
+    SECTION4WHE_REPORT_DIRECTORY
+    /
+    ""section4whe_counterfactual_case_results.csv""
+)
+
+SECTION4WHE_COUNTERFACTUAL_ERRORS_FILE = (
+    SECTION4WHE_REPORT_DIRECTORY
+    /
+    ""section4whe_counterfactual_errors.csv""
+)
+
+SECTION4WHE_COUNTERFACTUAL_CATALOG_FILE = (
+    SECTION4WHE_REPORT_DIRECTORY
+    /
+    ""section4whe_counterfactual_catalog.csv""
+)
+
+SECTION4WHE_COUNTERFACTUAL_SUMMARY_FILE = (
+    SECTION4WHE_REPORT_DIRECTORY
+    /
+    ""section4whe_counterfactual_impact_summary.csv""
+)
+
+SECTION4WHE_GROUP_SUMMARY_FILE = (
+    SECTION4WHE_REPORT_DIRECTORY
+    /
+    ""section4whe_counterfactual_group_summary.csv""
+)
+
+SECTION4WHE_ASCENSION_PROMOTING_FILE = (
+    SECTION4WHE_REPORT_DIRECTORY
+    /
+    ""section4whe_strongest_ascension_promoting_cases.csv""
+)
+
+SECTION4WHE_PREDICTION_FLIPS_FILE = (
+    SECTION4WHE_REPORT_DIRECTORY
+    /
+    ""section4whe_prediction_flip_cases.csv""
+)
+
+SECTION4WHE_VALIDATION_FILE = (
+    SECTION4WHE_REPORT_DIRECTORY
+    /
+    ""section4whe_validation_checks.csv""
+)
+
+SECTION4WHE_SUMMARY_FILE = (
+    SECTION4WHE_REPORT_DIRECTORY
+    /
+    ""section4whe_counterfactual_summary.json""
+)
+
+
+section4whe_counterfactual_results_df.to_csv(
+    SECTION4WHE_COUNTERFACTUAL_RESULTS_FILE,
+    index=False,
+)
+
+section4whe_counterfactual_errors_df.to_csv(
+    SECTION4WHE_COUNTERFACTUAL_ERRORS_FILE,
+    index=False,
+)
+
+section4whe_counterfactual_catalog_df.to_csv(
+    SECTION4WHE_COUNTERFACTUAL_CATALOG_FILE,
+    index=False,
+)
+
+section4whe_counterfactual_summary_df.to_csv(
+    SECTION4WHE_COUNTERFACTUAL_SUMMARY_FILE,
+    index=False,
+)
+
+section4whe_group_summary_df.to_csv(
+    SECTION4WHE_GROUP_SUMMARY_FILE,
+    index=False,
+)
+
+section4whe_ascension_promoting_cases_df.to_csv(
+    SECTION4WHE_ASCENSION_PROMOTING_FILE,
+    index=False,
+)
+
+section4whe_prediction_flip_cases_df.to_csv(
+    SECTION4WHE_PREDICTION_FLIPS_FILE,
+    index=False,
+)
+
+section4whe_validation_checks_df.to_csv(
+    SECTION4WHE_VALIDATION_FILE,
+    index=False,
+)
+
+
+with open(
+    SECTION4WHE_SUMMARY_FILE,
+    ""w"",
+    encoding=""utf-8"",
+) as file:
+
+    json.dump(
+        section4whe_summary,
+        file,
+        indent=2,
+        ensure_ascii=False,
+    )
+
+
+section4whe_saved_files = [
+    SECTION4WHE_COUNTERFACTUAL_RESULTS_FILE,
+    SECTION4WHE_COUNTERFACTUAL_ERRORS_FILE,
+    SECTION4WHE_COUNTERFACTUAL_CATALOG_FILE,
+    SECTION4WHE_COUNTERFACTUAL_SUMMARY_FILE,
+    SECTION4WHE_GROUP_SUMMARY_FILE,
+    SECTION4WHE_ASCENSION_PROMOTING_FILE,
+    SECTION4WHE_PREDICTION_FLIPS_FILE,
+    SECTION4WHE_VALIDATION_FILE,
+    SECTION4WHE_SUMMARY_FILE,
+]
+
+
+assert all(
+    file_path.exists()
+    and file_path.stat().st_size > 0
+    for file_path in section4whe_saved_files
+)
+
+
+assert all(
+    SECTION4WHE_EXPECTED_REPORT_DIRECTORY.resolve()
+    in file_path.resolve().parents
+    for file_path in section4whe_saved_files
+)
+
+
+print()
+print(""SAVED SECTION 4W-H-E REPORTS"")
+print(""-"" * 100)
+
+for file_path in section4whe_saved_files:
+
+    print(
+        file_path
+    )
+
+
+print()
+print(
+    ""✅ SECTION 4W-H-E COUNTERFACTUAL LEGAL-SIGNATURE ""
+    ""AND STATE-FEATURE TESTING PASSED""
+)"

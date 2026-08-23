@@ -1,0 +1,79 @@
+{
+    "variant_id": "NB48_LOSS_210__opening_zero_energy__6c0563a01a15",
+    "source_scenario_id": "NB48_LOSS_210",
+    "variant_name": "opening_zero_energy",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "depth_requested": 2,
+    "current_player": "Opponent",
+    "turn_number": 1,
+    "legal_move_count": 1,
+    "legal_moves": [
+        "{'name': 'Pass', 'damage': 0.0, 'energy_cost': 0, 'effect': 'No legal attack was available.'}"
+    ],
+    "state_key": [
+        [
+            [
+                [
+                    "650",
+                    "Bulbasaur"
+                ],
+                80.0,
+                0,
+                "None",
+                0.0,
+                true
+            ],
+            [],
+            6,
+            7
+        ],
+        [
+            [
+                [
+                    "43",
+                    "Eevee"
+                ],
+                50.0,
+                0,
+                "None",
+                0.0,
+                true
+            ],
+            [],
+            6,
+            7
+        ],
+        1,
+        "Opponent"
+    ],
+    "passed": true,
+    "result_type": "SearchResult",
+    "result_repr": "SearchResult(best_move={'name': 'Pass', 'damage': 0.0, 'energy_cost': 0, 'effect': 'No legal attack was available.'}, score=-0.0, completed_depth=2, principal_variation=[{'name': 'Pass', 'damage': 0.0, 'energy_cost': 0, 'effect': 'No legal attack was available.'}, {'name': 'Pass', 'damage': 0.0, 'energy_cost': 0, 'effect': 'No legal attack was available.'}], stats=SearchStats(nodes=3, leaf_nodes=1, terminal_nodes=0, cutoffs=0, transposition_hits=0, transposition_stores=2, transposition_cutoffs=0, killer_hits=0, killer_stores=0, history_hits=0, history_updates=0, completed_depth=2, elapsed_seconds=0.0003690999874379486, depth_nodes={2: 3}, depth_times={2: 0.0003690999874379486}))",
+    "result_attributes": {
+        "best_move": {
+            "name": "Pass",
+            "damage": 0.0,
+            "energy_cost": 0,
+            "effect": "No legal attack was available."
+        },
+        "score": -0.0,
+        "completed_depth": 2,
+        "principal_variation": [
+            {
+                "name": "Pass",
+                "damage": 0.0,
+                "energy_cost": 0,
+                "effect": "No legal attack was available."
+            },
+            {
+                "name": "Pass",
+                "damage": 0.0,
+                "energy_cost": 0,
+                "effect": "No legal attack was available."
+            }
+        ],
+        "stats": "SearchStats(nodes=3, leaf_nodes=1, terminal_nodes=0, cutoffs=0, transposition_hits=0, transposition_stores=2, transposition_cutoffs=0, killer_hits=0, killer_stores=0, history_hits=0, history_updates=0, completed_depth=2, elapsed_seconds=0.0003690999874379486, depth_nodes={2: 3}, depth_times={2: 0.0003690999874379486})"
+    },
+    "error": null
+}

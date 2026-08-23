@@ -1,0 +1,2 @@
+object_name,object_type,callable,matched_keywords,signature,source_file,binding_role
+battle_state_to_policy_features,function,True,"battle, state, policy","(battle_state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None, side_mode: 'str' = 'PRESERVE') -> 'pd.DataFrame'",C:\Users\johnb\AppData\Local\Temp\ipykernel_5544\1074605520.py,candidate_function

@@ -1,0 +1,301 @@
+match_id,baseline_name,evaluated_agent_side,starting_side,player_card,opponent_card
+1,Random Baseline,Player,Player,Pikachu,Charmander
+2,Random Baseline,Opponent,Player,Charmander,Eevee
+3,Random Baseline,Player,Opponent,Squirtle,Charmander
+4,Random Baseline,Opponent,Opponent,Bulbasaur,Eevee
+5,Random Baseline,Player,Player,Eevee,Charmander
+6,Random Baseline,Opponent,Player,Meowth,Eevee
+7,Random Baseline,Player,Opponent,Pikachu,Charmander
+8,Random Baseline,Opponent,Opponent,Charmander,Eevee
+9,Random Baseline,Player,Player,Squirtle,Charmander
+10,Random Baseline,Opponent,Player,Bulbasaur,Eevee
+11,Random Baseline,Player,Opponent,Eevee,Charmander
+12,Random Baseline,Opponent,Opponent,Meowth,Eevee
+13,Random Baseline,Player,Player,Pikachu,Charmander
+14,Random Baseline,Opponent,Player,Charmander,Eevee
+15,Random Baseline,Player,Opponent,Squirtle,Charmander
+16,Random Baseline,Opponent,Opponent,Bulbasaur,Eevee
+17,Random Baseline,Player,Player,Eevee,Charmander
+18,Random Baseline,Opponent,Player,Meowth,Eevee
+19,Random Baseline,Player,Opponent,Pikachu,Charmander
+20,Random Baseline,Opponent,Opponent,Charmander,Eevee
+21,Random Baseline,Player,Player,Squirtle,Charmander
+22,Random Baseline,Opponent,Player,Bulbasaur,Eevee
+23,Random Baseline,Player,Opponent,Eevee,Charmander
+24,Random Baseline,Opponent,Opponent,Meowth,Eevee
+25,Random Baseline,Player,Player,Pikachu,Charmander
+26,Random Baseline,Opponent,Player,Charmander,Eevee
+27,Random Baseline,Player,Opponent,Squirtle,Charmander
+28,Random Baseline,Opponent,Opponent,Bulbasaur,Eevee
+29,Random Baseline,Player,Player,Eevee,Charmander
+30,Random Baseline,Opponent,Player,Meowth,Eevee
+31,Random Baseline,Player,Opponent,Pikachu,Charmander
+32,Random Baseline,Opponent,Opponent,Charmander,Eevee
+33,Random Baseline,Player,Player,Squirtle,Charmander
+34,Random Baseline,Opponent,Player,Bulbasaur,Eevee
+35,Random Baseline,Player,Opponent,Eevee,Charmander
+36,Random Baseline,Opponent,Opponent,Meowth,Eevee
+37,Random Baseline,Player,Player,Pikachu,Charmander
+38,Random Baseline,Opponent,Player,Charmander,Eevee
+39,Random Baseline,Player,Opponent,Squirtle,Charmander
+40,Random Baseline,Opponent,Opponent,Bulbasaur,Eevee
+41,Random Baseline,Player,Player,Eevee,Charmander
+42,Random Baseline,Opponent,Player,Meowth,Eevee
+43,Random Baseline,Player,Opponent,Pikachu,Charmander
+44,Random Baseline,Opponent,Opponent,Charmander,Eevee
+45,Random Baseline,Player,Player,Squirtle,Charmander
+46,Random Baseline,Opponent,Player,Bulbasaur,Eevee
+47,Random Baseline,Player,Opponent,Eevee,Charmander
+48,Random Baseline,Opponent,Opponent,Meowth,Eevee
+49,Random Baseline,Player,Player,Pikachu,Charmander
+50,Random Baseline,Opponent,Player,Charmander,Eevee
+51,Random Baseline,Player,Opponent,Squirtle,Charmander
+52,Random Baseline,Opponent,Opponent,Bulbasaur,Eevee
+53,Random Baseline,Player,Player,Eevee,Charmander
+54,Random Baseline,Opponent,Player,Meowth,Eevee
+55,Random Baseline,Player,Opponent,Pikachu,Charmander
+56,Random Baseline,Opponent,Opponent,Charmander,Eevee
+57,Random Baseline,Player,Player,Squirtle,Charmander
+58,Random Baseline,Opponent,Player,Bulbasaur,Eevee
+59,Random Baseline,Player,Opponent,Eevee,Charmander
+60,Random Baseline,Opponent,Opponent,Meowth,Eevee
+61,Random Baseline,Player,Player,Pikachu,Charmander
+62,Random Baseline,Opponent,Player,Charmander,Eevee
+63,Random Baseline,Player,Opponent,Squirtle,Charmander
+64,Random Baseline,Opponent,Opponent,Bulbasaur,Eevee
+65,Random Baseline,Player,Player,Eevee,Charmander
+66,Random Baseline,Opponent,Player,Meowth,Eevee
+67,Random Baseline,Player,Opponent,Pikachu,Charmander
+68,Random Baseline,Opponent,Opponent,Charmander,Eevee
+69,Random Baseline,Player,Player,Squirtle,Charmander
+70,Random Baseline,Opponent,Player,Bulbasaur,Eevee
+71,Random Baseline,Player,Opponent,Eevee,Charmander
+72,Random Baseline,Opponent,Opponent,Meowth,Eevee
+73,Random Baseline,Player,Player,Pikachu,Charmander
+74,Random Baseline,Opponent,Player,Charmander,Eevee
+75,Random Baseline,Player,Opponent,Squirtle,Charmander
+76,Random Baseline,Opponent,Opponent,Bulbasaur,Eevee
+77,Random Baseline,Player,Player,Eevee,Charmander
+78,Random Baseline,Opponent,Player,Meowth,Eevee
+79,Random Baseline,Player,Opponent,Pikachu,Charmander
+80,Random Baseline,Opponent,Opponent,Charmander,Eevee
+81,Random Baseline,Player,Player,Squirtle,Charmander
+82,Random Baseline,Opponent,Player,Bulbasaur,Eevee
+83,Random Baseline,Player,Opponent,Eevee,Charmander
+84,Random Baseline,Opponent,Opponent,Meowth,Eevee
+85,Random Baseline,Player,Player,Pikachu,Charmander
+86,Random Baseline,Opponent,Player,Charmander,Eevee
+87,Random Baseline,Player,Opponent,Squirtle,Charmander
+88,Random Baseline,Opponent,Opponent,Bulbasaur,Eevee
+89,Random Baseline,Player,Player,Eevee,Charmander
+90,Random Baseline,Opponent,Player,Meowth,Eevee
+91,Random Baseline,Player,Opponent,Pikachu,Charmander
+92,Random Baseline,Opponent,Opponent,Charmander,Eevee
+93,Random Baseline,Player,Player,Squirtle,Charmander
+94,Random Baseline,Opponent,Player,Bulbasaur,Eevee
+95,Random Baseline,Player,Opponent,Eevee,Charmander
+96,Random Baseline,Opponent,Opponent,Meowth,Eevee
+97,Random Baseline,Player,Player,Pikachu,Charmander
+98,Random Baseline,Opponent,Player,Charmander,Eevee
+99,Random Baseline,Player,Opponent,Squirtle,Charmander
+100,Random Baseline,Opponent,Opponent,Bulbasaur,Eevee
+101,Greedy Damage Baseline,Player,Player,Pikachu,Charmander
+102,Greedy Damage Baseline,Opponent,Player,Charmander,Eevee
+103,Greedy Damage Baseline,Player,Opponent,Squirtle,Charmander
+104,Greedy Damage Baseline,Opponent,Opponent,Bulbasaur,Eevee
+105,Greedy Damage Baseline,Player,Player,Eevee,Charmander
+106,Greedy Damage Baseline,Opponent,Player,Meowth,Eevee
+107,Greedy Damage Baseline,Player,Opponent,Pikachu,Charmander
+108,Greedy Damage Baseline,Opponent,Opponent,Charmander,Eevee
+109,Greedy Damage Baseline,Player,Player,Squirtle,Charmander
+110,Greedy Damage Baseline,Opponent,Player,Bulbasaur,Eevee
+111,Greedy Damage Baseline,Player,Opponent,Eevee,Charmander
+112,Greedy Damage Baseline,Opponent,Opponent,Meowth,Eevee
+113,Greedy Damage Baseline,Player,Player,Pikachu,Charmander
+114,Greedy Damage Baseline,Opponent,Player,Charmander,Eevee
+115,Greedy Damage Baseline,Player,Opponent,Squirtle,Charmander
+116,Greedy Damage Baseline,Opponent,Opponent,Bulbasaur,Eevee
+117,Greedy Damage Baseline,Player,Player,Eevee,Charmander
+118,Greedy Damage Baseline,Opponent,Player,Meowth,Eevee
+119,Greedy Damage Baseline,Player,Opponent,Pikachu,Charmander
+120,Greedy Damage Baseline,Opponent,Opponent,Charmander,Eevee
+121,Greedy Damage Baseline,Player,Player,Squirtle,Charmander
+122,Greedy Damage Baseline,Opponent,Player,Bulbasaur,Eevee
+123,Greedy Damage Baseline,Player,Opponent,Eevee,Charmander
+124,Greedy Damage Baseline,Opponent,Opponent,Meowth,Eevee
+125,Greedy Damage Baseline,Player,Player,Pikachu,Charmander
+126,Greedy Damage Baseline,Opponent,Player,Charmander,Eevee
+127,Greedy Damage Baseline,Player,Opponent,Squirtle,Charmander
+128,Greedy Damage Baseline,Opponent,Opponent,Bulbasaur,Eevee
+129,Greedy Damage Baseline,Player,Player,Eevee,Charmander
+130,Greedy Damage Baseline,Opponent,Player,Meowth,Eevee
+131,Greedy Damage Baseline,Player,Opponent,Pikachu,Charmander
+132,Greedy Damage Baseline,Opponent,Opponent,Charmander,Eevee
+133,Greedy Damage Baseline,Player,Player,Squirtle,Charmander
+134,Greedy Damage Baseline,Opponent,Player,Bulbasaur,Eevee
+135,Greedy Damage Baseline,Player,Opponent,Eevee,Charmander
+136,Greedy Damage Baseline,Opponent,Opponent,Meowth,Eevee
+137,Greedy Damage Baseline,Player,Player,Pikachu,Charmander
+138,Greedy Damage Baseline,Opponent,Player,Charmander,Eevee
+139,Greedy Damage Baseline,Player,Opponent,Squirtle,Charmander
+140,Greedy Damage Baseline,Opponent,Opponent,Bulbasaur,Eevee
+141,Greedy Damage Baseline,Player,Player,Eevee,Charmander
+142,Greedy Damage Baseline,Opponent,Player,Meowth,Eevee
+143,Greedy Damage Baseline,Player,Opponent,Pikachu,Charmander
+144,Greedy Damage Baseline,Opponent,Opponent,Charmander,Eevee
+145,Greedy Damage Baseline,Player,Player,Squirtle,Charmander
+146,Greedy Damage Baseline,Opponent,Player,Bulbasaur,Eevee
+147,Greedy Damage Baseline,Player,Opponent,Eevee,Charmander
+148,Greedy Damage Baseline,Opponent,Opponent,Meowth,Eevee
+149,Greedy Damage Baseline,Player,Player,Pikachu,Charmander
+150,Greedy Damage Baseline,Opponent,Player,Charmander,Eevee
+151,Greedy Damage Baseline,Player,Opponent,Squirtle,Charmander
+152,Greedy Damage Baseline,Opponent,Opponent,Bulbasaur,Eevee
+153,Greedy Damage Baseline,Player,Player,Eevee,Charmander
+154,Greedy Damage Baseline,Opponent,Player,Meowth,Eevee
+155,Greedy Damage Baseline,Player,Opponent,Pikachu,Charmander
+156,Greedy Damage Baseline,Opponent,Opponent,Charmander,Eevee
+157,Greedy Damage Baseline,Player,Player,Squirtle,Charmander
+158,Greedy Damage Baseline,Opponent,Player,Bulbasaur,Eevee
+159,Greedy Damage Baseline,Player,Opponent,Eevee,Charmander
+160,Greedy Damage Baseline,Opponent,Opponent,Meowth,Eevee
+161,Greedy Damage Baseline,Player,Player,Pikachu,Charmander
+162,Greedy Damage Baseline,Opponent,Player,Charmander,Eevee
+163,Greedy Damage Baseline,Player,Opponent,Squirtle,Charmander
+164,Greedy Damage Baseline,Opponent,Opponent,Bulbasaur,Eevee
+165,Greedy Damage Baseline,Player,Player,Eevee,Charmander
+166,Greedy Damage Baseline,Opponent,Player,Meowth,Eevee
+167,Greedy Damage Baseline,Player,Opponent,Pikachu,Charmander
+168,Greedy Damage Baseline,Opponent,Opponent,Charmander,Eevee
+169,Greedy Damage Baseline,Player,Player,Squirtle,Charmander
+170,Greedy Damage Baseline,Opponent,Player,Bulbasaur,Eevee
+171,Greedy Damage Baseline,Player,Opponent,Eevee,Charmander
+172,Greedy Damage Baseline,Opponent,Opponent,Meowth,Eevee
+173,Greedy Damage Baseline,Player,Player,Pikachu,Charmander
+174,Greedy Damage Baseline,Opponent,Player,Charmander,Eevee
+175,Greedy Damage Baseline,Player,Opponent,Squirtle,Charmander
+176,Greedy Damage Baseline,Opponent,Opponent,Bulbasaur,Eevee
+177,Greedy Damage Baseline,Player,Player,Eevee,Charmander
+178,Greedy Damage Baseline,Opponent,Player,Meowth,Eevee
+179,Greedy Damage Baseline,Player,Opponent,Pikachu,Charmander
+180,Greedy Damage Baseline,Opponent,Opponent,Charmander,Eevee
+181,Greedy Damage Baseline,Player,Player,Squirtle,Charmander
+182,Greedy Damage Baseline,Opponent,Player,Bulbasaur,Eevee
+183,Greedy Damage Baseline,Player,Opponent,Eevee,Charmander
+184,Greedy Damage Baseline,Opponent,Opponent,Meowth,Eevee
+185,Greedy Damage Baseline,Player,Player,Pikachu,Charmander
+186,Greedy Damage Baseline,Opponent,Player,Charmander,Eevee
+187,Greedy Damage Baseline,Player,Opponent,Squirtle,Charmander
+188,Greedy Damage Baseline,Opponent,Opponent,Bulbasaur,Eevee
+189,Greedy Damage Baseline,Player,Player,Eevee,Charmander
+190,Greedy Damage Baseline,Opponent,Player,Meowth,Eevee
+191,Greedy Damage Baseline,Player,Opponent,Pikachu,Charmander
+192,Greedy Damage Baseline,Opponent,Opponent,Charmander,Eevee
+193,Greedy Damage Baseline,Player,Player,Squirtle,Charmander
+194,Greedy Damage Baseline,Opponent,Player,Bulbasaur,Eevee
+195,Greedy Damage Baseline,Player,Opponent,Eevee,Charmander
+196,Greedy Damage Baseline,Opponent,Opponent,Meowth,Eevee
+197,Greedy Damage Baseline,Player,Player,Pikachu,Charmander
+198,Greedy Damage Baseline,Opponent,Player,Charmander,Eevee
+199,Greedy Damage Baseline,Player,Opponent,Squirtle,Charmander
+200,Greedy Damage Baseline,Opponent,Opponent,Bulbasaur,Eevee
+201,Depth-6 Search Baseline,Player,Player,Pikachu,Charmander
+202,Depth-6 Search Baseline,Opponent,Player,Charmander,Eevee
+203,Depth-6 Search Baseline,Player,Opponent,Squirtle,Charmander
+204,Depth-6 Search Baseline,Opponent,Opponent,Bulbasaur,Eevee
+205,Depth-6 Search Baseline,Player,Player,Eevee,Charmander
+206,Depth-6 Search Baseline,Opponent,Player,Meowth,Eevee
+207,Depth-6 Search Baseline,Player,Opponent,Pikachu,Charmander
+208,Depth-6 Search Baseline,Opponent,Opponent,Charmander,Eevee
+209,Depth-6 Search Baseline,Player,Player,Squirtle,Charmander
+210,Depth-6 Search Baseline,Opponent,Player,Bulbasaur,Eevee
+211,Depth-6 Search Baseline,Player,Opponent,Eevee,Charmander
+212,Depth-6 Search Baseline,Opponent,Opponent,Meowth,Eevee
+213,Depth-6 Search Baseline,Player,Player,Pikachu,Charmander
+214,Depth-6 Search Baseline,Opponent,Player,Charmander,Eevee
+215,Depth-6 Search Baseline,Player,Opponent,Squirtle,Charmander
+216,Depth-6 Search Baseline,Opponent,Opponent,Bulbasaur,Eevee
+217,Depth-6 Search Baseline,Player,Player,Eevee,Charmander
+218,Depth-6 Search Baseline,Opponent,Player,Meowth,Eevee
+219,Depth-6 Search Baseline,Player,Opponent,Pikachu,Charmander
+220,Depth-6 Search Baseline,Opponent,Opponent,Charmander,Eevee
+221,Depth-6 Search Baseline,Player,Player,Squirtle,Charmander
+222,Depth-6 Search Baseline,Opponent,Player,Bulbasaur,Eevee
+223,Depth-6 Search Baseline,Player,Opponent,Eevee,Charmander
+224,Depth-6 Search Baseline,Opponent,Opponent,Meowth,Eevee
+225,Depth-6 Search Baseline,Player,Player,Pikachu,Charmander
+226,Depth-6 Search Baseline,Opponent,Player,Charmander,Eevee
+227,Depth-6 Search Baseline,Player,Opponent,Squirtle,Charmander
+228,Depth-6 Search Baseline,Opponent,Opponent,Bulbasaur,Eevee
+229,Depth-6 Search Baseline,Player,Player,Eevee,Charmander
+230,Depth-6 Search Baseline,Opponent,Player,Meowth,Eevee
+231,Depth-6 Search Baseline,Player,Opponent,Pikachu,Charmander
+232,Depth-6 Search Baseline,Opponent,Opponent,Charmander,Eevee
+233,Depth-6 Search Baseline,Player,Player,Squirtle,Charmander
+234,Depth-6 Search Baseline,Opponent,Player,Bulbasaur,Eevee
+235,Depth-6 Search Baseline,Player,Opponent,Eevee,Charmander
+236,Depth-6 Search Baseline,Opponent,Opponent,Meowth,Eevee
+237,Depth-6 Search Baseline,Player,Player,Pikachu,Charmander
+238,Depth-6 Search Baseline,Opponent,Player,Charmander,Eevee
+239,Depth-6 Search Baseline,Player,Opponent,Squirtle,Charmander
+240,Depth-6 Search Baseline,Opponent,Opponent,Bulbasaur,Eevee
+241,Depth-6 Search Baseline,Player,Player,Eevee,Charmander
+242,Depth-6 Search Baseline,Opponent,Player,Meowth,Eevee
+243,Depth-6 Search Baseline,Player,Opponent,Pikachu,Charmander
+244,Depth-6 Search Baseline,Opponent,Opponent,Charmander,Eevee
+245,Depth-6 Search Baseline,Player,Player,Squirtle,Charmander
+246,Depth-6 Search Baseline,Opponent,Player,Bulbasaur,Eevee
+247,Depth-6 Search Baseline,Player,Opponent,Eevee,Charmander
+248,Depth-6 Search Baseline,Opponent,Opponent,Meowth,Eevee
+249,Depth-6 Search Baseline,Player,Player,Pikachu,Charmander
+250,Depth-6 Search Baseline,Opponent,Player,Charmander,Eevee
+251,Depth-6 Search Baseline,Player,Opponent,Squirtle,Charmander
+252,Depth-6 Search Baseline,Opponent,Opponent,Bulbasaur,Eevee
+253,Depth-6 Search Baseline,Player,Player,Eevee,Charmander
+254,Depth-6 Search Baseline,Opponent,Player,Meowth,Eevee
+255,Depth-6 Search Baseline,Player,Opponent,Pikachu,Charmander
+256,Depth-6 Search Baseline,Opponent,Opponent,Charmander,Eevee
+257,Depth-6 Search Baseline,Player,Player,Squirtle,Charmander
+258,Depth-6 Search Baseline,Opponent,Player,Bulbasaur,Eevee
+259,Depth-6 Search Baseline,Player,Opponent,Eevee,Charmander
+260,Depth-6 Search Baseline,Opponent,Opponent,Meowth,Eevee
+261,Depth-6 Search Baseline,Player,Player,Pikachu,Charmander
+262,Depth-6 Search Baseline,Opponent,Player,Charmander,Eevee
+263,Depth-6 Search Baseline,Player,Opponent,Squirtle,Charmander
+264,Depth-6 Search Baseline,Opponent,Opponent,Bulbasaur,Eevee
+265,Depth-6 Search Baseline,Player,Player,Eevee,Charmander
+266,Depth-6 Search Baseline,Opponent,Player,Meowth,Eevee
+267,Depth-6 Search Baseline,Player,Opponent,Pikachu,Charmander
+268,Depth-6 Search Baseline,Opponent,Opponent,Charmander,Eevee
+269,Depth-6 Search Baseline,Player,Player,Squirtle,Charmander
+270,Depth-6 Search Baseline,Opponent,Player,Bulbasaur,Eevee
+271,Depth-6 Search Baseline,Player,Opponent,Eevee,Charmander
+272,Depth-6 Search Baseline,Opponent,Opponent,Meowth,Eevee
+273,Depth-6 Search Baseline,Player,Player,Pikachu,Charmander
+274,Depth-6 Search Baseline,Opponent,Player,Charmander,Eevee
+275,Depth-6 Search Baseline,Player,Opponent,Squirtle,Charmander
+276,Depth-6 Search Baseline,Opponent,Opponent,Bulbasaur,Eevee
+277,Depth-6 Search Baseline,Player,Player,Eevee,Charmander
+278,Depth-6 Search Baseline,Opponent,Player,Meowth,Eevee
+279,Depth-6 Search Baseline,Player,Opponent,Pikachu,Charmander
+280,Depth-6 Search Baseline,Opponent,Opponent,Charmander,Eevee
+281,Depth-6 Search Baseline,Player,Player,Squirtle,Charmander
+282,Depth-6 Search Baseline,Opponent,Player,Bulbasaur,Eevee
+283,Depth-6 Search Baseline,Player,Opponent,Eevee,Charmander
+284,Depth-6 Search Baseline,Opponent,Opponent,Meowth,Eevee
+285,Depth-6 Search Baseline,Player,Player,Pikachu,Charmander
+286,Depth-6 Search Baseline,Opponent,Player,Charmander,Eevee
+287,Depth-6 Search Baseline,Player,Opponent,Squirtle,Charmander
+288,Depth-6 Search Baseline,Opponent,Opponent,Bulbasaur,Eevee
+289,Depth-6 Search Baseline,Player,Player,Eevee,Charmander
+290,Depth-6 Search Baseline,Opponent,Player,Meowth,Eevee
+291,Depth-6 Search Baseline,Player,Opponent,Pikachu,Charmander
+292,Depth-6 Search Baseline,Opponent,Opponent,Charmander,Eevee
+293,Depth-6 Search Baseline,Player,Player,Squirtle,Charmander
+294,Depth-6 Search Baseline,Opponent,Player,Bulbasaur,Eevee
+295,Depth-6 Search Baseline,Player,Opponent,Eevee,Charmander
+296,Depth-6 Search Baseline,Opponent,Opponent,Meowth,Eevee
+297,Depth-6 Search Baseline,Player,Player,Pikachu,Charmander
+298,Depth-6 Search Baseline,Opponent,Player,Charmander,Eevee
+299,Depth-6 Search Baseline,Player,Opponent,Squirtle,Charmander
+300,Depth-6 Search Baseline,Opponent,Opponent,Bulbasaur,Eevee

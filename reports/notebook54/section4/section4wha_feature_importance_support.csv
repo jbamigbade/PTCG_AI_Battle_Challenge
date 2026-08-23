@@ -1,0 +1,2 @@
+importance_mode,model_has_feature_importances,model_has_coefficients,model_has_predict_proba,preprocessor_available
+TREE_FEATURE_IMPORTANCES,True,False,True,True

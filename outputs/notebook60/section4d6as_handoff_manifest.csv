@@ -1,0 +1,4 @@
+artifact,path,exists,description
+final_benchmark_summary,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook60\section4d6as_final_benchmark_handoff.json,True,Certified historical-vs-controlled benchmark finding
+changed_match_evidence,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook60\section4d6as_changed_matches.csv,True,Exact 11 match-level outcome changes
+decision_divergence_evidence,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook60\section4d6as_decision_audit.csv,True,Historical-vs-controlled Eevee/Charmander decision comparison

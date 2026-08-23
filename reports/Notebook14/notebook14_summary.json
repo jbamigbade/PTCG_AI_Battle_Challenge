@@ -1,0 +1,25 @@
+{
+    "matches_played": 2,
+    "leaderboard": [
+        {
+            "name": "Baseline AI",
+            "matches": 2,
+            "wins": 1,
+            "losses": 1,
+            "draws": 0,
+            "win_rate": 0.5,
+            "average_turns": 3.0,
+            "average_score": 0.0
+        },
+        {
+            "name": "Optimized AI",
+            "matches": 2,
+            "wins": 1,
+            "losses": 1,
+            "draws": 0,
+            "win_rate": 0.5,
+            "average_turns": 3.0,
+            "average_score": 0.0
+        }
+    ]
+}

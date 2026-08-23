@@ -1,0 +1,7 @@
+normalized_side,baseline_name,losses,average_turns,average_elapsed_seconds,total_fallbacks
+Opponent,Depth-6 Search Baseline,34,3.735294117647059,0.003688732367556718,0
+Opponent,Greedy Damage Baseline,34,3.264705882352941,0.0010076264768619236,0
+Opponent,Random Baseline,18,3.5555555555555554,0.0012012333415137666,0
+Player,Depth-6 Search Baseline,8,3.0,0.004350374976638675,0
+Player,Greedy Damage Baseline,8,3.0,0.00087963748956095,0
+Player,Random Baseline,4,3.0,0.000874874967848825,0

@@ -1,0 +1,2 @@
+player_decisions,opponent_decisions,player_multi_attack_states,opponent_multi_attack_states,player_average_energy,opponent_average_energy,player_energy_ready_but_not_legal,player_legal_without_energy_ready,dominant_gap,gap_diagnosis,recommended_next_stage
+103,107,0,23,,,0,103,ENERGY_COST_ENFORCEMENT_INCONSISTENCY,Some attacks are legal despite insufficient estimated energy. Simulator cost enforcement requires inspection.,ENERGY_COST_ENFORCEMENT_AUDIT

@@ -1,0 +1,9 @@
+check,passed,value,expected
+all_simulator_source_files_present,True,5,5
+source_symbols_discovered,True,11,> 0
+instrumentation_schema_complete,True,22,22
+verified_energy_requirement_lookup_complete,True,5,5
+energy_extractor_callable,True,True,True
+instrumentation_record_builder_callable,True,True,True
+design_status_recognized,True,SOURCE_ENERGY_FIELD_IDENTIFIED,Recognized design status
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

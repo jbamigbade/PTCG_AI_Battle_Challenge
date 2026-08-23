@@ -1,0 +1,78 @@
+{
+  "notebook": 61,
+  "title": "Final Benchmark / Competition Evaluation",
+  "evaluation_status": "COMPLETE",
+  "competition_evaluation_gate": "GO_TO_NOTEBOOK_62",
+  "blocking_condition_count": 0,
+  "blocking_conditions": [],
+  "certified_model": {
+    "model_type": "RandomForestClassifier",
+    "runtime_feature_count": 61,
+    "runtime_target_class_count": 11,
+    "tree_count": 500,
+    "source_path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook60\\notebook60_certified_61_feature_random_forest.joblib",
+    "size_bytes": 22396321,
+    "sha256": "615BAF3D5725CCCA0C1C94E37F62FB24A68613248E167BB566BEF4A6D50F2581",
+    "model_copied_in_notebook61": false,
+    "model_modified": false,
+    "retraining_performed": false,
+    "fit_calls_executed": 0
+  },
+  "controlled_benchmark": {
+    "matches": 300,
+    "wins": 183,
+    "win_rate": 0.61,
+    "win_rate_pct": 61.0,
+    "wilson_95_ci_low_pct": 55.3748567961591,
+    "wilson_95_ci_high_pct": 66.34699783690088
+  },
+  "historical_context": {
+    "matches": 300,
+    "wins": 194,
+    "win_rate": 0.6466666666666666,
+    "win_rate_pct": 64.66666666666666,
+    "benchmark_delta_percentage_points": -3.6666666666666625,
+    "identical_match_outcomes": 289,
+    "changed_match_outcomes": 11,
+    "outcome_agreement_rate_pct": 96.33333333333334
+  },
+  "policy_path_diagnostics": {
+    "changed_match_scope": "PLAYER_SIDE_EEVEE_VS_CHARMANDER_ONLY",
+    "historical_win_to_controlled_loss": 11,
+    "historical_loss_to_controlled_win": 0,
+    "greedy_damage_changed_matches": 8,
+    "random_baseline_changed_matches": 3,
+    "depth6_changed_matches": 0,
+    "audited_states": 2,
+    "different_selected_moves": 2,
+    "historical_fallbacks": 2,
+    "controlled_fallbacks": 0,
+    "controlled_selected_moves_legal": true,
+    "policy_paths_behaviorally_identical": false
+  },
+  "scientific_interpretation": {
+    "benchmark_delta_is_clean_model_degradation": false,
+    "independent_policy_significance_test_performed": false,
+    "retraining_required": false,
+    "model_modification_required": false,
+    "additional_tournament_rerun_required": false,
+    "scientific_conclusion": "PRESERVE_CONTROLLED_61_FEATURE_MODEL_AND_REPORT_POLICY_PATH_DIFFERENCE"
+  },
+  "model_lineage": {
+    "notebook57_59_role": "DEVELOPMENTAL_SUPPORTING_EVIDENCE",
+    "notebook59_runtime_feature_count": 46,
+    "notebook59_runtime_class_count": 6,
+    "notebook60_61_role": "AUTHORITATIVE_FINAL_MODEL_EVIDENCE",
+    "notebook60_runtime_feature_count": 61,
+    "notebook60_runtime_class_count": 11,
+    "same_runtime_contract": false
+  },
+  "execution_controls": {
+    "additional_matches_executed_in_notebook61": 0,
+    "fit_calls_executed": 0,
+    "retraining_performed": false,
+    "model_modified": false
+  },
+  "next_notebook": 62,
+  "next_notebook_scope": "FINAL_PACKAGING_DOCUMENTATION_AND_SUBMISSION"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "STRATEGIC_FAILURE_ROOT_CAUSE_ANALYSIS_COMPLETE",
+  "strategic_decisions": 23,
+  "player_controlled_strategic_decisions": 0,
+  "opponent_controlled_strategic_decisions": 23,
+  "player_choice_loss_battles": 0,
+  "losses_without_player_choice": 14,
+  "one_attack_swing_candidates": 5,
+  "unique_player_selected_moves": 0,
+  "player_quick_attack_decisions": 0,
+  "average_strategic_confidence": 0.940608695652174,
+  "principal_root_cause": "Player losses contain no genuine Player-controlled multi-action decisions.",
+  "recommended_strategy": "Improve action availability, card setup, energy progression, or broader simulator mechanics rather than policy selection.",
+  "validation_checks_passed": 10,
+  "validation_checks_failed": 0,
+  "frozen_benchmark_modified": false,
+  "ready_for_counterfactual_analysis": true,
+  "next_stage": "COUNTERFACTUAL_MULTI_ACTION_ANALYSIS"
+}

@@ -1,0 +1,2 @@
+model_type,n_estimators,max_depth,max_features,criterion,random_state,feature_count
+RandomForestClassifier,500,,sqrt,gini,53,64

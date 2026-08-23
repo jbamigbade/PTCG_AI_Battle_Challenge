@@ -1,0 +1,699 @@
+
+====================================================================================================
+encode_r3_feature_row
+====================================================================================================
+
+def encode_r3_feature_row(
+    raw_feature_dataframe,
+):
+    """
+    Convert the 1x41 raw production feature dataframe
+    into the exact 1x46 feature matrix expected by R3.
+
+    This intentionally reconstructs ONLY the retained
+    R3 features and does not recreate discarded features.
+    """
+
+    assert isinstance(
+        raw_feature_dataframe,
+        pd.DataFrame,
+    )
+
+    assert len(
+        raw_feature_dataframe
+    ) == 1, (
+        "R3 live encoder expects exactly one raw row."
+    )
+
+    raw_row = (
+        raw_feature_dataframe
+        .iloc[0]
+    )
+
+    encoded_values = {}
+
+    # ------------------------------------------------------------------
+    # Numeric columns
+    # ------------------------------------------------------------------
+
+    for encoded_name in (
+        R3_NUMERIC_FEATURES
+    ):
+
+        raw_column = encoded_name[
+            len("numeric__"):
+        ]
+
+        assert raw_column in raw_row.index, (
+            f"Required numeric raw feature missing: "
+            f"{raw_column}"
+        )
+
+        numeric_value = pd.to_numeric(
+            raw_row[
+                raw_column
+            ],
+            errors="coerce",
+        )
+
+        if pd.isna(
+            numeric_value
+        ):
+            numeric_value = 0.0
+
+        encoded_values[
+            encoded_name
+        ] = float(
+            numeric_value
+        )
+
+    # ------------------------------------------------------------------
+    # Categorical one-hot columns
+    # ------------------------------------------------------------------
+
+    for encoded_name in (
+        R3_CATEGORICAL_FEATURES
+    ):
+
+        (
+            source_column,
+            category_value,
+        ) = parse_r3_categorical_feature(
+            encoded_name
+        )
+
+        assert source_column in raw_row.index, (
+            f"Required categorical raw feature missing: "
+            f"{source_column}"
+        )
+
+        actual_value = str(
+            raw_row[
+                source_column
+            ]
+        )
+
+        encoded_values[
+            encoded_name
+        ] = float(
+            actual_value
+            ==
+            category_value
+        )
+
+    # ------------------------------------------------------------------
+    # Freeze exact R3 order
+    # ------------------------------------------------------------------
+
+    encoded_dataframe = pd.DataFrame(
+        [
+            encoded_values
+        ],
+        columns=
+            R3_ENCODED_FEATURE_NAMES,
+        dtype=float,
+    )
+
+    assert encoded_dataframe.shape == (
+        1,
+        46,
+    ), (
+        "Unexpected R3 encoded matrix shape: "
+        f"{encoded_dataframe.shape}"
+    )
+
+    assert list(
+        encoded_dataframe.columns
+    ) == R3_ENCODED_FEATURE_NAMES
+
+    assert np.isfinite(
+        encoded_dataframe.to_numpy(
+            dtype=float
+        )
+    ).all()
+
+    return encoded_dataframe
+
+
+====================================================================================================
+R3LivePolicyEngine
+====================================================================================================
+
+class R3LivePolicyEngine:
+    """
+    Live legality-aware wrapper around the approved
+    R3_STATE_CENTRIC_POLICY RandomForestClassifier.
+
+    Contract intentionally mirrors the existing
+    CompetitivePolicyEngine.score_moves() interface.
+    """
+
+    def __init__(
+        self,
+        model,
+        retained_feature_names,
+        *,
+        name: str = "R3_STATE_CENTRIC_POLICY",
+    ) -> None:
+
+        self.model = model
+
+        self.retained_feature_names = list(
+            retained_feature_names
+        )
+
+        self.name = str(
+            name
+        )
+
+        self.checkpoint_epoch = 0
+
+        self.classes_ = [
+            str(value)
+            for value in self.model.classes_
+        ]
+
+        assert len(
+            self.retained_feature_names
+        ) == 46
+
+        assert int(
+            self.model.n_features_in_
+        ) == 46
+
+        assert len(
+            self.classes_
+        ) > 0
+
+        # --------------------------------------------------------------
+        # Normalized class-name lookup
+        # --------------------------------------------------------------
+
+        self._normalized_class_lookup = {
+            normalize_action_name(
+                class_name
+            ):
+            class_name
+
+            for class_name
+            in self.classes_
+        }
+
+
+    # ======================================================================================
+    # Build model-ready 46-feature matrix
+    # ======================================================================================
+
+    def build_model_matrix(
+        self,
+        battle_state: Any,
+        legal_moves: Sequence[Any],
+    ) -> pd.DataFrame:
+
+        legal_moves = list(
+            legal_moves
+        )
+
+        if not legal_moves:
+
+            raise ValueError(
+                "At least one legal move is required."
+            )
+
+        # --------------------------------------------------------------
+        # 41-column production raw feature row
+        # --------------------------------------------------------------
+
+        raw_feature_row = (
+            build_legality_aware_feature_row(
+                battle_state,
+                legal_moves,
+            )
+        )
+
+        assert isinstance(
+            raw_feature_row,
+            pd.DataFrame,
+        )
+
+        assert raw_feature_row.shape == (
+            1,
+            41,
+        ), (
+            "Unexpected raw feature shape: "
+            f"{raw_feature_row.shape}; "
+            "expected (1, 41)."
+        )
+
+        # --------------------------------------------------------------
+        # Exact 46-column R3 matrix
+        # --------------------------------------------------------------
+
+        encoded_feature_row = (
+            encode_r3_feature_row(
+                raw_feature_row
+            )
+        )
+
+        assert isinstance(
+            encoded_feature_row,
+            pd.DataFrame,
+        )
+
+        assert encoded_feature_row.shape == (
+            1,
+            46,
+        ), (
+            "Unexpected R3 feature shape: "
+            f"{encoded_feature_row.shape}; "
+            "expected (1, 46)."
+        )
+
+        assert list(
+            encoded_feature_row.columns
+        ) == self.retained_feature_names, (
+            "R3 encoded feature order does not match "
+            "the frozen retained-feature contract."
+        )
+
+        assert np.isfinite(
+            encoded_feature_row.to_numpy(
+                dtype=float
+            )
+        ).all(), (
+            "R3 feature matrix contains non-finite values."
+        )
+
+        return encoded_feature_row
+
+
+    # ======================================================================================
+    # Score legal moves
+    # ======================================================================================
+
+    def score_moves(
+        self,
+        battle_state: Any,
+        legal_moves: Sequence[Any],
+    ) -> dict[str, Any]:
+
+        legal_moves = list(
+            legal_moves
+        )
+
+        if not legal_moves:
+
+            raise ValueError(
+                "At least one legal move is required."
+            )
+
+        # --------------------------------------------------------------
+        # Build R3 feature matrix
+        # --------------------------------------------------------------
+
+        model_matrix = self.build_model_matrix(
+            battle_state=battle_state,
+            legal_moves=legal_moves,
+        )
+
+        # --------------------------------------------------------------
+        # Full six-class RF probability distribution
+        # --------------------------------------------------------------
+
+        full_probability_matrix = (
+            self.model.predict_proba(
+                model_matrix
+            )
+        )
+
+        assert full_probability_matrix.shape == (
+            1,
+            len(self.classes_),
+        )
+
+        full_probabilities = np.asarray(
+            full_probability_matrix[0],
+            dtype=float,
+        )
+
+        assert np.isfinite(
+            full_probabilities
+        ).all()
+
+        assert np.isclose(
+            full_probabilities.sum(),
+            1.0,
+            atol=1e-9,
+        )
+
+        # --------------------------------------------------------------
+        # Class probability lookup
+        # --------------------------------------------------------------
+
+        class_probability_lookup = {}
+
+        for class_name, probability in zip(
+            self.classes_,
+            full_probabilities,
+        ):
+
+            normalized_name = (
+                normalize_action_name(
+                    class_name
+                )
+            )
+
+            class_probability_lookup[
+                normalized_name
+            ] = float(
+                probability
+            )
+
+        # --------------------------------------------------------------
+        # Resolve actual legal move names
+        # --------------------------------------------------------------
+
+        legal_move_names = [
+            str(
+                extract_move_name(
+                    move
+                )
+            )
+            for move in legal_moves
+        ]
+
+        normalized_legal_names = [
+            normalize_action_name(
+                move_name
+            )
+            for move_name in legal_move_names
+        ]
+
+        # --------------------------------------------------------------
+        # Mask model probabilities to legal actions only
+        # --------------------------------------------------------------
+
+        legal_probability_values = np.asarray(
+            [
+                class_probability_lookup.get(
+                    normalized_name,
+                    0.0,
+                )
+                for normalized_name
+                in normalized_legal_names
+            ],
+            dtype=float,
+        )
+
+        legal_probability_mass = float(
+            legal_probability_values.sum()
+        )
+
+        fallback = False
+
+        if legal_probability_mass > 0.0:
+
+            legal_probabilities = (
+                legal_probability_values
+                /
+                legal_probability_mass
+            )
+
+        else:
+
+            # ----------------------------------------------------------
+            # Defensive fallback:
+            # model classes could not be mapped to available moves.
+            #
+            # Preserve legality by selecting first legal move.
+            # ----------------------------------------------------------
+
+            fallback = True
+
+            legal_probabilities = np.zeros(
+                len(
+                    legal_moves
+                ),
+                dtype=float,
+            )
+
+            legal_probabilities[0] = 1.0
+
+        # --------------------------------------------------------------
+        # Select best LEGAL move
+        # --------------------------------------------------------------
+
+        selected_index = int(
+            np.argmax(
+                legal_probabilities
+            )
+        )
+
+        selected_move = legal_moves[
+            selected_index
+        ]
+
+        selected_move_name = (
+            legal_move_names[
+                selected_index
+            ]
+        )
+
+        confidence = float(
+            legal_probabilities[
+                selected_index
+            ]
+        )
+
+        # --------------------------------------------------------------
+        # Compatibility logits
+        #
+        # RandomForestClassifier does not expose neural-network logits.
+        # Log-probabilities provide a deterministic score vector with
+        # the same ordering as the legal probabilities.
+        # --------------------------------------------------------------
+
+        epsilon = 1e-12
+
+        legal_logits = np.log(
+            np.clip(
+                legal_probabilities,
+                epsilon,
+                1.0,
+            )
+        )
+
+        # --------------------------------------------------------------
+        # Return existing CompetitivePolicyEngine-compatible contract
+        # --------------------------------------------------------------
+
+        return {
+            "selected_index":
+                selected_index,
+
+            "selected_move":
+                selected_move,
+
+            "selected_move_name":
+                selected_move_name,
+
+            "confidence":
+                confidence,
+
+            "probabilities":
+                [
+                    float(value)
+                    for value
+                    in legal_probabilities
+                ],
+
+            "logits":
+                [
+                    float(value)
+                    for value
+                    in legal_logits
+                ],
+
+            "move_names":
+                legal_move_names,
+
+            "checkpoint_epoch":
+                self.checkpoint_epoch,
+
+            "fallback":
+                fallback,
+
+            # Additional diagnostics — harmless to existing callers
+            "policy_name":
+                self.name,
+
+            "full_class_names":
+                list(
+                    self.classes_
+                ),
+
+            "full_class_probabilities":
+                [
+                    float(value)
+                    for value
+                    in full_probabilities
+                ],
+
+            "legal_probability_mass":
+                legal_probability_mass,
+        }
+
+
+    # ======================================================================================
+    # Convenience interface matching existing engine
+    # ======================================================================================
+
+    def choose_move(
+        self,
+        battle_state: Any,
+        legal_moves: Sequence[Any],
+    ) -> Any:
+
+        result = self.score_moves(
+            battle_state=battle_state,
+            legal_moves=legal_moves,
+        )
+
+        return result[
+            "selected_move"
+        ]
+
+
+====================================================================================================
+R3LiveBattleAgent
+====================================================================================================
+
+class R3LiveBattleAgent:
+    """
+    Simulator bridge for the approved
+    R3_STATE_CENTRIC_POLICY.
+
+    Simulator expects:
+        choose_move(state, depth=6) -> AgentDecision
+
+    R3 engine expects:
+        score_moves(battle_state, legal_moves) -> dict
+
+    This bridge intentionally does NOT depend on PyTorch.
+    """
+
+    def __init__(
+        self,
+        policy_engine,
+        name: str = "Team Jesus R3 Live Agent",
+    ) -> None:
+
+        self.policy_engine = policy_engine
+        self.name = str(name)
+
+        self.last_decision = None
+        self.last_policy_result = None
+
+
+    def choose_move(
+        self,
+        state: Any,
+        depth: int = 6,
+    ) -> AgentDecision:
+
+        # ------------------------------------------------------------------
+        # 1. Resolve actual legal moves from current simulator state
+        # ------------------------------------------------------------------
+
+        legal_moves = list(
+            get_current_legal_moves(
+                state
+            )
+        )
+
+        if not legal_moves:
+
+            raise RuntimeError(
+                "R3LiveBattleAgent received a state "
+                "with no legal moves."
+            )
+
+        # ------------------------------------------------------------------
+        # 2. Score legal moves using approved R3 Random Forest engine
+        # ------------------------------------------------------------------
+
+        policy_result = (
+            self.policy_engine.score_moves(
+                battle_state=state,
+                legal_moves=legal_moves,
+            )
+        )
+
+        selected_index = int(
+            policy_result[
+                "selected_index"
+            ]
+        )
+
+        assert (
+            0
+            <= selected_index
+            < len(legal_moves)
+        ), (
+            "R3 returned an invalid legal-move index."
+        )
+
+        selected_move = legal_moves[
+            selected_index
+        ]
+
+        # ------------------------------------------------------------------
+        # 3. Preserve diagnostics
+        # ------------------------------------------------------------------
+
+        self.last_policy_result = (
+            policy_result
+        )
+
+        # ------------------------------------------------------------------
+        # 4. Convert R3 policy output to simulator AgentDecision
+        # ------------------------------------------------------------------
+
+        decision = AgentDecision(
+            move=selected_move,
+
+            score=float(
+                policy_result[
+                    "confidence"
+                ]
+            ),
+
+            search_depth=int(
+                depth
+            ),
+
+            nodes=0,
+
+            principal_variation=[
+                selected_move
+            ],
+        )
+
+        self.last_decision = decision
+
+        return decision
+
+
+    def get_last_decision(
+        self,
+    ):
+
+        return self.last_decision
+
+
+    def get_last_policy_result(
+        self,
+    ):
+
+        return self.last_policy_result
+

@@ -1,0 +1,3 @@
+move_index,move_name,damage,energy_cost,damage_per_energy,opponent_hp,knockout_possible,estimated_hp_after_attack,overkill_damage,is_healing_move,is_retreat_move,is_status_move,is_pass_move,heuristic_score
+1.0,Unknown Move,0.0,0.0,0.0,70.0,0.0,70.0,0.0,0.0,0.0,0.0,0.0,0.0
+2.0,Unknown Move,0.0,2.0,0.0,70.0,0.0,70.0,0.0,0.0,0.0,0.0,0.0,-4.0

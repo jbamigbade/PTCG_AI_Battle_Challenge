@@ -1,0 +1,2 @@
+source_name,class_name,attribute_name,annotation,line_number,energy_related
+battle_state,PokemonState,attached_energy,int,15,True

@@ -1,0 +1,6 @@
+check,passed,value,expected
+all_184_rows_audited,True,184,184
+categorical_encoder_recovered,True,OneHotEncoder,Fitted categorical encoder
+category_compatibility_profile_created,True,10,10
+prediction_agreement_preserved,True,1.0,1.0
+next_stage_resolved,True,AUDIT_MODEL_AND_PREPROCESSOR_SNAPSHOT_IDENTITY,Recognized route

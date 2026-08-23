@@ -1,0 +1,8 @@
+pillar,source,status,scope,direct_final_model_validation
+developmental_explainability,Notebook 57,PASS,Upstream R3 strategy development evidence,False
+developmental_controlled_validation,Notebook 58,PASS,46-feature R3 controlled validation,False
+developmental_live_integration,Notebook 59,PASS,46-feature / 6-class R3 live simulator integration,False
+final_tournament_benchmark,Notebook 60,PASS,61-feature / 11-class certified controlled benchmark,True
+final_runtime_integrity,Notebook 61 Cells 1 and 5,PASS,"Certified model hash, type, feature and class contract",True
+final_policy_path_diagnostics,Notebook 61 Cells 2–4,PASS,Changed-match and fallback-path interpretation,True
+final_statistical_characterization,Notebook 61 Cell 6,PASS,Frozen 300-match benchmark uncertainty characterization,True

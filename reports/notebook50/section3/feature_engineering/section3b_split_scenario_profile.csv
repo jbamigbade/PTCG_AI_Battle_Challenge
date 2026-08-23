@@ -1,0 +1,4 @@
+dataset_split,row_count,scenario_count,variant_count,duplicate_variant_rows,missing_scenario_ids,missing_variant_ids
+train,740,74,740,0,0,0
+validation,160,16,160,0,0,0
+test,160,16,160,0,0,0

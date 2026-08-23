@@ -1,0 +1,10 @@
+check,passed,value,expected,details
+tournament_cards_valid,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+supported_records_present,True,1297,> 0,
+preferred_move_names_valid,True,1,> 0,
+preferred_damage_values_valid,True,"{'minimum': 0.0, 'maximum': 103.0}",Finite and >= 0,
+safe_catalog_fields_valid,True,37,All dictionaries contain only name and damage,
+unsupported_mechanics_excluded,True,True,True,
+custom_moves_not_invented,True,1,> 0,
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",
+candidate_expansion_status_valid,True,SOURCE_BACKED_CANDIDATES_AVAILABLE,Recognized status,

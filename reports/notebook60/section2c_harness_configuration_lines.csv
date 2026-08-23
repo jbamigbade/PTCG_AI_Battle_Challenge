@@ -1,0 +1,589 @@
+file,line_number,source_line
+scripts\07_battle_engine.py,1766,"max_turns=200,"
+scripts\07_battle_engine.py,1777,and turns_completed < max_turns
+scripts\07_battle_engine.py,1797,turns_completed >= max_turns
+scripts\07_battle_engine.py,1906,"max_turns=200,"
+scripts\07_battle_engine.py,2003,"max_turns=200,"
+scripts\07_battle_engine.py,2022,"max_turns=max_turns,"
+scripts\07_battle_engine.py,2055,"max_turns=200,"
+scripts\07_battle_engine.py,2075,"max_turns=200,"
+scripts\10_minimax_opponent_ai.py,1178,"for search_depth in range(1, 5):"
+scripts\10_minimax_opponent_ai.py,1181,"depth=search_depth,"
+scripts\10_minimax_opponent_ai.py,1185,"f""Depth {search_depth}: """
+scripts\10_minimax_opponent_ai.py,1274,"for search_depth in range(1, 5):"
+scripts\10_minimax_opponent_ai.py,1277,"depth=search_depth,"
+scripts\10_minimax_opponent_ai.py,1280,"print(f""\nSearch Depth: {search_depth}"")"
+scripts\10_minimax_opponent_ai.py,1529,"for search_depth in range(1, 7):"
+scripts\10_minimax_opponent_ai.py,1534,"depth=search_depth,"
+scripts\10_minimax_opponent_ai.py,1539,"""depth"": search_depth,"
+scripts\10_minimax_opponent_ai.py,1551,"print(f""\nDepth {search_depth}"")"
+scripts\10_minimax_opponent_ai.py,1730,"for search_depth in range(1, 7):"
+scripts\10_minimax_opponent_ai.py,1735,"depth=search_depth,"
+scripts\10_minimax_opponent_ai.py,1742,"""depth"": search_depth,"
+scripts\10_minimax_opponent_ai.py,1755,"print(f""\nDepth {search_depth}"")"
+scripts\11_advanced_search_engine.py,430,def search_depth(
+scripts\11_advanced_search_engine.py,733,fixed_result = test_engine.search_depth(
+scripts\11_advanced_search_engine.py,1301,def search_depth(
+scripts\11_advanced_search_engine.py,2490,search_result = pokemon_search_engine.search_depth(
+scripts\11_advanced_search_engine.py,3495,def search_depth(
+scripts\11_advanced_search_engine.py,4796,def search_depth(
+scripts\11_advanced_search_engine.py,6139,def search_depth(
+scripts\11_advanced_search_engine.py,6932,result = self.search_depth(
+scripts\11_advanced_search_engine.py,6970,best_result = self.search_depth(
+scripts\11_advanced_search_engine.py,7187,result = engine.search_depth(
+scripts\12_integrated_battle_agent.py,113,search_depth: int
+scripts\12_integrated_battle_agent.py,122,"""depth"": self.search_depth,"
+scripts\12_integrated_battle_agent.py,153,result = self.engine.search_depth(
+scripts\12_integrated_battle_agent.py,167,"search_depth=result.completed_depth,"
+scripts\12_integrated_battle_agent.py,406,assert decision.search_depth == 10
+scripts\12_integrated_battle_agent.py,419,"print(""Completed depth:"", decision.search_depth)"
+scripts\12_integrated_battle_agent.py,540,search_depth: int
+scripts\12_integrated_battle_agent.py,554,"""search_depth"": self.search_depth,"
+scripts\12_integrated_battle_agent.py,649,"search_depth: int = 6,"
+scripts\12_integrated_battle_agent.py,650,"max_turns: int = 20,"
+scripts\12_integrated_battle_agent.py,657,for _ in range(max_turns):
+scripts\12_integrated_battle_agent.py,682,"depth=search_depth,"
+scripts\12_integrated_battle_agent.py,699,"search_depth=decision.search_depth,"
+scripts\12_integrated_battle_agent.py,751,"search_depth=6,"
+scripts\12_integrated_battle_agent.py,752,"max_turns=10,"
+scripts\12_integrated_battle_agent.py,869,"""search_depth"","
+scripts\12_integrated_battle_agent.py,943,"f""  Search depth: {turn.search_depth}"""
+scripts\13_tournament_self_play_evaluation.py,393,"search_depth=6,"
+scripts\13_tournament_self_play_evaluation.py,394,"max_turns=100,"
+scripts\13_tournament_self_play_evaluation.py,412,assert match.search_depth == 6
+scripts\13_tournament_self_play_evaluation.py,413,assert match.max_turns == 100
+scripts\13_tournament_self_play_evaluation.py,457,"search_depth=match.search_depth,"
+scripts\13_tournament_self_play_evaluation.py,458,"max_turns=match.max_turns,"
+scripts\13_tournament_self_play_evaluation.py,658,"number_of_matches: int,"
+scripts\13_tournament_self_play_evaluation.py,659,"alternate_starting_side: bool = True,"
+scripts\13_tournament_self_play_evaluation.py,663,if number_of_matches < 1:
+scripts\13_tournament_self_play_evaluation.py,665,"""number_of_matches must be at least 1."""
+scripts\13_tournament_self_play_evaluation.py,671,for match_index in range(number_of_matches):
+scripts\13_tournament_self_play_evaluation.py,673,if alternate_starting_side:
+scripts\13_tournament_self_play_evaluation.py,725,"number_of_matches=5,"
+scripts\13_tournament_self_play_evaluation.py,726,"alternate_starting_side=True,"
+scripts\14_tournament_manager_leaderboard.py,408,"search_depth=6,"
+scripts\14_tournament_manager_leaderboard.py,409,"max_turns=20,"
+scripts\14_tournament_manager_leaderboard.py,654,"search_depth: int = 6,"
+scripts\14_tournament_manager_leaderboard.py,655,"max_turns: int = 100,"
+scripts\14_tournament_manager_leaderboard.py,673,"search_depth=search_depth,"
+scripts\14_tournament_manager_leaderboard.py,674,"max_turns=max_turns,"
+scripts\14_tournament_manager_leaderboard.py,785,"search_depth=6,"
+scripts\14_tournament_manager_leaderboard.py,786,"max_turns=20,"
+scripts\14_tournament_manager_leaderboard.py,1068,"search_depth=6,"
+scripts\14_tournament_manager_leaderboard.py,1069,"max_turns=20,"
+scripts\15_integrated_ai_evaluation.py,533,"search_depth: int,"
+scripts\15_integrated_ai_evaluation.py,553,"search_depth=search_depth,"
+scripts\15_integrated_ai_evaluation.py,554,"max_turns=20,"
+scripts\15_integrated_ai_evaluation.py,576,"""search_depth"": search_depth,"
+scripts\15_integrated_ai_evaluation.py,600,"search_depth=6,"
+scripts\15_integrated_ai_evaluation.py,618,"assert first_benchmark[""search_depth""] == 6"
+scripts\15_integrated_ai_evaluation.py,687,for search_depth in benchmark_depths:
+scripts\15_integrated_ai_evaluation.py,692,"search_depth=search_depth,"
+scripts\15_integrated_ai_evaluation.py,706,"f""Depth {search_depth:>2} | """
+scripts\15_integrated_ai_evaluation.py,740,"""search_depth"","
+scripts\15_integrated_ai_evaluation.py,764,"benchmark_df[""search_depth""]"
+scripts\15_integrated_ai_evaluation.py,815,"""search_depth"","
+scripts\15_integrated_ai_evaluation.py,870,"depth_summary_df[""search_depth""]"
+scripts\15_integrated_ai_evaluation.py,920,"""search_depth"","
+scripts\15_integrated_ai_evaluation.py,943,"""search_depths"": sorted("
+scripts\15_integrated_ai_evaluation.py,944,"benchmark_df[""search_depth""].unique().tolist()"
+scripts\15_integrated_ai_evaluation.py,967,"assert overall_summary[""search_depths""] == ["
+scripts\27_full_game_simulation.py,712,"search_depth=6,"
+scripts\27_full_game_simulation.py,713,"max_turns=100,"
+scripts\27_full_game_simulation.py,721,"print(""Maximum turns:"", full_game_match.max_turns)"
+scripts\27_full_game_simulation.py,816,"number_of_matches=SERIES_MATCHES,"
+scripts\27_full_game_simulation.py,817,"alternate_starting_side=True,"
+scripts\28_self_play_training_pipeline.py,230,search_depth: int
+scripts\28_self_play_training_pipeline.py,324,"""search_depth"": step.search_depth,"
+scripts\28_self_play_training_pipeline.py,778,\s*Search\s+depth:\s*(?P<search_depth>\d+)\s*\n
+scripts\28_self_play_training_pipeline.py,834,"search_depth=int(values[""search_depth""]),"
+scripts\28_self_play_training_pipeline.py,854,"f""depth={step.search_depth}"""
+scripts\28_self_play_training_pipeline.py,889,assert step.search_depth > 0
+scripts\28_self_play_training_pipeline.py,920,"""search_depth"","
+scripts\28_self_play_training_pipeline.py,929,"assert validation_df[""search_depth""].gt(0).all()"
+scripts\31_opponent_behavior_library.py,162,search_depth: int = 0
+scripts\31_opponent_behavior_library.py,431,"search_depth=6,"
+scripts\31_opponent_behavior_library.py,503,"search_depth=profile.search_depth,"
+scripts\31_opponent_behavior_library.py,873,search_depth: int = 0
+scripts\31_opponent_behavior_library.py,891,"search_depth=profile.search_depth,"
+scripts\31_opponent_behavior_library.py,1107,"""search_depth"": ("
+scripts\31_opponent_behavior_library.py,1108,self.config.search_depth
+scripts\32_mixed_opponent_self_play_benchmarks.py,143,"search_depth=6,"
+scripts\32_mixed_opponent_self_play_benchmarks.py,180,"search_depth=6,"
+scripts\32_mixed_opponent_self_play_benchmarks.py,1372,def search_depth(
+scripts\32_mixed_opponent_self_play_benchmarks.py,1455,assert adapted_decision.search_depth == 6
+scripts\32_mixed_opponent_self_play_benchmarks.py,1533,"search_depth=6,"
+scripts\32_mixed_opponent_self_play_benchmarks.py,1534,"max_turns=100,"
+scripts\32_mixed_opponent_self_play_benchmarks.py,2486,def search_depth(
+scripts\34_policy_dataset_generation.py,820,"decision_df[""search_depth""] = ("
+scripts\34_policy_dataset_generation.py,898,"""search_depth"": None,"
+scripts\34_policy_dataset_generation.py,919,"if pd.notna(row[""search_depth""]):"
+scripts\34_policy_dataset_generation.py,920,"current[""search_depth""] = int(row[""search_depth""])"
+scripts\34_policy_dataset_generation.py,1248,"""search_depth"","
+scripts\34_policy_dataset_generation.py,1563,"""search_depth"","
+scripts\35_policy_dataset_enrichment.py,490,"""search_depth"","
+scripts\35_policy_dataset_enrichment.py,756,"""field"": ""search_depth"","
+scripts\35_policy_dataset_enrichment.py,1089,"(""search_depth"", ""optional""),"
+scripts\35_policy_dataset_enrichment.py,1150,"(""search_depth"", ""search_depth"", ""Direct""),"
+scripts\38_production_replay_adapter.py,252,search_depth: int
+scripts\38_production_replay_adapter.py,673,search_depth: int
+scripts\38_production_replay_adapter.py,814,search_depth = int(
+scripts\38_production_replay_adapter.py,817,"""search_depth"","
+scripts\38_production_replay_adapter.py,846,"search_depth=search_depth,"
+scripts\38_production_replay_adapter.py,876,"""search_depth"": 3,"
+scripts\38_production_replay_adapter.py,903,assert transition.search_depth == 3
+scripts\38_production_replay_adapter.py,1073,"""search_depth"": 2,"
+scripts\38_production_replay_adapter.py,1086,"""search_depth"": 2,"
+scripts\38_production_replay_adapter.py,1098,"""search_depth"": 1,"
+scripts\38_production_replay_adapter.py,1315,"""search_depth"": 2,"
+scripts\38_production_replay_adapter.py,1328,"""search_depth"": 2,"
+scripts\38_production_replay_adapter.py,1340,"""search_depth"": 1,"
+scripts\39_production_dataset_loader.py,1072,"""search_depth"","
+scripts\40_ppo_dataset_interface.py,273,"""search_depth"","
+scripts\40_ppo_dataset_interface.py,386,search_depth: int
+scripts\40_ppo_dataset_interface.py,448,search_depth=int(
+scripts\40_ppo_dataset_interface.py,449,row.search_depth
+scripts\45_final_simulator_integration_and_submission.py,1600,# Create a reusable PPO policy engine under `src/ppo/` that matches the `search_depth()` interface expected by `PokemonBattleAgent`.
+scripts\45_final_simulator_integration_and_submission.py,1654,This module adapts the trained PPO Actor network to the search_depth()
+scripts\45_final_simulator_integration_and_submission.py,1897,engine.search_depth(
+scripts\45_final_simulator_integration_and_submission.py,2154,def search_depth(
+scripts\45_final_simulator_integration_and_submission.py,2286,ppo_engine.search_depth
+scripts\45_final_simulator_integration_and_submission.py,2555,"search_depth=1,"
+scripts\45_final_simulator_integration_and_submission.py,2556,"max_turns=20,"
+scripts\45_final_simulator_integration_and_submission.py,2796,result = self.engine.search_depth(
+scripts\45_final_simulator_integration_and_submission.py,2832,"search_depth=result.completed_depth,"
+scripts\45_final_simulator_integration_and_submission.py,2932,"search_depth=1,"
+scripts\45_final_simulator_integration_and_submission.py,2933,"max_turns=20,"
+scripts\46_competitive_policy_dataset_generation.py,436,search_depth: int
+scripts\46_competitive_policy_dataset_generation.py,453,# + search_depth(...)
+scripts\46_competitive_policy_dataset_generation.py,512,"search_depth=6,"
+scripts\46_competitive_policy_dataset_generation.py,542,"row[""search_depth""]=replay.search_depth"
+scripts\46_competitive_policy_dataset_generation.py,567,"""search_depth"":6,"
+scripts\46_competitive_policy_dataset_generation.py,1308,"""AdvancedSearchEngine.search_depth"":"
+scripts\46_competitive_policy_dataset_generation.py,1309,"AdvancedSearchEngine.search_depth,"
+scripts\46_competitive_policy_dataset_generation.py,1737,AdvancedSearchEngine.search_depth
+scripts\46_competitive_policy_dataset_generation.py,2342,SEARCH_DEPTH = 4
+scripts\46_competitive_policy_dataset_generation.py,2969,search_result = search_engine.search_depth(
+scripts\46_competitive_policy_dataset_generation.py,2971,"depth=SEARCH_DEPTH,"
+scripts\46_competitive_policy_dataset_generation.py,3073,"""search_depth"":"
+scripts\46_competitive_policy_dataset_generation.py,3074,"SEARCH_DEPTH,"
+scripts\46_competitive_policy_dataset_generation.py,3231,"SEARCH_DEPTH,"
+scripts\46_competitive_policy_dataset_generation.py,3444,EXPERT_SEARCH_DEPTH = 4
+scripts\46_competitive_policy_dataset_generation.py,3446,MAX_TURNS_PER_BATTLE = 20
+scripts\46_competitive_policy_dataset_generation.py,4443,MAX_TURNS_PER_BATTLE
+scripts\46_competitive_policy_dataset_generation.py,4497,.search_depth(
+scripts\46_competitive_policy_dataset_generation.py,4501,"EXPERT_SEARCH_DEPTH,"
+scripts\46_competitive_policy_dataset_generation.py,4648,"""search_depth"":"
+scripts\46_competitive_policy_dataset_generation.py,4649,"EXPERT_SEARCH_DEPTH,"
+scripts\46_competitive_policy_dataset_generation.py,4949,"""search_depth"":"
+scripts\46_competitive_policy_dataset_generation.py,4950,"EXPERT_SEARCH_DEPTH,"
+scripts\46_competitive_policy_dataset_generation.py,5070,"EXPERT_SEARCH_DEPTH,"
+scripts\46_competitive_policy_dataset_generation.py,5958,ACTOR_SEARCH_DEPTH = 4
+scripts\46_competitive_policy_dataset_generation.py,5960,ACTOR_MAX_TURNS = 20
+scripts\46_competitive_policy_dataset_generation.py,6415,ACTOR_MAX_TURNS
+scripts\46_competitive_policy_dataset_generation.py,6469,.search_depth(
+scripts\46_competitive_policy_dataset_generation.py,6471,"depth=ACTOR_SEARCH_DEPTH,"
+scripts\46_competitive_policy_dataset_generation.py,6645,"""search_depth"":"
+scripts\46_competitive_policy_dataset_generation.py,6646,"ACTOR_SEARCH_DEPTH,"
+scripts\46_competitive_policy_dataset_generation.py,6962,"""search_depth"":"
+scripts\46_competitive_policy_dataset_generation.py,6963,"ACTOR_SEARCH_DEPTH,"
+scripts\47_competitive_policy_training.py,4751,search_depth: int = 0
+scripts\47_competitive_policy_training.py,4823,search_depth=int(
+scripts\47_competitive_policy_training.py,4895,search_depth=int(
+scripts\47_competitive_policy_training.py,5338,stored_decision.search_depth
+scripts\47_competitive_policy_training.py,5407,"""search_depth"","
+scripts\47_competitive_policy_training.py,5543,"stored_decision.search_depth,"
+scripts\47_competitive_policy_training.py,5828,"if ""max_turns"" in simulation_parameters:"
+scripts\47_competitive_policy_training.py,5830,"""max_turns"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,493,MAX_TURNS_PER_MATCH = 50
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,495,SIMULATOR_SEARCH_DEPTH = 6
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,591,"""max_turns_per_match"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,592,"MAX_TURNS_PER_MATCH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,594,"""simulator_search_depth"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,595,"SIMULATOR_SEARCH_DEPTH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,698,"MAX_TURNS_PER_MATCH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,703,"SIMULATOR_SEARCH_DEPTH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,1792,search_depth: int
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,1879,# 3.5 â€” Random baseline agent
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,1923,search_depth=int(
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,1956,search_depth=int(
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,1983,# 3.6 â€” Greedy damage baseline
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2023,search_depth=int(
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2069,search_depth=int(
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2332,search_depth: int =
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2333,"SIMULATOR_SEARCH_DEPTH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2339,self.search_depth = int(
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2340,search_depth
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2398,else self.search_depth
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2680,baseline_name: str
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2703,"evaluated_agent_side: str,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2704,max_turns: int =
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2705,"MAX_TURNS_PER_MATCH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2706,search_depth: int =
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2707,"SIMULATOR_SEARCH_DEPTH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2711,if evaluated_agent_side not in {
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2716,"""evaluated_agent_side must be """
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2800,"if evaluated_agent_side == ""Player"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2827,search_depth=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2828,"search_depth,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2830,max_turns=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2831,"max_turns,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2863,elif winner == evaluated_agent_side:
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2884,baseline_name=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2964,"""Random Baseline"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2971,"""Greedy Damage Baseline"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2977,search_depth=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2978,"SIMULATOR_SEARCH_DEPTH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,2981,"""Depth-6 Search Baseline"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3027,evaluated_agent_side=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3030,max_turns=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3033,search_depth=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3034,"SIMULATOR_SEARCH_DEPTH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3201,# - Random Baseline
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3202,# - Greedy Damage Baseline
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3203,# - Depth-6 Search Baseline
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3232,TOURNAMENT_MATCHES_PER_BASELINE = (
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3286,"name=""Random Baseline"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3292,"name=""Greedy Damage Baseline"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3298,search_depth=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3299,"SIMULATOR_SEARCH_DEPTH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3302,"""Depth-6 Search Baseline"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3307,"""Random Baseline"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3313,"""Greedy Damage Baseline"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3317,"""Depth-6 Search Baseline"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3328,"baseline_name: str,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3388,"""baseline_name"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3389,"baseline_name,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3391,"""evaluated_agent_side"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3410,for baseline_name in (
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3415,baseline_name=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3416,"baseline_name,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3419,"TOURNAMENT_MATCHES_PER_BASELINE,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3438,baseline_name = (
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3440,"""baseline_name"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3451,baseline_name
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3483,evaluated_agent_side=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3485,"""evaluated_agent_side"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3488,max_turns=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3489,"MAX_TURNS_PER_MATCH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3491,search_depth=
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3492,"SIMULATOR_SEARCH_DEPTH,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3502,"""evaluated_agent_side"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3504,"""evaluated_agent_side"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3553,"""baseline_name"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3554,"baseline_name,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3556,"""evaluated_agent_side"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3558,"""evaluated_agent_side"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3656,"""baseline_name"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3749,"""baseline_name"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3750,"""evaluated_agent_side"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3807,"""baseline_name"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3836,"""baseline_name"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3927,"""matches_per_baseline"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,3929,TOURNAMENT_MATCHES_PER_BASELINE
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4176,"""baseline_name"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4184,"""evaluated_agent_side"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4448,baseline_name = str(
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4450,"""baseline_name"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4468,baseline_name
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4493,baseline_name
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4505,"""baseline_name"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4506,"baseline_name,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4508,"""evaluated_agent_side"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4511,"""evaluated_agent_side"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4579,"""baseline_name"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4582,"""baseline_name"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4628,"baseline_name,"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4633,"""baseline_name"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4634,"""evaluated_agent_side"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4663,"""baseline_name"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4665,baseline_name
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4668,"""evaluated_agent_side"":"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4726,"""evaluated_agent_side"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,4733,"""evaluated_agent_side"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5188,"""baseline_name"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5190,"== ""Random Baseline"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5195,"""baseline_name"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5197,"== ""Greedy Damage Baseline"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5202,"""baseline_name"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5204,"== ""Depth-6 Search Baseline"""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5299,"""the depth-6 search baseline."""
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5368,"f""Win rate against the depth-6 search baseline """
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5474,"""Random baseline win rate"","
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,5743,Random baseline win rate: {random_win_rate:.4f}
+scripts\49_side_balanced_search_guided_self_play.py,16,# - Improve performance against the Depth-6 Search baseline
+scripts\49_side_balanced_search_guided_self_play.py,277,SEARCH_DEPTH = 6
+scripts\49_side_balanced_search_guided_self_play.py,722,"""search_depth"":"
+scripts\49_side_balanced_search_guided_self_play.py,723,"SEARCH_DEPTH,"
+scripts\49_side_balanced_search_guided_self_play.py,890,"SEARCH_DEPTH,"
+scripts\49_side_balanced_search_guided_self_play.py,1257,"""baseline_name"","
+scripts\49_side_balanced_search_guided_self_play.py,1265,"""evaluated_agent_side"","
+scripts\49_side_balanced_search_guided_self_play.py,1404,"side_column = ""evaluated_agent_side"""
+scripts\49_side_balanced_search_guided_self_play.py,1413,"opponent_column = ""baseline_name"""
+scripts\49_side_balanced_search_guided_self_play.py,1643,"for baseline_name, baseline_df in tournament.groupby("
+scripts\49_side_balanced_search_guided_self_play.py,1688,"baseline_name,"
+scripts\49_side_balanced_search_guided_self_play.py,1781,"baseline_name,"
+scripts\49_side_balanced_search_guided_self_play.py,1833,"baseline_name,"
+scripts\49_side_balanced_search_guided_self_play.py,2533,"baseline_name: object,"
+scripts\49_side_balanced_search_guided_self_play.py,2536,baseline_name
+scripts\49_side_balanced_search_guided_self_play.py,5247,"""baseline_name"","
+scripts\49_side_balanced_search_guided_self_play.py,5257,"""evaluated_agent_side"","
+scripts\49_side_balanced_search_guided_self_play.py,5335,"""evaluated_agent_side"""
+scripts\49_side_balanced_search_guided_self_play.py,6141,"""evaluated_agent_side"","
+scripts\49_side_balanced_search_guided_self_play.py,6320,"baseline_name: Any,"
+scripts\49_side_balanced_search_guided_self_play.py,6323,baseline_name
+scripts\49_side_balanced_search_guided_self_play.py,6339,"""baseline_name"""
+scripts\49_side_balanced_search_guided_self_play.py,6442,"""baseline_name"","
+scripts\49_side_balanced_search_guided_self_play.py,6446,"""evaluated_agent_side"","
+scripts\49_side_balanced_search_guided_self_play.py,6500,"""baseline_name"","
+scripts\49_side_balanced_search_guided_self_play.py,6564,"""minimum_search_depth"":"
+scripts\49_side_balanced_search_guided_self_play.py,6567,"""preferred_search_depth"":"
+scripts\49_side_balanced_search_guided_self_play.py,7190,"""baseline_name"","
+scripts\49_side_balanced_search_guided_self_play.py,7801,"""search_depth"","
+scripts\49_side_balanced_search_guided_self_play.py,11098,"""baseline_name"":"
+scripts\49_side_balanced_search_guided_self_play.py,11100,"""baseline_name"""
+scripts\49_side_balanced_search_guided_self_play.py,11468,"""baseline_name"":"
+scripts\49_side_balanced_search_guided_self_play.py,11470,"""baseline_name"""
+scripts\49_side_balanced_search_guided_self_play.py,12759,# 8A.6 — Resolve search_depth arguments
+scripts\49_side_balanced_search_guided_self_play.py,12798,search_depth_method = (
+scripts\49_side_balanced_search_guided_self_play.py,12799,search_engine.search_depth
+scripts\49_side_balanced_search_guided_self_play.py,12805,"search_depth_method,"
+scripts\49_side_balanced_search_guided_self_play.py,12829,"""search_depth has unresolved required arguments: """
+scripts\49_side_balanced_search_guided_self_play.py,12846,search_depth_method(
+scripts\49_side_balanced_search_guided_self_play.py,12980,"""search_depth_signature"":"
+scripts\49_side_balanced_search_guided_self_play.py,12983,search_depth_method
+scripts\49_side_balanced_search_guided_self_play.py,12987,"""search_depth_arguments"":"
+scripts\49_side_balanced_search_guided_self_play.py,13419,SECTION8B_SEARCH_DEPTH = 4
+scripts\49_side_balanced_search_guided_self_play.py,13444,"SECTION8B_SEARCH_DEPTH,"
+scripts\49_side_balanced_search_guided_self_play.py,13729,"""search_depth"","
+scripts\49_side_balanced_search_guided_self_play.py,13964,"""search_depth"":"
+scripts\49_side_balanced_search_guided_self_play.py,13965,"SECTION8B_SEARCH_DEPTH,"
+scripts\49_side_balanced_search_guided_self_play.py,14154,search_result = search_engine.search_depth(
+scripts\49_side_balanced_search_guided_self_play.py,14156,"depth=SECTION8B_SEARCH_DEPTH,"
+scripts\49_side_balanced_search_guided_self_play.py,14204,"""baseline_name"":"
+scripts\49_side_balanced_search_guided_self_play.py,14206,"""baseline_name"""
+scripts\49_side_balanced_search_guided_self_play.py,14286,"""search_depth_requested"":"
+scripts\49_side_balanced_search_guided_self_play.py,14288,SECTION8B_SEARCH_DEPTH
+scripts\49_side_balanced_search_guided_self_play.py,14326,"""search_depth_reached"":"
+scripts\49_side_balanced_search_guided_self_play.py,14415,"""search_depth"":"
+scripts\49_side_balanced_search_guided_self_play.py,14416,"SECTION8B_SEARCH_DEPTH,"
+scripts\49_side_balanced_search_guided_self_play.py,14787,"""search_depth"":"
+scripts\49_side_balanced_search_guided_self_play.py,14789,SECTION8B_SEARCH_DEPTH
+scripts\49_side_balanced_search_guided_self_play.py,14936,"""search_depth_reached"","
+scripts\49_side_balanced_search_guided_self_play.py,15355,"""baseline_name"","
+scripts\49_side_balanced_search_guided_self_play.py,15520,search_depth_requested = safe_int(
+scripts\49_side_balanced_search_guided_self_play.py,15522,"""search_depth_requested"""
+scripts\49_side_balanced_search_guided_self_play.py,15526,search_depth_reached = safe_int(
+scripts\49_side_balanced_search_guided_self_play.py,15528,"""search_depth_reached"""
+scripts\49_side_balanced_search_guided_self_play.py,15735,"""baseline_name"":"
+scripts\49_side_balanced_search_guided_self_play.py,15738,"""baseline_name"""
+scripts\49_side_balanced_search_guided_self_play.py,15741,"""manifest_baseline_name"""
+scripts\49_side_balanced_search_guided_self_play.py,15873,"""search_depth_requested"":"
+scripts\49_side_balanced_search_guided_self_play.py,15874,"search_depth_requested,"
+scripts\49_side_balanced_search_guided_self_play.py,15876,"""search_depth_reached"":"
+scripts\49_side_balanced_search_guided_self_play.py,15877,"search_depth_reached,"
+scripts\49_side_balanced_search_guided_self_play.py,16009,"""search_depth_reached"""
+scripts\49_side_balanced_search_guided_self_play.py,16071,"""baseline_name"","
+scripts\49_side_balanced_search_guided_self_play.py,16087,"""search_depth_requested"","
+scripts\49_side_balanced_search_guided_self_play.py,16088,"""search_depth_reached"","
+scripts\49_side_balanced_search_guided_self_play.py,16343,"""average_search_depth_reached"","
+scripts\49_side_balanced_search_guided_self_play.py,16348,"""search_depth_reached"""
+scripts\49_side_balanced_search_guided_self_play.py,16408,average_search_depth=(
+scripts\49_side_balanced_search_guided_self_play.py,16409,"""search_depth_reached"","
+scripts\49_side_balanced_search_guided_self_play.py,16793,"""search_depth_reached"","
+scripts\49_side_balanced_search_guided_self_play.py,17844,"""search_depth_requested"","
+scripts\49_side_balanced_search_guided_self_play.py,17845,"""search_depth_reached"","
+scripts\49_side_balanced_search_guided_self_play.py,17932,"""search_depth_requested"","
+scripts\49_side_balanced_search_guided_self_play.py,17933,"""search_depth_reached"","
+scripts\49_side_balanced_search_guided_self_play.py,18002,"""search_depth_reached"""
+scripts\49_side_balanced_search_guided_self_play.py,18379,"""search_depth_valid"","
+scripts\49_side_balanced_search_guided_self_play.py,18744,"""average_search_depth_reached"","
+scripts\49_side_balanced_search_guided_self_play.py,18750,"""search_depth_reached"""
+scripts\50_side_balanced_policy_fine_tuning.py,344,"""search_depth_reached"","
+scripts\50_side_balanced_policy_fine_tuning.py,448,"""search_depth_min"","
+scripts\50_side_balanced_policy_fine_tuning.py,449,"""search_depth_mean"","
+scripts\50_side_balanced_policy_fine_tuning.py,450,"""search_depth_max"","
+scripts\50_side_balanced_policy_fine_tuning.py,484,"policy_df[""search_depth_reached""],"
+scripts\50_side_balanced_policy_fine_tuning.py,489,"policy_df[""search_depth_reached""],"
+scripts\50_side_balanced_policy_fine_tuning.py,494,"policy_df[""search_depth_reached""],"
+scripts\51_policy_simulator_integration.py,6211,"default_search_depth: int = 0,"
+scripts\51_policy_simulator_integration.py,6216,self.default_search_depth = int(
+scripts\51_policy_simulator_integration.py,6217,default_search_depth
+scripts\51_policy_simulator_integration.py,6268,else self.default_search_depth
+scripts\51_policy_simulator_integration.py,6277,search_depth=
+scripts\51_policy_simulator_integration.py,6410,"default_search_depth=0,"
+scripts\51_policy_simulator_integration.py,6431,"f""{policy_battle_agent.default_search_depth}"""
+scripts\51_policy_simulator_integration.py,6470,"f""{runner_decision.search_depth}"""
+scripts\51_policy_simulator_integration.py,6928,"if ""max_turns"" in battle_runner_parameters:"
+scripts\51_policy_simulator_integration.py,6930,"""max_turns"""
+scripts\51_policy_simulator_integration.py,6933,"if ""search_depth"" in battle_runner_parameters:"
+scripts\51_policy_simulator_integration.py,6935,"""search_depth"""
+scripts\52_tournament_policy_evaluation.py,2563,search_depth=int(
+scripts\52_tournament_policy_evaluation.py,3757,agent_decision.search_depth
+scripts\52_tournament_policy_evaluation.py,4444,SECTION4A_SEARCH_DEPTH = 0
+scripts\52_tournament_policy_evaluation.py,4445,SECTION4A_MAX_TURNS = 30
+scripts\52_tournament_policy_evaluation.py,4481,"f""{SECTION4A_SEARCH_DEPTH}"""
+scripts\52_tournament_policy_evaluation.py,4486,"f""{SECTION4A_MAX_TURNS}"""
+scripts\52_tournament_policy_evaluation.py,4601,"search_depth=SECTION4A_SEARCH_DEPTH,"
+scripts\52_tournament_policy_evaluation.py,4602,"max_turns=SECTION4A_MAX_TURNS,"
+scripts\52_tournament_policy_evaluation.py,4981,"""search_depth"":"
+scripts\52_tournament_policy_evaluation.py,4985,"""search_depth"","
+scripts\52_tournament_policy_evaluation.py,7675,SECTION5B_SEARCH_DEPTH = 0
+scripts\52_tournament_policy_evaluation.py,7676,SECTION5B_MAX_TURNS = 30
+scripts\52_tournament_policy_evaluation.py,7701,"f""{SECTION5B_SEARCH_DEPTH}"""
+scripts\52_tournament_policy_evaluation.py,7706,"f""{SECTION5B_MAX_TURNS}"""
+scripts\52_tournament_policy_evaluation.py,7785,"search_depth=SECTION5B_SEARCH_DEPTH,"
+scripts\52_tournament_policy_evaluation.py,7786,"max_turns=SECTION5B_MAX_TURNS,"
+scripts\53_legality_aware_policy_optimization.py,8185,"""baseline_name"","
+scripts\53_legality_aware_policy_optimization.py,17084,"default_search_depth: int = 0,"
+scripts\53_legality_aware_policy_optimization.py,17089,self.default_search_depth = int(
+scripts\53_legality_aware_policy_optimization.py,17090,default_search_depth
+scripts\53_legality_aware_policy_optimization.py,17192,self.default_search_depth
+scripts\53_legality_aware_policy_optimization.py,17202,"search_depth=resolved_depth,"
+scripts\53_legality_aware_policy_optimization.py,17261,"""search_depth"":"
+scripts\53_legality_aware_policy_optimization.py,17333,"default_search_depth=0,"
+scripts\53_legality_aware_policy_optimization.py,17354,"f""{notebook53_battle_runner_agent.default_search_depth}"""
+scripts\53_legality_aware_policy_optimization.py,17492,"f""{section6d_test_decision.search_depth}"""
+scripts\53_legality_aware_policy_optimization.py,17651,assert section6d_test_decision.search_depth == 0
+scripts\53_legality_aware_policy_optimization.py,18711,"search_depth=0,"
+scripts\53_legality_aware_policy_optimization.py,18712,"max_turns=30,"
+scripts\53_legality_aware_policy_optimization.py,18910,"""search_depth"","
+scripts\54_tournament_strength_optimization_clean.py,43050,"default_search_depth=0,"
+scripts\54_tournament_strength_optimization_clean.py,43517,resolved_default_search_depth = getattr(
+scripts\54_tournament_strength_optimization_clean.py,43519,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_clean.py,43563,"""runner_default_search_depth"","
+scripts\54_tournament_strength_optimization_clean.py,43566,"resolved_default_search_depth,"
+scripts\54_tournament_strength_optimization_clean.py,43572,resolved_default_search_depth
+scripts\54_tournament_strength_optimization_clean.py,44112,"""runner_default_search_depth"":"
+scripts\54_tournament_strength_optimization_clean.py,44113,"resolved_default_search_depth,"
+scripts\54_tournament_strength_optimization_clean.py,45458,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_clean.py,46247,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_clean.py,46550,"search_depth=0,"
+scripts\54_tournament_strength_optimization_clean.py,46551,"max_turns=20,"
+scripts\54_tournament_strength_optimization_clean.py,51297,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_clean.py,51559,"search_depth=0,"
+scripts\54_tournament_strength_optimization_clean.py,51560,"max_turns=20,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,43050,"default_search_depth=0,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,43517,resolved_default_search_depth = getattr(
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,43519,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,43563,"""runner_default_search_depth"","
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,43566,"resolved_default_search_depth,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,43572,resolved_default_search_depth
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,44112,"""runner_default_search_depth"":"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,44113,"resolved_default_search_depth,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,45458,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,46247,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,46550,"search_depth=0,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,46551,"max_turns=20,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,51297,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,51559,"search_depth=0,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_183619.py,51560,"max_turns=20,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,43050,"default_search_depth=0,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,43517,resolved_default_search_depth = getattr(
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,43519,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,43563,"""runner_default_search_depth"","
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,43566,"resolved_default_search_depth,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,43572,resolved_default_search_depth
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,44112,"""runner_default_search_depth"":"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,44113,"resolved_default_search_depth,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,45458,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,46247,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,46550,"search_depth=0,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,46551,"max_turns=20,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,51297,"""default_search_depth"","
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,51559,"search_depth=0,"
+scripts\54_tournament_strength_optimization_COMPLETED_20260804_185446.py,51560,"max_turns=20,"
+scripts\59_live_competitive_evaluation.py,2048,# Display search_depth implementation
+scripts\59_live_competitive_evaluation.py,2051,search_depth_rows = (
+scripts\59_live_competitive_evaluation.py,2055,"] == ""search_depth"""
+scripts\59_live_competitive_evaluation.py,2059,"assert not search_depth_rows.empty, ("
+scripts\59_live_competitive_evaluation.py,2060,"""PolicySearchEngineAdapter.search_depth() """
+scripts\59_live_competitive_evaluation.py,2064,"print(""\nPOLICY SEARCH ADAPTER — search_depth()"")"
+scripts\59_live_competitive_evaluation.py,2068,search_depth_rows.iloc[0][
+scripts\59_live_competitive_evaluation.py,7754,search_depth=int(
+scripts\59_live_competitive_evaluation.py,8883,"r3_live_initial_decision.search_depth,"
+scripts\59_live_competitive_evaluation.py,9869,"search_depth=6,"
+scripts\59_live_competitive_evaluation.py,9870,"max_turns=6,"
+scripts\59_live_competitive_evaluation.py,10275,"search_depth=6,"
+scripts\59_live_competitive_evaluation.py,10277,"max_turns=6,"
+scripts\59_live_competitive_evaluation.py,10836,"max_turns=20,"
+scripts\59_live_competitive_evaluation.py,10868,"search_depth=6,"
+scripts\59_live_competitive_evaluation.py,10870,max_turns=
+scripts\59_live_competitive_evaluation.py,10871,"max_turns,"
+scripts\59_live_competitive_evaluation.py,11016,"max_turns=20,"
+src\agent_decision.py,15,search_depth: int
+src\agent_decision.py,29,"""depth"": self.search_depth,"
+src\battle_agent.py,23,result = self.engine.search_depth(
+src\battle_agent.py,37,"search_depth=result.completed_depth,"
+src\battle_simulation.py,24,search_depth: int
+src\battle_simulation.py,38,"""search_depth"": self.search_depth,"
+src\battle_simulation.py,106,"search_depth: int = 6,"
+src\battle_simulation.py,107,"max_turns: int = 20,"
+src\battle_simulation.py,115,for _ in range(max_turns):
+src\battle_simulation.py,139,"depth=search_depth,"
+src\battle_simulation.py,156,"search_depth=decision.search_depth,"
+src\battle_simulation.py,225,"f""  Search depth: {turn.search_depth}"""
+src\agents\configs.py,19,search_depth: int = 0
+src\agents\final_ppo_agent.py,105,result = self.engine.search_depth(
+src\agents\final_ppo_agent.py,141,"search_depth=result.completed_depth,"
+src\agents\opponents.py,18,search_depth: int = 0
+src\agents\opponents.py,36,"search_depth=profile.search_depth,"
+src\agents\policies.py,167,"""search_depth"": ("
+src\agents\policies.py,168,self.config.search_depth
+src\benchmark\runner.py,27,"search_depth: int,"
+src\benchmark\runner.py,29,"max_turns: int = 20,"
+src\benchmark\runner.py,49,if search_depth < 1:
+src\benchmark\runner.py,51,"""search_depth must be at least 1."""
+src\benchmark\runner.py,54,if max_turns < 1:
+src\benchmark\runner.py,56,"""max_turns must be at least 1."""
+src\benchmark\runner.py,64,"search_depth=search_depth,"
+src\benchmark\runner.py,65,"max_turns=max_turns,"
+src\benchmark\runner.py,89,"""search_depth"": search_depth,"
+src\benchmark\runner.py,104,"search_depths: Iterable[int],"
+src\benchmark\runner.py,107,"max_turns: int = 20,"
+src\benchmark\runner.py,113,search_depths
+src\benchmark\runner.py,133,for search_depth in depth_values:
+src\benchmark\runner.py,140,"search_depth=search_depth,"
+src\benchmark\runner.py,142,"max_turns=max_turns,"
+src\benchmark\statistics.py,16,"""search_depth"","
+src\benchmark\statistics.py,26,"""search_depth"","
+src\benchmark\statistics.py,87,"""search_depth"","
+src\benchmark\statistics.py,109,"""search_depth"","
+src\benchmark\statistics.py,139,"by=""search_depth"""
+src\benchmark\statistics.py,155,"""search_depths"": [],"
+src\benchmark\statistics.py,164,"""search_depth"","
+src\benchmark\statistics.py,187,"""search_depths"": sorted("
+src\benchmark\statistics.py,190,"""search_depth"""
+src\competitive\competitive_policy_agent.py,28,search_depth: int = 0
+src\competitive\competitive_policy_agent.py,100,search_depth=int(
+src\competitive\competitive_policy_agent.py,172,search_depth=int(
+src\engine\advanced_search.py,534,"def search_depth(self, state: State, depth: int, root_player: Optional[Player]=None, clear_table: bool=True, clear_killers: bool=True, clear_history: bool=True) -> SearchResult:"
+src\engine\advanced_search.py,664,"result = self.search_depth(state=state, depth=depth, clear_table=False, clear_killers=False, clear_history=False)"
+src\engine\advanced_search.py,673,"best_result = self.search_depth(state=state, depth=1, clear_table=False, clear_killers=False, clear_history=False)"
+src\engine\benchmark.py,69,result = engine.search_depth(
+src\full_game_simulation\notebook27_export.py,712,"search_depth=6,"
+src\full_game_simulation\notebook27_export.py,713,"max_turns=100,"
+src\full_game_simulation\notebook27_export.py,721,"print(""Maximum turns:"", full_game_match.max_turns)"
+src\full_game_simulation\notebook27_export.py,816,"number_of_matches=SERIES_MATCHES,"
+src\full_game_simulation\notebook27_export.py,817,"alternate_starting_side=True,"
+src\observation_adapter\policy_search_adapter.py,19,def search_depth(
+src\ppo\ppo_policy_engine.py,4,This module adapts the trained PPO Actor network to the search_depth()
+src\ppo\ppo_policy_engine.py,247,engine.search_depth(
+src\ppo\ppo_policy_engine.py,504,def search_depth(
+src\tournament\manager.py,123,"search_depth: int = 6,"
+src\tournament\manager.py,124,"max_turns: int = 100,"
+src\tournament\manager.py,147,"search_depth=search_depth,"
+src\tournament\manager.py,148,"max_turns=max_turns,"
+src\tournament\match.py,18,search_depth: int = 6
+src\tournament\match.py,19,max_turns: int = 100
+src\tournament\match.py,22,if self.search_depth < 1:
+src\tournament\match.py,24,"""search_depth must be at least 1."""
+src\tournament\match.py,27,if self.max_turns < 1:
+src\tournament\match.py,29,"""max_turns must be at least 1."""
+src\tournament\runner.py,29,for _ in range(match.max_turns):
+src\tournament\runner.py,52,"depth=match.search_depth,"
+src\tournament\runner.py,69,"search_depth=decision.search_depth,"
+src\training\dataset.py,17,"""search_depth"","
+src\training\dataset.py,42,"""search_depth"": step.search_depth,"
+src\training\replay.py,20,search_depth: int = 0

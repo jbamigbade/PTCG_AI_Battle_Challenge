@@ -1,0 +1,100 @@
+{
+  "notebook": 63,
+  "cell": 11,
+  "purpose": "SCHEMA_CORRECT_24_BATTLE_PILOT",
+  "corrected_campaign_configuration_sha256": "901d90eb6bb39b6de10848ddd30de86bd64ee9bcadd35f4cf2e638c2b72a2301",
+  "pilot_seed": 63001,
+  "battle_count": 24,
+  "agent_summary": {
+    "DEPLOYMENT_POLICY": {
+      "battles": 8,
+      "outcomes": {
+        "PLAYER_WIN": 6,
+        "OPPONENT_WIN": 2
+      },
+      "player_wins": 6,
+      "opponent_wins": 2,
+      "timeouts": 0,
+      "runtime_failures": 0,
+      "decisive_games": 8,
+      "player_win_rate_all": 0.75,
+      "player_win_rate_decisive": 0.75,
+      "timeout_rate": 0.0,
+      "total_moves": 90,
+      "unknown_move_count": 0,
+      "unknown_move_rate": 0.0,
+      "zero_damage_move_count": 0,
+      "zero_damage_move_rate": 0.0,
+      "positive_damage_move_count": 90,
+      "positive_damage_move_rate": 1.0,
+      "total_damage": 1250.0,
+      "mean_damage_per_move": 13.88888888888889
+    },
+    "FIRST_LEGAL_MOVE": {
+      "battles": 8,
+      "outcomes": {
+        "PLAYER_WIN": 6,
+        "OPPONENT_WIN": 2
+      },
+      "player_wins": 6,
+      "opponent_wins": 2,
+      "timeouts": 0,
+      "runtime_failures": 0,
+      "decisive_games": 8,
+      "player_win_rate_all": 0.75,
+      "player_win_rate_decisive": 0.75,
+      "timeout_rate": 0.0,
+      "total_moves": 90,
+      "unknown_move_count": 0,
+      "unknown_move_rate": 0.0,
+      "zero_damage_move_count": 0,
+      "zero_damage_move_rate": 0.0,
+      "positive_damage_move_count": 90,
+      "positive_damage_move_rate": 1.0,
+      "total_damage": 1250.0,
+      "mean_damage_per_move": 13.88888888888889
+    },
+    "MAX_DAMAGE_LEGAL_MOVE": {
+      "battles": 8,
+      "outcomes": {
+        "PLAYER_WIN": 6,
+        "OPPONENT_WIN": 2
+      },
+      "player_wins": 6,
+      "opponent_wins": 2,
+      "timeouts": 0,
+      "runtime_failures": 0,
+      "decisive_games": 8,
+      "player_win_rate_all": 0.75,
+      "player_win_rate_decisive": 0.75,
+      "timeout_rate": 0.0,
+      "total_moves": 46,
+      "unknown_move_count": 0,
+      "unknown_move_rate": 0.0,
+      "zero_damage_move_count": 0,
+      "zero_damage_move_rate": 0.0,
+      "positive_damage_move_count": 46,
+      "positive_damage_move_rate": 1.0,
+      "total_damage": 1240.0,
+      "mean_damage_per_move": 26.956521739130434
+    }
+  },
+  "semantic_validity": {
+    "DEPLOYMENT_POLICY": {
+      "unknown_move_rate_zero": true,
+      "positive_damage_present": true,
+      "total_damage_positive": true
+    },
+    "FIRST_LEGAL_MOVE": {
+      "unknown_move_rate_zero": true,
+      "positive_damage_present": true,
+      "total_damage_positive": true
+    },
+    "MAX_DAMAGE_LEGAL_MOVE": {
+      "unknown_move_rate_zero": true,
+      "positive_damage_present": true,
+      "total_damage_positive": true
+    }
+  },
+  "full_campaign_authorized": true
+}

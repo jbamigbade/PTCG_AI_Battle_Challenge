@@ -1,0 +1,4 @@
+condition_id,battles,wins,losses,draws,battles_with_player_choice,one_attack_swing_candidates,average_final_hp_margin,average_strategic_decisions,player_win_rate,player_choice_battle_rate
+BASELINE,8,2,6,0,0,3,-28.75,1.75,0.25,0.0
+ENERGY_PRESSURE,8,5,0,3,0,0,33.75,0.0,0.625,0.0
+HP_PRESSURE,8,0,8,0,0,2,-46.25,1.125,0.0,0.0

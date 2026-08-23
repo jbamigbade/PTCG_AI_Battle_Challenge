@@ -1,0 +1,69 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.56
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.76
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.68
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.77
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 20.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.90
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 7: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.50
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 8: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.91
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state.

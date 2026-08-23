@@ -1,0 +1,22 @@
+{
+  "overall": {
+    "matches": 300,
+    "wins": 194,
+    "losses": 106,
+    "draws": 0,
+    "win_rate": 0.6466666666666666
+  },
+  "baseline_win_rates": {
+    "Depth-6 Search Baseline": 0.58,
+    "Greedy Damage Baseline": 0.58,
+    "Random Baseline": 0.78
+  },
+  "player_side": {
+    "matches": 150,
+    "win_rate": 0.8666666666666667
+  },
+  "opponent_side": {
+    "matches": 150,
+    "win_rate": 0.4266666666666667
+  }
+}

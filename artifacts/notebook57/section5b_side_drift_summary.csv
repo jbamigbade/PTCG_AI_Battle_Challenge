@@ -1,0 +1,3 @@
+evaluation_side,case_comparisons,unique_cases,mean_maximum_probability_difference,median_maximum_probability_difference,maximum_probability_difference,mean_l1_probability_difference
+PLAYER,552,92,0.058268115942029,0.04800000000000004,0.168,0.11965217391304347
+OPPONENT,552,92,0.05793115942028986,0.05,0.166,0.11884782608695652

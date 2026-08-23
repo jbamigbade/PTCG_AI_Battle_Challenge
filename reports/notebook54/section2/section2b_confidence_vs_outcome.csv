@@ -1,0 +1,5 @@
+player_outcome,confidence_band,decisions,scenarios,average_confidence,player_controlled_decisions
+LOSS,HIGH,4,2,0.873,0
+LOSS,VERY_HIGH,14,8,0.9791428571428572,0
+WIN,HIGH,4,2,0.8694999999999999,0
+WIN,VERY_HIGH,1,1,0.956,0

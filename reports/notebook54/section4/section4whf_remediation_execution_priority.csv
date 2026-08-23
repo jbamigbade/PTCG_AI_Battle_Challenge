@@ -1,0 +1,5 @@
+strategy_id,strategy_name,retained_feature_count,removed_feature_count,retained_baseline_importance,removed_baseline_importance,retained_feature_share,removed_feature_share,strategy_type,risk_level,recommended_for_execution,execution_order,experimental_role
+R0_CURRENT_BASELINE,Current 64-feature policy,64,0,1.0,0.0,1.0,0.0,CONTROL,NONE,True,0,CONTROL
+R1_REMOVE_LEGAL_SIGNATURE,Remove encoded legal-move signatures,58,6,0.8125206146090723,0.1874793853909278,0.90625,0.09375,FEATURE_ABLATION,LOW,True,1,PRIMARY_LOW_RISK_REMEDIATION
+R2_REMOVE_SIGNATURE_AND_COMPATIBILITY,Remove signatures and card-action compatibility flags,52,12,0.6912545458134544,0.30874545418654586,0.8125,0.1875,FEATURE_ABLATION,MODERATE,True,2,SECONDARY_ABLATION
+R3_STATE_CENTRIC_POLICY,State-centric policy with minimal legality structure,46,18,0.5013896323323297,0.49861036766767064,0.71875,0.28125,FEATURE_REDESIGN,MODERATE,True,3,AGGRESSIVE_STATE_CENTRIC_REDESIGN

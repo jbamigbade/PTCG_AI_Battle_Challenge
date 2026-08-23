@@ -1,0 +1,5 @@
+card_name,official_card_ids,official_version_count,expansion_codes,collection_numbers,matching_pages,upstream_candidate,upstream_candidate_confirmed,version_status,exact_simulator_version_resolved
+Bulbasaur,[650],1,"[""MEG""]","[""1""]",[20],1.0,False,SINGLE_OFFICIAL_CARD_VERSION,True
+Charmander,"[788, 926]",2,"[""ASC"", ""PFL""]","[""11"", ""20""]","[24, 29]",,False,MULTIPLE_OFFICIAL_CARD_VERSIONS,False
+Eevee,"[43, 145, 249, 317]",4,"[""EX"", ""SFA"", ""SSP"", ""TWM""]","[""135"", ""143"", ""50"", ""PRE""]","[2, 5, 8, 10]",,False,MULTIPLE_OFFICIAL_CARD_VERSIONS,False
+Meowth,[1071],1,"[""EX""]","[""POR""]",[33],,False,SINGLE_OFFICIAL_CARD_VERSION,True

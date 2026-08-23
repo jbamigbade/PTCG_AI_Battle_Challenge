@@ -1,0 +1,11 @@
+raw_feature,learned_category_count,current_unique_value_count,known_rows,unknown_rows,compatibility_rate,current_values,unknown_values,learned_categories
+current_side,2,2,184,0,1.0,"[""Opponent"", ""Player""]",[],"[""Opponent"", ""Player""]"
+side_mode,2,1,184,0,1.0,"[""PRESERVE""]",[],"[""FLIP"", ""PRESERVE""]"
+player_card,4,3,184,0,1.0,"[""Bulbasaur"", ""Charmander"", ""Eevee""]",[],"[""Bulbasaur"", ""Charmander"", ""Eevee"", ""Meowth""]"
+opponent_card,2,3,128,56,0.6956521739130435,"[""Bulbasaur"", ""Charmander"", ""Eevee""]","[""Bulbasaur""]","[""Charmander"", ""Eevee""]"
+active_card,4,1,184,0,1.0,"[""Eevee""]",[],"[""Bulbasaur"", ""Charmander"", ""Eevee"", ""Meowth""]"
+inactive_card,4,2,184,0,1.0,"[""Bulbasaur"", ""Charmander""]",[],"[""Bulbasaur"", ""Charmander"", ""Eevee"", ""Meowth""]"
+legal_move_signature,6,1,0,184,0.0,"[""Ascension | Quick Attack""]","[""Ascension | Quick Attack""]","[""ascension"", ""ascension | quick attack"", ""bind down"", ""live coal"", ""pass"", ""tuck tail""]"
+battle_phase,3,3,184,0,1.0,"[""EARLY"", ""LATE"", ""MID""]",[],"[""EARLY"", ""LATE"", ""MID""]"
+energy_band,3,2,184,0,1.0,"[""LOW"", ""READY""]",[],"[""LOW"", ""READY"", ""ZERO""]"
+damage_band,3,2,184,0,1.0,"[""LOW_DAMAGE"", ""MEDIUM_DAMAGE""]",[],"[""HIGH_DAMAGE"", ""LOW_DAMAGE"", ""MEDIUM_DAMAGE""]"

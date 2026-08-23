@@ -1,0 +1,8 @@
+path,exists,is_file,size_bytes,filename
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\policy_dataset\section8c_expert_policy_dataset.csv,True,True,2668658,section8c_expert_policy_dataset.csv
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\section8c_expert_policy_dataset.csv,False,False,0,section8c_expert_policy_dataset.csv
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook50\section2\section2c_policy_dataset.csv,False,False,0,section2c_policy_dataset.csv
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook50\section3\section3a_policy_dataset.csv,False,False,0,section3a_policy_dataset.csv
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section4b_final_curriculum_plan.csv,True,True,1640,section4b_final_curriculum_plan.csv
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section4_targeted_curriculum_plan.csv,True,True,1569,section4_targeted_curriculum_plan.csv
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook50\section1\environment_and_handoff\section1b_policy_dataset_preview.csv,True,True,44082,section1b_policy_dataset_preview.csv

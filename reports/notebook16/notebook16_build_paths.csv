@@ -1,0 +1,4 @@
+resource,path,exists
+official_sample_extracted,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission_work\official_sample_extracted,True
+team_jesus_baseline_build,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission_work\team_jesus_baseline,True
+team_jesus_baseline_archive,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission_work\team_jesus_baseline.tar.gz,True

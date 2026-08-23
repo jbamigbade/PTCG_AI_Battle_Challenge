@@ -1,0 +1,7 @@
+dataset_split,normalized_side,row_count,target_count,target_mean,target_std,target_min,target_median,target_max
+test,opponent,98,98,3.704081632653061,21.627688049928505,-43.0,-0.0,43.0
+test,player,62,62,-2.661290322580645,18.46391567123104,-43.0,0.0,43.0
+train,opponent,520,520,3.9346153846153844,22.17741464797817,-43.0,-0.0,43.0
+train,player,220,220,-1.8,15.147855763987694,-43.0,0.0,43.0
+validation,opponent,110,110,3.9,22.162432052809837,-43.0,-0.0,43.0
+validation,player,50,50,-1.98,16.000624987793444,-43.0,0.0,43.0

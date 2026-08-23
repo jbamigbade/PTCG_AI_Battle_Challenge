@@ -1,0 +1,53 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.67
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 50.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 0.75
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.78
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 0.68
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.85
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 0.52
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.

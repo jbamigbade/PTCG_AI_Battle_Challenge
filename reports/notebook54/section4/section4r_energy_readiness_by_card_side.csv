@@ -1,0 +1,10 @@
+acting_side,active_card,attack_name,energy_requirement,evaluated_states,energy_ready_states,legal_states,energy_ready_but_not_legal_states,legal_without_energy_ready_states,average_energy,energy_ready_rate,legal_rate
+Opponent,Bulbasaur,Bind Down,1,48,0,18,0,18,,0.0,0.375
+Opponent,Charmander,Live Coal,1,20,0,5,0,5,,0.0,0.25
+Opponent,Eevee,Ascension,1,39,0,39,0,39,,0.0,1.0
+Opponent,Eevee,Quick Attack,3,39,0,23,0,23,,0.0,0.5897435897435898
+Player,Bulbasaur,Bind Down,1,22,0,22,0,22,,0.0,1.0
+Player,Charmander,Live Coal,1,15,0,15,0,15,,0.0,1.0
+Player,Eevee,Ascension,1,20,0,20,0,20,,0.0,1.0
+Player,Eevee,Quick Attack,3,20,0,0,0,0,,0.0,0.0
+Player,Meowth,Tuck Tail,3,46,0,46,0,46,,0.0,1.0

@@ -1,0 +1,2 @@
+initial_current_player,next_current_player,initial_turn_number,next_turn_number,player_card,opponent_card,selected_move,move_damage,player_hp_before,player_hp_after,opponent_hp_before,opponent_hp_after,fallback_used,winner_before,winner_after,original_state_unchanged
+Opponent,Player,9,10,Bulbasaur,Eevee,Quick Attack,20.0,48.0,28.0,30.0,30.0,False,,,True

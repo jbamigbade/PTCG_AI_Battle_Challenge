@@ -1,0 +1,79 @@
+module,class,method,signature
+src.competitive.competitive_policy_agent,CompetitivePolicyAgent,act,"(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'"
+src.competitive.competitive_policy_agent,CompetitivePolicyAgent,choose_move,"(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'"
+src.competitive.competitive_policy_agent,CompetitivePolicyAgent,get_last_decision,(self) -> 'CompetitivePolicyDecision | None'
+src.competitive.competitive_policy_agent,CompetitivePolicyAgent,select_move,"(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'"
+src.competitive.competitive_policy_agent,CompetitivePolicyEngine,choose_move,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'"
+src.competitive.competitive_policy_agent,CompetitivePolicyEngine,score_moves,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'"
+src.competitive.competitive_policy_engine,CompetitivePolicyEngine,choose_move,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'"
+src.competitive.competitive_policy_engine,CompetitivePolicyEngine,score_moves,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,add_module,"(self, name: str, module: Optional[ForwardRef('Module')]) -> None"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,apply,"(self, fn: collections.abc.Callable[['Module'], None]) -> Self"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,bfloat16,(self) -> Self
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,buffers,"(self, recurse: bool = True) -> collections.abc.Iterator[torch.Tensor]"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,children,(self) -> collections.abc.Iterator['Module']
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,compile,"(self, *args, **kwargs) -> None"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,cpu,(self) -> Self
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,cuda,"(self, device: int | torch.device | None = None) -> Self"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,double,(self) -> Self
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,eval,(self) -> Self
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,extra_repr,(self) -> str
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,float,(self) -> Self
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,forward,"(self, state_features: 'torch.Tensor', move_features: 'torch.Tensor', action_mask: 'torch.Tensor') -> 'torch.Tensor'"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,get_buffer,"(self, target: str) -> torch.Tensor"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,get_extra_state,(self) -> Any
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,get_parameter,"(self, target: str) -> torch.nn.parameter.Parameter"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,get_submodule,"(self, target: str) -> 'Module'"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,half,(self) -> Self
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,ipu,"(self, device: int | torch.device | None = None) -> Self"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,load_state_dict,"(self, state_dict: collections.abc.Mapping[str, typing.Any], strict: bool = True, assign: bool = False)"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,modules,"(self, remove_duplicate: bool = True) -> collections.abc.Iterator['Module']"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,mtia,"(self, device: int | torch.device | None = None) -> Self"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,named_buffers,"(self, prefix: str = '', recurse: bool = True, remove_duplicate: bool = True) -> collections.abc.Iterator[tuple[str, torch.Tensor]]"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,named_children,"(self) -> collections.abc.Iterator[tuple[str, 'Module']]"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,named_modules,"(self, memo: set['Module'] | None = None, prefix: str = '', remove_duplicate: bool = True)"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,named_parameters,"(self, prefix: str = '', recurse: bool = True, remove_duplicate: bool = True) -> collections.abc.Iterator[tuple[str, torch.nn.parameter.Parameter]]"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,parameters,"(self, recurse: bool = True) -> collections.abc.Iterator[torch.nn.parameter.Parameter]"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_backward_hook,"(self, hook: collections.abc.Callable[['Module', tuple[torch.Tensor, ...] | torch.Tensor, tuple[torch.Tensor, ...] | torch.Tensor], tuple[torch.Tensor, ...] | torch.Tensor | None]) -> torch.utils.hooks.RemovableHandle"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_buffer,"(self, name: str, tensor: torch.Tensor | None, persistent: bool = True) -> None"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_forward_hook,"(self, hook: collections.abc.Callable[[~T, tuple[typing.Any, ...], typing.Any], typing.Any | None] | collections.abc.Callable[[~T, tuple[typing.Any, ...], dict[str, typing.Any], typing.Any], typing.Any | None], *, prepend: bool = False, with_kwargs: bool = False, always_call: bool = False) -> torch.utils.hooks.RemovableHandle"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_forward_pre_hook,"(self, hook: collections.abc.Callable[[~T, tuple[typing.Any, ...]], typing.Any | None] | collections.abc.Callable[[~T, tuple[typing.Any, ...], dict[str, typing.Any]], tuple[typing.Any, dict[str, typing.Any]] | None], *, prepend: bool = False, with_kwargs: bool = False) -> torch.utils.hooks.RemovableHandle"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_full_backward_hook,"(self, hook: collections.abc.Callable[['Module', tuple[torch.Tensor, ...] | torch.Tensor, tuple[torch.Tensor, ...] | torch.Tensor], tuple[torch.Tensor, ...] | torch.Tensor | None], prepend: bool = False) -> torch.utils.hooks.RemovableHandle"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_full_backward_pre_hook,"(self, hook: collections.abc.Callable[['Module', tuple[torch.Tensor, ...] | torch.Tensor], tuple[torch.Tensor, ...] | torch.Tensor | None], prepend: bool = False) -> torch.utils.hooks.RemovableHandle"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_load_state_dict_post_hook,"(self, hook)"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_load_state_dict_pre_hook,"(self, hook)"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_module,"(self, name: str, module: Optional[ForwardRef('Module')]) -> None"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_parameter,"(self, name: str, param: torch.nn.parameter.Parameter | None) -> None"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_state_dict_post_hook,"(self, hook)"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,register_state_dict_pre_hook,"(self, hook)"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,requires_grad_,"(self, requires_grad: bool = True) -> Self"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,set_extra_state,"(self, state: Any) -> None"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,set_submodule,"(self, target: str, module: 'Module', strict: bool = False) -> None"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,share_memory,(self) -> Self
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,state_dict,"(self, *args, destination=None, prefix='', keep_vars=False)"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,to,"(self, *args, **kwargs)"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,to_empty,"(self, *, device: str | torch.device | int | None, recurse: bool = True) -> Self"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,train,"(self, mode: bool = True) -> Self"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,type,"(self, dst_type: torch.dtype | str) -> Self"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,xpu,"(self, device: int | torch.device | None = None) -> Self"
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,zero_grad,"(self, set_to_none: bool = True) -> None"
+src.engine.advanced_search,AdvancedSearchEngine,clear_history_table,(self) -> 'None'
+src.engine.advanced_search,AdvancedSearchEngine,clear_killer_moves,(self) -> 'None'
+src.engine.advanced_search,AdvancedSearchEngine,clear_transposition_table,(self) -> 'None'
+src.engine.advanced_search,AdvancedSearchEngine,get_history_entries,"(self) -> 'List[Tuple[Player, Hashable, int]]'"
+src.engine.advanced_search,AdvancedSearchEngine,get_history_score,"(self, player: 'Player', move: 'Move') -> 'int'"
+src.engine.advanced_search,AdvancedSearchEngine,get_principal_variation,(self) -> 'List[Move]'
+src.engine.advanced_search,AdvancedSearchEngine,history_table_size,(self) -> 'int'
+src.engine.advanced_search,AdvancedSearchEngine,iterative_deepening,"(self, state: 'State', max_depth: 'int', root_player: 'Optional[Player]' = None, verbose: 'bool' = True, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'"
+src.engine.advanced_search,AdvancedSearchEngine,killer_move_count,(self) -> 'int'
+src.engine.advanced_search,AdvancedSearchEngine,preview_move_order,"(self, state: 'State', root_player: 'Optional[Player]' = None, ply: 'int' = 0) -> 'List[Move]'"
+src.engine.advanced_search,AdvancedSearchEngine,search_depth,"(self, state: 'State', depth: 'int', root_player: 'Optional[Player]' = None, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'"
+src.engine.advanced_search,AdvancedSearchEngine,search_for_time,"(self, state, seconds=1.0, verbose=False, max_depth=100, clear_table=True, clear_killers=True, clear_history=True)"
+src.engine.advanced_search,AdvancedSearchEngine,transposition_table_size,(self) -> 'int'
+src.engine.advanced_search,SearchResult,as_dict,"(self, move_to_string: 'Optional[MoveToStringFn]' = None) -> 'Dict[str, Any]'"
+src.engine.advanced_search,SearchStats,as_dict,"(self) -> 'Dict[str, Any]'"
+src.engine.advanced_search,SearchStats,reset,(self) -> 'None'
+src.engine.advanced_search,SearchTimeLimit,elapsed,(self) -> 'float'
+src.engine.advanced_search,SearchTimeLimit,expired,(self) -> 'bool'
+src.engine.advanced_search,SearchTimeLimit,remaining,(self) -> 'float'
+src.engine.advanced_search,SearchTimeLimit,start,(self) -> 'None'

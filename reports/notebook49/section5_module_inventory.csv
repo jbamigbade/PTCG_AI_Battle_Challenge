@@ -1,0 +1,8 @@
+module,loaded,file,error
+src.simulator,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\src\simulator.py,
+src.battle_state,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\src\battle_state.py,
+src.legal_moves,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\src\legal_moves.py,
+src.adapters,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\src\adapters.py,
+src.engine.advanced_search,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\src\engine\advanced_search.py,
+src.competitive.competitive_policy_engine,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\src\competitive\competitive_policy_engine.py,
+src.competitive.competitive_policy_agent,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\src\competitive\competitive_policy_agent.py,

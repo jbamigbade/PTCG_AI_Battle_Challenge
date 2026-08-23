@@ -1,0 +1,50 @@
+module,symbol,symbol_type,signature,defined_in_module
+src.adapters,BattleState,class,"(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",False
+src.adapters,current_player_adapter,function,(battle_state: 'BattleState') -> 'str',True
+src.adapters,evaluate_position,function,(battle_state: 'BattleState') -> 'float',False
+src.adapters,evaluate_state_adapter,function,"(battle_state: 'BattleState', root_player: 'str') -> 'float'",True
+src.adapters,generate_moves_adapter,function,(battle_state: 'BattleState'),True
+src.adapters,get_current_legal_moves,function,(battle_state: 'BattleState') -> 'List[Move]',False
+src.adapters,pokemon_state_features,function,"(battle_state: 'BattleState') -> 'Tuple[Hashable, ...]'",True
+src.adapters,terminal_state_adapter,function,(battle_state: 'BattleState') -> 'bool',True
+src.battle_state,BattleState,class,"(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",True
+src.battle_state,PlayerState,class,"(active: 'PokemonState', bench: 'List[PokemonState]', prize_cards_remaining: 'int' = 6, hand_size: 'int' = 7) -> None",True
+src.battle_state,PokemonState,class,"(card: 'dict', current_hp: 'float', attached_energy: 'int' = 0, status: 'Optional[str]' = None, damage: 'float' = 0.0, is_active: 'bool' = False) -> None",True
+src.battle_state,dataclass,function,"(cls=None, /, *, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False)",False
+src.competitive.competitive_policy_agent,Any,class,"(*args, **kwargs)",False
+src.competitive.competitive_policy_agent,CompetitivePolicyAgent,class,"(checkpoint_path: 'str | Path', device: 'str | None' = None, name: 'str' = 'Competitive Policy Agent') -> 'None'",True
+src.competitive.competitive_policy_agent,CompetitivePolicyDecision,class,"(move: 'Any', confidence: 'float', selected_move_name: 'str | None', probabilities: 'list[float]', logits: 'list[float]', move_names: 'list[str]', fallback: 'bool', score: 'float' = 0.0, search_depth: 'int' = 0, nodes: 'int' = 0, reason: 'str | None' = None) -> None",True
+src.competitive.competitive_policy_agent,CompetitivePolicyEngine,class,"(checkpoint_path: 'str | Path', device: 'str | torch.device | None' = None) -> 'None'",False
+src.competitive.competitive_policy_agent,Path,class,"(*args, **kwargs)",False
+src.competitive.competitive_policy_agent,dataclass,function,"(cls=None, /, *, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False)",False
+src.competitive.competitive_policy_agent,get_current_legal_moves,function,(battle_state: 'BattleState') -> 'List[Move]',False
+src.competitive.competitive_policy_engine,Any,class,"(*args, **kwargs)",False
+src.competitive.competitive_policy_engine,CompetitivePolicyEngine,class,"(checkpoint_path: 'str | Path', device: 'str | torch.device | None' = None) -> 'None'",True
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,class,"(state_dim: 'int' = 8, move_dim: 'int' = 8, hidden_dim: 'int' = 128) -> 'None'",True
+src.competitive.competitive_policy_engine,Path,class,"(*args, **kwargs)",False
+src.competitive.competitive_policy_engine,actor_and_defender,function,"(battle_state: 'Any') -> 'tuple[Any, Any, str]'",True
+src.competitive.competitive_policy_engine,encode_move,function,"(battle_state: 'Any', move: 'Any') -> 'np.ndarray'",True
+src.competitive.competitive_policy_engine,encode_state,function,(battle_state: 'Any') -> 'np.ndarray',True
+src.competitive.competitive_policy_engine,move_name,function,(move: 'Any') -> 'str',True
+src.engine.advanced_search,AdvancedSearchEngine,class,"(generate_moves: 'GenerateMovesFn', apply_move: 'ApplyMoveFn', evaluate_state: 'EvaluateFn', is_terminal: 'IsTerminalFn', current_player: 'CurrentPlayerFn', move_to_string: 'Optional[MoveToStringFn]' = None, state_key: 'Optional[Callable[[State], Hashable]]' = None, use_transposition_table: 'bool' = True, move_order_score: 'Optional[MoveOrderScoreFn]' = None, use_move_ordering: 'bool' = True, move_key: 'Optional[MoveKeyFn]' = None, use_killer_moves: 'bool' = True, killer_slots: 'int' = 2, use_history_heuristic: 'bool' = True, history_multiplier: 'float' = 1000.0) -> 'None'",True
+src.engine.advanced_search,Any,class,"(*args, **kwargs)",False
+src.engine.advanced_search,BoundType,class,(*values),True
+src.engine.advanced_search,Enum,class,"(new_class_name, /, names, *, module=None, qualname=None, type=None, start=1, boundary=None)",False
+src.engine.advanced_search,SearchResult,class,"(best_move: 'Optional[Move]', score: 'float', completed_depth: 'int', principal_variation: 'List[Move]' = <factory>, stats: 'SearchStats' = <factory>) -> None",True
+src.engine.advanced_search,SearchStats,class,"(nodes: 'int' = 0, leaf_nodes: 'int' = 0, terminal_nodes: 'int' = 0, cutoffs: 'int' = 0, transposition_hits: 'int' = 0, transposition_stores: 'int' = 0, transposition_cutoffs: 'int' = 0, killer_hits: 'int' = 0, killer_stores: 'int' = 0, history_hits: 'int' = 0, history_updates: 'int' = 0, completed_depth: 'int' = 0, elapsed_seconds: 'float' = 0.0, depth_nodes: 'Dict[int, int]' = <factory>, depth_times: 'Dict[int, float]' = <factory>) -> None",True
+src.engine.advanced_search,SearchTimeLimit,class,(max_seconds: 'float') -> None,False
+src.engine.advanced_search,TranspositionEntry,class,"(depth: 'int', score: 'float', bound_type: 'BoundType', best_move: 'Optional[Move]' = None, principal_variation: 'List[Move]' = <factory>) -> None",True
+src.engine.advanced_search,ZobristHasher,class,"(state_features: 'StateFeaturesFn', seed: 'int' = 20260712) -> 'None'",True
+src.engine.advanced_search,auto,class,(value=_auto_null),False
+src.engine.advanced_search,defaultdict,class,<signature unavailable>,False
+src.engine.advanced_search,dataclass,function,"(cls=None, /, *, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False)",False
+src.engine.advanced_search,field,function,"(*, default=<dataclasses._MISSING_TYPE object at 0x0000020DFCF92510>, default_factory=<dataclasses._MISSING_TYPE object at 0x0000020DFCF92510>, init=True, repr=True, hash=None, compare=True, metadata=None, kw_only=<dataclasses._MISSING_TYPE object at 0x0000020DFCF92510>)",False
+src.engine.advanced_search,search_for_time,function,"(self, state, seconds=1.0, verbose=False, max_depth=100, clear_table=True, clear_killers=True, clear_history=True)",True
+src.legal_moves,BattleState,class,"(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",False
+src.legal_moves,PokemonState,class,"(card: 'dict', current_hp: 'float', attached_energy: 'int' = 0, status: 'Optional[str]' = None, damage: 'float' = 0.0, is_active: 'bool' = False) -> None",False
+src.legal_moves,get_current_legal_moves,function,(battle_state: 'BattleState') -> 'List[Move]',True
+src.legal_moves,get_current_side_pokemon,function,(battle_state: 'BattleState') -> 'PokemonState',True
+src.legal_moves,get_legal_moves,function,(pokemon_state: 'PokemonState') -> 'List[Move]',True
+src.simulator,BattleState,class,"(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",False
+src.simulator,apply_move,function,"(battle_state: 'BattleState', move: 'Move') -> 'BattleState'",True
+src.simulator,deepcopy,function,"(x, memo=None, _nil=[])",False

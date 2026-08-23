@@ -1,0 +1,11 @@
+categorical_feature,category_count,categories
+current_side,2,"[""Opponent"", ""Player""]"
+side_mode,2,"[""FLIP"", ""PRESERVE""]"
+player_card,4,"[""Bulbasaur"", ""Charmander"", ""Eevee"", ""Meowth""]"
+opponent_card,2,"[""Charmander"", ""Eevee""]"
+active_card,4,"[""Bulbasaur"", ""Charmander"", ""Eevee"", ""Meowth""]"
+inactive_card,4,"[""Bulbasaur"", ""Charmander"", ""Eevee"", ""Meowth""]"
+legal_move_signature,6,"[""ascension"", ""ascension | quick attack"", ""bind down"", ""live coal"", ""pass"", ""tuck tail""]"
+battle_phase,3,"[""EARLY"", ""LATE"", ""MID""]"
+energy_band,3,"[""LOW"", ""READY"", ""ZERO""]"
+damage_band,3,"[""HIGH_DAMAGE"", ""LOW_DAMAGE"", ""MEDIUM_DAMAGE""]"

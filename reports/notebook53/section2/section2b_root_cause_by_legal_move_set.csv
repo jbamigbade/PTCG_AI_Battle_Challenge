@@ -1,0 +1,7 @@
+legal_move_signature,legal_move_count_recomputed,decisions,masked_decisions,legal_raw_predictions,fallback_decisions,average_confidence,average_legal_move_count,masking_rate,raw_legality_rate,fallback_rate
+tuck tail,1,46,46,0,0,0.5568115942028985,1.0,1.0,0.0,0.0
+pass,1,45,45,0,0,0.5504888888888888,1.0,1.0,0.0,0.0
+bind down,1,40,40,0,1,0.6642666666666667,1.0,1.0,0.0,0.025
+live coal,1,20,20,0,0,0.7253333333333334,1.0,1.0,0.0,0.0
+ascension,1,36,0,36,0,0.7476296296296296,1.0,0.0,1.0,0.0
+ascension | quick attack,2,23,0,23,0,0.8411594202898551,2.0,0.0,1.0,0.0

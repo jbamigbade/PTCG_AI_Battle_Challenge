@@ -1,0 +1,4 @@
+condition_id,battles,player_wins,opponent_wins,draws,average_turns,average_decisions,player_win_rate,opponent_win_rate
+BASELINE,8,2,6,0,7.0,7.0,0.25,0.75
+ENERGY_PRESSURE,8,5,0,3,11.75,11.75,0.625,0.0
+HP_PRESSURE,8,0,8,0,3.75,3.75,0.0,1.0

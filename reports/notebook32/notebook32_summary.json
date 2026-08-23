@@ -1,0 +1,9 @@
+{
+  "games": 1000,
+  "average_turns": 3.5,
+  "average_score": 155.0,
+  "games_per_second": 520.180533857322,
+  "unique_opponents": 6,
+  "unique_winners": 1,
+  "unique_moves": 2
+}

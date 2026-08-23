@@ -1,0 +1,21 @@
+{
+  "status": "QUICK_ATTACK_DOMINANCE_ROOT_CAUSE_PREFLIGHT_COMPLETE",
+  "evaluated_cases": 184,
+  "dominant_move": "Quick Attack",
+  "dominant_move_share": 1.0,
+  "ascension_selected_count": 0,
+  "model_source": "globals.notebook53_legality_model",
+  "model_type": "RandomForestClassifier",
+  "preprocessor_source": "globals.notebook53_preprocessor",
+  "preprocessor_available": true,
+  "model_class_count": 6,
+  "quick_attack_class_present": true,
+  "ascension_class_present": true,
+  "predict_proba_available": true,
+  "decision_function_available": false,
+  "training_label_evidence_available": true,
+  "training_label_dataframe_candidates": 46,
+  "feature_importance_mode": "TREE_FEATURE_IMPORTANCES",
+  "root_cause_preflight_diagnosis": "PROBABILITY_AND_TRAINING_DISTRIBUTION_ANALYSIS_READY",
+  "next_stage": "QUICK_ATTACK_VERSUS_ASCENSION_SCORE_AND_LABEL_ANALYSIS"
+}

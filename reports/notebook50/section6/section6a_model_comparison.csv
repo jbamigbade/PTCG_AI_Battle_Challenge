@@ -1,0 +1,7 @@
+model,split,accuracy,balanced_accuracy,macro_f1
+Leakage-safe baseline,Training,1.0,1.0,1.0
+Final side-balanced,Training,1.0,1.0,1.0
+Leakage-safe baseline,Validation,1.0,1.0,1.0
+Final side-balanced,Validation,1.0,1.0,1.0
+Leakage-safe baseline,Test,1.0,1.0,1.0
+Final side-balanced,Test,1.0,1.0,1.0

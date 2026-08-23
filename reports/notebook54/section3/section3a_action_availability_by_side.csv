@@ -1,0 +1,3 @@
+acting_side,decisions,single_action_decisions,multi_action_decisions,average_legal_move_count,maximum_legal_move_count,choice_rate
+Player,103,103,0,1.0,1,0.0
+Opponent,107,84,23,1.2149532710280373,2,0.21495327102803738

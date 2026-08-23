@@ -1,0 +1,15 @@
+{
+  "dataset_name": "policy_dataset_bootstrap",
+  "fitness_status": "BOOTSTRAP_ONLY",
+  "training_ready": false,
+  "decision_rows": 3500,
+  "unique_games": 1000,
+  "unique_policy_classes": 2,
+  "training_agent_rows": 2000,
+  "training_agent_policy_classes": 1,
+  "actor_determines_move": true,
+  "pokemon_determines_move": true,
+  "assessment": "The dataset validates the extraction pipeline, but it is not suitable for meaningful policy-model training because the selected move is deterministic from the actor and Pokémon.",
+  "parquet_exported": true,
+  "parquet_error": null
+}

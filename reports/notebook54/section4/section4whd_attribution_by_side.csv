@@ -1,0 +1,3 @@
+evaluation_side,states,average_quick_attack_probability,average_ascension_probability,average_score_margin,minimum_score_margin,maximum_score_margin,quick_attack_advantage_states
+Opponent,92,0.7459565217391304,0.1653913043478261,0.5805652173913043,0.51,0.686,92
+Player,92,0.749,0.16217391304347825,0.5868260869565217,0.514,0.6880000000000001,92

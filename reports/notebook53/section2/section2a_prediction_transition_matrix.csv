@@ -1,0 +1,7 @@
+raw_predicted_move,selected_move,decisions,average_confidence,fallbacks,changed_action
+Ascension,Tuck Tail,46,0.5568115942028985,0,True
+Ascension,Pass,45,0.5504888888888888,0,True
+Ascension,Bind Down,40,0.6642666666666667,1,True
+Ascension,Ascension,36,0.7476296296296296,0,False
+Quick Attack,Quick Attack,23,0.8411594202898551,0,False
+Ascension,Live Coal,20,0.7253333333333334,0,True

@@ -1,0 +1,7 @@
+condition_id,acting_side,decisions,average_acting_energy,minimum_acting_energy,maximum_acting_energy,control_actions,insufficient_energy_actions
+BASELINE,Opponent,29,2.3793103448275863,1.0,3.0,0,0
+BASELINE,Player,27,2.3703703703703702,1.0,3.0,0,0
+ENERGY_PRESSURE,Opponent,46,0.34782608695652173,0.0,1.0,30,0
+ENERGY_PRESSURE,Player,48,2.1666666666666665,1.0,3.0,0,0
+HP_PRESSURE,Opponent,17,2.411764705882353,1.0,3.0,0,0
+HP_PRESSURE,Player,13,2.3076923076923075,1.0,3.0,0,0

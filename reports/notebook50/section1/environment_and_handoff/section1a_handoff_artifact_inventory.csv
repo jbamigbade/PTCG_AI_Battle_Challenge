@@ -1,0 +1,11 @@
+artifact_name,artifact_path,exists,size_bytes,nonempty
+section8c_policy_dataset_csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\policy_dataset\section8c_expert_policy_dataset.csv,True,2307671,True
+section8c_policy_dataset_jsonl,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\policy_dataset\section8c_expert_policy_dataset.jsonl,True,3085151,True
+section8c_dataset_statistics,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\policy_dataset\section8c_dataset_statistics.csv,True,386,True
+section8c_side_summary,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\policy_dataset\section8c_side_summary.csv,True,266,True
+section8c_variant_summary,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\policy_dataset\section8c_variant_summary.csv,True,1483,True
+section8c_summary,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\policy_dataset\section8c_summary.json,True,1058,True
+section8d_validation_checks,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\final_validation\section8d_validation_checks.csv,True,1297,True
+section8d_dataset_profile,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\final_validation\section8d_final_dataset_profile.csv,True,638,True
+section8d_handoff_manifest,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\final_validation\section8d_handoff_manifest.json,True,2257,True
+section8d_final_summary,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\final_validation\section8d_final_summary.json,True,510,True

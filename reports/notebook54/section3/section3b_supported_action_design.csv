@@ -1,0 +1,6 @@
+candidate_action_family,evidence,support_level,safe_for_notebook54
+Existing printed damaging moves,"Recognized keys: ['damage', 'name']",SUPPORTED,True
+Energy-cost-based move filtering,energy_cost not detected,NOT_CONFIRMED,False
+Status-condition tactics,status field not mutated by apply_move,NOT_IMPLEMENTED,False
+Bench switching or retreat,bench transition not detected in apply_move,NOT_IMPLEMENTED,False
+Invented custom moves,No source-backed card metadata validation,UNSUPPORTED,False

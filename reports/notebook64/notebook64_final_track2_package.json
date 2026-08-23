@@ -1,0 +1,201 @@
+{
+  "notebook": 64,
+  "title": "MATCHUP_DECISION_STRATEGY_INTERPRETATION",
+  "status": "COMPLETE",
+  "final_findings": {
+    "track": "MATCHUP_DECISION_STRATEGY_INTERPRETATION",
+    "track_status": "COMPLETE",
+    "battle_records_analyzed": 240,
+    "deployment_win_rate": 0.75,
+    "max_damage_win_rate": 0.75,
+    "deployment_first_legal_exact_match_rate": 1.0,
+    "deployment_mean_turns": 11.25,
+    "max_damage_mean_turns": 5.75,
+    "deployment_damage_per_move": 13.88888888888889,
+    "max_damage_damage_per_move": 26.956521739130434,
+    "aggregate_normal_win_rate": 0.75,
+    "aggregate_swapped_win_rate": 0.75,
+    "aggregate_side_win_rate_delta": 0.0,
+    "side_interpretation": "Aggregate orientation neutrality was observed, while asymmetric scenario outcomes tracked the side holding the synthetic damage advantage.",
+    "decision_interpretation": "Deployment behavior matched FIRST_LEGAL_MOVE in all paired controlled battles.",
+    "efficiency_interpretation": "MAX_DAMAGE_LEGAL_MOVE reached the same aggregate controlled win rate with fewer turns and greater damage per move.",
+    "scope": "CONTROLLED_ATTACK_ONLY_SYNTHETIC_BATTLE_STATES"
+  },
+  "claim_boundaries": {
+    "supported_claims": [
+      "The deployment runtime completed the corrected controlled campaign without runtime failures.",
+      "The corrected deployment path produced legal, named, positive-damage actions in the controlled campaign.",
+      "Aggregate NORMAL and SWAPPED performance was identical across the full paired campaign.",
+      "Asymmetric scenario outcomes followed the side holding the synthetic damage advantage.",
+      "The deployment policy behaviorally matched FIRST_LEGAL_MOVE in all 80 paired controlled comparisons.",
+      "MAX_DAMAGE_LEGAL_MOVE achieved the same aggregate controlled win rate while requiring fewer turns and producing more damage per move.",
+      "The certified submission assets remained unchanged throughout NB63 and NB64 analysis."
+    ],
+    "unsupported_claims": [
+      "Do not claim that NB63/NB64 proves the deployment policy is superior to deterministic baselines.",
+      "Do not claim that the controlled synthetic campaign represents complete official Pok\u00e9mon TCG gameplay.",
+      "Do not claim universal side neutrality from the aggregate NORMAL/SWAPPED equality.",
+      "Do not claim that attack-only damage efficiency alone determines full-game strategic quality.",
+      "Do not replace or invalidate the certified upstream benchmark evidence from NB57-NB62 with the simplified NB63 campaign."
+    ],
+    "required_scope_statement": "NB63/NB64 controlled simulations are deployment, semantic, and behavioral diagnostics. They are not a complete official Pok\u00e9mon TCG gameplay benchmark.",
+    "upstream_evidence_relationship": "NB64 complements rather than replaces NB57-NB62 certified explainability, robustness, benchmark, evaluation, and packaging evidence."
+  },
+  "strategic_conclusions": {
+    "conclusion_1_runtime": "The final deployment stack is executable and stable under the controlled simulator interface.",
+    "conclusion_2_semantics": "The corrected attack schema eliminated the prior Unknown Move artifact and produced valid legal attacks.",
+    "conclusion_3_matchup": "Controlled outcome patterns were driven primarily by the synthetic state configuration and damage advantage.",
+    "conclusion_4_orientation": "The full campaign showed aggregate orientation neutrality, but asymmetric scenario outcomes appropriately reversed when the advantaged side was swapped.",
+    "conclusion_5_policy_behavior": "Within this attack-only environment, the deployment policy did not demonstrate behavior distinct from FIRST_LEGAL_MOVE.",
+    "conclusion_6_efficiency": "The max-damage baseline exposed an immediate-action efficiency gap: comparable aggregate outcomes were reached with fewer turns and substantially more damage per move.",
+    "conclusion_7_scope": "NB63/NB64 should therefore be presented as controlled runtime/semantic/behavioral evidence rather than proof of deployment-policy superiority.",
+    "conclusion_8_upstream_integration": "The strategic interpretation should be combined with, not substituted for, the stronger certified benchmark, robustness, explainability, and packaging evidence from NB57-NB62."
+  },
+  "competition_writeup_evidence": {
+    "safe_summary": "We evaluated the frozen deployment stack in a controlled attack-only simulation campaign spanning four scenario classes, two side orientations, ten seeds, and three decision policies. All 240 runs completed without runtime failures. After correcting the evaluation card schema, the deployment path produced valid named attacks with no Unknown Move artifacts. The deployment policy matched the first-legal-action baseline across all paired controlled battles, while a max-damage baseline resolved the same scenarios more efficiently. These simulations are treated as deployment and behavioral diagnostics rather than evidence of full-game policy superiority.",
+    "headline_metrics": {
+      "controlled_battles": 240,
+      "runtime_failures": 0,
+      "deployment_win_rate": 0.75,
+      "deployment_first_legal_pair_equivalence": 1.0,
+      "deployment_mean_turns": 11.25,
+      "max_damage_mean_turns": 5.75,
+      "deployment_damage_per_move": 13.88888888888889,
+      "max_damage_damage_per_move": 26.956521739130434
+    },
+    "required_disclaimer": "The campaign uses controlled synthetic attack-only states and is not a complete official Pok\u00e9mon TCG rules simulation."
+  },
+  "track2_core_findings": {
+    "runtime_reliability": {
+      "battle_records_analyzed": 240,
+      "runtime_failures": 0,
+      "unknown_move_rate": 0.0,
+      "positive_damage_move_rate": 1.0,
+      "interpretation": "Deployment runtime was stable and semantically valid throughout the corrected controlled campaign."
+    },
+    "matchup_profile": {
+      "aggregate_win_rate": 0.75,
+      "controlled_player_favored_scenarios": [
+        "S1_BALANCED_LOW_HP",
+        "S2_BALANCED_HIGH_HP"
+      ],
+      "controlled_balanced_scenarios": [
+        "S3_PLAYER_DAMAGE_ADVANTAGE",
+        "S4_OPPONENT_DAMAGE_ADVANTAGE"
+      ],
+      "interpretation": "Observed matchup outcomes are scenario-conditioned and must remain scoped to the controlled attack-only environment."
+    },
+    "side_orientation": {
+      "normal_win_rate": 0.75,
+      "swapped_win_rate": 0.75,
+      "aggregate_win_rate_delta": 0.0,
+      "classification": "CONTROLLED_SIDE_DIFFERENCE_OBSERVED",
+      "interpretation": "Aggregate orientation metrics were neutral, while asymmetric S3/S4 outcomes followed the side holding the synthetic damage advantage."
+    },
+    "decision_behavior": {
+      "deployment_first_legal_exact_match_rate": 1.0,
+      "deployment_max_damage_exact_match_rate": 0.0,
+      "interpretation": "The deployment policy was behaviorally equivalent to FIRST_LEGAL_MOVE throughout the paired controlled campaign."
+    },
+    "decision_efficiency_gap": {
+      "deployment_mean_turns": 11.25,
+      "max_damage_mean_turns": 5.75,
+      "deployment_damage_per_move": 13.88888888888889,
+      "max_damage_damage_per_move": 26.956521739130434,
+      "max_damage_turn_reduction_fraction": 0.4888888888888889,
+      "max_damage_damage_ratio": 1.940869565217391,
+      "interpretation": "A simple max-damage legal-action rule achieved the same aggregate controlled win rate with substantially greater immediate damage and substantially fewer turns."
+    }
+  },
+  "two_track_completion": {
+    "track_1": {
+      "notebook": 63,
+      "name": "SIMULATION_AND_EVIDENCE",
+      "status": "COMPLETE",
+      "battle_count": 240,
+      "runtime_failures": 0,
+      "key_result": "Controlled deployment runtime and semantic validation completed successfully."
+    },
+    "track_2": {
+      "notebook": 64,
+      "name": "MATCHUP_DECISION_STRATEGY_INTERPRETATION",
+      "status": "COMPLETE",
+      "key_result": "Matchup, orientation, decision-efficiency, baseline-gap, limitation, and writeup interpretation completed."
+    },
+    "two_track_plan_complete": true
+  },
+  "identifiers": {
+    "campaign_configuration_sha256": "901d90eb6bb39b6de10848ddd30de86bd64ee9bcadd35f4cf2e638c2b72a2301",
+    "main_sha256": "e328508c39b6c48411f46ad43f5ec1ffe34f54f740aed24389f88d8166dc97cd",
+    "certified_rf_sha256": "615baf3d5725ccca0c1c94e37f62fb24a68613248e167bb566bef4a6d50f2581",
+    "deployment_ppo_sha256": "4e6a19861eb5be5f61bc86508dff07dd838a42df9350355d95e8f2dc436ae787",
+    "nb63_final_package_sha256": "4cb90a9e034c5660e72ffba81b1d84a6c397d0ae676f6113cbaeb3c5f86bc404",
+    "nb64_source_notebook": "64_matchup_decision_strategy_interpretation.ipynb"
+  },
+  "evidence_inventory": [
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook64\\cell1_nb63_handoff_initialization.json",
+      "exists": true,
+      "bytes": 2204,
+      "sha256": "c1b40ae2b31b0ef2db7291c5525440f99b9028a40a584b362248c644816e9ce3"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook64\\cell2_scenario_matchup_matrix.json",
+      "exists": true,
+      "bytes": 19807,
+      "sha256": "cc3f7f61d42043a1ac864ffe55846c3609bca0c127c3530a82e9c4721cafe8a3"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook64\\cell3_side_neutrality_analysis.json",
+      "exists": true,
+      "bytes": 19391,
+      "sha256": "daac60472c1cea1d25581dae9f0604712a2ec055a7e2d5d7ca9673472545762a"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook64\\cell4_decision_efficiency_analysis.json",
+      "exists": true,
+      "bytes": 8488,
+      "sha256": "c3f2aa8b6abc434255144faabd440448b1b9b249b62277d1389a6bf1d6a1f195"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook64\\cell5_track2_strategic_synthesis.json",
+      "exists": true,
+      "bytes": 51666,
+      "sha256": "f370d9bc933dcd739c2db9ce4abe8da73ddca7a9c604c7aa09c510e00043a5d4"
+    }
+  ],
+  "competition_handoff": {
+    "status": "READY_FOR_FINAL_COMPETITION_REVIEW",
+    "certified_submission": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission",
+    "certified_main": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\main.py",
+    "certified_rf_model": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook60\\notebook60_certified_61_feature_random_forest.joblib",
+    "deployment_ppo_checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\final_agent\\models\\ppo_training_loop.pkl",
+    "nb63_final_evidence": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\notebook63_final_evidence_package.json",
+    "nb64_final_strategy_report": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook64\\notebook64_final_track2_package.json",
+    "competition_writeup_block": {
+      "safe_summary": "We evaluated the frozen deployment stack in a controlled attack-only simulation campaign spanning four scenario classes, two side orientations, ten seeds, and three decision policies. All 240 runs completed without runtime failures. After correcting the evaluation card schema, the deployment path produced valid named attacks with no Unknown Move artifacts. The deployment policy matched the first-legal-action baseline across all paired controlled battles, while a max-damage baseline resolved the same scenarios more efficiently. These simulations are treated as deployment and behavioral diagnostics rather than evidence of full-game policy superiority.",
+      "headline_metrics": {
+        "controlled_battles": 240,
+        "runtime_failures": 0,
+        "deployment_win_rate": 0.75,
+        "deployment_first_legal_pair_equivalence": 1.0,
+        "deployment_mean_turns": 11.25,
+        "max_damage_mean_turns": 5.75,
+        "deployment_damage_per_move": 13.88888888888889,
+        "max_damage_damage_per_move": 26.956521739130434
+      },
+      "required_disclaimer": "The campaign uses controlled synthetic attack-only states and is not a complete official Pok\u00e9mon TCG rules simulation."
+    },
+    "final_review_focus": [
+      "submission contents",
+      "submission ZIP integrity",
+      "competition writeup",
+      "claims versus evidence",
+      "required disclaimer",
+      "final file preservation",
+      "submission portal readiness"
+    ],
+    "additional_notebook_required": false
+  },
+  "final_package_sha256": "97d5d313c42be7a8ea115e278bdf08d94c00d7f76b66c6b69e34b71666c224a4"
+}

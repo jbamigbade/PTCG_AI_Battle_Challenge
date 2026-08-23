@@ -1,0 +1,74 @@
+{
+    "initial_elo": 1000.0,
+    "k_factor": 32.0,
+    "matches_processed": 300,
+    "final_ratings": [
+        {
+            "rank": 1,
+            "agent_name": "Competitive Policy",
+            "final_elo": 1050.8019349568963,
+            "elo_change": 50.801934956896275
+        },
+        {
+            "rank": 2,
+            "agent_name": "Greedy Damage Baseline",
+            "final_elo": 1035.6926546760085,
+            "elo_change": 35.69265467600849
+        },
+        {
+            "rank": 3,
+            "agent_name": "Depth-6 Search Baseline",
+            "final_elo": 1017.8479581025001,
+            "elo_change": 17.847958102500115
+        },
+        {
+            "rank": 4,
+            "agent_name": "Random Baseline",
+            "final_elo": 895.6574522645984,
+            "elo_change": -104.34254773540158
+        }
+    ],
+    "pairing_rating_differences": [
+        {
+            "baseline_name": "Depth-6 Search Baseline",
+            "matches": 100,
+            "wins": 58,
+            "losses": 42,
+            "score": 0.58,
+            "observed_elo_difference": 56.0714812660147,
+            "win_rate_ci_low": 0.4820630799889527,
+            "win_rate_ci_high": 0.672017750814887
+        },
+        {
+            "baseline_name": "Greedy Damage Baseline",
+            "matches": 100,
+            "wins": 58,
+            "losses": 42,
+            "score": 0.58,
+            "observed_elo_difference": 56.0714812660147,
+            "win_rate_ci_low": 0.4820630799889527,
+            "win_rate_ci_high": 0.672017750814887
+        },
+        {
+            "baseline_name": "Random Baseline",
+            "matches": 100,
+            "wins": 78,
+            "losses": 22,
+            "score": 0.78,
+            "observed_elo_difference": 219.86876874730967,
+            "win_rate_ci_low": 0.6892946528499969,
+            "win_rate_ci_high": 0.849988254963442
+        }
+    ],
+    "player_side_score": 0.8666666666666667,
+    "opponent_side_score": 0.4266666666666667,
+    "player_side_elo_difference": 325.1653426571423,
+    "opponent_side_elo_difference": -51.32739090387219,
+    "estimated_player_side_advantage_elo": 188.24636678050723,
+    "side_neutral_score": 0.6466666666666667,
+    "side_neutral_elo_difference": 104.99834586618238,
+    "raw_overall_score": 0.6466666666666666,
+    "raw_overall_elo_difference": 104.99834586618229,
+    "elo_history_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\data\\tournaments\\competitive_policy_elo_history.csv",
+    "side_bias_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook48\\competitive_policy_side_bias.csv"
+}

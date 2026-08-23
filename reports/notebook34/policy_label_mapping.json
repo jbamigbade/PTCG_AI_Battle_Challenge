@@ -1,0 +1,10 @@
+{
+  "label_to_index": {
+    "Evolution Burst": 0,
+    "Thunder Jolt": 1
+  },
+  "index_to_label": {
+    "0": "Evolution Burst",
+    "1": "Thunder Jolt"
+  }
+}

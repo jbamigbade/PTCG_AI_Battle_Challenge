@@ -1,0 +1,9 @@
+check,passed,value,expected
+energy_attribute_identified,True,1,At least one energy-related state attribute
+production_runner_available,True,LegalityAwareBattleRunnerAgent,Production battle-runner object
+runner_decision_method_identified,True,['choose_move'],At least one recognized callable method
+instrumentation_columns_preserved,True,22,22
+verified_attack_requirements_preserved,True,5,5
+preflight_status_recognized,True,INSTRUMENTED_REPLAY_RUNTIME_READY,Recognized preflight status
+simulator_source_not_modified,True,False,False
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

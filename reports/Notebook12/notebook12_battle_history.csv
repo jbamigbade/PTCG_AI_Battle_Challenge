@@ -1,0 +1,4 @@
+turn_number,acting_side,pokemon_name,move_name,damage,score,search_depth,nodes,player_hp_after,opponent_hp_after,next_side
+1,Player,Eevee ex,Evolution Burst,60.0,633.0,6,17,200.0,10.0,Opponent
+2,Opponent,Electrike,Thunder Jolt,30.0,-633.0,6,10,170.0,10.0,Player
+3,Player,Eevee ex,Evolution Burst,60.0,633.0,6,10,170.0,0.0,Opponent

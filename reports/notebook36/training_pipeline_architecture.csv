@@ -1,0 +1,7 @@
+Stage,Component,Module,Purpose
+1,ObservationPipeline,Notebook 33,Generate observation vectors
+2,BattleEngine,src/engine,Execute legal game actions
+3,Policy,src/agents/policies.py,Choose actions
+4,ReplayBuffer,src/training/replay.py,Store transitions
+5,SelfPlay,src/training/self_play.py,Generate games
+6,Dataset,src/training/dataset.py,Export PPO dataset

@@ -1,0 +1,17 @@
+benchmark_number,player,opponent,starting_player,search_depth,winner,turns,final_score,elapsed_seconds,transcript_characters
+1,Fully Optimized,Baseline,Player,2,Fully Optimized,3,170.0,0.001034899993101135,1020
+2,Baseline,Fully Optimized,Player,2,Baseline,3,170.0,0.0008901999972295016,1020
+3,Transposition Only,Move Ordering Only,Player,2,Transposition Only,3,170.0,0.0009160999907180667,1020
+4,Move Ordering Only,Transposition Only,Player,2,Move Ordering Only,3,170.0,0.0008455000061076134,1020
+5,Fully Optimized,Baseline,Player,4,Fully Optimized,3,170.0,0.0015678999770898372,1022
+6,Baseline,Fully Optimized,Player,4,Baseline,3,170.0,0.0015589999966323376,1022
+7,Transposition Only,Move Ordering Only,Player,4,Transposition Only,3,170.0,0.001504600018961355,1022
+8,Move Ordering Only,Transposition Only,Player,4,Move Ordering Only,3,170.0,0.0015654999879188836,1022
+9,Fully Optimized,Baseline,Player,6,Fully Optimized,3,170.0,0.0024483000161126256,1024
+10,Baseline,Fully Optimized,Player,6,Baseline,3,170.0,0.002438099996652454,1024
+11,Transposition Only,Move Ordering Only,Player,6,Transposition Only,3,170.0,0.0022010999964550138,1024
+12,Move Ordering Only,Transposition Only,Player,6,Move Ordering Only,3,170.0,0.003180400002747774,1024
+13,Fully Optimized,Baseline,Player,8,Fully Optimized,3,170.0,0.0032918000069912523,1024
+14,Baseline,Fully Optimized,Player,8,Baseline,3,170.0,0.0045854999916628,1024
+15,Transposition Only,Move Ordering Only,Player,8,Transposition Only,3,170.0,0.0030211999837774783,1024
+16,Move Ordering Only,Transposition Only,Player,8,Move Ordering Only,3,170.0,0.003467100003035739,1024

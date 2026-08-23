@@ -1,0 +1,2 @@
+selected_move,decisions,sides,mirror_pairs,source_pairs,variants,average_confidence,minimum_confidence,maximum_confidence,average_acting_energy,average_energy_difference,fallback_decisions,move_share
+Quick Attack,184,2,92,23,4,0.8909130434782608,0.824,0.978,2.5,0.0,0,1.0

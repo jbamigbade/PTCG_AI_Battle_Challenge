@@ -1,0 +1,22 @@
+{
+  "notebook_number": 50,
+  "section": "1B",
+  "section_name": "Load Notebook 49 Handoff Artifacts",
+  "run_timestamp_utc": "2026-07-30T07:58:27.531997+00:00",
+  "handoff_status": "READY_FOR_POLICY_TRAINING",
+  "normalized_handoff_status": "READY_FOR_POLICY_TRAINING",
+  "next_stage": "POLICY_FINE_TUNING",
+  "dataset_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook49\\section8\\policy_dataset\\section8c_expert_policy_dataset.csv",
+  "dataset_rows": 1060,
+  "dataset_columns": 37,
+  "dataset_duplicate_rows": 0,
+  "dataset_fully_empty_rows": 0,
+  "dataset_memory_bytes": 2969713,
+  "validation_checks_total": 21,
+  "validation_checks_passed": 21,
+  "validation_checks_failed": 0,
+  "dataset_statistics_rows": 12,
+  "side_summary_rows": 4,
+  "variant_summary_rows": 20,
+  "dataset_profile_rows": 21
+}

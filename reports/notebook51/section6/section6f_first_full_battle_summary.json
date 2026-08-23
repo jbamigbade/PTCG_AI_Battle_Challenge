@@ -1,0 +1,15 @@
+{
+  "status": "FULL_POLICY_BATTLE_COMPLETED",
+  "result_type": "BattleSimulationResult",
+  "winner": "Opponent",
+  "termination_reason": "Battle reached a terminal state.",
+  "recorded_turns": 8,
+  "policy_decisions": 8,
+  "fallback_decisions": 0,
+  "fallback_rate": 0.0,
+  "final_turn_number": 9,
+  "final_player_hp": 0.0,
+  "final_opponent_hp": 10.0,
+  "transcript_created": true,
+  "next_stage": "NOTEBOOK51_FINAL_VALIDATION"
+}

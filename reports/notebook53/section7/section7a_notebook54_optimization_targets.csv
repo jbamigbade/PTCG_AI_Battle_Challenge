@@ -1,0 +1,6 @@
+priority,optimization_target,current_evidence,recommended_direction
+1,Improve tournament win rate,"7 Player wins, 14 Opponent wins, 3 Draws",Add strategic value evaluation for multi-action states
+2,Improve HP_PRESSURE performance,0 Player wins in 8 HP_PRESSURE battles,Train targeted HP-pressure curriculum and value estimates
+3,Improve weak card performance,Eevee and Meowth showed weak Player-slot outcomes,Generate card-specific hard examples and tactical rules
+4,Reduce remaining raw benchmark illegality,36 raw illegal predictions remained before routing,Expand Meowth and low-energy legality-aware examples
+5,Preserve production legality,210 of 210 routed decisions were legal,Retain deterministic routing and defensive legal selector

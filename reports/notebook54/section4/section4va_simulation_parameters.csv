@@ -1,0 +1,6 @@
+parameter_name,parameter_kind,required,default_value,annotation
+initial_state,POSITIONAL_OR_KEYWORD,True,<REQUIRED>,BattleState
+agent,POSITIONAL_OR_KEYWORD,True,<REQUIRED>,PokemonBattleAgent
+search_depth,POSITIONAL_OR_KEYWORD,False,6,int
+max_turns,POSITIONAL_OR_KEYWORD,False,20,int
+verbose,POSITIONAL_OR_KEYWORD,False,True,bool

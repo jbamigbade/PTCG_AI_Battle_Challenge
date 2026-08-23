@@ -1,0 +1,63 @@
+line_number,source_line
+107,R3_MODEL_PATH = (
+151,"""path"": str(R3_MODEL_PATH),"
+152,"""exists"": R3_MODEL_PATH.exists(),"
+175,assert R3_MODEL_PATH.exists()
+206,notebook58_results = pickle.load(file)
+251,r3_package = joblib.load(
+252,R3_MODEL_PATH
+1297,R3_MODEL_PATH = (
+1306,print(R3_MODEL_PATH)
+1308,"assert R3_MODEL_PATH.exists(), ("
+1310,"f""{R3_MODEL_PATH}"""
+1317,r3_live_package = joblib.load(
+1318,R3_MODEL_PATH
+1339,r3_live_model = r3_live_package.get(
+1363,"assert r3_live_model is not None, ("
+1379,"r3_live_model,"
+1395,"r3_live_model,"
+1418,r3_live_model
+1420,"""model_path"": str("
+1421,R3_MODEL_PATH
+1424,R3_MODEL_PATH.exists()
+2983,print(NOTEBOOK53_PREPROCESSOR_PATH_59)
+2985,assert NOTEBOOK53_PREPROCESSOR_PATH_59.exists()
+2986,assert NOTEBOOK53_PREPROCESSOR_PATH_59.stat().st_size > 0
+3017,notebook53_preprocessor_probe = joblib.load(
+3018,NOTEBOOK53_PREPROCESSOR_PATH_59
+3098,R3_ENCODED_FEATURE_NAMES = list(
+3103,R3_ENCODED_FEATURE_NAMES
+3107,R3_ENCODED_FEATURE_NAMES
+3110,R3_ENCODED_FEATURE_NAMES
+3120,for feature_name in R3_ENCODED_FEATURE_NAMES
+3128,for feature_name in R3_ENCODED_FEATURE_NAMES
+3394,"R3_ENCODED_FEATURE_NAMES,"
+3408,) == R3_ENCODED_FEATURE_NAMES
+3453,R3_ENCODED_FEATURE_NAMES
+3462,R3_ENCODED_FEATURE_NAMES
+3516,r3_live_model
+3526,r3_live_model
+3609,"""r3_live_model"","
+3763,r3_live_model.predict(
+3790,"r3_live_model,"
+3797,r3_live_model.predict_proba(
+3810,r3_live_model.classes_
+4227,"""r3_live_model"" in globals()"
+4978,assert r3_live_model is not None
+4980,"r3_live_model,"
+4986,for action in r3_live_model.classes_
+5207,for value in r3_live_model.classes_
+6385,"""r3_live_model"","
+6419,"r3_live_model,"
+6435,R3_STATE_CENTRIC_POLICY RandomForestClassifier.
+6761,# RandomForestClassifier does not expose neural-network logits.
+6863,"model=r3_live_model,"
+9141,for value in r3_live_model.classes_
+12778,r3_live_model
+12791,r3_live_model.classes_
+12799,in r3_live_model.classes_
+12901,r3_live_model
+12905,"""RandomForestClassifier"","
+12909,r3_live_model
+12912,"""RandomForestClassifier"","
+13106,r3_live_model

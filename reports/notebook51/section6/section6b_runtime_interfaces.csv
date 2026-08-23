@@ -1,0 +1,23 @@
+file_name,symbol_name,symbol_type,signature,line_number,docstring_summary,container,matched_keywords
+advanced_search.py,_default_move_key,method,(move: Move) -> Hashable,264,Use a hashable move directly as its move key.,AdvancedSearchEngine,move
+advanced_search.py,_safe_moves,method,"(self, state: State) -> List[Move]",279,Return generated legal moves as a list.,AdvancedSearchEngine,move
+advanced_search.py,clear_killer_moves,method,(self) -> None,290,Remove all stored killer moves.,AdvancedSearchEngine,move
+advanced_search.py,killer_move_count,method,(self) -> int,302,Return the total number of stored killer moves.,AdvancedSearchEngine,move
+advanced_search.py,_find_transposition_move,method,"(self, key: Hashable) -> Optional[Move]",310,"Return a cached best move, when available.",AdvancedSearchEngine,move
+advanced_search.py,_moves_equal,method,"(self, first: Optional[Move], second: Optional[Move]) -> bool",319,Compare moves using their stable move keys.,AdvancedSearchEngine,move
+advanced_search.py,_is_killer_move,method,"(self, move: Move, ply: int) -> bool",331,Return True when a move is stored as a killer at this ply.,AdvancedSearchEngine,move
+advanced_search.py,_store_killer_move,method,"(self, move: Move, ply: int) -> None",338,Store a cutoff-producing move at one ply.,AdvancedSearchEngine,move
+advanced_search.py,_order_moves,method,"(self, state: State, moves: Sequence[Move], root_player: Player, ply: int, transposition_move: Optional[Move] = None) -> List[Move]",391,Order moves using all enabled heuristics.,AdvancedSearchEngine,move
+advanced_search.py,preview_move_order,method,"(self, state: State, root_player: Optional[Player] = None, ply: int = 0) -> List[Move]",430,Return the order the engine would search.,AdvancedSearchEngine,move
+advanced_search.py,reset,method,(self) -> None,158,Reset every search statistic.,SearchStats,reset
+agent_decision.py,AgentDecision,class,,10,Store one completed search decision.,module,agent
+battle_agent.py,choose_move,method,"(self, state: Any, depth: int = 6) -> AgentDecision",16,Search the current state and return the selected move.,PokemonBattleAgent,move
+battle_agent.py,PokemonBattleAgent,class,,10,Use an AdvancedSearchEngine to choose Pokémon actions.,module,"battle, agent"
+battle_simulation.py,BattleTurnRecord,class,,15,Record one completed simulated battle turn.,module,battle
+battle_simulation.py,BattleSimulationResult,class,,47,Store a complete simulated battle result.,module,battle
+battle_simulation.py,determine_battle_winner,function,(state: BattleState) -> Optional[str],77,Return the winner when the battle reaches a terminal state.,module,"battle, winner"
+battle_simulation.py,simulate_ai_battle,function,"(initial_state: BattleState, agent: PokemonBattleAgent, search_depth: int = 6, max_turns: int = 20, verbose: bool = True) -> BattleSimulationResult",103,Run a complete alternating AI-versus-AI battle.,module,"battle, simulate"
+battle_simulation.py,create_battle_transcript,function,(simulation: BattleSimulationResult) -> str,197,Create a readable text transcript for a simulation.,module,battle
+battle_state.py,PlayerState,class,,22,Represents one player's current battlefield.,module,play
+battle_state.py,BattleState,class,,32,Complete position used by minimax and advanced search.,module,battle
+simulator.py,apply_move,function,"(battle_state: BattleState, move: Move) -> BattleState",14,Apply one move for the side identified by current_player.,module,move

@@ -1,0 +1,6 @@
+finding,value,interpretation
+starter_win_rate,0.5,No overall first-move advantage detected.
+player_slot_win_rate,0.25,"Outcome by fixed Player slot, not independent agent strength."
+opponent_slot_win_rate,0.75,"Outcome by fixed Opponent slot, not independent agent strength."
+legal_masking_change_rate,0.6964285714285714,Fraction of decisions where the raw classifier prediction differed from the final legal move.
+fallback_rate,0.017857142857142856,Fraction of decisions requiring explicit fallback behavior.

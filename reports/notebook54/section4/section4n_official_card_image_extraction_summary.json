@@ -1,0 +1,28 @@
+{
+  "status": "TARGETED_OFFICIAL_CARD_IMAGE_EXTRACTION_COMPLETE",
+  "official_candidate_rows": 8,
+  "destination_pages_reviewed": 8,
+  "embedded_images_discovered": 8,
+  "selected_image_candidates": 8,
+  "images_saved": 8,
+  "image_save_failures": 0,
+  "duplicate_image_content_count": 0,
+  "cards_with_all_images_saved": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "cards_with_incomplete_image_extraction": [],
+  "image_output_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook54\\section4\\official_card_images",
+  "extraction_status": "ALL_OFFICIAL_CANDIDATE_CARD_IMAGES_EXTRACTED",
+  "image_details_interpreted": false,
+  "ocr_performed": false,
+  "pdf_modified": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_expand_actions": false,
+  "validation_checks_passed": 10,
+  "validation_checks_failed": 0,
+  "next_stage": "OFFICIAL_CARD_IMAGE_DETAIL_EXTRACTION"
+}

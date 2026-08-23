@@ -1,0 +1,16 @@
+{
+  "status": "LEGAL_SIGNATURE_DEPENDENCE_REMEDIATION_DESIGN_COMPLETE",
+  "baseline_transformed_features": 64,
+  "counterfactual_legal_structure_effect": 0.9895652173913042,
+  "counterfactual_energy_state_effect": 0.014500000000000011,
+  "counterfactual_turn_state_effect": 0.011043478260869561,
+  "candidate_remediation_strategies": 6,
+  "primary_experiment_strategies": 4,
+  "primary_recommendation": "R1_REMOVE_LEGAL_SIGNATURE",
+  "secondary_recommendation": "R2_REMOVE_SIGNATURE_AND_COMPATIBILITY",
+  "legal_filter_preserved": true,
+  "frozen_original_model_modified": false,
+  "remediation_design_diagnosis": "CONTROLLED_FEATURE_ABLATION_RETRAINING_DESIGN_READY",
+  "remediation_design_text": "Counterfactual testing showed that legal-move structure produced a much larger score effect than energy or turn state. The recommended first remediation is therefore a controlled retraining experiment that removes encoded legal-move-signature features while preserving external hard legality enforcement. More aggressive compatibility and action-identity ablations should be tested only after the low-risk signature ablation.",
+  "next_stage": "CONTROLLED_FEATURE_ABLATION_RETRAINING_EXPERIMENT"
+}

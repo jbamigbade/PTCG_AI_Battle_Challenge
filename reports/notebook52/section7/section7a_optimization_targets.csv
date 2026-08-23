@@ -1,0 +1,9 @@
+metric,value
+primary_target,Reduce legal-action masking dependence
+masking_change_rate,0.719047619047619
+fallback_rate,0.004761904761904762
+weakest_player_card,Eevee
+weakest_player_card_win_rate,0.0
+weakest_condition,HP_PRESSURE
+weakest_condition_player_win_rate,0.0
+secondary_targets,"[""Improve raw policy legality before masking"", ""Improve HP-pressure decisions"", ""Improve Eevee and Meowth outcomes"", ""Reduce zero-damage and turn-limit draws"", ""Compare optimized policy against this frozen benchmark""]"

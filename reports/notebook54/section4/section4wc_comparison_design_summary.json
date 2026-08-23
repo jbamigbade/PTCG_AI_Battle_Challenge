@@ -1,0 +1,23 @@
+{
+  "status": "OPPORTUNITY_NORMALIZED_POLICY_COMPARISON_DESIGN_COMPLETE",
+  "source_genuine_choice_decisions": 23,
+  "mirror_pairs": 23,
+  "comparison_cases": 46,
+  "player_cases": 23,
+  "opponent_cases": 23,
+  "balanced_case_counts": true,
+  "all_pairs_context_matched": true,
+  "only_side_indicator_changed": true,
+  "acting_card": "Eevee",
+  "legal_moves": [
+    "Ascension",
+    "Quick Attack"
+  ],
+  "observed_opponent_choice": "Quick Attack",
+  "observed_opponent_choice_count": 23,
+  "direct_raw_side_comparison_valid": false,
+  "paired_opportunity_normalized_comparison_ready": true,
+  "design_diagnosis": "OPPORTUNITY_NORMALIZED_COMPARISON_DESIGN_READY",
+  "comparison_primary_outcome": "selected_move_agreement",
+  "next_stage": "PAIRED_SIDE_POLICY_EVALUATION_EXECUTION"
+}

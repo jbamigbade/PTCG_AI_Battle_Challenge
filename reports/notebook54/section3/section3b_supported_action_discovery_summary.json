@@ -1,0 +1,26 @@
+{
+  "status": "SUPPORTED_ACTION_DISCOVERY_COMPLETE",
+  "structured_files_discovered": 816,
+  "readable_structured_datasets": 767,
+  "tabular_move_records_discovered": 15515,
+  "unique_tabular_moves": 2384,
+  "benchmark_cards": 4,
+  "benchmark_moves": 6,
+  "simulator_source_files": 5,
+  "recognized_move_keys": [
+    "damage",
+    "name"
+  ],
+  "damage_supported": true,
+  "energy_cost_detected": false,
+  "status_transition_confirmed": false,
+  "bench_transition_confirmed": false,
+  "recommended_action_source": "PROJECT_CARD_METADATA",
+  "recommended_next_design": "Construct candidate legal actions only from existing card metadata, then validate each candidate against simulator-supported fields before tactical scoring.",
+  "unsupported_custom_moves_allowed": false,
+  "validation_checks_passed": 10,
+  "validation_checks_failed": 0,
+  "frozen_benchmark_modified": false,
+  "ready_for_tactical_value_design": true,
+  "next_stage": "SOURCE_BACKED_TACTICAL_VALUE_DESIGN"
+}

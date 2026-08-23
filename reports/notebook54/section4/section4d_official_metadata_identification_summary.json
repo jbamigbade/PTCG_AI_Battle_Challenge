@@ -1,0 +1,25 @@
+{
+  "status": "OFFICIAL_CARD_METADATA_IDENTIFICATION_COMPLETE",
+  "structured_sources_reviewed": 767,
+  "authoritative_source_candidates": 0,
+  "exact_card_move_records": 0,
+  "plausible_move_records": 0,
+  "cards_with_metadata": [],
+  "cards_with_exact_version_candidate": [],
+  "cards_requiring_version_resolution": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "all_tournament_cards_exactly_identified": false,
+  "metadata_resolution_status": "OFFICIAL_CARD_METADATA_NOT_FOUND",
+  "recommended_next_action": "Locate the competition-provided card metadata or reference-image mapping before expanding the action set.",
+  "false_candidates_reintroduced": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_expand_actions": false,
+  "validation_checks_passed": 7,
+  "validation_checks_failed": 0,
+  "next_stage": "CARD_REFERENCE_SOURCE_DISCOVERY"
+}

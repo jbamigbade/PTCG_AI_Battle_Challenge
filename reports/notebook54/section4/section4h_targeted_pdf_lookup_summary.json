@@ -1,0 +1,39 @@
+{
+  "status": "TARGETED_ENGLISH_PDF_IDENTIFIER_LOOKUP_COMPLETE",
+  "pdf_library": "pypdf",
+  "pdf_page_count": 1306,
+  "pages_with_text": 1306,
+  "pages_without_text": 0,
+  "text_layer_coverage": 1.0,
+  "page_extraction_errors": 0,
+  "targeted_card_matches": 9,
+  "cards_found_in_text_layer": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "cards_with_explicit_pdf_identifiers": [
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "cards_with_provisional_identifiers": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "cards_requiring_visual_review": [
+    "Bulbasaur"
+  ],
+  "lookup_status": "ALL_PROVISIONAL_IDENTIFIERS_RECOVERED",
+  "identifiers_fully_validated": false,
+  "pdf_modified": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_expand_actions": false,
+  "validation_checks_passed": 7,
+  "validation_checks_failed": 0,
+  "next_stage": "TARGETED_PDF_PAGE_VISUAL_VALIDATION"
+}

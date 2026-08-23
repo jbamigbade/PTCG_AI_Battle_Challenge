@@ -1,0 +1,8 @@
+acting_side_resolved,active_card_resolved,official_card_id,decisions,average_energy,minimum_energy,maximum_energy,average_legal_printed_attacks,multi_attack_states,control_action_states,legal_attack_signatures
+Opponent,Bulbasaur,650,48,,,,0.375,0,30,"["""", ""Bind Down""]"
+Opponent,Charmander,788,20,,,,0.25,0,15,"["""", ""Live Coal""]"
+Opponent,Eevee,43,39,,,,1.5897435897435896,23,0,"[""Ascension"", ""Ascension | Quick Attack""]"
+Player,Bulbasaur,650,22,,,,1.0,0,0,"[""Bind Down""]"
+Player,Charmander,788,15,,,,1.0,0,0,"[""Live Coal""]"
+Player,Eevee,43,20,,,,1.0,0,0,"[""Ascension""]"
+Player,Meowth,1071,46,,,,1.0,0,0,"[""Tuck Tail""]"

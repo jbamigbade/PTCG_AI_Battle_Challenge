@@ -1,0 +1,11 @@
+check,passed,value,expected
+policy_instance_created,True,LegalityAwarePolicyAgent,LegalityAwarePolicyAgent
+runner_instance_created,True,LegalityAwareBattleRunnerAgent,LegalityAwareBattleRunnerAgent
+policy_model_identity_preserved,True,True,True
+policy_preprocessor_identity_preserved,True,True,True
+all_required_interfaces_callable,True,9,9
+configuration_valid,True,4,4
+frozen_artifact_hashes_unchanged,True,4,4
+initial_statistics_available,True,"{'policy': 'dict', 'runner': 'dict'}","{'policy': 'dict', 'runner': 'dict'}"
+instantiation_status_recognized,True,PRODUCTION_ADAPTER_READY,Recognized instantiation status
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

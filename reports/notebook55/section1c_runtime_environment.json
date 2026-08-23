@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-08-05T21:38:46",
+  "python_version": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy_version": "2.2.6",
+  "pandas_version": "2.2.3",
+  "scikit_learn_version": "1.6.1",
+  "project_root": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge",
+  "reports_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook55",
+  "artifacts_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook55",
+  "models_directory": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook55"
+}

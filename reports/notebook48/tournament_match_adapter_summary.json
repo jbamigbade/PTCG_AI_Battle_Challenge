@@ -1,0 +1,55 @@
+{
+    "competitive_agent": "Competitive Policy",
+    "baselines": [
+        "Random Baseline",
+        "Greedy Damage Baseline",
+        "Depth-6 Search Baseline"
+    ],
+    "simulator_signature": "(initial_state: 'BattleState', agent: 'PokemonBattleAgent', search_depth: 'int' = 6, max_turns: 'int' = 20, verbose: 'bool' = True) -> 'BattleSimulationResult'",
+    "smoke_tests": [
+        {
+            "match_id": 1,
+            "agent_name": "Competitive Policy",
+            "baseline_name": "Random Baseline",
+            "player_card": "Pikachu",
+            "opponent_card": "Charmander",
+            "starting_side": "Player",
+            "winner": "Player",
+            "turns": 3,
+            "stop_reason": "Battle reached a terminal state.",
+            "agent_result": 1.0,
+            "fallback_count": 0,
+            "elapsed_seconds": 0.004675699979998171
+        },
+        {
+            "match_id": 2,
+            "agent_name": "Competitive Policy",
+            "baseline_name": "Greedy Damage Baseline",
+            "player_card": "Pikachu",
+            "opponent_card": "Charmander",
+            "starting_side": "Player",
+            "winner": "Player",
+            "turns": 3,
+            "stop_reason": "Battle reached a terminal state.",
+            "agent_result": 1.0,
+            "fallback_count": 0,
+            "elapsed_seconds": 0.001523299957625568
+        },
+        {
+            "match_id": 3,
+            "agent_name": "Competitive Policy",
+            "baseline_name": "Depth-6 Search Baseline",
+            "player_card": "Pikachu",
+            "opponent_card": "Charmander",
+            "starting_side": "Player",
+            "winner": "Player",
+            "turns": 3,
+            "stop_reason": "Battle reached a terminal state.",
+            "agent_result": 1.0,
+            "fallback_count": 0,
+            "elapsed_seconds": 0.0034466999350115657
+        }
+    ],
+    "all_smoke_tests_completed": true,
+    "fallbacks": 0
+}

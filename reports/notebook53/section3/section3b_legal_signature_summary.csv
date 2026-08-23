@@ -1,0 +1,7 @@
+legal_move_signature,decisions,legal_move_count,single_action_states,multi_action_states,model_choices_required
+tuck tail,46,1.0,46,0,0
+pass,45,1.0,45,0,0
+bind down,40,1.0,40,0,0
+ascension,36,1.0,36,0,0
+ascension | quick attack,23,2.0,0,23,23
+live coal,20,1.0,20,0,0

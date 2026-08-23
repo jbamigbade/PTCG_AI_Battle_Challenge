@@ -1,0 +1,3 @@
+benchmark,matches,wins,losses,draws,win_rate,win_rate_percent
+Historical Notebook 48,300,194,106,0,0.6466666666666666,64.66666666666666
+Controlled 61-Feature Adapter,300,183,117,0,0.61,61.0

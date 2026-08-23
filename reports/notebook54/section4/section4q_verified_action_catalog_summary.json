@@ -1,0 +1,25 @@
+{
+  "status": "VERIFIED_ACTION_CATALOG_CONSTRUCTION_COMPLETE",
+  "verified_card_versions": 4,
+  "verified_printed_attacks": 5,
+  "simulator_available_printed_attacks": 5,
+  "missing_verified_printed_attacks": 0,
+  "simulator_control_actions": 2,
+  "cards_with_complete_printed_attack_coverage": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "cards_with_missing_verified_attacks": [],
+  "verified_action_expansion_available": false,
+  "catalog_status": "SIMULATOR_ALREADY_EXPOSES_ALL_VERIFIED_PRINTED_ATTACKS",
+  "official_card_versions_confirmed": true,
+  "unverified_actions_in_catalog": 0,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_integrate_missing_actions": false,
+  "validation_checks_passed": 10,
+  "validation_checks_failed": 0,
+  "next_stage": "VERIFIED_ACTION_AVAILABILITY_GAP_ANALYSIS"
+}

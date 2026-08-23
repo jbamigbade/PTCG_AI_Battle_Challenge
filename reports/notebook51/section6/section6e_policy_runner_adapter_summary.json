@@ -1,0 +1,12 @@
+{
+  "status": "POLICY_BATTLE_RUNNER_ADAPTER_VALIDATED",
+  "adapter_type": "PolicyBattleRunnerAgent",
+  "production_decision_type": "AgentDecision",
+  "selected_move": "Quick Attack",
+  "selected_move_legal": true,
+  "score_finite": true,
+  "principal_variation_valid": true,
+  "wrapper_total_decisions": 1,
+  "fallback_decisions": 0,
+  "next_stage": "FULL_POLICY_BATTLE_SIMULATION"
+}

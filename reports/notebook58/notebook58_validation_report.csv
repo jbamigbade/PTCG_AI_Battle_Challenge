@@ -1,0 +1,5 @@
+strategy,feature_count,features_removed_vs_r0,feature_reduction_percent_vs_r0,validation_accuracy,test_accuracy,test_balanced_accuracy,test_macro_f1,predictions_reproduced,probabilities_reproduced,maximum_reproduction_error,agreement_with_r0,mean_confidence_difference_vs_r0,maximum_confidence_difference_vs_r0,held_out_performance_preserved,reproducibility_passed,decision_stability_passed,production_gate_eligible,primary_candidate
+R0_CURRENT_BASELINE,64,0,0.0,1.0,1.0,1.0,1.0,True,True,0.0,1.0,0.0,0.0,True,True,True,True,False
+R1_REMOVE_LEGAL_SIGNATURE,58,6,9.375,1.0,1.0,1.0,1.0,True,True,0.0,1.0,-0.06268478260869563,0.1060000000000001,True,True,True,True,False
+R2_REMOVE_SIGNATURE_AND_COMPATIBILITY,52,12,18.75,1.0,1.0,1.0,1.0,True,True,0.0,1.0,-0.046152173913043486,0.07399999999999995,True,True,True,True,False
+R3_STATE_CENTRIC_POLICY,46,18,28.125,1.0,1.0,1.0,1.0,True,True,0.0,1.0,-0.10056521739130435,0.15000000000000002,True,True,True,True,True

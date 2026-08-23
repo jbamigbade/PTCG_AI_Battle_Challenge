@@ -1,0 +1,4 @@
+baseline,created,type,error
+Random Baseline,False,,TypeError: create_random_baseline() missing 1 required positional argument: 'seed'
+Greedy Damage Baseline,True,GreedyDamageAgent,
+Depth-6 Search Baseline,True,SearchAgentAdapter,

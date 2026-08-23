@@ -1,0 +1,9 @@
+card_id,card_name,expansion,collection_number,source_page_number,matched_annotation_index,destination_page_number,destination_type,destination_left,destination_top,destination_zoom,vertical_distance,horizontal_distance,destination_resolved,match_status,destination_text_character_count,destination_target_cards_found,destination_image_xobject_count,destination_form_xobject_count,destination_total_xobject_count,destination_contains_image,destination_mentions_card_name,destination_match_valid
+650,Bulbasaur,MEG,1,20,22,689,/XYZ,78.0,716.0,0.0,2.75,434.792,True,HIGH_CONFIDENCE_ROW_DESTINATION_MATCH,15,[],1,0,1,True,False,True
+788,Charmander,PFL,11,24,28,827,/XYZ,78.0,716.0,0.0,2.75,434.79200000000037,True,HIGH_CONFIDENCE_ROW_DESTINATION_MATCH,15,[],1,0,1,True,False,True
+926,Charmander,ASC,20,29,1,965,/XYZ,78.0,716.0,0.0,2.75,434.792,True,HIGH_CONFIDENCE_ROW_DESTINATION_MATCH,15,[],1,0,1,True,False,True
+43,Eevee,TWM,135,2,9,82,/XYZ,78.0,716.0,0.0,2.75,432.5679999999996,True,HIGH_CONFIDENCE_ROW_DESTINATION_MATCH,15,[],1,0,1,True,False,True
+145,Eevee,SFA,50,5,12,184,/XYZ,78.0,716.0,0.0,2.75,434.79200000000003,True,HIGH_CONFIDENCE_ROW_DESTINATION_MATCH,15,[],1,0,1,True,False,True
+249,Eevee,EX,PRE,8,17,288,/XYZ,78.0,716.0,0.0,2.75,434.79200000000037,True,HIGH_CONFIDENCE_ROW_DESTINATION_MATCH,15,[],1,0,1,True,False,True
+317,Eevee,SSP,143,10,19,356,/XYZ,78.0,716.0,0.0,2.75,434.7919999999999,True,HIGH_CONFIDENCE_ROW_DESTINATION_MATCH,15,[],1,0,1,True,False,True
+1071,Meowth,EX,POR,33,14,1110,/XYZ,78.0,716.0,0.0,2.75,437.0159999999999,True,HIGH_CONFIDENCE_ROW_DESTINATION_MATCH,15,[],1,0,1,True,False,True

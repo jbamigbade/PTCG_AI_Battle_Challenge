@@ -1,0 +1,45 @@
+{
+    "project_root": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge",
+    "device": "cpu",
+    "random_seed": 4801,
+    "checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\competitive\\competitive_policy_best.pt",
+    "checkpoint_epoch": 50,
+    "checkpoint_configuration": {
+        "state_dim": 8,
+        "move_dim": 8,
+        "hidden_dim": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001,
+        "batch_size": 64,
+        "random_seed": 4701,
+        "actor_relative": true,
+        "variable_action": true,
+        "label_source": "advanced_search_engine"
+    },
+    "checkpoint_validation_metrics": {
+        "loss": 0.3127547539260289,
+        "top1_accuracy": 0.8493150684931506,
+        "top2_accuracy": 1.0,
+        "examples": 146,
+        "batches": 3,
+        "average_confidence": 0.7954219269425902,
+        "average_margin": 0.5908438865452597,
+        "learning_rate": null
+    },
+    "checkpoint_multi_action_metrics": {
+        "examples": 103.0,
+        "accuracy": 0.7864077669902912,
+        "loss": 0.44332231769284
+    },
+    "notebook47_test_accuracy": 0.828125,
+    "notebook47_multi_action_accuracy": 0.78,
+    "notebook47_battle_winner": "Player",
+    "matches_per_pairing": 100,
+    "max_turns_per_match": 50,
+    "simulator_search_depth": 6,
+    "initial_elo": 1000.0,
+    "elo_k_factor": 32.0,
+    "side_swap_enabled": true,
+    "verbose_matches": false,
+    "all_required_artifacts_exist": true
+}

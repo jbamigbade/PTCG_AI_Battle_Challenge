@@ -1,0 +1,14 @@
+{
+  "status": "TOURNAMENT_SCENARIOS_VALIDATED",
+  "scenario_count": 8,
+  "scenarios_passed": 8,
+  "scenarios_failed": 0,
+  "legal_selections": 8,
+  "fallback_scenarios": 1,
+  "average_confidence": 0.7178333333333333,
+  "minimum_confidence": 0.564,
+  "maximum_confidence": 1.0,
+  "average_legal_move_count": 1.375,
+  "states_unchanged": true,
+  "next_stage": "TOURNAMENT_BATTLE_EXECUTION"
+}

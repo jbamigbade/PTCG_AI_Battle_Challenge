@@ -1,0 +1,4 @@
+energy_band,decisions,masked_decisions,legal_raw_predictions,fallback_decisions,average_confidence,average_legal_move_count,masking_rate,raw_legality_rate,fallback_rate
+ZERO,45,45,0,0,0.5504888888888888,1.0,1.0,0.0,0.0
+LOW,105,69,36,1,0.6627682539682539,1.0,0.6571428571428571,0.34285714285714286,0.009523809523809525
+READY,60,37,23,0,0.7226888888888889,1.3833333333333333,0.6166666666666667,0.38333333333333336,0.0

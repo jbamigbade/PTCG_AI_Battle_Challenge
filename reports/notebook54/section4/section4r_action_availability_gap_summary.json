@@ -1,0 +1,21 @@
+{
+  "status": "VERIFIED_ACTION_AVAILABILITY_GAP_ANALYSIS_COMPLETE",
+  "decisions_analyzed": 210,
+  "player_decisions": 103,
+  "opponent_decisions": 107,
+  "player_multi_attack_states": 0,
+  "opponent_multi_attack_states": 23,
+  "player_average_energy": NaN,
+  "opponent_average_energy": NaN,
+  "player_energy_ready_but_not_legal": 0,
+  "player_legal_without_energy_ready": 103,
+  "dominant_availability_gap": "ENERGY_COST_ENFORCEMENT_INCONSISTENCY",
+  "gap_diagnosis": "Some attacks are legal despite insufficient estimated energy. Simulator cost enforcement requires inspection.",
+  "verified_missing_attacks": 0,
+  "unverified_actions_added": 0,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "validation_checks_passed": 10,
+  "validation_checks_failed": 0,
+  "next_stage": "ENERGY_COST_ENFORCEMENT_AUDIT"
+}

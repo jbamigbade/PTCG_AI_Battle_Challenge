@@ -1,0 +1,11 @@
+{
+  "notebook": 38,
+  "name": "Production Replay Adapter",
+  "schema_field_count": 16,
+  "validation_transition_count": 3,
+  "terminal_transition_count": 1,
+  "unique_chosen_moves": 3,
+  "all_quality_checks_passed": true,
+  "dataset_status": "VALIDATION_FIXTURE",
+  "production_simulator_data": false
+}

@@ -1,0 +1,11 @@
+check,passed,value,expected,details
+strategic_decision_count_valid,True,23,23,
+control_counts_reconcile,True,"{'player': 0, 'opponent': 23}",23,
+battle_count_valid,True,24,24,
+loss_count_valid,True,14,14,
+battle_strategic_counts_reconcile,True,23,23,
+hp_margins_finite,True,24,24,
+root_cause_complete,True,0,0,
+all_multi_action_active_cards_known,True,0,0,
+confidence_values_valid,True,"{'minimum': 0.858, 'maximum': 1.0}",Between 0 and 1,
+frozen_results_preserved,True,"{'wins': 7, 'losses': 14, 'draws': 3}","{'wins': 7, 'losses': 14, 'draws': 3}",

@@ -1,0 +1,7 @@
+check,passed,value,expected
+notebook53_source_loaded,True,18,> 0
+training_source_matches_found,True,682,> 0
+training_related_assignments_found,True,199,> 0
+model_assignment_candidates_found,True,18,> 0
+preprocessor_assignment_candidates_found,True,7,> 0
+next_stage_recognized,True,RECOVER_EXACT_TRAINING_OBJECTS_AND_SPLIT_CONTRACT,RECOVER_EXACT_TRAINING_OBJECTS_AND_SPLIT_CONTRACT

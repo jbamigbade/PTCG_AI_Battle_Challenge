@@ -1,0 +1,93 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.65
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.76
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.79
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.76
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.79
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 30.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.70
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 30.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 7: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.68
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 8: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.65
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 9: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.65
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 10: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 0.63
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 11: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 0.65
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state.

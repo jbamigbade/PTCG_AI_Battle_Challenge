@@ -1,0 +1,251 @@
+record_id,battle_id,local_turn,turn_number,current_player,player_name,opponent_name,selected_move_name,selected_move_index,legal_move_count,damage_applied,search_score,terminal_after_move
+0,1,0,9,Opponent,Charmander,Eevee,Tail Whap,0,2,0.0,629.0,False
+1,1,1,11,Opponent,Charmander,Eevee,Bite,1,2,0.0,629.0,True
+3,2,1,5,Opponent,Bulbasaur,Pikachu,Quick Attack,0,1,0.0,-128.0,False
+4,2,2,7,Opponent,Bulbasaur,Pikachu,Quick Attack,0,1,0.0,-10000.0,False
+6,2,4,9,Opponent,Bulbasaur,Pikachu,Quick Attack,0,1,0.0,-10000.0,False
+8,3,0,10,Opponent,Bulbasaur,Charmander,Flame Tail,1,2,0.0,500.0,False
+10,3,2,12,Opponent,Bulbasaur,Charmander,Flame Tail,1,2,0.0,500.0,True
+12,4,1,13,Opponent,Eevee,Pikachu,Thunderbolt,1,2,0.0,501.67,True
+13,5,0,7,Opponent,Squirtle,Bulbasaur,Razor Leaf,1,2,0.0,494.0,False
+14,5,1,9,Opponent,Squirtle,Bulbasaur,Razor Leaf,1,2,0.0,494.0,True
+16,7,0,11,Opponent,Pikachu,Eevee,Bite,1,2,0.0,586.0,False
+18,7,2,13,Opponent,Pikachu,Eevee,Bite,1,2,0.0,586.0,True
+21,9,0,14,Opponent,Eevee,Squirtle,Tackle,0,1,0.0,-154.73,False
+22,9,1,16,Opponent,Eevee,Squirtle,Tackle,0,1,0.0,-152.91,False
+23,9,2,18,Opponent,Eevee,Squirtle,Tackle,0,1,0.0,393.09,False
+25,9,4,20,Opponent,Eevee,Squirtle,Tackle,0,1,0.0,393.09,True
+28,10,2,5,Opponent,Squirtle,Meowth,Fury Swipes,1,2,0.0,517.11,True
+29,11,0,9,Opponent,Bulbasaur,Pikachu,Quick Attack,0,2,0.0,634.83,False
+30,11,1,11,Opponent,Bulbasaur,Pikachu,Thunderbolt,1,2,0.0,634.83,True
+32,12,1,7,Opponent,Charmander,Bulbasaur,Vine Whip,0,1,0.0,-10000.0,False
+34,12,3,9,Opponent,Charmander,Bulbasaur,Vine Whip,0,1,0.0,-10000.0,False
+36,12,5,11,Opponent,Charmander,Bulbasaur,Vine Whip,0,1,0.0,-10000.0,False
+38,13,0,5,Opponent,Bulbasaur,Eevee,Bite,1,2,0.0,-559.32,False
+41,14,1,10,Opponent,Charmander,Pikachu,Thunderbolt,1,2,0.0,635.83,True
+42,15,0,2,Opponent,Charmander,Meowth,Fury Swipes,1,2,0.0,583.22,False
+43,15,1,4,Opponent,Charmander,Meowth,Fury Swipes,1,2,0.0,583.22,True
+45,16,1,14,Opponent,Meowth,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+47,17,0,14,Opponent,Pikachu,Eevee,Bite,1,2,0.0,-516.67,False
+50,19,0,7,Opponent,Meowth,Squirtle,Tackle,0,2,0.0,513.55,False
+54,20,1,10,Opponent,Charmander,Meowth,Fury Swipes,1,2,0.0,-568.0,False
+55,21,0,6,Opponent,Pikachu,Squirtle,Water Pulse,1,2,0.0,-380.67,False
+57,22,1,6,Opponent,Squirtle,Bulbasaur,Razor Leaf,1,2,0.0,-641.0,False
+59,23,0,11,Opponent,Squirtle,Pikachu,Quick Attack,0,2,0.0,10000.0,False
+63,25,0,15,Opponent,Charmander,Eevee,Bite,1,2,0.0,402.5,True
+65,26,1,13,Opponent,Meowth,Bulbasaur,Vine Whip,0,1,0.0,-10000.0,False
+67,26,3,15,Opponent,Meowth,Bulbasaur,Vine Whip,0,1,0.0,-10000.0,False
+69,27,0,1,Opponent,Charmander,Bulbasaur,Vine Whip,0,2,0.0,602.05,False
+73,29,0,2,Opponent,Charmander,Eevee,Tail Whap,0,2,0.0,557.0,False
+74,29,1,4,Opponent,Charmander,Eevee,Bite,1,2,0.0,557.0,True
+76,30,1,15,Opponent,Charmander,Pikachu,Thunderbolt,1,2,0.0,10000.0,True
+77,31,0,11,Opponent,Eevee,Bulbasaur,Razor Leaf,1,2,0.0,548.41,True
+79,32,1,7,Opponent,Bulbasaur,Pikachu,Quick Attack,0,2,0.0,10000.0,False
+81,33,0,6,Opponent,Charmander,Eevee,Bite,1,2,0.0,522.5,True
+83,34,1,13,Opponent,Eevee,Charmander,Flame Tail,1,2,0.0,-568.5,False
+84,34,2,15,Opponent,Eevee,Charmander,Flame Tail,1,2,0.0,534.5,True
+85,35,0,3,Opponent,Eevee,Bulbasaur,Razor Leaf,1,2,0.0,509.32,True
+87,36,1,7,Opponent,Squirtle,Charmander,Scratch,0,1,0.0,-10000.0,False
+89,36,3,9,Opponent,Squirtle,Charmander,Scratch,0,1,0.0,-10000.0,False
+91,37,0,9,Opponent,Meowth,Pikachu,Quick Attack,0,1,0.0,484.17,False
+93,37,2,11,Opponent,Meowth,Pikachu,Quick Attack,0,1,0.0,484.17,True
+96,39,0,13,Opponent,Eevee,Squirtle,Tackle,0,2,0.0,609.0,False
+98,39,2,15,Opponent,Eevee,Squirtle,Water Pulse,1,2,0.0,609.0,True
+100,40,1,7,Opponent,Meowth,Pikachu,Quick Attack,0,2,0.0,10000.0,False
+102,40,3,9,Opponent,Meowth,Pikachu,Quick Attack,0,2,0.0,10000.0,True
+103,41,0,4,Opponent,Squirtle,Eevee,Tail Whap,0,2,0.0,423.0,False
+105,41,2,6,Opponent,Squirtle,Eevee,Bite,1,2,0.0,423.0,True
+107,43,0,10,Opponent,Meowth,Eevee,Tail Whap,0,2,0.0,590.0,False
+109,43,2,12,Opponent,Meowth,Eevee,Bite,1,2,0.0,590.0,True
+111,44,1,7,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,-422.5,False
+113,45,0,11,Opponent,Eevee,Pikachu,Thunderbolt,1,2,0.0,434.83,True
+115,47,0,9,Opponent,Charmander,Pikachu,Thunderbolt,1,2,0.0,681.17,True
+117,48,1,8,Opponent,Charmander,Bulbasaur,Razor Leaf,1,2,0.0,532.73,True
+118,49,0,14,Opponent,Meowth,Eevee,Tail Whap,0,2,0.0,530.5,False
+119,49,1,16,Opponent,Meowth,Eevee,Bite,1,2,0.0,570.5,True
+121,50,1,13,Opponent,Charmander,Pikachu,Thunderbolt,1,2,0.0,467.67,True
+122,51,0,11,Opponent,Eevee,Meowth,Scratch,0,2,0.0,555.06,False
+126,52,1,10,Opponent,Eevee,Squirtle,Water Pulse,1,2,0.0,496.59,True
+127,53,0,8,Opponent,Pikachu,Squirtle,Tackle,0,1,0.0,-442.5,False
+130,54,1,15,Opponent,Charmander,Eevee,Bite,1,2,0.0,-683.0,False
+131,55,0,7,Opponent,Charmander,Eevee,Bite,1,2,0.0,471.5,False
+132,55,1,9,Opponent,Charmander,Eevee,Bite,1,2,0.0,471.5,True
+134,56,1,10,Opponent,Pikachu,Charmander,Scratch,0,2,0.0,-10000.0,False
+135,57,0,2,Opponent,Bulbasaur,Pikachu,Quick Attack,0,1,0.0,-593.14,False
+137,57,2,4,Opponent,Bulbasaur,Pikachu,Quick Attack,0,1,0.0,-593.14,False
+138,57,3,6,Opponent,Bulbasaur,Pikachu,Quick Attack,0,1,0.0,-565.86,False
+141,58,1,9,Opponent,Squirtle,Pikachu,Thunderbolt,1,2,0.0,547.33,True
+142,59,0,8,Opponent,Charmander,Bulbasaur,Vine Whip,0,2,0.0,712.23,False
+144,59,2,10,Opponent,Charmander,Bulbasaur,Razor Leaf,1,2,0.0,712.23,True
+146,60,1,6,Opponent,Bulbasaur,Squirtle,Water Pulse,1,2,0.0,549.73,False
+148,60,3,8,Opponent,Bulbasaur,Squirtle,Water Pulse,1,2,0.0,549.73,True
+149,61,0,12,Opponent,Pikachu,Bulbasaur,Vine Whip,0,2,0.0,473.95,False
+150,61,1,14,Opponent,Pikachu,Bulbasaur,Razor Leaf,1,2,0.0,528.5,True
+152,62,1,3,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,-646.0,False
+154,63,0,2,Opponent,Pikachu,Bulbasaur,Razor Leaf,1,2,0.0,-574.67,False
+157,65,0,7,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+158,65,1,9,Opponent,Eevee,Bulbasaur,Razor Leaf,1,2,0.0,10000.0,True
+160,67,0,8,Opponent,Eevee,Charmander,Flame Tail,1,2,0.0,606.0,False
+163,68,1,3,Opponent,Squirtle,Pikachu,Thunderbolt,1,2,0.0,594.33,True
+164,69,0,6,Opponent,Bulbasaur,Eevee,Tail Whap,0,2,0.0,-10000.0,False
+168,71,0,4,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+170,71,2,6,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+172,71,4,8,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+174,71,6,10,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,True
+177,72,2,9,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+178,72,3,11,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+180,72,5,13,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,True
+181,73,0,11,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+183,73,2,13,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+185,73,4,15,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,True
+188,75,0,7,Opponent,Charmander,Pikachu,Thunderbolt,1,2,0.0,526.5,True
+191,77,0,11,Opponent,Charmander,Eevee,Bite,1,2,0.0,499.0,False
+193,77,2,13,Opponent,Charmander,Eevee,Bite,1,2,0.0,499.0,True
+196,78,2,12,Opponent,Pikachu,Squirtle,Tackle,0,1,0.0,-663.33,False
+197,79,0,12,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,566.59,False
+199,79,2,14,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,566.59,True
+201,80,1,12,Opponent,Squirtle,Pikachu,Thunderbolt,1,2,0.0,640.17,True
+202,81,0,4,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,10000.0,False
+203,81,1,6,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,10000.0,True
+205,82,1,10,Opponent,Eevee,Pikachu,Thunderbolt,1,2,0.0,479.5,True
+206,83,0,14,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+208,83,2,16,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,10000.0,False
+212,84,1,3,Opponent,Bulbasaur,Pikachu,Thunderbolt,1,2,0.0,-546.36,False
+214,85,0,11,Opponent,Charmander,Bulbasaur,Razor Leaf,1,2,0.0,509.32,True
+217,87,0,12,Opponent,Pikachu,Meowth,Scratch,0,2,0.0,442.39,False
+218,87,1,14,Opponent,Pikachu,Meowth,Fury Swipes,1,2,0.0,442.39,True
+220,88,1,3,Opponent,Charmander,Squirtle,Tackle,0,1,0.0,-10000.0,False
+221,89,0,13,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,704.86,False
+225,90,1,13,Opponent,Pikachu,Bulbasaur,Vine Whip,0,1,0.0,-470.83,False
+227,91,0,13,Opponent,Eevee,Meowth,Scratch,0,2,0.0,10000.0,False
+228,91,1,15,Opponent,Eevee,Meowth,Scratch,0,2,0.0,10000.0,False
+229,91,2,17,Opponent,Eevee,Meowth,Scratch,0,2,0.0,10000.0,True
+232,93,0,13,Opponent,Bulbasaur,Meowth,Fury Swipes,1,2,0.0,445.72,False
+233,93,1,15,Opponent,Bulbasaur,Meowth,Fury Swipes,1,2,0.0,490.17,True
+236,95,0,6,Opponent,Pikachu,Eevee,Bite,1,2,0.0,-606.33,False
+240,96,3,18,Opponent,Pikachu,Eevee,Tail Whap,0,2,0.0,-10000.0,False
+242,97,0,8,Opponent,Pikachu,Charmander,Flame Tail,1,2,0.0,555.5,False
+244,97,2,10,Opponent,Pikachu,Charmander,Flame Tail,1,2,0.0,555.5,True
+246,98,1,12,Opponent,Meowth,Eevee,Bite,1,2,0.0,-480.83,False
+248,99,0,2,Opponent,Pikachu,Charmander,Scratch,0,1,0.0,-130.67,False
+250,99,2,4,Opponent,Pikachu,Charmander,Scratch,0,1,0.0,-10000.0,False
+252,99,4,6,Opponent,Pikachu,Charmander,Scratch,0,1,0.0,-10000.0,False
+255,101,0,7,Opponent,Pikachu,Charmander,Flame Tail,1,2,0.0,10000.0,False
+256,101,1,9,Opponent,Pikachu,Charmander,Scratch,0,2,0.0,10000.0,False
+258,101,3,11,Opponent,Pikachu,Charmander,Flame Tail,1,2,0.0,10000.0,True
+260,102,1,8,Opponent,Eevee,Squirtle,Tackle,0,1,0.0,-554.5,False
+262,102,3,10,Opponent,Eevee,Squirtle,Tackle,0,1,0.0,-554.5,False
+264,103,0,11,Opponent,Squirtle,Pikachu,Thunderbolt,1,2,0.0,457.83,True
+267,105,0,11,Opponent,Meowth,Squirtle,Tackle,0,2,0.0,456.5,False
+268,105,1,13,Opponent,Meowth,Squirtle,Water Pulse,1,2,0.0,492.86,True
+270,106,1,15,Opponent,Bulbasaur,Meowth,Scratch,0,1,0.0,-10000.0,False
+271,107,0,9,Opponent,Meowth,Pikachu,Thunderbolt,1,2,0.0,583.33,True
+273,108,1,14,Opponent,Meowth,Squirtle,Water Pulse,1,2,0.0,563.45,False
+275,109,0,10,Opponent,Charmander,Bulbasaur,Razor Leaf,1,2,0.0,659.64,True
+278,111,0,2,Opponent,Squirtle,Charmander,Scratch,0,1,0.0,-640.68,False
+281,113,0,8,Opponent,Meowth,Eevee,Tail Whap,0,2,0.0,10000.0,False
+282,113,1,10,Opponent,Meowth,Eevee,Bite,1,2,0.0,10000.0,True
+284,114,1,13,Opponent,Eevee,Squirtle,Tackle,0,1,0.0,-631.5,False
+286,115,0,8,Opponent,Eevee,Charmander,Scratch,0,1,0.0,-602.0,False
+288,115,2,10,Opponent,Eevee,Charmander,Scratch,0,1,0.0,-602.0,False
+291,117,0,15,Opponent,Bulbasaur,Meowth,Fury Swipes,1,2,0.0,407.44,False
+293,117,2,17,Opponent,Bulbasaur,Meowth,Fury Swipes,1,2,0.0,407.44,True
+295,119,0,8,Opponent,Meowth,Eevee,Tail Whap,0,1,0.0,-47.5,False
+297,119,2,10,Opponent,Meowth,Eevee,Tail Whap,0,1,0.0,502.5,False
+300,120,1,9,Opponent,Eevee,Bulbasaur,Razor Leaf,1,2,0.0,553.41,True
+301,121,0,4,Opponent,Bulbasaur,Pikachu,Quick Attack,0,2,0.0,460.5,False
+302,121,1,6,Opponent,Bulbasaur,Pikachu,Thunderbolt,1,2,0.0,460.5,True
+304,122,1,9,Opponent,Meowth,Charmander,Flame Tail,1,2,0.0,-532.72,False
+306,123,0,13,Opponent,Meowth,Bulbasaur,Vine Whip,0,2,0.0,589.41,False
+308,123,2,15,Opponent,Meowth,Bulbasaur,Razor Leaf,1,2,0.0,589.41,True
+310,124,1,9,Opponent,Eevee,Pikachu,Thunderbolt,1,2,0.0,10000.0,True
+311,125,0,2,Opponent,Squirtle,Meowth,Scratch,0,1,0.0,12.12,False
+313,125,2,4,Opponent,Squirtle,Meowth,Scratch,0,1,0.0,8.08,False
+315,125,4,6,Opponent,Squirtle,Meowth,Scratch,0,1,0.0,10000.0,False
+317,125,6,8,Opponent,Squirtle,Meowth,Scratch,0,1,0.0,10000.0,True
+319,126,1,7,Opponent,Bulbasaur,Pikachu,Quick Attack,0,1,0.0,-645.45,False
+321,127,0,1,Opponent,Meowth,Bulbasaur,Vine Whip,0,1,0.0,-498.17,False
+324,128,1,15,Opponent,Bulbasaur,Charmander,Scratch,0,2,0.0,-10000.0,False
+325,128,2,17,Opponent,Bulbasaur,Charmander,Scratch,0,2,0.0,-10000.0,False
+327,129,0,12,Opponent,Meowth,Pikachu,Quick Attack,0,1,0.0,90.78,False
+328,129,1,14,Opponent,Meowth,Pikachu,Quick Attack,0,1,0.0,656.33,False
+330,129,3,16,Opponent,Meowth,Pikachu,Quick Attack,0,1,0.0,656.33,True
+332,130,1,6,Opponent,Meowth,Squirtle,Water Pulse,1,2,0.0,-509.0,False
+334,131,0,5,Opponent,Bulbasaur,Squirtle,Tackle,0,2,0.0,550.91,False
+336,131,2,7,Opponent,Bulbasaur,Squirtle,Water Pulse,1,2,0.0,550.91,True
+338,132,1,8,Opponent,Bulbasaur,Eevee,Bite,1,2,0.0,-585.05,False
+339,133,0,4,Opponent,Charmander,Eevee,Tail Whap,0,1,0.0,-107.0,False
+341,133,2,6,Opponent,Charmander,Eevee,Tail Whap,0,1,0.0,-107.0,False
+343,133,4,8,Opponent,Charmander,Eevee,Tail Whap,0,1,0.0,-10000.0,False
+345,133,6,10,Opponent,Charmander,Eevee,Tail Whap,0,1,0.0,-10000.0,False
+348,135,0,6,Opponent,Charmander,Eevee,Bite,1,2,0.0,10000.0,False
+351,135,3,10,Opponent,Charmander,Eevee,Tail Whap,0,2,0.0,10000.0,True
+353,136,1,13,Opponent,Meowth,Squirtle,Water Pulse,1,2,0.0,-508.56,False
+354,136,2,15,Opponent,Meowth,Squirtle,Water Pulse,1,2,0.0,617.91,True
+355,137,0,2,Opponent,Pikachu,Squirtle,Water Pulse,1,2,0.0,-705.17,False
+358,138,1,8,Opponent,Meowth,Charmander,Flame Tail,1,2,0.0,657.0,True
+359,139,0,8,Opponent,Pikachu,Eevee,Tail Whap,0,1,0.0,-67.83,False
+360,139,1,10,Opponent,Pikachu,Eevee,Tail Whap,0,1,0.0,-609.17,False
+364,140,1,8,Opponent,Meowth,Pikachu,Thunderbolt,1,2,0.0,655.17,True
+365,141,0,13,Opponent,Charmander,Bulbasaur,Vine Whip,0,2,0.0,501.09,False
+367,141,2,15,Opponent,Charmander,Bulbasaur,Razor Leaf,1,2,0.0,501.09,True
+369,142,1,7,Opponent,Meowth,Charmander,Flame Tail,1,2,0.0,-576.11,False
+371,143,0,13,Opponent,Eevee,Meowth,Fury Swipes,1,2,0.0,565.06,False
+373,143,2,15,Opponent,Eevee,Meowth,Fury Swipes,1,2,0.0,565.06,True
+375,144,1,14,Opponent,Eevee,Pikachu,Thunderbolt,1,2,0.0,587.5,True
+376,145,0,8,Opponent,Eevee,Pikachu,Quick Attack,0,2,0.0,10000.0,False
+378,145,2,10,Opponent,Eevee,Pikachu,Quick Attack,0,2,0.0,10000.0,True
+380,146,1,10,Opponent,Eevee,Pikachu,Quick Attack,0,1,0.0,40.33,False
+381,146,2,12,Opponent,Eevee,Pikachu,Quick Attack,0,1,0.0,10000.0,False
+383,146,4,14,Opponent,Eevee,Pikachu,Quick Attack,0,1,0.0,10000.0,True
+384,147,0,5,Opponent,Eevee,Bulbasaur,Razor Leaf,1,2,0.0,540.73,True
+386,148,1,9,Opponent,Meowth,Eevee,Bite,1,2,0.0,546.0,False
+388,148,3,11,Opponent,Meowth,Eevee,Bite,1,2,0.0,546.0,True
+389,149,0,1,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,440.82,False
+390,149,1,3,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,440.82,True
+392,150,1,16,Opponent,Squirtle,Bulbasaur,Vine Whip,0,1,0.0,-546.14,False
+393,150,2,18,Opponent,Squirtle,Bulbasaur,Vine Whip,0,1,0.0,-518.86,False
+395,151,0,13,Opponent,Eevee,Bulbasaur,Vine Whip,0,2,0.0,684.14,False
+396,151,1,15,Opponent,Eevee,Bulbasaur,Razor Leaf,1,2,0.0,711.41,True
+399,153,0,3,Opponent,Charmander,Squirtle,Tackle,0,2,0.0,10000.0,False
+401,153,2,5,Opponent,Charmander,Squirtle,Tackle,0,2,0.0,10000.0,False
+403,153,4,7,Opponent,Charmander,Squirtle,Tackle,0,2,0.0,10000.0,False
+405,153,6,9,Opponent,Charmander,Squirtle,Tackle,0,2,0.0,10000.0,True
+408,154,2,13,Opponent,Eevee,Charmander,Flame Tail,1,2,0.0,699.0,True
+409,155,0,7,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,686.27,False
+411,155,2,9,Opponent,Charmander,Squirtle,Water Pulse,1,2,0.0,686.27,True
+413,156,1,3,Opponent,Charmander,Eevee,Tail Whap,0,1,0.0,-10000.0,False
+415,156,3,5,Opponent,Charmander,Eevee,Tail Whap,0,1,0.0,-10000.0,False
+416,156,4,7,Opponent,Charmander,Eevee,Tail Whap,0,1,0.0,-10000.0,False
+417,157,0,5,Opponent,Squirtle,Charmander,Flame Tail,1,2,0.0,-550.41,False
+418,157,1,7,Opponent,Squirtle,Charmander,Flame Tail,1,2,0.0,-550.41,False
+422,159,0,15,Opponent,Charmander,Eevee,Tail Whap,0,1,0.0,-535.5,False
+424,159,2,17,Opponent,Charmander,Eevee,Tail Whap,0,1,0.0,-535.5,False
+425,159,3,19,Opponent,Charmander,Eevee,Tail Whap,0,1,0.0,-515.5,False
+428,161,0,1,Opponent,Charmander,Bulbasaur,Vine Whip,0,1,0.0,-746.0,False
+430,161,2,3,Opponent,Charmander,Bulbasaur,Vine Whip,0,1,0.0,-746.0,False
+433,162,1,12,Opponent,Eevee,Bulbasaur,Vine Whip,0,1,0.0,-10000.0,False
+435,162,3,14,Opponent,Eevee,Bulbasaur,Vine Whip,0,1,0.0,-10000.0,False
+437,163,0,8,Opponent,Eevee,Charmander,Flame Tail,1,2,0.0,577.5,False
+439,163,2,10,Opponent,Eevee,Charmander,Flame Tail,1,2,0.0,577.5,True
+441,165,0,1,Opponent,Meowth,Squirtle,Tackle,0,2,0.0,10000.0,False
+444,166,1,10,Opponent,Meowth,Pikachu,Thunderbolt,1,2,0.0,620.17,True
+445,167,0,2,Opponent,Squirtle,Bulbasaur,Vine Whip,0,2,0.0,722.59,False
+446,167,1,4,Opponent,Squirtle,Bulbasaur,Razor Leaf,1,2,0.0,758.95,True
+449,169,0,13,Opponent,Eevee,Bulbasaur,Razor Leaf,1,2,0.0,624.23,True
+451,170,1,2,Opponent,Eevee,Pikachu,Quick Attack,0,1,0.0,-17.0,False
+454,170,4,6,Opponent,Eevee,Pikachu,Quick Attack,0,1,0.0,540.33,False
+456,171,0,2,Opponent,Eevee,Pikachu,Quick Attack,0,1,0.0,22.83,False
+457,171,1,4,Opponent,Eevee,Pikachu,Quick Attack,0,1,0.0,595.83,False
+459,171,3,6,Opponent,Eevee,Pikachu,Quick Attack,0,1,0.0,595.83,True
+461,172,1,12,Opponent,Meowth,Bulbasaur,Vine Whip,0,1,0.0,-619.44,False
+462,173,0,14,Opponent,Meowth,Charmander,Scratch,0,2,0.0,487.5,False
+466,174,1,5,Opponent,Pikachu,Bulbasaur,Vine Whip,0,2,0.0,-10000.0,False
+468,175,0,14,Opponent,Charmander,Squirtle,Tackle,0,1,0.0,-603.5,False
+469,175,1,16,Opponent,Charmander,Squirtle,Tackle,0,1,0.0,-603.5,False
+471,176,1,15,Opponent,Meowth,Eevee,Bite,1,2,0.0,-645.22,False
+472,177,0,4,Opponent,Charmander,Meowth,Fury Swipes,1,2,0.0,579.61,False
+475,178,1,14,Opponent,Pikachu,Bulbasaur,Vine Whip,0,2,0.0,646.18,False
+477,178,3,16,Opponent,Pikachu,Bulbasaur,Razor Leaf,1,2,0.0,646.18,True
+478,179,0,4,Opponent,Eevee,Pikachu,Quick Attack,0,2,0.0,10000.0,False
+481,179,3,8,Opponent,Eevee,Pikachu,Quick Attack,0,2,0.0,10000.0,True

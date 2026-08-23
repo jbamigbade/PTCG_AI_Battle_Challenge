@@ -1,0 +1,20 @@
+{
+    "records": 1000,
+    "unique_states": 1000,
+    "battles_generated": 380,
+    "failed_positions": 0,
+    "player_turn_records": 501,
+    "opponent_turn_records": 499,
+    "player_zero_damage_rate": 0.0,
+    "opponent_zero_damage_rate": 0.0,
+    "player_average_damage": 36.43712574850299,
+    "opponent_average_damage": 35.59719438877755,
+    "search_depth": 4,
+    "state_dimension": 8,
+    "move_dimension": 8,
+    "generation_seconds": 0.7960948999971151,
+    "records_per_second": 1256.1316496357706,
+    "actor_relative": true,
+    "synthetic_labels": 0,
+    "training_ready": true
+}

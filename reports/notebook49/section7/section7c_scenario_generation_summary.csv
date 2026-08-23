@@ -1,0 +1,107 @@
+source_scenario_id,queue_position,normalized_side,baseline_name,generated_variants,accepted_variants,rejected_variants,skipped_existing,trace_file
+NB48_LOSS_210,1,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_210.jsonl
+NB48_LOSS_222,2,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_222.jsonl
+NB48_LOSS_234,3,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_234.jsonl
+NB48_LOSS_246,4,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_246.jsonl
+NB48_LOSS_258,5,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_258.jsonl
+NB48_LOSS_270,6,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_270.jsonl
+NB48_LOSS_282,7,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_282.jsonl
+NB48_LOSS_294,8,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_294.jsonl
+NB48_LOSS_204,9,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_204.jsonl
+NB48_LOSS_216,10,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_216.jsonl
+NB48_LOSS_228,11,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_228.jsonl
+NB48_LOSS_240,12,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_240.jsonl
+NB48_LOSS_252,13,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_252.jsonl
+NB48_LOSS_264,14,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_264.jsonl
+NB48_LOSS_276,15,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_276.jsonl
+NB48_LOSS_288,16,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_288.jsonl
+NB48_LOSS_300,17,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_300.jsonl
+NB48_LOSS_202,18,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_202.jsonl
+NB48_LOSS_206,19,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_206.jsonl
+NB48_LOSS_214,20,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_214.jsonl
+NB48_LOSS_218,21,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_218.jsonl
+NB48_LOSS_226,22,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_226.jsonl
+NB48_LOSS_230,23,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_230.jsonl
+NB48_LOSS_238,24,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_238.jsonl
+NB48_LOSS_242,25,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_242.jsonl
+NB48_LOSS_250,26,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_250.jsonl
+NB48_LOSS_254,27,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_254.jsonl
+NB48_LOSS_262,28,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_262.jsonl
+NB48_LOSS_266,29,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_266.jsonl
+NB48_LOSS_274,30,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_274.jsonl
+NB48_LOSS_278,31,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_278.jsonl
+NB48_LOSS_286,32,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_286.jsonl
+NB48_LOSS_290,33,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_290.jsonl
+NB48_LOSS_298,34,Opponent,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_298.jsonl
+NB48_LOSS_104,35,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_104.jsonl
+NB48_LOSS_116,36,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_116.jsonl
+NB48_LOSS_128,37,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_128.jsonl
+NB48_LOSS_140,38,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_140.jsonl
+NB48_LOSS_152,39,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_152.jsonl
+NB48_LOSS_164,40,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_164.jsonl
+NB48_LOSS_176,41,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_176.jsonl
+NB48_LOSS_188,42,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_188.jsonl
+NB48_LOSS_200,43,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_200.jsonl
+NB48_LOSS_102,44,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_102.jsonl
+NB48_LOSS_106,45,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_106.jsonl
+NB48_LOSS_110,46,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_110.jsonl
+NB48_LOSS_114,47,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_114.jsonl
+NB48_LOSS_118,48,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_118.jsonl
+NB48_LOSS_122,49,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_122.jsonl
+NB48_LOSS_126,50,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_126.jsonl
+NB48_LOSS_130,51,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_130.jsonl
+NB48_LOSS_134,52,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_134.jsonl
+NB48_LOSS_138,53,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_138.jsonl
+NB48_LOSS_142,54,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_142.jsonl
+NB48_LOSS_146,55,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_146.jsonl
+NB48_LOSS_150,56,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_150.jsonl
+NB48_LOSS_154,57,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_154.jsonl
+NB48_LOSS_158,58,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_158.jsonl
+NB48_LOSS_162,59,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_162.jsonl
+NB48_LOSS_166,60,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_166.jsonl
+NB48_LOSS_170,61,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_170.jsonl
+NB48_LOSS_174,62,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_174.jsonl
+NB48_LOSS_178,63,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_178.jsonl
+NB48_LOSS_182,64,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_182.jsonl
+NB48_LOSS_186,65,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_186.jsonl
+NB48_LOSS_190,66,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_190.jsonl
+NB48_LOSS_194,67,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_194.jsonl
+NB48_LOSS_198,68,Opponent,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_198.jsonl
+NB48_LOSS_46,69,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_46.jsonl
+NB48_LOSS_70,70,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_70.jsonl
+NB48_LOSS_211,71,Player,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_211.jsonl
+NB48_LOSS_223,72,Player,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_223.jsonl
+NB48_LOSS_235,73,Player,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_235.jsonl
+NB48_LOSS_247,74,Player,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_247.jsonl
+NB48_LOSS_259,75,Player,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_259.jsonl
+NB48_LOSS_271,76,Player,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_271.jsonl
+NB48_LOSS_283,77,Player,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_283.jsonl
+NB48_LOSS_295,78,Player,Depth-6 Search Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_295.jsonl
+NB48_LOSS_4,79,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_4.jsonl
+NB48_LOSS_40,80,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_40.jsonl
+NB48_LOSS_52,81,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_52.jsonl
+NB48_LOSS_76,82,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_76.jsonl
+NB48_LOSS_88,83,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_88.jsonl
+NB48_LOSS_100,84,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_100.jsonl
+NB48_LOSS_2,85,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_2.jsonl
+NB48_LOSS_6,86,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_6.jsonl
+NB48_LOSS_10,87,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_10.jsonl
+NB48_LOSS_22,88,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_22.jsonl
+NB48_LOSS_30,89,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_30.jsonl
+NB48_LOSS_34,90,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_34.jsonl
+NB48_LOSS_42,91,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_42.jsonl
+NB48_LOSS_74,92,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_74.jsonl
+NB48_LOSS_82,93,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_82.jsonl
+NB48_LOSS_94,94,Opponent,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_94.jsonl
+NB48_LOSS_111,95,Player,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_111.jsonl
+NB48_LOSS_123,96,Player,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_123.jsonl
+NB48_LOSS_135,97,Player,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_135.jsonl
+NB48_LOSS_147,98,Player,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_147.jsonl
+NB48_LOSS_159,99,Player,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_159.jsonl
+NB48_LOSS_171,100,Player,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_171.jsonl
+NB48_LOSS_183,101,Player,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_183.jsonl
+NB48_LOSS_195,102,Player,Greedy Damage Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_195.jsonl
+NB48_LOSS_11,103,Player,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_11.jsonl
+NB48_LOSS_59,104,Player,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_59.jsonl
+NB48_LOSS_71,105,Player,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_71.jsonl
+NB48_LOSS_83,106,Player,Random Baseline,10,10,0,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section7\scenario_traces\state_variants\NB48_LOSS_83.jsonl

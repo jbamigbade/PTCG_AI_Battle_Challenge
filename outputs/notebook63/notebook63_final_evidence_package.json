@@ -1,0 +1,154 @@
+{
+  "notebook": 63,
+  "title": "FINAL_STRATEGY_SIMULATION_CAMPAIGN",
+  "status": "COMPLETE",
+  "final_findings": {
+    "campaign_battles": 240,
+    "runtime_failures": 0,
+    "deployment_runtime_stable": true,
+    "deployment_unknown_move_rate": 0.0,
+    "deployment_positive_damage_rate": 1.0,
+    "deployment_win_rate": 0.75,
+    "first_legal_win_rate": 0.75,
+    "max_damage_win_rate": 0.75,
+    "deployment_first_legal_equivalence_rate": 1.0,
+    "deployment_max_damage_equivalence_rate": 0.0,
+    "behavior_classification": "DEPLOYMENT_POLICY_BEHAVIORALLY_EQUIVALENT_TO_FIRST_LEGAL_UNDER_CONTROLLED_ATTACK_ONLY_CAMPAIGN",
+    "analysis_scope": "CONTROLLED_ATTACK_ONLY_SYNTHETIC_BATTLE_STATES"
+  },
+  "validated_claims": [
+    "The corrected simulation campaign completed all 240 battles.",
+    "No runtime failures occurred during the full campaign.",
+    "The deployment policy produced zero Unknown Move actions.",
+    "The deployment policy produced positive damage on every recorded campaign move.",
+    "No full-campaign battle ended in timeout.",
+    "Normal and swapped-side win rates were identical.",
+    "The deployment runtime remained stable throughout evaluation."
+  ],
+  "limitations": [
+    "The Notebook 63 simulator is a controlled attack-only environment.",
+    "The campaign does not reproduce complete official Pok\u00e9mon TCG gameplay.",
+    "Synthetic battle states were used instead of full tournament deck states.",
+    "The deployment policy did not outperform either deterministic baseline on campaign win rate.",
+    "The deployment policy was behaviorally equivalent to FIRST_LEGAL_MOVE across all 80 paired controlled battles.",
+    "MAX_DAMAGE_LEGAL_MOVE achieved substantially greater damage efficiency and completed battles in fewer turns.",
+    "Therefore Notebook 63 supports runtime robustness, semantic correctness, side neutrality, and controlled behavior claims \u2014 not policy superiority."
+  ],
+  "track1_conclusion": {
+    "track": "SIMULATION_AND_EVIDENCE",
+    "status": "COMPLETE",
+    "runtime_validation": "PASS",
+    "semantic_validation": "PASS",
+    "side_neutrality_validation": "PASS",
+    "full_campaign_execution": "PASS",
+    "battle_count": 240,
+    "runtime_failures": 0,
+    "policy_superiority_proven": false,
+    "deployment_first_legal_equivalence": true,
+    "recommended_interpretation": "Notebook 63 provides controlled runtime, semantic, side-neutrality, and behavioral evidence. It must not be used to claim deployment-policy superiority."
+  },
+  "identifiers": {
+    "original_campaign_sha256": "acdeb20722ee3ba9b897b1ea0320e8162ac6f53f9fe4f8fca97e6039effd2ede",
+    "corrected_campaign_sha256": "901d90eb6bb39b6de10848ddd30de86bd64ee9bcadd35f4cf2e638c2b72a2301",
+    "main_sha256": "e328508c39b6c48411f46ad43f5ec1ffe34f54f740aed24389f88d8166dc97cd",
+    "certified_rf_sha256": "615baf3d5725ccca0c1c94e37f62fb24a68613248e167bb566bef4a6d50f2581",
+    "deployment_ppo_checkpoint_sha256": "4e6a19861eb5be5f61bc86508dff07dd838a42df9350355d95e8f2dc436ae787"
+  },
+  "evidence_inventory": [
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell5_isolated_simulator_smoke_result.json",
+      "exists": true,
+      "bytes": 2082,
+      "sha256": "8848368d6ce0deabed09f59e5405f10c2633c648bfdf2e778ed485001090eb24"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell6_deployment_policy_smoke_result.json",
+      "exists": true,
+      "bytes": 4600,
+      "sha256": "1538b58d70c1bcd99ee7990fd421ac275f877190dc0e30531edb85130027bbcb"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell7_campaign_design.json",
+      "exists": true,
+      "bytes": 9085,
+      "sha256": "8939881fa8752c48b9d5ac4f4a4731b82bf0a31b3998715a95d873ceca90220a"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell8_pilot_summary.json",
+      "exists": true,
+      "bytes": 1613,
+      "sha256": "0147784527258820982e606c2979291dd191627fdec9e0ce8a7251effe23b763"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell9_legal_move_contract_audit.json",
+      "exists": true,
+      "bytes": 4308,
+      "sha256": "6785a4cba87c7e5f0a51e59b8da166796b01efc73f6c834a3b4da41c18f3847d"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell10_schema_correct_scenarios.json",
+      "exists": true,
+      "bytes": 4386,
+      "sha256": "903031919e03d3e304f920be7a5cd7e062aa8544ea6814ed962f07fa559d34aa"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell10_corrected_campaign_matrix.json",
+      "exists": true,
+      "bytes": 85063,
+      "sha256": "fee852f9fb63abb80caff5637ce0f82da975d305f281abbb57fa9ecba5e1ae62"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell10_schema_repair_audit.json",
+      "exists": true,
+      "bytes": 11720,
+      "sha256": "e981a20da8bd9d598d9a1a4263185a875014f22a64009bd354c8e851fb004032"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell11_corrected_pilot_records.json",
+      "exists": true,
+      "bytes": 22581,
+      "sha256": "3a0698d4737d1105573e0d07254bbb4a76dbb13f158633b2d36d66eeec087772"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell11_corrected_pilot_summary.json",
+      "exists": true,
+      "bytes": 2916,
+      "sha256": "5056b257059290038f7e7df6658e5c7fee73b3db74b13fd8d8e108f5d5d62b5a"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell12b_full_campaign_records.json",
+      "exists": true,
+      "bytes": 225783,
+      "sha256": "b6a9de0e7d4f0b879f639286a96843f6658509bf5789b5b1a928a37d7cc6512c"
+    },
+    {
+      "path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell13_full_campaign_analysis.json",
+      "exists": true,
+      "bytes": 10147,
+      "sha256": "3c683b215b6d8bd79628c4c6e0074f2974911cba500716bfa00e802aa986fbb2"
+    }
+  ],
+  "notebook64_handoff": {
+    "source_notebook": 63,
+    "target_notebook": 64,
+    "target_title": "MATCHUP_DECISION_STRATEGY_INTERPRETATION",
+    "campaign_configuration_sha256": "901d90eb6bb39b6de10848ddd30de86bd64ee9bcadd35f4cf2e638c2b72a2301",
+    "authoritative_campaign_analysis": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook63\\notebook63_full_campaign_analysis.json",
+    "authoritative_campaign_records": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\outputs\\notebook63\\cell12b_full_campaign_records.json",
+    "authoritative_corrected_scenarios": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\cell10_schema_correct_scenarios.json",
+    "key_runtime_result": "240/240 controlled battles completed with zero runtime failures.",
+    "key_semantic_result": "Unknown Move rate = 0.0 and positive-damage move rate = 1.0.",
+    "key_behavioral_result": "Deployment policy behaviorally matched FIRST_LEGAL_MOVE in all 80 paired controlled battles.",
+    "important_limitation": "Controlled attack-only synthetic environment; not full official Pok\u00e9mon TCG gameplay.",
+    "notebook64_required_focus": [
+      "matchup interpretation",
+      "scenario-level decision behavior",
+      "damage-efficiency comparison",
+      "side-neutrality evidence",
+      "deployment-policy limitations",
+      "integration with NB57-NB62 certified evidence",
+      "strategy-report evidence extraction"
+    ]
+  },
+  "final_package_sha256": "4cb90a9e034c5660e72ffba81b1d84a6c397d0ae676f6113cbaeb3c5f86bc404"
+}

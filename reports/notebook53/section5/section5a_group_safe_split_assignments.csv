@@ -1,0 +1,1061 @@
+row_index,source_scenario_id,expert_move,legal_move_signature,sample_weight,split
+0,NB48_LOSS_10,Ascension,ascension,1.6335,Training
+1,NB48_LOSS_10,Bind Down,bind down,0.99,Training
+2,NB48_LOSS_10,Bind Down,bind down,0.99,Training
+3,NB48_LOSS_10,Quick Attack,ascension | quick attack,1.8785,Training
+4,NB48_LOSS_10,Ascension,ascension,1.6335,Training
+5,NB48_LOSS_10,Quick Attack,ascension | quick attack,1.8785,Training
+6,NB48_LOSS_10,Ascension,ascension,1.6335,Training
+7,NB48_LOSS_10,Pass,pass,1.6335,Training
+8,NB48_LOSS_10,Ascension,ascension,1.6335,Training
+9,NB48_LOSS_10,Quick Attack,ascension | quick attack,1.8785,Training
+10,NB48_LOSS_100,Ascension,ascension,1.6335,Validation
+11,NB48_LOSS_100,Bind Down,bind down,0.99,Validation
+12,NB48_LOSS_100,Bind Down,bind down,0.99,Validation
+13,NB48_LOSS_100,Quick Attack,ascension | quick attack,1.8785,Validation
+14,NB48_LOSS_100,Ascension,ascension,1.6335,Validation
+15,NB48_LOSS_100,Quick Attack,ascension | quick attack,1.8785,Validation
+16,NB48_LOSS_100,Ascension,ascension,1.6335,Validation
+17,NB48_LOSS_100,Pass,pass,1.6335,Validation
+18,NB48_LOSS_100,Ascension,ascension,1.6335,Validation
+19,NB48_LOSS_100,Quick Attack,ascension | quick attack,1.8785,Validation
+20,NB48_LOSS_102,Ascension,ascension,1.6335,Training
+21,NB48_LOSS_102,Live Coal,live coal,0.99,Training
+22,NB48_LOSS_102,Live Coal,live coal,0.99,Training
+23,NB48_LOSS_102,Quick Attack,ascension | quick attack,1.8785,Training
+24,NB48_LOSS_102,Ascension,ascension,1.6335,Training
+25,NB48_LOSS_102,Quick Attack,ascension | quick attack,1.8785,Training
+26,NB48_LOSS_102,Ascension,ascension,1.6335,Training
+27,NB48_LOSS_102,Pass,pass,1.6335,Training
+28,NB48_LOSS_102,Ascension,ascension,1.6335,Training
+29,NB48_LOSS_102,Quick Attack,ascension | quick attack,1.8785,Training
+30,NB48_LOSS_104,Ascension,ascension,1.6335,Validation
+31,NB48_LOSS_104,Bind Down,bind down,0.99,Validation
+32,NB48_LOSS_104,Bind Down,bind down,0.99,Validation
+33,NB48_LOSS_104,Quick Attack,ascension | quick attack,1.8785,Validation
+34,NB48_LOSS_104,Ascension,ascension,1.6335,Validation
+35,NB48_LOSS_104,Quick Attack,ascension | quick attack,1.8785,Validation
+36,NB48_LOSS_104,Ascension,ascension,1.6335,Validation
+37,NB48_LOSS_104,Pass,pass,1.6335,Validation
+38,NB48_LOSS_104,Ascension,ascension,1.6335,Validation
+39,NB48_LOSS_104,Quick Attack,ascension | quick attack,1.8785,Validation
+40,NB48_LOSS_106,Ascension,ascension,1.6335,Validation
+41,NB48_LOSS_106,Pass,pass,0.99,Validation
+42,NB48_LOSS_106,Tuck Tail,tuck tail,0.99,Validation
+43,NB48_LOSS_106,Quick Attack,ascension | quick attack,1.8785,Validation
+44,NB48_LOSS_106,Ascension,ascension,1.6335,Validation
+45,NB48_LOSS_106,Quick Attack,ascension | quick attack,1.8785,Validation
+46,NB48_LOSS_106,Ascension,ascension,1.6335,Validation
+47,NB48_LOSS_106,Pass,pass,1.6335,Validation
+48,NB48_LOSS_106,Ascension,ascension,1.6335,Validation
+49,NB48_LOSS_106,Quick Attack,ascension | quick attack,1.8785,Validation
+50,NB48_LOSS_11,Ascension,ascension,1.21,Training
+51,NB48_LOSS_11,Live Coal,live coal,1.3365,Training
+52,NB48_LOSS_11,Live Coal,live coal,1.3365,Training
+53,NB48_LOSS_11,Quick Attack,ascension | quick attack,1.3915,Training
+54,NB48_LOSS_11,Ascension,ascension,1.21,Training
+55,NB48_LOSS_11,Quick Attack,ascension | quick attack,1.3915,Training
+56,NB48_LOSS_11,Ascension,ascension,1.21,Training
+57,NB48_LOSS_11,Pass,pass,1.21,Training
+58,NB48_LOSS_11,Quick Attack,ascension | quick attack,1.3915,Training
+59,NB48_LOSS_11,Ascension,ascension,1.21,Training
+60,NB48_LOSS_110,Ascension,ascension,1.6335,Training
+61,NB48_LOSS_110,Bind Down,bind down,0.99,Training
+62,NB48_LOSS_110,Bind Down,bind down,0.99,Training
+63,NB48_LOSS_110,Quick Attack,ascension | quick attack,1.8785,Training
+64,NB48_LOSS_110,Ascension,ascension,1.6335,Training
+65,NB48_LOSS_110,Quick Attack,ascension | quick attack,1.8785,Training
+66,NB48_LOSS_110,Ascension,ascension,1.6335,Training
+67,NB48_LOSS_110,Pass,pass,1.6335,Training
+68,NB48_LOSS_110,Ascension,ascension,1.6335,Training
+69,NB48_LOSS_110,Quick Attack,ascension | quick attack,1.8785,Training
+70,NB48_LOSS_111,Ascension,ascension,1.21,Training
+71,NB48_LOSS_111,Live Coal,live coal,1.3365,Training
+72,NB48_LOSS_111,Live Coal,live coal,1.3365,Training
+73,NB48_LOSS_111,Quick Attack,ascension | quick attack,1.3915,Training
+74,NB48_LOSS_111,Ascension,ascension,1.21,Training
+75,NB48_LOSS_111,Quick Attack,ascension | quick attack,1.3915,Training
+76,NB48_LOSS_111,Ascension,ascension,1.21,Training
+77,NB48_LOSS_111,Pass,pass,1.21,Training
+78,NB48_LOSS_111,Quick Attack,ascension | quick attack,1.3915,Training
+79,NB48_LOSS_111,Ascension,ascension,1.21,Training
+80,NB48_LOSS_114,Ascension,ascension,1.6335,Test
+81,NB48_LOSS_114,Live Coal,live coal,0.99,Test
+82,NB48_LOSS_114,Live Coal,live coal,0.99,Test
+83,NB48_LOSS_114,Quick Attack,ascension | quick attack,1.8785,Test
+84,NB48_LOSS_114,Ascension,ascension,1.6335,Test
+85,NB48_LOSS_114,Quick Attack,ascension | quick attack,1.8785,Test
+86,NB48_LOSS_114,Ascension,ascension,1.6335,Test
+87,NB48_LOSS_114,Pass,pass,1.6335,Test
+88,NB48_LOSS_114,Ascension,ascension,1.6335,Test
+89,NB48_LOSS_114,Quick Attack,ascension | quick attack,1.8785,Test
+90,NB48_LOSS_116,Ascension,ascension,1.6335,Training
+91,NB48_LOSS_116,Bind Down,bind down,0.99,Training
+92,NB48_LOSS_116,Bind Down,bind down,0.99,Training
+93,NB48_LOSS_116,Quick Attack,ascension | quick attack,1.8785,Training
+94,NB48_LOSS_116,Ascension,ascension,1.6335,Training
+95,NB48_LOSS_116,Quick Attack,ascension | quick attack,1.8785,Training
+96,NB48_LOSS_116,Ascension,ascension,1.6335,Training
+97,NB48_LOSS_116,Pass,pass,1.6335,Training
+98,NB48_LOSS_116,Ascension,ascension,1.6335,Training
+99,NB48_LOSS_116,Quick Attack,ascension | quick attack,1.8785,Training
+100,NB48_LOSS_118,Ascension,ascension,1.6335,Training
+101,NB48_LOSS_118,Pass,pass,0.99,Training
+102,NB48_LOSS_118,Tuck Tail,tuck tail,0.99,Training
+103,NB48_LOSS_118,Quick Attack,ascension | quick attack,1.8785,Training
+104,NB48_LOSS_118,Ascension,ascension,1.6335,Training
+105,NB48_LOSS_118,Quick Attack,ascension | quick attack,1.8785,Training
+106,NB48_LOSS_118,Ascension,ascension,1.6335,Training
+107,NB48_LOSS_118,Pass,pass,1.6335,Training
+108,NB48_LOSS_118,Ascension,ascension,1.6335,Training
+109,NB48_LOSS_118,Quick Attack,ascension | quick attack,1.8785,Training
+110,NB48_LOSS_122,Ascension,ascension,1.6335,Training
+111,NB48_LOSS_122,Bind Down,bind down,0.99,Training
+112,NB48_LOSS_122,Bind Down,bind down,0.99,Training
+113,NB48_LOSS_122,Quick Attack,ascension | quick attack,1.8785,Training
+114,NB48_LOSS_122,Ascension,ascension,1.6335,Training
+115,NB48_LOSS_122,Quick Attack,ascension | quick attack,1.8785,Training
+116,NB48_LOSS_122,Ascension,ascension,1.6335,Training
+117,NB48_LOSS_122,Pass,pass,1.6335,Training
+118,NB48_LOSS_122,Ascension,ascension,1.6335,Training
+119,NB48_LOSS_122,Quick Attack,ascension | quick attack,1.8785,Training
+120,NB48_LOSS_123,Ascension,ascension,1.21,Training
+121,NB48_LOSS_123,Live Coal,live coal,1.3365,Training
+122,NB48_LOSS_123,Live Coal,live coal,1.3365,Training
+123,NB48_LOSS_123,Quick Attack,ascension | quick attack,1.3915,Training
+124,NB48_LOSS_123,Ascension,ascension,1.21,Training
+125,NB48_LOSS_123,Quick Attack,ascension | quick attack,1.3915,Training
+126,NB48_LOSS_123,Ascension,ascension,1.21,Training
+127,NB48_LOSS_123,Pass,pass,1.21,Training
+128,NB48_LOSS_123,Quick Attack,ascension | quick attack,1.3915,Training
+129,NB48_LOSS_123,Ascension,ascension,1.21,Training
+130,NB48_LOSS_126,Ascension,ascension,1.6335,Training
+131,NB48_LOSS_126,Live Coal,live coal,0.99,Training
+132,NB48_LOSS_126,Live Coal,live coal,0.99,Training
+133,NB48_LOSS_126,Quick Attack,ascension | quick attack,1.8785,Training
+134,NB48_LOSS_126,Ascension,ascension,1.6335,Training
+135,NB48_LOSS_126,Quick Attack,ascension | quick attack,1.8785,Training
+136,NB48_LOSS_126,Ascension,ascension,1.6335,Training
+137,NB48_LOSS_126,Pass,pass,1.6335,Training
+138,NB48_LOSS_126,Ascension,ascension,1.6335,Training
+139,NB48_LOSS_126,Quick Attack,ascension | quick attack,1.8785,Training
+140,NB48_LOSS_128,Ascension,ascension,1.6335,Training
+141,NB48_LOSS_128,Bind Down,bind down,0.99,Training
+142,NB48_LOSS_128,Bind Down,bind down,0.99,Training
+143,NB48_LOSS_128,Quick Attack,ascension | quick attack,1.8785,Training
+144,NB48_LOSS_128,Ascension,ascension,1.6335,Training
+145,NB48_LOSS_128,Quick Attack,ascension | quick attack,1.8785,Training
+146,NB48_LOSS_128,Ascension,ascension,1.6335,Training
+147,NB48_LOSS_128,Pass,pass,1.6335,Training
+148,NB48_LOSS_128,Ascension,ascension,1.6335,Training
+149,NB48_LOSS_128,Quick Attack,ascension | quick attack,1.8785,Training
+150,NB48_LOSS_130,Ascension,ascension,1.6335,Training
+151,NB48_LOSS_130,Pass,pass,0.99,Training
+152,NB48_LOSS_130,Tuck Tail,tuck tail,0.99,Training
+153,NB48_LOSS_130,Quick Attack,ascension | quick attack,1.8785,Training
+154,NB48_LOSS_130,Ascension,ascension,1.6335,Training
+155,NB48_LOSS_130,Quick Attack,ascension | quick attack,1.8785,Training
+156,NB48_LOSS_130,Ascension,ascension,1.6335,Training
+157,NB48_LOSS_130,Pass,pass,1.6335,Training
+158,NB48_LOSS_130,Ascension,ascension,1.6335,Training
+159,NB48_LOSS_130,Quick Attack,ascension | quick attack,1.8785,Training
+160,NB48_LOSS_134,Ascension,ascension,1.6335,Training
+161,NB48_LOSS_134,Bind Down,bind down,0.99,Training
+162,NB48_LOSS_134,Bind Down,bind down,0.99,Training
+163,NB48_LOSS_134,Quick Attack,ascension | quick attack,1.8785,Training
+164,NB48_LOSS_134,Ascension,ascension,1.6335,Training
+165,NB48_LOSS_134,Quick Attack,ascension | quick attack,1.8785,Training
+166,NB48_LOSS_134,Ascension,ascension,1.6335,Training
+167,NB48_LOSS_134,Pass,pass,1.6335,Training
+168,NB48_LOSS_134,Ascension,ascension,1.6335,Training
+169,NB48_LOSS_134,Quick Attack,ascension | quick attack,1.8785,Training
+170,NB48_LOSS_135,Ascension,ascension,1.21,Training
+171,NB48_LOSS_135,Live Coal,live coal,1.3365,Training
+172,NB48_LOSS_135,Live Coal,live coal,1.3365,Training
+173,NB48_LOSS_135,Quick Attack,ascension | quick attack,1.3915,Training
+174,NB48_LOSS_135,Ascension,ascension,1.21,Training
+175,NB48_LOSS_135,Quick Attack,ascension | quick attack,1.3915,Training
+176,NB48_LOSS_135,Ascension,ascension,1.21,Training
+177,NB48_LOSS_135,Pass,pass,1.21,Training
+178,NB48_LOSS_135,Quick Attack,ascension | quick attack,1.3915,Training
+179,NB48_LOSS_135,Ascension,ascension,1.21,Training
+180,NB48_LOSS_138,Ascension,ascension,1.6335,Training
+181,NB48_LOSS_138,Live Coal,live coal,0.99,Training
+182,NB48_LOSS_138,Live Coal,live coal,0.99,Training
+183,NB48_LOSS_138,Quick Attack,ascension | quick attack,1.8785,Training
+184,NB48_LOSS_138,Ascension,ascension,1.6335,Training
+185,NB48_LOSS_138,Quick Attack,ascension | quick attack,1.8785,Training
+186,NB48_LOSS_138,Ascension,ascension,1.6335,Training
+187,NB48_LOSS_138,Pass,pass,1.6335,Training
+188,NB48_LOSS_138,Ascension,ascension,1.6335,Training
+189,NB48_LOSS_138,Quick Attack,ascension | quick attack,1.8785,Training
+190,NB48_LOSS_140,Ascension,ascension,1.6335,Test
+191,NB48_LOSS_140,Bind Down,bind down,0.99,Test
+192,NB48_LOSS_140,Bind Down,bind down,0.99,Test
+193,NB48_LOSS_140,Quick Attack,ascension | quick attack,1.8785,Test
+194,NB48_LOSS_140,Ascension,ascension,1.6335,Test
+195,NB48_LOSS_140,Quick Attack,ascension | quick attack,1.8785,Test
+196,NB48_LOSS_140,Ascension,ascension,1.6335,Test
+197,NB48_LOSS_140,Pass,pass,1.6335,Test
+198,NB48_LOSS_140,Ascension,ascension,1.6335,Test
+199,NB48_LOSS_140,Quick Attack,ascension | quick attack,1.8785,Test
+200,NB48_LOSS_142,Ascension,ascension,1.6335,Training
+201,NB48_LOSS_142,Pass,pass,0.99,Training
+202,NB48_LOSS_142,Tuck Tail,tuck tail,0.99,Training
+203,NB48_LOSS_142,Quick Attack,ascension | quick attack,1.8785,Training
+204,NB48_LOSS_142,Ascension,ascension,1.6335,Training
+205,NB48_LOSS_142,Quick Attack,ascension | quick attack,1.8785,Training
+206,NB48_LOSS_142,Ascension,ascension,1.6335,Training
+207,NB48_LOSS_142,Pass,pass,1.6335,Training
+208,NB48_LOSS_142,Ascension,ascension,1.6335,Training
+209,NB48_LOSS_142,Quick Attack,ascension | quick attack,1.8785,Training
+210,NB48_LOSS_146,Ascension,ascension,1.6335,Training
+211,NB48_LOSS_146,Bind Down,bind down,0.99,Training
+212,NB48_LOSS_146,Bind Down,bind down,0.99,Training
+213,NB48_LOSS_146,Quick Attack,ascension | quick attack,1.8785,Training
+214,NB48_LOSS_146,Ascension,ascension,1.6335,Training
+215,NB48_LOSS_146,Quick Attack,ascension | quick attack,1.8785,Training
+216,NB48_LOSS_146,Ascension,ascension,1.6335,Training
+217,NB48_LOSS_146,Pass,pass,1.6335,Training
+218,NB48_LOSS_146,Ascension,ascension,1.6335,Training
+219,NB48_LOSS_146,Quick Attack,ascension | quick attack,1.8785,Training
+220,NB48_LOSS_147,Ascension,ascension,1.21,Training
+221,NB48_LOSS_147,Live Coal,live coal,1.3365,Training
+222,NB48_LOSS_147,Live Coal,live coal,1.3365,Training
+223,NB48_LOSS_147,Quick Attack,ascension | quick attack,1.3915,Training
+224,NB48_LOSS_147,Ascension,ascension,1.21,Training
+225,NB48_LOSS_147,Quick Attack,ascension | quick attack,1.3915,Training
+226,NB48_LOSS_147,Ascension,ascension,1.21,Training
+227,NB48_LOSS_147,Pass,pass,1.21,Training
+228,NB48_LOSS_147,Quick Attack,ascension | quick attack,1.3915,Training
+229,NB48_LOSS_147,Ascension,ascension,1.21,Training
+230,NB48_LOSS_150,Ascension,ascension,1.6335,Training
+231,NB48_LOSS_150,Live Coal,live coal,0.99,Training
+232,NB48_LOSS_150,Live Coal,live coal,0.99,Training
+233,NB48_LOSS_150,Quick Attack,ascension | quick attack,1.8785,Training
+234,NB48_LOSS_150,Ascension,ascension,1.6335,Training
+235,NB48_LOSS_150,Quick Attack,ascension | quick attack,1.8785,Training
+236,NB48_LOSS_150,Ascension,ascension,1.6335,Training
+237,NB48_LOSS_150,Pass,pass,1.6335,Training
+238,NB48_LOSS_150,Ascension,ascension,1.6335,Training
+239,NB48_LOSS_150,Quick Attack,ascension | quick attack,1.8785,Training
+240,NB48_LOSS_152,Ascension,ascension,1.6335,Training
+241,NB48_LOSS_152,Bind Down,bind down,0.99,Training
+242,NB48_LOSS_152,Bind Down,bind down,0.99,Training
+243,NB48_LOSS_152,Quick Attack,ascension | quick attack,1.8785,Training
+244,NB48_LOSS_152,Ascension,ascension,1.6335,Training
+245,NB48_LOSS_152,Quick Attack,ascension | quick attack,1.8785,Training
+246,NB48_LOSS_152,Ascension,ascension,1.6335,Training
+247,NB48_LOSS_152,Pass,pass,1.6335,Training
+248,NB48_LOSS_152,Ascension,ascension,1.6335,Training
+249,NB48_LOSS_152,Quick Attack,ascension | quick attack,1.8785,Training
+250,NB48_LOSS_154,Ascension,ascension,1.6335,Training
+251,NB48_LOSS_154,Pass,pass,0.99,Training
+252,NB48_LOSS_154,Tuck Tail,tuck tail,0.99,Training
+253,NB48_LOSS_154,Quick Attack,ascension | quick attack,1.8785,Training
+254,NB48_LOSS_154,Ascension,ascension,1.6335,Training
+255,NB48_LOSS_154,Quick Attack,ascension | quick attack,1.8785,Training
+256,NB48_LOSS_154,Ascension,ascension,1.6335,Training
+257,NB48_LOSS_154,Pass,pass,1.6335,Training
+258,NB48_LOSS_154,Ascension,ascension,1.6335,Training
+259,NB48_LOSS_154,Quick Attack,ascension | quick attack,1.8785,Training
+260,NB48_LOSS_158,Ascension,ascension,1.6335,Training
+261,NB48_LOSS_158,Bind Down,bind down,0.99,Training
+262,NB48_LOSS_158,Bind Down,bind down,0.99,Training
+263,NB48_LOSS_158,Quick Attack,ascension | quick attack,1.8785,Training
+264,NB48_LOSS_158,Ascension,ascension,1.6335,Training
+265,NB48_LOSS_158,Quick Attack,ascension | quick attack,1.8785,Training
+266,NB48_LOSS_158,Ascension,ascension,1.6335,Training
+267,NB48_LOSS_158,Pass,pass,1.6335,Training
+268,NB48_LOSS_158,Ascension,ascension,1.6335,Training
+269,NB48_LOSS_158,Quick Attack,ascension | quick attack,1.8785,Training
+270,NB48_LOSS_159,Ascension,ascension,1.21,Training
+271,NB48_LOSS_159,Live Coal,live coal,1.3365,Training
+272,NB48_LOSS_159,Live Coal,live coal,1.3365,Training
+273,NB48_LOSS_159,Quick Attack,ascension | quick attack,1.3915,Training
+274,NB48_LOSS_159,Ascension,ascension,1.21,Training
+275,NB48_LOSS_159,Quick Attack,ascension | quick attack,1.3915,Training
+276,NB48_LOSS_159,Ascension,ascension,1.21,Training
+277,NB48_LOSS_159,Pass,pass,1.21,Training
+278,NB48_LOSS_159,Quick Attack,ascension | quick attack,1.3915,Training
+279,NB48_LOSS_159,Ascension,ascension,1.21,Training
+280,NB48_LOSS_162,Ascension,ascension,1.6335,Validation
+281,NB48_LOSS_162,Live Coal,live coal,0.99,Validation
+282,NB48_LOSS_162,Live Coal,live coal,0.99,Validation
+283,NB48_LOSS_162,Quick Attack,ascension | quick attack,1.8785,Validation
+284,NB48_LOSS_162,Ascension,ascension,1.6335,Validation
+285,NB48_LOSS_162,Quick Attack,ascension | quick attack,1.8785,Validation
+286,NB48_LOSS_162,Ascension,ascension,1.6335,Validation
+287,NB48_LOSS_162,Pass,pass,1.6335,Validation
+288,NB48_LOSS_162,Ascension,ascension,1.6335,Validation
+289,NB48_LOSS_162,Quick Attack,ascension | quick attack,1.8785,Validation
+290,NB48_LOSS_164,Ascension,ascension,1.6335,Training
+291,NB48_LOSS_164,Bind Down,bind down,0.99,Training
+292,NB48_LOSS_164,Bind Down,bind down,0.99,Training
+293,NB48_LOSS_164,Quick Attack,ascension | quick attack,1.8785,Training
+294,NB48_LOSS_164,Ascension,ascension,1.6335,Training
+295,NB48_LOSS_164,Quick Attack,ascension | quick attack,1.8785,Training
+296,NB48_LOSS_164,Ascension,ascension,1.6335,Training
+297,NB48_LOSS_164,Pass,pass,1.6335,Training
+298,NB48_LOSS_164,Ascension,ascension,1.6335,Training
+299,NB48_LOSS_164,Quick Attack,ascension | quick attack,1.8785,Training
+300,NB48_LOSS_166,Ascension,ascension,1.6335,Validation
+301,NB48_LOSS_166,Pass,pass,0.99,Validation
+302,NB48_LOSS_166,Tuck Tail,tuck tail,0.99,Validation
+303,NB48_LOSS_166,Quick Attack,ascension | quick attack,1.8785,Validation
+304,NB48_LOSS_166,Ascension,ascension,1.6335,Validation
+305,NB48_LOSS_166,Quick Attack,ascension | quick attack,1.8785,Validation
+306,NB48_LOSS_166,Ascension,ascension,1.6335,Validation
+307,NB48_LOSS_166,Pass,pass,1.6335,Validation
+308,NB48_LOSS_166,Ascension,ascension,1.6335,Validation
+309,NB48_LOSS_166,Quick Attack,ascension | quick attack,1.8785,Validation
+310,NB48_LOSS_170,Ascension,ascension,1.6335,Training
+311,NB48_LOSS_170,Bind Down,bind down,0.99,Training
+312,NB48_LOSS_170,Bind Down,bind down,0.99,Training
+313,NB48_LOSS_170,Quick Attack,ascension | quick attack,1.8785,Training
+314,NB48_LOSS_170,Ascension,ascension,1.6335,Training
+315,NB48_LOSS_170,Quick Attack,ascension | quick attack,1.8785,Training
+316,NB48_LOSS_170,Ascension,ascension,1.6335,Training
+317,NB48_LOSS_170,Pass,pass,1.6335,Training
+318,NB48_LOSS_170,Ascension,ascension,1.6335,Training
+319,NB48_LOSS_170,Quick Attack,ascension | quick attack,1.8785,Training
+320,NB48_LOSS_171,Ascension,ascension,1.21,Validation
+321,NB48_LOSS_171,Live Coal,live coal,1.3365,Validation
+322,NB48_LOSS_171,Live Coal,live coal,1.3365,Validation
+323,NB48_LOSS_171,Quick Attack,ascension | quick attack,1.3915,Validation
+324,NB48_LOSS_171,Ascension,ascension,1.21,Validation
+325,NB48_LOSS_171,Quick Attack,ascension | quick attack,1.3915,Validation
+326,NB48_LOSS_171,Ascension,ascension,1.21,Validation
+327,NB48_LOSS_171,Pass,pass,1.21,Validation
+328,NB48_LOSS_171,Quick Attack,ascension | quick attack,1.3915,Validation
+329,NB48_LOSS_171,Ascension,ascension,1.21,Validation
+330,NB48_LOSS_174,Ascension,ascension,1.6335,Training
+331,NB48_LOSS_174,Live Coal,live coal,0.99,Training
+332,NB48_LOSS_174,Live Coal,live coal,0.99,Training
+333,NB48_LOSS_174,Quick Attack,ascension | quick attack,1.8785,Training
+334,NB48_LOSS_174,Ascension,ascension,1.6335,Training
+335,NB48_LOSS_174,Quick Attack,ascension | quick attack,1.8785,Training
+336,NB48_LOSS_174,Ascension,ascension,1.6335,Training
+337,NB48_LOSS_174,Pass,pass,1.6335,Training
+338,NB48_LOSS_174,Ascension,ascension,1.6335,Training
+339,NB48_LOSS_174,Quick Attack,ascension | quick attack,1.8785,Training
+340,NB48_LOSS_176,Ascension,ascension,1.6335,Validation
+341,NB48_LOSS_176,Bind Down,bind down,0.99,Validation
+342,NB48_LOSS_176,Bind Down,bind down,0.99,Validation
+343,NB48_LOSS_176,Quick Attack,ascension | quick attack,1.8785,Validation
+344,NB48_LOSS_176,Ascension,ascension,1.6335,Validation
+345,NB48_LOSS_176,Quick Attack,ascension | quick attack,1.8785,Validation
+346,NB48_LOSS_176,Ascension,ascension,1.6335,Validation
+347,NB48_LOSS_176,Pass,pass,1.6335,Validation
+348,NB48_LOSS_176,Ascension,ascension,1.6335,Validation
+349,NB48_LOSS_176,Quick Attack,ascension | quick attack,1.8785,Validation
+350,NB48_LOSS_178,Ascension,ascension,1.6335,Training
+351,NB48_LOSS_178,Pass,pass,0.99,Training
+352,NB48_LOSS_178,Tuck Tail,tuck tail,0.99,Training
+353,NB48_LOSS_178,Quick Attack,ascension | quick attack,1.8785,Training
+354,NB48_LOSS_178,Ascension,ascension,1.6335,Training
+355,NB48_LOSS_178,Quick Attack,ascension | quick attack,1.8785,Training
+356,NB48_LOSS_178,Ascension,ascension,1.6335,Training
+357,NB48_LOSS_178,Pass,pass,1.6335,Training
+358,NB48_LOSS_178,Ascension,ascension,1.6335,Training
+359,NB48_LOSS_178,Quick Attack,ascension | quick attack,1.8785,Training
+360,NB48_LOSS_182,Ascension,ascension,1.6335,Training
+361,NB48_LOSS_182,Bind Down,bind down,0.99,Training
+362,NB48_LOSS_182,Bind Down,bind down,0.99,Training
+363,NB48_LOSS_182,Quick Attack,ascension | quick attack,1.8785,Training
+364,NB48_LOSS_182,Ascension,ascension,1.6335,Training
+365,NB48_LOSS_182,Quick Attack,ascension | quick attack,1.8785,Training
+366,NB48_LOSS_182,Ascension,ascension,1.6335,Training
+367,NB48_LOSS_182,Pass,pass,1.6335,Training
+368,NB48_LOSS_182,Ascension,ascension,1.6335,Training
+369,NB48_LOSS_182,Quick Attack,ascension | quick attack,1.8785,Training
+370,NB48_LOSS_183,Ascension,ascension,1.21,Training
+371,NB48_LOSS_183,Live Coal,live coal,1.3365,Training
+372,NB48_LOSS_183,Live Coal,live coal,1.3365,Training
+373,NB48_LOSS_183,Quick Attack,ascension | quick attack,1.3915,Training
+374,NB48_LOSS_183,Ascension,ascension,1.21,Training
+375,NB48_LOSS_183,Quick Attack,ascension | quick attack,1.3915,Training
+376,NB48_LOSS_183,Ascension,ascension,1.21,Training
+377,NB48_LOSS_183,Pass,pass,1.21,Training
+378,NB48_LOSS_183,Quick Attack,ascension | quick attack,1.3915,Training
+379,NB48_LOSS_183,Ascension,ascension,1.21,Training
+380,NB48_LOSS_186,Ascension,ascension,1.6335,Training
+381,NB48_LOSS_186,Live Coal,live coal,0.99,Training
+382,NB48_LOSS_186,Live Coal,live coal,0.99,Training
+383,NB48_LOSS_186,Quick Attack,ascension | quick attack,1.8785,Training
+384,NB48_LOSS_186,Ascension,ascension,1.6335,Training
+385,NB48_LOSS_186,Quick Attack,ascension | quick attack,1.8785,Training
+386,NB48_LOSS_186,Ascension,ascension,1.6335,Training
+387,NB48_LOSS_186,Pass,pass,1.6335,Training
+388,NB48_LOSS_186,Ascension,ascension,1.6335,Training
+389,NB48_LOSS_186,Quick Attack,ascension | quick attack,1.8785,Training
+390,NB48_LOSS_188,Ascension,ascension,1.6335,Training
+391,NB48_LOSS_188,Bind Down,bind down,0.99,Training
+392,NB48_LOSS_188,Bind Down,bind down,0.99,Training
+393,NB48_LOSS_188,Quick Attack,ascension | quick attack,1.8785,Training
+394,NB48_LOSS_188,Ascension,ascension,1.6335,Training
+395,NB48_LOSS_188,Quick Attack,ascension | quick attack,1.8785,Training
+396,NB48_LOSS_188,Ascension,ascension,1.6335,Training
+397,NB48_LOSS_188,Pass,pass,1.6335,Training
+398,NB48_LOSS_188,Ascension,ascension,1.6335,Training
+399,NB48_LOSS_188,Quick Attack,ascension | quick attack,1.8785,Training
+400,NB48_LOSS_190,Ascension,ascension,1.6335,Training
+401,NB48_LOSS_190,Pass,pass,0.99,Training
+402,NB48_LOSS_190,Tuck Tail,tuck tail,0.99,Training
+403,NB48_LOSS_190,Quick Attack,ascension | quick attack,1.8785,Training
+404,NB48_LOSS_190,Ascension,ascension,1.6335,Training
+405,NB48_LOSS_190,Quick Attack,ascension | quick attack,1.8785,Training
+406,NB48_LOSS_190,Ascension,ascension,1.6335,Training
+407,NB48_LOSS_190,Pass,pass,1.6335,Training
+408,NB48_LOSS_190,Ascension,ascension,1.6335,Training
+409,NB48_LOSS_190,Quick Attack,ascension | quick attack,1.8785,Training
+410,NB48_LOSS_194,Ascension,ascension,1.6335,Training
+411,NB48_LOSS_194,Bind Down,bind down,0.99,Training
+412,NB48_LOSS_194,Bind Down,bind down,0.99,Training
+413,NB48_LOSS_194,Quick Attack,ascension | quick attack,1.8785,Training
+414,NB48_LOSS_194,Ascension,ascension,1.6335,Training
+415,NB48_LOSS_194,Quick Attack,ascension | quick attack,1.8785,Training
+416,NB48_LOSS_194,Ascension,ascension,1.6335,Training
+417,NB48_LOSS_194,Pass,pass,1.6335,Training
+418,NB48_LOSS_194,Ascension,ascension,1.6335,Training
+419,NB48_LOSS_194,Quick Attack,ascension | quick attack,1.8785,Training
+420,NB48_LOSS_195,Ascension,ascension,1.21,Training
+421,NB48_LOSS_195,Live Coal,live coal,1.3365,Training
+422,NB48_LOSS_195,Live Coal,live coal,1.3365,Training
+423,NB48_LOSS_195,Quick Attack,ascension | quick attack,1.3915,Training
+424,NB48_LOSS_195,Ascension,ascension,1.21,Training
+425,NB48_LOSS_195,Quick Attack,ascension | quick attack,1.3915,Training
+426,NB48_LOSS_195,Ascension,ascension,1.21,Training
+427,NB48_LOSS_195,Pass,pass,1.21,Training
+428,NB48_LOSS_195,Quick Attack,ascension | quick attack,1.3915,Training
+429,NB48_LOSS_195,Ascension,ascension,1.21,Training
+430,NB48_LOSS_198,Ascension,ascension,1.6335,Training
+431,NB48_LOSS_198,Live Coal,live coal,0.99,Training
+432,NB48_LOSS_198,Live Coal,live coal,0.99,Training
+433,NB48_LOSS_198,Quick Attack,ascension | quick attack,1.8785,Training
+434,NB48_LOSS_198,Ascension,ascension,1.6335,Training
+435,NB48_LOSS_198,Quick Attack,ascension | quick attack,1.8785,Training
+436,NB48_LOSS_198,Ascension,ascension,1.6335,Training
+437,NB48_LOSS_198,Pass,pass,1.6335,Training
+438,NB48_LOSS_198,Ascension,ascension,1.6335,Training
+439,NB48_LOSS_198,Quick Attack,ascension | quick attack,1.8785,Training
+440,NB48_LOSS_2,Ascension,ascension,1.6335,Training
+441,NB48_LOSS_2,Live Coal,live coal,0.99,Training
+442,NB48_LOSS_2,Live Coal,live coal,0.99,Training
+443,NB48_LOSS_2,Quick Attack,ascension | quick attack,1.8785,Training
+444,NB48_LOSS_2,Ascension,ascension,1.6335,Training
+445,NB48_LOSS_2,Quick Attack,ascension | quick attack,1.8785,Training
+446,NB48_LOSS_2,Ascension,ascension,1.6335,Training
+447,NB48_LOSS_2,Pass,pass,1.6335,Training
+448,NB48_LOSS_2,Ascension,ascension,1.6335,Training
+449,NB48_LOSS_2,Quick Attack,ascension | quick attack,1.8785,Training
+450,NB48_LOSS_200,Ascension,ascension,1.6335,Training
+451,NB48_LOSS_200,Bind Down,bind down,0.99,Training
+452,NB48_LOSS_200,Bind Down,bind down,0.99,Training
+453,NB48_LOSS_200,Quick Attack,ascension | quick attack,1.8785,Training
+454,NB48_LOSS_200,Ascension,ascension,1.6335,Training
+455,NB48_LOSS_200,Quick Attack,ascension | quick attack,1.8785,Training
+456,NB48_LOSS_200,Ascension,ascension,1.6335,Training
+457,NB48_LOSS_200,Pass,pass,1.6335,Training
+458,NB48_LOSS_200,Ascension,ascension,1.6335,Training
+459,NB48_LOSS_200,Quick Attack,ascension | quick attack,1.8785,Training
+460,NB48_LOSS_202,Ascension,ascension,1.6335,Training
+461,NB48_LOSS_202,Live Coal,live coal,0.99,Training
+462,NB48_LOSS_202,Live Coal,live coal,0.99,Training
+463,NB48_LOSS_202,Quick Attack,ascension | quick attack,1.8785,Training
+464,NB48_LOSS_202,Ascension,ascension,1.6335,Training
+465,NB48_LOSS_202,Quick Attack,ascension | quick attack,1.8785,Training
+466,NB48_LOSS_202,Ascension,ascension,1.6335,Training
+467,NB48_LOSS_202,Pass,pass,1.6335,Training
+468,NB48_LOSS_202,Ascension,ascension,1.6335,Training
+469,NB48_LOSS_202,Quick Attack,ascension | quick attack,1.8785,Training
+470,NB48_LOSS_204,Ascension,ascension,1.6335,Training
+471,NB48_LOSS_204,Bind Down,bind down,0.99,Training
+472,NB48_LOSS_204,Bind Down,bind down,0.99,Training
+473,NB48_LOSS_204,Quick Attack,ascension | quick attack,1.8785,Training
+474,NB48_LOSS_204,Ascension,ascension,1.6335,Training
+475,NB48_LOSS_204,Quick Attack,ascension | quick attack,1.8785,Training
+476,NB48_LOSS_204,Ascension,ascension,1.6335,Training
+477,NB48_LOSS_204,Pass,pass,1.6335,Training
+478,NB48_LOSS_204,Ascension,ascension,1.6335,Training
+479,NB48_LOSS_204,Quick Attack,ascension | quick attack,1.8785,Training
+480,NB48_LOSS_206,Ascension,ascension,1.6335,Training
+481,NB48_LOSS_206,Pass,pass,0.99,Training
+482,NB48_LOSS_206,Tuck Tail,tuck tail,0.99,Training
+483,NB48_LOSS_206,Quick Attack,ascension | quick attack,1.8785,Training
+484,NB48_LOSS_206,Ascension,ascension,1.6335,Training
+485,NB48_LOSS_206,Quick Attack,ascension | quick attack,1.8785,Training
+486,NB48_LOSS_206,Ascension,ascension,1.6335,Training
+487,NB48_LOSS_206,Pass,pass,1.6335,Training
+488,NB48_LOSS_206,Ascension,ascension,1.6335,Training
+489,NB48_LOSS_206,Quick Attack,ascension | quick attack,1.8785,Training
+490,NB48_LOSS_210,Ascension,ascension,1.6335,Validation
+491,NB48_LOSS_210,Bind Down,bind down,0.99,Validation
+492,NB48_LOSS_210,Bind Down,bind down,0.99,Validation
+493,NB48_LOSS_210,Quick Attack,ascension | quick attack,1.8785,Validation
+494,NB48_LOSS_210,Ascension,ascension,1.6335,Validation
+495,NB48_LOSS_210,Quick Attack,ascension | quick attack,1.8785,Validation
+496,NB48_LOSS_210,Ascension,ascension,1.6335,Validation
+497,NB48_LOSS_210,Pass,pass,1.6335,Validation
+498,NB48_LOSS_210,Ascension,ascension,1.6335,Validation
+499,NB48_LOSS_210,Quick Attack,ascension | quick attack,1.8785,Validation
+500,NB48_LOSS_211,Ascension,ascension,1.21,Training
+501,NB48_LOSS_211,Live Coal,live coal,1.3365,Training
+502,NB48_LOSS_211,Live Coal,live coal,1.3365,Training
+503,NB48_LOSS_211,Quick Attack,ascension | quick attack,1.3915,Training
+504,NB48_LOSS_211,Ascension,ascension,1.21,Training
+505,NB48_LOSS_211,Quick Attack,ascension | quick attack,1.3915,Training
+506,NB48_LOSS_211,Ascension,ascension,1.21,Training
+507,NB48_LOSS_211,Pass,pass,1.21,Training
+508,NB48_LOSS_211,Quick Attack,ascension | quick attack,1.3915,Training
+509,NB48_LOSS_211,Ascension,ascension,1.21,Training
+510,NB48_LOSS_214,Ascension,ascension,1.6335,Training
+511,NB48_LOSS_214,Live Coal,live coal,0.99,Training
+512,NB48_LOSS_214,Live Coal,live coal,0.99,Training
+513,NB48_LOSS_214,Quick Attack,ascension | quick attack,1.8785,Training
+514,NB48_LOSS_214,Ascension,ascension,1.6335,Training
+515,NB48_LOSS_214,Quick Attack,ascension | quick attack,1.8785,Training
+516,NB48_LOSS_214,Ascension,ascension,1.6335,Training
+517,NB48_LOSS_214,Pass,pass,1.6335,Training
+518,NB48_LOSS_214,Ascension,ascension,1.6335,Training
+519,NB48_LOSS_214,Quick Attack,ascension | quick attack,1.8785,Training
+520,NB48_LOSS_216,Ascension,ascension,1.6335,Test
+521,NB48_LOSS_216,Bind Down,bind down,0.99,Test
+522,NB48_LOSS_216,Bind Down,bind down,0.99,Test
+523,NB48_LOSS_216,Quick Attack,ascension | quick attack,1.8785,Test
+524,NB48_LOSS_216,Ascension,ascension,1.6335,Test
+525,NB48_LOSS_216,Quick Attack,ascension | quick attack,1.8785,Test
+526,NB48_LOSS_216,Ascension,ascension,1.6335,Test
+527,NB48_LOSS_216,Pass,pass,1.6335,Test
+528,NB48_LOSS_216,Ascension,ascension,1.6335,Test
+529,NB48_LOSS_216,Quick Attack,ascension | quick attack,1.8785,Test
+530,NB48_LOSS_218,Ascension,ascension,1.6335,Training
+531,NB48_LOSS_218,Pass,pass,0.99,Training
+532,NB48_LOSS_218,Tuck Tail,tuck tail,0.99,Training
+533,NB48_LOSS_218,Quick Attack,ascension | quick attack,1.8785,Training
+534,NB48_LOSS_218,Ascension,ascension,1.6335,Training
+535,NB48_LOSS_218,Quick Attack,ascension | quick attack,1.8785,Training
+536,NB48_LOSS_218,Ascension,ascension,1.6335,Training
+537,NB48_LOSS_218,Pass,pass,1.6335,Training
+538,NB48_LOSS_218,Ascension,ascension,1.6335,Training
+539,NB48_LOSS_218,Quick Attack,ascension | quick attack,1.8785,Training
+540,NB48_LOSS_22,Ascension,ascension,1.6335,Training
+541,NB48_LOSS_22,Bind Down,bind down,0.99,Training
+542,NB48_LOSS_22,Bind Down,bind down,0.99,Training
+543,NB48_LOSS_22,Quick Attack,ascension | quick attack,1.8785,Training
+544,NB48_LOSS_22,Ascension,ascension,1.6335,Training
+545,NB48_LOSS_22,Quick Attack,ascension | quick attack,1.8785,Training
+546,NB48_LOSS_22,Ascension,ascension,1.6335,Training
+547,NB48_LOSS_22,Pass,pass,1.6335,Training
+548,NB48_LOSS_22,Ascension,ascension,1.6335,Training
+549,NB48_LOSS_22,Quick Attack,ascension | quick attack,1.8785,Training
+550,NB48_LOSS_222,Ascension,ascension,1.6335,Training
+551,NB48_LOSS_222,Bind Down,bind down,0.99,Training
+552,NB48_LOSS_222,Bind Down,bind down,0.99,Training
+553,NB48_LOSS_222,Quick Attack,ascension | quick attack,1.8785,Training
+554,NB48_LOSS_222,Ascension,ascension,1.6335,Training
+555,NB48_LOSS_222,Quick Attack,ascension | quick attack,1.8785,Training
+556,NB48_LOSS_222,Ascension,ascension,1.6335,Training
+557,NB48_LOSS_222,Pass,pass,1.6335,Training
+558,NB48_LOSS_222,Ascension,ascension,1.6335,Training
+559,NB48_LOSS_222,Quick Attack,ascension | quick attack,1.8785,Training
+560,NB48_LOSS_223,Ascension,ascension,1.21,Training
+561,NB48_LOSS_223,Live Coal,live coal,1.3365,Training
+562,NB48_LOSS_223,Live Coal,live coal,1.3365,Training
+563,NB48_LOSS_223,Quick Attack,ascension | quick attack,1.3915,Training
+564,NB48_LOSS_223,Ascension,ascension,1.21,Training
+565,NB48_LOSS_223,Quick Attack,ascension | quick attack,1.3915,Training
+566,NB48_LOSS_223,Ascension,ascension,1.21,Training
+567,NB48_LOSS_223,Pass,pass,1.21,Training
+568,NB48_LOSS_223,Quick Attack,ascension | quick attack,1.3915,Training
+569,NB48_LOSS_223,Ascension,ascension,1.21,Training
+570,NB48_LOSS_226,Ascension,ascension,1.6335,Training
+571,NB48_LOSS_226,Live Coal,live coal,0.99,Training
+572,NB48_LOSS_226,Live Coal,live coal,0.99,Training
+573,NB48_LOSS_226,Quick Attack,ascension | quick attack,1.8785,Training
+574,NB48_LOSS_226,Ascension,ascension,1.6335,Training
+575,NB48_LOSS_226,Quick Attack,ascension | quick attack,1.8785,Training
+576,NB48_LOSS_226,Ascension,ascension,1.6335,Training
+577,NB48_LOSS_226,Pass,pass,1.6335,Training
+578,NB48_LOSS_226,Ascension,ascension,1.6335,Training
+579,NB48_LOSS_226,Quick Attack,ascension | quick attack,1.8785,Training
+580,NB48_LOSS_228,Ascension,ascension,1.6335,Training
+581,NB48_LOSS_228,Bind Down,bind down,0.99,Training
+582,NB48_LOSS_228,Bind Down,bind down,0.99,Training
+583,NB48_LOSS_228,Quick Attack,ascension | quick attack,1.8785,Training
+584,NB48_LOSS_228,Ascension,ascension,1.6335,Training
+585,NB48_LOSS_228,Quick Attack,ascension | quick attack,1.8785,Training
+586,NB48_LOSS_228,Ascension,ascension,1.6335,Training
+587,NB48_LOSS_228,Pass,pass,1.6335,Training
+588,NB48_LOSS_228,Ascension,ascension,1.6335,Training
+589,NB48_LOSS_228,Quick Attack,ascension | quick attack,1.8785,Training
+590,NB48_LOSS_230,Ascension,ascension,1.6335,Training
+591,NB48_LOSS_230,Pass,pass,0.99,Training
+592,NB48_LOSS_230,Tuck Tail,tuck tail,0.99,Training
+593,NB48_LOSS_230,Quick Attack,ascension | quick attack,1.8785,Training
+594,NB48_LOSS_230,Ascension,ascension,1.6335,Training
+595,NB48_LOSS_230,Quick Attack,ascension | quick attack,1.8785,Training
+596,NB48_LOSS_230,Ascension,ascension,1.6335,Training
+597,NB48_LOSS_230,Pass,pass,1.6335,Training
+598,NB48_LOSS_230,Ascension,ascension,1.6335,Training
+599,NB48_LOSS_230,Quick Attack,ascension | quick attack,1.8785,Training
+600,NB48_LOSS_234,Ascension,ascension,1.6335,Test
+601,NB48_LOSS_234,Bind Down,bind down,0.99,Test
+602,NB48_LOSS_234,Bind Down,bind down,0.99,Test
+603,NB48_LOSS_234,Quick Attack,ascension | quick attack,1.8785,Test
+604,NB48_LOSS_234,Ascension,ascension,1.6335,Test
+605,NB48_LOSS_234,Quick Attack,ascension | quick attack,1.8785,Test
+606,NB48_LOSS_234,Ascension,ascension,1.6335,Test
+607,NB48_LOSS_234,Pass,pass,1.6335,Test
+608,NB48_LOSS_234,Ascension,ascension,1.6335,Test
+609,NB48_LOSS_234,Quick Attack,ascension | quick attack,1.8785,Test
+610,NB48_LOSS_235,Ascension,ascension,1.21,Training
+611,NB48_LOSS_235,Live Coal,live coal,1.3365,Training
+612,NB48_LOSS_235,Live Coal,live coal,1.3365,Training
+613,NB48_LOSS_235,Quick Attack,ascension | quick attack,1.3915,Training
+614,NB48_LOSS_235,Ascension,ascension,1.21,Training
+615,NB48_LOSS_235,Quick Attack,ascension | quick attack,1.3915,Training
+616,NB48_LOSS_235,Ascension,ascension,1.21,Training
+617,NB48_LOSS_235,Pass,pass,1.21,Training
+618,NB48_LOSS_235,Quick Attack,ascension | quick attack,1.3915,Training
+619,NB48_LOSS_235,Ascension,ascension,1.21,Training
+620,NB48_LOSS_238,Ascension,ascension,1.6335,Training
+621,NB48_LOSS_238,Live Coal,live coal,0.99,Training
+622,NB48_LOSS_238,Live Coal,live coal,0.99,Training
+623,NB48_LOSS_238,Quick Attack,ascension | quick attack,1.8785,Training
+624,NB48_LOSS_238,Ascension,ascension,1.6335,Training
+625,NB48_LOSS_238,Quick Attack,ascension | quick attack,1.8785,Training
+626,NB48_LOSS_238,Ascension,ascension,1.6335,Training
+627,NB48_LOSS_238,Pass,pass,1.6335,Training
+628,NB48_LOSS_238,Ascension,ascension,1.6335,Training
+629,NB48_LOSS_238,Quick Attack,ascension | quick attack,1.8785,Training
+630,NB48_LOSS_240,Ascension,ascension,1.6335,Training
+631,NB48_LOSS_240,Bind Down,bind down,0.99,Training
+632,NB48_LOSS_240,Bind Down,bind down,0.99,Training
+633,NB48_LOSS_240,Quick Attack,ascension | quick attack,1.8785,Training
+634,NB48_LOSS_240,Ascension,ascension,1.6335,Training
+635,NB48_LOSS_240,Quick Attack,ascension | quick attack,1.8785,Training
+636,NB48_LOSS_240,Ascension,ascension,1.6335,Training
+637,NB48_LOSS_240,Pass,pass,1.6335,Training
+638,NB48_LOSS_240,Ascension,ascension,1.6335,Training
+639,NB48_LOSS_240,Quick Attack,ascension | quick attack,1.8785,Training
+640,NB48_LOSS_242,Ascension,ascension,1.6335,Test
+641,NB48_LOSS_242,Pass,pass,0.99,Test
+642,NB48_LOSS_242,Tuck Tail,tuck tail,0.99,Test
+643,NB48_LOSS_242,Quick Attack,ascension | quick attack,1.8785,Test
+644,NB48_LOSS_242,Ascension,ascension,1.6335,Test
+645,NB48_LOSS_242,Quick Attack,ascension | quick attack,1.8785,Test
+646,NB48_LOSS_242,Ascension,ascension,1.6335,Test
+647,NB48_LOSS_242,Pass,pass,1.6335,Test
+648,NB48_LOSS_242,Ascension,ascension,1.6335,Test
+649,NB48_LOSS_242,Quick Attack,ascension | quick attack,1.8785,Test
+650,NB48_LOSS_246,Ascension,ascension,1.6335,Training
+651,NB48_LOSS_246,Bind Down,bind down,0.99,Training
+652,NB48_LOSS_246,Bind Down,bind down,0.99,Training
+653,NB48_LOSS_246,Quick Attack,ascension | quick attack,1.8785,Training
+654,NB48_LOSS_246,Ascension,ascension,1.6335,Training
+655,NB48_LOSS_246,Quick Attack,ascension | quick attack,1.8785,Training
+656,NB48_LOSS_246,Ascension,ascension,1.6335,Training
+657,NB48_LOSS_246,Pass,pass,1.6335,Training
+658,NB48_LOSS_246,Ascension,ascension,1.6335,Training
+659,NB48_LOSS_246,Quick Attack,ascension | quick attack,1.8785,Training
+660,NB48_LOSS_247,Ascension,ascension,1.21,Training
+661,NB48_LOSS_247,Live Coal,live coal,1.3365,Training
+662,NB48_LOSS_247,Live Coal,live coal,1.3365,Training
+663,NB48_LOSS_247,Quick Attack,ascension | quick attack,1.3915,Training
+664,NB48_LOSS_247,Ascension,ascension,1.21,Training
+665,NB48_LOSS_247,Quick Attack,ascension | quick attack,1.3915,Training
+666,NB48_LOSS_247,Ascension,ascension,1.21,Training
+667,NB48_LOSS_247,Pass,pass,1.21,Training
+668,NB48_LOSS_247,Quick Attack,ascension | quick attack,1.3915,Training
+669,NB48_LOSS_247,Ascension,ascension,1.21,Training
+670,NB48_LOSS_250,Ascension,ascension,1.6335,Training
+671,NB48_LOSS_250,Live Coal,live coal,0.99,Training
+672,NB48_LOSS_250,Live Coal,live coal,0.99,Training
+673,NB48_LOSS_250,Quick Attack,ascension | quick attack,1.8785,Training
+674,NB48_LOSS_250,Ascension,ascension,1.6335,Training
+675,NB48_LOSS_250,Quick Attack,ascension | quick attack,1.8785,Training
+676,NB48_LOSS_250,Ascension,ascension,1.6335,Training
+677,NB48_LOSS_250,Pass,pass,1.6335,Training
+678,NB48_LOSS_250,Ascension,ascension,1.6335,Training
+679,NB48_LOSS_250,Quick Attack,ascension | quick attack,1.8785,Training
+680,NB48_LOSS_252,Ascension,ascension,1.6335,Test
+681,NB48_LOSS_252,Bind Down,bind down,0.99,Test
+682,NB48_LOSS_252,Bind Down,bind down,0.99,Test
+683,NB48_LOSS_252,Quick Attack,ascension | quick attack,1.8785,Test
+684,NB48_LOSS_252,Ascension,ascension,1.6335,Test
+685,NB48_LOSS_252,Quick Attack,ascension | quick attack,1.8785,Test
+686,NB48_LOSS_252,Ascension,ascension,1.6335,Test
+687,NB48_LOSS_252,Pass,pass,1.6335,Test
+688,NB48_LOSS_252,Ascension,ascension,1.6335,Test
+689,NB48_LOSS_252,Quick Attack,ascension | quick attack,1.8785,Test
+690,NB48_LOSS_254,Ascension,ascension,1.6335,Training
+691,NB48_LOSS_254,Pass,pass,0.99,Training
+692,NB48_LOSS_254,Tuck Tail,tuck tail,0.99,Training
+693,NB48_LOSS_254,Quick Attack,ascension | quick attack,1.8785,Training
+694,NB48_LOSS_254,Ascension,ascension,1.6335,Training
+695,NB48_LOSS_254,Quick Attack,ascension | quick attack,1.8785,Training
+696,NB48_LOSS_254,Ascension,ascension,1.6335,Training
+697,NB48_LOSS_254,Pass,pass,1.6335,Training
+698,NB48_LOSS_254,Ascension,ascension,1.6335,Training
+699,NB48_LOSS_254,Quick Attack,ascension | quick attack,1.8785,Training
+700,NB48_LOSS_258,Ascension,ascension,1.6335,Training
+701,NB48_LOSS_258,Bind Down,bind down,0.99,Training
+702,NB48_LOSS_258,Bind Down,bind down,0.99,Training
+703,NB48_LOSS_258,Quick Attack,ascension | quick attack,1.8785,Training
+704,NB48_LOSS_258,Ascension,ascension,1.6335,Training
+705,NB48_LOSS_258,Quick Attack,ascension | quick attack,1.8785,Training
+706,NB48_LOSS_258,Ascension,ascension,1.6335,Training
+707,NB48_LOSS_258,Pass,pass,1.6335,Training
+708,NB48_LOSS_258,Ascension,ascension,1.6335,Training
+709,NB48_LOSS_258,Quick Attack,ascension | quick attack,1.8785,Training
+710,NB48_LOSS_259,Ascension,ascension,1.21,Training
+711,NB48_LOSS_259,Live Coal,live coal,1.3365,Training
+712,NB48_LOSS_259,Live Coal,live coal,1.3365,Training
+713,NB48_LOSS_259,Quick Attack,ascension | quick attack,1.3915,Training
+714,NB48_LOSS_259,Ascension,ascension,1.21,Training
+715,NB48_LOSS_259,Quick Attack,ascension | quick attack,1.3915,Training
+716,NB48_LOSS_259,Ascension,ascension,1.21,Training
+717,NB48_LOSS_259,Pass,pass,1.21,Training
+718,NB48_LOSS_259,Quick Attack,ascension | quick attack,1.3915,Training
+719,NB48_LOSS_259,Ascension,ascension,1.21,Training
+720,NB48_LOSS_262,Ascension,ascension,1.6335,Test
+721,NB48_LOSS_262,Live Coal,live coal,0.99,Test
+722,NB48_LOSS_262,Live Coal,live coal,0.99,Test
+723,NB48_LOSS_262,Quick Attack,ascension | quick attack,1.8785,Test
+724,NB48_LOSS_262,Ascension,ascension,1.6335,Test
+725,NB48_LOSS_262,Quick Attack,ascension | quick attack,1.8785,Test
+726,NB48_LOSS_262,Ascension,ascension,1.6335,Test
+727,NB48_LOSS_262,Pass,pass,1.6335,Test
+728,NB48_LOSS_262,Ascension,ascension,1.6335,Test
+729,NB48_LOSS_262,Quick Attack,ascension | quick attack,1.8785,Test
+730,NB48_LOSS_264,Ascension,ascension,1.6335,Training
+731,NB48_LOSS_264,Bind Down,bind down,0.99,Training
+732,NB48_LOSS_264,Bind Down,bind down,0.99,Training
+733,NB48_LOSS_264,Quick Attack,ascension | quick attack,1.8785,Training
+734,NB48_LOSS_264,Ascension,ascension,1.6335,Training
+735,NB48_LOSS_264,Quick Attack,ascension | quick attack,1.8785,Training
+736,NB48_LOSS_264,Ascension,ascension,1.6335,Training
+737,NB48_LOSS_264,Pass,pass,1.6335,Training
+738,NB48_LOSS_264,Ascension,ascension,1.6335,Training
+739,NB48_LOSS_264,Quick Attack,ascension | quick attack,1.8785,Training
+740,NB48_LOSS_266,Ascension,ascension,1.6335,Training
+741,NB48_LOSS_266,Pass,pass,0.99,Training
+742,NB48_LOSS_266,Tuck Tail,tuck tail,0.99,Training
+743,NB48_LOSS_266,Quick Attack,ascension | quick attack,1.8785,Training
+744,NB48_LOSS_266,Ascension,ascension,1.6335,Training
+745,NB48_LOSS_266,Quick Attack,ascension | quick attack,1.8785,Training
+746,NB48_LOSS_266,Ascension,ascension,1.6335,Training
+747,NB48_LOSS_266,Pass,pass,1.6335,Training
+748,NB48_LOSS_266,Ascension,ascension,1.6335,Training
+749,NB48_LOSS_266,Quick Attack,ascension | quick attack,1.8785,Training
+750,NB48_LOSS_270,Ascension,ascension,1.6335,Training
+751,NB48_LOSS_270,Bind Down,bind down,0.99,Training
+752,NB48_LOSS_270,Bind Down,bind down,0.99,Training
+753,NB48_LOSS_270,Quick Attack,ascension | quick attack,1.8785,Training
+754,NB48_LOSS_270,Ascension,ascension,1.6335,Training
+755,NB48_LOSS_270,Quick Attack,ascension | quick attack,1.8785,Training
+756,NB48_LOSS_270,Ascension,ascension,1.6335,Training
+757,NB48_LOSS_270,Pass,pass,1.6335,Training
+758,NB48_LOSS_270,Ascension,ascension,1.6335,Training
+759,NB48_LOSS_270,Quick Attack,ascension | quick attack,1.8785,Training
+760,NB48_LOSS_271,Ascension,ascension,1.21,Training
+761,NB48_LOSS_271,Live Coal,live coal,1.3365,Training
+762,NB48_LOSS_271,Live Coal,live coal,1.3365,Training
+763,NB48_LOSS_271,Quick Attack,ascension | quick attack,1.3915,Training
+764,NB48_LOSS_271,Ascension,ascension,1.21,Training
+765,NB48_LOSS_271,Quick Attack,ascension | quick attack,1.3915,Training
+766,NB48_LOSS_271,Ascension,ascension,1.21,Training
+767,NB48_LOSS_271,Pass,pass,1.21,Training
+768,NB48_LOSS_271,Quick Attack,ascension | quick attack,1.3915,Training
+769,NB48_LOSS_271,Ascension,ascension,1.21,Training
+770,NB48_LOSS_274,Ascension,ascension,1.6335,Validation
+771,NB48_LOSS_274,Live Coal,live coal,0.99,Validation
+772,NB48_LOSS_274,Live Coal,live coal,0.99,Validation
+773,NB48_LOSS_274,Quick Attack,ascension | quick attack,1.8785,Validation
+774,NB48_LOSS_274,Ascension,ascension,1.6335,Validation
+775,NB48_LOSS_274,Quick Attack,ascension | quick attack,1.8785,Validation
+776,NB48_LOSS_274,Ascension,ascension,1.6335,Validation
+777,NB48_LOSS_274,Pass,pass,1.6335,Validation
+778,NB48_LOSS_274,Ascension,ascension,1.6335,Validation
+779,NB48_LOSS_274,Quick Attack,ascension | quick attack,1.8785,Validation
+780,NB48_LOSS_276,Ascension,ascension,1.6335,Test
+781,NB48_LOSS_276,Bind Down,bind down,0.99,Test
+782,NB48_LOSS_276,Bind Down,bind down,0.99,Test
+783,NB48_LOSS_276,Quick Attack,ascension | quick attack,1.8785,Test
+784,NB48_LOSS_276,Ascension,ascension,1.6335,Test
+785,NB48_LOSS_276,Quick Attack,ascension | quick attack,1.8785,Test
+786,NB48_LOSS_276,Ascension,ascension,1.6335,Test
+787,NB48_LOSS_276,Pass,pass,1.6335,Test
+788,NB48_LOSS_276,Ascension,ascension,1.6335,Test
+789,NB48_LOSS_276,Quick Attack,ascension | quick attack,1.8785,Test
+790,NB48_LOSS_278,Ascension,ascension,1.6335,Training
+791,NB48_LOSS_278,Pass,pass,0.99,Training
+792,NB48_LOSS_278,Tuck Tail,tuck tail,0.99,Training
+793,NB48_LOSS_278,Quick Attack,ascension | quick attack,1.8785,Training
+794,NB48_LOSS_278,Ascension,ascension,1.6335,Training
+795,NB48_LOSS_278,Quick Attack,ascension | quick attack,1.8785,Training
+796,NB48_LOSS_278,Ascension,ascension,1.6335,Training
+797,NB48_LOSS_278,Pass,pass,1.6335,Training
+798,NB48_LOSS_278,Ascension,ascension,1.6335,Training
+799,NB48_LOSS_278,Quick Attack,ascension | quick attack,1.8785,Training
+800,NB48_LOSS_282,Ascension,ascension,1.6335,Training
+801,NB48_LOSS_282,Bind Down,bind down,0.99,Training
+802,NB48_LOSS_282,Bind Down,bind down,0.99,Training
+803,NB48_LOSS_282,Quick Attack,ascension | quick attack,1.8785,Training
+804,NB48_LOSS_282,Ascension,ascension,1.6335,Training
+805,NB48_LOSS_282,Quick Attack,ascension | quick attack,1.8785,Training
+806,NB48_LOSS_282,Ascension,ascension,1.6335,Training
+807,NB48_LOSS_282,Pass,pass,1.6335,Training
+808,NB48_LOSS_282,Ascension,ascension,1.6335,Training
+809,NB48_LOSS_282,Quick Attack,ascension | quick attack,1.8785,Training
+810,NB48_LOSS_283,Ascension,ascension,1.21,Training
+811,NB48_LOSS_283,Live Coal,live coal,1.3365,Training
+812,NB48_LOSS_283,Live Coal,live coal,1.3365,Training
+813,NB48_LOSS_283,Quick Attack,ascension | quick attack,1.3915,Training
+814,NB48_LOSS_283,Ascension,ascension,1.21,Training
+815,NB48_LOSS_283,Quick Attack,ascension | quick attack,1.3915,Training
+816,NB48_LOSS_283,Ascension,ascension,1.21,Training
+817,NB48_LOSS_283,Pass,pass,1.21,Training
+818,NB48_LOSS_283,Quick Attack,ascension | quick attack,1.3915,Training
+819,NB48_LOSS_283,Ascension,ascension,1.21,Training
+820,NB48_LOSS_286,Ascension,ascension,1.6335,Training
+821,NB48_LOSS_286,Live Coal,live coal,0.99,Training
+822,NB48_LOSS_286,Live Coal,live coal,0.99,Training
+823,NB48_LOSS_286,Quick Attack,ascension | quick attack,1.8785,Training
+824,NB48_LOSS_286,Ascension,ascension,1.6335,Training
+825,NB48_LOSS_286,Quick Attack,ascension | quick attack,1.8785,Training
+826,NB48_LOSS_286,Ascension,ascension,1.6335,Training
+827,NB48_LOSS_286,Pass,pass,1.6335,Training
+828,NB48_LOSS_286,Ascension,ascension,1.6335,Training
+829,NB48_LOSS_286,Quick Attack,ascension | quick attack,1.8785,Training
+830,NB48_LOSS_288,Ascension,ascension,1.6335,Validation
+831,NB48_LOSS_288,Bind Down,bind down,0.99,Validation
+832,NB48_LOSS_288,Bind Down,bind down,0.99,Validation
+833,NB48_LOSS_288,Quick Attack,ascension | quick attack,1.8785,Validation
+834,NB48_LOSS_288,Ascension,ascension,1.6335,Validation
+835,NB48_LOSS_288,Quick Attack,ascension | quick attack,1.8785,Validation
+836,NB48_LOSS_288,Ascension,ascension,1.6335,Validation
+837,NB48_LOSS_288,Pass,pass,1.6335,Validation
+838,NB48_LOSS_288,Ascension,ascension,1.6335,Validation
+839,NB48_LOSS_288,Quick Attack,ascension | quick attack,1.8785,Validation
+840,NB48_LOSS_290,Ascension,ascension,1.6335,Training
+841,NB48_LOSS_290,Pass,pass,0.99,Training
+842,NB48_LOSS_290,Tuck Tail,tuck tail,0.99,Training
+843,NB48_LOSS_290,Quick Attack,ascension | quick attack,1.8785,Training
+844,NB48_LOSS_290,Ascension,ascension,1.6335,Training
+845,NB48_LOSS_290,Quick Attack,ascension | quick attack,1.8785,Training
+846,NB48_LOSS_290,Ascension,ascension,1.6335,Training
+847,NB48_LOSS_290,Pass,pass,1.6335,Training
+848,NB48_LOSS_290,Ascension,ascension,1.6335,Training
+849,NB48_LOSS_290,Quick Attack,ascension | quick attack,1.8785,Training
+850,NB48_LOSS_294,Ascension,ascension,1.6335,Training
+851,NB48_LOSS_294,Bind Down,bind down,0.99,Training
+852,NB48_LOSS_294,Bind Down,bind down,0.99,Training
+853,NB48_LOSS_294,Quick Attack,ascension | quick attack,1.8785,Training
+854,NB48_LOSS_294,Ascension,ascension,1.6335,Training
+855,NB48_LOSS_294,Quick Attack,ascension | quick attack,1.8785,Training
+856,NB48_LOSS_294,Ascension,ascension,1.6335,Training
+857,NB48_LOSS_294,Pass,pass,1.6335,Training
+858,NB48_LOSS_294,Ascension,ascension,1.6335,Training
+859,NB48_LOSS_294,Quick Attack,ascension | quick attack,1.8785,Training
+860,NB48_LOSS_295,Ascension,ascension,1.21,Training
+861,NB48_LOSS_295,Live Coal,live coal,1.3365,Training
+862,NB48_LOSS_295,Live Coal,live coal,1.3365,Training
+863,NB48_LOSS_295,Quick Attack,ascension | quick attack,1.3915,Training
+864,NB48_LOSS_295,Ascension,ascension,1.21,Training
+865,NB48_LOSS_295,Quick Attack,ascension | quick attack,1.3915,Training
+866,NB48_LOSS_295,Ascension,ascension,1.21,Training
+867,NB48_LOSS_295,Pass,pass,1.21,Training
+868,NB48_LOSS_295,Quick Attack,ascension | quick attack,1.3915,Training
+869,NB48_LOSS_295,Ascension,ascension,1.21,Training
+870,NB48_LOSS_298,Ascension,ascension,1.6335,Training
+871,NB48_LOSS_298,Live Coal,live coal,0.99,Training
+872,NB48_LOSS_298,Live Coal,live coal,0.99,Training
+873,NB48_LOSS_298,Quick Attack,ascension | quick attack,1.8785,Training
+874,NB48_LOSS_298,Ascension,ascension,1.6335,Training
+875,NB48_LOSS_298,Quick Attack,ascension | quick attack,1.8785,Training
+876,NB48_LOSS_298,Ascension,ascension,1.6335,Training
+877,NB48_LOSS_298,Pass,pass,1.6335,Training
+878,NB48_LOSS_298,Ascension,ascension,1.6335,Training
+879,NB48_LOSS_298,Quick Attack,ascension | quick attack,1.8785,Training
+880,NB48_LOSS_30,Ascension,ascension,1.6335,Training
+881,NB48_LOSS_30,Pass,pass,0.99,Training
+882,NB48_LOSS_30,Tuck Tail,tuck tail,0.99,Training
+883,NB48_LOSS_30,Quick Attack,ascension | quick attack,1.8785,Training
+884,NB48_LOSS_30,Ascension,ascension,1.6335,Training
+885,NB48_LOSS_30,Quick Attack,ascension | quick attack,1.8785,Training
+886,NB48_LOSS_30,Ascension,ascension,1.6335,Training
+887,NB48_LOSS_30,Pass,pass,1.6335,Training
+888,NB48_LOSS_30,Ascension,ascension,1.6335,Training
+889,NB48_LOSS_30,Quick Attack,ascension | quick attack,1.8785,Training
+890,NB48_LOSS_300,Ascension,ascension,1.6335,Training
+891,NB48_LOSS_300,Bind Down,bind down,0.99,Training
+892,NB48_LOSS_300,Bind Down,bind down,0.99,Training
+893,NB48_LOSS_300,Quick Attack,ascension | quick attack,1.8785,Training
+894,NB48_LOSS_300,Ascension,ascension,1.6335,Training
+895,NB48_LOSS_300,Quick Attack,ascension | quick attack,1.8785,Training
+896,NB48_LOSS_300,Ascension,ascension,1.6335,Training
+897,NB48_LOSS_300,Pass,pass,1.6335,Training
+898,NB48_LOSS_300,Ascension,ascension,1.6335,Training
+899,NB48_LOSS_300,Quick Attack,ascension | quick attack,1.8785,Training
+900,NB48_LOSS_34,Ascension,ascension,1.6335,Test
+901,NB48_LOSS_34,Bind Down,bind down,0.99,Test
+902,NB48_LOSS_34,Bind Down,bind down,0.99,Test
+903,NB48_LOSS_34,Quick Attack,ascension | quick attack,1.8785,Test
+904,NB48_LOSS_34,Ascension,ascension,1.6335,Test
+905,NB48_LOSS_34,Quick Attack,ascension | quick attack,1.8785,Test
+906,NB48_LOSS_34,Ascension,ascension,1.6335,Test
+907,NB48_LOSS_34,Pass,pass,1.6335,Test
+908,NB48_LOSS_34,Ascension,ascension,1.6335,Test
+909,NB48_LOSS_34,Quick Attack,ascension | quick attack,1.8785,Test
+910,NB48_LOSS_4,Ascension,ascension,1.6335,Test
+911,NB48_LOSS_4,Bind Down,bind down,0.99,Test
+912,NB48_LOSS_4,Bind Down,bind down,0.99,Test
+913,NB48_LOSS_4,Quick Attack,ascension | quick attack,1.8785,Test
+914,NB48_LOSS_4,Ascension,ascension,1.6335,Test
+915,NB48_LOSS_4,Quick Attack,ascension | quick attack,1.8785,Test
+916,NB48_LOSS_4,Ascension,ascension,1.6335,Test
+917,NB48_LOSS_4,Pass,pass,1.6335,Test
+918,NB48_LOSS_4,Ascension,ascension,1.6335,Test
+919,NB48_LOSS_4,Quick Attack,ascension | quick attack,1.8785,Test
+920,NB48_LOSS_40,Ascension,ascension,1.6335,Training
+921,NB48_LOSS_40,Bind Down,bind down,0.99,Training
+922,NB48_LOSS_40,Bind Down,bind down,0.99,Training
+923,NB48_LOSS_40,Quick Attack,ascension | quick attack,1.8785,Training
+924,NB48_LOSS_40,Ascension,ascension,1.6335,Training
+925,NB48_LOSS_40,Quick Attack,ascension | quick attack,1.8785,Training
+926,NB48_LOSS_40,Ascension,ascension,1.6335,Training
+927,NB48_LOSS_40,Pass,pass,1.6335,Training
+928,NB48_LOSS_40,Ascension,ascension,1.6335,Training
+929,NB48_LOSS_40,Quick Attack,ascension | quick attack,1.8785,Training
+930,NB48_LOSS_42,Ascension,ascension,1.6335,Training
+931,NB48_LOSS_42,Pass,pass,0.99,Training
+932,NB48_LOSS_42,Tuck Tail,tuck tail,0.99,Training
+933,NB48_LOSS_42,Quick Attack,ascension | quick attack,1.8785,Training
+934,NB48_LOSS_42,Ascension,ascension,1.6335,Training
+935,NB48_LOSS_42,Quick Attack,ascension | quick attack,1.8785,Training
+936,NB48_LOSS_42,Ascension,ascension,1.6335,Training
+937,NB48_LOSS_42,Pass,pass,1.6335,Training
+938,NB48_LOSS_42,Ascension,ascension,1.6335,Training
+939,NB48_LOSS_42,Quick Attack,ascension | quick attack,1.8785,Training
+940,NB48_LOSS_46,Ascension,ascension,1.6335,Training
+941,NB48_LOSS_46,Bind Down,bind down,0.99,Training
+942,NB48_LOSS_46,Bind Down,bind down,0.99,Training
+943,NB48_LOSS_46,Quick Attack,ascension | quick attack,1.8785,Training
+944,NB48_LOSS_46,Ascension,ascension,1.6335,Training
+945,NB48_LOSS_46,Quick Attack,ascension | quick attack,1.8785,Training
+946,NB48_LOSS_46,Ascension,ascension,1.6335,Training
+947,NB48_LOSS_46,Pass,pass,1.6335,Training
+948,NB48_LOSS_46,Ascension,ascension,1.6335,Training
+949,NB48_LOSS_46,Quick Attack,ascension | quick attack,1.8785,Training
+950,NB48_LOSS_52,Ascension,ascension,1.6335,Training
+951,NB48_LOSS_52,Bind Down,bind down,0.99,Training
+952,NB48_LOSS_52,Bind Down,bind down,0.99,Training
+953,NB48_LOSS_52,Quick Attack,ascension | quick attack,1.8785,Training
+954,NB48_LOSS_52,Ascension,ascension,1.6335,Training
+955,NB48_LOSS_52,Quick Attack,ascension | quick attack,1.8785,Training
+956,NB48_LOSS_52,Ascension,ascension,1.6335,Training
+957,NB48_LOSS_52,Pass,pass,1.6335,Training
+958,NB48_LOSS_52,Ascension,ascension,1.6335,Training
+959,NB48_LOSS_52,Quick Attack,ascension | quick attack,1.8785,Training
+960,NB48_LOSS_59,Ascension,ascension,1.21,Training
+961,NB48_LOSS_59,Live Coal,live coal,1.3365,Training
+962,NB48_LOSS_59,Live Coal,live coal,1.3365,Training
+963,NB48_LOSS_59,Quick Attack,ascension | quick attack,1.3915,Training
+964,NB48_LOSS_59,Ascension,ascension,1.21,Training
+965,NB48_LOSS_59,Quick Attack,ascension | quick attack,1.3915,Training
+966,NB48_LOSS_59,Ascension,ascension,1.21,Training
+967,NB48_LOSS_59,Pass,pass,1.21,Training
+968,NB48_LOSS_59,Quick Attack,ascension | quick attack,1.3915,Training
+969,NB48_LOSS_59,Ascension,ascension,1.21,Training
+970,NB48_LOSS_6,Ascension,ascension,1.6335,Training
+971,NB48_LOSS_6,Pass,pass,0.99,Training
+972,NB48_LOSS_6,Tuck Tail,tuck tail,0.99,Training
+973,NB48_LOSS_6,Quick Attack,ascension | quick attack,1.8785,Training
+974,NB48_LOSS_6,Ascension,ascension,1.6335,Training
+975,NB48_LOSS_6,Quick Attack,ascension | quick attack,1.8785,Training
+976,NB48_LOSS_6,Ascension,ascension,1.6335,Training
+977,NB48_LOSS_6,Pass,pass,1.6335,Training
+978,NB48_LOSS_6,Ascension,ascension,1.6335,Training
+979,NB48_LOSS_6,Quick Attack,ascension | quick attack,1.8785,Training
+980,NB48_LOSS_70,Ascension,ascension,1.6335,Training
+981,NB48_LOSS_70,Bind Down,bind down,0.99,Training
+982,NB48_LOSS_70,Bind Down,bind down,0.99,Training
+983,NB48_LOSS_70,Quick Attack,ascension | quick attack,1.8785,Training
+984,NB48_LOSS_70,Ascension,ascension,1.6335,Training
+985,NB48_LOSS_70,Quick Attack,ascension | quick attack,1.8785,Training
+986,NB48_LOSS_70,Ascension,ascension,1.6335,Training
+987,NB48_LOSS_70,Pass,pass,1.6335,Training
+988,NB48_LOSS_70,Ascension,ascension,1.6335,Training
+989,NB48_LOSS_70,Quick Attack,ascension | quick attack,1.8785,Training
+990,NB48_LOSS_71,Ascension,ascension,1.21,Training
+991,NB48_LOSS_71,Live Coal,live coal,1.3365,Training
+992,NB48_LOSS_71,Live Coal,live coal,1.3365,Training
+993,NB48_LOSS_71,Quick Attack,ascension | quick attack,1.3915,Training
+994,NB48_LOSS_71,Ascension,ascension,1.21,Training
+995,NB48_LOSS_71,Quick Attack,ascension | quick attack,1.3915,Training
+996,NB48_LOSS_71,Ascension,ascension,1.21,Training
+997,NB48_LOSS_71,Pass,pass,1.21,Training
+998,NB48_LOSS_71,Quick Attack,ascension | quick attack,1.3915,Training
+999,NB48_LOSS_71,Ascension,ascension,1.21,Training
+1000,NB48_LOSS_74,Ascension,ascension,1.6335,Training
+1001,NB48_LOSS_74,Live Coal,live coal,0.99,Training
+1002,NB48_LOSS_74,Live Coal,live coal,0.99,Training
+1003,NB48_LOSS_74,Quick Attack,ascension | quick attack,1.8785,Training
+1004,NB48_LOSS_74,Ascension,ascension,1.6335,Training
+1005,NB48_LOSS_74,Quick Attack,ascension | quick attack,1.8785,Training
+1006,NB48_LOSS_74,Ascension,ascension,1.6335,Training
+1007,NB48_LOSS_74,Pass,pass,1.6335,Training
+1008,NB48_LOSS_74,Ascension,ascension,1.6335,Training
+1009,NB48_LOSS_74,Quick Attack,ascension | quick attack,1.8785,Training
+1010,NB48_LOSS_76,Ascension,ascension,1.6335,Training
+1011,NB48_LOSS_76,Bind Down,bind down,0.99,Training
+1012,NB48_LOSS_76,Bind Down,bind down,0.99,Training
+1013,NB48_LOSS_76,Quick Attack,ascension | quick attack,1.8785,Training
+1014,NB48_LOSS_76,Ascension,ascension,1.6335,Training
+1015,NB48_LOSS_76,Quick Attack,ascension | quick attack,1.8785,Training
+1016,NB48_LOSS_76,Ascension,ascension,1.6335,Training
+1017,NB48_LOSS_76,Pass,pass,1.6335,Training
+1018,NB48_LOSS_76,Ascension,ascension,1.6335,Training
+1019,NB48_LOSS_76,Quick Attack,ascension | quick attack,1.8785,Training
+1020,NB48_LOSS_82,Ascension,ascension,1.6335,Test
+1021,NB48_LOSS_82,Bind Down,bind down,0.99,Test
+1022,NB48_LOSS_82,Bind Down,bind down,0.99,Test
+1023,NB48_LOSS_82,Quick Attack,ascension | quick attack,1.8785,Test
+1024,NB48_LOSS_82,Ascension,ascension,1.6335,Test
+1025,NB48_LOSS_82,Quick Attack,ascension | quick attack,1.8785,Test
+1026,NB48_LOSS_82,Ascension,ascension,1.6335,Test
+1027,NB48_LOSS_82,Pass,pass,1.6335,Test
+1028,NB48_LOSS_82,Ascension,ascension,1.6335,Test
+1029,NB48_LOSS_82,Quick Attack,ascension | quick attack,1.8785,Test
+1030,NB48_LOSS_83,Ascension,ascension,1.21,Training
+1031,NB48_LOSS_83,Live Coal,live coal,1.3365,Training
+1032,NB48_LOSS_83,Live Coal,live coal,1.3365,Training
+1033,NB48_LOSS_83,Quick Attack,ascension | quick attack,1.3915,Training
+1034,NB48_LOSS_83,Ascension,ascension,1.21,Training
+1035,NB48_LOSS_83,Quick Attack,ascension | quick attack,1.3915,Training
+1036,NB48_LOSS_83,Ascension,ascension,1.21,Training
+1037,NB48_LOSS_83,Pass,pass,1.21,Training
+1038,NB48_LOSS_83,Quick Attack,ascension | quick attack,1.3915,Training
+1039,NB48_LOSS_83,Ascension,ascension,1.21,Training
+1040,NB48_LOSS_88,Ascension,ascension,1.6335,Training
+1041,NB48_LOSS_88,Bind Down,bind down,0.99,Training
+1042,NB48_LOSS_88,Bind Down,bind down,0.99,Training
+1043,NB48_LOSS_88,Quick Attack,ascension | quick attack,1.8785,Training
+1044,NB48_LOSS_88,Ascension,ascension,1.6335,Training
+1045,NB48_LOSS_88,Quick Attack,ascension | quick attack,1.8785,Training
+1046,NB48_LOSS_88,Ascension,ascension,1.6335,Training
+1047,NB48_LOSS_88,Pass,pass,1.6335,Training
+1048,NB48_LOSS_88,Ascension,ascension,1.6335,Training
+1049,NB48_LOSS_88,Quick Attack,ascension | quick attack,1.8785,Training
+1050,NB48_LOSS_94,Ascension,ascension,1.6335,Validation
+1051,NB48_LOSS_94,Bind Down,bind down,0.99,Validation
+1052,NB48_LOSS_94,Bind Down,bind down,0.99,Validation
+1053,NB48_LOSS_94,Quick Attack,ascension | quick attack,1.8785,Validation
+1054,NB48_LOSS_94,Ascension,ascension,1.6335,Validation
+1055,NB48_LOSS_94,Quick Attack,ascension | quick attack,1.8785,Validation
+1056,NB48_LOSS_94,Ascension,ascension,1.6335,Validation
+1057,NB48_LOSS_94,Pass,pass,1.6335,Validation
+1058,NB48_LOSS_94,Ascension,ascension,1.6335,Validation
+1059,NB48_LOSS_94,Quick Attack,ascension | quick attack,1.8785,Validation

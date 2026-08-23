@@ -1,0 +1,22 @@
+{
+    "notebook": 60,
+    "evaluation_policy": "R3_STATE_CENTRIC_POLICY",
+    "model_type": "RandomForestClassifier",
+    "feature_count": 46,
+    "total_matches": 300,
+    "matches_per_baseline": 100,
+    "matches_per_side_per_baseline": 50,
+    "baseline_names": [
+        "Random Baseline",
+        "Greedy Damage Baseline",
+        "Depth-6 Search Baseline"
+    ],
+    "max_turns": 50,
+    "search_depth": 6,
+    "random_seed": 4801,
+    "historical_reference_notebook": 48,
+    "historical_overall_win_rate": 0.6466666666666666,
+    "r3_retraining": false,
+    "r3_model_modification": false,
+    "benchmark_executed": false
+}

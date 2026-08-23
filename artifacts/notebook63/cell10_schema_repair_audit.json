@@ -1,0 +1,433 @@
+{
+  "notebook": 63,
+  "cell": 10,
+  "root_cause": "SYNTHETIC_ATTACK_FIELD_NAMES_DID_NOT_MATCH_AUTHORITATIVE_LEGAL_MOVE_CARD_SCHEMA",
+  "incorrect_keys": [
+    "damage",
+    "effect",
+    "energy_cost",
+    "name"
+  ],
+  "authoritative_keys": [
+    "Move Name",
+    "damage_numeric",
+    "energy_cost",
+    "Effect Explanation"
+  ],
+  "original_configuration_sha256": "acdeb20722ee3ba9b897b1ea0320e8162ac6f53f9fe4f8fca97e6039effd2ede",
+  "corrected_configuration_sha256": "901d90eb6bb39b6de10848ddd30de86bd64ee9bcadd35f4cf2e638c2b72a2301",
+  "probe_result": {
+    "imports_pass": true,
+    "probe_count": 16,
+    "probe_pass_count": 16,
+    "probe_failure_count": 0,
+    "unknown_move_count": 0,
+    "zero_damage_only_probe_count": 0,
+    "records": [
+      {
+        "scenario_id": "S1_BALANCED_LOW_HP",
+        "side_mode": "NORMAL",
+        "current_player": "Player",
+        "legal_moves": [
+          {
+            "name": "Quick Strike",
+            "damage": 10.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Power Strike",
+            "damage": 20.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S1_BALANCED_LOW_HP",
+        "side_mode": "NORMAL",
+        "current_player": "Opponent",
+        "legal_moves": [
+          {
+            "name": "Quick Jab",
+            "damage": 10.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Heavy Jab",
+            "damage": 20.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S1_BALANCED_LOW_HP",
+        "side_mode": "SWAPPED",
+        "current_player": "Player",
+        "legal_moves": [
+          {
+            "name": "Quick Jab",
+            "damage": 10.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Heavy Jab",
+            "damage": 20.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S1_BALANCED_LOW_HP",
+        "side_mode": "SWAPPED",
+        "current_player": "Opponent",
+        "legal_moves": [
+          {
+            "name": "Quick Strike",
+            "damage": 10.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Power Strike",
+            "damage": 20.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S2_BALANCED_HIGH_HP",
+        "side_mode": "NORMAL",
+        "current_player": "Player",
+        "legal_moves": [
+          {
+            "name": "Steady Hit",
+            "damage": 15.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Heavy Hit",
+            "damage": 30.0,
+            "energy_cost": 2,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S2_BALANCED_HIGH_HP",
+        "side_mode": "NORMAL",
+        "current_player": "Opponent",
+        "legal_moves": [
+          {
+            "name": "Steady Blow",
+            "damage": 15.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Heavy Blow",
+            "damage": 30.0,
+            "energy_cost": 2,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S2_BALANCED_HIGH_HP",
+        "side_mode": "SWAPPED",
+        "current_player": "Player",
+        "legal_moves": [
+          {
+            "name": "Steady Blow",
+            "damage": 15.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Heavy Blow",
+            "damage": 30.0,
+            "energy_cost": 2,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S2_BALANCED_HIGH_HP",
+        "side_mode": "SWAPPED",
+        "current_player": "Opponent",
+        "legal_moves": [
+          {
+            "name": "Steady Hit",
+            "damage": 15.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Heavy Hit",
+            "damage": 30.0,
+            "energy_cost": 2,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S3_PLAYER_DAMAGE_ADVANTAGE",
+        "side_mode": "NORMAL",
+        "current_player": "Player",
+        "legal_moves": [
+          {
+            "name": "Fast Hit",
+            "damage": 20.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Finisher",
+            "damage": 35.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S3_PLAYER_DAMAGE_ADVANTAGE",
+        "side_mode": "NORMAL",
+        "current_player": "Opponent",
+        "legal_moves": [
+          {
+            "name": "Weak Hit",
+            "damage": 10.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Moderate Hit",
+            "damage": 20.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S3_PLAYER_DAMAGE_ADVANTAGE",
+        "side_mode": "SWAPPED",
+        "current_player": "Player",
+        "legal_moves": [
+          {
+            "name": "Weak Hit",
+            "damage": 10.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Moderate Hit",
+            "damage": 20.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S3_PLAYER_DAMAGE_ADVANTAGE",
+        "side_mode": "SWAPPED",
+        "current_player": "Opponent",
+        "legal_moves": [
+          {
+            "name": "Fast Hit",
+            "damage": 20.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Finisher",
+            "damage": 35.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S4_OPPONENT_DAMAGE_ADVANTAGE",
+        "side_mode": "NORMAL",
+        "current_player": "Player",
+        "legal_moves": [
+          {
+            "name": "Weak Hit",
+            "damage": 10.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Moderate Hit",
+            "damage": 20.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S4_OPPONENT_DAMAGE_ADVANTAGE",
+        "side_mode": "NORMAL",
+        "current_player": "Opponent",
+        "legal_moves": [
+          {
+            "name": "Fast Hit",
+            "damage": 20.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Finisher",
+            "damage": 35.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S4_OPPONENT_DAMAGE_ADVANTAGE",
+        "side_mode": "SWAPPED",
+        "current_player": "Player",
+        "legal_moves": [
+          {
+            "name": "Fast Hit",
+            "damage": 20.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Finisher",
+            "damage": 35.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      },
+      {
+        "scenario_id": "S4_OPPONENT_DAMAGE_ADVANTAGE",
+        "side_mode": "SWAPPED",
+        "current_player": "Opponent",
+        "legal_moves": [
+          {
+            "name": "Weak Hit",
+            "damage": 10.0,
+            "energy_cost": 0,
+            "effect": null
+          },
+          {
+            "name": "Moderate Hit",
+            "damage": 20.0,
+            "energy_cost": 1,
+            "effect": null
+          }
+        ],
+        "legal_move_count": 2,
+        "unknown_move_count": 0,
+        "positive_damage_move_count": 2,
+        "zero_damage_move_count": 0,
+        "probe_pass": true,
+        "error": null
+      }
+    ],
+    "fatal_exception_type": null,
+    "fatal_exception_message": null,
+    "fatal_traceback": null
+  },
+  "full_campaign_executed": false
+}

@@ -1,0 +1,58 @@
+{
+  "notebook": 59,
+  "purpose": "R3 live simulator integration and controlled competitive validation",
+  "production_strategy": "R3_STATE_CENTRIC_POLICY",
+  "production_model_type": "RandomForestClassifier",
+  "retained_feature_count": 46,
+  "model_class_count": 6,
+  "model_classes": [
+    "Ascension",
+    "Bind Down",
+    "Live Coal",
+    "Pass",
+    "Quick Attack",
+    "Tuck Tail"
+  ],
+  "controlled_battles": 12,
+  "total_live_decisions": 86,
+  "model_driven_decisions": 86,
+  "fallback_decisions": 0,
+  "model_driven_rate": 1.0,
+  "fallback_rate": 0.0,
+  "terminal_battle_rate": 1.0,
+  "average_battle_turns": 7.166666666666667,
+  "pairwise_winner_side_consistency": 1.0,
+  "controlled_ranking": [
+    {
+      "rank": 1,
+      "card": "Charmander",
+      "wins": 6,
+      "losses": 0,
+      "win_rate": 1.0
+    },
+    {
+      "rank": 2,
+      "card": "Eevee",
+      "wins": 4,
+      "losses": 2,
+      "win_rate": 0.6666666666666666
+    },
+    {
+      "rank": 3,
+      "card": "Bulbasaur",
+      "wins": 2,
+      "losses": 4,
+      "win_rate": 0.3333333333333333
+    },
+    {
+      "rank": 4,
+      "card": "Meowth",
+      "wins": 0,
+      "losses": 6,
+      "win_rate": 0.0
+    }
+  ],
+  "integration_status": "PASSED",
+  "benchmark_status": "READY_FOR_NOTEBOOK_60",
+  "created_at": "2026-08-08T17:15:48"
+}

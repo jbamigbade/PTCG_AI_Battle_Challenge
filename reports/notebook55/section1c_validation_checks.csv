@@ -1,0 +1,7 @@
+check,passed,value,expected
+four_primary_strategies_defined,True,4,4
+primary_recommendation_matches_notebook54,True,R1_REMOVE_LEGAL_SIGNATURE,R1_REMOVE_LEGAL_SIGNATURE
+hard_legality_filter_preserved,True,True,True
+original_model_frozen,True,False,False
+required_expanded_cases_frozen,True,184,184
+required_mirror_pairs_frozen,True,92,92

@@ -1,0 +1,107 @@
+{
+  "schema_name": "notebook53_legality_aware_policy_schema",
+  "schema_version": "1.0",
+  "row_count": 210,
+  "numeric_features": [
+    "turn_number",
+    "legal_move_count_recomputed",
+    "acting_energy",
+    "defending_energy",
+    "energy_difference",
+    "absolute_energy_difference",
+    "acting_damage",
+    "defending_damage",
+    "damage_difference",
+    "absolute_damage_difference",
+    "single_legal_move_flag",
+    "multi_legal_move_flag",
+    "model_choice_required_flag",
+    "legacy_selector_required_flag",
+    "confidence",
+    "is_legal__ascension",
+    "is_legal__bind_down",
+    "is_legal__live_coal",
+    "is_legal__pass",
+    "is_legal__quick_attack",
+    "is_legal__tuck_tail",
+    "active_card_can_use__ascension",
+    "active_card_can_use__bind_down",
+    "active_card_can_use__live_coal",
+    "active_card_can_use__pass",
+    "active_card_can_use__quick_attack",
+    "active_card_can_use__tuck_tail"
+  ],
+  "categorical_features": [
+    "current_player",
+    "condition_id",
+    "active_card",
+    "inactive_card",
+    "legal_move_signature",
+    "battle_phase",
+    "energy_band",
+    "damage_band",
+    "confidence_band",
+    "routing_mode"
+  ],
+  "target_column": "routed_move",
+  "metadata_columns": [
+    "scenario_id",
+    "base_scenario_id",
+    "condition_id",
+    "turn_number",
+    "current_player",
+    "player_card",
+    "opponent_card",
+    "winner",
+    "raw_predicted_move",
+    "selected_move",
+    "routed_move",
+    "routing_reason",
+    "routing_mode",
+    "fallback_used",
+    "masking_changed_action_recomputed"
+  ],
+  "legal_action_flags": [
+    "is_legal__ascension",
+    "is_legal__bind_down",
+    "is_legal__live_coal",
+    "is_legal__pass",
+    "is_legal__quick_attack",
+    "is_legal__tuck_tail"
+  ],
+  "active_card_compatibility_flags": [
+    "active_card_can_use__ascension",
+    "active_card_can_use__bind_down",
+    "active_card_can_use__live_coal",
+    "active_card_can_use__pass",
+    "active_card_can_use__quick_attack",
+    "active_card_can_use__tuck_tail"
+  ],
+  "policy_action_classes": [
+    "Ascension",
+    "Bind Down",
+    "Live Coal",
+    "Pass",
+    "Quick Attack",
+    "Tuck Tail"
+  ],
+  "active_card_action_map": {
+    "Bulbasaur": [
+      "bind down",
+      "pass"
+    ],
+    "Charmander": [
+      "live coal",
+      "pass"
+    ],
+    "Eevee": [
+      "ascension",
+      "quick attack"
+    ],
+    "Meowth": [
+      "tuck tail"
+    ]
+  },
+  "single_action_routing_enabled": true,
+  "multi_action_model_enabled": true
+}

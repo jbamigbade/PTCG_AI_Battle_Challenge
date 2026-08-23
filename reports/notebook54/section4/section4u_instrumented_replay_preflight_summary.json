@@ -1,0 +1,19 @@
+{
+  "status": "INSTRUMENTED_REPLAY_RUNTIME_PREFLIGHT_COMPLETE",
+  "energy_attributes_identified": 1,
+  "runner_type": "LegalityAwareBattleRunnerAgent",
+  "available_runner_methods": [
+    "choose_move"
+  ],
+  "resolved_runner_method": "choose_move",
+  "existing_battle_state_available": true,
+  "runtime_energy_observed": true,
+  "sample_instrumentation_record_created": true,
+  "preflight_status": "INSTRUMENTED_REPLAY_RUNTIME_READY",
+  "instrumented_battles_run": 0,
+  "simulator_source_modified": false,
+  "frozen_benchmark_modified": false,
+  "validation_checks_passed": 8,
+  "validation_checks_failed": 0,
+  "next_stage": "FULL_INSTRUMENTED_TOURNAMENT_REPLAY"
+}

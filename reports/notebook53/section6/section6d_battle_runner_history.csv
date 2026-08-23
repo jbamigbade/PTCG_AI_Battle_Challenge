@@ -1,0 +1,2 @@
+decision_number,turn_number,current_player,active_card,legal_moves,selected_move,raw_prediction,confidence,routing_reason,fallback_used,search_depth,nodes
+1,1,Player,Bulbasaur,['Bind Down'],Bind Down,Bind Down,1.0,ONLY_LEGAL_MOVE,False,0,1

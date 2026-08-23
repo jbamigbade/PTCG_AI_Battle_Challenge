@@ -1,0 +1,4 @@
+row_index,index_in_range,selected_move_matches,mask_length_valid,chosen_move_is_legal,observation_valid,sample_id_valid
+0,True,True,True,True,True,True
+1,True,True,True,True,True,True
+2,True,True,True,True,True,True

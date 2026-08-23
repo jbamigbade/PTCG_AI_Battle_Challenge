@@ -1,0 +1,17 @@
+{
+  "status": "ENERGY_INSTRUMENTATION_DESIGN_COMPLETE",
+  "simulator_source_files_reviewed": 5,
+  "source_energy_references": 1,
+  "energy_state_attributes": 1,
+  "instrumentation_columns": 22,
+  "verified_attack_requirements": 5,
+  "design_status": "SOURCE_ENERGY_FIELD_IDENTIFIED",
+  "instrumentation_implemented": false,
+  "instrumented_replay_run": false,
+  "simulator_source_modified": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "validation_checks_passed": 8,
+  "validation_checks_failed": 0,
+  "next_stage": "INSTRUMENTED_TOURNAMENT_REPLAY"
+}

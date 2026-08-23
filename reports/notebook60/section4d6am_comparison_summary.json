@@ -1,0 +1,16 @@
+{
+  "historical_overall_win_rate": 0.6466666666666666,
+  "controlled_overall_win_rate": 0.61,
+  "delta_percentage_points": -3.6666666666666625,
+  "relative_change": -0.05670103092783499,
+  "controlled_player_side_win_rate": 0.7933333333333333,
+  "controlled_opponent_side_win_rate": 0.4266666666666667,
+  "controlled_side_gap_percentage_points": 36.666666666666664,
+  "difference_z_score": -0.9299464911886541,
+  "overall_interpretation": "CONTROLLED_BENCHMARK_BELOW_HISTORICAL",
+  "uncertainty_interpretation": "DIFFERENCE_WITHIN_SIMPLE_95_PERCENT_BINOMIAL_SAMPLING_BAND",
+  "fit_calls_executed": 0,
+  "retraining": false,
+  "model_modified": false,
+  "tournament_matches_executed": 0
+}

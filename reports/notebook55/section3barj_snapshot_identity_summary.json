@@ -1,0 +1,15 @@
+{
+  "status": "ALTERNATE_MODEL_SNAPSHOTS_FOUND",
+  "serialized_files_scanned": 19,
+  "model_or_preprocessor_objects_found": 9,
+  "exact_current_model_matches": 0,
+  "feature_importance_matches": 1,
+  "exact_current_preprocessor_matches": 0,
+  "alternate_64_feature_models_found": 2,
+  "alternate_preprocessors_found": 2,
+  "current_model_object_hash": "ff2e9a2b04ed69daba9d3b433b8bd58598f228a22a7baabe5c913e7c95968560",
+  "current_preprocessor_object_hash": "f5c02a6b9109fd71331c2b4bf927afd2e7dc9eb09313c1379a716925cd10e5fe",
+  "current_feature_importance_hash": "b6a4c705fb6d2eef1f96c8d2a0f3a3bc148195569dfaf54641b648afd55fa7fa",
+  "current_feature_name_hash": "ed19227ab66911c5272f5491afa12ad529366b9d59f45990e866edc96c9c8a5a",
+  "next_stage": "SCORE_ALTERNATE_MODEL_SNAPSHOTS_AGAINST_NOTEBOOK54_PROBABILITIES"
+}

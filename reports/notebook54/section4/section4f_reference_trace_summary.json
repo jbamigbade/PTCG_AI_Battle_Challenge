@@ -1,0 +1,22 @@
+{
+  "status": "ENGLISH_CARD_ID_REFERENCE_TRACE_COMPLETE",
+  "english_pdf": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\data\\raw\\Card_ID List_EN.pdf",
+  "japanese_pdf": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\data\\raw\\Card_ID List_JP.pdf",
+  "upstream_notebooks_reviewed": 7,
+  "matching_reference_cells": 19,
+  "card_dictionary_candidates": 0,
+  "cards_with_identifier_candidates": [],
+  "cards_with_single_identifier": [],
+  "cards_requiring_pdf_lookup": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "reference_trace_status": "NO_CARD_IDENTIFIERS_RECOVERED",
+  "pdfs_modified": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_expand_actions": false,
+  "next_stage": "PDF_TEXT_EXTRACTION_SETUP"
+}

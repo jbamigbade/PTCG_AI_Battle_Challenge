@@ -1,0 +1,33 @@
+{
+  "status": "READY_FOR_FINAL_COMPETITION_REVIEW",
+  "certified_submission": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission",
+  "certified_main": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\main.py",
+  "certified_rf_model": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook60\\notebook60_certified_61_feature_random_forest.joblib",
+  "deployment_ppo_checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\final_agent\\models\\ppo_training_loop.pkl",
+  "nb63_final_evidence": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\artifacts\\notebook63\\notebook63_final_evidence_package.json",
+  "nb64_final_strategy_report": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook64\\notebook64_final_track2_package.json",
+  "competition_writeup_block": {
+    "safe_summary": "We evaluated the frozen deployment stack in a controlled attack-only simulation campaign spanning four scenario classes, two side orientations, ten seeds, and three decision policies. All 240 runs completed without runtime failures. After correcting the evaluation card schema, the deployment path produced valid named attacks with no Unknown Move artifacts. The deployment policy matched the first-legal-action baseline across all paired controlled battles, while a max-damage baseline resolved the same scenarios more efficiently. These simulations are treated as deployment and behavioral diagnostics rather than evidence of full-game policy superiority.",
+    "headline_metrics": {
+      "controlled_battles": 240,
+      "runtime_failures": 0,
+      "deployment_win_rate": 0.75,
+      "deployment_first_legal_pair_equivalence": 1.0,
+      "deployment_mean_turns": 11.25,
+      "max_damage_mean_turns": 5.75,
+      "deployment_damage_per_move": 13.88888888888889,
+      "max_damage_damage_per_move": 26.956521739130434
+    },
+    "required_disclaimer": "The campaign uses controlled synthetic attack-only states and is not a complete official Pok\u00e9mon TCG rules simulation."
+  },
+  "final_review_focus": [
+    "submission contents",
+    "submission ZIP integrity",
+    "competition writeup",
+    "claims versus evidence",
+    "required disclaimer",
+    "final file preservation",
+    "submission portal readiness"
+  ],
+  "additional_notebook_required": false
+}

@@ -1,0 +1,5 @@
+card_name,upstream_identifier,pdf_explicit_candidates,upstream_identifier_found_in_pdf,provisional_identifier,matching_pages,identifier_resolution_status,requires_visual_page_review,original_provisional_identifier,identifier_is_numeric,header_token_false_positive,repaired_provisional_identifier,repair_status
+Bulbasaur,1.0,[],False,1,[20],UPSTREAM_IDENTIFIER_NOT_CONFIRMED_BY_TEXT_LAYER,True,1,True,False,1,RETAINED_NUMERIC_UPSTREAM_CANDIDATE
+Charmander,,"[""Link""]",False,Link,"[24, 29]",PROVISIONAL_SINGLE_PDF_IDENTIFIER,False,Link,False,True,,REMOVED_HEADER_TOKEN_FALSE_POSITIVE
+Eevee,,"[""Link""]",False,Link,"[2, 5, 8, 10]",PROVISIONAL_SINGLE_PDF_IDENTIFIER,False,Link,False,True,,REMOVED_HEADER_TOKEN_FALSE_POSITIVE
+Meowth,,"[""Link""]",False,Link,"[15, 33]",PROVISIONAL_SINGLE_PDF_IDENTIFIER,False,Link,False,True,,REMOVED_HEADER_TOKEN_FALSE_POSITIVE

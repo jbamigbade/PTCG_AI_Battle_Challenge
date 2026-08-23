@@ -1,0 +1,21 @@
+source_scenario_id,player_card,opponent_card,current_player,player_energy,opponent_energy,player_attack_count,opponent_attack_count,legal_moves_generated,legal_move_count,legal_move_names,only_pass
+NB48_LOSS_210,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_222,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_234,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_246,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_258,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_270,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_282,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_294,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_204,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_216,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_228,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_240,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_252,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_264,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_276,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_288,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_300,Bulbasaur,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_202,Charmander,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_206,Meowth,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False
+NB48_LOSS_214,Charmander,Eevee,Opponent,3,3,1,2,True,2,"[""Ascension"", ""Quick Attack""]",False

@@ -1,0 +1,23 @@
+record_id,battle_id,turn_number,actor_side,actor_name,defender_name,legal_move_count,legal_move_names,target_index,target_move,predicted_index,predicted_move,correct,confidence,margin,search_score,damage_applied
+25,8,16,Opponent,Charmander,Bulbasaur,2,Scratch | Flame Tail,0,Scratch,1,Flame Tail,False,0.5699685215950012,0.13993704319000244,-10000.0,20.0
+111,40,10,Player,Eevee,Meowth,2,Tail Whap | Bite,0,Tail Whap,1,Bite,False,0.5554342269897461,0.11086851358413696,10000.0,20.0
+112,40,11,Opponent,Meowth,Eevee,2,Scratch | Fury Swipes,0,Scratch,1,Fury Swipes,False,0.5735880136489868,0.14717605710029602,-10000.0,20.0
+202,72,3,Player,Squirtle,Charmander,2,Tackle | Water Pulse,0,Tackle,1,Water Pulse,False,0.5745108723640442,0.14902174472808838,434.32,20.0
+275,100,12,Player,Bulbasaur,Squirtle,2,Vine Whip | Razor Leaf,1,Razor Leaf,0,Vine Whip,False,0.5053334832191467,0.01066705584526062,-468.09,70.0
+289,106,4,Player,Eevee,Pikachu,2,Tail Whap | Bite,0,Tail Whap,1,Bite,False,0.5803966522216797,0.16079330444335938,381.0,20.0
+362,131,11,Opponent,Charmander,Meowth,2,Scratch | Flame Tail,0,Scratch,1,Flame Tail,False,0.5699685215950012,0.13993704319000244,570.5,20.0
+410,146,16,Opponent,Bulbasaur,Pikachu,2,Vine Whip | Razor Leaf,1,Razor Leaf,0,Vine Whip,False,0.5265329480171204,0.0530659556388855,-638.67,70.0
+443,159,10,Opponent,Bulbasaur,Pikachu,2,Vine Whip | Razor Leaf,1,Razor Leaf,0,Vine Whip,False,0.5265328884124756,0.053065717220306396,-561.33,70.0
+446,161,7,Opponent,Charmander,Meowth,2,Scratch | Flame Tail,0,Scratch,1,Flame Tail,False,0.5793275833129883,0.15865519642829895,681.5,20.0
+467,169,3,Opponent,Eevee,Bulbasaur,2,Tail Whap | Bite,0,Tail Whap,1,Bite,False,0.5805250406265259,0.16105011105537415,583.5,20.0
+486,178,5,Player,Squirtle,Eevee,2,Tackle | Water Pulse,0,Tackle,1,Water Pulse,False,0.5321294665336609,0.06425890326499939,10000.0,20.0
+498,182,6,Player,Eevee,Charmander,2,Tail Whap | Bite,0,Tail Whap,1,Bite,False,0.5803829431533813,0.1607658863067627,540.5,20.0
+547,205,3,Opponent,Eevee,Squirtle,2,Tail Whap | Bite,0,Tail Whap,1,Bite,False,0.5802781581878662,0.1605563759803772,440.0,20.0
+551,206,2,Opponent,Meowth,Squirtle,2,Scratch | Fury Swipes,0,Scratch,1,Fury Swipes,False,0.5746558904647827,0.14931175112724304,-10000.0,20.0
+552,206,4,Opponent,Meowth,Squirtle,2,Scratch | Fury Swipes,0,Scratch,1,Fury Swipes,False,0.5746777057647705,0.14935532212257385,-10000.0,20.0
+586,219,8,Opponent,Pikachu,Eevee,2,Quick Attack | Thunderbolt,0,Quick Attack,1,Thunderbolt,False,0.6062162518501282,0.21243250370025635,10000.0,30.0
+587,219,10,Opponent,Pikachu,Eevee,2,Quick Attack | Thunderbolt,0,Quick Attack,1,Thunderbolt,False,0.6439398527145386,0.28787961602211,10000.0,30.0
+617,234,9,Player,Charmander,Bulbasaur,2,Scratch | Flame Tail,0,Scratch,1,Flame Tail,False,0.5803967714309692,0.16079354286193848,487.0,20.0
+766,288,12,Player,Pikachu,Eevee,2,Quick Attack | Thunderbolt,0,Quick Attack,1,Thunderbolt,False,0.6138491034507751,0.22769823670387268,10000.0,30.0
+767,288,14,Player,Pikachu,Eevee,2,Quick Attack | Thunderbolt,0,Quick Attack,1,Thunderbolt,False,0.5167189240455627,0.033437877893447876,10000.0,30.0
+924,352,2,Player,Pikachu,Bulbasaur,2,Quick Attack | Thunderbolt,0,Quick Attack,1,Thunderbolt,False,0.5837253332138062,0.16745072603225708,10000.0,30.0

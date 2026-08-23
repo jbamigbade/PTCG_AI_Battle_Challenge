@@ -1,0 +1,26 @@
+{
+  "status": "SIMULATOR_CARD_VERSION_MATCHING_COMPLETE",
+  "official_candidate_rows": 8,
+  "upstream_profile_evidence_rows": 5,
+  "upstream_identifier_evidence_rows": 124,
+  "cards_with_exact_version_confirmation": [],
+  "cards_with_single_unconfirmed_version": [
+    "Bulbasaur",
+    "Meowth"
+  ],
+  "cards_with_unique_leading_candidate": [
+    "Eevee"
+  ],
+  "cards_with_ambiguous_versions": [
+    "Charmander"
+  ],
+  "all_exact_versions_confirmed": false,
+  "version_matching_status": "SIMULATOR_VERSIONS_NOT_SOURCE_CONFIRMED",
+  "unconfirmed_versions_used_for_action_expansion": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_expand_actions": false,
+  "validation_checks_passed": 7,
+  "validation_checks_failed": 0,
+  "next_stage": "CARD_IMAGE_LINK_AND_DETAIL_RECOVERY"
+}

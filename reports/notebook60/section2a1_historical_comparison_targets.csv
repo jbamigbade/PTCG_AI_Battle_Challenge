@@ -1,0 +1,4 @@
+baseline_name,matches,r3_reference_wins,r3_reference_losses,draws,historical_side_neutral_win_rate,historical_average_turns,historical_fallback_count,historical_opponent_side_win_rate,historical_player_side_win_rate,historical_side_average,side_average_matches_side_neutral
+Depth-6 Search Baseline,100,58,42,0,0.58,3.74,0,0.32,0.84,0.58,True
+Greedy Damage Baseline,100,58,42,0,0.58,3.26,0,0.32,0.84,0.58,True
+Random Baseline,100,78,22,0,0.78,3.6,0,0.64,0.92,0.78,True

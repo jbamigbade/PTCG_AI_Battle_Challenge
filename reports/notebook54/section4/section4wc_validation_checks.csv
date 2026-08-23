@@ -1,0 +1,8 @@
+check,passed,value,expected
+all_23_observed_choice_states_used,True,23,23
+exactly_23_mirror_pairs_created,True,23,23
+exactly_46_comparison_cases_created,True,46,46
+player_and_opponent_case_counts_balanced,True,"{'player': 23, 'opponent': 23}","{'player': 23, 'opponent': 23}"
+all_mirror_pairs_context_matched,True,23,23
+observed_choice_source_is_opponent_eevee,True,"{'sides': ['Opponent'], 'cards': ['Eevee']}","{'sides': ['Opponent'], 'cards': ['Eevee']}"
+comparison_design_ready,True,OPPORTUNITY_NORMALIZED_COMPARISON_DESIGN_READY,OPPORTUNITY_NORMALIZED_COMPARISON_DESIGN_READY

@@ -1,0 +1,9 @@
+check,passed,value,expected
+section4r_nan_energy_confirmed,True,"{'player': nan, 'opponent': nan}",Both missing
+decision_rows_preserved,True,210,210
+repaired_attack_rows_reconcile,True,269,269
+unknown_energy_not_classified_as_insufficient,True,True,True
+repaired_diagnosis_recognized,True,ENERGY_EVIDENCE_NOT_RECORDED,Recognized repaired diagnosis
+section4r_diagnosis_not_carried_forward_uncritically,True,ENERGY_EVIDENCE_NOT_RECORDED,No confirmed inconsistency without observations
+verified_action_catalog_unchanged,True,5,5
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

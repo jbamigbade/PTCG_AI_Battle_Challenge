@@ -1,0 +1,4 @@
+split,examples,accuracy,balanced_accuracy,weighted_accuracy,log_loss,legal_predictions,illegal_predictions,prediction_legality_rate,masking_required_rate
+Training,840,1.0,1.0,1.0,2.220446049250313e-16,840,0,1.0,0.0
+Validation,110,1.0,1.0,1.0,2.220446049250313e-16,110,0,1.0,0.0
+Test,110,1.0,1.0,1.0,2.220446049250313e-16,110,0,1.0,0.0

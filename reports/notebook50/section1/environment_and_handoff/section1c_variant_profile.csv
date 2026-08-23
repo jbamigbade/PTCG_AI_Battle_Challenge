@@ -1,0 +1,11 @@
+variant_name,row_count,fraction
+balanced_midgame,106,0.1
+counterfactual_side_early,106,0.1
+counterfactual_side_late,106,0.1
+critical_hp_decision,106,0.1
+early_pressure,106,0.1
+late_game_prize_pressure,106,0.1
+opening_one_energy,106,0.1
+opening_zero_energy,106,0.1
+opponent_under_pressure,106,0.1
+player_under_pressure,106,0.1

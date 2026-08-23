@@ -1,0 +1,5 @@
+card_name,official_card_id,printed_attack_count,simulator_available_printed_attacks,missing_printed_attack_count,simulator_control_action_count,printed_attack_coverage_rate,all_printed_attacks_available,action_expansion_opportunity
+Bulbasaur,650,1,1,0,1,1.0,True,False
+Charmander,788,1,1,0,1,1.0,True,False
+Eevee,43,2,2,0,0,1.0,True,False
+Meowth,1071,1,1,0,0,1.0,True,False

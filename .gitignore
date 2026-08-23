@@ -1,21 +1,118 @@
+﻿# ============================================================
 # Python
+# ============================================================
+
 __pycache__/
+*.py[cod]
+*.pyo
 *.pyc
+*.pyd
 
-# Virtual Environment
+# Virtual environments
 .venv/
+venv/
+env/
+ENV/
 
+# Python packaging / tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# ============================================================
 # Jupyter
+# ============================================================
+
 .ipynb_checkpoints/
 
-# VS Code
+# ============================================================
+# IDE / OS
+# ============================================================
+
 .vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Data
-data/processed/
+# ============================================================
+# Temporary / runtime files
+# ============================================================
 
-# Logs
-logs/
+*.tmp
+*.temp
+*.log
+~$*
+temp/
+tmp/
 
-# Environment
-.env
+# ============================================================
+# Project backup / generated archive files
+#
+# Preserve these locally, but don't duplicate them in GitHub.
+# ============================================================
+
+backups/
+submission_work/
+
+*.zip
+*.tar
+*.tar.gz
+
+# ============================================================
+# Final competition package
+#
+# Certified locally and preserved separately.
+# ============================================================
+
+submission/ptcg_final_agent.zip
+submission/ptcg_final_agent.tar.gz
+submission/ptcg_final_agent_PRE_*.zip
+
+# ============================================================
+# Optional large ML runtime artifacts
+#
+# We will decide separately whether to store these with Git LFS.
+# DO NOT delete them locally.
+# ============================================================
+
+*.joblib
+*.pkl
+*.pt
+*.pth
+
+# ============================================================
+# Miscellaneous local runtime
+# ============================================================
+
+artifacts/project_freeze/
+
+# ============================================================
+# PTCG project-specific GitHub exclusions
+# ============================================================
+
+# Large competition reference PDFs
+data/raw/*.pdf
+notebooks/data/raw/*.pdf
+
+# Duplicate notebook-local data tree
+notebooks/data/
+
+# Scratch notebook
+Untitled.ipynb
+
+# Notebook development backups / archives
+notebooks/*BACKUP*.ipynb
+notebooks/*ARCHIVE*.ipynb
+
+# Old source-tree safety backup
+src_backup_before_bom_fix/
+
+# Local parquet scratch/test file
+notebooks/test.parquet
+

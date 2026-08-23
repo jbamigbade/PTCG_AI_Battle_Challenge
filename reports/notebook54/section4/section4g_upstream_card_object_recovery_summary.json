@@ -1,0 +1,25 @@
+{
+  "status": "UPSTREAM_CARD_OBJECT_RECOVERY_COMPLETE",
+  "parsed_card_objects": 1,
+  "proximity_identifier_candidates": 1,
+  "unique_identifier_candidates": 1,
+  "cards_with_recovered_identifiers": [
+    "Bulbasaur"
+  ],
+  "cards_without_recovered_identifiers": [
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "cards_with_complete_object_evidence": [
+    "Bulbasaur"
+  ],
+  "object_recovery_status": "PARTIAL_IDENTIFIER_CANDIDATES_RECOVERED",
+  "identifiers_pdf_validated": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_expand_actions": false,
+  "validation_checks_passed": 5,
+  "validation_checks_failed": 0,
+  "next_stage": "HYBRID_TARGETED_PDF_LOOKUP"
+}

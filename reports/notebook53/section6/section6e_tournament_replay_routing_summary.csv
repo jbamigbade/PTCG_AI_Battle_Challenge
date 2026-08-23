@@ -1,0 +1,3 @@
+routing_reason,decisions,average_confidence,fallback_decisions,decision_fraction
+LEGAL_MODEL_PREDICTION,23,0.940608695652174,0,0.10952380952380952
+ONLY_LEGAL_MOVE,187,1.0,0,0.8904761904761904

@@ -1,0 +1,17 @@
+production_field,bootstrap_source,generation_method
+sample_id,-,Generated
+game_index,game_index,Direct
+turn,turn,Direct
+actor,actor,Direct
+observation_vector,-,Simulator
+legal_moves,-,Simulator
+legal_move_mask,-,Simulator
+chosen_move,move_name,Direct
+chosen_move_index,policy_index,Direct
+search_score,search_score,Direct
+search_depth,search_depth,Direct
+nodes_searched,nodes_searched,Direct
+reward,-,Simulator
+done,-,Simulator
+winner,winner,Direct
+source_dataset,bootstrap_policy,Generated

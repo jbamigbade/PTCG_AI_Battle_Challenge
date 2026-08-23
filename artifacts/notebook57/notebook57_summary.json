@@ -1,0 +1,20 @@
+{
+  "notebook": 57,
+  "title": "Probability Attribution and Feature Importance",
+  "evaluation_cases": 184,
+  "strategy_count": 4,
+  "strategies": [
+    "R0_CURRENT_BASELINE",
+    "R1_REMOVE_LEGAL_SIGNATURE",
+    "R2_REMOVE_SIGNATURE_AND_COMPATIBILITY",
+    "R3_STATE_CENTRIC_POLICY"
+  ],
+  "primary_candidate": "R3_STATE_CENTRIC_POLICY",
+  "largest_case_probability_drift": 0.168,
+  "most_sensitive_action_mean": "Quick Attack",
+  "largest_single_action_drift": "Ascension",
+  "primary_probability_gain": "Ascension",
+  "primary_probability_loss": "Quick Attack",
+  "most_drift_sensitive_variant": "V03",
+  "status": "PROBABILITY_ATTRIBUTION_AND_FEATURE_IMPORTANCE_COMPLETE"
+}

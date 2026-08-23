@@ -1,0 +1,34 @@
+raw_feature,category_index,learned_category
+current_side,0,Opponent
+current_side,1,Player
+side_mode,0,FLIP
+side_mode,1,PRESERVE
+player_card,0,Bulbasaur
+player_card,1,Charmander
+player_card,2,Eevee
+player_card,3,Meowth
+opponent_card,0,Charmander
+opponent_card,1,Eevee
+active_card,0,Bulbasaur
+active_card,1,Charmander
+active_card,2,Eevee
+active_card,3,Meowth
+inactive_card,0,Bulbasaur
+inactive_card,1,Charmander
+inactive_card,2,Eevee
+inactive_card,3,Meowth
+legal_move_signature,0,ascension
+legal_move_signature,1,ascension | quick attack
+legal_move_signature,2,bind down
+legal_move_signature,3,live coal
+legal_move_signature,4,pass
+legal_move_signature,5,tuck tail
+battle_phase,0,EARLY
+battle_phase,1,LATE
+battle_phase,2,MID
+energy_band,0,LOW
+energy_band,1,READY
+energy_band,2,ZERO
+damage_band,0,HIGH_DAMAGE
+damage_band,1,LOW_DAMAGE
+damage_band,2,MEDIUM_DAMAGE

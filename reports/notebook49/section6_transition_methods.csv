@@ -1,0 +1,2 @@
+module,class,method,signature
+src.competitive.competitive_policy_engine,CompetitivePolicyNetwork,apply,"(self, fn: collections.abc.Callable[['Module'], None]) -> Self"

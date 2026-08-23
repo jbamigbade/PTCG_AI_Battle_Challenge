@@ -1,0 +1,9 @@
+check,passed,value,expected
+all_46_cases_executed,True,"{'completed': 46, 'failed': 0}","{'completed': 46, 'failed': 0}"
+all_23_pairs_valid,True,23,23
+all_selected_moves_legal,True,46,46
+all_pair_contexts_matched,True,23,23
+legal_move_sets_match_design,True,46,46
+acting_cards_match_design,True,46,46
+acting_energy_matches_design,True,46,46
+paired_policy_comparison_completed,True,NO_OPPORTUNITY_NORMALIZED_SIDE_BIAS_DETECTED,Recognized paired-side diagnosis

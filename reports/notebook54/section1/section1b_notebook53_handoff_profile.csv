@@ -1,0 +1,32 @@
+metric,value
+Status,READY_FOR_TOURNAMENT_STRENGTH_OPTIMIZATION
+Source dataset rows,1060
+Raw feature count,41
+Encoded feature count,64
+Policy class count,6
+Training rows,840
+Validation rows,110
+Test rows,110
+Validation accuracy,1.0
+Test accuracy,1.0
+Notebook 52 raw legality,0.28095238095238095
+Notebook 53 raw legality,0.8285714285714286
+Notebook 52 masking rate,0.719047619047619
+Notebook 53 raw masking rate,0.17142857142857143
+Tournament battles,24
+Player wins,7
+Opponent wins,14
+Draws,3
+Policy decisions,210
+Single-action direct decisions,187
+Multi-action model decisions,23
+Selector decisions,0
+Fallback decisions,0
+Winner agreement rate,1.0
+Turn-count agreement rate,1.0
+Validation checks passed,38
+Validation checks failed,0
+Primary optimization target,Improve tournament win rate while preserving 100% action legality
+Weakest condition,HP_PRESSURE
+Next notebook,Notebook 54 — Tournament Strength Optimization
+Next stage,TOURNAMENT_STRENGTH_OPTIMIZATION

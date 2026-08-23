@@ -1,0 +1,3 @@
+feature_family,feature_count,average_training_nonzero_count,average_validation_nonzero_count,average_test_nonzero_count
+categorical_one_hot,33,254.54545454545453,33.333333333333336,33.333333333333336
+numeric,31,494.19354838709677,64.70967741935483,64.64516129032258

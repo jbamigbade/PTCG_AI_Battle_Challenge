@@ -1,0 +1,8 @@
+check,passed,value,expected,details
+official_candidate_rows_preserved,True,8,8,
+link_summary_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+recovered_uris_nonempty,True,0,All recovered URI values nonempty,
+duplicate_uri_assignments_zero,True,0,0,
+recovery_status_recognized,True,OFFICIAL_CARD_IMAGE_LINKS_NOT_RECOVERED,Recognized recovery status,
+images_not_downloaded,True,0,0,Section 4K performs link extraction only.
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",

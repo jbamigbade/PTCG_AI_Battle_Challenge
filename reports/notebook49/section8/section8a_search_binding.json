@@ -1,0 +1,27 @@
+{
+    "search_engine_class": "AdvancedSearchEngine",
+    "search_engine_module": "src.engine.advanced_search",
+    "constructor_signature": "(generate_moves: 'GenerateMovesFn', apply_move: 'ApplyMoveFn', evaluate_state: 'EvaluateFn', is_terminal: 'IsTerminalFn', current_player: 'CurrentPlayerFn', move_to_string: 'Optional[MoveToStringFn]' = None, state_key: 'Optional[Callable[[State], Hashable]]' = None, use_transposition_table: 'bool' = True, move_order_score: 'Optional[MoveOrderScoreFn]' = None, use_move_ordering: 'bool' = True, move_key: 'Optional[MoveKeyFn]' = None, use_killer_moves: 'bool' = True, killer_slots: 'int' = 2, use_history_heuristic: 'bool' = True, history_multiplier: 'float' = 1000.0) -> 'None'",
+    "constructor_arguments": [
+        "apply_move",
+        "current_player",
+        "evaluate_state",
+        "generate_moves",
+        "is_terminal",
+        "move_key",
+        "state_key"
+    ],
+    "search_depth_signature": "(state: 'State', depth: 'int', root_player: 'Optional[Player]' = None, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'",
+    "search_depth_arguments": [
+        "clear_history",
+        "clear_killers",
+        "clear_table",
+        "depth",
+        "root_player",
+        "state"
+    ],
+    "apply_move_source": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\scripts\\10_minimax_opponent_ai.py",
+    "apply_move_signature": "(battle_state: nb49_production_transition_module.BattleState, move: dict)",
+    "state_key_function": "notebook49_state_key",
+    "move_key_function": "notebook49_move_key"
+}

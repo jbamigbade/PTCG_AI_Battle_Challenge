@@ -1,0 +1,4 @@
+baseline_name,matches,competitive_wins,competitive_losses,draws,score,average_turns,median_turns,average_seconds,fallback_count,win_rate,loss_rate,draw_rate
+Depth-6 Search Baseline,100,58,42,0,0.58,3.74,3.5,0.003741505003999919,0,0.58,0.42,0.0
+Greedy Damage Baseline,100,58,42,0,0.58,3.26,3.0,0.0012270470045041293,0,0.58,0.42,0.0
+Random Baseline,100,78,22,0,0.78,3.6,3.0,0.001538944001076743,0,0.78,0.22,0.0

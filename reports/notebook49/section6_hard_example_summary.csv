@@ -1,0 +1,7 @@
+normalized_side,baseline_name,loss_scenarios,average_turns,average_priority,maximum_priority
+Opponent,Depth-6 Search Baseline,34,3.735294117647059,7.235294117647059,9.0
+Opponent,Greedy Damage Baseline,34,3.264705882352941,4.352941176470588,5.333333333333333
+Player,Depth-6 Search Baseline,8,3.0,3.0,3.0
+Opponent,Random Baseline,18,3.5555555555555554,2.3333333333333335,3.0
+Player,Greedy Damage Baseline,8,3.0,2.0,2.0
+Player,Random Baseline,4,3.0,1.0,1.0

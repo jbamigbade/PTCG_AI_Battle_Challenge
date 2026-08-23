@@ -1,0 +1,13 @@
+interface_name,exists,callable,object_type,module,signature
+normalize_battle_winner,True,True,function,notebook54_adapter_reconstruction,(winner_value: 'Any') -> 'str'
+resolve_dataframe_column,True,True,function,notebook54_adapter_reconstruction,"(dataframe: 'pd.DataFrame', candidate_columns: 'Sequence[str]', required: 'bool' = True) -> 'Optional[str]'"
+create_move_dictionary,True,True,function,notebook54_adapter_reconstruction,"(move_name: 'str') -> 'Dict[str, Any]'"
+build_replay_card,True,True,function,notebook54_adapter_reconstruction,"(scenario_id: 'str', side_name: 'str', card_name: 'str', starting_hp: 'float') -> 'Dict[str, Any]'"
+build_replay_battle_state,True,True,function,notebook54_adapter_reconstruction,(scenario_row: 'pd.Series') -> 'Any'
+extract_result_turns,True,True,function,notebook54_adapter_reconstruction,(battle_result: 'Any') -> 'List[Any]'
+extract_result_winner,True,True,function,notebook54_adapter_reconstruction,(battle_result: 'Any') -> 'Optional[str]'
+extract_termination_reason,True,True,function,notebook54_adapter_reconstruction,(battle_result: 'Any') -> 'str'
+simulate_ai_battle,True,True,function,notebook54_simulator_runtime.battle_simulation,"(initial_state: 'BattleState', agent: 'PokemonBattleAgent', search_depth: 'int' = 6, max_turns: 'int' = 20, verbose: 'bool' = True) -> 'BattleSimulationResult'"
+determine_battle_winner,True,True,function,notebook54_simulator_runtime.battle_simulation,(state: 'BattleState') -> 'Optional[str]'
+apply_move,True,True,function,notebook54_simulator_runtime.simulator,"(battle_state: 'BattleState', move: 'Move') -> 'BattleState'"
+runner_choose_move,True,True,method,notebook54_adapter_reconstruction,"(state: 'Any', depth: 'Optional[int]' = None) -> 'Any'"

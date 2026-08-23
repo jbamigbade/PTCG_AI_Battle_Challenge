@@ -1,0 +1,26 @@
+﻿Notebook 20 — Policy Engine and Official Game Integration
+
+Status:
+Completed Successfully
+
+Validated
+
+[OK] Notebook 18 observation adapter loaded
+[OK] Notebook 19 feature and scoring engine loaded
+[OK] Card repository loaded: 1267 cards
+[OK] Official CardData lookup loaded: 1267 cards
+[OK] BattlePolicy created
+[OK] Safe fallback behavior validated
+[OK] BattleSnapshot decision path validated
+[OK] Legal actions ranked
+[OK] Highest-scoring legal option selected
+[OK] Official option index preserved
+[OK] Debug decision output validated
+
+Synthetic decision result:
+- ATTACK score: 259.913
+- END score: -25.000
+- Selected option index: 0
+- Fallback used: False
+
+Ready for Notebook 21.

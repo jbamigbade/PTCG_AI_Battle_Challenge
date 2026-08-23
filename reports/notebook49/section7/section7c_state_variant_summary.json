@@ -1,0 +1,15 @@
+{
+    "status": "READY",
+    "source_scenarios": 106,
+    "variants_per_scenario": 10,
+    "expected_variants": 1060,
+    "generated_variants": 1060,
+    "accepted_variants": 1060,
+    "rejected_variants": 0,
+    "failed_variants": 0,
+    "completed_scenarios": 106,
+    "preserved_side_variants": 848,
+    "counterfactual_side_variants": 212,
+    "minimum_legal_moves": 1,
+    "next_stage": "SEARCH_GUIDED_STATE_MINING"
+}

@@ -1,0 +1,25 @@
+{
+    "status": "READY",
+    "input_search_labels": 1060,
+    "accepted_policy_examples": 1060,
+    "rejected_examples": 0,
+    "duplicates_removed": 0,
+    "source_scenarios": 106,
+    "player_side_examples": 332,
+    "opponent_side_examples": 728,
+    "preserved_side_examples": 848,
+    "counterfactual_side_examples": 212,
+    "missing_required_fields": {
+        "variant_id": 0,
+        "state_key": 0,
+        "expert_move": 0,
+        "value_target": 0
+    },
+    "duplicate_variant_count": 0,
+    "invalid_legal_move_count": 0,
+    "average_value_target": -1.1774056603773593,
+    "average_sample_weight": 1.523856603773585,
+    "policy_dataset_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook49\\section8\\policy_dataset\\section8c_expert_policy_dataset.csv",
+    "policy_jsonl_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook49\\section8\\policy_dataset\\section8c_expert_policy_dataset.jsonl",
+    "next_stage": "FINAL_DATASET_VALIDATION"
+}

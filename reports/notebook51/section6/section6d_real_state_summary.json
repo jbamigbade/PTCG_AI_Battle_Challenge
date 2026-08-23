@@ -1,0 +1,15 @@
+{
+  "status": "REAL_SIMULATOR_TRANSITION_VALIDATED",
+  "state_type": "BattleState",
+  "selected_move": "Quick Attack",
+  "selected_move_is_legal": true,
+  "policy_confidence": 1.0,
+  "fallback_used": false,
+  "apply_move_returned_new_state": true,
+  "original_state_unchanged": true,
+  "turn_advanced": true,
+  "side_switched": true,
+  "winner_before": null,
+  "winner_after": null,
+  "next_stage": "POLICY_BATTLE_RUNNER_ADAPTER"
+}

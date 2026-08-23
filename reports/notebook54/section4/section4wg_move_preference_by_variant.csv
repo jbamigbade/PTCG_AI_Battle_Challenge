@@ -1,0 +1,5 @@
+expansion_variant_id,selected_move,decisions,mirror_pairs,average_confidence,minimum_confidence,maximum_confidence,average_acting_energy,average_opposing_energy,variant_move_share
+EEVEE_ENERGY_ADVANTAGE,Quick Attack,46,23,0.9107391304347826,0.852,0.978,3.0,2.0,1.0
+MINIMUM_MULTI_ACTION_ENERGY,Quick Attack,46,23,0.8710869565217392,0.824,0.926,2.0,3.0,1.0
+OBSERVED_ENERGY_CONTEXT,Quick Attack,46,23,0.9107391304347826,0.852,0.978,3.0,3.0,1.0
+SYMMETRIC_TWO_ENERGY,Quick Attack,46,23,0.8710869565217392,0.824,0.926,2.0,2.0,1.0

@@ -1,0 +1,4 @@
+split,rows,columns,missing_values,infinite_values,finite_values,total_values,zero_fraction
+Training,840,64,0,0,53760,53760,0.5587797619047619
+Validation,110,64,0,0,7040,7040,0.5588068181818182
+Test,110,64,0,0,7040,7040,0.5590909090909091

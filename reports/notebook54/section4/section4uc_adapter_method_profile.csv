@@ -1,0 +1,10 @@
+class_name,method_name,signature,decision_method_candidate
+LegalityAwarePolicyAgent,act,"(self, state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None) -> 'Any'",True
+LegalityAwarePolicyAgent,choose_move,"(self, state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None) -> 'Any'",True
+LegalityAwarePolicyAgent,choose_move_detailed,"(self, state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None) -> 'Dict[str, Any]'",False
+LegalityAwarePolicyAgent,reset,(self) -> 'None',False
+LegalityAwarePolicyAgent,select_action,"(self, state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None) -> 'Any'",False
+LegalityAwarePolicyAgent,statistics,"(self) -> 'Dict[str, Any]'",True
+LegalityAwareBattleRunnerAgent,choose_move,"(self, state: 'Any', depth: 'Optional[int]' = None) -> 'Any'",True
+LegalityAwareBattleRunnerAgent,reset,(self) -> 'None',False
+LegalityAwareBattleRunnerAgent,statistics,"(self) -> 'Dict[str, Any]'",True

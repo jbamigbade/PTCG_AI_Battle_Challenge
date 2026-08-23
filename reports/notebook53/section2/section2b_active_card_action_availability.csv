@@ -1,0 +1,5 @@
+active_card,decisions,available_legal_actions,available_legal_action_count,raw_predicted_actions,selected_actions,masking_rate,raw_legality_rate
+Bulbasaur,70,"[""Bind Down"", ""Pass""]",2,"[""Ascension""]","[""Bind Down"", ""Pass""]",1.0,0.0
+Charmander,35,"[""Live Coal"", ""Pass""]",2,"[""Ascension""]","[""Live Coal"", ""Pass""]",1.0,0.0
+Eevee,59,"[""Ascension"", ""Quick Attack""]",2,"[""Ascension"", ""Quick Attack""]","[""Ascension"", ""Quick Attack""]",0.0,1.0
+Meowth,46,"[""Tuck Tail""]",1,"[""Ascension""]","[""Tuck Tail""]",1.0,0.0

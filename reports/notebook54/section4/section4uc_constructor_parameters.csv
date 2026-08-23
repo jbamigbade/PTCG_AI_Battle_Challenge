@@ -1,0 +1,7 @@
+class_name,parameter_name,parameter_kind,required,default_value,annotation
+LegalityAwarePolicyAgent,model,POSITIONAL_OR_KEYWORD,True,<REQUIRED>,Any
+LegalityAwarePolicyAgent,preprocessor,POSITIONAL_OR_KEYWORD,True,<REQUIRED>,Any
+LegalityAwarePolicyAgent,side_mode,POSITIONAL_OR_KEYWORD,False,'PRESERVE',str
+LegalityAwarePolicyAgent,agent_name,POSITIONAL_OR_KEYWORD,False,'Notebook53LegalityAwarePolicy',str
+LegalityAwareBattleRunnerAgent,policy_agent,POSITIONAL_OR_KEYWORD,True,<REQUIRED>,LegalityAwarePolicyAgent
+LegalityAwareBattleRunnerAgent,default_search_depth,POSITIONAL_OR_KEYWORD,False,0,int

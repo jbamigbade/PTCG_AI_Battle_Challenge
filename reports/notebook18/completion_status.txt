@@ -1,0 +1,22 @@
+﻿Notebook 18 — Kaggle Observation Adapter
+
+Status:
+Completed Successfully
+
+Validated
+
+[OK] Official cg runtime located
+[OK] API inspected
+[OK] Observation model inspected
+[OK] State model inspected
+[OK] PlayerState inspected
+[OK] Option model inspected
+[OK] Log model inspected
+[OK] CardData inspected
+[OK] Repository integration
+[OK] Official lookup
+[OK] BattleSnapshot models
+[OK] Adapter implementation
+[OK] Validation passed
+
+Ready for Notebook 19.

@@ -1,0 +1,301 @@
+match_id,agent_name,baseline_name,player_card,opponent_card,starting_side,winner,turns,stop_reason,agent_result,fallback_count,elapsed_seconds,evaluated_agent_side,execution_status,execution_error,execution_elapsed_seconds
+1,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.35924799999338575,Player,SUCCESS,,0.36212170001817867
+2,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.08137879997957498,Opponent,SUCCESS,,0.08158840000396594
+3,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.23641859999042936,Player,SUCCESS,,0.2367552999930922
+4,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1418077000125777,Opponent,SUCCESS,,0.14193199999863282
+5,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.25220969997462817,Player,SUCCESS,,0.2523325000074692
+6,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07105090000550263,Opponent,SUCCESS,,0.07117169999401085
+7,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.1570110000029672,Player,SUCCESS,,0.1571708999981638
+8,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Opponent,Player,8,Battle reached a terminal state.,0.0,4,0.38892709999345243,Opponent,SUCCESS,,0.38925799998105504
+9,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.2201710999943316,Player,SUCCESS,,0.2202744999958668
+10,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.06894890000694431,Opponent,SUCCESS,,0.06906969999545254
+11,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.07164589999592863,Player,SUCCESS,,0.07175149998511188
+12,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1391828999912832,Opponent,SUCCESS,,0.13942130000214092
+13,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.33385689998976886,Player,SUCCESS,,0.33395690002362244
+14,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.13697079999838024,Opponent,SUCCESS,,0.1371011000010185
+15,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.22338330000638962,Player,SUCCESS,,0.2234848000225611
+16,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.2549855000106618,Opponent,SUCCESS,,0.2550897999899462
+17,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Player,Opponent,4,Battle reached a terminal state.,0.0,2,0.1514413999975659,Player,SUCCESS,,0.15154619998065755
+18,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.15623529997537844,Opponent,SUCCESS,,0.15645690000383183
+19,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.321745599998394,Player,SUCCESS,,0.32213399998727255
+20,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.15978929999982938,Opponent,SUCCESS,,0.1601299000030849
+21,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.22781310000573285,Player,SUCCESS,,0.22791239997604862
+22,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07557690000976436,Opponent,SUCCESS,,0.07575300001190044
+23,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Opponent,Opponent,9,Battle reached a terminal state.,0.0,4,0.3608284000074491,Player,SUCCESS,,0.36119729999336414
+24,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.15056179999373853,Opponent,SUCCESS,,0.15068280001287349
+25,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.3106901000137441,Player,SUCCESS,,0.31079260000842623
+26,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.31487030000425875,Opponent,SUCCESS,,0.3150250999897253
+27,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.2224516999849584,Player,SUCCESS,,0.22255209999275394
+28,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Opponent,Player,8,Battle reached a terminal state.,0.0,4,0.29185989999677986,Opponent,SUCCESS,,0.2919893999933265
+29,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Player,Opponent,4,Battle reached a terminal state.,0.0,2,0.14911240001674742,Player,SUCCESS,,0.149234799988335
+30,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.0916772999917157,Opponent,SUCCESS,,0.0919065999914892
+31,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.332791199994972,Player,SUCCESS,,0.33303569999407046
+32,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.23807819999638014,Opponent,SUCCESS,,0.23830130000715144
+33,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.37280789998476394,Player,SUCCESS,,0.3731666999810841
+34,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.08153349999338388,Opponent,SUCCESS,,0.08163450000574812
+35,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.25952270001289435,Player,SUCCESS,,0.2596507999987807
+36,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1402691999974195,Opponent,SUCCESS,,0.140363399987109
+37,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.28705029998673126,Player,SUCCESS,,0.2871844000183046
+38,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.22672029997920617,Opponent,SUCCESS,,0.22797839998384006
+39,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.30285880001611076,Player,SUCCESS,,0.3029627999931108
+40,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.15879000001586974,Opponent,SUCCESS,,0.1588892999861855
+41,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.30365570000139996,Player,SUCCESS,,0.30377149998093955
+42,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.08090010000159964,Opponent,SUCCESS,,0.08100020000711083
+43,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.14051209998433478,Player,SUCCESS,,0.1406120000174269
+44,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.14136710000457242,Opponent,SUCCESS,,0.14157770000747405
+45,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.28171360000851564,Player,SUCCESS,,0.2820693000103347
+46,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.13929940000525676,Opponent,SUCCESS,,0.13939699999173172
+47,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.1376307999889832,Player,SUCCESS,,0.13774060001014732
+48,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.21478179999394342,Opponent,SUCCESS,,0.21494689999963157
+49,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.29266129998723045,Player,SUCCESS,,0.2929819999844767
+50,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.13613359999726526,Opponent,SUCCESS,,0.1362311000120826
+51,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.22509959997842088,Player,SUCCESS,,0.22524690002319403
+52,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.15650270000332966,Opponent,SUCCESS,,0.1566168999997899
+53,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.27038319999701343,Player,SUCCESS,,0.2704817999911029
+54,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.17767259999527596,Opponent,SUCCESS,,0.1777697000070475
+55,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.14634410000871867,Player,SUCCESS,,0.1464554000122007
+56,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.13944250001804903,Opponent,SUCCESS,,0.13957219998701476
+57,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.2013992000138387,Player,SUCCESS,,0.20150329999160022
+58,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.211797399999341,Opponent,SUCCESS,,0.21196640000562184
+59,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.09198880000622012,Player,SUCCESS,,0.09242309999535792
+60,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.22963310001068749,Opponent,SUCCESS,,0.23004749999381602
+61,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.32508309997501783,Player,SUCCESS,,0.3251868000079412
+62,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.14413620001869276,Opponent,SUCCESS,,0.144312299991725
+63,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.1576948000001721,Player,SUCCESS,,0.15807120001409203
+64,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.2313729000161402,Opponent,SUCCESS,,0.23149090001243167
+65,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.2770124999806285,Player,SUCCESS,,0.2771123999846168
+66,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.14374879997922108,Opponent,SUCCESS,,0.14397589999134652
+67,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.18079929999657907,Player,SUCCESS,,0.18105050001759082
+68,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Opponent,Player,8,Battle reached a terminal state.,0.0,4,0.3184876999875996,Opponent,SUCCESS,,0.3185846999986097
+69,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.2783746999921277,Player,SUCCESS,,0.27847980000660755
+70,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.169992800016189,Opponent,SUCCESS,,0.17009320002398454
+71,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.07201449997955933,Player,SUCCESS,,0.07215540000470355
+72,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.20732680000946857,Opponent,SUCCESS,,0.20766789998742752
+73,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.28719860001001507,Player,SUCCESS,,0.2874731000047177
+74,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07051770001999103,Opponent,SUCCESS,,0.07062119999318384
+75,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.13827940000919625,Player,SUCCESS,,0.1383747000072617
+76,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.16307579999556765,Opponent,SUCCESS,,0.16317240000353195
+77,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.29077290001441725,Player,SUCCESS,,0.290915399993537
+78,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.1389385999937076,Opponent,SUCCESS,,0.13908770002308302
+79,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.2773791999788955,Player,SUCCESS,,0.27748089999658987
+80,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Opponent,Player,8,Battle reached a terminal state.,0.0,4,0.30621909999172203,Opponent,SUCCESS,,0.30631639997591265
+81,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.27765490001183935,Player,SUCCESS,,0.27782489999663085
+82,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.0705149999994319,Opponent,SUCCESS,,0.0706083000113722
+83,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.0674983000208158,Player,SUCCESS,,0.06759260001126677
+84,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1429307000071276,Opponent,SUCCESS,,0.1430345999833662
+85,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.30030050000641495,Player,SUCCESS,,0.30040350000490434
+86,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.2060267000051681,Opponent,SUCCESS,,0.20613060001051053
+87,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.14383240000461228,Player,SUCCESS,,0.14393699998618104
+88,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.14639149999129586,Opponent,SUCCESS,,0.14655979999224655
+89,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.2803743999975268,Player,SUCCESS,,0.2804715000092983
+90,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.16597589998855256,Opponent,SUCCESS,,0.16611000002012588
+91,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.16923569998471066,Player,SUCCESS,,0.16933639999479055
+92,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.17201209999620914,Opponent,SUCCESS,,0.17211859999224544
+93,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.24804649999714456,Player,SUCCESS,,0.24816930000088178
+94,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.08607009999104775,Opponent,SUCCESS,,0.08631169999716803
+95,R3_STATE_CENTRIC_POLICY,Random Baseline,Eevee,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.21394640000653453,Player,SUCCESS,,0.21406980001484044
+96,R3_STATE_CENTRIC_POLICY,Random Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.13748770000529476,Opponent,SUCCESS,,0.13758539999253117
+97,R3_STATE_CENTRIC_POLICY,Random Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.21172329998807982,Player,SUCCESS,,0.2118866000091657
+98,R3_STATE_CENTRIC_POLICY,Random Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.2614629000017885,Opponent,SUCCESS,,0.26178540001274087
+99,R3_STATE_CENTRIC_POLICY,Random Baseline,Squirtle,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.2168766999966465,Player,SUCCESS,,0.21705619999556802
+100,R3_STATE_CENTRIC_POLICY,Random Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1539702000154648,Opponent,SUCCESS,,0.1543192000244744
+101,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.23314830000163056,Player,SUCCESS,,0.23324639999191277
+102,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.0687640999967698,Opponent,SUCCESS,,0.06885770001099445
+103,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.14347380000981502,Player,SUCCESS,,0.143559499992989
+104,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1637604999996256,Opponent,SUCCESS,,0.16385409998474643
+105,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Player,Opponent,4,Battle reached a terminal state.,0.0,2,0.13995849998900667,Player,SUCCESS,,0.14004100000602193
+106,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07175879998249002,Opponent,SUCCESS,,0.07184119999874383
+107,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.14527710000402294,Player,SUCCESS,,0.14549429999897256
+108,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.14648170000873506,Opponent,SUCCESS,,0.14679890000843443
+109,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.23857210000278428,Player,SUCCESS,,0.23865549999754876
+110,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07524979999288917,Opponent,SUCCESS,,0.07550430000992492
+111,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.086636299995007,Player,SUCCESS,,0.08694089998607524
+112,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.13742980000097305,Opponent,SUCCESS,,0.1375216000014916
+113,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.21365340001648292,Player,SUCCESS,,0.21374289999948815
+114,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07246589998248965,Opponent,SUCCESS,,0.0725545999885071
+115,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.13807259997702204,Player,SUCCESS,,0.13817399999243207
+116,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1469146000163164,Opponent,SUCCESS,,0.14711520000128075
+117,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Player,Opponent,4,Battle reached a terminal state.,0.0,2,0.1543801999941934,Player,SUCCESS,,0.15467659998103045
+118,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.06920850000460632,Opponent,SUCCESS,,0.06930329999886453
+119,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.17014210001798347,Player,SUCCESS,,0.1703370999894105
+120,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.15366660000290722,Opponent,SUCCESS,,0.15408620002563111
+121,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.2105771999922581,Player,SUCCESS,,0.21066549999522977
+122,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07159750000573695,Opponent,SUCCESS,,0.07168470000033267
+123,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.0702537999895867,Player,SUCCESS,,0.07033620000584051
+124,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.136893200018676,Opponent,SUCCESS,,0.1369776999927126
+125,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.2310484999907203,Player,SUCCESS,,0.23113410000223666
+126,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07478510000510141,Opponent,SUCCESS,,0.07493659999454394
+127,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.15876849999767728,Player,SUCCESS,,0.1590511999966111
+128,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1666020000120625,Opponent,SUCCESS,,0.16668669998762198
+129,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Player,Opponent,4,Battle reached a terminal state.,0.0,2,0.1401952999876812,Player,SUCCESS,,0.1402855000051204
+130,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.06912319999537431,Opponent,SUCCESS,,0.06920669999090023
+131,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.14321799998288043,Player,SUCCESS,,0.1433013000059873
+132,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.14038280001841486,Opponent,SUCCESS,,0.1404663999855984
+133,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.24158299999544397,Player,SUCCESS,,0.24167109999689274
+134,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07272470000316389,Opponent,SUCCESS,,0.07281300000613555
+135,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.07662469998467714,Player,SUCCESS,,0.076768600003561
+136,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.15373770002042875,Opponent,SUCCESS,,0.15400119998957962
+137,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.21553709998261184,Player,SUCCESS,,0.2156206000072416
+138,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07562859999598004,Opponent,SUCCESS,,0.07578600000124425
+139,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.1604112999921199,Player,SUCCESS,,0.16072069999063388
+140,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.13774189999094233,Opponent,SUCCESS,,0.1378244000079576
+141,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Player,Opponent,4,Battle reached a terminal state.,0.0,2,0.14020629998412915,Player,SUCCESS,,0.14029079998726957
+142,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07633270000224002,Opponent,SUCCESS,,0.07648069999413565
+143,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.21830239999690093,Player,SUCCESS,,0.21863270000903867
+144,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.15258449999964796,Opponent,SUCCESS,,0.15275790001032874
+145,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.2119247000082396,Player,SUCCESS,,0.21201160000055097
+146,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07501420000335202,Opponent,SUCCESS,,0.07520660001318902
+147,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.09202240000013262,Player,SUCCESS,,0.09234060000744648
+148,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1394367000029888,Opponent,SUCCESS,,0.13952339999377728
+149,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.2082628000061959,Player,SUCCESS,,0.20835659999283962
+150,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.06877929999609478,Opponent,SUCCESS,,0.06890919999568723
+151,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.16269599998486228,Player,SUCCESS,,0.16288620000705123
+152,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.17767189998994581,Opponent,SUCCESS,,0.177979600004619
+153,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Player,Opponent,4,Battle reached a terminal state.,0.0,2,0.13715230001253076,Player,SUCCESS,,0.13723690001643263
+154,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07615350000560284,Opponent,SUCCESS,,0.07630399998743087
+155,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.18454740001470782,Player,SUCCESS,,0.18483589999959804
+156,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.14284620000398718,Opponent,SUCCESS,,0.1429943999974057
+157,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.22971119999419898,Player,SUCCESS,,0.22999069999787025
+158,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.06994200000190176,Opponent,SUCCESS,,0.0700240999867674
+159,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.06779000000096858,Player,SUCCESS,,0.06787189998431131
+160,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.13810710000689141,Opponent,SUCCESS,,0.1381909000047017
+161,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.22279520001029596,Player,SUCCESS,,0.22288549999939278
+162,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.06999640000867657,Opponent,SUCCESS,,0.07008890001452528
+163,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.13769209999009036,Player,SUCCESS,,0.13777570001548156
+164,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.18715250000241213,Opponent,SUCCESS,,0.18723619999946095
+165,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Player,Opponent,4,Battle reached a terminal state.,0.0,2,0.16108339998754673,Player,SUCCESS,,0.16116499999770895
+166,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.06838939999579452,Opponent,SUCCESS,,0.0684717999829445
+167,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.17128800001228228,Player,SUCCESS,,0.1714823999791406
+168,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.15755939998780377,Opponent,SUCCESS,,0.15784110000822693
+169,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.2156101000146009,Player,SUCCESS,,0.21576240001013502
+170,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.0871253999939654,Opponent,SUCCESS,,0.08771950000664219
+171,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.07311090000439435,Player,SUCCESS,,0.07319329999154434
+172,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.13831589999608696,Opponent,SUCCESS,,0.1384070000203792
+173,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.20599409998976626,Player,SUCCESS,,0.20610509999096394
+174,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07197439999436028,Opponent,SUCCESS,,0.07209150001290254
+175,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.13885790001950227,Player,SUCCESS,,0.1389414999866858
+176,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.13714330000220798,Opponent,SUCCESS,,0.1372319999791216
+177,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Player,Opponent,4,Battle reached a terminal state.,0.0,2,0.1400718999793753,Player,SUCCESS,,0.14016059998539276
+178,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.06929760001366958,Opponent,SUCCESS,,0.0693817000137642
+179,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.16526569999405183,Player,SUCCESS,,0.1653472000034526
+180,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.141570200008573,Opponent,SUCCESS,,0.14165579999098554
+181,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.20522480001091026,Player,SUCCESS,,0.20531489999848418
+182,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.0767442999931518,Opponent,SUCCESS,,0.07694220001576468
+183,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.09300720001920126,Player,SUCCESS,,0.0932817000139039
+184,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.17396470002131537,Opponent,SUCCESS,,0.17419150000205263
+185,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.21422259998507798,Player,SUCCESS,,0.214322700019693
+186,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07434149997425266,Opponent,SUCCESS,,0.07451669999863952
+187,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.17321790001005866,Player,SUCCESS,,0.17365099999005906
+188,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.13939539997954853,Opponent,SUCCESS,,0.13949129998218268
+189,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Player,Opponent,4,Battle reached a terminal state.,0.0,2,0.14291339999181218,Player,SUCCESS,,0.14299759999266826
+190,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07207599998218939,Opponent,SUCCESS,,0.07216640000115149
+191,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,0,0.17922180000459775,Player,SUCCESS,,0.17931129998760298
+192,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1374567000020761,Opponent,SUCCESS,,0.13753959999303333
+193,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.22447360001388006,Player,SUCCESS,,0.22456239999155514
+194,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.07588879999821074,Opponent,SUCCESS,,0.07608560001244769
+195,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Eevee,Charmander,Opponent,Opponent,3,Battle reached a terminal state.,0.0,1,0.08500170000479557,Player,SUCCESS,,0.08532079998985864
+196,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1406740000238642,Opponent,SUCCESS,,0.14076619999832474
+197,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Pikachu,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,0,0.25508760000229813,Player,SUCCESS,,0.2551714000001084
+198,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Charmander,Eevee,Player,Player,3,Battle reached a terminal state.,0.0,1,0.06708780000917614,Opponent,SUCCESS,,0.06717040002695285
+199,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.14195940000354312,Player,SUCCESS,,0.14215550001244992
+200,R3_STATE_CENTRIC_POLICY,Greedy Damage Baseline,Bulbasaur,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.16023920002044179,Opponent,SUCCESS,,0.16055000000051223
+201,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.28611119999550283,Player,SUCCESS,,0.2862860999885015
+202,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.23080690001370385,Opponent,SUCCESS,,0.2311313000100199
+203,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.18398099998012185,Player,SUCCESS,,0.18407180000212975
+204,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.2373490000027232,Opponent,SUCCESS,,0.237441300007049
+205,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.2401559999852907,Player,SUCCESS,,0.24024760001339018
+206,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.1403040000004694,Opponent,SUCCESS,,0.140422700002091
+207,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.2940400999796111,Player,SUCCESS,,0.2941313000046648
+208,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.23097829998005182,Opponent,SUCCESS,,0.23108590001356788
+209,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.3456562999926973,Player,SUCCESS,,0.34578610002063215
+210,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.21463830000720918,Opponent,SUCCESS,,0.21473219999461435
+211,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.26264719999744557,Player,SUCCESS,,0.2627399000048172
+212,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.14232869999250397,Opponent,SUCCESS,,0.1424389999883715
+213,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.29396700000506826,Player,SUCCESS,,0.2940770999994129
+214,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.24446549999993294,Opponent,SUCCESS,,0.2445655000046827
+215,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.17846309999004006,Player,SUCCESS,,0.17855549999512732
+216,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.23573539999779314,Opponent,SUCCESS,,0.23583079999662004
+217,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.2197483999771066,Player,SUCCESS,,0.21991350001189858
+218,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.23997310001868755,Opponent,SUCCESS,,0.2403786999930162
+219,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.34012979999533854,Player,SUCCESS,,0.3407774000079371
+220,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.2393389000208117,Opponent,SUCCESS,,0.23943399998825043
+221,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.30006899998988956,Player,SUCCESS,,0.30016530002467334
+222,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.2156894999789074,Opponent,SUCCESS,,0.21578699999372475
+223,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.21378920000279322,Player,SUCCESS,,0.213881899981061
+224,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.14648659998783842,Opponent,SUCCESS,,0.14667570000165142
+225,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.31658880002214573,Player,SUCCESS,,0.31682559999171644
+226,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.24142109998501837,Opponent,SUCCESS,,0.24151789999450557
+227,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.14146069998969324,Player,SUCCESS,,0.14155939998454414
+228,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.20872979998239316,Opponent,SUCCESS,,0.20883600000524893
+229,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.2131465999991633,Player,SUCCESS,,0.2133042000059504
+230,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.17076700000325218,Opponent,SUCCESS,,0.1710820999869611
+231,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.31626890000188723,Player,SUCCESS,,0.3163609000039287
+232,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.25216139998519793,Opponent,SUCCESS,,0.2522659999958705
+233,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.28122439997969195,Player,SUCCESS,,0.28131890000076964
+234,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.2860002999950666,Opponent,SUCCESS,,0.2861010000051465
+235,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.24352009998983704,Player,SUCCESS,,0.24362090000067838
+236,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.14395670001977123,Opponent,SUCCESS,,0.14405729999998584
+237,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.2978182999941055,Player,SUCCESS,,0.29791779999504797
+238,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.2346290000132285,Opponent,SUCCESS,,0.23473099997499958
+239,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.15310659998795018,Player,SUCCESS,,0.15332130002207123
+240,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.24717850002343766,Opponent,SUCCESS,,0.24752110001281835
+241,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.2817806999955792,Player,SUCCESS,,0.28187840001191944
+242,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.1696494000207167,Opponent,SUCCESS,,0.16974990000016987
+243,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.31222549997619353,Player,SUCCESS,,0.31232399999862537
+244,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.21374289999948815,Opponent,SUCCESS,,0.21388689999002963
+245,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.2872763000195846,Player,SUCCESS,,0.2873890000046231
+246,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.2914516000018921,Opponent,SUCCESS,,0.2915509000013117
+247,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.21222230000421405,Player,SUCCESS,,0.21231360000092536
+248,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.14300869998987764,Opponent,SUCCESS,,0.1431350999919232
+249,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.30996429998776875,Player,SUCCESS,,0.3100793000194244
+250,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.23741959998733364,Opponent,SUCCESS,,0.2376259000157006
+251,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.18293440001434647,Player,SUCCESS,,0.18326670001260936
+252,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.2091223000024911,Opponent,SUCCESS,,0.20923550002044067
+253,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.20930030001909472,Player,SUCCESS,,0.2093938000034541
+254,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.1324085000087507,Opponent,SUCCESS,,0.13251530000707135
+255,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.2777461000077892,Player,SUCCESS,,0.27784450000035577
+256,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.21212159999413416,Opponent,SUCCESS,,0.2122183000028599
+257,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.2816299000114668,Player,SUCCESS,,0.28172389999963343
+258,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.26321619999362156,Opponent,SUCCESS,,0.2633742999751121
+259,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.2509399999980815,Player,SUCCESS,,0.2514513000205625
+260,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1640936000039801,Opponent,SUCCESS,,0.16497729998081923
+261,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.3196511999994982,Player,SUCCESS,,0.31974830001126975
+262,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.2158849999832455,Opponent,SUCCESS,,0.21599170000990853
+263,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.1433330999861937,Player,SUCCESS,,0.14343019999796525
+264,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.21214400001917966,Opponent,SUCCESS,,0.2122351999860257
+265,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.2529707999783568,Player,SUCCESS,,0.2530692000000272
+266,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.14559339999686927,Opponent,SUCCESS,,0.14570340001955628
+267,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.2820734000124503,Player,SUCCESS,,0.2821706999966409
+268,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.2833395999914501,Opponent,SUCCESS,,0.283511699992232
+269,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.3220191999862436,Player,SUCCESS,,0.322349199996097
+270,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.2338521000056062,Opponent,SUCCESS,,0.23395480000181124
+271,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.21279280001181178,Player,SUCCESS,,0.21288890001596883
+272,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1387059999979101,Opponent,SUCCESS,,0.13879889997770078
+273,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.2944216000032611,Player,SUCCESS,,0.2945139000075869
+274,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.24424480000743642,Opponent,SUCCESS,,0.24434440000914037
+275,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.1409937999851536,Player,SUCCESS,,0.14108579998719506
+276,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.21006060001673177,Opponent,SUCCESS,,0.21015269999043085
+277,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.213808100001188,Player,SUCCESS,,0.2139016000146512
+278,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.1809674999967683,Opponent,SUCCESS,,0.18105590000050142
+279,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.2996520999877248,Player,SUCCESS,,0.29976159997750074
+280,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.2846680000075139,Opponent,SUCCESS,,0.2848626999766566
+281,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.3036823000002187,Player,SUCCESS,,0.303786400007084
+282,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.21811359998537228,Opponent,SUCCESS,,0.218294699996477
+283,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.21102449999307282,Player,SUCCESS,,0.21111949998885393
+284,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.14372210000874475,Opponent,SUCCESS,,0.14385390002280474
+285,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.3021240999805741,Player,SUCCESS,,0.3022291000233963
+286,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.23244459999841638,Opponent,SUCCESS,,0.23256810000748374
+287,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.15046659999643452,Player,SUCCESS,,0.1506299000175204
+288,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.22575919999508187,Opponent,SUCCESS,,0.22607149998657405
+289,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Player,Opponent,6,Battle reached a terminal state.,0.0,3,0.23699959999066778,Player,SUCCESS,,0.23709360000793822
+290,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Player,Player,5,Battle reached a terminal state.,0.0,2,0.14712280000094324,Opponent,SUCCESS,,0.14727039998979308
+291,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Opponent,Player,8,Battle reached a terminal state.,1.0,0,0.3306940000038594,Player,SUCCESS,,0.33098790000076406
+292,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.23735200002556667,Opponent,SUCCESS,,0.23751400000764988
+293,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Player,Opponent,8,Battle reached a terminal state.,0.0,4,0.27658489998430014,Player,SUCCESS,,0.27667719998862594
+294,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.2148029999807477,Opponent,SUCCESS,,0.21489829997881316
+295,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Eevee,Charmander,Opponent,Opponent,7,Battle reached a terminal state.,0.0,3,0.24075680001988076,Player,SUCCESS,,0.2408502999751363
+296,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Meowth,Eevee,Opponent,Player,4,Battle reached a terminal state.,0.0,2,0.1409230999997817,Opponent,SUCCESS,,0.14104829999268986
+297,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Pikachu,Charmander,Player,Player,7,Battle reached a terminal state.,1.0,0,0.379806799988728,Player,SUCCESS,,0.37999719998333603
+298,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Charmander,Eevee,Player,Player,7,Battle reached a terminal state.,0.0,3,0.2433424000046216,Opponent,SUCCESS,,0.24361400000634603
+299,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Squirtle,Charmander,Opponent,Opponent,5,Battle reached a terminal state.,0.0,2,0.15688540000701323,Player,SUCCESS,,0.15719860000535846
+300,R3_STATE_CENTRIC_POLICY,Depth-6 Search Baseline,Bulbasaur,Eevee,Opponent,Player,6,Battle reached a terminal state.,0.0,3,0.21296149998670444,Opponent,SUCCESS,,0.21305540000321344

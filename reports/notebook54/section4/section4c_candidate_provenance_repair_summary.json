@@ -1,0 +1,13 @@
+{
+  "status": "CANDIDATE_PROVENANCE_REPAIR_COMPLETE",
+  "previous_candidates_audited": 32,
+  "false_candidates_rejected": 32,
+  "remaining_previous_candidates": 0,
+  "trusted_card_metadata_candidates": 0,
+  "previous_transition_results_semantically_valid": false,
+  "simulator_transition_contract_valid": true,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_run_candidate_tournament_replay": false,
+  "next_stage": "OFFICIAL_CARD_METADATA_IDENTIFICATION"
+}

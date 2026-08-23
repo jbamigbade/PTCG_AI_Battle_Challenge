@@ -1,0 +1,4 @@
+Split,Accuracy,Balanced Accuracy,Macro F1
+Training,1.0,1.0,1.0
+Validation,1.0,1.0,1.0
+Test,1.0,1.0,1.0

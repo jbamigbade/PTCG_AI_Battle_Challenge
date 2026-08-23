@@ -1,0 +1,5 @@
+root_cause_category,battles,player_wins,player_losses,draws,average_turns,average_final_hp_margin,player_controlled_decisions,opponent_controlled_decisions
+OPPONENT_CHOICE_ONLY,8,0,8,0,3.875,-22.5,0,18
+NO_PLAYER_STRATEGIC_CHOICE,6,0,6,0,7.333333333333333,-80.0,0,0
+PLAYER_WIN_BASELINE,7,7,0,0,6.428571428571429,57.142857142857146,0,5
+DRAW_WITHOUT_PLAYER_CHOICE,3,0,0,3,30.0,-23.333333333333332,0,0

@@ -1,0 +1,11 @@
+check,passed,value,expected
+all_24_battles_completed,True,"{'completed': 24, 'failed': 0}","{'completed': 24, 'failed': 0}"
+winner_agreement_complete,True,24,24
+turn_count_agreement_complete,True,24,24
+instrumentation_rows_created,True,180,> 0
+acting_energy_observed,True,1.0,At least 0.95
+initial_energy_observed_all_battles,True,"{'player': 24, 'opponent': 24}","{'player': 24, 'opponent': 24}"
+energy_diagnosis_recognized,True,NO_ENERGY_COST_ENFORCEMENT_INCONSISTENCY,Recognized energy diagnosis
+frozen_artifact_hashes_unchanged,True,4,4
+frozen_dataframe_rows_unchanged,True,"{'battles': 24, 'turns': 210, 'policy': 210}","{'battles': 24, 'turns': 210, 'policy': 210}"
+simulator_source_not_modified,True,False,False

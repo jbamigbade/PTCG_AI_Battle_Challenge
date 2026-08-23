@@ -1,0 +1,31 @@
+{
+  "status": "MOVE_PREFERENCE_AND_DECISION_DIVERSITY_ANALYSIS_COMPLETE",
+  "evaluated_cases": 184,
+  "evaluated_mirror_pairs": 92,
+  "available_legal_moves": [
+    "Ascension",
+    "Quick Attack"
+  ],
+  "unique_selected_moves": 1,
+  "dominant_move": "Quick Attack",
+  "dominant_move_count": 184,
+  "dominant_move_share": 1.0,
+  "quick_attack_count": 184,
+  "quick_attack_share": 1.0,
+  "ascension_count": 0,
+  "ascension_share": 0.0,
+  "quick_attack_minus_ascension_share": 1.0,
+  "shannon_entropy_bits": -0.0,
+  "maximum_possible_entropy_bits": 0.0,
+  "normalized_entropy": 0.0,
+  "simpson_diversity": 0.0,
+  "effective_move_count": 1.0,
+  "variants_with_multiple_selected_moves": 0,
+  "conditions_with_multiple_selected_moves": 0,
+  "turn_bands_with_multiple_selected_moves": 0,
+  "all_moves_legal": true,
+  "side_bias_detected": false,
+  "diversity_diagnosis": "COMPLETE_MOVE_PREFERENCE_COLLAPSE",
+  "diversity_diagnosis_text": "The policy selected one move in every expanded multi-action state. Although side-neutral and legal, the decision policy showed no action diversity.",
+  "next_stage": "QUICK_ATTACK_DOMINANCE_ROOT_CAUSE_ANALYSIS"
+}

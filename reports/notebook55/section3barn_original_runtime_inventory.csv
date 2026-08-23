@@ -1,0 +1,17 @@
+object_name,exists,object_type,callable,has_predict,has_predict_proba,has_decision_function,has_feature_importances,has_coef,has_classes
+PREPROCESS_RAW_FEATURES,True,list,False,False,False,False,False,False,False
+encoded_feature_names,False,,False,False,False,False,False,False,False
+feature_names,False,,False,False,False,False,False,False,False
+legality_aware_model,False,,False,False,False,False,False,False,False
+legality_model,False,,False,False,False,False,False,False,False
+legality_preprocessor,False,,False,False,False,False,False,False,False
+model,False,,False,False,False,False,False,False,False
+model_feature_names,False,,False,False,False,False,False,False,False
+notebook53_legality_model,True,RandomForestClassifier,False,True,True,False,True,False,True
+notebook53_preprocessor,True,ColumnTransformer,False,False,False,False,False,False,False
+notebook54_legality_model,False,,False,False,False,False,False,False,False
+notebook54_preprocessor,False,,False,False,False,False,False,False,False
+policy_model,False,,False,False,False,False,False,False,False
+policy_preprocessor,False,,False,False,False,False,False,False,False
+preprocessor,False,,False,False,False,False,False,False,False
+trained_model,False,,False,False,False,False,False,False,False

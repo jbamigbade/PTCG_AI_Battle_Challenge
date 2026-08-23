@@ -1,0 +1,21 @@
+{
+  "notebook_number": 50,
+  "section": "2B",
+  "section_name": "Side-Balance and Split Integrity Validation",
+  "run_timestamp_utc": "2026-07-30T08:32:26.513314+00:00",
+  "side_column": "current_side",
+  "search_target_column": "value_target",
+  "total_rows": 1060,
+  "total_scenarios": 106,
+  "full_player_rows": 332,
+  "full_opponent_rows": 728,
+  "full_player_fraction": 0.3132075471698113,
+  "full_opponent_fraction": 0.6867924528301886,
+  "maximum_allowed_side_fraction_drift": 0.12,
+  "train_validation_overlap": 0,
+  "train_test_overlap": 0,
+  "validation_test_overlap": 0,
+  "validation_checks_total": 39,
+  "validation_checks_passed": 39,
+  "validation_checks_failed": 0
+}

@@ -1,0 +1,2 @@
+model_source,model_type,has_predict,has_predict_proba,has_decision_function,has_feature_importances,has_coef,has_classes,class_count,classes
+globals.notebook53_legality_model,RandomForestClassifier,True,True,False,True,False,True,6,"['Ascension', 'Bind Down', 'Live Coal', 'Pass', 'Quick Attack', 'Tuck Tail']"

@@ -1,0 +1,8 @@
+check,passed,value,expected,details
+pdf_reader_loaded,True,pypdf,pypdf or PyPDF2,
+pdf_page_count_positive,True,1306,> 0,
+all_pages_accounted_for,True,1306,1306,
+identifier_summary_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+hybrid_summary_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+lookup_status_recognized,True,ALL_PROVISIONAL_IDENTIFIERS_RECOVERED,Recognized targeted PDF status,
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",

@@ -1,0 +1,47 @@
+scenario_id,acting_side,legal_moves,legal_move_count
+T52_S001__BASELINE,Opponent,"[""Ascension"", ""Quick Attack""]",2
+T52_S001__BASELINE,Player,"[""Bind Down""]",1
+T52_S001__ENERGY_PRESSURE,Opponent,"[""Ascension""]",1
+T52_S001__ENERGY_PRESSURE,Player,"[""Bind Down""]",1
+T52_S001__HP_PRESSURE,Opponent,"[""Ascension"", ""Quick Attack""]",2
+T52_S001__HP_PRESSURE,Player,"[""Bind Down""]",1
+T52_S002__BASELINE,Opponent,"[""Ascension"", ""Quick Attack""]",2
+T52_S002__BASELINE,Player,"[""Bind Down""]",1
+T52_S002__ENERGY_PRESSURE,Opponent,"[""Ascension""]",1
+T52_S002__ENERGY_PRESSURE,Player,"[""Bind Down""]",1
+T52_S002__HP_PRESSURE,Opponent,"[""Ascension"", ""Quick Attack""]",2
+T52_S002__HP_PRESSURE,Player,"[""Bind Down""]",1
+T52_S003__BASELINE,Opponent,"[""Ascension"", ""Quick Attack""]",2
+T52_S003__BASELINE,Player,"[""Live Coal""]",1
+T52_S003__ENERGY_PRESSURE,Opponent,"[""Ascension""]",1
+T52_S003__ENERGY_PRESSURE,Player,"[""Live Coal""]",1
+T52_S003__HP_PRESSURE,Opponent,"[""Ascension"", ""Quick Attack""]",2
+T52_S003__HP_PRESSURE,Player,"[""Live Coal""]",1
+T52_S004__BASELINE,Opponent,"[""Ascension"", ""Quick Attack""]",2
+T52_S004__BASELINE,Player,"[""Live Coal""]",1
+T52_S004__ENERGY_PRESSURE,Opponent,"[""Ascension""]",1
+T52_S004__ENERGY_PRESSURE,Player,"[""Live Coal""]",1
+T52_S004__HP_PRESSURE,Opponent,"[""Ascension"", ""Quick Attack""]",2
+T52_S004__HP_PRESSURE,Player,"[""Live Coal""]",1
+T52_S005__BASELINE,Opponent,"[""Bind Down""]",1
+T52_S005__BASELINE,Player,"[""Tuck Tail""]",1
+T52_S005__ENERGY_PRESSURE,Opponent,"[""Pass""]",1
+T52_S005__ENERGY_PRESSURE,Player,"[""Tuck Tail""]",1
+T52_S005__HP_PRESSURE,Opponent,"[""Bind Down""]",1
+T52_S005__HP_PRESSURE,Player,"[""Tuck Tail""]",1
+T52_S006__BASELINE,Opponent,"[""Bind Down""]",1
+T52_S006__BASELINE,Player,"[""Tuck Tail""]",1
+T52_S006__ENERGY_PRESSURE,Opponent,"[""Pass""]",1
+T52_S006__ENERGY_PRESSURE,Player,"[""Tuck Tail""]",1
+T52_S006__HP_PRESSURE,Opponent,"[""Bind Down""]",1
+T52_S006__HP_PRESSURE,Player,"[""Tuck Tail""]",1
+T52_S007__BASELINE,Opponent,"[""Ascension"", ""Quick Attack""]",2
+T52_S007__ENERGY_PRESSURE,Opponent,"[""Ascension""]",1
+T52_S007__ENERGY_PRESSURE,Player,"[""Bind Down""]",1
+T52_S007__HP_PRESSURE,Opponent,"[""Ascension"", ""Quick Attack""]",2
+T52_S008__BASELINE,Opponent,"[""Live Coal""]",1
+T52_S008__BASELINE,Player,"[""Ascension""]",1
+T52_S008__ENERGY_PRESSURE,Opponent,"[""Pass""]",1
+T52_S008__ENERGY_PRESSURE,Player,"[""Ascension""]",1
+T52_S008__HP_PRESSURE,Opponent,"[""Live Coal""]",1
+T52_S008__HP_PRESSURE,Player,"[""Ascension""]",1

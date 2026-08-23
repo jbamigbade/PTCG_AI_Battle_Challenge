@@ -1,0 +1,15 @@
+file_name,file_path,rows,columns,exists,size_bytes
+section5a_prediction_agreement.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section5a_prediction_agreement.csv,6,5,True,472
+section5b_probability_difference.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section5b_probability_difference.csv,6,7,True,902
+section5c_case_probability_drift.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section5c_case_probability_drift.csv,1104,9,True,185186
+section5d_pair_drift_summary.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section5d_pair_drift_summary.csv,6,10,True,1000
+section5d_variant_drift_summary.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section5d_variant_drift_summary.csv,24,7,True,2893
+section5d_side_drift_summary.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section5d_side_drift_summary.csv,12,6,True,1286
+section6a_action_probability_drift.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section6a_action_probability_drift.csv,36,10,True,4814
+section6b_signed_action_shift.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section6b_signed_action_shift.csv,36,14,True,4923
+section6b_probability_mass_validation.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section6b_probability_mass_validation.csv,6,4,True,573
+section7a_feature_inventory.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section7a_feature_inventory.csv,4,6,True,9502
+section7b_feature_removal_impact.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section7b_feature_removal_impact.csv,6,13,True,1111
+section7c_feature_family_summary.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section7c_feature_family_summary.csv,6,3,True,288
+section8a_executive_summary.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section8a_executive_summary.csv,12,2,True,527
+section8c_artifact_object_inventory.csv,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook56\section8c_artifact_object_inventory.csv,15,5,True,802

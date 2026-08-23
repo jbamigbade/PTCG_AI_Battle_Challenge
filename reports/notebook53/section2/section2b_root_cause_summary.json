@@ -1,0 +1,26 @@
+{
+  "status": "MASKING_ROOT_CAUSE_ANALYSIS_COMPLETE",
+  "total_decisions": 210,
+  "masking_changes": 151,
+  "masking_change_rate": 0.719047619047619,
+  "highest_masking_active_card": "Bulbasaur",
+  "highest_masking_active_card_rate": 1.0,
+  "lowest_raw_legality_active_card": "Bulbasaur",
+  "lowest_raw_legality_active_card_rate": 0.0,
+  "highest_masking_legal_move_set": "tuck tail",
+  "highest_masking_legal_move_set_rate": 1.0,
+  "single_action_masking_rate": 0.8074866310160428,
+  "multi_action_masking_rate": 0.0,
+  "strongest_root_cause_factor": "legal_move_signature",
+  "strongest_root_cause_spread": 1.0,
+  "diagnosis": "Raw policy predictions are insufficiently conditioned on active-card-specific legal-action availability.",
+  "recommended_feature_family": [
+    "active_card",
+    "legal_action_flags",
+    "legal_move_signature",
+    "single_legal_move",
+    "acting_energy",
+    "battle_phase"
+  ],
+  "next_stage": "LEGALITY_AWARE_FEATURE_ENGINEERING"
+}

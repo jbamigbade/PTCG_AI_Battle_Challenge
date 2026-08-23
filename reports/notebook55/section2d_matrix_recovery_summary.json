@@ -1,0 +1,25 @@
+{
+  "status": "TRAINING_VALIDATION_TEST_MATRICES_RECOVERED_AND_FROZEN",
+  "train_rows": 840,
+  "validation_rows": 110,
+  "test_rows": 110,
+  "baseline_feature_count": 64,
+  "model_classes": [
+    "Ascension",
+    "Bind Down",
+    "Live Coal",
+    "Pass",
+    "Quick Attack",
+    "Tuck Tail"
+  ],
+  "baseline_train_accuracy": 1.0,
+  "baseline_validation_accuracy": 1.0,
+  "baseline_test_accuracy": 1.0,
+  "fixed_training_rows": true,
+  "fixed_validation_rows": true,
+  "fixed_test_rows": true,
+  "fixed_estimator_parameters": true,
+  "matrix_hashes_created": true,
+  "strategy_matrix_views_created": true,
+  "next_stage": "TRAIN_CONTROLLED_FEATURE_ABLATION_MODELS"
+}

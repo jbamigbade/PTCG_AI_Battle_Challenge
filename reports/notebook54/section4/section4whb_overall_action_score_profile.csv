@@ -1,0 +1,3 @@
+action_name,average_probability,median_probability,minimum_probability,maximum_probability,score_advantage_cases
+Quick Attack,0.7474782608695653,0.714,0.696,0.812,184
+Ascension,0.16378260869565214,0.182,0.114,0.196,0

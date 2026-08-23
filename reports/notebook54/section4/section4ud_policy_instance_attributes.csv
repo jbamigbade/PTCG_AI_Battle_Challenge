@@ -1,0 +1,11 @@
+attribute_name,attribute_type,attribute_value
+agent_name,str,Notebook54InstrumentedLegalityAwarePolicy
+decision_history,list,[]
+direct_single_action_decisions,int,0
+fallback_decisions,int,0
+model,RandomForestClassifier,<RandomForestClassifier>
+model_decisions,int,0
+preprocessor,ColumnTransformer,<ColumnTransformer>
+selector_decisions,int,0
+side_mode,str,PRESERVE
+total_decisions,int,0

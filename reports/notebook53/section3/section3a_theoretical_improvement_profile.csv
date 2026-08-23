@@ -1,0 +1,13 @@
+metric,value
+total_decisions,210.0
+single_action_direct_decisions,187.0
+multi_action_model_decisions,23.0
+original_masking_count,151.0
+original_masking_rate,0.719047619047619
+post_routing_masking_count,0.0
+post_routing_masking_rate,0.0
+absolute_masking_reduction,0.719047619047619
+relative_masking_reduction,1.0
+legacy_selector_calls,0.0
+routed_legal_move_rate,1.0
+existing_selection_match_rate,1.0

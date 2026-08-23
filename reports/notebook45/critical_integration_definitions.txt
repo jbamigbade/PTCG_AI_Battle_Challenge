@@ -1,0 +1,477 @@
+
+################################################################################
+PokemonBattleAgent
+################################################################################
+class PokemonBattleAgent:
+    """Use an AdvancedSearchEngine to choose Pokémon actions."""
+
+    def __init__(self, engine: Any) -> None:
+        self.engine = engine
+
+    def choose_move(
+        self,
+        state: Any,
+        depth: int = 6,
+    ) -> AgentDecision:
+        """Search the current state and return the selected move."""
+
+        result = self.engine.search_depth(
+            state=state,
+            depth=depth,
+            clear_table=True,
+        )
+
+        if result.best_move is None:
+            raise RuntimeError(
+                "The search engine did not return a legal move."
+            )
+
+        return AgentDecision(
+            move=result.best_move,
+            score=result.score,
+            search_depth=result.completed_depth,
+            nodes=result.stats.nodes,
+            principal_variation=result.principal_variation,
+        )
+
+################################################################################
+get_legal_moves
+################################################################################
+def get_legal_moves(
+    pokemon_state: PokemonState,
+) -> List[Move]:
+    """
+    Return every attack currently usable by the selected Pokémon.
+
+    Saved attack dictionaries use:
+
+    - Move Name
+    - damage_numeric
+    - energy_cost
+    - Effect Explanation
+    """
+
+    legal_moves: List[Move] = []
+
+    attacks = pokemon_state.card.get("attacks", [])
+
+    if not isinstance(attacks, list):
+        return legal_moves
+
+    for attack in attacks:
+        if not isinstance(attack, dict):
+            continue
+
+        move_name = attack.get(
+            "Move Name",
+            "Unknown Move",
+        )
+
+        try:
+            damage = float(
+                attack.get("damage_numeric", 0) or 0
+            )
+        except (TypeError, ValueError):
+            damage = 0.0
+
+        try:
+            required_energy = int(
+                attack.get("energy_cost", 0) or 0
+            )
+        except (TypeError, ValueError):
+            required_energy = 0
+
+        usable = (
+            pokemon_state.attached_energy
+            >= required_energy
+        )
+
+        if usable:
+            legal_moves.append(
+                {
+                    "name": str(move_name),
+                    "damage": damage,
+                    "energy_cost": required_energy,
+                    "effect": attack.get(
+                        "Effect Explanation"
+                    ),
+                }
+            )
+
+    return legal_moves
+
+################################################################################
+get_current_legal_moves
+################################################################################
+def get_current_legal_moves(
+    battle_state: BattleState,
+) -> List[Move]:
+    """
+    Return legal moves for whichever side currently has the turn.
+
+    When no attack is available, return a Pass action so the search
+    tree can continue to the next turn.
+    """
+
+    active_pokemon = get_current_side_pokemon(
+        battle_state
+    )
+
+    legal_moves = get_legal_moves(
+        active_pokemon
+    )
+
+    if not legal_moves:
+        return [
+            {
+                "name": "Pass",
+                "damage": 0.0,
+                "energy_cost": 0,
+                "effect": "No legal attack was available.",
+            }
+        ]
+
+    return legal_moves
+
+################################################################################
+build_policy_state
+################################################################################
+def build_policy_state(
+    battle_state: BattleState,
+    legal_moves: list[Any],
+) -> dict[str, Any]:
+    current_side = (
+        battle_state.player
+        if battle_state.current_player == "Player"
+        else battle_state.opponent
+    )
+
+    opposing_side = (
+        battle_state.opponent
+        if battle_state.current_player == "Player"
+        else battle_state.player
+    )
+
+    current_hp = float(
+        current_side.active.current_hp
+    )
+
+    opponent_hp = float(
+        opposing_side.active.current_hp
+    )
+
+    move_scores: dict[str, float] = {}
+    heuristic_scores: dict[str, float] = {}
+    search_scores: dict[str, float] = {}
+    damage_scores: dict[str, float] = {}
+    knockout_scores: dict[str, float] = {}
+    defense_scores: dict[str, float] = {}
+    healing_scores: dict[str, float] = {}
+    move_lookup: dict[str, Any] = {}
+    policy_legal_moves: list[str] = []
+
+    for index, move in enumerate(legal_moves):
+        base_label = move_label(move)
+        label = base_label
+
+        if label in move_lookup:
+            label = f"{base_label} #{index + 1}"
+
+        move_lookup[label] = move
+        policy_legal_moves.append(label)
+
+        damage = numeric_move_value(
+            move,
+            "damage",
+            "damage_numeric",
+            default=0.0,
+        )
+
+        knockout_value = (
+            100.0
+            if damage >= opponent_hp
+            else 0.0
+        )
+
+        defensive_value = (
+            50.0
+            if "retreat" in label.lower()
+            else 0.0
+        )
+
+        healing_value = (
+            40.0
+            if "heal" in label.lower()
+            else 0.0
+        )
+
+        damage_scores[label] = damage
+        knockout_scores[label] = knockout_value
+        defense_scores[label] = defensive_value
+        healing_scores[label] = healing_value
+        move_scores[label] = damage
+
+        heuristic_scores[label] = (
+            damage
+            + knockout_value
+            + defensive_value * 0.25
+            + healing_value * 0.25
+        )
+
+        search_scores[label] = (
+            heuristic_scores[label]
+        )
+
+    return {
+        "turn_number": battle_state.turn_number,
+        "current_player": battle_state.current_player,
+        "current_hp": current_hp,
+        "opponent_hp": opponent_hp,
+        "current_hand_size": current_side.hand_size,
+        "opponent_hand_size": opposing_side.hand_size,
+        "current_prizes": (
+            current_side.prize_cards_remaining
+        ),
+        "opponent_prizes": (
+            opposing_side.prize_cards_remaining
+        ),
+        "policy_legal_moves": policy_legal_moves,
+        "move_lookup": move_lookup,
+        "move_scores": move_scores,
+        "heuristic_scores": heuristic_scores,
+        "search_scores": search_scores,
+        "damage_scores": damage_scores,
+        "knockout_scores": knockout_scores,
+        "defense_scores": defense_scores,
+        "healing_scores": healing_scores,
+    }
+
+################################################################################
+move_label
+################################################################################
+def move_label(
+    move: Any,
+) -> str:
+    if isinstance(move, dict):
+        return str(
+            move.get("name")
+            or move.get("Move Name")
+            or move
+        )
+
+    for attribute in [
+        "name",
+        "move_name",
+        "action",
+        "attack_name",
+    ]:
+        value = getattr(
+            move,
+            attribute,
+            None,
+        )
+
+        if value:
+            return str(value)
+
+    return str(move)
+
+################################################################################
+apply_move
+################################################################################
+def apply_move(
+    battle_state: BattleState,
+    move: Move,
+) -> BattleState:
+    """
+    Apply one move for the side identified by current_player.
+
+    A new BattleState is returned. The original state is unchanged.
+    """
+
+    future_state = deepcopy(battle_state)
+
+    if future_state.current_player == "Player":
+        acting_player = future_state.player
+        defending_player = future_state.opponent
+        next_player = "Opponent"
+
+    elif future_state.current_player == "Opponent":
+        acting_player = future_state.opponent
+        defending_player = future_state.player
+        next_player = "Player"
+
+    else:
+        raise ValueError(
+            "current_player must be 'Player' or 'Opponent'."
+        )
+
+    try:
+        damage = float(
+            move.get("damage", 0) or 0
+        )
+    except (TypeError, ValueError):
+        damage = 0.0
+
+    defending_player.active.current_hp = max(
+        0.0,
+        defending_player.active.current_hp - damage,
+    )
+
+    # Keep the separate damage field synchronized.
+    defending_player.active.damage += max(
+        0.0,
+        damage,
+    )
+
+    knockout_occurred = (
+        defending_player.active.current_hp <= 0
+    )
+
+    if knockout_occurred:
+        acting_player.prize_cards_remaining = max(
+            0,
+            acting_player.prize_cards_remaining - 1,
+        )
+
+    future_state.turn_number += 1
+    future_state.current_player = next_player
+
+    return future_state
+
+################################################################################
+simulate_ai_battle
+################################################################################
+def simulate_ai_battle(
+    initial_state: BattleState,
+    agent: PokemonBattleAgent,
+    search_depth: int = 6,
+    max_turns: int = 20,
+    verbose: bool = True,
+) -> BattleSimulationResult:
+    """Run a complete alternating AI-versus-AI battle."""
+
+    current_state = deepcopy(initial_state)
+    turn_records: list[BattleTurnRecord] = []
+
+    for _ in range(max_turns):
+        winner = determine_battle_winner(current_state)
+
+        if winner is not None:
+            return BattleSimulationResult(
+                final_state=current_state,
+                turns=turn_records,
+                winner=winner,
+                stop_reason="Battle reached a terminal state.",
+            )
+
+        acting_side = current_state.current_player
+
+        if acting_side == "Player":
+            active_pokemon = current_state.player.active
+        elif acting_side == "Opponent":
+            active_pokemon = current_state.opponent.active
+        else:
+            raise ValueError(
+                "current_player must be 'Player' or 'Opponent'."
+            )
+
+        decision = agent.choose_move(
+            state=current_state,
+            depth=search_depth,
+        )
+
+        next_state = apply_move(
+            current_state,
+            decision.move,
+        )
+
+        record = BattleTurnRecord(
+            turn_number=current_state.turn_number,
+            acting_side=acting_side,
+            pokemon_name=active_pokemon.card["name"],
+            move_name=decision.move["name"],
+            damage=float(
+                decision.move.get("damage", 0) or 0
+            ),
+            score=decision.score,
+            search_depth=decision.search_depth,
+            nodes=decision.nodes,
+            player_hp_after=(
+                next_state.player.active.current_hp
+            ),
+            opponent_hp_after=(
+                next_state.opponent.active.current_hp
+            ),
+            next_side=next_state.current_player,
+        )
+
+        turn_records.append(record)
+
+        if verbose:
+            print(
+                f"Turn {record.turn_number}: "
+                f"{record.acting_side} — "
+                f"{record.pokemon_name} used "
+                f"{record.move_name}"
+            )
+            print(
+                f"  Player HP: {record.player_hp_after} | "
+                f"Opponent HP: {record.opponent_hp_after}"
+            )
+
+        current_state = next_state
+
+    winner = determine_battle_winner(current_state)
+
+    return BattleSimulationResult(
+        final_state=current_state,
+        turns=turn_records,
+        winner=winner,
+        stop_reason=(
+            "Maximum turn limit reached."
+            if winner is None
+            else "Battle reached a terminal state."
+        ),
+    )
+
+################################################################################
+PokemonState
+################################################################################
+class PokemonState:
+    """Represents one Pokémon currently in play."""
+
+    card: dict
+    current_hp: float
+    attached_energy: int = 0
+    status: Optional[str] = None
+    damage: float = 0.0
+    is_active: bool = False
+
+################################################################################
+PlayerState
+################################################################################
+class PlayerState:
+    """Represents one player's current battlefield."""
+
+    active: PokemonState
+    bench: List[PokemonState]
+    prize_cards_remaining: int = 6
+    hand_size: int = 7
+
+################################################################################
+BattleState
+################################################################################
+class BattleState:
+    """Complete position used by minimax and advanced search."""
+
+    player: PlayerState
+    opponent: PlayerState
+    turn_number: int
+    current_player: str
+
+    def __post_init__(self) -> None:
+        if self.current_player not in {"Player", "Opponent"}:
+            raise ValueError(
+                "current_player must be 'Player' or 'Opponent'."
+            )

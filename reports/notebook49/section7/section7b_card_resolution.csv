@@ -1,0 +1,5 @@
+requested_card,resolved,match_type,candidate_count,matched_card_id,matched_card_name,attack_count,attack_names
+Bulbasaur,True,EXACT_CARD_NAME,1,650,Bulbasaur,1,"[""Bind Down""]"
+Charmander,True,EXACT_CARD_NAME,3,788,Charmander,1,"[""Live Coal""]"
+Eevee,True,EXACT_CARD_NAME,6,43,Eevee,2,"[""Ascension"", ""Quick Attack""]"
+Meowth,True,PARTIAL_MATCH,4,1071,Meowth ex,1,"[""Tuck Tail""]"

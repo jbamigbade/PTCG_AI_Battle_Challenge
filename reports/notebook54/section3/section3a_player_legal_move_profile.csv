@@ -1,0 +1,5 @@
+active_card,legal_moves,selected_move,decisions,scenarios,conditions,player_wins,player_losses,draws,average_confidence
+Meowth,"[""Tuck Tail""]",Tuck Tail,46,6,3,0,16,30,1.0
+Bulbasaur,"[""Bind Down""]",Bind Down,22,7,3,12,10,0,1.0
+Eevee,"[""Ascension""]",Ascension,20,3,3,0,5,15,1.0
+Charmander,"[""Live Coal""]",Live Coal,15,6,3,12,3,0,1.0

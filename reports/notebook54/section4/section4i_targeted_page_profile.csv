@@ -1,0 +1,10 @@
+page_number,expected_cards,cards_found_in_page_text,text_character_count,extraction_error_type,extraction_error_message
+2,"[""Eevee""]","[""Eevee""]",1094,,
+5,"[""Eevee""]","[""Eevee""]",1085,,
+8,"[""Eevee""]","[""Eevee""]",1089,,
+10,"[""Eevee""]","[""Eevee""]",1160,,
+15,"[""Meowth""]","[""Meowth""]",1209,,
+20,"[""Bulbasaur""]","[""Bulbasaur""]",1215,,
+24,"[""Charmander""]","[""Charmander""]",1075,,
+29,"[""Charmander""]","[""Charmander""]",1081,,
+33,"[""Meowth""]","[""Meowth""]",1174,,

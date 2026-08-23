@@ -1,0 +1,9 @@
+object,probable_global_dependencies
+RandomLegalMoveAgent,"['Any', 'RANDOM_SEED', 'TournamentDecision', 'ValueError', 'confidence', 'get_current_legal_moves', 'int', 'legal_moves', 'len', 'random', 'resolved_state', 'selected_move', 'str', 'tournament_move_name']"
+GreedyDamageAgent,"['Any', 'TournamentDecision', 'ValueError', 'get_current_legal_moves', 'int', 'legal_moves', 'len', 'max', 'maximum_damage', 'range', 'resolved_state', 'selected_index', 'selected_move', 'str', 'tournament_move_damage', 'tournament_move_name']"
+SearchAgentAdapter,"['AdvancedSearchEngine', 'Any', 'PokemonBattleAgent', 'SIMULATOR_SEARCH_DEPTH', 'ValueError', 'apply_move', 'current_player_adapter', 'evaluate_state_adapter', 'generate_moves_adapter', 'int', 'resolved_depth', 'resolved_state', 'str', 'terminal_state_adapter', 'tournament_move_key', 'tournament_state_key']"
+create_tournament_state,"['Any', 'BattleState', 'PlayerState', 'PokemonState', 'copy', 'dict', 'float', 'int', 'opponent_card_copy', 'player_card_copy', 'str']"
+run_tournament_match,"['Any', 'MAX_TURNS_PER_MATCH', 'SIMULATOR_SEARCH_DEPTH', 'TournamentMatchResult', 'VERBOSE_MATCHES', 'ValueError', 'agent_result', 'bool', 'create_tournament_state', 'decision', 'dict', 'elapsed_seconds', 'float', 'getattr', 'initial_state', 'int', 'len', 'resolved_state', 'selected_agent', 'side', 'side_agent', 'simulate_ai_battle', 'simulation', 'start_time', 'stop_reason', 'str', 'time', 'turns', 'type', 'winner']"
+create_random_baseline,"['RandomLegalMoveAgent', 'int']"
+create_greedy_baseline,['GreedyDamageAgent']
+create_search_baseline,"['SIMULATOR_SEARCH_DEPTH', 'SearchAgentAdapter']"

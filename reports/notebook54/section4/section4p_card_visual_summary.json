@@ -1,0 +1,25 @@
+{
+  "status": "MANUAL_CARD_IMAGE_DETAIL_REVIEW_COMPLETE",
+  "official_candidate_cards_reviewed": 8,
+  "printed_attacks_transcribed": 10,
+  "cards_with_unique_exact_attack_match": [
+    "Bulbasaur",
+    "Charmander",
+    "Eevee",
+    "Meowth"
+  ],
+  "cards_with_unique_partial_attack_match": [],
+  "cards_without_resolved_version": [],
+  "all_cards_have_unique_exact_attack_match": true,
+  "resolution_status": "ALL_SIMULATOR_CARD_VERSIONS_ATTACK_CONFIRMED",
+  "manual_review_source": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook54\\section4\\section4o_official_card_image_contact_sheet.png",
+  "manual_review_method": "HUMAN_VISUAL_TRANSCRIPTION_FROM_OFFICIAL_EXTRACTED_CARD_IMAGES",
+  "ocr_performed": false,
+  "pass_treated_as_printed_attack": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_expand_actions": true,
+  "validation_checks_passed": 10,
+  "validation_checks_failed": 0,
+  "next_stage": "VERIFIED_ACTION_CATALOG_CONSTRUCTION"
+}

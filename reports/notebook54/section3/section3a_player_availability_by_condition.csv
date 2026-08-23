@@ -1,0 +1,4 @@
+condition_id,player_decisions,scenarios,single_action_decisions,multi_action_decisions,average_legal_move_count,player_wins,player_losses,draws,choice_rate
+BASELINE,27,7,27,0,1.0,6,21,0,0.0
+ENERGY_PRESSURE,63,8,63,0,1.0,18,0,45,0.0
+HP_PRESSURE,13,7,13,0,1.0,0,13,0,0.0

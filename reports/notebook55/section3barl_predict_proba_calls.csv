@@ -1,0 +1,7 @@
+code_cell_index,line_number,model_expression,argument_expressions,complete_call
+70,239,section4wh_model,"[""transformed_features""]","section4wh_model.predict_proba(
+                transformed_features
+            )"
+84,188,section4wh_model,"[""transformed_features""]","section4wh_model.predict_proba(
+            transformed_features
+        )"

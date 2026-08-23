@@ -1,0 +1,23 @@
+{
+  "status": "BALANCED_MULTI_ACTION_SCENARIO_EXPANSION_COMPLETE",
+  "source_mirror_pairs": 23,
+  "expansion_variants": 4,
+  "expanded_mirror_pairs": 92,
+  "expanded_comparison_cases": 184,
+  "player_cases": 92,
+  "opponent_cases": 92,
+  "balanced_side_counts": true,
+  "all_pairs_context_matched": true,
+  "all_cases_multi_action_ready": true,
+  "legal_moves": [
+    "Ascension",
+    "Quick Attack"
+  ],
+  "minimum_acting_energy": 2.0,
+  "maximum_acting_energy": 3.0,
+  "evaluation_batches": 4,
+  "prior_side_bias_diagnosis": "NO_OPPORTUNITY_NORMALIZED_SIDE_BIAS_DETECTED",
+  "expansion_diagnosis": "BALANCED_MULTI_ACTION_EXPANSION_READY",
+  "expanded_evaluation_ready": true,
+  "next_stage": "EXPANDED_BALANCED_MULTI_ACTION_POLICY_EVALUATION"
+}

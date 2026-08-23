@@ -1,0 +1,4 @@
+source_name,join_keys,join_key_count,usable_for_decision_join
+replay_turns,"[""scenario_id"", ""condition_id"", ""turn_number""]",3,True
+replay_battles,"[""scenario_id"", ""condition_id""]",2,True
+benchmark_comparison,"[""scenario_id"", ""condition_id"", ""turn_number"", ""active_card""]",4,True

@@ -1,0 +1,12 @@
+match_id,baseline_name,evaluated_agent_side,starting_side,player_card_name,opponent_card_name,historical_winner,historical_evaluated_win,historical_evaluated_loss,controlled_winner,controlled_evaluated_win,controlled_evaluated_loss,controlled_turns,player_card_name_controlled,opponent_card_name_controlled,_merge,winner_changed,evaluated_outcome_changed,historical_win_to_controlled_loss,historical_loss_to_controlled_win
+17,Random Baseline,Player,Player,Eevee,Charmander,Player,1,0,Opponent,0,1,4,Eevee,Charmander,both,True,True,True,False
+29,Random Baseline,Player,Player,Eevee,Charmander,Player,1,0,Opponent,0,1,4,Eevee,Charmander,both,True,True,True,False
+47,Random Baseline,Player,Opponent,Eevee,Charmander,Player,1,0,Opponent,0,1,5,Eevee,Charmander,both,True,True,True,False
+105,Greedy Damage Baseline,Player,Player,Eevee,Charmander,Player,1,0,Opponent,0,1,4,Eevee,Charmander,both,True,True,True,False
+117,Greedy Damage Baseline,Player,Player,Eevee,Charmander,Player,1,0,Opponent,0,1,4,Eevee,Charmander,both,True,True,True,False
+129,Greedy Damage Baseline,Player,Player,Eevee,Charmander,Player,1,0,Opponent,0,1,4,Eevee,Charmander,both,True,True,True,False
+141,Greedy Damage Baseline,Player,Player,Eevee,Charmander,Player,1,0,Opponent,0,1,4,Eevee,Charmander,both,True,True,True,False
+153,Greedy Damage Baseline,Player,Player,Eevee,Charmander,Player,1,0,Opponent,0,1,4,Eevee,Charmander,both,True,True,True,False
+165,Greedy Damage Baseline,Player,Player,Eevee,Charmander,Player,1,0,Opponent,0,1,4,Eevee,Charmander,both,True,True,True,False
+177,Greedy Damage Baseline,Player,Player,Eevee,Charmander,Player,1,0,Opponent,0,1,4,Eevee,Charmander,both,True,True,True,False
+189,Greedy Damage Baseline,Player,Player,Eevee,Charmander,Player,1,0,Opponent,0,1,4,Eevee,Charmander,both,True,True,True,False

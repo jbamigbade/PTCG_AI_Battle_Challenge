@@ -1,0 +1,4 @@
+condition_id,decisions,notebook52_masking_changes,notebook53_masking_required,notebook53_legal_predictions,notebook53_selection_matches,notebook53_average_confidence,notebook52_masking_rate,notebook53_masking_rate,notebook53_raw_legality_rate,notebook53_selection_agreement_rate
+BASELINE,56,39,5,51,56,0.6886071428571429,0.6964285714285714,0.08928571428571429,0.9107142857142857,1.0
+ENERGY_PRESSURE,124,93,30,94,124,0.6808064516129032,0.75,0.24193548387096775,0.7580645161290323,1.0
+HP_PRESSURE,30,19,1,29,30,0.7148,0.6333333333333333,0.03333333333333333,0.9666666666666667,1.0

@@ -1,0 +1,7 @@
+stage,source,output,status
+1,src.training.replay.ReplayStep,Replay decision record,reused
+2,ObservationProvider,observation_vector,adapter interface ready
+3,ProductionReplayAdapter,"legal_moves, legal_move_mask, chosen_move_index",implemented
+4,RewardProvider,reward,adapter interface ready
+5,TransitionBuilder,16-field RLTransition,implemented
+6,BatchTransitionBuilder,RL transition dataset,implemented

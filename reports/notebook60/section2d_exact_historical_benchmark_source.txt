@@ -1,0 +1,1020 @@
+
+====================================================================================================
+TournamentDecision
+====================================================================================================
+
+class TournamentDecision:
+    move: Any
+    score: float
+    search_depth: int
+    nodes: int
+
+    confidence: float = 0.0
+    selected_move_name: str | None = None
+    fallback: bool = False
+    reason: str | None = None
+
+
+====================================================================================================
+tournament_move_name
+====================================================================================================
+
+def tournament_move_name(
+    move: Any,
+) -> str:
+    if isinstance(move, dict):
+        return str(
+            move.get("name")
+            or move.get("Move Name")
+            or move.get("move_name")
+            or move
+        )
+
+    for attribute_name in (
+        "name",
+        "move_name",
+        "attack_name",
+    ):
+        value = getattr(
+            move,
+            attribute_name,
+            None,
+        )
+
+        if value is not None:
+            return str(value)
+
+    return str(move)
+
+
+====================================================================================================
+tournament_move_damage
+====================================================================================================
+
+def tournament_move_damage(
+    move: Any,
+) -> float:
+    if isinstance(move, dict):
+        for key in (
+            "damage",
+            "damage_numeric",
+            "base_damage",
+        ):
+            if key in move:
+                try:
+                    return float(
+                        move[key] or 0.0
+                    )
+                except (
+                    TypeError,
+                    ValueError,
+                ):
+                    return 0.0
+
+        return 0.0
+
+    for attribute_name in (
+        "damage",
+        "damage_numeric",
+        "base_damage",
+    ):
+        value = getattr(
+            move,
+            attribute_name,
+            None,
+        )
+
+        if value is not None:
+            try:
+                return float(value or 0.0)
+            except (
+                TypeError,
+                ValueError,
+            ):
+                return 0.0
+
+    return 0.0
+
+
+====================================================================================================
+RandomLegalMoveAgent
+====================================================================================================
+
+class RandomLegalMoveAgent:
+    def __init__(
+        self,
+        seed: int = RANDOM_SEED,
+        name: str = "Random Legal Agent",
+    ) -> None:
+        self.name = name
+        self.random = random.Random(
+            seed
+        )
+        self.last_decision = None
+
+    def choose_move(
+        self,
+        state: Any = None,
+        depth: int | None = None,
+        battle_state: Any = None,
+        **kwargs: Any,
+    ) -> TournamentDecision:
+        resolved_state = (
+            state
+            if state is not None
+            else battle_state
+        )
+
+        if resolved_state is None:
+            raise ValueError(
+                "A battle state is required."
+            )
+
+        legal_moves = (
+            get_current_legal_moves(
+                resolved_state
+            )
+        )
+
+        if not legal_moves:
+            self.last_decision = (
+                TournamentDecision(
+                    move=None,
+                    score=0.0,
+                    search_depth=int(
+                        depth or 0
+                    ),
+                    nodes=0,
+                    confidence=0.0,
+                    selected_move_name=None,
+                    fallback=True,
+                    reason=
+                        "No legal moves available.",
+                )
+            )
+
+            return self.last_decision
+
+        selected_move = (
+            self.random.choice(
+                legal_moves
+            )
+        )
+
+        confidence = (
+            1.0
+            / len(legal_moves)
+        )
+
+        self.last_decision = (
+            TournamentDecision(
+                move=
+                    selected_move,
+
+                score=
+                    confidence,
+
+                search_depth=int(
+                    depth or 0
+                ),
+
+                nodes=0,
+
+                confidence=
+                    confidence,
+
+                selected_move_name=
+                    tournament_move_name(
+                        selected_move
+                    ),
+
+                fallback=False,
+            )
+        )
+
+        return self.last_decision
+
+    def get_last_decision(
+        self,
+    ) -> TournamentDecision | None:
+        return self.last_decision
+
+
+====================================================================================================
+GreedyDamageAgent
+====================================================================================================
+
+class GreedyDamageAgent:
+    def __init__(
+        self,
+        name: str = "Greedy Damage Agent",
+    ) -> None:
+        self.name = name
+        self.last_decision = None
+
+    def choose_move(
+        self,
+        state: Any = None,
+        depth: int | None = None,
+        battle_state: Any = None,
+        **kwargs: Any,
+    ) -> TournamentDecision:
+        resolved_state = (
+            state
+            if state is not None
+            else battle_state
+        )
+
+        if resolved_state is None:
+            raise ValueError(
+                "A battle state is required."
+            )
+
+        legal_moves = (
+            get_current_legal_moves(
+                resolved_state
+            )
+        )
+
+        if not legal_moves:
+            self.last_decision = (
+                TournamentDecision(
+                    move=None,
+                    score=0.0,
+                    search_depth=int(
+                        depth or 0
+                    ),
+                    nodes=0,
+                    confidence=0.0,
+                    selected_move_name=None,
+                    fallback=True,
+                    reason=
+                        "No legal moves available.",
+                )
+            )
+
+            return self.last_decision
+
+        selected_index = max(
+            range(
+                len(legal_moves)
+            ),
+            key=lambda index: (
+                tournament_move_damage(
+                    legal_moves[index]
+                ),
+                -index,
+            ),
+        )
+
+        selected_move = (
+            legal_moves[
+                selected_index
+            ]
+        )
+
+        maximum_damage = (
+            tournament_move_damage(
+                selected_move
+            )
+        )
+
+        self.last_decision = (
+            TournamentDecision(
+                move=
+                    selected_move,
+
+                score=
+                    maximum_damage,
+
+                search_depth=int(
+                    depth or 0
+                ),
+
+                nodes=0,
+
+                confidence=1.0,
+
+                selected_move_name=
+                    tournament_move_name(
+                        selected_move
+                    ),
+
+                fallback=False,
+            )
+        )
+
+        return self.last_decision
+
+    def get_last_decision(
+        self,
+    ) -> TournamentDecision | None:
+        return self.last_decision
+
+
+====================================================================================================
+tournament_state_key
+====================================================================================================
+
+def tournament_state_key(
+    state: BattleState,
+) -> tuple:
+    def pokemon_key(
+        pokemon: Any,
+    ) -> tuple | None:
+        if pokemon is None:
+            return None
+
+        card = getattr(
+            pokemon,
+            "card",
+            None,
+        )
+
+        if isinstance(
+            card,
+            dict,
+        ):
+            card_name = (
+                card.get("name")
+                or card.get("Name")
+                or ""
+            )
+        else:
+            card_name = getattr(
+                card,
+                "name",
+                "",
+            )
+
+        return (
+            str(card_name),
+
+            float(
+                getattr(
+                    pokemon,
+                    "current_hp",
+                    0.0,
+                )
+            ),
+
+            int(
+                getattr(
+                    pokemon,
+                    "attached_energy",
+                    0,
+                )
+            ),
+
+            str(
+                getattr(
+                    pokemon,
+                    "status",
+                    None,
+                )
+            ),
+
+            float(
+                getattr(
+                    pokemon,
+                    "damage",
+                    0.0,
+                )
+            ),
+
+            bool(
+                getattr(
+                    pokemon,
+                    "is_active",
+                    False,
+                )
+            ),
+        )
+
+    def player_key(
+        player: Any,
+    ) -> tuple | None:
+        if player is None:
+            return None
+
+        bench = getattr(
+            player,
+            "bench",
+            [],
+        )
+
+        return (
+            pokemon_key(
+                getattr(
+                    player,
+                    "active",
+                    None,
+                )
+            ),
+
+            tuple(
+                pokemon_key(pokemon)
+                for pokemon in bench
+            ),
+
+            int(
+                getattr(
+                    player,
+                    "prize_cards_remaining",
+                    0,
+                )
+            ),
+
+            int(
+                getattr(
+                    player,
+                    "hand_size",
+                    0,
+                )
+            ),
+        )
+
+    return (
+        player_key(
+            getattr(
+                state,
+                "player",
+                None,
+            )
+        ),
+
+        player_key(
+            getattr(
+                state,
+                "opponent",
+                None,
+            )
+        ),
+
+        int(
+            getattr(
+                state,
+                "turn_number",
+                0,
+            )
+        ),
+
+        str(
+            getattr(
+                state,
+                "current_player",
+                "",
+            )
+        ),
+    )
+
+
+====================================================================================================
+tournament_move_key
+====================================================================================================
+
+def tournament_move_key(
+    move: Any,
+) -> tuple:
+    if isinstance(
+        move,
+        dict,
+    ):
+        return (
+            tournament_move_name(
+                move
+            ),
+
+            tournament_move_damage(
+                move
+            ),
+
+            int(
+                move.get(
+                    "energy_cost",
+                    move.get(
+                        "cost",
+                        0,
+                    ),
+                )
+                or 0
+            ),
+
+            repr(
+                sorted(
+                    move.items(),
+                    key=lambda item:
+                        str(item[0]),
+                )
+            ),
+        )
+
+    return (
+        tournament_move_name(
+            move
+        ),
+
+        tournament_move_damage(
+            move
+        ),
+
+        int(
+            getattr(
+                move,
+                "energy_cost",
+                getattr(
+                    move,
+                    "cost",
+                    0,
+                ),
+            )
+            or 0
+        ),
+
+        repr(move),
+    )
+
+
+====================================================================================================
+SearchAgentAdapter
+====================================================================================================
+
+class SearchAgentAdapter:
+    def __init__(
+        self,
+        search_depth: int =
+            SIMULATOR_SEARCH_DEPTH,
+        name: str =
+            "Production Search Agent",
+    ) -> None:
+        self.name = name
+
+        self.search_depth = int(
+            search_depth
+        )
+
+        self.search_engine = (
+            AdvancedSearchEngine(
+                generate_moves=
+                    generate_moves_adapter,
+
+                apply_move=
+                    apply_move,
+
+                evaluate_state=
+                    evaluate_state_adapter,
+
+                is_terminal=
+                    terminal_state_adapter,
+
+                current_player=
+                    current_player_adapter,
+
+                state_key=
+                    tournament_state_key,
+
+                move_key=
+                    tournament_move_key,
+            )
+        )
+
+        self.inner_agent = (
+            PokemonBattleAgent(
+                engine=
+                    self.search_engine
+            )
+        )
+
+        self.last_decision = None
+
+    def choose_move(
+        self,
+        state: Any = None,
+        depth: int | None = None,
+        battle_state: Any = None,
+        **kwargs: Any,
+    ) -> Any:
+        resolved_state = (
+            state
+            if state is not None
+            else battle_state
+        )
+
+        if resolved_state is None:
+            raise ValueError(
+                "A battle state is required."
+            )
+
+        resolved_depth = int(
+            depth
+            if depth is not None
+            else self.search_depth
+        )
+
+        self.last_decision = (
+            self.inner_agent
+            .choose_move(
+                state=
+                    resolved_state,
+
+                depth=
+                    resolved_depth,
+            )
+        )
+
+        return self.last_decision
+
+    def get_last_decision(
+        self,
+    ) -> Any:
+        return self.last_decision
+
+
+====================================================================================================
+create_tournament_state
+====================================================================================================
+
+def create_tournament_state(
+    player_card: dict[str, Any],
+    opponent_card: dict[str, Any],
+    starting_side: str = "Player",
+    player_energy: int = 3,
+    opponent_energy: int = 3,
+) -> BattleState:
+    player_card_copy = copy.deepcopy(
+        player_card
+    )
+
+    opponent_card_copy = copy.deepcopy(
+        opponent_card
+    )
+
+    return BattleState(
+        player=PlayerState(
+            active=PokemonState(
+                card=
+                    player_card_copy,
+
+                current_hp=float(
+                    player_card_copy[
+                        "hp"
+                    ]
+                ),
+
+                attached_energy=int(
+                    player_energy
+                ),
+
+                status=None,
+
+                damage=0.0,
+
+                is_active=True,
+            ),
+
+            bench=[],
+
+            prize_cards_remaining=1,
+
+            hand_size=7,
+        ),
+
+        opponent=PlayerState(
+            active=PokemonState(
+                card=
+                    opponent_card_copy,
+
+                current_hp=float(
+                    opponent_card_copy[
+                        "hp"
+                    ]
+                ),
+
+                attached_energy=int(
+                    opponent_energy
+                ),
+
+                status=None,
+
+                damage=0.0,
+
+                is_active=True,
+            ),
+
+            bench=[],
+
+            prize_cards_remaining=1,
+
+            hand_size=7,
+        ),
+
+        turn_number=1,
+
+        current_player=
+            starting_side,
+    )
+
+
+====================================================================================================
+TournamentMatchResult
+====================================================================================================
+
+class TournamentMatchResult:
+    match_id: int
+    agent_name: str
+    baseline_name: str
+    player_card: str
+    opponent_card: str
+    starting_side: str
+    winner: str | None
+    turns: int
+    stop_reason: str | None
+    agent_result: float
+    fallback_count: int
+    elapsed_seconds: float
+
+
+====================================================================================================
+run_tournament_match
+====================================================================================================
+
+def run_tournament_match(
+    match_id: int,
+    evaluated_agent: Any,
+    baseline_agent: Any,
+    player_card: dict[str, Any],
+    opponent_card: dict[str, Any],
+    starting_side: str,
+    evaluated_agent_side: str,
+    max_turns: int =
+        MAX_TURNS_PER_MATCH,
+    search_depth: int =
+        SIMULATOR_SEARCH_DEPTH,
+    verbose: bool =
+        VERBOSE_MATCHES,
+) -> TournamentMatchResult:
+    if evaluated_agent_side not in {
+        "Player",
+        "Opponent",
+    }:
+        raise ValueError(
+            "evaluated_agent_side must be "
+            "'Player' or 'Opponent'."
+        )
+
+    initial_state = (
+        create_tournament_state(
+            player_card=
+                player_card,
+
+            opponent_card=
+                opponent_card,
+
+            starting_side=
+                starting_side,
+        )
+    )
+
+    class SideAwareAgent:
+        def __init__(
+            self,
+            player_agent: Any,
+            opponent_agent: Any,
+        ) -> None:
+            self.player_agent = (
+                player_agent
+            )
+
+            self.opponent_agent = (
+                opponent_agent
+            )
+
+            self.fallback_count = 0
+
+        def choose_move(
+            self,
+            state: Any = None,
+            depth: int | None = None,
+            battle_state: Any = None,
+            **kwargs: Any,
+        ) -> Any:
+            resolved_state = (
+                state
+                if state is not None
+                else battle_state
+            )
+
+            if resolved_state is None:
+                raise ValueError(
+                    "A battle state is required."
+                )
+
+            side = str(
+                resolved_state
+                .current_player
+            )
+
+            selected_agent = (
+                self.player_agent
+                if side == "Player"
+                else self.opponent_agent
+            )
+
+            decision = (
+                selected_agent
+                .choose_move(
+                    state=
+                        resolved_state,
+
+                    depth=
+                        depth,
+                )
+            )
+
+            if bool(
+                getattr(
+                    decision,
+                    "fallback",
+                    False,
+                )
+            ):
+                self.fallback_count += 1
+
+            return decision
+
+    if evaluated_agent_side == "Player":
+        side_agent = SideAwareAgent(
+            player_agent=
+                evaluated_agent,
+
+            opponent_agent=
+                baseline_agent,
+        )
+
+    else:
+        side_agent = SideAwareAgent(
+            player_agent=
+                baseline_agent,
+
+            opponent_agent=
+                evaluated_agent,
+        )
+
+    start_time = time.perf_counter()
+
+    simulation = simulate_ai_battle(
+        initial_state=
+            initial_state,
+
+        agent=
+            side_agent,
+
+        search_depth=
+            search_depth,
+
+        max_turns=
+            max_turns,
+
+        verbose=
+            verbose,
+    )
+
+    elapsed_seconds = (
+        time.perf_counter()
+        - start_time
+    )
+
+    winner = getattr(
+        simulation,
+        "winner",
+        None,
+    )
+
+    turns = getattr(
+        simulation,
+        "turns",
+        [],
+    )
+
+    stop_reason = getattr(
+        simulation,
+        "stop_reason",
+        None,
+    )
+
+    if winner is None:
+        agent_result = 0.5
+
+    elif winner == evaluated_agent_side:
+        agent_result = 1.0
+
+    else:
+        agent_result = 0.0
+
+    return TournamentMatchResult(
+        match_id=
+            int(match_id),
+
+        agent_name=
+            str(
+                getattr(
+                    evaluated_agent,
+                    "name",
+                    type(
+                        evaluated_agent
+                    ).__name__,
+                )
+            ),
+
+        baseline_name=
+            str(
+                getattr(
+                    baseline_agent,
+                    "name",
+                    type(
+                        baseline_agent
+                    ).__name__,
+                )
+            ),
+
+        player_card=
+            str(
+                player_card[
+                    "name"
+                ]
+            ),
+
+        opponent_card=
+            str(
+                opponent_card[
+                    "name"
+                ]
+            ),
+
+        starting_side=
+            str(
+                starting_side
+            ),
+
+        winner=winner,
+
+        turns=
+            len(turns),
+
+        stop_reason=
+            stop_reason,
+
+        agent_result=
+            float(
+                agent_result
+            ),
+
+        fallback_count=
+            int(
+                side_agent
+                .fallback_count
+            ),
+
+        elapsed_seconds=
+            float(
+                elapsed_seconds
+            ),
+    )
+
+
+====================================================================================================
+create_random_baseline
+====================================================================================================
+
+def create_random_baseline(
+    seed: int,
+) -> RandomLegalMoveAgent:
+    return RandomLegalMoveAgent(
+        seed=seed,
+        name="Random Baseline",
+    )
+
+
+====================================================================================================
+create_greedy_baseline
+====================================================================================================
+
+def create_greedy_baseline() -> GreedyDamageAgent:
+    return GreedyDamageAgent(
+        name="Greedy Damage Baseline",
+    )
+
+
+====================================================================================================
+create_search_baseline
+====================================================================================================
+
+def create_search_baseline() -> SearchAgentAdapter:
+    return SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            "Depth-6 Search Baseline",
+    )
+

@@ -1,0 +1,25 @@
+scenario_id,scenario_name,player_card,opponent_card,current_player,turn_number,player_hp,opponent_hp,player_energy,opponent_energy,player_prizes,opponent_prizes,player_hand,opponent_hand,base_scenario_id,base_scenario_name,condition_id,condition_name
+T52_S001__BASELINE,Bulbasaur_vs_Eevee_Player_Start__BASELINE,Bulbasaur,Eevee,Player,1,80.0,50.0,3,3,1,1,5,5,T52_S001,Bulbasaur_vs_Eevee_Player_Start,BASELINE,Baseline
+T52_S001__HP_PRESSURE,Bulbasaur_vs_Eevee_Player_Start__HP_PRESSURE,Bulbasaur,Eevee,Player,5,40.0,50.0,3,3,1,1,5,5,T52_S001,Bulbasaur_vs_Eevee_Player_Start,HP_PRESSURE,Player HP Pressure
+T52_S001__ENERGY_PRESSURE,Bulbasaur_vs_Eevee_Player_Start__ENERGY_PRESSURE,Bulbasaur,Eevee,Player,3,80.0,50.0,3,1,1,1,5,5,T52_S001,Bulbasaur_vs_Eevee_Player_Start,ENERGY_PRESSURE,Opponent Energy Pressure
+T52_S002__BASELINE,Bulbasaur_vs_Eevee_Opponent_Start__BASELINE,Bulbasaur,Eevee,Opponent,1,80.0,50.0,3,3,1,1,5,5,T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,BASELINE,Baseline
+T52_S002__HP_PRESSURE,Bulbasaur_vs_Eevee_Opponent_Start__HP_PRESSURE,Bulbasaur,Eevee,Opponent,5,40.0,50.0,3,3,1,1,5,5,T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,HP_PRESSURE,Player HP Pressure
+T52_S002__ENERGY_PRESSURE,Bulbasaur_vs_Eevee_Opponent_Start__ENERGY_PRESSURE,Bulbasaur,Eevee,Opponent,3,80.0,50.0,3,1,1,1,5,5,T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,ENERGY_PRESSURE,Opponent Energy Pressure
+T52_S003__BASELINE,Charmander_vs_Eevee_Player_Start__BASELINE,Charmander,Eevee,Player,1,80.0,50.0,3,3,1,1,5,5,T52_S003,Charmander_vs_Eevee_Player_Start,BASELINE,Baseline
+T52_S003__HP_PRESSURE,Charmander_vs_Eevee_Player_Start__HP_PRESSURE,Charmander,Eevee,Player,5,40.0,50.0,3,3,1,1,5,5,T52_S003,Charmander_vs_Eevee_Player_Start,HP_PRESSURE,Player HP Pressure
+T52_S003__ENERGY_PRESSURE,Charmander_vs_Eevee_Player_Start__ENERGY_PRESSURE,Charmander,Eevee,Player,3,80.0,50.0,3,1,1,1,5,5,T52_S003,Charmander_vs_Eevee_Player_Start,ENERGY_PRESSURE,Opponent Energy Pressure
+T52_S004__BASELINE,Charmander_vs_Eevee_Opponent_Start__BASELINE,Charmander,Eevee,Opponent,1,80.0,50.0,3,3,1,1,5,5,T52_S004,Charmander_vs_Eevee_Opponent_Start,BASELINE,Baseline
+T52_S004__HP_PRESSURE,Charmander_vs_Eevee_Opponent_Start__HP_PRESSURE,Charmander,Eevee,Opponent,5,40.0,50.0,3,3,1,1,5,5,T52_S004,Charmander_vs_Eevee_Opponent_Start,HP_PRESSURE,Player HP Pressure
+T52_S004__ENERGY_PRESSURE,Charmander_vs_Eevee_Opponent_Start__ENERGY_PRESSURE,Charmander,Eevee,Opponent,3,80.0,50.0,3,1,1,1,5,5,T52_S004,Charmander_vs_Eevee_Opponent_Start,ENERGY_PRESSURE,Opponent Energy Pressure
+T52_S005__BASELINE,Meowth_vs_Bulbasaur_Player_Start__BASELINE,Meowth,Bulbasaur,Player,1,60.0,80.0,2,2,2,2,4,4,T52_S005,Meowth_vs_Bulbasaur_Player_Start,BASELINE,Baseline
+T52_S005__HP_PRESSURE,Meowth_vs_Bulbasaur_Player_Start__HP_PRESSURE,Meowth,Bulbasaur,Player,5,30.0,80.0,2,2,2,2,4,4,T52_S005,Meowth_vs_Bulbasaur_Player_Start,HP_PRESSURE,Player HP Pressure
+T52_S005__ENERGY_PRESSURE,Meowth_vs_Bulbasaur_Player_Start__ENERGY_PRESSURE,Meowth,Bulbasaur,Player,3,60.0,80.0,2,0,2,2,4,4,T52_S005,Meowth_vs_Bulbasaur_Player_Start,ENERGY_PRESSURE,Opponent Energy Pressure
+T52_S006__BASELINE,Meowth_vs_Bulbasaur_Opponent_Start__BASELINE,Meowth,Bulbasaur,Opponent,1,60.0,80.0,2,2,2,2,4,4,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,BASELINE,Baseline
+T52_S006__HP_PRESSURE,Meowth_vs_Bulbasaur_Opponent_Start__HP_PRESSURE,Meowth,Bulbasaur,Opponent,5,30.0,80.0,2,2,2,2,4,4,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,HP_PRESSURE,Player HP Pressure
+T52_S006__ENERGY_PRESSURE,Meowth_vs_Bulbasaur_Opponent_Start__ENERGY_PRESSURE,Meowth,Bulbasaur,Opponent,3,60.0,80.0,2,0,2,2,4,4,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,ENERGY_PRESSURE,Opponent Energy Pressure
+T52_S007__BASELINE,Critical_HP_Bulbasaur_vs_Eevee__BASELINE,Bulbasaur,Eevee,Opponent,9,20.0,20.0,3,3,1,1,3,3,T52_S007,Critical_HP_Bulbasaur_vs_Eevee,BASELINE,Baseline
+T52_S007__HP_PRESSURE,Critical_HP_Bulbasaur_vs_Eevee__HP_PRESSURE,Bulbasaur,Eevee,Opponent,13,10.0,20.0,3,3,1,1,3,3,T52_S007,Critical_HP_Bulbasaur_vs_Eevee,HP_PRESSURE,Player HP Pressure
+T52_S007__ENERGY_PRESSURE,Critical_HP_Bulbasaur_vs_Eevee__ENERGY_PRESSURE,Bulbasaur,Eevee,Opponent,11,20.0,20.0,3,1,1,1,3,3,T52_S007,Critical_HP_Bulbasaur_vs_Eevee,ENERGY_PRESSURE,Opponent Energy Pressure
+T52_S008__BASELINE,Low_Energy_Eevee_vs_Charmander__BASELINE,Eevee,Charmander,Player,2,50.0,80.0,1,1,4,4,6,6,T52_S008,Low_Energy_Eevee_vs_Charmander,BASELINE,Baseline
+T52_S008__HP_PRESSURE,Low_Energy_Eevee_vs_Charmander__HP_PRESSURE,Eevee,Charmander,Player,6,25.0,80.0,1,1,4,4,6,6,T52_S008,Low_Energy_Eevee_vs_Charmander,HP_PRESSURE,Player HP Pressure
+T52_S008__ENERGY_PRESSURE,Low_Energy_Eevee_vs_Charmander__ENERGY_PRESSURE,Eevee,Charmander,Player,4,50.0,80.0,1,0,4,4,6,6,T52_S008,Low_Energy_Eevee_vs_Charmander,ENERGY_PRESSURE,Opponent Energy Pressure

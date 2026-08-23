@@ -1,0 +1,12 @@
+{
+  "status": "EXACT_NOTEBOOK54_SCENARIO_SOURCE_BINDING_RECOVERED",
+  "source_type": "RUNTIME",
+  "source_name": "masking_analysis_df",
+  "scenario_id_column": "scenario_id",
+  "scenario_source_rows": 210,
+  "unique_scenarios": 24,
+  "required_scenarios": 10,
+  "missing_scenarios": [],
+  "exact_builder_single_case_passed": true,
+  "next_stage": "RERUN_EXACT_PROBABILITY_RECONSTRUCTION_VALIDATION"
+}

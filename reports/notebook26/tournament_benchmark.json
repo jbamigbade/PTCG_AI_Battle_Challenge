@@ -1,0 +1,1424 @@
+{
+    "summary": {
+        "project": "PTCG AI Battle Challenge",
+        "team": "Team Jesus",
+        "scenario": "Synthetic Mega Lucario ex attack scenario",
+        "runs": 100,
+        "valid_decisions": 100,
+        "invalid_decisions": 0,
+        "accuracy": 1.0,
+        "agent_calls": 100,
+        "agent_errors": 0,
+        "agent_fallbacks": 0,
+        "latency": {
+            "runs": 100,
+            "minimum_seconds": 6.609999400097877e-05,
+            "maximum_seconds": 0.00034270000469405204,
+            "average_seconds": 7.434199927956797e-05,
+            "median_seconds": 6.834999658167362e-05,
+            "stdev_seconds": 3.1579005659529774e-05
+        }
+    },
+    "records": [
+        {
+            "run_number": 1,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 0.00022489999537356198,
+            "agent_calls": 1,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 2,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 9.590000263415277e-05,
+            "agent_calls": 2,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 3,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 8.100000559352338e-05,
+            "agent_calls": 3,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 4,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.6299998909235e-05,
+            "agent_calls": 4,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 5,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.359999290201813e-05,
+            "agent_calls": 5,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 6,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.259999983943999e-05,
+            "agent_calls": 6,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 7,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.270000060088933e-05,
+            "agent_calls": 7,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 8,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.350000669248402e-05,
+            "agent_calls": 8,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 9,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 8.830000297166407e-05,
+            "agent_calls": 9,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 10,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.249999907799065e-05,
+            "agent_calls": 10,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 11,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.150000601541251e-05,
+            "agent_calls": 11,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 12,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.249999907799065e-05,
+            "agent_calls": 12,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 13,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.960000609979033e-05,
+            "agent_calls": 13,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 14,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.090000144671649e-05,
+            "agent_calls": 14,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 15,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.049999840091914e-05,
+            "agent_calls": 15,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 16,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.010000990703702e-05,
+            "agent_calls": 16,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 17,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.059999916236848e-05,
+            "agent_calls": 17,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 18,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.189999450929463e-05,
+            "agent_calls": 18,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 19,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.080000068526715e-05,
+            "agent_calls": 19,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 20,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.919998850207776e-05,
+            "agent_calls": 20,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 21,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.029999687802047e-05,
+            "agent_calls": 21,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 22,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.20999960321933e-05,
+            "agent_calls": 22,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 23,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.159999222494662e-05,
+            "agent_calls": 23,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 24,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.939999002497643e-05,
+            "agent_calls": 24,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 25,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.809999467805028e-05,
+            "agent_calls": 25,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 26,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.969999230932444e-05,
+            "agent_calls": 26,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 27,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.140000525396317e-05,
+            "agent_calls": 27,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 28,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.819999543949962e-05,
+            "agent_calls": 28,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 29,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.710000161547214e-05,
+            "agent_calls": 29,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 30,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.829999620094895e-05,
+            "agent_calls": 30,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 31,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.78000069456175e-05,
+            "agent_calls": 31,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 32,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.799999391660094e-05,
+            "agent_calls": 32,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 33,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.730000313837081e-05,
+            "agent_calls": 33,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 34,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.799999391660094e-05,
+            "agent_calls": 34,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 35,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.790000770706683e-05,
+            "agent_calls": 35,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 36,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.850000110920519e-05,
+            "agent_calls": 36,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 37,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.839999696239829e-05,
+            "agent_calls": 37,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 38,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.710000161547214e-05,
+            "agent_calls": 38,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 39,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.810000922996551e-05,
+            "agent_calls": 39,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 40,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.679999933112413e-05,
+            "agent_calls": 40,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 41,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.019999611657113e-05,
+            "agent_calls": 41,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 42,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.78999931551516e-05,
+            "agent_calls": 42,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 43,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.78000069456175e-05,
+            "agent_calls": 43,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 44,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.760000542271882e-05,
+            "agent_calls": 44,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 45,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.820000999141484e-05,
+            "agent_calls": 45,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 46,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.70000008540228e-05,
+            "agent_calls": 46,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 47,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.690000009257346e-05,
+            "agent_calls": 47,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 48,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.749999010935426e-05,
+            "agent_calls": 48,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 49,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.86999992467463e-05,
+            "agent_calls": 49,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 50,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.78999931551516e-05,
+            "agent_calls": 50,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 51,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.069999992381781e-05,
+            "agent_calls": 51,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 52,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.839999696239829e-05,
+            "agent_calls": 52,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 53,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.720000237692147e-05,
+            "agent_calls": 53,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 54,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.760000542271882e-05,
+            "agent_calls": 54,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 55,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.659999780822545e-05,
+            "agent_calls": 55,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 56,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.75999908708036e-05,
+            "agent_calls": 56,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 57,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.649999704677612e-05,
+            "agent_calls": 57,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 58,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.849999772384763e-05,
+            "agent_calls": 58,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 59,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.720000237692147e-05,
+            "agent_calls": 59,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 60,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.669999856967479e-05,
+            "agent_calls": 60,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 61,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.620000931434333e-05,
+            "agent_calls": 61,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 62,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.980000762268901e-05,
+            "agent_calls": 62,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 63,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.720000237692147e-05,
+            "agent_calls": 63,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 64,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.46000005165115e-05,
+            "agent_calls": 64,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 65,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.750000466126949e-05,
+            "agent_calls": 65,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 66,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.839999696239829e-05,
+            "agent_calls": 66,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 67,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.669999856967479e-05,
+            "agent_calls": 67,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 68,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.690000009257346e-05,
+            "agent_calls": 68,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 69,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.769999163225293e-05,
+            "agent_calls": 69,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 70,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.679999933112413e-05,
+            "agent_calls": 70,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 71,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.149999146349728e-05,
+            "agent_calls": 71,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 72,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.719998782500625e-05,
+            "agent_calls": 72,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 73,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.669999856967479e-05,
+            "agent_calls": 73,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 74,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.649999704677612e-05,
+            "agent_calls": 74,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 75,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.78999931551516e-05,
+            "agent_calls": 75,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 76,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.609999400097877e-05,
+            "agent_calls": 76,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 77,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.669999856967479e-05,
+            "agent_calls": 77,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 78,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 0.00034270000469405204,
+            "agent_calls": 78,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 79,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 8.730000990908593e-05,
+            "agent_calls": 79,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 80,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.409999670926481e-05,
+            "agent_calls": 80,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 81,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.029999687802047e-05,
+            "agent_calls": 81,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 82,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.940000457689166e-05,
+            "agent_calls": 82,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 83,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.86999992467463e-05,
+            "agent_calls": 83,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 84,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.880000000819564e-05,
+            "agent_calls": 84,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 85,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.080000068526715e-05,
+            "agent_calls": 85,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 86,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.760000542271882e-05,
+            "agent_calls": 86,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 87,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.740000389982015e-05,
+            "agent_calls": 87,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 88,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.779999239370227e-05,
+            "agent_calls": 88,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 89,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.769999163225293e-05,
+            "agent_calls": 89,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 90,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.78999931551516e-05,
+            "agent_calls": 90,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 91,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.790000770706683e-05,
+            "agent_calls": 91,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 92,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.78000069456175e-05,
+            "agent_calls": 92,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 93,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.660000119358301e-05,
+            "agent_calls": 93,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 94,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.990000838413835e-05,
+            "agent_calls": 94,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 95,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.819999543949962e-05,
+            "agent_calls": 95,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 96,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 7.029999687802047e-05,
+            "agent_calls": 96,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 97,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.779999239370227e-05,
+            "agent_calls": 97,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 98,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 8.38999985717237e-05,
+            "agent_calls": 98,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 99,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.95999915478751e-05,
+            "agent_calls": 99,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        },
+        {
+            "run_number": 100,
+            "returned_action": [
+                0
+            ],
+            "expected_action": [
+                0
+            ],
+            "valid": true,
+            "elapsed_seconds": 6.75999908708036e-05,
+            "agent_calls": 100,
+            "agent_errors": 0,
+            "agent_fallbacks": 0
+        }
+    ]
+}

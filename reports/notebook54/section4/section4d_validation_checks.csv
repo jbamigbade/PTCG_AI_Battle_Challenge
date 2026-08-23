@@ -1,0 +1,8 @@
+check,passed,value,expected,details
+generated_sources_excluded,True,0,0,
+authoritative_sources_have_explicit_schema,True,0,0,
+all_extracted_cards_in_scope,True,[],"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+all_retained_move_names_plausible,True,0,0,
+no_numeric_vectors_retained,True,0,0,
+no_move_sets_modified,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",
+metadata_status_recognized,True,OFFICIAL_CARD_METADATA_NOT_FOUND,Recognized metadata-resolution status,

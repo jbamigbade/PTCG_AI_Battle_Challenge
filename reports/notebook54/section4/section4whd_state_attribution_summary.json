@@ -1,0 +1,16 @@
+{
+  "status": "STATE_LEVEL_SCORE_ATTRIBUTION_COMPLETE",
+  "states_analyzed": 184,
+  "mirror_pairs_analyzed": 92,
+  "global_top_feature": "categorical__legal_move_signature_ascension",
+  "global_top_feature_importance": 0.05628511779747432,
+  "all_states_quick_attack_score_advantage": true,
+  "average_quick_attack_minus_ascension": 0.5836956521739131,
+  "minimum_quick_attack_minus_ascension": 0.51,
+  "maximum_quick_attack_minus_ascension": 0.6880000000000001,
+  "legal_and_action_structure_importance": 0.6322723493278543,
+  "energy_damage_turn_side_importance": 0.22303781268725975,
+  "state_attribution_diagnosis": "LEGALITY_AND_ACTION_IDENTITY_FEATURE_DOMINANCE",
+  "state_attribution_diagnosis_text": "Quick Attack held a positive score advantage in every evaluated state. Aggregated legality, legal-signature, and action-compatibility features carried more global importance than energy, damage, turn, and side-state features, indicating reliance on action identity and legality structure.",
+  "next_stage": "COUNTERFACTUAL_LEGAL_SIGNATURE_AND_STATE_FEATURE_TESTING"
+}

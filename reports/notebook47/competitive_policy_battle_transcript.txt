@@ -1,0 +1,29 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Pikachu used Quick Attack
+  Damage: 30.0
+  Search score: 0.50
+  Search depth: 6
+  Nodes searched: 0
+  HP after move — Player: 120.0, Opponent: 70.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Charmander used Flame Tail
+  Damage: 50.0
+  Search score: 0.57
+  Search depth: 6
+  Nodes searched: 0
+  HP after move — Player: 70.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Pikachu used Thunderbolt
+  Damage: 90.0
+  Search score: 0.63
+  Search depth: 6
+  Nodes searched: 0
+  HP after move — Player: 70.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.

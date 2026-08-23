@@ -1,0 +1,13 @@
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 13: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state.

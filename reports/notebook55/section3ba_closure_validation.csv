@@ -1,0 +1,7 @@
+check,passed,value,expected
+all_184_cases_available,True,184,184
+all_case_ids_unique,True,184,184
+r0_frozen_baseline_reproduced,True,"{'prediction_agreement': 1.0, 'accuracy_difference': 0.0}","{'prediction_agreement': 1.0, 'accuracy_difference': 0.0}"
+four_models_ready,True,4,4
+canonical_signature_frozen,True,ascension | quick attack,ascension | quick attack
+next_notebook_resolved,True,NOTEBOOK_56_FOUR_MODEL_CONTROLLED_POLICY_EVALUATION,NOTEBOOK_56_FOUR_MODEL_CONTROLLED_POLICY_EVALUATION

@@ -1,0 +1,8 @@
+artifact_name,path,exists,is_file,size_bytes,nonempty
+overall_dashboard,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section6\section6a_overall_dashboard.csv,True,True,270,True
+card_leaderboard,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section6\section6a_card_leaderboard.csv,True,True,307,True
+condition_leaderboard,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section6\section6a_condition_leaderboard.csv,True,True,376,True
+action_distribution,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section6\section6a_action_distribution.csv,True,True,364,True
+confidence_metrics,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section6\section6a_confidence_metrics.csv,True,True,185,True
+masking_fallback_metrics,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section6\section6a_masking_fallback_metrics.csv,True,True,159,True
+dashboard_summary,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook52\section6\section6a_dashboard_summary.json,True,True,593,True

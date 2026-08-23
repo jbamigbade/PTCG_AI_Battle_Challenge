@@ -1,0 +1,354 @@
+{
+    "engine_parameters": [
+        {
+            "name": "generate_moves",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'GenerateMovesFn'",
+            "default": "<required>"
+        },
+        {
+            "name": "apply_move",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'ApplyMoveFn'",
+            "default": "<required>"
+        },
+        {
+            "name": "evaluate_state",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'EvaluateFn'",
+            "default": "<required>"
+        },
+        {
+            "name": "is_terminal",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'IsTerminalFn'",
+            "default": "<required>"
+        },
+        {
+            "name": "current_player",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'CurrentPlayerFn'",
+            "default": "<required>"
+        },
+        {
+            "name": "move_to_string",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'Optional[MoveToStringFn]'",
+            "default": "None"
+        },
+        {
+            "name": "state_key",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'Optional[Callable[[State], Hashable]]'",
+            "default": "None"
+        },
+        {
+            "name": "use_transposition_table",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'bool'",
+            "default": "True"
+        },
+        {
+            "name": "move_order_score",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'Optional[MoveOrderScoreFn]'",
+            "default": "None"
+        },
+        {
+            "name": "use_move_ordering",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'bool'",
+            "default": "True"
+        },
+        {
+            "name": "move_key",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'Optional[MoveKeyFn]'",
+            "default": "None"
+        },
+        {
+            "name": "use_killer_moves",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'bool'",
+            "default": "True"
+        },
+        {
+            "name": "killer_slots",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'int'",
+            "default": "2"
+        },
+        {
+            "name": "use_history_heuristic",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'bool'",
+            "default": "True"
+        },
+        {
+            "name": "history_multiplier",
+            "kind": "POSITIONAL_OR_KEYWORD",
+            "annotation": "'float'",
+            "default": "1000.0"
+        }
+    ],
+    "resolved_constructor_arguments": [
+        "generate_moves",
+        "apply_move",
+        "evaluate_state",
+        "is_terminal"
+    ],
+    "unresolved_required_parameters": [],
+    "objects": {
+        "AdvancedSearchEngine": {
+            "module": "src.engine.advanced_search",
+            "qualname": "AdvancedSearchEngine",
+            "signature": "(generate_moves: 'GenerateMovesFn', apply_move: 'ApplyMoveFn', evaluate_state: 'EvaluateFn', is_terminal: 'IsTerminalFn', current_player: 'CurrentPlayerFn', move_to_string: 'Optional[MoveToStringFn]' = None, state_key: 'Optional[Callable[[State], Hashable]]' = None, use_transposition_table: 'bool' = True, move_order_score: 'Optional[MoveOrderScoreFn]' = None, use_move_ordering: 'bool' = True, move_key: 'Optional[MoveKeyFn]' = None, use_killer_moves: 'bool' = True, killer_slots: 'int' = 2, use_history_heuristic: 'bool' = True, history_multiplier: 'float' = 1000.0) -> 'None'",
+            "type_hints": {},
+            "is_class": true,
+            "is_function": false,
+            "is_dataclass": false,
+            "dataclass_fields": [],
+            "source": "class AdvancedSearchEngine:\n    \"\"\"\n    Advanced adversarial search engine with:\n\n    - Alpha-beta pruning\n    - Iterative deepening\n    - Transposition tables\n    - Tactical move ordering\n    - Killer move heuristic\n    - History heuristic\n    - Principal-variation tracking\n    \"\"\"\n\n    def __init__(self, generate_moves: GenerateMovesFn, apply_move: ApplyMoveFn, evaluate_state: EvaluateFn, is_terminal: IsTerminalFn, current_player: CurrentPlayerFn, move_to_string: Optional[MoveToStringFn]=None, state_key: Optional[Callable[[State], Hashable]]=None, use_transposition_table: bool=True, move_order_score: Optional[MoveOrderScoreFn]=None, use_move_ordering: bool=True, move_key: Optional[MoveKeyFn]=None, use_killer_moves: bool=True, killer_slots: int=2, use_history_heuristic: bool=True, history_multiplier: float=1000.0) -> None:\n        self.generate_moves = generate_moves\n        self.apply_move = apply_move\n        self.evaluate_state = evaluate_state\n        self.is_terminal = is_terminal\n        self.current_player = current_player\n        self.move_to_string = move_to_string or str\n        self.state_key = state_key or self._default_state_key\n        self.use_transposition_table = use_transposition_table\n        self.move_order_score = move_order_score\n        self.use_move_ordering = use_move_ordering\n        self.move_key = move_key or self._default_move_key\n        self.use_killer_moves = use_killer_moves\n        if killer_slots < 1:\n            raise ValueError('killer_slots must be at least 1.')\n        self.killer_slots = killer_slots\n        self.use_history_heuristic = use_history_heuristic\n        if history_multiplier < 0:\n            raise ValueError('history_multiplier cannot be negative.')\n        self.history_multiplier = float(history_multiplier)\n        self.stats = SearchStats()\n        self.transposition_table: Dict[Hashable, TranspositionEntry] = {}\n        self.killer_moves: Dict[int, List[Move]] = {}\n        self.history_table: Dict[Tuple[Player, Hashable], int] = {}\n        self._principal_variation: List[Move] = []\n        self._previous_iteration_pv: List[Move] = []\n\n    @staticmethod\n    def _default_state_key(state: State) -> Hashable:\n        \"\"\"Use a hashable game state directly as its key.\"\"\"\n        try:\n            hash(state)\n        except TypeError as exc:\n            raise TypeError('The game state is not hashable. Supply a state_key function.') from exc\n        return state\n\n    @staticmethod\n    def _default_move_key(move: Move) -> Hashable:\n        \"\"\"Use a hashable move directly as its move key.\"\"\"\n        try:\n            hash(move)\n        except TypeError as exc:\n            raise TypeError('The move is not hashable. Supply a move_key function.') from exc\n        return move\n\n    def _validate_depth(self, depth: int) -> None:\n        \"\"\"Validate search depth.\"\"\"\n        if not isinstance(depth, int):\n            raise TypeError('Search depth must be an integer.')\n        if depth < 1:\n            raise ValueError('Search depth must be at least 1.')\n\n    def _safe_moves(self, state: State) -> List[Move]:\n        \"\"\"Return generated legal moves as a list.\"\"\"\n        moves = self.generate_moves(state)\n        if moves is None:\n            return []\n        return list(moves)\n\n    def clear_transposition_table(self) -> None:\n        \"\"\"Remove every cached game position.\"\"\"\n        self.transposition_table.clear()\n\n    def clear_killer_moves(self) -> None:\n        \"\"\"Remove all stored killer moves.\"\"\"\n        self.killer_moves.clear()\n\n    def clear_history_table(self) -> None:\n        \"\"\"Remove all accumulated history scores.\"\"\"\n        self.history_table.clear()\n\n    def transposition_table_size(self) -> int:\n        \"\"\"Return the number of cached positions.\"\"\"\n        return len(self.transposition_table)\n\n    def killer_move_count(self) -> int:\n        \"\"\"Return the total number of stored killer moves.\"\"\"\n        return sum((len(moves) for moves in self.killer_moves.values()))\n\n    def history_table_size(self) -> int:\n        \"\"\"Return the number of scored player-move pairs.\"\"\"\n        return len(self.history_table)\n\n    def _find_transposition_move(self, key: Hashable) -> Optional[Move]:\n        \"\"\"Return a cached best move, when available.\"\"\"\n        if not self.use_transposition_table:\n            return None\n        entry = self.transposition_table.get(key)\n        if entry is None:\n            return None\n        return entry.best_move\n\n    def _moves_equal(self, first: Optional[Move], second: Optional[Move]) -> bool:\n        \"\"\"Compare moves using their stable move keys.\"\"\"\n        if first is None or second is None:\n            return False\n        try:\n            return self.move_key(first) == self.move_key(second)\n        except Exception:\n            try:\n                return bool(first == second)\n            except Exception:\n                return False\n\n    def _is_killer_move(self, move: Move, ply: int) -> bool:\n        \"\"\"Return True when a move is stored as a killer at this ply.\"\"\"\n        if not self.use_killer_moves:\n            return False\n        killers = self.killer_moves.get(ply, [])\n        return any((self._moves_equal(move, killer) for killer in killers))\n\n    def _store_killer_move(self, move: Move, ply: int) -> None:\n        \"\"\"Store a cutoff-producing move at one ply.\"\"\"\n        if not self.use_killer_moves:\n            return\n        killers = self.killer_moves.setdefault(ply, [])\n        for existing in killers:\n            if self._moves_equal(move, existing):\n                return\n        killers.insert(0, move)\n        del killers[self.killer_slots:]\n        self.stats.killer_stores += 1\n\n    def _history_key(self, player: Player, move: Move) -> Tuple[Player, Hashable]:\n        \"\"\"Create a player-specific history-table key.\"\"\"\n        return (player, self.move_key(move))\n\n    def _get_history_score(self, player: Player, move: Move) -> int:\n        \"\"\"Return the accumulated history score for a move.\"\"\"\n        if not self.use_history_heuristic:\n            return 0\n        key = self._history_key(player, move)\n        return self.history_table.get(key, 0)\n\n    def _update_history(self, player: Player, move: Move, depth: int) -> None:\n        \"\"\"\n        Reward a move that caused an alpha-beta cutoff.\n\n        Standard history bonus:\n\n        depth\u00c2\u00b2\n        \"\"\"\n        if not self.use_history_heuristic:\n            return\n        safe_depth = max(1, int(depth))\n        bonus = safe_depth * safe_depth\n        key = self._history_key(player, move)\n        self.history_table[key] = self.history_table.get(key, 0) + bonus\n        self.stats.history_updates += 1\n\n    def get_history_score(self, player: Player, move: Move) -> int:\n        \"\"\"\n        Public helper for inspecting one move's history score.\n        \"\"\"\n        return self._get_history_score(player, move)\n\n    def get_history_entries(self) -> List[Tuple[Player, Hashable, int]]:\n        \"\"\"\n        Return history entries sorted from strongest to weakest.\n        \"\"\"\n        rows = [(player, move_key, score) for (player, move_key), score in self.history_table.items()]\n        rows.sort(key=lambda row: row[2], reverse=True)\n        return rows\n\n    def _order_moves(self, state: State, moves: Sequence[Move], root_player: Player, ply: int, transposition_move: Optional[Move]=None) -> List[Move]:\n        \"\"\"\n        Order moves using all enabled heuristics.\n\n        Priority:\n\n        1. Transposition-table move\n        2. Previous principal-variation move\n        3. Killer move\n        4. History heuristic\n        5. Pok\u00c3\u00a9mon-specific tactical score\n        \"\"\"\n        ordered_moves = list(moves)\n        if not self.use_move_ordering or len(ordered_moves) <= 1:\n            return ordered_moves\n        pv_move: Optional[Move] = None\n        if ply < len(self._previous_iteration_pv):\n            pv_move = self._previous_iteration_pv[ply]\n        player_to_move = self.current_player(state)\n        scored_moves = []\n        for original_index, move in enumerate(ordered_moves):\n            priority = 0.0\n            if self._moves_equal(move, transposition_move):\n                priority += 10000000000.0\n            if self._moves_equal(move, pv_move):\n                priority += 1000000000.0\n            if self._is_killer_move(move, ply):\n                priority += 100000000.0\n                self.stats.killer_hits += 1\n            history_score = self._get_history_score(player_to_move, move)\n            if history_score > 0:\n                priority += history_score * self.history_multiplier\n                self.stats.history_hits += 1\n            if self.move_order_score is not None:\n                priority += float(self.move_order_score(state, move, root_player))\n            scored_moves.append((priority, -original_index, move))\n        scored_moves.sort(key=lambda item: (item[0], item[1]), reverse=True)\n        return [move for _, _, move in scored_moves]\n\n    def preview_move_order(self, state: State, root_player: Optional[Player]=None, ply: int=0) -> List[Move]:\n        \"\"\"Return the order the engine would search.\"\"\"\n        if root_player is None:\n            root_player = self.current_player(state)\n        legal_moves = self._safe_moves(state)\n        key = self.state_key(state)\n        transposition_move = self._find_transposition_move(key)\n        return self._order_moves(state=state, moves=legal_moves, root_player=root_player, ply=ply, transposition_move=transposition_move)\n\n    def _probe_transposition_table(self, key: Hashable, depth: int, alpha: float, beta: float) -> Optional[Tuple[float, List[Move]]]:\n        \"\"\"Attempt to reuse a cached search result.\"\"\"\n        if not self.use_transposition_table:\n            return None\n        entry = self.transposition_table.get(key)\n        if entry is None:\n            return None\n        if entry.depth < depth:\n            return None\n        self.stats.transposition_hits += 1\n        if entry.bound_type is BoundType.EXACT:\n            return (entry.score, list(entry.principal_variation))\n        if entry.bound_type is BoundType.LOWER_BOUND and entry.score >= beta:\n            self.stats.transposition_cutoffs += 1\n            return (entry.score, list(entry.principal_variation))\n        if entry.bound_type is BoundType.UPPER_BOUND and entry.score <= alpha:\n            self.stats.transposition_cutoffs += 1\n            return (entry.score, list(entry.principal_variation))\n        return None\n\n    def _store_transposition_entry(self, key: Hashable, depth: int, score: float, alpha_original: float, beta_original: float, best_line: List[Move]) -> None:\n        \"\"\"Store a completed node result.\"\"\"\n        if not self.use_transposition_table:\n            return\n        if score <= alpha_original:\n            bound_type = BoundType.UPPER_BOUND\n        elif score >= beta_original:\n            bound_type = BoundType.LOWER_BOUND\n        else:\n            bound_type = BoundType.EXACT\n        existing = self.transposition_table.get(key)\n        if existing is not None and existing.depth > depth:\n            return\n        best_move = best_line[0] if best_line else None\n        self.transposition_table[key] = TranspositionEntry(depth=depth, score=score, bound_type=bound_type, best_move=best_move, principal_variation=list(best_line))\n        self.stats.transposition_stores += 1\n\n    def _alpha_beta(self, state: State, depth: int, alpha: float, beta: float, root_player: Player, ply: int=0) -> Tuple[float, List[Move]]:\n        \"\"\"\n        Search one position with all enabled optimizations.\n        \"\"\"\n        self.stats.nodes += 1\n        if self.is_terminal(state):\n            self.stats.terminal_nodes += 1\n            return (float(self.evaluate_state(state, root_player)), [])\n        if depth <= 0:\n            self.stats.leaf_nodes += 1\n            return (float(self.evaluate_state(state, root_player)), [])\n        key = self.state_key(state)\n        cached_result = self._probe_transposition_table(key=k\n... <source truncated>"
+        },
+        "AdvancedSearchEngine.search_depth": {
+            "module": "src.engine.advanced_search",
+            "qualname": "AdvancedSearchEngine.search_depth",
+            "signature": "(self, state: 'State', depth: 'int', root_player: 'Optional[Player]' = None, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'",
+            "type_hints": {
+                "_error": "NameError: name 'State' is not defined"
+            },
+            "is_class": false,
+            "is_function": true,
+            "is_dataclass": false,
+            "dataclass_fields": [],
+            "source": "    def search_depth(self, state: State, depth: int, root_player: Optional[Player]=None, clear_table: bool=True, clear_killers: bool=True, clear_history: bool=True) -> SearchResult:\n        \"\"\"Perform one fixed-depth search.\"\"\"\n        self._validate_depth(depth)\n        if root_player is None:\n            root_player = self.current_player(state)\n        self.stats.reset()\n        if clear_table:\n            self.clear_transposition_table()\n        if clear_killers:\n            self.clear_killer_moves()\n        if clear_history:\n            self.clear_history_table()\n        self._previous_iteration_pv = []\n        start_time = time.perf_counter()\n        score, principal_variation = self._alpha_beta(state=state, depth=depth, alpha=-math.inf, beta=math.inf, root_player=root_player, ply=0)\n        elapsed = time.perf_counter() - start_time\n        self.stats.completed_depth = depth\n        self.stats.elapsed_seconds = elapsed\n        self.stats.depth_nodes[depth] = self.stats.nodes\n        self.stats.depth_times[depth] = elapsed\n        best_move = principal_variation[0] if principal_variation else None\n        self._principal_variation = principal_variation\n        return SearchResult(best_move=best_move, score=score, completed_depth=depth, principal_variation=principal_variation, stats=self.stats)\n"
+        },
+        "SearchResult": {
+            "module": "src.engine.advanced_search",
+            "qualname": "SearchResult",
+            "signature": "(best_move: 'Optional[Move]', score: 'float', completed_depth: 'int', principal_variation: 'List[Move]' = <factory>, stats: 'SearchStats' = <factory>) -> None",
+            "type_hints": {
+                "_error": "NameError: name 'Move' is not defined"
+            },
+            "is_class": true,
+            "is_function": false,
+            "is_dataclass": true,
+            "dataclass_fields": [
+                {
+                    "name": "best_move",
+                    "type": "'Optional[Move]'",
+                    "default": "<required>"
+                },
+                {
+                    "name": "score",
+                    "type": "'float'",
+                    "default": "<required>"
+                },
+                {
+                    "name": "completed_depth",
+                    "type": "'int'",
+                    "default": "<required>"
+                },
+                {
+                    "name": "principal_variation",
+                    "type": "'List[Move]'",
+                    "default": "<default_factory>"
+                },
+                {
+                    "name": "stats",
+                    "type": "'SearchStats'",
+                    "default": "<default_factory>"
+                }
+            ],
+            "source": "@dataclass\nclass SearchResult:\n    \"\"\"\n    Final result returned by the search engine.\n    \"\"\"\n    best_move: Optional[Move]\n    score: float\n    completed_depth: int\n    principal_variation: List[Move] = field(default_factory=list)\n    stats: SearchStats = field(default_factory=SearchStats)\n\n    def as_dict(self, move_to_string: Optional[MoveToStringFn]=None) -> Dict[str, Any]:\n        \"\"\"\n        Convert the result into a display-friendly dictionary.\n        \"\"\"\n        formatter = move_to_string or str\n        return {'best_move': formatter(self.best_move) if self.best_move is not None else None, 'score': self.score, 'completed_depth': self.completed_depth, 'principal_variation': [formatter(move) for move in self.principal_variation], 'stats': self.stats.as_dict()}\n"
+        },
+        "SearchStats": {
+            "module": "src.engine.advanced_search",
+            "qualname": "SearchStats",
+            "signature": "(nodes: 'int' = 0, leaf_nodes: 'int' = 0, terminal_nodes: 'int' = 0, cutoffs: 'int' = 0, transposition_hits: 'int' = 0, transposition_stores: 'int' = 0, transposition_cutoffs: 'int' = 0, killer_hits: 'int' = 0, killer_stores: 'int' = 0, history_hits: 'int' = 0, history_updates: 'int' = 0, completed_depth: 'int' = 0, elapsed_seconds: 'float' = 0.0, depth_nodes: 'Dict[int, int]' = <factory>, depth_times: 'Dict[int, float]' = <factory>) -> None",
+            "type_hints": {
+                "nodes": "<class 'int'>",
+                "leaf_nodes": "<class 'int'>",
+                "terminal_nodes": "<class 'int'>",
+                "cutoffs": "<class 'int'>",
+                "transposition_hits": "<class 'int'>",
+                "transposition_stores": "<class 'int'>",
+                "transposition_cutoffs": "<class 'int'>",
+                "killer_hits": "<class 'int'>",
+                "killer_stores": "<class 'int'>",
+                "history_hits": "<class 'int'>",
+                "history_updates": "<class 'int'>",
+                "completed_depth": "<class 'int'>",
+                "elapsed_seconds": "<class 'float'>",
+                "depth_nodes": "typing.Dict[int, int]",
+                "depth_times": "typing.Dict[int, float]"
+            },
+            "is_class": true,
+            "is_function": false,
+            "is_dataclass": true,
+            "dataclass_fields": [
+                {
+                    "name": "nodes",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "leaf_nodes",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "terminal_nodes",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "cutoffs",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "transposition_hits",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "transposition_stores",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "transposition_cutoffs",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "killer_hits",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "killer_stores",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "history_hits",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "history_updates",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "completed_depth",
+                    "type": "'int'",
+                    "default": "0"
+                },
+                {
+                    "name": "elapsed_seconds",
+                    "type": "'float'",
+                    "default": "0.0"
+                },
+                {
+                    "name": "depth_nodes",
+                    "type": "'Dict[int, int]'",
+                    "default": "<default_factory>"
+                },
+                {
+                    "name": "depth_times",
+                    "type": "'Dict[int, float]'",
+                    "default": "<default_factory>"
+                }
+            ],
+            "source": "@dataclass\nclass SearchStats:\n    \"\"\"\n    Statistics collected during one complete search.\n    \"\"\"\n    nodes: int = 0\n    leaf_nodes: int = 0\n    terminal_nodes: int = 0\n    cutoffs: int = 0\n    transposition_hits: int = 0\n    transposition_stores: int = 0\n    transposition_cutoffs: int = 0\n    killer_hits: int = 0\n    killer_stores: int = 0\n    history_hits: int = 0\n    history_updates: int = 0\n    completed_depth: int = 0\n    elapsed_seconds: float = 0.0\n    depth_nodes: Dict[int, int] = field(default_factory=dict)\n    depth_times: Dict[int, float] = field(default_factory=dict)\n\n    def reset(self) -> None:\n        \"\"\"Reset every search statistic.\"\"\"\n        self.nodes = 0\n        self.leaf_nodes = 0\n        self.terminal_nodes = 0\n        self.cutoffs = 0\n        self.transposition_hits = 0\n        self.transposition_stores = 0\n        self.transposition_cutoffs = 0\n        self.killer_hits = 0\n        self.killer_stores = 0\n        self.history_hits = 0\n        self.history_updates = 0\n        self.completed_depth = 0\n        self.elapsed_seconds = 0.0\n        self.depth_nodes.clear()\n        self.depth_times.clear()\n\n    @property\n    def nodes_per_second(self) -> float:\n        \"\"\"Return average nodes searched per second.\"\"\"\n        if self.elapsed_seconds <= 0:\n            return 0.0\n        return self.nodes / self.elapsed_seconds\n\n    @property\n    def transposition_hit_rate(self) -> float:\n        \"\"\"Return transposition hits divided by searched nodes.\"\"\"\n        if self.nodes <= 0:\n            return 0.0\n        return self.transposition_hits / self.nodes\n\n    def as_dict(self) -> Dict[str, Any]:\n        \"\"\"Return statistics as a display-friendly dictionary.\"\"\"\n        return {'nodes': self.nodes, 'leaf_nodes': self.leaf_nodes, 'terminal_nodes': self.terminal_nodes, 'cutoffs': self.cutoffs, 'transposition_hits': self.transposition_hits, 'transposition_stores': self.transposition_stores, 'transposition_cutoffs': self.transposition_cutoffs, 'transposition_hit_rate': round(self.transposition_hit_rate, 6), 'killer_hits': self.killer_hits, 'killer_stores': self.killer_stores, 'history_hits': self.history_hits, 'history_updates': self.history_updates, 'completed_depth': self.completed_depth, 'elapsed_seconds': round(self.elapsed_seconds, 6), 'nodes_per_second': round(self.nodes_per_second, 2), 'depth_nodes': dict(self.depth_nodes), 'depth_times': {depth: round(seconds, 6) for depth, seconds in self.depth_times.items()}}\n"
+        },
+        "generate_moves_adapter": {
+            "module": "src.adapters",
+            "qualname": "generate_moves_adapter",
+            "signature": "(battle_state: 'BattleState')",
+            "type_hints": {
+                "battle_state": "<class 'src.battle_state.BattleState'>"
+            },
+            "is_class": false,
+            "is_function": true,
+            "is_dataclass": false,
+            "dataclass_fields": [],
+            "source": "def generate_moves_adapter(\n    battle_state: BattleState,\n):\n    \"\"\"Return legal moves for the current side.\"\"\"\n\n    return get_current_legal_moves(\n        battle_state\n    )\n"
+        },
+        "evaluate_state_adapter": {
+            "module": "src.adapters",
+            "qualname": "evaluate_state_adapter",
+            "signature": "(battle_state: 'BattleState', root_player: 'str') -> 'float'",
+            "type_hints": {
+                "battle_state": "<class 'src.battle_state.BattleState'>",
+                "root_player": "<class 'str'>",
+                "return": "<class 'float'>"
+            },
+            "is_class": false,
+            "is_function": true,
+            "is_dataclass": false,
+            "dataclass_fields": [],
+            "source": "def evaluate_state_adapter(\n    battle_state: BattleState,\n    root_player: str,\n) -> float:\n    \"\"\"\n    Evaluate from the requested root player's perspective.\n\n    evaluate_position evaluates from Player's perspective, so the\n    score is negated when Opponent is the search root.\n    \"\"\"\n\n    score = evaluate_position(\n        battle_state\n    )\n\n    if root_player == \"Player\":\n        return score\n\n    if root_player == \"Opponent\":\n        return -score\n\n    raise ValueError(\n        \"root_player must be 'Player' or 'Opponent'.\"\n    )\n"
+        },
+        "terminal_state_adapter": {
+            "module": "src.adapters",
+            "qualname": "terminal_state_adapter",
+            "signature": "(battle_state: 'BattleState') -> 'bool'",
+            "type_hints": {
+                "battle_state": "<class 'src.battle_state.BattleState'>",
+                "return": "<class 'bool'>"
+            },
+            "is_class": false,
+            "is_function": true,
+            "is_dataclass": false,
+            "dataclass_fields": [],
+            "source": "def terminal_state_adapter(\n    battle_state: BattleState,\n) -> bool:\n    \"\"\"Return True when the simplified battle has ended.\"\"\"\n\n    if (\n        battle_state.player.prize_cards_remaining <= 0\n        or battle_state.opponent.prize_cards_remaining <= 0\n    ):\n        return True\n\n    if (\n        battle_state.player.active.current_hp <= 0\n        or battle_state.opponent.active.current_hp <= 0\n    ):\n        return True\n\n    return False\n"
+        },
+        "apply_move": {
+            "module": "src.simulator",
+            "qualname": "apply_move",
+            "signature": "(battle_state: 'BattleState', move: 'Move') -> 'BattleState'",
+            "type_hints": {
+                "battle_state": "<class 'src.battle_state.BattleState'>",
+                "move": "typing.Dict[str, object]",
+                "return": "<class 'src.battle_state.BattleState'>"
+            },
+            "is_class": false,
+            "is_function": true,
+            "is_dataclass": false,
+            "dataclass_fields": [],
+            "source": "def apply_move(\n    battle_state: BattleState,\n    move: Move,\n) -> BattleState:\n    \"\"\"\n    Apply one move for the side identified by current_player.\n\n    A new BattleState is returned. The original state is unchanged.\n    \"\"\"\n\n    future_state = deepcopy(battle_state)\n\n    if future_state.current_player == \"Player\":\n        acting_player = future_state.player\n        defending_player = future_state.opponent\n        next_player = \"Opponent\"\n\n    elif future_state.current_player == \"Opponent\":\n        acting_player = future_state.opponent\n        defending_player = future_state.player\n        next_player = \"Player\"\n\n    else:\n        raise ValueError(\n            \"current_player must be 'Player' or 'Opponent'.\"\n        )\n\n    try:\n        damage = float(\n            move.get(\"damage\", 0) or 0\n        )\n    except (TypeError, ValueError):\n        damage = 0.0\n\n    defending_player.active.current_hp = max(\n        0.0,\n        defending_player.active.current_hp - damage,\n    )\n\n    # Keep the separate damage field synchronized.\n    defending_player.active.damage += max(\n        0.0,\n        damage,\n    )\n\n    knockout_occurred = (\n        defending_player.active.current_hp <= 0\n    )\n\n    if knockout_occurred:\n        acting_player.prize_cards_remaining = max(\n            0,\n            acting_player.prize_cards_remaining - 1,\n        )\n\n    future_state.turn_number += 1\n    future_state.current_player = next_player\n\n    return future_state\n"
+        },
+        "get_current_legal_moves": {
+            "module": "src.legal_moves",
+            "qualname": "get_current_legal_moves",
+            "signature": "(battle_state: 'BattleState') -> 'List[Move]'",
+            "type_hints": {
+                "battle_state": "<class 'src.battle_state.BattleState'>",
+                "return": "typing.List[typing.Dict[str, object]]"
+            },
+            "is_class": false,
+            "is_function": true,
+            "is_dataclass": false,
+            "dataclass_fields": [],
+            "source": "def get_current_legal_moves(\n    battle_state: BattleState,\n) -> List[Move]:\n    \"\"\"\n    Return legal moves for whichever side currently has the turn.\n\n    When no attack is available, return a Pass action so the search\n    tree can continue to the next turn.\n    \"\"\"\n\n    active_pokemon = get_current_side_pokemon(\n        battle_state\n    )\n\n    legal_moves = get_legal_moves(\n        active_pokemon\n    )\n\n    if not legal_moves:\n        return [\n            {\n                \"name\": \"Pass\",\n                \"damage\": 0.0,\n                \"energy_cost\": 0,\n                \"effect\": \"No legal attack was available.\",\n            }\n        ]\n\n    return legal_moves\n"
+        },
+        "get_legal_moves": {
+            "module": "src.legal_moves",
+            "qualname": "get_legal_moves",
+            "signature": "(pokemon_state: 'PokemonState') -> 'List[Move]'",
+            "type_hints": {
+                "pokemon_state": "<class 'src.battle_state.PokemonState'>",
+                "return": "typing.List[typing.Dict[str, object]]"
+            },
+            "is_class": false,
+            "is_function": true,
+            "is_dataclass": false,
+            "dataclass_fields": [],
+            "source": "def get_legal_moves(\n    pokemon_state: PokemonState,\n) -> List[Move]:\n    \"\"\"\n    Return every attack currently usable by the selected Pok\u00e9mon.\n\n    Saved attack dictionaries use:\n\n    - Move Name\n    - damage_numeric\n    - energy_cost\n    - Effect Explanation\n    \"\"\"\n\n    legal_moves: List[Move] = []\n\n    attacks = pokemon_state.card.get(\"attacks\", [])\n\n    if not isinstance(attacks, list):\n        return legal_moves\n\n    for attack in attacks:\n        if not isinstance(attack, dict):\n            continue\n\n        move_name = attack.get(\n            \"Move Name\",\n            \"Unknown Move\",\n        )\n\n        try:\n            damage = float(\n                attack.get(\"damage_numeric\", 0) or 0\n            )\n        except (TypeError, ValueError):\n            damage = 0.0\n\n        try:\n            required_energy = int(\n                attack.get(\"energy_cost\", 0) or 0\n            )\n        except (TypeError, ValueError):\n            required_energy = 0\n\n        usable = (\n            pokemon_state.attached_energy\n            >= required_energy\n        )\n\n        if usable:\n            legal_moves.append(\n                {\n                    \"name\": str(move_name),\n                    \"damage\": damage,\n                    \"energy_cost\": required_energy,\n                    \"effect\": attack.get(\n                        \"Effect Explanation\"\n                    ),\n                }\n            )\n\n    return legal_moves\n"
+        }
+    }
+}

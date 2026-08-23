@@ -1,0 +1,5 @@
+check,passed,value,expected
+reference_inventory_created,True,127,DataFrame created
+image_summary_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']"
+no_move_sets_modified,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"
+reference_status_recognized,True,REFERENCE_PDFS_AVAILABLE,Recognized reference-discovery status

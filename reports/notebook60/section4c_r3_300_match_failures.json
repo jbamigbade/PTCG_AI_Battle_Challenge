@@ -1,0 +1,1002 @@
+[
+  {
+    "match_id": 1,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 2,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 3,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 4,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 5,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 6,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 7,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 8,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 9,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 10,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 11,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 12,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 13,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 14,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 15,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 16,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 17,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 18,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 19,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 20,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 21,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 22,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 23,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 24,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 25,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 26,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 27,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 28,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 29,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 30,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 31,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 32,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 33,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 34,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 35,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 36,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 37,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 38,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 39,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 40,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 41,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 42,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 43,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 44,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 45,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 46,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 47,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 48,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 49,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 50,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 51,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 52,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 53,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 54,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 55,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 56,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 57,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 58,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 59,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 60,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 61,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 62,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 63,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 64,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 65,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 66,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 67,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 68,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 69,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 70,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 71,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 72,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 73,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 74,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 75,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 76,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 77,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 78,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 79,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 80,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 81,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 82,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 83,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 84,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 85,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 86,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 87,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 88,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 89,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 90,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 91,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 92,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 93,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 94,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 95,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Eevee",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 96,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Meowth",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 97,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Player",
+    "player_card": "Pikachu",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 98,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Player",
+    "player_card": "Charmander",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 99,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Player",
+    "starting_side": "Opponent",
+    "player_card": "Squirtle",
+    "opponent_card": "Charmander",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  },
+  {
+    "match_id": 100,
+    "baseline_name": "Random Baseline",
+    "evaluated_agent_side": "Opponent",
+    "starting_side": "Opponent",
+    "player_card": "Bulbasaur",
+    "opponent_card": "Eevee",
+    "error_type": "NameError",
+    "error": "name 'RANDOM_SEED' is not defined"
+  }
+]

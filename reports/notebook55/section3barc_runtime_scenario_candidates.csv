@@ -1,0 +1,48 @@
+source_type,candidate_name,rows,columns,scenario_id_column,unique_scenarios,build_test_passed,build_test_error
+RUNTIME,notebook52_battle_results_df,24,36,scenario_id,24,True,
+RUNTIME,notebook52_policy_history_df,210,14,scenario_id,24,False,KeyError: 'player_card'
+RUNTIME,masking_analysis_df,210,37,scenario_id,24,True,
+RUNTIME,battle_metadata_df,24,11,scenario_id,24,True,
+RUNTIME,masked_decisions_df,151,37,scenario_id,22,True,
+RUNTIME,direct_decisions_df,59,37,scenario_id,18,True,
+RUNTIME,fallback_decisions_df,1,37,scenario_id,1,True,
+RUNTIME,illegal_raw_predictions_df,151,37,scenario_id,22,True,
+RUNTIME,masking_export_df,210,37,scenario_id,24,True,
+RUNTIME,root_cause_df,210,53,scenario_id,24,True,
+RUNTIME,card_group_df,38,66,source_scenario_id,19,False,KeyError: 'scenario_id'
+RUNTIME,root_cause_export_df,210,53,scenario_id,24,True,
+RUNTIME,routing_analysis_df,210,71,scenario_id,24,True,
+RUNTIME,routing_export_df,210,71,scenario_id,24,True,
+RUNTIME,legality_feature_df,210,92,scenario_id,24,True,
+RUNTIME,legality_metadata_df,210,15,scenario_id,24,False,KeyError: 'starting_player_hp'
+RUNTIME,candidate_df,210,14,scenario_id,24,False,KeyError: 'player_card'
+RUNTIME,source_policy_dataset_df,1060,37,source_scenario_id,106,False,KeyError: 'scenario_id'
+RUNTIME,legality_training_source_df,1060,72,source_scenario_id,106,False,KeyError: 'scenario_id'
+RUNTIME,legality_training_metadata_df,1060,12,source_scenario_id,106,False,KeyError: 'scenario_id'
+RUNTIME,legality_training_export_df,1060,72,source_scenario_id,106,False,KeyError: 'scenario_id'
+RUNTIME,metadata_train,840,12,source_scenario_id,84,False,KeyError: 'scenario_id'
+RUNTIME,metadata_validation,110,12,source_scenario_id,11,False,KeyError: 'scenario_id'
+RUNTIME,metadata_test,110,12,source_scenario_id,11,False,KeyError: 'scenario_id'
+RUNTIME,split_assignment_df,1060,6,source_scenario_id,106,False,KeyError: 'scenario_id'
+RUNTIME,split_assignment_export_df,1060,6,source_scenario_id,106,False,KeyError: 'scenario_id'
+RUNTIME,train_prediction_records_df,840,25,source_scenario_id,84,False,KeyError: 'scenario_id'
+RUNTIME,validation_prediction_records_df,110,25,source_scenario_id,11,False,KeyError: 'scenario_id'
+RUNTIME,test_prediction_records_df,110,25,source_scenario_id,11,False,KeyError: 'scenario_id'
+RUNTIME,notebook53_benchmark_source_df,210,95,scenario_id,24,True,
+RUNTIME,section6b_benchmark_comparison_df,210,21,scenario_id,24,False,KeyError: 'player_card'
+RUNTIME,group_df,2,14,scenario_id,1,False,KeyError: 'player_card'
+RUNTIME,section6e_recovered_legal_sets_df,46,4,scenario_id,24,False,KeyError: 'player_card'
+RUNTIME,section6e_battle_results_df,24,22,scenario_id,24,False,KeyError: 'starting_player_hp'
+RUNTIME,section6e_turn_results_df,210,14,scenario_id,24,False,KeyError: 'player_card'
+RUNTIME,section6e_policy_history_df,210,14,scenario_id,24,False,KeyError: 'player_card'
+RUNTIME,section6e_transcripts_df,24,3,scenario_id,24,False,KeyError: 'player_card'
+RUNTIME,section6e_recovered_legal_sets_export_df,46,4,scenario_id,24,False,KeyError: 'player_card'
+RUNTIME,section6e_policy_history_export_df,210,14,scenario_id,24,False,KeyError: 'player_card'
+RUNTIME,section3ba_expanded_case_results_df,184,34,source_scenario_id,10,False,KeyError: 'scenario_id'
+RUNTIME,section3ba_expanded_paired_results_df,92,30,source_scenario_id,10,False,KeyError: 'scenario_id'
+RUNTIME,section3ba_score_cases_df,184,22,source_scenario_id,10,False,KeyError: 'scenario_id'
+RUNTIME,section3ba_counterfactual_cases_df,1656,31,source_scenario_id,10,False,KeyError: 'scenario_id'
+RUNTIME,dataframe_value,1656,31,source_scenario_id,10,False,KeyError: 'scenario_id'
+RUNTIME,section3barc_selected_source_df,210,37,scenario_id,24,True,
+RUNTIME,section4vb_scenario_source_df,24,36,scenario_id,24,True,
+RUNTIME,section3barh_case_lookup_df,184,34,source_scenario_id,10,False,KeyError: 'scenario_id'

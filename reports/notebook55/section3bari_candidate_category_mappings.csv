@@ -1,0 +1,3 @@
+raw_feature,current_value,proposed_learned_value,mapping_available,affected_rows
+opponent_card,Bulbasaur,,False,56
+legal_move_signature,Ascension | Quick Attack,ascension | quick attack,True,184

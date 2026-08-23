@@ -1,0 +1,54 @@
+﻿{
+    "project":  "The Pokémon Company - PTCG AI Battle Challenge Simulation",
+    "certification_stage":  "FINAL_COMPETITION_CERTIFICATION",
+    "certification_date":  "2026-08-23T06:05:41-04:00",
+    "submission_zip":  "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\ptcg_final_agent.zip",
+    "submission_zip_sha256":  "36e0cc17e421ed8f8e1ca9dd1ec78c2a3f7f73802f090fc91b690a1469ef6a7f",
+    "main_py_sha256":  "e328508c39b6c48411f46ad43f5ec1ffe34f54f740aed24389f88d8166dc97cd",
+    "deck_csv_sha256":  "b4464eb525a25e6598a972d00efc5e5b5156372e77f51853f4076d8ebb34fd7d",
+    "certified_rf_sha256":  "615baf3d5725ccca0c1c94e37f62fb24a68613248e167bb566bef4a6d50f2581",
+    "deployment_ppo_sha256":  "4e6a19861eb5be5f61bc86508dff07dd838a42df9350355d95e8f2dc436ae787",
+    "packaging_validation":  {
+                                 "zip_extractable":  true,
+                                 "main_import_pass":  true,
+                                 "agent_callable":  true,
+                                 "official_cg_packaged":  true,
+                                 "deck_present":  true,
+                                 "deck_cardinality":  60,
+                                 "official_card_id_validation":  true,
+                                 "submission_cache_clean":  true
+                             },
+    "official_engine_validation":  {
+                                       "battle_start_pass":  true,
+                                       "error_player":  -1,
+                                       "error_type":  0,
+                                       "single_real_decision_pass":  true,
+                                       "twenty_five_decision_rollout_pass":  true,
+                                       "twenty_five_decisions_accepted":  25,
+                                       "full_battle_terminal_pass":  true,
+                                       "full_battle_decisions":  127,
+                                       "full_battle_decisions_accepted":  127,
+                                       "full_battle_final_turn":  13,
+                                       "full_battle_terminal_result":  1,
+                                       "all_agent_decisions_legal":  true,
+                                       "all_official_engine_acceptances_pass":  true,
+                                       "runtime_exception_count":  0
+                                   },
+    "integrity":  {
+                      "submission_zip_unchanged_after_runtime_validation":  true,
+                      "main_py_unchanged":  true,
+                      "certified_rf_unchanged":  true,
+                      "deployment_ppo_unchanged":  true,
+                      "deck_csv_unchanged":  true,
+                      "training_performed_during_final_review":  false,
+                      "retraining_performed_during_final_review":  false,
+                      "model_mutation_performed":  false
+                  },
+    "claim_boundary":  {
+                           "runtime_compatibility_certified":  true,
+                           "official_engine_terminal_execution_certified":  true,
+                           "competitive_superiority_claimed":  false,
+                           "note":  "Final review certifies package integrity, official-engine compatibility, legal-action behavior, and full terminal execution. It does not by itself establish competitive superiority."
+                       },
+    "final_status":  "READY_FOR_KAGGLE_SUBMISSION"
+}

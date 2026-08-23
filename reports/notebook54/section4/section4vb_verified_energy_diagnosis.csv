@@ -1,0 +1,2 @@
+instrumented_decisions,acting_energy_observation_rate,complete_energy_observation_rate,verified_energy_ready_actions,confirmed_insufficient_energy_actions,energy_diagnosis,energy_diagnosis_text,recommended_next_stage
+180,1.0,1.0,150,0,NO_ENERGY_COST_ENFORCEMENT_INCONSISTENCY,Every instrumented printed attack with a verified cost was selected only when the acting Pokémon had sufficient recorded energy.,PLAYER_ACTION_CHOICE_ASYMMETRY_ANALYSIS

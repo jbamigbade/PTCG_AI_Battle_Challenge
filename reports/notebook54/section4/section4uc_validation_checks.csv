@@ -1,0 +1,9 @@
+check,passed,value,expected
+policy_class_reconstructed,True,type,type
+runner_class_reconstructed,True,type,type
+target_definition_count_valid,True,2,2
+definition_execution_completed,True,,No execution error
+class_profile_complete,True,"['LegalityAwareBattleRunnerAgent', 'LegalityAwarePolicyAgent']","['LegalityAwareBattleRunnerAgent', 'LegalityAwarePolicyAgent']"
+model_artifact_preserved,True,RandomForestClassifier,Loaded frozen model
+preprocessor_artifact_preserved,True,ColumnTransformer,Loaded frozen preprocessor
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

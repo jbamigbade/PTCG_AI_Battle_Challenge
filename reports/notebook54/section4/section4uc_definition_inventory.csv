@@ -1,0 +1,70 @@
+cell_index,definition_type,definition_name,line_number,target_adapter_definition
+2,ImportFrom,__future__: annotations,5,False
+2,Import,ast,7,False
+2,Import,inspect,8,False
+2,Import,json,9,False
+2,Import,math,10,False
+2,Import,random,11,False
+2,Import,sys,12,False
+2,Import,warnings,13,False
+2,ImportFrom,copy: deepcopy,15,False
+2,ImportFrom,"dataclasses: asdict, dataclass, field, is_dataclass",16,False
+2,ImportFrom,"datetime: datetime, timezone",17,False
+2,ImportFrom,pathlib: Path,18,False
+2,ImportFrom,"typing: Any, Dict, Iterable, List, Mapping, Optional, Sequence, Tuple",19,False
+2,Import,joblib,21,False
+2,Import,numpy,22,False
+2,Import,pandas,23,False
+6,FunctionDef,parse_list_value,29,False
+6,FunctionDef,normalize_action_name,128,False
+6,FunctionDef,safe_numeric_series,160,False
+8,FunctionDef,ensure_numeric_column,62,False
+8,FunctionDef,build_root_cause_summary,349,False
+10,FunctionDef,action_feature_name,39,False
+10,FunctionDef,route_legality_aware_decision,166,False
+12,FunctionDef,ensure_float_feature,63,False
+12,FunctionDef,ensure_string_feature,92,False
+16,FunctionDef,parse_training_legal_moves,34,False
+16,FunctionDef,canonical_move_signature,82,False
+16,FunctionDef,classify_turn_phase,106,False
+16,FunctionDef,classify_energy_band,134,False
+16,FunctionDef,classify_damage_band,162,False
+18,ImportFrom,sklearn.model_selection: GroupShuffleSplit,14,False
+18,FunctionDef,add_section5a_check,683,False
+20,ImportFrom,sklearn.compose: ColumnTransformer,14,False
+20,ImportFrom,sklearn.impute: SimpleImputer,15,False
+20,ImportFrom,sklearn.pipeline: Pipeline,16,False
+20,ImportFrom,sklearn.preprocessing: OneHotEncoder,17,False
+20,FunctionDef,add_section5b_check,669,False
+22,ImportFrom,sklearn.ensemble: RandomForestClassifier,14,False
+22,ImportFrom,"sklearn.metrics: accuracy_score, balanced_accuracy_score, classification_report, confusion_matrix, log_loss",15,False
+22,FunctionDef,weighted_accuracy_score,199,False
+22,FunctionDef,evaluate_prediction_legality,238,False
+22,FunctionDef,evaluate_policy_split,358,False
+22,FunctionDef,classification_report_dataframe,491,False
+22,FunctionDef,build_action_count_performance,618,False
+22,FunctionDef,build_prediction_records,840,False
+22,FunctionDef,add_section6a_check,959,False
+24,FunctionDef,ensure_benchmark_numeric_column,44,False
+24,FunctionDef,ensure_benchmark_string_column,93,False
+26,FunctionDef,extract_move_name,14,False
+26,FunctionDef,get_state_value,47,False
+26,FunctionDef,get_card_name,73,False
+26,FunctionDef,get_attached_energy,107,False
+26,FunctionDef,get_pokemon_damage,124,False
+26,FunctionDef,build_legality_aware_feature_row,187,False
+26,ClassDef,LegalityAwarePolicyAgent,536,True
+28,Import,importlib.util,14,False
+28,Import,sys,15,False
+28,Import,types,16,False
+28,FunctionDef,load_runtime_module,106,False
+28,ClassDef,LegalityAwareBattleRunnerAgent,360,True
+30,FunctionDef,normalize_battle_winner,1,False
+31,FunctionDef,resolve_dataframe_column,39,False
+31,FunctionDef,create_move_dictionary,282,False
+31,FunctionDef,build_replay_card,417,False
+31,FunctionDef,build_replay_battle_state,487,False
+31,FunctionDef,extract_result_turns,618,False
+31,FunctionDef,extract_result_winner,646,False
+31,FunctionDef,extract_termination_reason,684,False
+33,FunctionDef,add_section7a_check,332,False

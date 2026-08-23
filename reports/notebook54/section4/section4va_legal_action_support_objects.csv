@@ -1,0 +1,7 @@
+object_name,exists,object_type,row_count,column_names
+section6e_scenario_side_legal_actions_df,False,,,[]
+section6e_recovered_legal_actions_df,False,,,[]
+recovered_scenario_side_legal_actions_df,False,,,[]
+scenario_side_legal_actions_df,False,,,[]
+section6e_scenario_legal_move_lookup,False,,,[]
+scenario_legal_move_lookup,False,,,[]

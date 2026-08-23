@@ -1,0 +1,19 @@
+metric,value
+policy_class_count,6
+encoded_feature_count,18
+raw_feature_count,12
+inference_validation_accuracy,1.0
+legal_selector_tests,3
+policy_agent_validation_tests,8
+simulator_source_files_loaded,5
+simulator_runtime_symbols_loaded,11
+real_transition_selected_move,Quick Attack
+real_transition_fallback_used,False
+full_battle_turns,8
+full_battle_policy_decisions,8
+full_battle_fallback_decisions,0
+full_battle_fallback_rate,0.0
+full_battle_final_player_hp,0.0
+full_battle_final_opponent_hp,10.0
+validation_checks_passed,27
+validation_checks_failed,0

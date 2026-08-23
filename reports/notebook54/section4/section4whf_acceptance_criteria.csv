@@ -1,0 +1,11 @@
+metric,required_result,comparison_rule,priority
+illegal_selected_actions,0.0,EQUAL,CRITICAL
+expanded_cases_completed,184.0,EQUAL,CRITICAL
+mirrored_pairs_completed,92.0,EQUAL,CRITICAL
+move_agreement_rate_by_side,1.0,AT_LEAST,HIGH
+quick_attack_selection_share,0.9,BELOW,HIGH
+ascension_selection_count,1.0,AT_LEAST,HIGH
+normalized_move_entropy,0.1,AT_LEAST,HIGH
+average_probability_margin_reduction,0.05,AT_LEAST,MEDIUM
+validation_accuracy_drop,0.02,AT_MOST,HIGH
+battle_win_rate_drop,0.02,AT_MOST,CRITICAL

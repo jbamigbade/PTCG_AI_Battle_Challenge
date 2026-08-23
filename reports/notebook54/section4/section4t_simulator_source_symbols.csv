@@ -1,0 +1,12 @@
+source_name,symbol_name,symbol_type,line_number
+battle_state,PokemonState,class,10
+battle_state,PlayerState,class,22
+battle_state,BattleState,class,32
+agent_decision,AgentDecision,class,10
+simulator,apply_move,function,14
+battle_agent,PokemonBattleAgent,class,10
+battle_simulation,BattleTurnRecord,class,15
+battle_simulation,BattleSimulationResult,class,47
+battle_simulation,determine_battle_winner,function,77
+battle_simulation,simulate_ai_battle,function,103
+battle_simulation,create_battle_transcript,function,197

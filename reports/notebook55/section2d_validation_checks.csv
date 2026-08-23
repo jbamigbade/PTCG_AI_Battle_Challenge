@@ -1,0 +1,10 @@
+check,passed,value,expected
+training_matrix_recovered,True,"(840, 64)",Nonempty matrix
+test_matrix_recovered,True,"(110, 64)",Nonempty matrix
+training_rows_aligned,True,"{'matrix_rows': 840, 'label_rows': 840}",Equal
+test_rows_aligned,True,"{'matrix_rows': 110, 'label_rows': 110}",Equal
+baseline_64_features_recovered,True,64,64
+baseline_model_compatible,True,64,64
+four_strategy_matrix_views_created,True,4,4
+matrix_hashes_complete,True,True,True
+next_stage_recognized,True,TRAIN_CONTROLLED_FEATURE_ABLATION_MODELS,TRAIN_CONTROLLED_FEATURE_ABLATION_MODELS

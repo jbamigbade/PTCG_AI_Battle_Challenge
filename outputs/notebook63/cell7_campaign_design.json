@@ -1,0 +1,296 @@
+{
+  "notebook": 63,
+  "cell": 7,
+  "purpose": "REPRODUCIBLE_MULTI_BATTLE_CAMPAIGN_DESIGN",
+  "configuration_sha256": "acdeb20722ee3ba9b897b1ea0320e8162ac6f53f9fe4f8fca97e6039effd2ede",
+  "configuration": {
+    "policy_checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\final_agent\\models\\ppo_training_loop.pkl",
+    "policy_checkpoint_sha256": "4e6a19861eb5be5f61bc86508dff07dd838a42df9350355d95e8f2dc436ae787",
+    "certified_rf_sha256": "615baf3d5725ccca0c1c94e37f62fb24a68613248e167bb566bef4a6d50f2581",
+    "main_sha256": "e328508c39b6c48411f46ad43f5ec1ffe34f54f740aed24389f88d8166dc97cd",
+    "principles": {
+      "purpose": "FINAL_STRATEGY_SIMULATION_EVIDENCE",
+      "evaluation_only": true,
+      "training_allowed": false,
+      "retraining_allowed": false,
+      "submission_modification_allowed": false,
+      "certified_model_modification_allowed": false,
+      "deterministic_seed_control": true,
+      "side_swap_required": true,
+      "timeout_is_not_win": true,
+      "unknown_move_tracking_required": true,
+      "zero_damage_tracking_required": true,
+      "illegal_move_tracking_required": true,
+      "runtime_exception_tracking_required": true,
+      "checkpoint_identity_tracking_required": true,
+      "evidence_persistence_required": true
+    },
+    "seeds": [
+      63001,
+      63002,
+      63003,
+      63004,
+      63005,
+      63006,
+      63007,
+      63008,
+      63009,
+      63010
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "S1_BALANCED_LOW_HP",
+        "description": "Balanced low-HP battle with zero-cost and one-cost attacks.",
+        "player": {
+          "name": "S1_Player",
+          "hp": 60.0,
+          "energy": 1,
+          "attacks": [
+            {
+              "name": "Quick Strike",
+              "damage": 10.0,
+              "energy_cost": 0,
+              "effect": null
+            },
+            {
+              "name": "Power Strike",
+              "damage": 20.0,
+              "energy_cost": 1,
+              "effect": null
+            }
+          ]
+        },
+        "opponent": {
+          "name": "S1_Opponent",
+          "hp": 60.0,
+          "energy": 1,
+          "attacks": [
+            {
+              "name": "Quick Jab",
+              "damage": 10.0,
+              "energy_cost": 0,
+              "effect": null
+            },
+            {
+              "name": "Heavy Jab",
+              "damage": 20.0,
+              "energy_cost": 1,
+              "effect": null
+            }
+          ]
+        }
+      },
+      {
+        "scenario_id": "S2_BALANCED_HIGH_HP",
+        "description": "Balanced higher-HP battle to test sustained policy behavior.",
+        "player": {
+          "name": "S2_Player",
+          "hp": 120.0,
+          "energy": 2,
+          "attacks": [
+            {
+              "name": "Steady Hit",
+              "damage": 15.0,
+              "energy_cost": 0,
+              "effect": null
+            },
+            {
+              "name": "Heavy Hit",
+              "damage": 30.0,
+              "energy_cost": 2,
+              "effect": null
+            }
+          ]
+        },
+        "opponent": {
+          "name": "S2_Opponent",
+          "hp": 120.0,
+          "energy": 2,
+          "attacks": [
+            {
+              "name": "Steady Blow",
+              "damage": 15.0,
+              "energy_cost": 0,
+              "effect": null
+            },
+            {
+              "name": "Heavy Blow",
+              "damage": 30.0,
+              "energy_cost": 2,
+              "effect": null
+            }
+          ]
+        }
+      },
+      {
+        "scenario_id": "S3_PLAYER_DAMAGE_ADVANTAGE",
+        "description": "Player has stronger attacks; tests whether policy exploits advantage.",
+        "player": {
+          "name": "S3_Player",
+          "hp": 90.0,
+          "energy": 1,
+          "attacks": [
+            {
+              "name": "Fast Hit",
+              "damage": 20.0,
+              "energy_cost": 0,
+              "effect": null
+            },
+            {
+              "name": "Finisher",
+              "damage": 35.0,
+              "energy_cost": 1,
+              "effect": null
+            }
+          ]
+        },
+        "opponent": {
+          "name": "S3_Opponent",
+          "hp": 90.0,
+          "energy": 1,
+          "attacks": [
+            {
+              "name": "Weak Hit",
+              "damage": 10.0,
+              "energy_cost": 0,
+              "effect": null
+            },
+            {
+              "name": "Moderate Hit",
+              "damage": 20.0,
+              "energy_cost": 1,
+              "effect": null
+            }
+          ]
+        }
+      },
+      {
+        "scenario_id": "S4_OPPONENT_DAMAGE_ADVANTAGE",
+        "description": "Opponent has stronger attacks; tests policy behavior under disadvantage.",
+        "player": {
+          "name": "S4_Player",
+          "hp": 90.0,
+          "energy": 1,
+          "attacks": [
+            {
+              "name": "Weak Hit",
+              "damage": 10.0,
+              "energy_cost": 0,
+              "effect": null
+            },
+            {
+              "name": "Moderate Hit",
+              "damage": 20.0,
+              "energy_cost": 1,
+              "effect": null
+            }
+          ]
+        },
+        "opponent": {
+          "name": "S4_Opponent",
+          "hp": 90.0,
+          "energy": 1,
+          "attacks": [
+            {
+              "name": "Fast Hit",
+              "damage": 20.0,
+              "energy_cost": 0,
+              "effect": null
+            },
+            {
+              "name": "Finisher",
+              "damage": 35.0,
+              "energy_cost": 1,
+              "effect": null
+            }
+          ]
+        }
+      }
+    ],
+    "side_modes": [
+      {
+        "side_mode": "NORMAL",
+        "swap_sides": false
+      },
+      {
+        "side_mode": "SWAPPED",
+        "swap_sides": true
+      }
+    ],
+    "baselines": [
+      {
+        "baseline_id": "DEPLOYMENT_POLICY",
+        "description": "FinalPPOBattleAgent using preserved deployment checkpoint.",
+        "agent_type": "FinalPPOBattleAgent",
+        "checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\final_agent\\models\\ppo_training_loop.pkl",
+        "checkpoint_sha256": "4e6a19861eb5be5f61bc86508dff07dd838a42df9350355d95e8f2dc436ae787"
+      },
+      {
+        "baseline_id": "FIRST_LEGAL_MOVE",
+        "description": "Deterministic baseline selecting the first legal move.",
+        "agent_type": "DeterministicFirstLegalMoveAgent",
+        "checkpoint": null,
+        "checkpoint_sha256": null
+      },
+      {
+        "baseline_id": "MAX_DAMAGE_LEGAL_MOVE",
+        "description": "Deterministic baseline choosing the legal move with highest damage.",
+        "agent_type": "DeterministicMaxDamageAgent",
+        "checkpoint": null,
+        "checkpoint_sha256": null
+      }
+    ],
+    "execution_settings": {
+      "search_depth": 1,
+      "max_turns": 40,
+      "verbose": false,
+      "seeds_per_scenario": 10,
+      "side_modes": 2,
+      "scenario_count": 4,
+      "agent_variants": 3,
+      "planned_battles_per_agent": 80,
+      "planned_total_battles": 240
+    },
+    "required_fields": [
+      "battle_id",
+      "agent_variant",
+      "scenario_id",
+      "side_mode",
+      "seed",
+      "winner",
+      "normalized_outcome",
+      "turn_count",
+      "stop_reason",
+      "player_final_hp",
+      "opponent_final_hp",
+      "total_moves",
+      "player_moves",
+      "opponent_moves",
+      "unknown_move_count",
+      "unknown_move_rate",
+      "zero_damage_move_count",
+      "zero_damage_move_rate",
+      "positive_damage_move_count",
+      "positive_damage_move_rate",
+      "total_damage_dealt",
+      "policy_score_mean",
+      "policy_score_min",
+      "policy_score_max",
+      "runtime_exception",
+      "runtime_exception_type",
+      "checkpoint_sha256"
+    ],
+    "quality_signals": {
+      "unknown_move_rate": "Measures semantic move-mapping quality. Lower is better.",
+      "zero_damage_move_rate": "Measures frequency of decisions that produce no battle damage. Lower is generally better for these controlled attack scenarios.",
+      "positive_damage_move_rate": "Measures how often selected moves produce meaningful offensive progress.",
+      "timeout_rate": "Measures how often a battle fails to resolve within the controlled turn budget.",
+      "win_rate": "Primary outcome metric where the simulator produces a winner.",
+      "side_swap_delta": "Difference in performance between NORMAL and SWAPPED conditions.",
+      "baseline_delta": "Difference between deployment policy and deterministic baselines."
+    }
+  },
+  "planned_total_battles": 240,
+  "simulation_executed": false,
+  "training_executed": false
+}

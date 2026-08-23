@@ -1,0 +1,5 @@
+path,rows,columns,target_candidates,legal_move_candidates,legal_count_candidates,has_current_side,has_player_card,has_opponent_card,has_turn_number,duplicate_rows,missing_values,load_success,load_error,readiness_score
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section8\policy_dataset\section8c_expert_policy_dataset.csv,1060,37,['expert_move'],['legal_moves'],['legal_move_count'],True,True,True,True,0,1060,True,,71.96696713861398
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook50\section1\environment_and_handoff\section1b_policy_dataset_preview.csv,20,37,['expert_move'],['legal_moves'],['legal_move_count'],True,True,True,True,0,20,True,,68.04452243772343
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section4b_final_curriculum_plan.csv,6,23,[],[],[],False,False,False,False,0,0,True,,11.945910149055313
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook49\section4_targeted_curriculum_plan.csv,6,22,[],[],[],False,False,False,False,0,0,True,,11.945910149055313

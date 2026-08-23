@@ -1,0 +1,2 @@
+turn_number,current_player,legal_moves,selected_move,raw_predicted_move,confidence,fallback_used,fallback_reason
+9,Opponent,"['Ascension', 'Quick Attack']",Quick Attack,Quick Attack,1.0,False,

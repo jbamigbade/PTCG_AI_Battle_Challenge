@@ -1,0 +1,18 @@
+{
+  "reference_type": "FROZEN_CERTIFIED_MODEL_REFERENCE",
+  "source_notebook": 60,
+  "referenced_by_notebook": 61,
+  "model_path": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook60\\notebook60_certified_61_feature_random_forest.joblib",
+  "model_type": "RandomForestClassifier",
+  "feature_count": 61,
+  "target_class_count": 11,
+  "tree_count": 500,
+  "size_bytes": 22396321,
+  "sha256": "615BAF3D5725CCCA0C1C94E37F62FB24A68613248E167BB566BEF4A6D50F2581",
+  "physical_model_integrity_verified": true,
+  "runtime_contract_verified": true,
+  "model_duplicated": false,
+  "model_modified": false,
+  "retraining_performed": false,
+  "fit_calls_executed": 0
+}

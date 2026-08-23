@@ -1,0 +1,16 @@
+{
+  "status": "SINGLE_PASS_TOURNAMENT_ANALYZED",
+  "battle_count": 8,
+  "total_decisions": 56,
+  "player_slot_wins": 2,
+  "opponent_slot_wins": 6,
+  "draws": 0,
+  "starter_win_rate": 0.5,
+  "masking_changes": 39,
+  "masking_change_rate": 0.6964285714285714,
+  "fallback_decisions": 1,
+  "fallback_rate": 0.017857142857142856,
+  "highest_win_rate_card": "Charmander",
+  "highest_win_rate": 1.0,
+  "next_stage": "REPEATED_TOURNAMENT_EVALUATION"
+}

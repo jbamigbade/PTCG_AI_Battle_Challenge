@@ -1,0 +1,14 @@
+{
+  "project_root": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge",
+  "final_notebook": "45_final_simulator_integration_and_submission",
+  "ppo_engine_created": true,
+  "final_agent_created": true,
+  "checkpoint_loaded": true,
+  "legal_action_validation": true,
+  "complete_battle_passed": true,
+  "battle_winner": "Player",
+  "battle_turns": 7,
+  "submission_zip": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\ptcg_final_agent.zip",
+  "zip_valid": true,
+  "status": "READY_FOR_FINAL_REVIEW"
+}

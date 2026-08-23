@@ -1,0 +1,5 @@
+card_name,decision_rows,expected_benchmark_moves,recovered_legal_moves,recovered_selected_moves,combined_recovered_moves,expected_moves_recovered
+Bulbasaur,70,"[""Bind Down""]","[""Bind Down"", ""Pass""]","[""Bind Down"", ""Pass""]","[""Bind Down"", ""Pass""]",True
+Charmander,35,"[""Live Coal""]","[""Live Coal"", ""Pass""]","[""Live Coal"", ""Pass""]","[""Live Coal"", ""Pass""]",True
+Eevee,59,"[""Ascension"", ""Quick Attack""]","[""Ascension"", ""Quick Attack""]","[""Ascension"", ""Quick Attack""]","[""Ascension"", ""Quick Attack""]",True
+Meowth,46,"[""Pass"", ""Tuck Tail""]","[""Tuck Tail""]","[""Tuck Tail""]","[""Tuck Tail""]",False

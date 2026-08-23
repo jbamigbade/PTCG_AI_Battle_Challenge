@@ -1,0 +1,5 @@
+card_name,official_card_id,printed_card_name,expansion,collection_number,stage,is_pokemon_ex,hp,pokemon_type,ability_names,printed_attack_names,weakness_type,weakness_multiplier,retreat_cost_symbols,version_confirmation_method,version_confirmed
+Bulbasaur,650,Bulbasaur,MEG,1,Basic,False,80,Grass,[],"[""Bind Down""]",Fire,×2,2,UNIQUE_EXACT_PRINTED_ATTACK_PROFILE_MATCH,True
+Charmander,788,Charmander,PFL,11,Basic,False,80,Fire,"[""Agile""]","[""Live Coal""]",Water,×2,2,UNIQUE_EXACT_PRINTED_ATTACK_PROFILE_MATCH,True
+Eevee,43,Eevee,TWM,135,Basic,False,50,Colorless,[],"[""Ascension"", ""Quick Attack""]",Fighting,×2,1,UNIQUE_EXACT_PRINTED_ATTACK_PROFILE_MATCH,True
+Meowth,1071,Meowth ex,POR,62,Basic,True,170,Colorless,"[""Last-Ditch Catch""]","[""Tuck Tail""]",Fighting,×2,1,UNIQUE_EXACT_PRINTED_ATTACK_PROFILE_MATCH,True

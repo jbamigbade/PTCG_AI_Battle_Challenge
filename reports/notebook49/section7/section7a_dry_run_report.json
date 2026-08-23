@@ -1,0 +1,44 @@
+{
+    "scenario_id": "NB48_LOSS_210",
+    "seed": 4907001,
+    "replay_level": "LEVEL_1_SCENARIO_REGENERATION",
+    "dry_run_level": "MANUAL_BINDING_REQUIRED",
+    "initialization_succeeded": true,
+    "state_source": null,
+    "legal_moves_succeeded": false,
+    "legal_move_count": null,
+    "events": [
+        {
+            "stage": "initialize",
+            "status": "PASS",
+            "metadata": {
+                "callable": "SearchStats.reset",
+                "signature": "() -> 'None'",
+                "accepted_parameters": [],
+                "resolved_arguments": [],
+                "unresolved_required": []
+            },
+            "result_type": "NoneType",
+            "result_module": "builtins",
+            "result_preview": null,
+            "error": ""
+        },
+        {
+            "stage": "legal_moves",
+            "status": "SKIPPED",
+            "metadata": {
+                "binding": {
+                    "role": "'legal_moves'",
+                    "status": "'NOT_BOUND'",
+                    "attempts": "[]"
+                },
+                "state_source": null
+            },
+            "result_type": "",
+            "result_module": "",
+            "result_preview": null,
+            "legal_move_count": null,
+            "error": "Legal-move dry run requires both a bound method and initialized state."
+        }
+    ]
+}

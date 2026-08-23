@@ -1,0 +1,297 @@
+{
+    "readiness_checks": {
+        "all_modules_loaded": true,
+        "simulator_candidate_found": true,
+        "search_candidate_found": true,
+        "agent_candidate_found": true,
+        "state_candidate_found": true,
+        "entry_points_found": true,
+        "checkpoint_available": true,
+        "dataset_available": true,
+        "curriculum_available": true
+    },
+    "readiness_pass_count": 9,
+    "readiness_total_count": 9,
+    "readiness_fraction": 1.0,
+    "checkpoint_structure": {
+        "configuration": "dict",
+        "epoch": "int",
+        "model_state_dict": "OrderedDict",
+        "multi_action_metrics": "dict",
+        "optimizer_state_dict": "dict",
+        "scheduler_state_dict": "dict",
+        "validation_metrics": "dict"
+    },
+    "runtime_objects": [
+        {
+            "name": "production_agent",
+            "exists": false,
+            "type": null,
+            "module": null,
+            "callable": false,
+            "signature": null
+        },
+        {
+            "name": "competitive_agent",
+            "exists": false,
+            "type": null,
+            "module": null,
+            "callable": false,
+            "signature": null
+        },
+        {
+            "name": "competitive_policy_agent",
+            "exists": false,
+            "type": null,
+            "module": null,
+            "callable": false,
+            "signature": null
+        },
+        {
+            "name": "policy_engine",
+            "exists": false,
+            "type": null,
+            "module": null,
+            "callable": false,
+            "signature": null
+        },
+        {
+            "name": "competitive_engine",
+            "exists": false,
+            "type": null,
+            "module": null,
+            "callable": false,
+            "signature": null
+        },
+        {
+            "name": "search_engine",
+            "exists": false,
+            "type": null,
+            "module": null,
+            "callable": false,
+            "signature": null
+        },
+        {
+            "name": "battle_simulator",
+            "exists": false,
+            "type": null,
+            "module": null,
+            "callable": false,
+            "signature": null
+        },
+        {
+            "name": "simulator",
+            "exists": false,
+            "type": null,
+            "module": null,
+            "callable": false,
+            "signature": null
+        }
+    ],
+    "simulator_candidates": [
+        {
+            "module": "src.adapters",
+            "symbol": "BattleState",
+            "symbol_type": "class",
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+            "defined_in_module": false
+        },
+        {
+            "module": "src.battle_state",
+            "symbol": "BattleState",
+            "symbol_type": "class",
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.legal_moves",
+            "symbol": "BattleState",
+            "symbol_type": "class",
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+            "defined_in_module": false
+        },
+        {
+            "module": "src.simulator",
+            "symbol": "BattleState",
+            "symbol_type": "class",
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+            "defined_in_module": false
+        }
+    ],
+    "search_candidates": [
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "symbol": "CompetitivePolicyEngine",
+            "symbol_type": "class",
+            "signature": "(checkpoint_path: 'str | Path', device: 'str | torch.device | None' = None) -> 'None'",
+            "defined_in_module": false
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "symbol": "CompetitivePolicyEngine",
+            "symbol_type": "class",
+            "signature": "(checkpoint_path: 'str | Path', device: 'str | torch.device | None' = None) -> 'None'",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "symbol": "AdvancedSearchEngine",
+            "symbol_type": "class",
+            "signature": "(generate_moves: 'GenerateMovesFn', apply_move: 'ApplyMoveFn', evaluate_state: 'EvaluateFn', is_terminal: 'IsTerminalFn', current_player: 'CurrentPlayerFn', move_to_string: 'Optional[MoveToStringFn]' = None, state_key: 'Optional[Callable[[State], Hashable]]' = None, use_transposition_table: 'bool' = True, move_order_score: 'Optional[MoveOrderScoreFn]' = None, use_move_ordering: 'bool' = True, move_key: 'Optional[MoveKeyFn]' = None, use_killer_moves: 'bool' = True, killer_slots: 'int' = 2, use_history_heuristic: 'bool' = True, history_multiplier: 'float' = 1000.0) -> 'None'",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "symbol": "SearchResult",
+            "symbol_type": "class",
+            "signature": "(best_move: 'Optional[Move]', score: 'float', completed_depth: 'int', principal_variation: 'List[Move]' = <factory>, stats: 'SearchStats' = <factory>) -> None",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "symbol": "SearchStats",
+            "symbol_type": "class",
+            "signature": "(nodes: 'int' = 0, leaf_nodes: 'int' = 0, terminal_nodes: 'int' = 0, cutoffs: 'int' = 0, transposition_hits: 'int' = 0, transposition_stores: 'int' = 0, transposition_cutoffs: 'int' = 0, killer_hits: 'int' = 0, killer_stores: 'int' = 0, history_hits: 'int' = 0, history_updates: 'int' = 0, completed_depth: 'int' = 0, elapsed_seconds: 'float' = 0.0, depth_nodes: 'Dict[int, int]' = <factory>, depth_times: 'Dict[int, float]' = <factory>) -> None",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "symbol": "SearchTimeLimit",
+            "symbol_type": "class",
+            "signature": "(max_seconds: 'float') -> None",
+            "defined_in_module": false
+        }
+    ],
+    "agent_candidates": [
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "symbol": "CompetitivePolicyAgent",
+            "symbol_type": "class",
+            "signature": "(checkpoint_path: 'str | Path', device: 'str | None' = None, name: 'str' = 'Competitive Policy Agent') -> 'None'",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "symbol": "CompetitivePolicyDecision",
+            "symbol_type": "class",
+            "signature": "(move: 'Any', confidence: 'float', selected_move_name: 'str | None', probabilities: 'list[float]', logits: 'list[float]', move_names: 'list[str]', fallback: 'bool', score: 'float' = 0.0, search_depth: 'int' = 0, nodes: 'int' = 0, reason: 'str | None' = None) -> None",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "symbol": "CompetitivePolicyEngine",
+            "symbol_type": "class",
+            "signature": "(checkpoint_path: 'str | Path', device: 'str | torch.device | None' = None) -> 'None'",
+            "defined_in_module": false
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "symbol": "CompetitivePolicyEngine",
+            "symbol_type": "class",
+            "signature": "(checkpoint_path: 'str | Path', device: 'str | torch.device | None' = None) -> 'None'",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "symbol": "CompetitivePolicyNetwork",
+            "symbol_type": "class",
+            "signature": "(state_dim: 'int' = 8, move_dim: 'int' = 8, hidden_dim: 'int' = 128) -> 'None'",
+            "defined_in_module": true
+        }
+    ],
+    "state_candidates": [
+        {
+            "module": "src.adapters",
+            "symbol": "BattleState",
+            "symbol_type": "class",
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+            "defined_in_module": false
+        },
+        {
+            "module": "src.battle_state",
+            "symbol": "BattleState",
+            "symbol_type": "class",
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.battle_state",
+            "symbol": "PlayerState",
+            "symbol_type": "class",
+            "signature": "(active: 'PokemonState', bench: 'List[PokemonState]', prize_cards_remaining: 'int' = 6, hand_size: 'int' = 7) -> None",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.battle_state",
+            "symbol": "PokemonState",
+            "symbol_type": "class",
+            "signature": "(card: 'dict', current_hp: 'float', attached_energy: 'int' = 0, status: 'Optional[str]' = None, damage: 'float' = 0.0, is_active: 'bool' = False) -> None",
+            "defined_in_module": true
+        },
+        {
+            "module": "src.legal_moves",
+            "symbol": "BattleState",
+            "symbol_type": "class",
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+            "defined_in_module": false
+        },
+        {
+            "module": "src.legal_moves",
+            "symbol": "PokemonState",
+            "symbol_type": "class",
+            "signature": "(card: 'dict', current_hp: 'float', attached_energy: 'int' = 0, status: 'Optional[str]' = None, damage: 'float' = 0.0, is_active: 'bool' = False) -> None",
+            "defined_in_module": false
+        },
+        {
+            "module": "src.simulator",
+            "symbol": "BattleState",
+            "symbol_type": "class",
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+            "defined_in_module": false
+        }
+    ],
+    "entry_points": [
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyAgent",
+            "method": "choose_move",
+            "signature": "(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'"
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyAgent",
+            "method": "select_move",
+            "signature": "(self, state: 'Any' = None, depth: 'int | None' = None, battle_state: 'Any' = None, **kwargs: 'Any') -> 'CompetitivePolicyDecision'"
+        },
+        {
+            "module": "src.competitive.competitive_policy_agent",
+            "class": "CompetitivePolicyEngine",
+            "method": "choose_move",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'"
+        },
+        {
+            "module": "src.competitive.competitive_policy_engine",
+            "class": "CompetitivePolicyEngine",
+            "method": "choose_move",
+            "signature": "(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'Any'"
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "class": "AdvancedSearchEngine",
+            "method": "search_depth",
+            "signature": "(self, state: 'State', depth: 'int', root_player: 'Optional[Player]' = None, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'"
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "class": "AdvancedSearchEngine",
+            "method": "search_for_time",
+            "signature": "(self, state, seconds=1.0, verbose=False, max_depth=100, clear_table=True, clear_killers=True, clear_history=True)"
+        },
+        {
+            "module": "src.engine.advanced_search",
+            "class": "SearchStats",
+            "method": "reset",
+            "signature": "(self) -> 'None'"
+        }
+    ]
+}

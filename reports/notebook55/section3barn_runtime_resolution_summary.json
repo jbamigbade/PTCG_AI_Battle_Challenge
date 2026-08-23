@@ -1,0 +1,9 @@
+{
+  "status": "ORIGINAL_NOTEBOOK54_RUNTIME_BINDINGS_REQUIRE_RESTORATION",
+  "original_model_source": "globals.notebook53_legality_model",
+  "original_model_type": "RandomForestClassifier",
+  "original_preprocessor_source": "globals.notebook53_preprocessor",
+  "matching_model_available": false,
+  "matching_preprocessor_available": false,
+  "next_stage": "RESTORE_MISSING_ORIGINAL_RUNTIME_BINDINGS"
+}

@@ -1,0 +1,7 @@
+side,baseline,games,wins,losses,draws,score,average_turns
+Opponent,Depth-6 Search Baseline,50,16,34,0,0.32,4.14
+Opponent,Greedy Damage Baseline,50,16,34,0,0.32,3.18
+Opponent,Random Baseline,50,32,18,0,0.64,3.78
+Player,Depth-6 Search Baseline,50,42,8,0,0.84,3.34
+Player,Greedy Damage Baseline,50,42,8,0,0.84,3.34
+Player,Random Baseline,50,46,4,0,0.92,3.42

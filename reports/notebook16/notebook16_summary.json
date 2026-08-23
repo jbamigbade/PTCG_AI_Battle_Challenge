@@ -1,0 +1,12 @@
+{
+  "notebook": 16,
+  "title": "Kaggle Submission Compatibility",
+  "status": "COMPLETE",
+  "archive_valid": true,
+  "archive_member_count": 10,
+  "deck_size": 60,
+  "deck_count_method": "headerless_raw_row_count",
+  "deck_path_used": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission_work\\team_jesus_baseline\\deck.csv",
+  "baseline_archive": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission_work\\team_jesus_baseline.tar.gz",
+  "kaggle_upload_ready": true
+}

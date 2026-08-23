@@ -1,0 +1,5 @@
+card_name,leading_card_id,leading_printed_card_name,leading_expansion,leading_collection_number,leading_hp,leading_printed_attacks,simulator_attacks,evidence_score,exact_attack_set_match,top_candidate_is_unique,version_resolution_status
+Bulbasaur,650,Bulbasaur,MEG,1,80,"[""Bind Down""]","[""Bind Down""]",100.0,True,True,UNIQUE_EXACT_ATTACK_PROFILE_MATCH
+Charmander,788,Charmander,PFL,11,80,"[""Live Coal""]","[""Live Coal""]",100.0,True,True,UNIQUE_EXACT_ATTACK_PROFILE_MATCH
+Eevee,43,Eevee,TWM,135,50,"[""Ascension"", ""Quick Attack""]","[""Ascension"", ""Quick Attack""]",100.0,True,True,UNIQUE_EXACT_ATTACK_PROFILE_MATCH
+Meowth,1071,Meowth ex,POR,62,170,"[""Tuck Tail""]","[""Tuck Tail""]",100.0,True,True,UNIQUE_EXACT_ATTACK_PROFILE_MATCH

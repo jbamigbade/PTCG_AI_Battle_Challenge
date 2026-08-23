@@ -1,0 +1,11 @@
+check,passed,value,expected,details
+simulator_source_files_exist,True,5,5,
+simulator_source_syntax_valid,True,5,5,
+apply_move_discovered,True,True,True,
+battle_state_discovered,True,True,True,
+benchmark_actions_discovered,True,7,> 0,
+benchmark_move_count_valid,True,6,6,
+damage_mechanic_supported,True,True,True,
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",
+unsupported_actions_not_enabled,True,0,0,
+recommended_action_source_identified,True,PROJECT_CARD_METADATA,Recognized recommendation,

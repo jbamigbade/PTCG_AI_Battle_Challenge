@@ -1,0 +1,4 @@
+module,class,method,signature
+src.competitive.competitive_policy_agent,CompetitivePolicyEngine,score_moves,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'"
+src.competitive.competitive_policy_engine,CompetitivePolicyEngine,score_moves,"(self, battle_state: 'Any', legal_moves: 'Sequence[Any]') -> 'dict[str, Any]'"
+src.engine.advanced_search,AdvancedSearchEngine,clear_killer_moves,(self) -> 'None'

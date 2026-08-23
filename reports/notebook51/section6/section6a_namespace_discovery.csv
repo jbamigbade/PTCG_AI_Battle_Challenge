@@ -1,0 +1,38 @@
+object_name,object_type,callable,matched_keywords,signature,source_file
+PolicyAgent,class,True,"agent, policy","(name: 'str' = 'Notebook50PolicyAgent', side_mode: 'str' = 'PRESERVE', retain_history: 'bool' = True) -> 'None'",
+PolicyDecision,class,True,policy,"(selected_move: 'Any', selected_move_name: 'str', raw_predicted_move: 'str', confidence: 'float', selected_probability: 'float', selected_masked_probability: 'float', fallback_used: 'bool', fallback_reason: 'Optional[str]', current_side: 'str', turn_number: 'float', legal_move_count: 'int', policy_features: 'Dict[str, Any]', raw_probabilities: 'Dict[str, float]') -> None",
+battle_state_to_policy_features,function,True,"battle, state, policy","(battle_state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None, side_mode: 'str' = 'PRESERVE') -> 'pd.DataFrame'",C:\Users\johnb\AppData\Local\Temp\ipykernel_5544\1074605520.py
+build_legal_move_lookup,function,True,"legal, move","(legal_moves: 'Sequence[Any]') -> 'Dict[str, Any]'",C:\Users\johnb\AppData\Local\Temp\ipykernel_5544\41487384.py
+extract_side_state,function,True,state,"(battle_state: 'Any', requested_side: 'str') -> 'Any'",C:\Users\johnb\AppData\Local\Temp\ipykernel_5544\1074605520.py
+get_live_legal_moves,function,True,"legal, move","(battle_state: 'Any', legal_moves: 'Optional[Sequence[Any]]' = None) -> 'List[Any]'",C:\Users\johnb\AppData\Local\Temp\ipykernel_5544\1074605520.py
+matches_simulator_keywords,function,True,"simulator, match",(name: 'str') -> 'List[str]',C:\Users\johnb\AppData\Local\Temp\ipykernel_5544\2271766783.py
+move_display_name,function,True,move,(move_value: 'Any') -> 'str',C:\Users\johnb\AppData\Local\Temp\ipykernel_5544\41487384.py
+normalize_move_name,function,True,move,(move_value: 'Any') -> 'str',C:\Users\johnb\AppData\Local\Temp\ipykernel_5544\41487384.py
+predict_policy_move,function,True,"move, policy",(feature_dataframe),C:\Users\johnb\AppData\Local\Temp\ipykernel_5544\2521178970.py
+select_legal_policy_move,function,True,"legal, move, policy","(battle_state: 'Any', legal_moves: 'Sequence[Any]', side_mode: 'str' = 'PRESERVE') -> 'Dict[str, Any]'",C:\Users\johnb\AppData\Local\Temp\ipykernel_5544\41487384.py
+expected_policy_features_df,DataFrame,False,policy,,
+extracted_policy_features_df,DataFrame,False,policy,,
+policy_dataset,DataFrame,False,policy,,
+policy_agent,PolicyAgent,False,"agent, policy",,
+policy_model,RandomForestClassifier,False,policy,,
+prediction_match,bool,False,match,,
+agent_statistics,dict,False,agent,,
+chosen_move,dict,False,move,,
+reconstructed_battle_state,dict,False,"battle, state",,
+validation_state,dict,False,state,,
+RANDOM_SEED,int,False,random,,
+expected_legal_move_count,int,False,"legal, move",,
+POLICY_RAW_FEATURE_COLUMNS,list,False,policy,,
+SIMULATOR_FILE_KEYWORDS,list,False,simulator,,
+SIMULATOR_NAME_KEYWORDS,list,False,simulator,,
+known_legal_moves,list,False,"legal, move",,
+legal_moves_case1,list,False,"legal, move",,
+legal_moves_case2,list,False,"legal, move",,
+legal_moves_case3,list,False,"legal, move",,
+predicted_moves,list,False,move,,
+reconstructed_legal_moves,list,False,"legal, move",,
+unknown_legal_moves,list,False,"legal, move",,
+random,module,False,random,,C:\Users\johnb\AppData\Local\Programs\Python\Python313\Lib\random.py
+expected_expert_move,str,False,move,,
+move,str,False,move,,
+predicted_policy_move,str,False,"move, policy",,

@@ -1,0 +1,14 @@
+{
+  "status": "PRODUCTION_POLICY_ADAPTER_VALIDATED",
+  "validated_decisions": 210,
+  "legal_decisions": 210,
+  "selection_matches": 210,
+  "single_action_direct_decisions": 187,
+  "model_decisions": 23,
+  "selector_decisions": 0,
+  "fallback_decisions": 0,
+  "adapter_legality_rate": 1.0,
+  "selection_agreement_rate": 1.0,
+  "ready_for_tournament_replay": true,
+  "next_stage": "LEGALITY_AWARE_TOURNAMENT_REPLAY"
+}

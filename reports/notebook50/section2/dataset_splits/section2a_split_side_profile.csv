@@ -1,0 +1,7 @@
+dataset_split,normalized_side,row_count,sample_weight_sum,sample_weight_mean,within_split_fraction
+test,opponent,98,157.113,1.6031938775510204,0.6125
+test,player,62,70.17999999999999,1.1319354838709677,0.3875
+train,opponent,520,842.292,1.6197923076923078,0.7027027027027027
+train,player,220,238.92,1.0859999999999999,0.2972972972972973
+validation,opponent,110,177.903,1.6173,0.6875
+validation,player,50,54.78,1.0956000000000001,0.3125

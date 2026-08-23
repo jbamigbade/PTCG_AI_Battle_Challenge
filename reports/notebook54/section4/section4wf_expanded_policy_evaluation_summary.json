@@ -1,0 +1,23 @@
+{
+  "status": "EXPANDED_BALANCED_MULTI_ACTION_POLICY_EVALUATION_COMPLETE",
+  "comparison_cases": 184,
+  "mirror_pairs": 92,
+  "valid_pairs": 92,
+  "expansion_variants": 4,
+  "move_agreement_count": 92,
+  "move_disagreement_count": 0,
+  "move_agreement_rate": 1.0,
+  "routing_agreement_count": 92,
+  "routing_agreement_rate": 1.0,
+  "legality_agreement_count": 92,
+  "fallback_agreement_count": 92,
+  "variants_with_move_disagreement": 0,
+  "average_confidence_difference_player_minus_opponent": 0.0030434782608695678,
+  "average_absolute_confidence_difference": 0.0030434782608695678,
+  "maximum_absolute_confidence_difference": 0.008000000000000007,
+  "expanded_opportunity_normalized_diagnosis": "NO_EXPANDED_OPPORTUNITY_NORMALIZED_SIDE_BIAS_DETECTED",
+  "expanded_opportunity_normalized_diagnosis_text": "Across all 92 expanded matched state pairs and four controlled energy variants, changing only the acting-side assignment did not change the selected move or routing behavior.",
+  "all_moves_legal": true,
+  "all_contexts_matched": true,
+  "next_stage": "MOVE_PREFERENCE_AND_DECISION_DIVERSITY_ANALYSIS"
+}

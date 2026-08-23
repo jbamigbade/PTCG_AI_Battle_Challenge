@@ -1,0 +1,36 @@
+NOTEBOOK 48 — FINAL COMPETITIVE RECOMMENDATION
+============================================================
+
+Policy: Competitive Policy
+Strength tier: Competitive
+
+Replace bootstrap policy: True
+
+The trained variable-action policy should replace the earlier bootstrap PPO policy. It was trained on real depth-4 search demonstrations, passed untouched test evaluation, completed 300 tournament matches without fallback, and achieved a positive score against the depth-6 search baseline.
+
+Measured results
+----------------
+Validation accuracy: 0.8493
+Validation multi-action accuracy: 0.7864
+Test accuracy: 0.8281
+Test multi-action accuracy: 0.7800
+
+Tournament matches: 300
+Overall win rate: 0.6467
+Random baseline win rate: 0.7800
+Greedy baseline win rate: 0.5800
+Depth-6 search win rate: 0.5800
+
+Final sequential Elo: 1050.80
+Side-neutral Elo difference: 105.00
+Estimated first-player advantage: 188.25 Elo
+
+Player-side score: 0.8667
+Opponent-side score: 0.4267
+
+Readiness score: 8/9
+Readiness percentage: 88.89%
+
+Recommended next notebook
+-------------------------
+49_side_balanced_search_guided_self_play.ipynb

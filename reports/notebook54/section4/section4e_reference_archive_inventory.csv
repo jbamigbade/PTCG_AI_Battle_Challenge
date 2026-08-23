@@ -1,0 +1,5 @@
+path,file_name,suffix,size_bytes,card_name_hits,keyword_hits,relevance_score
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\data\raw\kaggle_sample_submission\submission.tar.gz,submission.tar.gz,.gz,1058289,[],"[""challenge"", ""ptcg"", ""battle""]",8
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission\ptcg_final_agent.zip,ptcg_final_agent.zip,.zip,124458,[],"[""challenge"", ""ptcg"", ""battle""]",5
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission_work\team_jesus_baseline.tar.gz,team_jesus_baseline.tar.gz,.gz,1058382,[],"[""challenge"", ""ptcg"", ""battle""]",3
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission_work\team_jesus_submission.zip,team_jesus_submission.zip,.zip,13626,[],"[""challenge"", ""ptcg"", ""battle""]",3

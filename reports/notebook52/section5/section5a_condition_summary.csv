@@ -1,0 +1,4 @@
+condition_id,scenarios,player_start_scenarios,opponent_start_scenarios,average_player_hp,average_opponent_hp,average_player_energy,average_opponent_energy,average_confidence,fallback_scenarios
+BASELINE,8,4,4,63.75,57.5,2.5,2.5,0.7178333333333333,1
+ENERGY_PRESSURE,8,4,4,63.75,57.5,2.5,0.625,0.7228333333333333,0
+HP_PRESSURE,8,4,4,31.875,57.5,2.5,2.5,0.8041666666666667,0

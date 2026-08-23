@@ -1,0 +1,12 @@
+{
+  "status": "LEGAL_SIGNATURE_REPAIRED_WITH_RESIDUAL_DRIFT",
+  "cases_validated": 184,
+  "signature_value": "Ascension | Quick Attack",
+  "mean_quick_attack_probability_difference": 0.0144782608695652,
+  "maximum_quick_attack_probability_difference": 0.020000000000000018,
+  "mean_ascension_probability_difference": 0.02195652173913044,
+  "maximum_ascension_probability_difference": 0.04000000000000001,
+  "prediction_agreement_rate": 1.0,
+  "exact_probability_agreement": false,
+  "next_stage": "AUDIT_REMAINING_CATEGORICAL_FEATURE_VALUES"
+}

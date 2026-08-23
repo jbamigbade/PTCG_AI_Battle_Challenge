@@ -1,0 +1,9 @@
+expansion_variant_id,evaluation_side,cases,mirror_pairs,source_pairs,source_scenarios,average_acting_energy,average_opposing_energy,minimum_acting_energy,maximum_acting_energy,multi_action_ready_cases
+EEVEE_ENERGY_ADVANTAGE,Opponent,23,23,23,10,3.0,2.0,3.0,3.0,23
+EEVEE_ENERGY_ADVANTAGE,Player,23,23,23,10,3.0,2.0,3.0,3.0,23
+MINIMUM_MULTI_ACTION_ENERGY,Opponent,23,23,23,10,2.0,3.0,2.0,2.0,23
+MINIMUM_MULTI_ACTION_ENERGY,Player,23,23,23,10,2.0,3.0,2.0,2.0,23
+OBSERVED_ENERGY_CONTEXT,Opponent,23,23,23,10,3.0,3.0,3.0,3.0,23
+OBSERVED_ENERGY_CONTEXT,Player,23,23,23,10,3.0,3.0,3.0,3.0,23
+SYMMETRIC_TWO_ENERGY,Opponent,23,23,23,10,2.0,2.0,2.0,2.0,23
+SYMMETRIC_TWO_ENERGY,Player,23,23,23,10,2.0,2.0,2.0,2.0,23

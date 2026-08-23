@@ -1,0 +1,50 @@
+{
+    "simulator_object_bound": false,
+    "simulator_runner_bound": true,
+    "simulator_runner_binding": {
+        "status": "BOUND_MODULE_FUNCTION",
+        "module": "src.adapters",
+        "function": "BattleState",
+        "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+        "score": 4
+    },
+    "candidate_count": 6,
+    "candidates": [
+        {
+            "module": "src.adapters",
+            "function": "BattleState",
+            "score": 4,
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None"
+        },
+        {
+            "module": "src.battle_state",
+            "function": "BattleState",
+            "score": 4,
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None"
+        },
+        {
+            "module": "src.legal_moves",
+            "function": "BattleState",
+            "score": 4,
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None"
+        },
+        {
+            "module": "src.simulator",
+            "function": "BattleState",
+            "score": 4,
+            "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None"
+        },
+        {
+            "module": "src.adapters",
+            "function": "current_player_adapter",
+            "score": 2,
+            "signature": "(battle_state: 'BattleState') -> 'str'"
+        },
+        {
+            "module": "src.battle_state",
+            "function": "PlayerState",
+            "score": 2,
+            "signature": "(active: 'PokemonState', bench: 'List[PokemonState]', prize_cards_remaining: 'int' = 6, hand_size: 'int' = 7) -> None"
+        }
+    ]
+}

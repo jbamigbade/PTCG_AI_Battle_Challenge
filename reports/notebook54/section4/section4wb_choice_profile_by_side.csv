@@ -1,0 +1,3 @@
+acting_side,decisions,forced_decisions,genuine_choice_decisions,no_legal_move_decisions,average_legal_moves,maximum_legal_moves,average_confidence,forced_decision_rate,genuine_choice_rate
+Opponent,92,69,23,0,1.25,2,0.9836521739130434,0.75,0.25
+Player,88,88,0,0,1.0,1,1.0,1.0,0.0

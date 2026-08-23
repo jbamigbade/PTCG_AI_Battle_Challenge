@@ -1,0 +1,18 @@
+{
+    "dataset_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\data\\competitive\\actor_relative_search_expert_dataset.parquet",
+    "total_records": 1000,
+    "total_battles": 380,
+    "train_records": 726,
+    "validation_records": 146,
+    "test_records": 128,
+    "train_battles": 266,
+    "validation_battles": 57,
+    "test_battles": 57,
+    "state_dimension": 8,
+    "move_dimension": 8,
+    "batch_size": 64,
+    "random_seed": 4701,
+    "device": "cpu",
+    "actor_relative": true,
+    "synthetic_labels": 0
+}

@@ -1,0 +1,5214 @@
+code_cell_index,line_number,target_names,assignment_source
+0,177,"[""MODEL_DIR""]","MODEL_DIR = (
+    PROJECT_ROOT
+    / ""models""
+)"
+0,202,"[""NOTEBOOK50_MODEL_DIR""]","NOTEBOOK50_MODEL_DIR = (
+    MODEL_DIR
+    / ""notebook50""
+)"
+0,222,"[""NOTEBOOK53_MODEL_DIR""]","NOTEBOOK53_MODEL_DIR = (
+    MODEL_DIR
+    / ""notebook53""
+)"
+0,237,"[""NOTEBOOK54_MODEL_DIR""]","NOTEBOOK54_MODEL_DIR = (
+    MODEL_DIR
+    / ""notebook54""
+)"
+0,279,"[""required_output_directories""]","required_output_directories = [
+    NOTEBOOK54_REPORT_DIR,
+    NOTEBOOK54_MODEL_DIR,
+    SECTION1_REPORT_DIR,
+    SECTION2_REPORT_DIR,
+    SECTION3_REPORT_DIR,
+    SECTION4_REPORT_DIR,
+    SECTION5_REPORT_DIR,
+    SECTION6_REPORT_DIR,
+    SECTION7_REPORT_DIR,
+]"
+0,304,"[""required_upstream_directories""]","required_upstream_directories = {
+    ""Notebook 50 reports"":
+        NOTEBOOK50_REPORT_DIR,
+
+    ""Notebook 50 models"":
+        NOTEBOOK50_MODEL_DIR,
+
+    ""Notebook 51 reports"":
+        NOTEBOOK51_REPORT_DIR,
+
+    ""Notebook 52 reports"":
+        NOTEBOOK52_REPORT_DIR,
+
+    ""Notebook 53 reports"":
+        NOTEBOOK53_REPORT_DIR,
+
+    ""Notebook 53 models"":
+        NOTEBOOK53_MODEL_DIR,
+
+    ""Source directory"":
+        SRC_DIR,
+}"
+0,403,"[""directory_profile""]","directory_profile = {
+    ""Current directory"":
+        CURRENT_DIRECTORY,
+
+    ""Project root"":
+        PROJECT_ROOT,
+
+    ""Notebook directory"":
+        NOTEBOOK_DIR,
+
+    ""Notebook 50 reports"":
+        NOTEBOOK50_REPORT_DIR,
+
+    ""Notebook 50 models"":
+        NOTEBOOK50_MODEL_DIR,
+
+    ""Notebook 51 reports"":
+        NOTEBOOK51_REPORT_DIR,
+
+    ""Notebook 52 reports"":
+        NOTEBOOK52_REPORT_DIR,
+
+    ""Notebook 53 reports"":
+        NOTEBOOK53_REPORT_DIR,
+
+    ""Notebook 53 models"":
+        NOTEBOOK53_MODEL_DIR,
+
+    ""Notebook 54 reports"":
+        NOTEBOOK54_REPORT_DIR,
+
+    ""Notebook 54 models"":
+        NOTEBOOK54_MODEL_DIR,
+
+    ""Source directory"":
+        SRC_DIR,
+}"
+0,515,"[""section1a_summary""]","section1a_summary = {
+    ""status"":
+        ""IMPORTS_AND_PROJECT_PATHS_READY"",
+
+    ""notebook_number"":
+        NOTEBOOK_NUMBER,
+
+    ""notebook_name"":
+        NOTEBOOK_NAME,
+
+    ""random_seed"":
+        RANDOM_SEED,
+
+    ""project_root"":
+        str(
+            PROJECT_ROOT
+        ),
+
+    ""notebook53_reports_available"":
+        bool(
+            NOTEBOOK53_REPORT_DIR.exists()
+        ),
+
+    ""notebook53_models_available"":
+        bool(
+            NOTEBOOK53_MODEL_DIR.exists()
+        ),
+
+    ""source_directory_available"":
+        bool(
+            SRC_DIR.exists()
+        ),
+
+    ""notebook54_report_directory"":
+        str(
+            NOTEBOOK54_REPORT_DIR
+        ),
+
+    ""notebook54_model_directory"":
+        str(
+            NOTEBOOK54_MODEL_DIR
+        ),
+
+    ""next_stage"":
+        ""NOTEBOOK53_HANDOFF_VALIDATION"",
+}"
+0,128,"[""expected_children""]","expected_children = [
+            candidate_directory / ""notebooks"",
+            candidate_directory / ""reports"",
+            candidate_directory / ""models"",
+            candidate_directory / ""src"",
+        ]"
+1,75,"[""NOTEBOOK53_MODEL_FILE""]","NOTEBOOK53_MODEL_FILE = (
+    NOTEBOOK53_MODEL_DIR
+    / ""legality_aware_random_forest.joblib""
+)"
+1,80,"[""NOTEBOOK53_PREPROCESSOR_FILE""]","NOTEBOOK53_PREPROCESSOR_FILE = (
+    NOTEBOOK53_MODEL_DIR
+    / ""legality_aware_preprocessor.joblib""
+)"
+1,85,"[""NOTEBOOK53_FEATURE_NAMES_FILE""]","NOTEBOOK53_FEATURE_NAMES_FILE = (
+    NOTEBOOK53_MODEL_DIR
+    / ""legality_aware_encoded_feature_names.json""
+)"
+1,90,"[""NOTEBOOK53_RAW_SCHEMA_FILE""]","NOTEBOOK53_RAW_SCHEMA_FILE = (
+    NOTEBOOK53_MODEL_DIR
+    / ""legality_aware_raw_feature_schema.json""
+)"
+1,95,"[""NOTEBOOK53_ADAPTER_METADATA_FILE""]","NOTEBOOK53_ADAPTER_METADATA_FILE = (
+    NOTEBOOK53_MODEL_DIR
+    / ""legality_aware_policy_adapter_metadata.json""
+)"
+1,101,"[""required_notebook53_artifacts""]","required_notebook53_artifacts = {
+    ""handoff_manifest"":
+        NOTEBOOK53_HANDOFF_MANIFEST_FILE,
+
+    ""final_summary"":
+        NOTEBOOK53_FINAL_SUMMARY_FILE,
+
+    ""validation_checks"":
+        NOTEBOOK53_VALIDATION_CHECKS_FILE,
+
+    ""final_profile"":
+        NOTEBOOK53_FINAL_PROFILE_FILE,
+
+    ""optimization_targets"":
+        NOTEBOOK53_OPTIMIZATION_TARGETS_FILE,
+
+    ""replay_summary"":
+        NOTEBOOK53_REPLAY_SUMMARY_FILE,
+
+    ""replay_battles"":
+        NOTEBOOK53_REPLAY_BATTLES_FILE,
+
+    ""replay_turns"":
+        NOTEBOOK53_REPLAY_TURNS_FILE,
+
+    ""policy_history"":
+        NOTEBOOK53_POLICY_HISTORY_FILE,
+
+    ""benchmark_comparison"":
+        NOTEBOOK53_BENCHMARK_COMPARISON_FILE,
+
+    ""legality_aware_model"":
+        NOTEBOOK53_MODEL_FILE,
+
+    ""preprocessor"":
+        NOTEBOOK53_PREPROCESSOR_FILE,
+
+    ""encoded_feature_names"":
+        NOTEBOOK53_FEATURE_NAMES_FILE,
+
+    ""raw_feature_schema"":
+        NOTEBOOK53_RAW_SCHEMA_FILE,
+
+    ""adapter_metadata"":
+        NOTEBOOK53_ADAPTER_METADATA_FILE,
+}"
+1,365,"[""notebook52_raw_legality_rate""]","notebook52_raw_legality_rate = float(
+    notebook53_handoff_manifest[
+        ""notebook52_raw_legality_rate""
+    ]
+)"
+1,371,"[""notebook53_raw_legality_rate""]","notebook53_raw_legality_rate = float(
+    notebook53_handoff_manifest[
+        ""notebook53_raw_legality_rate""
+    ]
+)"
+1,425,"[""multi_action_model_decisions""]","multi_action_model_decisions = int(
+    notebook53_handoff_manifest[
+        ""multi_action_model_decisions""
+    ]
+)"
+1,500,"[""handoff_profile""]","handoff_profile = {
+    ""Status"":
+        handoff_status,
+
+    ""Source dataset rows"":
+        source_dataset_rows,
+
+    ""Raw feature count"":
+        raw_feature_count,
+
+    ""Encoded feature count"":
+        encoded_feature_count,
+
+    ""Policy class count"":
+        policy_class_count,
+
+    ""Training rows"":
+        training_rows,
+
+    ""Validation rows"":
+        validation_rows,
+
+    ""Test rows"":
+        test_rows,
+
+    ""Validation accuracy"":
+        validation_accuracy,
+
+    ""Test accuracy"":
+        test_accuracy,
+
+    ""Notebook 52 raw legality"":
+        notebook52_raw_legality_rate,
+
+    ""Notebook 53 raw legality"":
+        notebook53_raw_legality_rate,
+
+    ""Notebook 52 masking rate"":
+        notebook52_masking_rate,
+
+    ""Notebook 53 raw masking rate"":
+        notebook53_raw_masking_rate,
+
+    ""Tournament battles"":
+        tournament_battles,
+
+    ""Player wins"":
+        tournament_player_wins,
+
+    ""Opponent wins"":
+        tournament_opponent_wins,
+
+    ""Draws"":
+        tournament_draws,
+
+    ""Policy decisions"":
+        tournament_policy_decisions,
+
+    ""Single-action direct decisions"":
+        single_action_direct_decisions,
+
+    ""Multi-action model decisions"":
+        multi_action_model_decisions,
+
+    ""Selector decisions"":
+        selector_decisions,
+
+    ""Fallback decisions"":
+        fallback_decisions,
+
+    ""Winner agreement rate"":
+        winner_agreement_rate,
+
+    ""Turn-count agreement rate"":
+        turn_count_agreement_rate,
+
+    ""Validation checks passed"":
+        validation_checks_passed,
+
+    ""Validation checks failed"":
+        validation_checks_failed,
+
+    ""Primary optimization target"":
+        primary_optimization_target,
+
+    ""Weakest condition"":
+        weakest_condition,
+
+    ""Next notebook"":
+        next_notebook,
+
+    ""Next stage"":
+        next_stage,
+}"
+1,1002,"[""section1b_summary""]","section1b_summary = {
+    ""status"":
+        ""NOTEBOOK53_HANDOFF_VALIDATED"",
+
+    ""handoff_status"":
+        handoff_status,
+
+    ""source_dataset_rows"":
+        source_dataset_rows,
+
+    ""raw_feature_count"":
+        raw_feature_count,
+
+    ""encoded_feature_count"":
+        encoded_feature_count,
+
+    ""policy_class_count"":
+        policy_class_count,
+
+    ""training_rows"":
+        training_rows,
+
+    ""validation_rows"":
+        validation_rows,
+
+    ""test_rows"":
+        test_rows,
+
+    ""validation_accuracy"":
+        validation_accuracy,
+
+    ""test_accuracy"":
+        test_accuracy,
+
+    ""notebook52_raw_legality_rate"":
+        notebook52_raw_legality_rate,
+
+    ""notebook53_raw_legality_rate"":
+        notebook53_raw_legality_rate,
+
+    ""notebook52_masking_rate"":
+        notebook52_masking_rate,
+
+    ""notebook53_raw_masking_rate"":
+        notebook53_raw_masking_rate,
+
+    ""tournament_battles"":
+        tournament_battles,
+
+    ""tournament_player_wins"":
+        tournament_player_wins,
+
+    ""tournament_opponent_wins"":
+        tournament_opponent_wins,
+
+    ""tournament_draws"":
+        tournament_draws,
+
+    ""tournament_policy_decisions"":
+        tournament_policy_decisions,
+
+    ""single_action_direct_decisions"":
+        single_action_direct_decisions,
+
+    ""multi_action_model_decisions"":
+        multi_action_model_decisions,
+
+    ""selector_decisions"":
+        selector_decisions,
+
+    ""fallback_decisions"":
+        fallback_decisions,
+
+    ""winner_agreement_rate"":
+        winner_agreement_rate,
+
+    ""turn_count_agreement_rate"":
+        turn_count_agreement_rate,
+
+    ""validation_checks_passed"":
+        section1b_checks_passed,
+
+    ""validation_checks_failed"":
+        section1b_checks_failed,
+
+    ""primary_optimization_target"":
+        primary_optimization_target,
+
+    ""weakest_condition"":
+        weakest_condition,
+
+    ""ready_for_strength_analysis"":
+        True,
+
+    ""next_stage"":
+        ""STRATEGIC_DECISION_OPPORTUNITY_ANALYSIS"",
+}"
+4,774,"[""recommended_architecture""]","recommended_architecture = (
+        ""Preserve Notebook 53 legality routing, then introduce a ""
+        ""state-aware action generator and tactical value evaluator ""
+        ""for newly available Player actions.""
+    )"
+6,266,"[""generated_tokens""]","generated_tokens = [
+        ""\\reports\\"",
+        ""\\models\\"",
+        ""\\scripts\\"",
+        ""\\notebooks\\"",
+    ]"
+7,1577,"[""section4b_summary""]","section4b_summary = {
+    ""status"":
+        ""ISOLATED_CANDIDATE_TRANSITION_VALIDATION_COMPLETE"",
+
+    ""candidate_moves_tested"":
+        int(
+            len(
+                section4b_candidate_transitions_df
+            )
+        ),
+
+    ""candidate_transitions_passed"":
+        int(
+            section4b_candidate_transitions_df[
+                ""transition_passed""
+            ].sum()
+        ),
+
+    ""candidate_transitions_failed"":
+        int(
+            (
+                ~section4b_candidate_transitions_df[
+                    ""transition_passed""
+                ]
+            ).sum()
+        ),
+
+    ""transition_pass_rate"":
+        float(
+            section4b_candidate_transitions_df[
+                ""transition_passed""
+            ].mean()
+        ),
+
+    ""cards_tested"":
+        sorted(
+            section4b_candidate_transitions_df[
+                ""card_name""
+            ].unique().tolist()
+        ),
+
+    ""minimum_candidate_damage"":
+        float(
+            section4b_candidate_transitions_df[
+                ""declared_damage""
+            ].min()
+        ),
+
+    ""maximum_candidate_damage"":
+        float(
+            section4b_candidate_transitions_df[
+                ""declared_damage""
+            ].max()
+        ),
+
+    ""damage_improving_candidates"":
+        damage_improving_candidate_count,
+
+    ""cards_with_damage_improvement"":
+        cards_with_damage_improvement,
+
+    ""unsupported_fields_required"":
+        False,
+
+    ""tournament_move_sets_modified"":
+        False,
+
+    ""strategic_legality_confirmed"":
+        False,
+
+    ""validation_checks_passed"":
+        section4b_checks_passed,
+
+    ""validation_checks_failed"":
+        section4b_checks_failed,
+
+    ""ready_for_counterfactual_scenario_testing"":
+        bool(
+            section4b_checks_failed == 0
+            and damage_improving_candidate_count > 0
+        ),
+
+    ""next_stage"":
+        ""COUNTERFACTUAL_SCENARIO_MOVE_EVALUATION"",
+}"
+9,52,"[""EXCLUDED_SOURCE_MARKERS""]","EXCLUDED_SOURCE_MARKERS = [
+    ""\\reports\\"",
+    ""\\models\\"",
+    ""\\notebooks\\"",
+    ""\\scripts\\"",
+    ""\\competitive\\"",
+    ""expert_dataset"",
+    ""training"",
+    ""validation"",
+    ""prediction"",
+    ""policy_history"",
+    ""replay"",
+    ""curriculum"",
+    ""feature_matrix"",
+    ""encoded_feature"",
+    ""benchmark_comparison"",
+    ""search_expert"",
+    ""actor_relative"",
+]"
+26,1101,"[""section4s_validation_checks_df""]","section4s_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""section4r_nan_energy_confirmed"",
+
+            ""passed"":
+                (
+                    pd.isna(
+                        section4r_summary[
+                            ""player_average_energy""
+                        ]
+                    )
+                    and pd.isna(
+                        section4r_summary[
+                            ""opponent_average_energy""
+                        ]
+                    )
+                ),
+
+            ""value"":
+                {
+                    ""player"":
+                        section4r_summary[
+                            ""player_average_energy""
+                        ],
+
+                    ""opponent"":
+                        section4r_summary[
+                            ""opponent_average_energy""
+                        ],
+                },
+
+            ""expected"":
+                ""Both missing"",
+        },
+        {
+            ""check"":
+                ""decision_rows_preserved"",
+
+            ""passed"":
+                len(
+                    section4s_decision_df
+                )
+                ==
+                len(
+                    notebook53_policy_history_df
+                ),
+
+            ""value"":
+                len(
+                    section4s_decision_df
+                ),
+
+            ""expected"":
+                len(
+                    notebook53_policy_history_df
+                ),
+        },
+        {
+            ""check"":
+                ""repaired_attack_rows_reconcile"",
+
+            ""passed"":
+                len(
+                    section4s_repaired_energy_readiness_df
+                )
+                ==
+                len(
+                    section4r_energy_readiness_df
+                ),
+
+            ""value"":
+                len(
+                    section4s_repaired_energy_readiness_df
+                ),
+
+            ""expected"":
+                len(
+                    section4r_energy_readiness_df
+                ),
+        },
+        {
+            ""check"":
+                ""unknown_energy_not_classified_as_insufficient"",
+
+            ""passed"":
+                section4s_repaired_energy_readiness_df.loc[
+                    ~section4s_repaired_energy_readiness_df[
+                        ""energy_observed""
+                    ],
+                    ""energy_status"",
+                ]
+                .eq(
+                    ""ENERGY_UNKNOWN""
+                )
+                .all(),
+
+            ""value"":
+                True,
+
+            ""expected"":
+                True,
+        },
+        {
+            ""check"":
+                ""repaired_diagnosis_recognized"",
+
+            ""passed"":
+                repaired_diagnosis
+                in {
+                    ""ENERGY_EVIDENCE_NOT_RECORDED"",
+                    ""ENERGY_EVIDENCE_PARTIALLY_OBSERVED"",
+                    ""CONFIRMED_ENERGY_COST_ENFORCEMENT_INCONSISTENCY"",
+                    ""CONFIRMED_LEGAL_ACTION_GENERATOR_RESTRICTION"",
+                    ""NO_CONFIRMED_ENERGY_OR_LEGALITY_INCONSISTENCY"",
+                },
+
+            ""value"":
+                repaired_diagnosis,
+
+            ""expected"":
+                ""Recognized repaired diagnosis"",
+        },
+        {
+            ""check"":
+                ""section4r_diagnosis_not_carried_forward_uncritically"",
+
+            ""passed"":
+                not (
+                    repaired_diagnosis
+                    ==
+                    ""CONFIRMED_ENERGY_COST_ENFORCEMENT_INCONSISTENCY""
+                    and overall_energy_observation_rate == 0.0
+                ),
+
+            ""value"":
+                repaired_diagnosis,
+
+            ""expected"":
+                ""No confirmed inconsistency without observations"",
+        },
+        {
+            ""check"":
+                ""verified_action_catalog_unchanged"",
+
+            ""passed"":
+                len(
+                    section4q_verified_printed_actions_df
+                ) == 5,
+
+            ""value"":
+                len(
+                    section4q_verified_printed_actions_df
+                ),
+
+            ""expected"":
+                5,
+        },
+        {
+            ""check"":
+                ""frozen_benchmark_unchanged"",
+
+            ""passed"":
+                (
+                    len(
+                        notebook53_replay_battles_df
+                    ) == 24
+                    and len(
+                        notebook53_policy_history_df
+                    ) == 210
+                ),
+
+            ""value"":
+                {
+                    ""battles"":
+                        len(
+                            notebook53_replay_battles_df
+                        ),
+
+                    ""decisions"":
+                        len(
+                            notebook53_policy_history_df
+                        ),
+                },
+
+            ""expected"":
+                {
+                    ""battles"": 24,
+                    ""decisions"": 210,
+                },
+        },
+    ]
+)"
+26,1024,"[""repaired_diagnosis""]","repaired_diagnosis = (
+        ""NO_CONFIRMED_ENERGY_OR_LEGALITY_INCONSISTENCY""
+    )"
+29,30,"[""MODEL53_DIR_4U""]","MODEL53_DIR_4U = PROJECT_ROOT_4U / ""models"" / ""notebook53"""
+29,188,"[""MODEL53_FILE_4U""]","MODEL53_FILE_4U = (
+    MODEL53_DIR_4U
+    / ""legality_aware_random_forest.joblib""
+)"
+29,193,"[""PREPROCESSOR53_FILE_4U""]","PREPROCESSOR53_FILE_4U = (
+    MODEL53_DIR_4U
+    / ""legality_aware_preprocessor.joblib""
+)"
+29,198,"[""ENCODED_FEATURES53_FILE_4U""]","ENCODED_FEATURES53_FILE_4U = (
+    MODEL53_DIR_4U
+    / ""legality_aware_encoded_feature_names.json""
+)"
+29,203,"[""RAW_SCHEMA53_FILE_4U""]","RAW_SCHEMA53_FILE_4U = (
+    MODEL53_DIR_4U
+    / ""legality_aware_raw_feature_schema.json""
+)"
+29,218,"[""notebook53_legality_model""]","notebook53_legality_model = joblib.load(
+    MODEL53_FILE_4U
+)"
+29,222,"[""notebook53_preprocessor""]","notebook53_preprocessor = joblib.load(
+    PREPROCESSOR53_FILE_4U
+)"
+29,260,"[""adapter_search_terms""]","adapter_search_terms = [
+    ""class LegalityAwarePolicyAgent"",
+    ""class LegalityAwareBattleRunnerAgent"",
+    ""notebook53_battle_runner_agent"",
+]"
+29,323,"[""runtime_symbols""]","runtime_symbols = {
+    ""PokemonState"": PokemonState,
+    ""PlayerState"": PlayerState,
+    ""BattleState"": BattleState,
+    ""AgentDecision"": AgentDecision,
+    ""apply_move"": apply_move,
+    ""PokemonBattleAgent"": PokemonBattleAgent,
+    ""simulate_ai_battle"": simulate_ai_battle,
+    ""determine_battle_winner"": determine_battle_winner,
+    ""create_battle_transcript"": create_battle_transcript,
+    ""notebook53_legality_model"": notebook53_legality_model,
+    ""notebook53_preprocessor"": notebook53_preprocessor,
+}"
+29,381,"[""section4ub_summary""]","section4ub_summary = {
+    ""status"":
+        ""SIMULATOR_RUNTIME_REBOUND"",
+
+    ""notebook53_path"":
+        str(NOTEBOOK53_PATH_4U),
+
+    ""runtime_package"":
+        RUNTIME_PACKAGE_NAME_4U,
+
+    ""runtime_symbols_loaded"":
+        int(
+            section4ub_runtime_symbols_df[
+                ""exists""
+            ].sum()
+        ),
+
+    ""adapter_definition_cells_found"":
+        int(
+            len(
+                section4ub_adapter_cells_df
+            )
+        ),
+
+    ""model_loaded"":
+        notebook53_legality_model is not None,
+
+    ""preprocessor_loaded"":
+        notebook53_preprocessor is not None,
+
+    ""production_adapter_instantiated"":
+        False,
+
+    ""simulator_source_modified"":
+        False,
+
+    ""frozen_benchmark_modified"":
+        False,
+
+    ""next_stage"":
+        ""PRODUCTION_ADAPTER_RECONSTRUCTION"",
+}"
+29,231,"[""notebook53_encoded_feature_names""]","notebook53_encoded_feature_names = json.load(
+        file
+    )"
+30,43,"[""TARGET_ADAPTER_CLASSES_4UC""]","TARGET_ADAPTER_CLASSES_4UC = {
+    ""LegalityAwarePolicyAgent"",
+    ""LegalityAwareBattleRunnerAgent"",
+}"
+30,390,"[""LegalityAwarePolicyAgent""]","LegalityAwarePolicyAgent = (
+    adapter_namespace_4uc.get(
+        ""LegalityAwarePolicyAgent""
+    )
+)"
+30,396,"[""LegalityAwareBattleRunnerAgent""]","LegalityAwareBattleRunnerAgent = (
+    adapter_namespace_4uc.get(
+        ""LegalityAwareBattleRunnerAgent""
+    )
+)"
+30,706,"[""section4uc_validation_checks_df""]","section4uc_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""policy_class_reconstructed"",
+
+            ""passed"":
+                inspect.isclass(
+                    LegalityAwarePolicyAgent
+                ),
+
+            ""value"":
+                type(
+                    LegalityAwarePolicyAgent
+                ).__name__,
+
+            ""expected"":
+                ""type"",
+        },
+        {
+            ""check"":
+                ""runner_class_reconstructed"",
+
+            ""passed"":
+                inspect.isclass(
+                    LegalityAwareBattleRunnerAgent
+                ),
+
+            ""value"":
+                type(
+                    LegalityAwareBattleRunnerAgent
+                ).__name__,
+
+            ""expected"":
+                ""type"",
+        },
+        {
+            ""check"":
+                ""target_definition_count_valid"",
+
+            ""passed"":
+                len(
+                    target_class_inventory_df
+                ) == 2,
+
+            ""value"":
+                len(
+                    target_class_inventory_df
+                ),
+
+            ""expected"":
+                2,
+        },
+        {
+            ""check"":
+                ""definition_execution_completed"",
+
+            ""passed"":
+                definition_execution_error_4uc is None,
+
+            ""value"":
+                (
+                    """"
+                    if definition_execution_error_4uc is None
+                    else str(
+                        definition_execution_error_4uc
+                    )
+                ),
+
+            ""expected"":
+                ""No execution error"",
+        },
+        {
+            ""check"":
+                ""class_profile_complete"",
+
+            ""passed"":
+                set(
+                    section4uc_reconstructed_classes_df[
+                        ""class_name""
+                    ]
+                )
+                ==
+                TARGET_ADAPTER_CLASSES_4UC,
+
+            ""value"":
+                sorted(
+                    section4uc_reconstructed_classes_df[
+                        ""class_name""
+                    ].tolist()
+                ),
+
+            ""expected"":
+                sorted(
+                    TARGET_ADAPTER_CLASSES_4UC
+                ),
+        },
+        {
+            ""check"":
+                ""model_artifact_preserved"",
+
+            ""passed"":
+                notebook53_legality_model is not None,
+
+            ""value"":
+                type(
+                    notebook53_legality_model
+                ).__name__,
+
+            ""expected"":
+                ""Loaded frozen model"",
+        },
+        {
+            ""check"":
+                ""preprocessor_artifact_preserved"",
+
+            ""passed"":
+                notebook53_preprocessor is not None,
+
+            ""value"":
+                type(
+                    notebook53_preprocessor
+                ).__name__,
+
+            ""expected"":
+                ""Loaded frozen preprocessor"",
+        },
+        {
+            ""check"":
+                ""frozen_benchmark_unchanged"",
+
+            ""passed"":
+                (
+                    len(
+                        notebook53_replay_battles_df
+                    ) == 24
+                    and len(
+                        notebook53_policy_history_df
+                    ) == 210
+                ),
+
+            ""value"":
+                {
+                    ""battles"":
+                        len(
+                            notebook53_replay_battles_df
+                        ),
+
+                    ""decisions"":
+                        len(
+                            notebook53_policy_history_df
+                        ),
+                },
+
+            ""expected"":
+                {
+                    ""battles"":
+                        24,
+
+                    ""decisions"":
+                        210,
+                },
+        },
+    ]
+)"
+30,983,"[""section4uc_summary""]","section4uc_summary = {
+    ""status"":
+        ""PRODUCTION_ADAPTER_DEFINITIONS_RECONSTRUCTED"",
+
+    ""reusable_definitions_processed"":
+        int(
+            len(
+                section4uc_definition_inventory_df
+            )
+        ),
+
+    ""target_adapter_classes_reconstructed"":
+        2,
+
+    ""policy_class"":
+        ""LegalityAwarePolicyAgent"",
+
+    ""runner_class"":
+        ""LegalityAwareBattleRunnerAgent"",
+
+    ""definition_errors"":
+        int(
+            len(
+                section4uc_definition_errors_df
+            )
+        ),
+
+    ""policy_constructor_signature"":
+        str(
+            inspect.signature(
+                LegalityAwarePolicyAgent
+            )
+        ),
+
+    ""runner_constructor_signature"":
+        str(
+            inspect.signature(
+                LegalityAwareBattleRunnerAgent
+            )
+        ),
+
+    ""adapter_instance_created"":
+        False,
+
+    ""simulator_source_modified"":
+        False,
+
+    ""frozen_benchmark_modified"":
+        False,
+
+    ""validation_checks_passed"":
+        section4uc_checks_passed,
+
+    ""validation_checks_failed"":
+        section4uc_checks_failed,
+
+    ""next_stage"":
+        ""PRODUCTION_ADAPTER_INSTANTIATION"",
+}"
+31,185,"[""search_terms""]","search_terms = [
+    ""LegalityAwarePolicyAgent"",
+    ""LegalityAwareBattleRunnerAgent"",
+    ""battle_runner_agent"",
+    ""policy_adapter"",
+    ""runner_agent"",
+    ""class "",
+]"
+31,66,"[""adapter_related""]","adapter_related = any(
+            token in normalized_name
+            for token in [
+                ""policy"",
+                ""runner"",
+                ""agent"",
+                ""adapter"",
+                ""legality"",
+                ""battle"",
+                ""move"",
+                ""decision"",
+            ]
+        )"
+32,166,"[""notebook54_legality_policy""]","notebook54_legality_policy = (
+    LegalityAwarePolicyAgent(
+        model=notebook53_legality_model,
+        preprocessor=notebook53_preprocessor,
+        side_mode=""PRESERVE"",
+        agent_name=""Notebook54InstrumentedLegalityAwarePolicy"",
+    )
+)"
+32,185,"[""notebook53_policy""]",notebook53_policy = notebook54_legality_policy
+32,192,"[""notebook54_battle_runner_agent""]","notebook54_battle_runner_agent = (
+    LegalityAwareBattleRunnerAgent(
+        policy_agent=notebook54_legality_policy,
+        default_search_depth=0,
+    )
+)"
+32,315,"[""section4ud_policy_attributes_df""]","section4ud_policy_attributes_df = pd.DataFrame(
+    public_instance_attribute_profile(
+        notebook54_legality_policy
+    )
+)"
+32,470,"[""policy_statistics_before""]","policy_statistics_before = (
+    notebook54_legality_policy.statistics()
+)"
+32,479,"[""section4ud_initial_statistics_df""]","section4ud_initial_statistics_df = pd.DataFrame(
+    [
+        {
+            ""object_name"":
+                ""notebook54_legality_policy"",
+
+            ""object_type"":
+                type(
+                    notebook54_legality_policy
+                ).__name__,
+
+            ""statistics"":
+                policy_statistics_before,
+        },
+        {
+            ""object_name"":
+                ""notebook54_battle_runner_agent"",
+
+            ""object_type"":
+                type(
+                    notebook54_battle_runner_agent
+                ).__name__,
+
+            ""statistics"":
+                runner_statistics_before,
+        },
+    ]
+)"
+32,522,"[""policy_statistics_after_reset""]","policy_statistics_after_reset = (
+    notebook54_legality_policy.statistics()
+)"
+32,531,"[""section4ud_reset_statistics_df""]","section4ud_reset_statistics_df = pd.DataFrame(
+    [
+        {
+            ""object_name"":
+                ""notebook54_legality_policy"",
+
+            ""statistics_after_reset"":
+                policy_statistics_after_reset,
+        },
+        {
+            ""object_name"":
+                ""notebook54_battle_runner_agent"",
+
+            ""statistics_after_reset"":
+                runner_statistics_after_reset,
+        },
+    ]
+)"
+32,564,"[""policy_model_reference""]","policy_model_reference = getattr(
+    notebook54_legality_policy,
+    ""model"",
+    None,
+)"
+32,570,"[""policy_preprocessor_reference""]","policy_preprocessor_reference = getattr(
+    notebook54_legality_policy,
+    ""preprocessor"",
+    None,
+)"
+32,577,"[""model_identity_preserved""]","model_identity_preserved = (
+    policy_model_reference
+    is notebook53_legality_model
+)"
+32,582,"[""preprocessor_identity_preserved""]","preprocessor_identity_preserved = (
+    policy_preprocessor_reference
+    is notebook53_preprocessor
+)"
+32,588,"[""section4ud_artifact_binding_df""]","section4ud_artifact_binding_df = pd.DataFrame(
+    [
+        {
+            ""binding_name"":
+                ""Frozen legality-aware model"",
+
+            ""expected_type"":
+                type(
+                    notebook53_legality_model
+                ).__name__,
+
+            ""bound_type"":
+                type(
+                    policy_model_reference
+                ).__name__,
+
+            ""same_object_identity"":
+                bool(
+                    model_identity_preserved
+                ),
+        },
+        {
+            ""binding_name"":
+                ""Frozen legality-aware preprocessor"",
+
+            ""expected_type"":
+                type(
+                    notebook53_preprocessor
+                ).__name__,
+
+            ""bound_type"":
+                type(
+                    policy_preprocessor_reference
+                ).__name__,
+
+            ""same_object_identity"":
+                bool(
+                    preprocessor_identity_preserved
+                ),
+        },
+    ]
+)"
+32,650,"[""resolved_side_mode""]","resolved_side_mode = getattr(
+    notebook54_legality_policy,
+    ""side_mode"",
+    None,
+)"
+32,656,"[""resolved_agent_name""]","resolved_agent_name = getattr(
+    notebook54_legality_policy,
+    ""agent_name"",
+    None,
+)"
+32,675,"[""section4ud_configuration_df""]","section4ud_configuration_df = pd.DataFrame(
+    [
+        {
+            ""configuration"":
+                ""policy_side_mode"",
+
+            ""value"":
+                resolved_side_mode,
+
+            ""expected"":
+                ""PRESERVE"",
+
+            ""matches_expected"":
+                resolved_side_mode
+                == ""PRESERVE"",
+        },
+        {
+            ""configuration"":
+                ""policy_agent_name"",
+
+            ""value"":
+                resolved_agent_name,
+
+            ""expected"":
+                ""Notebook54InstrumentedLegalityAwarePolicy"",
+
+            ""matches_expected"":
+                resolved_agent_name
+                ==
+                ""Notebook54InstrumentedLegalityAwarePolicy"",
+        },
+        {
+            ""configuration"":
+                ""runner_default_search_depth"",
+
+            ""value"":
+                resolved_default_search_depth,
+
+            ""expected"":
+                0,
+
+            ""matches_expected"":
+                resolved_default_search_depth
+                == 0,
+        },
+        {
+            ""configuration"":
+                ""runner_policy_binding"",
+
+            ""value"":
+                type(
+                    resolved_policy_agent
+                ).__name__,
+
+            ""expected"":
+                ""LegalityAwarePolicyAgent"",
+
+            ""matches_expected"":
+                resolved_policy_agent
+                is notebook54_legality_policy,
+        },
+    ]
+)"
+32,817,"[""policy_instance_created""]","policy_instance_created = isinstance(
+    notebook54_legality_policy,
+    LegalityAwarePolicyAgent,
+)"
+32,822,"[""runner_instance_created""]","runner_instance_created = isinstance(
+    notebook54_battle_runner_agent,
+    LegalityAwareBattleRunnerAgent,
+)"
+32,877,"[""section4ud_validation_checks_df""]","section4ud_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""policy_instance_created"",
+
+            ""passed"":
+                policy_instance_created,
+
+            ""value"":
+                type(
+                    notebook54_legality_policy
+                ).__name__,
+
+            ""expected"":
+                ""LegalityAwarePolicyAgent"",
+        },
+        {
+            ""check"":
+                ""runner_instance_created"",
+
+            ""passed"":
+                runner_instance_created,
+
+            ""value"":
+                type(
+                    notebook54_battle_runner_agent
+                ).__name__,
+
+            ""expected"":
+                ""LegalityAwareBattleRunnerAgent"",
+        },
+        {
+            ""check"":
+                ""policy_model_identity_preserved"",
+
+            ""passed"":
+                model_identity_preserved,
+
+            ""value"":
+                model_identity_preserved,
+
+            ""expected"":
+                True,
+        },
+        {
+            ""check"":
+                ""policy_preprocessor_identity_preserved"",
+
+            ""passed"":
+                preprocessor_identity_preserved,
+
+            ""value"":
+                preprocessor_identity_preserved,
+
+            ""expected"":
+                True,
+        },
+        {
+            ""check"":
+                ""all_required_interfaces_callable"",
+
+            ""passed"":
+                all_interfaces_callable,
+
+            ""value"":
+                int(
+                    section4ud_interface_profile_df[
+                        ""callable""
+                    ].sum()
+                ),
+
+            ""expected"":
+                int(
+                    len(
+                        section4ud_interface_profile_df
+                    )
+                ),
+        },
+        {
+            ""check"":
+                ""configuration_valid"",
+
+            ""passed"":
+                configuration_valid,
+
+            ""value"":
+                int(
+                    section4ud_configuration_df[
+                        ""matches_expected""
+                    ].sum()
+                ),
+
+            ""expected"":
+                int(
+                    len(
+                        section4ud_configuration_df
+                    )
+                ),
+        },
+        {
+            ""check"":
+                ""frozen_artifact_hashes_unchanged"",
+
+            ""passed"":
+                all_artifacts_unchanged,
+
+            ""value"":
+                int(
+                    section4ud_frozen_artifacts_df[
+                        ""artifact_unchanged""
+                    ].sum()
+                ),
+
+            ""expected"":
+                int(
+                    len(
+                        section4ud_frozen_artifacts_df
+                    )
+                ),
+        },
+        {
+            ""check"":
+                ""initial_statistics_available"",
+
+            ""passed"":
+                isinstance(
+                    policy_statistics_before,
+                    dict,
+                )
+                and isinstance(
+                    runner_statistics_before,
+                    dict,
+                ),
+
+            ""value"":
+                {
+                    ""policy"":
+                        type(
+                            policy_statistics_before
+                        ).__name__,
+
+                    ""runner"":
+                        type(
+                            runner_statistics_before
+                        ).__name__,
+                },
+
+            ""expected"":
+                {
+                    ""policy"":
+                        ""dict"",
+
+                    ""runner"":
+                        ""dict"",
+                },
+        },
+        {
+            ""check"":
+                ""instantiation_status_recognized"",
+
+            ""passed"":
+                section4ud_instantiation_status
+                in {
+                    ""PRODUCTION_ADAPTER_READY"",
+                    ""PRODUCTION_ADAPTER_INSTANTIATION_INCOMPLETE"",
+                },
+
+            ""value"":
+                section4ud_instantiation_status,
+
+            ""expected"":
+                ""Recognized instantiation status"",
+        },
+        {
+            ""check"":
+                ""frozen_benchmark_unchanged"",
+
+            ""passed"":
+                (
+                    len(
+                        notebook53_replay_battles_df
+                    ) == 24
+                    and len(
+                        notebook53_policy_history_df
+                    ) == 210
+                ),
+
+            ""value"":
+                {
+                    ""battles"":
+                        len(
+                            notebook53_replay_battles_df
+                        ),
+
+                    ""decisions"":
+                        len(
+                            notebook53_policy_history_df
+                        ),
+                },
+
+            ""expected"":
+                {
+                    ""battles"":
+                        24,
+
+                    ""decisions"":
+                        210,
+                },
+        },
+    ]
+)"
+32,1237,"[""section4ud_summary""]","section4ud_summary = {
+    ""status"":
+        ""PRODUCTION_ADAPTER_INSTANTIATION_COMPLETE"",
+
+    ""policy_instance_type"":
+        type(
+            notebook54_legality_policy
+        ).__name__,
+
+    ""runner_instance_type"":
+        type(
+            notebook54_battle_runner_agent
+        ).__name__,
+
+    ""policy_agent_name"":
+        resolved_agent_name,
+
+    ""policy_side_mode"":
+        resolved_side_mode,
+
+    ""runner_default_search_depth"":
+        resolved_default_search_depth,
+
+    ""model_identity_preserved"":
+        bool(
+            model_identity_preserved
+        ),
+
+    ""preprocessor_identity_preserved"":
+        bool(
+            preprocessor_identity_preserved
+        ),
+
+    ""required_interfaces_callable"":
+        bool(
+            all_interfaces_callable
+        ),
+
+    ""frozen_artifacts_unchanged"":
+        bool(
+            all_artifacts_unchanged
+        ),
+
+    ""instantiation_status"":
+        section4ud_instantiation_status,
+
+    ""adapter_instance_created"":
+        True,
+
+    ""instrumented_replay_run"":
+        False,
+
+    ""simulator_source_modified"":
+        False,
+
+    ""tournament_move_sets_modified"":
+        False,
+
+    ""frozen_benchmark_modified"":
+        False,
+
+    ""validation_checks_passed"":
+        section4ud_checks_passed,
+
+    ""validation_checks_failed"":
+        section4ud_checks_failed,
+
+    ""next_stage"":
+        section4ud_next_stage,
+}"
+33,651,"[""section4v_validation_checks_df""]","section4v_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""essential_interfaces_ready"",
+
+            ""passed"":
+                essential_interfaces_ready_4v,
+
+            ""value"":
+                int(
+                    essential_interface_status_4v[
+                        ""callable""
+                    ].sum()
+                ),
+
+            ""expected"":
+                len(
+                    ESSENTIAL_REPLAY_INTERFACES_4V
+                ),
+        },
+        {
+            ""check"":
+                ""frozen_scenario_count_valid"",
+
+            ""passed"":
+                frozen_scenarios_ready_4v,
+
+            ""value"":
+                len(
+                    notebook53_replay_battles_df
+                ),
+
+            ""expected"":
+                24,
+        },
+        {
+            ""check"":
+                ""build_state_signature_resolved"",
+
+            ""passed"":
+                len(
+                    section4v_build_state_parameters_df
+                ) > 0,
+
+            ""value"":
+                str(
+                    build_state_signature_4v
+                ),
+
+            ""expected"":
+                ""Resolvable callable signature"",
+        },
+        {
+            ""check"":
+                ""simulation_signature_resolved"",
+
+            ""passed"":
+                len(
+                    section4v_simulation_parameters_df
+                ) > 0,
+
+            ""value"":
+                str(
+                    simulate_signature_4v
+                ),
+
+            ""expected"":
+                ""Resolvable callable signature"",
+        },
+        {
+            ""check"":
+                ""runtime_energy_observed"",
+
+            ""passed"":
+                energy_extraction_ready_4v,
+
+            ""value"":
+                int(
+                    section4v_runtime_state_probe_df[
+                        ""energy_observed""
+                    ].sum()
+                ),
+
+            ""expected"":
+                2,
+        },
+        {
+            ""check"":
+                ""production_runner_bound"",
+
+            ""passed"":
+                isinstance(
+                    notebook54_battle_runner_agent,
+                    LegalityAwareBattleRunnerAgent,
+                ),
+
+            ""value"":
+                type(
+                    notebook54_battle_runner_agent
+                ).__name__,
+
+            ""expected"":
+                ""LegalityAwareBattleRunnerAgent"",
+        },
+        {
+            ""check"":
+                ""resolution_status_recognized"",
+
+            ""passed"":
+                section4v_resolution_status
+                in {
+                    ""FULL_INSTRUMENTED_REPLAY_INTERFACES_READY"",
+                    ""FULL_INSTRUMENTED_REPLAY_INTERFACES_INCOMPLETE"",
+                },
+
+            ""value"":
+                section4v_resolution_status,
+
+            ""expected"":
+                ""Recognized interface-resolution status"",
+        },
+        {
+            ""check"":
+                ""frozen_benchmark_unchanged"",
+
+            ""passed"":
+                (
+                    len(
+                        notebook53_replay_battles_df
+                    ) == 24
+                    and len(
+                        notebook53_policy_history_df
+                    ) == 210
+                ),
+
+            ""value"":
+                {
+                    ""battles"":
+                        len(
+                            notebook53_replay_battles_df
+                        ),
+
+                    ""decisions"":
+                        len(
+                            notebook53_policy_history_df
+                        ),
+                },
+
+            ""expected"":
+                {
+                    ""battles"": 24,
+                    ""decisions"": 210,
+                },
+        },
+    ]
+)"
+34,233,"[""section4vb_instrumented_agent""]","section4vb_instrumented_agent = (
+    InstrumentedLegalityAwareRunner(
+        notebook54_battle_runner_agent
+    )
+)"
+34,54,"[""policy_agent""]","policy_agent = getattr(
+            self.runner,
+            ""policy_agent"",
+            notebook54_legality_policy,
+        )"
+34,133,"[""confidence_value""]","confidence_value = get_record_field(
+            latest_history_record,
+            [
+                ""confidence"",
+                ""prediction_confidence"",
+                ""selected_probability"",
+            ],
+            np.nan,
+        )"
+35,62,"[""section4vb_model_hash_before""]","section4vb_model_hash_before = file_sha256(
+    MODEL53_FILE_4U
+)"
+35,66,"[""section4vb_preprocessor_hash_before""]","section4vb_preprocessor_hash_before = file_sha256(
+    PREPROCESSOR53_FILE_4U
+)"
+35,70,"[""section4vb_feature_names_hash_before""]","section4vb_feature_names_hash_before = file_sha256(
+    ENCODED_FEATURES53_FILE_4U
+)"
+35,703,"[""section4vb_instrumented_agent""]","section4vb_instrumented_agent = (
+    InstrumentedLegalityAwareRunner(
+        notebook54_battle_runner_agent
+    )
+)"
+35,2149,"[""section4vb_model_hash_after""]","section4vb_model_hash_after = file_sha256(
+    MODEL53_FILE_4U
+)"
+35,2153,"[""section4vb_preprocessor_hash_after""]","section4vb_preprocessor_hash_after = file_sha256(
+    PREPROCESSOR53_FILE_4U
+)"
+35,2157,"[""section4vb_feature_names_hash_after""]","section4vb_feature_names_hash_after = file_sha256(
+    ENCODED_FEATURES53_FILE_4U
+)"
+35,2166,"[""section4vb_frozen_integrity_df""]","section4vb_frozen_integrity_df = pd.DataFrame(
+    [
+        {
+            ""artifact"":
+                ""Legality-aware model"",
+
+            ""sha256_before"":
+                section4vb_model_hash_before,
+
+            ""sha256_after"":
+                section4vb_model_hash_after,
+
+            ""unchanged"":
+                section4vb_model_hash_before
+                ==
+                section4vb_model_hash_after,
+        },
+        {
+            ""artifact"":
+                ""Preprocessor"",
+
+            ""sha256_before"":
+                section4vb_preprocessor_hash_before,
+
+            ""sha256_after"":
+                section4vb_preprocessor_hash_after,
+
+            ""unchanged"":
+                section4vb_preprocessor_hash_before
+                ==
+                section4vb_preprocessor_hash_after,
+        },
+        {
+            ""artifact"":
+                ""Encoded feature names"",
+
+            ""sha256_before"":
+                section4vb_feature_names_hash_before,
+
+            ""sha256_after"":
+                section4vb_feature_names_hash_after,
+
+            ""unchanged"":
+                section4vb_feature_names_hash_before
+                ==
+                section4vb_feature_names_hash_after,
+        },
+        {
+            ""artifact"":
+                ""Raw feature schema"",
+
+            ""sha256_before"":
+                section4vb_schema_hash_before,
+
+            ""sha256_after"":
+                section4vb_schema_hash_after,
+
+            ""unchanged"":
+                section4vb_schema_hash_before
+                ==
+                section4vb_schema_hash_after,
+        },
+    ]
+)"
+35,524,"[""policy_agent""]","policy_agent = getattr(
+            self.runner,
+            ""policy_agent"",
+            notebook54_legality_policy,
+        )"
+35,603,"[""confidence_value""]","confidence_value = get_record_field(
+            latest_history_record,
+            [
+                ""confidence"",
+                ""prediction_confidence"",
+                ""selected_probability"",
+            ],
+            np.nan,
+        )"
+37,283,"[""choose_move_globals""]","choose_move_globals = (
+    notebook54_legality_policy
+    .choose_move
+    .__globals__
+)"
+39,27,"[""section4vb_instrumented_agent""]","section4vb_instrumented_agent = InstrumentedLegalityAwareRunner(
+    notebook54_battle_runner_agent
+)"
+41,353,"[""feature_builder_4vb""]","feature_builder_4vb = globals().get(
+    ""build_legality_aware_feature_row""
+)"
+41,359,"[""feature_builder_4vb""]","feature_builder_4vb = (
+        adapter_namespace_4uc.get(
+            ""build_legality_aware_feature_row""
+        )
+    )"
+42,261,"[""target_feature_lists""]","target_feature_lists = {
+    ""legality_training_numeric_features"",
+    ""legality_training_categorical_features"",
+}"
+42,410,"[""legality_training_numeric_features""]","legality_training_numeric_features = list(
+    recovered_feature_lists[
+        ""legality_training_numeric_features""
+    ]
+)"
+42,416,"[""legality_training_categorical_features""]","legality_training_categorical_features = list(
+    recovered_feature_lists[
+        ""legality_training_categorical_features""
+    ]
+)"
+42,477,"[""PREPROCESS_NUMERIC_FEATURES""]","PREPROCESS_NUMERIC_FEATURES = (
+    list(
+        legality_training_numeric_features
+    )
+    +
+    list(
+        section4vb_action_indicator_features
+    )
+)"
+42,487,"[""PREPROCESS_CATEGORICAL_FEATURES""]","PREPROCESS_CATEGORICAL_FEATURES = list(
+    legality_training_categorical_features
+)"
+42,543,"[""section4vb_final_policy_bindings""]","section4vb_final_policy_bindings = {
+    ""action_feature_name"":
+        action_feature_name,
+
+    ""POLICY_ACTION_CLASSES"":
+        POLICY_ACTION_CLASSES,
+
+    ""training_active_card_action_map"":
+        training_active_card_action_map,
+
+    ""legality_training_numeric_features"":
+        legality_training_numeric_features,
+
+    ""legality_training_categorical_features"":
+        legality_training_categorical_features,
+
+    ""PREPROCESS_NUMERIC_FEATURES"":
+        PREPROCESS_NUMERIC_FEATURES,
+
+    ""PREPROCESS_CATEGORICAL_FEATURES"":
+        PREPROCESS_CATEGORICAL_FEATURES,
+
+    ""PREPROCESS_RAW_FEATURES"":
+        PREPROCESS_RAW_FEATURES,
+}"
+42,668,"[""feature_builder""]","feature_builder = globals().get(
+    ""build_legality_aware_feature_row""
+)"
+42,689,"[""required_feature_builder_globals""]","required_feature_builder_globals = [
+    ""action_feature_name"",
+    ""POLICY_ACTION_CLASSES"",
+    ""training_active_card_action_map"",
+    ""legality_training_numeric_features"",
+    ""legality_training_categorical_features"",
+    ""PREPROCESS_NUMERIC_FEATURES"",
+    ""PREPROCESS_CATEGORICAL_FEATURES"",
+    ""PREPROCESS_RAW_FEATURES"",
+]"
+42,766,"[""section4vb_final_runtime_bootstrap_summary""]","section4vb_final_runtime_bootstrap_summary = {
+    ""status"":
+        ""POLICY_FEATURE_RUNTIME_DEPENDENCIES_RESTORED"",
+
+    ""policy_action_classes"":
+        int(
+            len(
+                POLICY_ACTION_CLASSES
+            )
+        ),
+
+    ""active_card_action_map_entries"":
+        int(
+            len(
+                training_active_card_action_map
+            )
+        ),
+
+    ""base_numeric_features"":
+        int(
+            len(
+                legality_training_numeric_features
+            )
+        ),
+
+    ""action_indicator_features"":
+        int(
+            len(
+                section4vb_action_indicator_features
+            )
+        ),
+
+    ""preprocess_numeric_features"":
+        int(
+            len(
+                PREPROCESS_NUMERIC_FEATURES
+            )
+        ),
+
+    ""preprocess_categorical_features"":
+        int(
+            len(
+                PREPROCESS_CATEGORICAL_FEATURES
+            )
+        ),
+
+    ""raw_preprocess_features"":
+        int(
+            len(
+                PREPROCESS_RAW_FEATURES
+            )
+        ),
+
+    ""feature_builder_ready"":
+        True,
+
+    ""next_stage"":
+        ""SINGLE_BATTLE_INSTRUMENTED_REPLAY_PREFLIGHT"",
+}"
+42,674,"[""feature_builder""]","feature_builder = adapter_namespace_4uc.get(
+        ""build_legality_aware_feature_row""
+    )"
+43,1055,"[""section4vb_instrumented_agent""]","section4vb_instrumented_agent = (
+    InstrumentedLegalityAwareRunner(
+        notebook54_battle_runner_agent
+    )
+)"
+43,831,"[""policy_agent""]","policy_agent = getattr(
+            self.runner,
+            ""policy_agent"",
+            notebook54_legality_policy,
+        )"
+43,913,"[""confidence_value""]","confidence_value = get_record_field(
+            latest_history_record,
+            [
+                ""confidence"",
+                ""prediction_confidence"",
+                ""selected_probability"",
+            ],
+            np.nan,
+        )"
+46,509,"[""feature_builder""]","feature_builder = globals().get(
+    ""build_legality_aware_feature_row""
+)"
+46,515,"[""feature_builder""]","feature_builder = adapter_namespace_4uc.get(
+        ""build_legality_aware_feature_row""
+    )"
+57,189,[],"section4wa_decision_df[
+    ""model_choice_required""
+] = (
+    section4wa_decision_df[
+        ""legal_move_count""
+    ]
+    .fillna(0)
+    .gt(1)
+)"
+57,228,"[""section4wa_side_profile_df""]","section4wa_side_profile_df = (
+    section4wa_decision_df
+    .groupby(
+        ""acting_side"",
+        dropna=False,
+    )
+    .agg(
+        decisions=(
+            ""selected_move"",
+            ""size"",
+        ),
+
+        scenarios=(
+            ""scenario_id"",
+            ""nunique"",
+        ),
+
+        cards_used=(
+            ""acting_card"",
+            ""nunique"",
+        ),
+
+        unique_moves=(
+            ""selected_move"",
+            ""nunique"",
+        ),
+
+        legal_decisions=(
+            ""selected_move_is_legal"",
+            ""sum"",
+        ),
+
+        single_action_decisions=(
+            ""single_legal_move"",
+            ""sum"",
+        ),
+
+        model_choice_decisions=(
+            ""model_choice_required"",
+            ""sum"",
+        ),
+
+        average_legal_moves=(
+            ""legal_move_count"",
+            ""mean"",
+        ),
+
+        average_confidence=(
+            ""confidence"",
+            ""mean"",
+        ),
+
+        average_acting_energy=(
+            ""acting_energy"",
+            ""mean"",
+        ),
+
+        average_energy_difference=(
+            ""energy_difference"",
+            ""mean"",
+        ),
+
+        average_turn_number=(
+            ""turn_number"",
+            ""mean"",
+        ),
+    )
+    .reset_index()
+)"
+57,312,[],"section4wa_side_profile_df[
+    ""model_choice_rate""
+] = (
+    section4wa_side_profile_df[
+        ""model_choice_decisions""
+    ]
+    /
+    section4wa_side_profile_df[
+        ""decisions""
+    ]
+)"
+57,338,"[""section4wa_move_distribution_df""]","section4wa_move_distribution_df = (
+    section4wa_decision_df
+    .groupby(
+        [
+            ""acting_side"",
+            ""selected_move"",
+        ],
+        dropna=False,
+    )
+    .agg(
+        decisions=(
+            ""selected_move"",
+            ""size"",
+        ),
+
+        scenarios=(
+            ""scenario_id"",
+            ""nunique"",
+        ),
+
+        average_confidence=(
+            ""confidence"",
+            ""mean"",
+        ),
+
+        average_energy=(
+            ""acting_energy"",
+            ""mean"",
+        ),
+
+        model_choice_decisions=(
+            ""model_choice_required"",
+            ""sum"",
+        ),
+    )
+    .reset_index()
+)"
+57,510,"[""section4wa_model_choice_df""]","section4wa_model_choice_df = (
+    section4wa_decision_df.loc[
+        section4wa_decision_df[
+            ""model_choice_required""
+        ]
+    ]
+    .copy()
+    .reset_index(drop=True)
+)"
+57,521,"[""section4wa_model_choice_summary_df""]","section4wa_model_choice_summary_df = (
+    section4wa_model_choice_df
+    .groupby(
+        [
+            ""acting_side"",
+            ""acting_card"",
+            ""selected_move"",
+        ],
+        dropna=False,
+    )
+    .agg(
+        decisions=(
+            ""selected_move"",
+            ""size"",
+        ),
+
+        scenarios=(
+            ""scenario_id"",
+            ""nunique"",
+        ),
+
+        average_confidence=(
+            ""confidence"",
+            ""mean"",
+        ),
+
+        minimum_confidence=(
+            ""confidence"",
+            ""min"",
+        ),
+
+        maximum_confidence=(
+            ""confidence"",
+            ""max"",
+        ),
+
+        average_turn=(
+            ""turn_number"",
+            ""mean"",
+        ),
+    )
+    .reset_index()
+    .sort_values(
+        [
+            ""acting_side"",
+            ""decisions"",
+        ],
+        ascending=[
+            True,
+            False,
+        ],
+    )
+    .reset_index(drop=True)
+)"
+57,788,"[""section4wa_asymmetry_summary""]","section4wa_asymmetry_summary = {
+    ""status"":
+        ""PLAYER_ACTION_CHOICE_ASYMMETRY_BASELINE_COMPLETE"",
+
+    ""instrumented_decisions"":
+        int(
+            len(
+                section4wa_decision_df
+            )
+        ),
+
+    ""player_decisions"":
+        int(
+            player_profile_4wa[
+                ""decisions""
+            ]
+        ),
+
+    ""opponent_decisions"":
+        int(
+            opponent_profile_4wa[
+                ""decisions""
+            ]
+        ),
+
+    ""player_model_choice_decisions"":
+        int(
+            player_profile_4wa[
+                ""model_choice_decisions""
+            ]
+        ),
+
+    ""opponent_model_choice_decisions"":
+        int(
+            opponent_profile_4wa[
+                ""model_choice_decisions""
+            ]
+        ),
+
+    ""player_model_choice_rate"":
+        float(
+            player_profile_4wa[
+                ""model_choice_rate""
+            ]
+        ),
+
+    ""opponent_model_choice_rate"":
+        float(
+            opponent_profile_4wa[
+                ""model_choice_rate""
+            ]
+        ),
+
+    ""player_average_confidence"":
+        float(
+            player_profile_4wa[
+                ""average_confidence""
+            ]
+        ),
+
+    ""opponent_average_confidence"":
+        float(
+            opponent_profile_4wa[
+                ""average_confidence""
+            ]
+        ),
+
+    ""all_selected_moves_legal"":
+        bool(
+            section4wa_decision_df[
+                ""selected_move_is_legal""
+            ].all()
+        ),
+
+    ""energy_inconsistency_detected"":
+        False,
+
+    ""next_stage"":
+        ""PLAYER_VERSUS_OPPONENT_DECISION_OPPORTUNITY_DECOMPOSITION"",
+}"
+57,916,"[""SECTION4WA_MODEL_CHOICE_FILE""]","SECTION4WA_MODEL_CHOICE_FILE = (
+    SECTION4WA_REPORT_DIRECTORY
+    /
+    ""section4wa_model_choice_decisions.csv""
+)"
+57,955,"[""section4wa_saved_files""]","section4wa_saved_files = [
+    SECTION4WA_SIDE_PROFILE_FILE,
+    SECTION4WA_MOVE_DISTRIBUTION_FILE,
+    SECTION4WA_ROUTING_PROFILE_FILE,
+    SECTION4WA_MODEL_CHOICE_FILE,
+    SECTION4WA_CONDITION_OUTCOME_FILE,
+]"
+59,1002,"[""SECTION4WC_COMPARISON_METRICS""]","SECTION4WC_COMPARISON_METRICS = [
+    ""selected_move"",
+    ""selected_move_is_legal"",
+    ""selected_probability"",
+    ""prediction_confidence"",
+    ""routing_reason"",
+    ""raw_predicted_action"",
+    ""fallback_used"",
+]"
+59,1035,"[""SECTION4WC_POLICY_COMPARISON_RULES""]","SECTION4WC_POLICY_COMPARISON_RULES = {
+    ""comparison_unit"":
+        ""mirror_pair_id"",
+
+    ""paired_cases_per_unit"":
+        2,
+
+    ""required_evaluation_sides"":
+        [
+            ""Opponent"",
+            ""Player"",
+        ],
+
+    ""primary_outcome"":
+        ""selected_move_agreement"",
+
+    ""secondary_outcomes"":
+        [
+            ""confidence_difference"",
+            ""routing_reason_agreement"",
+            ""legality_agreement"",
+            ""fallback_rate_difference"",
+        ],
+
+    ""state_context_must_match"":
+        True,
+
+    ""only_side_indicator_may_change"":
+        True,
+
+    ""minimum_valid_pairs"":
+        23,
+
+    ""direct_bias_claim_threshold"":
+        ""Requires paired disagreement evidence after opportunity normalization"",
+}"
+59,1142,"[""SECTION4WC_PAIRED_RESULT_COLUMNS""]","SECTION4WC_PAIRED_RESULT_COLUMNS = [
+    ""mirror_pair_id"",
+    ""source_scenario_id"",
+    ""source_condition_id"",
+    ""source_turn_number"",
+    ""acting_card"",
+    ""opposing_card"",
+    ""acting_energy"",
+    ""opposing_energy"",
+    ""legal_moves"",
+    ""opponent_selected_move"",
+    ""player_selected_move"",
+    ""selected_move_agreement"",
+    ""opponent_confidence"",
+    ""player_confidence"",
+    ""confidence_difference_player_minus_opponent"",
+    ""opponent_routing_reason"",
+    ""player_routing_reason"",
+    ""routing_reason_agreement"",
+    ""opponent_move_legal"",
+    ""player_move_legal"",
+    ""legality_agreement"",
+    ""opponent_fallback_used"",
+    ""player_fallback_used"",
+    ""fallback_agreement"",
+    ""pair_valid"",
+]"
+60,22,"[""REQUIRED_SECTION4WD_OBJECTS""]","REQUIRED_SECTION4WD_OBJECTS = [
+    ""section4wc_comparison_design_df"",
+    ""section4wc_pair_validation_df"",
+    ""section4wc_design_summary"",
+    ""section4vb_scenario_source_df"",
+    ""build_replay_battle_state"",
+    ""notebook54_battle_runner_agent"",
+    ""notebook54_legality_policy"",
+    ""get_policy_history_length"",
+    ""get_latest_policy_history_record"",
+    ""get_record_field"",
+    ""ensure_action_name"",
+    ""normalize_legal_move_collection"",
+]"
+60,1474,"[""section4wd_legality_agreement_count""]","section4wd_legality_agreement_count = int(
+    section4wd_paired_results_df[
+        ""legality_agreement""
+    ].astype(bool).sum()
+)"
+60,1569,"[""section4wd_evaluation_summary""]","section4wd_evaluation_summary = {
+    ""status"":
+        ""PAIRED_SIDE_POLICY_EVALUATION_COMPLETE"",
+
+    ""comparison_cases"":
+        int(
+            len(
+                section4wd_case_results_df
+            )
+        ),
+
+    ""mirror_pairs"":
+        int(
+            len(
+                section4wd_paired_results_df
+            )
+        ),
+
+    ""valid_pairs"":
+        section4wd_valid_pair_count,
+
+    ""move_agreement_count"":
+        section4wd_move_agreement_count,
+
+    ""move_disagreement_count"":
+        section4wd_move_disagreement_count,
+
+    ""move_agreement_rate"":
+        section4wd_move_agreement_rate,
+
+    ""routing_agreement_count"":
+        section4wd_routing_agreement_count,
+
+    ""routing_agreement_rate"":
+        section4wd_routing_agreement_rate,
+
+    ""legality_agreement_count"":
+        section4wd_legality_agreement_count,
+
+    ""fallback_agreement_count"":
+        section4wd_fallback_agreement_count,
+
+    ""average_confidence_difference_player_minus_opponent"":
+        section4wd_average_confidence_difference,
+
+    ""average_absolute_confidence_difference"":
+        section4wd_average_absolute_confidence_difference,
+
+    ""maximum_absolute_confidence_difference"":
+        section4wd_maximum_absolute_confidence_difference,
+
+    ""opportunity_normalized_side_bias_diagnosis"":
+        section4wd_side_bias_diagnosis,
+
+    ""opportunity_normalized_side_bias_text"":
+        section4wd_side_bias_text,
+
+    ""all_moves_legal"":
+        bool(
+            section4wd_case_results_df[
+                ""selected_move_is_legal""
+            ].astype(bool).all()
+        ),
+
+    ""all_contexts_matched"":
+        bool(
+            section4wd_paired_results_df[
+                ""context_match""
+            ].astype(bool).all()
+        ),
+
+    ""next_stage"":
+        section4wd_next_stage,
+}"
+60,550,"[""policy_reset_method""]","policy_reset_method = getattr(
+        notebook54_legality_policy,
+        ""reset"",
+        None,
+    )"
+60,564,"[""previous_history_length""]","previous_history_length = (
+        get_policy_history_length(
+            notebook54_legality_policy
+        )
+    )"
+60,579,"[""latest_history_record""]","latest_history_record = (
+        get_latest_policy_history_record(
+            notebook54_legality_policy,
+            previous_history_length,
+        )
+    )"
+60,630,"[""confidence_value""]","confidence_value = get_record_field(
+        latest_history_record,
+        [
+            ""confidence"",
+            ""prediction_confidence"",
+            ""selected_probability"",
+        ],
+        np.nan,
+    )"
+60,655,"[""selected_probability""]","selected_probability = get_record_field(
+        latest_history_record,
+        [
+            ""selected_probability"",
+            ""prediction_probability"",
+            ""confidence"",
+        ],
+        confidence_value,
+    )"
+60,693,"[""raw_predicted_action""]","raw_predicted_action = ensure_action_name(
+        get_record_field(
+            latest_history_record,
+            [
+                ""raw_predicted_action"",
+                ""raw_prediction"",
+                ""predicted_action"",
+                ""model_prediction"",
+            ],
+            """",
+        )
+    )"
+60,1158,"[""legality_agreement""]","legality_agreement = bool(
+        bool(
+            opponent_row[
+                ""selected_move_is_legal""
+            ]
+        )
+        ==
+        bool(
+            player_row[
+                ""selected_move_is_legal""
+            ]
+        )
+    )"
+60,668,"[""selected_probability""]","selected_probability = float(
+            selected_probability
+        )"
+60,1559,"[""section4wd_side_bias_text""]","section4wd_side_bias_text = (
+        ""The paired evaluation contains legality, routing, or execution ""
+        ""differences that prevent a clean side-bias conclusion.""
+    )"
+60,677,"[""selected_probability""]",selected_probability = np.nan
+63,22,"[""REQUIRED_SECTION4WF_OBJECTS""]","REQUIRED_SECTION4WF_OBJECTS = [
+    ""section4we_expanded_design_df"",
+    ""section4we_pair_validation_df"",
+    ""section4we_expansion_summary"",
+    ""section4vb_scenario_source_df"",
+    ""build_replay_battle_state"",
+    ""notebook54_battle_runner_agent"",
+    ""notebook54_legality_policy"",
+    ""get_policy_history_length"",
+    ""get_latest_policy_history_record"",
+    ""get_record_field"",
+    ""ensure_action_name"",
+    ""normalize_legal_move_collection"",
+]"
+63,1507,"[""section4wf_legality_agreement_count""]","section4wf_legality_agreement_count = int(
+    section4wf_paired_results_df[
+        ""legality_agreement""
+    ].astype(bool).sum()
+)"
+63,1546,"[""section4wf_variant_summary_df""]","section4wf_variant_summary_df = (
+    section4wf_paired_results_df
+    .groupby(
+        ""expansion_variant_id"",
+        dropna=False,
+    )
+    .agg(
+        pairs=(
+            ""expanded_pair_id"",
+            ""size"",
+        ),
+
+        valid_pairs=(
+            ""pair_valid"",
+            ""sum"",
+        ),
+
+        move_agreements=(
+            ""selected_move_agreement"",
+            ""sum"",
+        ),
+
+        routing_agreements=(
+            ""routing_reason_agreement"",
+            ""sum"",
+        ),
+
+        legality_agreements=(
+            ""legality_agreement"",
+            ""sum"",
+        ),
+
+        fallback_agreements=(
+            ""fallback_agreement"",
+            ""sum"",
+        ),
+
+        average_confidence_difference=(
+            ""confidence_difference_player_minus_opponent"",
+            ""mean"",
+        ),
+
+        average_absolute_confidence_difference=(
+            ""absolute_confidence_difference"",
+            ""mean"",
+        ),
+
+        maximum_absolute_confidence_difference=(
+            ""absolute_confidence_difference"",
+            ""max"",
+        ),
+    )
+    .reset_index()
+)"
+63,1787,"[""section4wf_evaluation_summary""]","section4wf_evaluation_summary = {
+    ""status"":
+        ""EXPANDED_BALANCED_MULTI_ACTION_POLICY_EVALUATION_COMPLETE"",
+
+    ""comparison_cases"":
+        int(
+            len(
+                section4wf_case_results_df
+            )
+        ),
+
+    ""mirror_pairs"":
+        int(
+            len(
+                section4wf_paired_results_df
+            )
+        ),
+
+    ""valid_pairs"":
+        section4wf_valid_pair_count,
+
+    ""expansion_variants"":
+        int(
+            section4wf_paired_results_df[
+                ""expansion_variant_id""
+            ].nunique()
+        ),
+
+    ""move_agreement_count"":
+        section4wf_move_agreement_count,
+
+    ""move_disagreement_count"":
+        section4wf_move_disagreement_count,
+
+    ""move_agreement_rate"":
+        section4wf_move_agreement_rate,
+
+    ""routing_agreement_count"":
+        section4wf_routing_agreement_count,
+
+    ""routing_agreement_rate"":
+        section4wf_routing_agreement_rate,
+
+    ""legality_agreement_count"":
+        section4wf_legality_agreement_count,
+
+    ""fallback_agreement_count"":
+        section4wf_fallback_agreement_count,
+
+    ""variants_with_move_disagreement"":
+        section4wf_variants_with_disagreement,
+
+    ""average_confidence_difference_player_minus_opponent"":
+        section4wf_average_confidence_difference,
+
+    ""average_absolute_confidence_difference"":
+        section4wf_average_absolute_confidence_difference,
+
+    ""maximum_absolute_confidence_difference"":
+        section4wf_maximum_absolute_confidence_difference,
+
+    ""expanded_opportunity_normalized_diagnosis"":
+        section4wf_diagnosis,
+
+    ""expanded_opportunity_normalized_diagnosis_text"":
+        section4wf_diagnosis_text,
+
+    ""all_moves_legal"":
+        bool(
+            section4wf_case_results_df[
+                ""selected_move_is_legal""
+            ].astype(bool).all()
+        ),
+
+    ""all_contexts_matched"":
+        bool(
+            section4wf_paired_results_df[
+                ""context_match""
+            ].astype(bool).all()
+        ),
+
+    ""next_stage"":
+        section4wf_next_stage,
+}"
+63,558,"[""policy_reset""]","policy_reset = getattr(
+        notebook54_legality_policy,
+        ""reset"",
+        None,
+    )"
+63,572,"[""previous_history_length""]","previous_history_length = get_policy_history_length(
+        notebook54_legality_policy
+    )"
+63,583,"[""latest_history_record""]","latest_history_record = (
+        get_latest_policy_history_record(
+            notebook54_legality_policy,
+            previous_history_length,
+        )
+    )"
+63,634,"[""confidence_value""]","confidence_value = get_record_field(
+        latest_history_record,
+        [
+            ""confidence"",
+            ""prediction_confidence"",
+            ""selected_probability"",
+        ],
+        np.nan,
+    )"
+63,659,"[""selected_probability""]","selected_probability = get_record_field(
+        latest_history_record,
+        [
+            ""selected_probability"",
+            ""prediction_probability"",
+            ""confidence"",
+        ],
+        confidence_value,
+    )"
+63,697,"[""raw_predicted_action""]","raw_predicted_action = ensure_action_name(
+        get_record_field(
+            latest_history_record,
+            [
+                ""raw_predicted_action"",
+                ""raw_prediction"",
+                ""predicted_action"",
+                ""model_prediction"",
+            ],
+            """",
+        )
+    )"
+63,1174,"[""legality_agreement""]","legality_agreement = bool(
+        bool(
+            opponent_row[
+                ""selected_move_is_legal""
+            ]
+        )
+        ==
+        bool(
+            player_row[
+                ""selected_move_is_legal""
+            ]
+        )
+    )"
+63,672,"[""selected_probability""]","selected_probability = float(
+            selected_probability
+        )"
+63,1777,"[""section4wf_diagnosis_text""]","section4wf_diagnosis_text = (
+        ""Legality, execution, context, or routing differences prevent a clean ""
+        ""expanded side-sensitivity conclusion.""
+    )"
+63,681,"[""selected_probability""]",selected_probability = np.nan
+66,67,"[""REQUIRED_SECTION4WH_OBJECTS""]","REQUIRED_SECTION4WH_OBJECTS = [
+    ""section4wg_case_df"",
+    ""section4wg_diversity_summary"",
+    ""notebook54_legality_policy"",
+]"
+66,154,"[""SECTION4WH_MODEL_CANDIDATE_NAMES""]","SECTION4WH_MODEL_CANDIDATE_NAMES = [
+    ""legality_aware_model"",
+    ""legality_model"",
+    ""policy_model"",
+    ""trained_model"",
+    ""model"",
+    ""notebook53_legality_model"",
+    ""notebook54_legality_model"",
+]"
+66,165,"[""SECTION4WH_PREPROCESSOR_CANDIDATE_NAMES""]","SECTION4WH_PREPROCESSOR_CANDIDATE_NAMES = [
+    ""legality_preprocessor"",
+    ""preprocessor"",
+    ""policy_preprocessor"",
+    ""notebook53_preprocessor"",
+    ""notebook54_preprocessor"",
+]"
+66,174,"[""SECTION4WH_FEATURE_NAME_CANDIDATE_NAMES""]","SECTION4WH_FEATURE_NAME_CANDIDATE_NAMES = [
+    ""encoded_feature_names"",
+    ""feature_names"",
+    ""model_feature_names"",
+    ""PREPROCESS_RAW_FEATURES"",
+]"
+66,393,"[""SECTION4WH_MODEL_SOURCE"", ""section4wh_model""]","(
+    SECTION4WH_MODEL_SOURCE,
+    section4wh_model,
+) = resolve_section4wh_model()"
+66,502,"[""SECTION4WH_PREPROCESSOR_SOURCE"", ""section4wh_preprocessor""]","(
+    SECTION4WH_PREPROCESSOR_SOURCE,
+    section4wh_preprocessor,
+) = resolve_section4wh_preprocessor()"
+66,533,"[""section4wh_model_classes""]",section4wh_model_classes = []
+66,551,"[""section4wh_model_interface_df""]","section4wh_model_interface_df = pd.DataFrame(
+    [
+        {
+            ""model_source"":
+                SECTION4WH_MODEL_SOURCE,
+
+            ""model_type"":
+                type(
+                    section4wh_model
+                ).__name__,
+
+            ""has_predict"":
+                hasattr(
+                    section4wh_model,
+                    ""predict"",
+                ),
+
+            ""has_predict_proba"":
+                hasattr(
+                    section4wh_model,
+                    ""predict_proba"",
+                ),
+
+            ""has_decision_function"":
+                hasattr(
+                    section4wh_model,
+                    ""decision_function"",
+                ),
+
+            ""has_feature_importances"":
+                hasattr(
+                    section4wh_model,
+                    ""feature_importances_"",
+                ),
+
+            ""has_coef"":
+                hasattr(
+                    section4wh_model,
+                    ""coef_"",
+                ),
+
+            ""has_classes"":
+                hasattr(
+                    section4wh_model,
+                    ""classes_"",
+                ),
+
+            ""class_count"":
+                len(
+                    section4wh_model_classes
+                ),
+
+            ""classes"":
+                section4wh_model_classes,
+        }
+    ]
+)"
+66,623,"[""normalized_model_classes_4wh""]","normalized_model_classes_4wh = {
+    str(
+        class_name
+    )
+    .strip()
+    .lower()
+    for class_name in section4wh_model_classes
+}"
+66,633,"[""section4wh_quick_attack_class_present""]","section4wh_quick_attack_class_present = (
+    ""quick attack""
+    in normalized_model_classes_4wh
+)"
+66,639,"[""section4wh_ascension_class_present""]","section4wh_ascension_class_present = (
+    ""ascension""
+    in normalized_model_classes_4wh
+)"
+66,645,"[""section4wh_class_coverage_df""]","section4wh_class_coverage_df = pd.DataFrame(
+    [
+        {
+            ""action_name"":
+                ""Quick Attack"",
+
+            ""present_in_model_classes"":
+                section4wh_quick_attack_class_present,
+        },
+        {
+            ""action_name"":
+                ""Ascension"",
+
+            ""present_in_model_classes"":
+                section4wh_ascension_class_present,
+        },
+    ]
+)"
+66,1039,"[""section4wh_feature_importance_support_df""]","section4wh_feature_importance_support_df = pd.DataFrame(
+    [
+        {
+            ""importance_mode"":
+                section4wh_feature_importance_mode,
+
+            ""model_has_feature_importances"":
+                hasattr(
+                    section4wh_model,
+                    ""feature_importances_"",
+                ),
+
+            ""model_has_coefficients"":
+                hasattr(
+                    section4wh_model,
+                    ""coef_"",
+                ),
+
+            ""model_has_predict_proba"":
+                hasattr(
+                    section4wh_model,
+                    ""predict_proba"",
+                ),
+
+            ""preprocessor_available"":
+                section4wh_preprocessor
+                is not None,
+        }
+    ]
+)"
+66,1084,"[""section4wh_probability_interface_available""]","section4wh_probability_interface_available = bool(
+    hasattr(
+        section4wh_model,
+        ""predict_proba"",
+    )
+    or
+    hasattr(
+        section4wh_model,
+        ""decision_function"",
+    )
+)"
+66,1154,"[""section4wh_root_cause_preflight_summary""]","section4wh_root_cause_preflight_summary = {
+    ""status"":
+        ""QUICK_ATTACK_DOMINANCE_ROOT_CAUSE_PREFLIGHT_COMPLETE"",
+
+    ""evaluated_cases"":
+        int(
+            section4wg_diversity_summary[
+                ""evaluated_cases""
+            ]
+        ),
+
+    ""dominant_move"":
+        section4wg_diversity_summary[
+            ""dominant_move""
+        ],
+
+    ""dominant_move_share"":
+        float(
+            section4wg_diversity_summary[
+                ""dominant_move_share""
+            ]
+        ),
+
+    ""ascension_selected_count"":
+        int(
+            section4wg_diversity_summary[
+                ""ascension_count""
+            ]
+        ),
+
+    ""model_source"":
+        SECTION4WH_MODEL_SOURCE,
+
+    ""model_type"":
+        type(
+            section4wh_model
+        ).__name__,
+
+    ""preprocessor_source"":
+        SECTION4WH_PREPROCESSOR_SOURCE,
+
+    ""preprocessor_available"":
+        section4wh_preprocessor
+        is not None,
+
+    ""model_class_count"":
+        int(
+            len(
+                section4wh_model_classes
+            )
+        ),
+
+    ""quick_attack_class_present"":
+        section4wh_quick_attack_class_present,
+
+    ""ascension_class_present"":
+        section4wh_ascension_class_present,
+
+    ""predict_proba_available"":
+        hasattr(
+            section4wh_model,
+            ""predict_proba"",
+        ),
+
+    ""decision_function_available"":
+        hasattr(
+            section4wh_model,
+            ""decision_function"",
+        ),
+
+    ""training_label_evidence_available"":
+        section4wh_training_label_evidence_available,
+
+    ""training_label_dataframe_candidates"":
+        int(
+            len(
+                section4wh_training_label_inventory_df
+            )
+        ),
+
+    ""feature_importance_mode"":
+        section4wh_feature_importance_mode,
+
+    ""root_cause_preflight_diagnosis"":
+        section4wh_root_cause_preflight_diagnosis,
+
+    ""next_stage"":
+        section4wh_next_stage,
+}"
+66,1262,"[""section4wh_validation_checks_df""]","section4wh_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""correct_d_drive_report_directory"",
+
+            ""passed"":
+                (
+                    SECTION4WH_REPORT_DIRECTORY.resolve()
+                    ==
+                    expected_report_root_4wh.resolve()
+                ),
+
+            ""value"":
+                str(
+                    SECTION4WH_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""expected"":
+                str(
+                    expected_report_root_4wh.resolve()
+                ),
+        },
+        {
+            ""check"":
+                ""all_184_cases_confirmed"",
+
+            ""passed"":
+                section4wg_diversity_summary[
+                    ""evaluated_cases""
+                ] == 184,
+
+            ""value"":
+                section4wg_diversity_summary[
+                    ""evaluated_cases""
+                ],
+
+            ""expected"":
+                184,
+        },
+        {
+            ""check"":
+                ""quick_attack_collapse_confirmed"",
+
+            ""passed"":
+                (
+                    section4wg_diversity_summary[
+                        ""quick_attack_count""
+                    ] == 184
+                    and
+                    section4wg_diversity_summary[
+                        ""ascension_count""
+                    ] == 0
+                ),
+
+            ""value"":
+                {
+                    ""quick_attack"":
+                        section4wg_diversity_summary[
+                            ""quick_attack_count""
+                        ],
+
+                    ""ascension"":
+                        section4wg_diversity_summary[
+                            ""ascension_count""
+                        ],
+                },
+
+            ""expected"":
+                {
+                    ""quick_attack"":
+                        184,
+
+                    ""ascension"":
+                        0,
+                },
+        },
+        {
+            ""check"":
+                ""live_policy_model_resolved"",
+
+            ""passed"":
+                section4wh_model is not None,
+
+            ""value"":
+                SECTION4WH_MODEL_SOURCE,
+
+            ""expected"":
+                ""Resolved fitted estimator"",
+        },
+        {
+            ""check"":
+                ""root_cause_branch_resolved"",
+
+            ""passed"":
+                section4wh_root_cause_preflight_diagnosis
+                in {
+                    ""PROBABILITY_AND_TRAINING_DISTRIBUTION_ANALYSIS_READY"",
+                    ""MODEL_SCORE_ANALYSIS_READY_TRAINING_LABEL_RECOVERY_REQUIRED"",
+                    ""TRAINING_DISTRIBUTION_ANALYSIS_READY_MODEL_SCORE_INTERFACE_LIMITED"",
+                    ""ROOT_CAUSE_DEPENDENCY_RECOVERY_REQUIRED"",
+                },
+
+            ""value"":
+                section4wh_root_cause_preflight_diagnosis,
+
+            ""expected"":
+                ""Recognized root-cause preflight diagnosis"",
+        },
+    ]
+)"
+66,1408,"[""SECTION4WH_MODEL_INTERFACE_FILE""]","SECTION4WH_MODEL_INTERFACE_FILE = (
+    SECTION4WH_REPORT_DIRECTORY
+    /
+    ""section4wha_model_interface_profile.csv""
+)"
+66,1501,"[""section4wh_saved_files""]","section4wh_saved_files = [
+    SECTION4WH_RUNTIME_INVENTORY_FILE,
+    SECTION4WH_MODEL_INTERFACE_FILE,
+    SECTION4WH_CLASS_COVERAGE_FILE,
+    SECTION4WH_TRAINING_LABEL_INVENTORY_FILE,
+    SECTION4WH_HISTORY_SCORE_FIELDS_FILE,
+    SECTION4WH_FEATURE_IMPORTANCE_SUPPORT_FILE,
+    SECTION4WH_VALIDATION_FILE,
+    SECTION4WH_SUMMARY_FILE,
+]"
+66,541,"[""section4wh_model_classes""]","section4wh_model_classes = [
+        str(
+            class_name
+        )
+        for class_name in np.asarray(
+            section4wh_model.classes_
+        ).tolist()
+    ]"
+66,858,"[""candidate_value""]","candidate_value = getattr(
+        notebook54_legality_policy,
+        candidate_name,
+        None,
+    )"
+66,1115,"[""section4wh_root_cause_preflight_diagnosis""]","section4wh_root_cause_preflight_diagnosis = (
+        ""PROBABILITY_AND_TRAINING_DISTRIBUTION_ANALYSIS_READY""
+    )"
+66,345,"[""object_value""]","object_value = getattr(
+            notebook54_legality_policy,
+            attribute_name,
+            None,
+        )"
+66,460,"[""object_value""]","object_value = getattr(
+            notebook54_legality_policy,
+            attribute_name,
+            None,
+        )"
+66,1021,"[""section4wh_feature_importance_mode""]","section4wh_feature_importance_mode = (
+        ""LINEAR_MODEL_COEFFICIENTS""
+    )"
+66,1125,"[""section4wh_root_cause_preflight_diagnosis""]","section4wh_root_cause_preflight_diagnosis = (
+        ""MODEL_SCORE_ANALYSIS_READY_TRAINING_LABEL_RECOVERY_REQUIRED""
+    )"
+66,1135,"[""section4wh_root_cause_preflight_diagnosis""]","section4wh_root_cause_preflight_diagnosis = (
+        ""TRAINING_DISTRIBUTION_ANALYSIS_READY_MODEL_SCORE_INTERFACE_LIMITED""
+    )"
+66,1149,"[""section4wh_next_stage""]","section4wh_next_stage = (
+        ""MODEL_SCORE_AND_TRAINING_LABEL_DEPENDENCY_RECOVERY""
+    )"
+69,18,"[""SECTION4WHB_FEATURE_BUILDER_DEPENDENCIES""]","SECTION4WHB_FEATURE_BUILDER_DEPENDENCIES = [
+    ""get_state_value"",
+    ""get_card_name"",
+    ""get_attached_energy"",
+    ""get_pokemon_damage"",
+    ""extract_move_name"",
+    ""normalize_action_name"",
+    ""canonical_move_signature"",
+    ""classify_turn_phase"",
+    ""classify_energy_band"",
+    ""classify_damage_band"",
+    ""POLICY_ACTION_CLASSES"",
+    ""action_feature_name"",
+    ""training_active_card_action_map"",
+    ""legality_training_numeric_features"",
+    ""legality_training_categorical_features"",
+    ""PREPROCESS_RAW_FEATURES"",
+]"
+69,438,"[""section4whb_test_feature_df""]","section4whb_test_feature_df = (
+    build_legality_aware_feature_row(
+        battle_state=section4whb_test_state,
+        legal_moves=section4whb_test_design_row[
+            ""legal_moves""
+        ],
+        side_mode=""PRESERVE"",
+    )
+)"
+69,188,"[""feature_row""]","feature_row = {
+        ""turn_number"":
+            float(
+                get_state_value(
+                    battle_state,
+                    ""turn_number"",
+                    1,
+                )
+            ),
+
+        ""player_energy"":
+            player_energy,
+
+        ""opponent_energy"":
+            opponent_energy,
+
+        ""player_damage"":
+            player_damage,
+
+        ""opponent_damage"":
+            opponent_damage,
+
+        ""prize_cards_remaining"":
+            float(
+                get_state_value(
+                    player_state,
+                    ""prize_cards_remaining"",
+                    6,
+                )
+            ),
+
+        ""hand_size"":
+            float(
+                get_state_value(
+                    player_state,
+                    ""hand_size"",
+                    7,
+                )
+            ),
+
+        ""recomputed_legal_move_count"":
+            float(
+                legal_move_count
+            ),
+
+        ""acting_energy"":
+            acting_energy,
+
+        ""defending_energy"":
+            defending_energy,
+
+        ""energy_difference"":
+            acting_energy
+            -
+            defending_energy,
+
+        ""absolute_energy_difference"":
+            abs(
+                acting_energy
+                -
+                defending_energy
+            ),
+
+        ""acting_damage"":
+            acting_damage,
+
+        ""defending_damage"":
+            defending_damage,
+
+        ""damage_difference"":
+            acting_damage
+            -
+            defending_damage,
+
+        ""absolute_damage_difference"":
+            abs(
+                acting_damage
+                -
+                defending_damage
+            ),
+
+        ""single_legal_move_flag"":
+            int(
+                legal_move_count == 1
+            ),
+
+        ""multi_legal_move_flag"":
+            int(
+                legal_move_count > 1
+            ),
+
+        ""model_choice_required_flag"":
+            int(
+                legal_move_count > 1
+            ),
+
+        ""current_side"":
+            current_side,
+
+        ""side_mode"":
+            str(
+                side_mode
+            ),
+
+        ""player_card"":
+            player_card,
+
+        ""opponent_card"":
+            opponent_card,
+
+        ""active_card"":
+            active_card,
+
+        ""inactive_card"":
+            inactive_card,
+
+        ""legal_move_signature"":
+            canonical_move_signature(
+                legal_move_names
+            ),
+
+        ""battle_phase"":
+            classify_turn_phase(
+                get_state_value(
+                    battle_state,
+                    ""turn_number"",
+                    1,
+                )
+            ),
+
+        ""energy_band"":
+            classify_energy_band(
+                acting_energy
+            ),
+
+        ""damage_band"":
+            classify_damage_band(
+                acting_damage
+            ),
+    }"
+70,20,"[""REQUIRED_SECTION4WHB_OBJECTS""]","REQUIRED_SECTION4WHB_OBJECTS = [
+    ""section4wh_model"",
+    ""section4wh_preprocessor"",
+    ""section4wh_model_classes"",
+    ""section4wh_training_label_inventory_df"",
+    ""section4wh_root_cause_preflight_summary"",
+    ""section4wf_design_df"",
+    ""build_section4wf_evaluation_state"",
+    ""build_legality_aware_feature_row"",
+    ""NOTEBOOK54_SECTION4_REPORT_DIRECTORY"",
+]"
+70,103,"[""section4whb_model_classes""]","section4whb_model_classes = [
+    str(
+        class_name
+    ).strip()
+    for class_name in section4wh_model_classes
+]"
+70,111,"[""section4whb_normalized_classes""]","section4whb_normalized_classes = [
+    class_name.lower()
+    for class_name in section4whb_model_classes
+]"
+70,141,"[""section4whb_class_position_df""]","section4whb_class_position_df = pd.DataFrame(
+    [
+        {
+            ""action_name"":
+                class_name,
+
+            ""class_index"":
+                int(
+                    class_index
+                ),
+
+            ""target_action"":
+                class_name.lower()
+                in {
+                    ""quick attack"",
+                    ""ascension"",
+                },
+        }
+        for class_index, class_name
+        in enumerate(
+            section4whb_model_classes
+        )
+    ]
+)"
+70,525,"[""section4whb_overall_score_profile_df""]","section4whb_overall_score_profile_df = pd.DataFrame(
+    [
+        {
+            ""action_name"":
+                ""Quick Attack"",
+
+            ""average_probability"":
+                float(
+                    section4whb_score_df[
+                        ""quick_attack_probability""
+                    ].mean()
+                ),
+
+            ""median_probability"":
+                float(
+                    section4whb_score_df[
+                        ""quick_attack_probability""
+                    ].median()
+                ),
+
+            ""minimum_probability"":
+                float(
+                    section4whb_score_df[
+                        ""quick_attack_probability""
+                    ].min()
+                ),
+
+            ""maximum_probability"":
+                float(
+                    section4whb_score_df[
+                        ""quick_attack_probability""
+                    ].max()
+                ),
+
+            ""score_advantage_cases"":
+                int(
+                    section4whb_score_df[
+                        ""quick_attack_score_advantage""
+                    ].astype(bool).sum()
+                ),
+        },
+        {
+            ""action_name"":
+                ""Ascension"",
+
+            ""average_probability"":
+                float(
+                    section4whb_score_df[
+                        ""ascension_probability""
+                    ].mean()
+                ),
+
+            ""median_probability"":
+                float(
+                    section4whb_score_df[
+                        ""ascension_probability""
+                    ].median()
+                ),
+
+            ""minimum_probability"":
+                float(
+                    section4whb_score_df[
+                        ""ascension_probability""
+                    ].min()
+                ),
+
+            ""maximum_probability"":
+                float(
+                    section4whb_score_df[
+                        ""ascension_probability""
+                    ].max()
+                ),
+
+            ""score_advantage_cases"":
+                int(
+                    section4whb_score_df[
+                        ""ascension_score_advantage""
+                    ].astype(bool).sum()
+                ),
+        },
+    ]
+)"
+70,622,"[""section4whb_variant_side_score_df""]","section4whb_variant_side_score_df = (
+    section4whb_score_df
+    .groupby(
+        [
+            ""expansion_variant_id"",
+            ""evaluation_side"",
+        ],
+        dropna=False,
+    )
+    .agg(
+        cases=(
+            ""comparison_case_id"",
+            ""size"",
+        ),
+
+        average_quick_attack_probability=(
+            ""quick_attack_probability"",
+            ""mean"",
+        ),
+
+        average_ascension_probability=(
+            ""ascension_probability"",
+            ""mean"",
+        ),
+
+        average_score_gap=(
+            ""quick_attack_minus_ascension"",
+            ""mean"",
+        ),
+
+        minimum_score_gap=(
+            ""quick_attack_minus_ascension"",
+            ""min"",
+        ),
+
+        maximum_score_gap=(
+            ""quick_attack_minus_ascension"",
+            ""max"",
+        ),
+
+        quick_attack_advantage_cases=(
+            ""quick_attack_score_advantage"",
+            ""sum"",
+        ),
+
+        ascension_advantage_cases=(
+            ""ascension_score_advantage"",
+            ""sum"",
+        ),
+    )
+    .reset_index()
+)"
+70,951,"[""section4whb_feature_names""]",section4whb_feature_names = []
+70,976,"[""section4whb_feature_importances""]","section4whb_feature_importances = np.asarray(
+    section4wh_model.feature_importances_
+)"
+70,1001,"[""section4whb_feature_importance_df""]","section4whb_feature_importance_df = pd.DataFrame(
+    {
+        ""feature_name"":
+            section4whb_feature_names,
+
+        ""feature_importance"":
+            section4whb_feature_importances,
+    }
+)"
+70,1077,"[""section4whb_average_quick_attack_probability""]","section4whb_average_quick_attack_probability = float(
+    section4whb_score_df[
+        ""quick_attack_probability""
+    ].mean()
+)"
+70,1084,"[""section4whb_average_ascension_probability""]","section4whb_average_ascension_probability = float(
+    section4whb_score_df[
+        ""ascension_probability""
+    ].mean()
+)"
+70,1112,"[""section4whb_probability_dominance_complete""]","section4whb_probability_dominance_complete = bool(
+    section4whb_quick_attack_advantage_cases == 184
+)"
+70,1204,"[""section4whb_root_cause_summary""]","section4whb_root_cause_summary = {
+    ""status"":
+        ""QUICK_ATTACK_VERSUS_ASCENSION_SCORE_AND_LABEL_ANALYSIS_COMPLETE"",
+
+    ""evaluated_cases"":
+        int(
+            len(
+                section4whb_score_df
+            )
+        ),
+
+    ""quick_attack_score_advantage_cases"":
+        section4whb_quick_attack_advantage_cases,
+
+    ""ascension_score_advantage_cases"":
+        section4whb_ascension_advantage_cases,
+
+    ""score_tie_cases"":
+        section4whb_score_tie_cases,
+
+    ""average_quick_attack_probability"":
+        section4whb_average_quick_attack_probability,
+
+    ""average_ascension_probability"":
+        section4whb_average_ascension_probability,
+
+    ""average_quick_attack_minus_ascension"":
+        section4whb_average_score_gap,
+
+    ""minimum_quick_attack_minus_ascension"":
+        section4whb_minimum_score_gap,
+
+    ""maximum_quick_attack_minus_ascension"":
+        section4whb_maximum_score_gap,
+
+    ""probability_dominance_complete"":
+        section4whb_probability_dominance_complete,
+
+    ""primary_label_dataframe"":
+        section4whb_primary_label_source,
+
+    ""primary_label_column"":
+        section4whb_primary_label_column,
+
+    ""primary_quick_attack_rows"":
+        section4whb_primary_quick_attack_rows,
+
+    ""primary_ascension_rows"":
+        section4whb_primary_ascension_rows,
+
+    ""primary_quick_attack_target_share"":
+        (
+            section4whb_primary_quick_attack_share
+            if not np.isnan(
+                section4whb_primary_quick_attack_share
+            )
+            else None
+        ),
+
+    ""training_imbalance_detected"":
+        section4whb_training_imbalance_detected,
+
+    ""feature_importance_rows"":
+        int(
+            len(
+                section4whb_feature_importance_df
+            )
+        ),
+
+    ""root_cause_diagnosis"":
+        section4whb_root_cause_diagnosis,
+
+    ""root_cause_diagnosis_text"":
+        section4whb_root_cause_text,
+
+    ""next_stage"":
+        section4whb_next_stage,
+}"
+70,1301,"[""section4whb_validation_checks_df""]","section4whb_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""correct_d_drive_save_directory"",
+
+            ""passed"":
+                (
+                    SECTION4WHB_REPORT_DIRECTORY.resolve()
+                    ==
+                    expected_report_directory_4whb.resolve()
+                ),
+
+            ""value"":
+                str(
+                    SECTION4WHB_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""expected"":
+                str(
+                    expected_report_directory_4whb.resolve()
+                ),
+        },
+        {
+            ""check"":
+                ""all_184_cases_scored"",
+
+            ""passed"":
+                len(
+                    section4whb_score_df
+                ) == 184
+                and
+                section4whb_score_errors_df.empty,
+
+            ""value"":
+                {
+                    ""completed"":
+                        len(
+                            section4whb_score_df
+                        ),
+
+                    ""failed"":
+                        len(
+                            section4whb_score_errors_df
+                        ),
+                },
+
+            ""expected"":
+                {
+                    ""completed"":
+                        184,
+
+                    ""failed"":
+                        0,
+                },
+        },
+        {
+            ""check"":
+                ""probabilities_within_bounds"",
+
+            ""passed"":
+                (
+                    section4whb_score_df[
+                        ""quick_attack_probability""
+                    ].between(
+                        0.0,
+                        1.0,
+                        inclusive=""both"",
+                    ).all()
+                    and
+                    section4whb_score_df[
+                        ""ascension_probability""
+                    ].between(
+                        0.0,
+                        1.0,
+                        inclusive=""both"",
+                    ).all()
+                ),
+
+            ""value"":
+                True,
+
+            ""expected"":
+                True,
+        },
+        {
+            ""check"":
+                ""target_move_classes_resolved"",
+
+            ""passed"":
+                (
+                    SECTION4WHB_QUICK_ATTACK_INDEX
+                    !=
+                    SECTION4WHB_ASCENSION_INDEX
+                ),
+
+            ""value"":
+                {
+                    ""quick_attack_index"":
+                        SECTION4WHB_QUICK_ATTACK_INDEX,
+
+                    ""ascension_index"":
+                        SECTION4WHB_ASCENSION_INDEX,
+                },
+
+            ""expected"":
+                ""Distinct class positions"",
+        },
+        {
+            ""check"":
+                ""root_cause_diagnosis_recognized"",
+
+            ""passed"":
+                section4whb_root_cause_diagnosis
+                in {
+                    ""MODEL_SCORE_DOMINANCE_WITH_TRAINING_LABEL_IMBALANCE"",
+                    ""MODEL_SCORE_DOMINANCE_CONFIRMED_LABEL_CAUSE_NOT_PROVEN"",
+                    ""SEVERE_QUICK_ATTACK_SCORE_CONCENTRATION"",
+                    ""ROUTING_OR_POSTPROCESSING_DOMINANCE_SUSPECTED"",
+                },
+
+            ""value"":
+                section4whb_root_cause_diagnosis,
+
+            ""expected"":
+                ""Recognized Quick Attack root-cause diagnosis"",
+        },
+    ]
+)"
+70,1459,"[""SECTION4WHB_CASE_SCORES_FILE""]","SECTION4WHB_CASE_SCORES_FILE = (
+    SECTION4WHB_REPORT_DIRECTORY
+    /
+    ""section4whb_case_probability_scores.csv""
+)"
+70,187,"[""transformed_features""]","transformed_features = (
+        section4wh_preprocessor.transform(
+            raw_feature_df
+        )
+    )"
+70,991,"[""section4whb_feature_names""]","section4whb_feature_names = [
+        f""feature_{feature_index:04d}""
+        for feature_index in range(
+            len(
+                section4whb_feature_importances
+            )
+        )
+    ]"
+70,1138,"[""section4whb_root_cause_diagnosis""]","section4whb_root_cause_diagnosis = (
+        ""MODEL_SCORE_DOMINANCE_WITH_TRAINING_LABEL_IMBALANCE""
+    )"
+70,1142,"[""section4whb_root_cause_text""]","section4whb_root_cause_text = (
+        ""Quick Attack received a higher model probability than Ascension ""
+        ""in every expanded state. The strongest available label source also ""
+        ""favored Quick Attack, supporting training-distribution imbalance as ""
+        ""a contributing cause.""
+    )"
+70,222,"[""raw_feature_df""]","raw_feature_df = (
+            build_legality_aware_feature_row(
+                battle_state=evaluation_state,
+                legal_moves=legal_moves,
+                side_mode=""PRESERVE"",
+            )
+        )"
+70,238,"[""probability_matrix""]","probability_matrix = (
+            section4wh_model.predict_proba(
+                transformed_features
+            )
+        )"
+70,245,"[""probability_vector""]","probability_vector = np.asarray(
+            probability_matrix
+        )[0]"
+70,250,"[""quick_attack_probability""]","quick_attack_probability = float(
+            probability_vector[
+                SECTION4WHB_QUICK_ATTACK_INDEX
+            ]
+        )"
+70,257,"[""ascension_probability""]","ascension_probability = float(
+            probability_vector[
+                SECTION4WHB_ASCENSION_INDEX
+            ]
+        )"
+70,264,"[""predicted_class_index""]","predicted_class_index = int(
+            np.argmax(
+                probability_vector
+            )
+        )"
+70,271,"[""predicted_action""]","predicted_action = (
+            section4whb_model_classes[
+                predicted_class_index
+            ]
+        )"
+70,278,"[""quick_attack_minus_ascension""]","quick_attack_minus_ascension = float(
+            quick_attack_probability
+            -
+            ascension_probability
+        )"
+70,285,"[""target_probability_total""]","target_probability_total = float(
+            quick_attack_probability
+            +
+            ascension_probability
+        )"
+70,292,"[""conditional_quick_attack_share""]","conditional_quick_attack_share = float(
+            quick_attack_probability
+            /
+            target_probability_total
+        ) if target_probability_total > 0 else np.nan"
+70,299,"[""conditional_ascension_share""]","conditional_ascension_share = float(
+            ascension_probability
+            /
+            target_probability_total
+        ) if target_probability_total > 0 else np.nan"
+70,961,"[""section4whb_feature_names""]","section4whb_feature_names = [
+            str(
+                feature_name
+            )
+            for feature_name in (
+                section4wh_preprocessor
+                .get_feature_names_out()
+            )
+        ]"
+70,1156,"[""section4whb_root_cause_diagnosis""]","section4whb_root_cause_diagnosis = (
+        ""MODEL_SCORE_DOMINANCE_CONFIRMED_LABEL_CAUSE_NOT_PROVEN""
+    )"
+70,1160,"[""section4whb_root_cause_text""]","section4whb_root_cause_text = (
+        ""Quick Attack received a higher model probability than Ascension ""
+        ""in every expanded state. Available label evidence does not yet prove ""
+        ""that training-label imbalance is the cause.""
+    )"
+70,973,"[""section4whb_feature_names""]",section4whb_feature_names = []
+70,1177,"[""section4whb_root_cause_text""]","section4whb_root_cause_text = (
+        ""Quick Attack usually received the higher model score, but Ascension ""
+        ""was competitive in some contexts.""
+    )"
+70,1193,"[""section4whb_root_cause_text""]","section4whb_root_cause_text = (
+        ""Raw model probabilities do not fully explain the observed 184-of-184 ""
+        ""Quick Attack selections. Routing or legality postprocessing requires ""
+        ""additional investigation.""
+    )"
+72,5,"[""feature_names""]","feature_names = (
+    list(PREPROCESS_NUMERIC_FEATURES)
+    + list(PREPROCESS_CATEGORICAL_FEATURES)
+)"
+73,3,"[""transformed_feature_names""]","transformed_feature_names = (
+        notebook53_preprocessor
+        .get_feature_names_out()
+        .tolist()
+    )"
+73,11,"[""transformed_feature_names""]",transformed_feature_names = feature_names
+74,1,"[""feature_importance_df""]","feature_importance_df = pd.DataFrame(
+    {
+        ""feature"":
+            transformed_feature_names,
+
+        ""importance"":
+            notebook53_legality_model.feature_importances_,
+    }
+)"
+82,116,"[""SECTION4WHD_REQUIRED_SCORE_COLUMNS""]","SECTION4WHD_REQUIRED_SCORE_COLUMNS = [
+    ""expanded_pair_id"",
+    ""comparison_case_id"",
+    ""evaluation_side"",
+    ""source_pair_id"",
+    ""source_scenario_id"",
+    ""source_condition_id"",
+    ""source_turn_number"",
+    ""expansion_variant_id"",
+    ""acting_card"",
+    ""opposing_card"",
+    ""acting_energy"",
+    ""opposing_energy"",
+    ""predicted_action"",
+    ""quick_attack_probability"",
+    ""ascension_probability"",
+    ""quick_attack_minus_ascension"",
+    ""quick_attack_score_advantage"",
+    ""ascension_score_advantage"",
+    ""score_tie"",
+]"
+82,336,"[""section4whd_side_summary_df""]","section4whd_side_summary_df = (
+    section4whd_state_attribution_df
+    .groupby(
+        ""evaluation_side"",
+        dropna=False,
+    )
+    .agg(
+        states=(
+            ""comparison_case_id"",
+            ""size"",
+        ),
+
+        average_quick_attack_probability=(
+            ""quick_attack_probability"",
+            ""mean"",
+        ),
+
+        average_ascension_probability=(
+            ""ascension_probability"",
+            ""mean"",
+        ),
+
+        average_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""mean"",
+        ),
+
+        minimum_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""min"",
+        ),
+
+        maximum_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""max"",
+        ),
+
+        quick_attack_advantage_states=(
+            ""quick_attack_score_advantage"",
+            ""sum"",
+        ),
+    )
+    .reset_index()
+)"
+82,395,"[""section4whd_variant_summary_df""]","section4whd_variant_summary_df = (
+    section4whd_state_attribution_df
+    .groupby(
+        ""expansion_variant_id"",
+        dropna=False,
+    )
+    .agg(
+        states=(
+            ""comparison_case_id"",
+            ""size"",
+        ),
+
+        average_acting_energy=(
+            ""acting_energy"",
+            ""mean"",
+        ),
+
+        average_opposing_energy=(
+            ""opposing_energy"",
+            ""mean"",
+        ),
+
+        average_energy_difference=(
+            ""energy_difference"",
+            ""mean"",
+        ),
+
+        average_quick_attack_probability=(
+            ""quick_attack_probability"",
+            ""mean"",
+        ),
+
+        average_ascension_probability=(
+            ""ascension_probability"",
+            ""mean"",
+        ),
+
+        average_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""mean"",
+        ),
+
+        minimum_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""min"",
+        ),
+
+        maximum_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""max"",
+        ),
+    )
+    .reset_index()
+)"
+82,464,"[""section4whd_condition_summary_df""]","section4whd_condition_summary_df = (
+    section4whd_state_attribution_df
+    .groupby(
+        ""source_condition_id"",
+        dropna=False,
+    )
+    .agg(
+        states=(
+            ""comparison_case_id"",
+            ""size"",
+        ),
+
+        scenarios=(
+            ""source_scenario_id"",
+            ""nunique"",
+        ),
+
+        average_turn=(
+            ""source_turn_number"",
+            ""mean"",
+        ),
+
+        average_quick_attack_probability=(
+            ""quick_attack_probability"",
+            ""mean"",
+        ),
+
+        average_ascension_probability=(
+            ""ascension_probability"",
+            ""mean"",
+        ),
+
+        average_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""mean"",
+        ),
+
+        minimum_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""min"",
+        ),
+
+        maximum_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""max"",
+        ),
+    )
+    .reset_index()
+)"
+82,905,"[""section4whd_validation_checks_df""]","section4whd_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""correct_d_drive_report_directory"",
+
+            ""passed"":
+                (
+                    SECTION4WHD_REPORT_DIRECTORY.resolve()
+                    ==
+                    SECTION4WHD_EXPECTED_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""value"":
+                str(
+                    SECTION4WHD_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""expected"":
+                str(
+                    SECTION4WHD_EXPECTED_REPORT_DIRECTORY.resolve()
+                ),
+        },
+        {
+            ""check"":
+                ""all_184_states_analyzed"",
+
+            ""passed"":
+                len(
+                    section4whd_state_attribution_df
+                ) == 184,
+
+            ""value"":
+                len(
+                    section4whd_state_attribution_df
+                ),
+
+            ""expected"":
+                184,
+        },
+        {
+            ""check"":
+                ""all_92_mirror_pairs_analyzed"",
+
+            ""passed"":
+                section4whd_state_attribution_df[
+                    ""expanded_pair_id""
+                ].nunique() == 92,
+
+            ""value"":
+                section4whd_state_attribution_df[
+                    ""expanded_pair_id""
+                ].nunique(),
+
+            ""expected"":
+                92,
+        },
+        {
+            ""check"":
+                ""score_margins_complete"",
+
+            ""passed"":
+                section4whd_state_attribution_df[
+                    ""quick_attack_minus_ascension""
+                ].notna().all(),
+
+            ""value"":
+                int(
+                    section4whd_state_attribution_df[
+                        ""quick_attack_minus_ascension""
+                    ].notna().sum()
+                ),
+
+            ""expected"":
+                184,
+        },
+        {
+            ""check"":
+                ""global_top_feature_attached"",
+
+            ""passed"":
+                section4whd_state_attribution_df[
+                    ""global_top_feature""
+                ].eq(
+                    SECTION4WHD_GLOBAL_TOP_FEATURE
+                ).all(),
+
+            ""value"":
+                SECTION4WHD_GLOBAL_TOP_FEATURE,
+
+            ""expected"":
+                section4whc_summary[
+                    ""top_feature""
+                ],
+        },
+        {
+            ""check"":
+                ""feature_importance_groups_created"",
+
+            ""passed"":
+                not section4whd_feature_group_summary_df.empty,
+
+            ""value"":
+                len(
+                    section4whd_feature_group_summary_df
+                ),
+
+            ""expected"":
+                ""> 0"",
+        },
+        {
+            ""check"":
+                ""attribution_diagnosis_recognized"",
+
+            ""passed"":
+                section4whd_attribution_diagnosis
+                in {
+                    ""LEGALITY_AND_ACTION_IDENTITY_FEATURE_DOMINANCE"",
+                    ""UNIVERSAL_QUICK_ATTACK_MARGIN_WITH_MIXED_FEATURE_DRIVERS"",
+                    ""CONTEXTUAL_QUICK_ATTACK_SCORE_DOMINANCE"",
+                },
+
+            ""value"":
+                section4whd_attribution_diagnosis,
+
+            ""expected"":
+                ""Recognized attribution diagnosis"",
+        },
+    ]
+)"
+82,789,"[""section4whd_attribution_diagnosis""]","section4whd_attribution_diagnosis = (
+        ""LEGALITY_AND_ACTION_IDENTITY_FEATURE_DOMINANCE""
+    )"
+82,793,"[""section4whd_attribution_text""]","section4whd_attribution_text = (
+        ""Quick Attack held a positive score advantage in every evaluated state. ""
+        ""Aggregated legality, legal-signature, and action-compatibility features ""
+        ""carried more global importance than energy, damage, turn, and side-state ""
+        ""features, indicating reliance on action identity and legality structure.""
+    )"
+82,811,"[""section4whd_attribution_text""]","section4whd_attribution_text = (
+        ""Quick Attack held a positive score advantage in every state, but global ""
+        ""importance was distributed across legality and broader state features.""
+    )"
+82,827,"[""section4whd_attribution_text""]","section4whd_attribution_text = (
+        ""Quick Attack dominated overall, but one or more states did not produce ""
+        ""a positive Quick Attack probability margin.""
+    )"
+84,20,"[""SECTION4WHE_REQUIRED_OBJECTS""]","SECTION4WHE_REQUIRED_OBJECTS = [
+    ""section4whb_score_df"",
+    ""section4whd_summary"",
+    ""section4wf_design_df"",
+    ""section4wh_model"",
+    ""section4wh_preprocessor"",
+    ""section4wh_model_classes"",
+    ""build_section4wf_evaluation_state"",
+    ""build_legality_aware_feature_row"",
+    ""NOTEBOOK54_SECTION4_REPORT_DIRECTORY"",
+]"
+84,122,"[""section4whe_model_classes""]","section4whe_model_classes = [
+    str(
+        class_name
+    ).strip()
+    for class_name in section4wh_model_classes
+]"
+84,130,"[""section4whe_normalized_model_classes""]","section4whe_normalized_model_classes = [
+    class_name.lower()
+    for class_name in section4whe_model_classes
+]"
+84,140,"[""SECTION4WHE_QUICK_ATTACK_INDEX""]","SECTION4WHE_QUICK_ATTACK_INDEX = (
+    section4whe_normalized_model_classes.index(
+        ""quick attack""
+    )
+)"
+84,147,"[""SECTION4WHE_ASCENSION_INDEX""]","SECTION4WHE_ASCENSION_INDEX = (
+    section4whe_normalized_model_classes.index(
+        ""ascension""
+    )
+)"
+84,935,"[""section4whe_baseline_scores_df""]","section4whe_baseline_scores_df = (
+    section4whe_counterfactual_results_df.loc[
+        section4whe_counterfactual_results_df[
+            ""counterfactual_id""
+        ].eq(""BASELINE""),
+        [
+            ""comparison_case_id"",
+            ""quick_attack_probability"",
+            ""ascension_probability"",
+            ""quick_attack_minus_ascension"",
+            ""predicted_action"",
+        ],
+    ]
+    .rename(
+        columns={
+            ""quick_attack_probability"":
+                ""baseline_quick_attack_probability"",
+
+            ""ascension_probability"":
+                ""baseline_ascension_probability"",
+
+            ""quick_attack_minus_ascension"":
+                ""baseline_quick_attack_minus_ascension"",
+
+            ""predicted_action"":
+                ""baseline_predicted_action"",
+        }
+    )
+)"
+84,981,[],"section4whe_counterfactual_results_df[
+    ""quick_attack_probability_change""
+] = (
+    section4whe_counterfactual_results_df[
+        ""quick_attack_probability""
+    ]
+    -
+    section4whe_counterfactual_results_df[
+        ""baseline_quick_attack_probability""
+    ]
+)"
+84,994,[],"section4whe_counterfactual_results_df[
+    ""ascension_probability_change""
+] = (
+    section4whe_counterfactual_results_df[
+        ""ascension_probability""
+    ]
+    -
+    section4whe_counterfactual_results_df[
+        ""baseline_ascension_probability""
+    ]
+)"
+84,1033,[],"section4whe_counterfactual_results_df[
+    ""ascension_overtook_quick_attack""
+] = (
+    section4whe_counterfactual_results_df[
+        ""ascension_probability""
+    ]
+    >
+    section4whe_counterfactual_results_df[
+        ""quick_attack_probability""
+    ]
+)"
+84,1050,"[""section4whe_counterfactual_summary_df""]","section4whe_counterfactual_summary_df = (
+    section4whe_counterfactual_results_df
+    .groupby(
+        [
+            ""counterfactual_group"",
+            ""counterfactual_id"",
+        ],
+        dropna=False,
+    )
+    .agg(
+        cases=(
+            ""comparison_case_id"",
+            ""size"",
+        ),
+
+        average_quick_attack_probability=(
+            ""quick_attack_probability"",
+            ""mean"",
+        ),
+
+        average_ascension_probability=(
+            ""ascension_probability"",
+            ""mean"",
+        ),
+
+        average_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""mean"",
+        ),
+
+        minimum_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""min"",
+        ),
+
+        maximum_score_margin=(
+            ""quick_attack_minus_ascension"",
+            ""max"",
+        ),
+
+        average_quick_attack_probability_change=(
+            ""quick_attack_probability_change"",
+            ""mean"",
+        ),
+
+        average_ascension_probability_change=(
+            ""ascension_probability_change"",
+            ""mean"",
+        ),
+
+        average_score_margin_change=(
+            ""score_margin_change"",
+            ""mean"",
+        ),
+
+        minimum_score_margin_change=(
+            ""score_margin_change"",
+            ""min"",
+        ),
+
+        maximum_score_margin_change=(
+            ""score_margin_change"",
+            ""max"",
+        ),
+
+        predicted_action_changes=(
+            ""predicted_action_changed"",
+            ""sum"",
+        ),
+
+        ascension_overtake_cases=(
+            ""ascension_overtook_quick_attack"",
+            ""sum"",
+        ),
+    )
+    .reset_index()
+)"
+84,1591,"[""section4whe_validation_checks_df""]","section4whe_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""correct_d_drive_report_directory"",
+
+            ""passed"":
+                (
+                    SECTION4WHE_REPORT_DIRECTORY.resolve()
+                    ==
+                    SECTION4WHE_EXPECTED_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""value"":
+                str(
+                    SECTION4WHE_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""expected"":
+                str(
+                    SECTION4WHE_EXPECTED_REPORT_DIRECTORY.resolve()
+                ),
+        },
+        {
+            ""check"":
+                ""all_counterfactual_rows_created"",
+
+            ""passed"":
+                len(
+                    section4whe_counterfactual_results_df
+                )
+                ==
+                expected_counterfactual_rows_4whe,
+
+            ""value"":
+                len(
+                    section4whe_counterfactual_results_df
+                ),
+
+            ""expected"":
+                expected_counterfactual_rows_4whe,
+        },
+        {
+            ""check"":
+                ""no_counterfactual_execution_errors"",
+
+            ""passed"":
+                section4whe_counterfactual_errors_df.empty,
+
+            ""value"":
+                len(
+                    section4whe_counterfactual_errors_df
+                ),
+
+            ""expected"":
+                0,
+        },
+        {
+            ""check"":
+                ""all_probability_values_valid"",
+
+            ""passed"":
+                (
+                    section4whe_counterfactual_results_df[
+                        ""quick_attack_probability""
+                    ].between(
+                        0.0,
+                        1.0,
+                        inclusive=""both"",
+                    ).all()
+                    and
+                    section4whe_counterfactual_results_df[
+                        ""ascension_probability""
+                    ].between(
+                        0.0,
+                        1.0,
+                        inclusive=""both"",
+                    ).all()
+                ),
+
+            ""value"":
+                True,
+
+            ""expected"":
+                True,
+        },
+        {
+            ""check"":
+                ""baseline_rows_complete"",
+
+            ""passed"":
+                len(
+                    section4whe_baseline_scores_df
+                ) == 184,
+
+            ""value"":
+                len(
+                    section4whe_baseline_scores_df
+                ),
+
+            ""expected"":
+                184,
+        },
+        {
+            ""check"":
+                ""counterfactual_diagnosis_recognized"",
+
+            ""passed"":
+                section4whe_counterfactual_diagnosis
+                in {
+                    ""LEGAL_STRUCTURE_CAUSAL_EFFECT_DOMINATES"",
+                    ""ENERGY_STATE_CAUSAL_EFFECT_MATCHES_OR_EXCEEDS_LEGAL_STRUCTURE"",
+                    ""MIXED_COUNTERFACTUAL_DRIVER_PATTERN"",
+                },
+
+            ""value"":
+                section4whe_counterfactual_diagnosis,
+
+            ""expected"":
+                ""Recognized counterfactual diagnosis"",
+        },
+    ]
+)"
+84,180,"[""transformed_features""]","transformed_features = (
+        section4wh_preprocessor.transform(
+            raw_feature_df
+        )
+    )"
+84,187,"[""probability_vector""]","probability_vector = np.asarray(
+        section4wh_model.predict_proba(
+            transformed_features
+        )
+    )[0]"
+84,194,"[""quick_attack_probability""]","quick_attack_probability = float(
+        probability_vector[
+            SECTION4WHE_QUICK_ATTACK_INDEX
+        ]
+    )"
+84,201,"[""ascension_probability""]","ascension_probability = float(
+        probability_vector[
+            SECTION4WHE_ASCENSION_INDEX
+        ]
+    )"
+84,208,"[""predicted_action""]","predicted_action = section4whe_model_classes[
+        int(
+            np.argmax(
+                probability_vector
+            )
+        )
+    ]"
+84,1473,"[""section4whe_counterfactual_text""]","section4whe_counterfactual_text = (
+        ""Counterfactual modifications to legal-move structure produced a larger ""
+        ""average effect on the Quick Attack–Ascension score margin than energy ""
+        ""or turn modifications. This supports legal-signature and action-identity ""
+        ""features as the strongest tested cause of model preference.""
+    )"
+84,1491,"[""section4whe_counterfactual_text""]","section4whe_counterfactual_text = (
+        ""Energy modifications produced an effect equal to or larger than the ""
+        ""legal-structure interventions. The model preference may be jointly driven ""
+        ""by legality structure and energy state.""
+    )"
+84,655,"[""raw_feature_df""]","raw_feature_df = (
+                build_legality_aware_feature_row(
+                    battle_state=evaluation_state,
+                    legal_moves=counterfactual_legal_moves,
+                    side_mode=""PRESERVE"",
+                )
+            )"
+86,345,"[""SECTION4WHF_REMEDIATION_STRATEGIES""]","SECTION4WHF_REMEDIATION_STRATEGIES = [
+    {
+        ""strategy_id"":
+            ""R0_CURRENT_BASELINE"",
+
+        ""strategy_name"":
+            ""Current 64-feature policy"",
+
+        ""strategy_type"":
+            ""CONTROL"",
+
+        ""remove_feature_families"":
+            [],
+
+        ""retain_feature_families"":
+            ""ALL"",
+
+        ""training_adjustment"":
+            ""None"",
+
+        ""purpose"":
+            ""Preserve the existing model as the experimental control."",
+
+        ""risk_level"":
+            ""NONE"",
+
+        ""recommended_for_execution"":
+            True,
+    },
+    {
+        ""strategy_id"":
+            ""R1_REMOVE_LEGAL_SIGNATURE"",
+
+        ""strategy_name"":
+            ""Remove encoded legal-move signatures"",
+
+        ""strategy_type"":
+            ""FEATURE_ABLATION"",
+
+        ""remove_feature_families"":
+            [
+                ""LEGAL_MOVE_SIGNATURE"",
+            ],
+
+        ""retain_feature_families"":
+            ""ALL_OTHERS"",
+
+        ""training_adjustment"":
+            ""Retrain with identical labels, split, seed, and estimator settings."",
+
+        ""purpose"":
+            (
+                ""Test whether the model can choose actions without memorizing ""
+                ""legal-move combinations.""
+            ),
+
+        ""risk_level"":
+            ""LOW"",
+
+        ""recommended_for_execution"":
+            True,
+    },
+    {
+        ""strategy_id"":
+            ""R2_REMOVE_SIGNATURE_AND_COMPATIBILITY"",
+
+        ""strategy_name"":
+            ""Remove signatures and card-action compatibility flags"",
+
+        ""strategy_type"":
+            ""FEATURE_ABLATION"",
+
+        ""remove_feature_families"":
+            [
+                ""LEGAL_MOVE_SIGNATURE"",
+                ""CARD_ACTION_COMPATIBILITY"",
+            ],
+
+        ""retain_feature_families"":
+            ""ALL_OTHERS"",
+
+        ""training_adjustment"":
+            ""Retrain with identical labels, split, seed, and estimator settings."",
+
+        ""purpose"":
+            (
+                ""Measure dependence on both move-combination identity and ""
+                ""card-specific move-compatibility shortcuts.""
+            ),
+
+        ""risk_level"":
+            ""MODERATE"",
+
+        ""recommended_for_execution"":
+            True,
+    },
+    {
+        ""strategy_id"":
+            ""R3_STATE_CENTRIC_POLICY"",
+
+        ""strategy_name"":
+            ""State-centric policy with minimal legality structure"",
+
+        ""strategy_type"":
+            ""FEATURE_REDESIGN"",
+
+        ""remove_feature_families"":
+            [
+                ""LEGAL_MOVE_SIGNATURE"",
+                ""CARD_ACTION_COMPATIBILITY"",
+                ""LEGAL_ACTION_FLAG"",
+            ],
+
+        ""retain_feature_families"":
+            [
+                ""LEGAL_CHOICE_STRUCTURE"",
+                ""CARD_IDENTITY"",
+                ""ENERGY_STATE"",
+                ""DAMAGE_STATE"",
+                ""TURN_STATE"",
+                ""SIDE_CONTEXT"",
+                ""RESOURCE_STATE"",
+                ""OTHER"",
+            ],
+
+        ""training_adjustment"":
+            (
+                ""Retrain while preserving only aggregate legality-choice fields; ""
+                ""apply exact legal-action filtering outside the classifier.""
+            ),
+
+        ""purpose"":
+            (
+                ""Force the classifier to rely primarily on battle-state context ""
+                ""rather than action-name identity.""
+            ),
+
+        ""risk_level"":
+            ""MODERATE"",
+
+        ""recommended_for_execution"":
+            True,
+    },
+    {
+        ""strategy_id"":
+            ""R4_SIGNATURE_DROPOUT_AUGMENTATION"",
+
+        ""strategy_name"":
+            ""Legal-signature dropout during training"",
+
+        ""strategy_type"":
+            ""TRAINING_AUGMENTATION"",
+
+        ""remove_feature_families"":
+            [],
+
+        ""retain_feature_families"":
+            ""ALL"",
+
+        ""training_adjustment"":
+            (
+                ""Randomly mask legal-signature fields in a controlled proportion ""
+                ""of training rows while preserving other state features.""
+            ),
+
+        ""purpose"":
+            (
+                ""Reduce reliance on signature identity without permanently ""
+                ""removing the feature family.""
+            ),
+
+        ""risk_level"":
+            ""MODERATE"",
+
+        ""recommended_for_execution"":
+            False,
+    },
+    {
+        ""strategy_id"":
+            ""R5_BALANCED_ASCENSION_COUNTERFACTUALS"",
+
+        ""strategy_name"":
+            ""Add state-matched Ascension counterfactual training cases"",
+
+        ""strategy_type"":
+            ""CURRICULUM_AUGMENTATION"",
+
+        ""remove_feature_families"":
+            [],
+
+        ""retain_feature_families"":
+            ""ALL"",
+
+        ""training_adjustment"":
+            (
+                ""Add carefully validated states where Ascension is strategically ""
+                ""preferred, while matching card, side, energy, damage, and turn context.""
+            ),
+
+        ""purpose"":
+            (
+                ""Teach the model that multi-action states can legitimately favor ""
+                ""Ascension under appropriate strategic conditions.""
+            ),
+
+        ""risk_level"":
+            ""HIGH"",
+
+        ""recommended_for_execution"":
+            False,
+    },
+]"
+86,831,"[""section4whf_experiment_contract_df""]","section4whf_experiment_contract_df = pd.DataFrame(
+    [
+        {
+            ""contract_item"":
+                ""experimental_control"",
+
+            ""requirement"":
+                ""R0_CURRENT_BASELINE must reproduce the current trained model metrics."",
+
+            ""mandatory"":
+                True,
+        },
+        {
+            ""contract_item"":
+                ""fixed_training_rows"",
+
+            ""requirement"":
+                ""Use identical training and validation rows for R0 through R3."",
+
+            ""mandatory"":
+                True,
+        },
+        {
+            ""contract_item"":
+                ""fixed_random_seed"",
+
+            ""requirement"":
+                ""Use the same Random Forest random_state for every strategy."",
+
+            ""mandatory"":
+                True,
+        },
+        {
+            ""contract_item"":
+                ""fixed_estimator_parameters"",
+
+            ""requirement"":
+                (
+                    ""Keep tree count, depth, class weighting, and all other ""
+                    ""estimator settings unchanged.""
+                ),
+
+            ""mandatory"":
+                True,
+        },
+        {
+            ""contract_item"":
+                ""legal_filter_preserved"",
+
+            ""requirement"":
+                (
+                    ""Legal-action filtering remains an external hard constraint; ""
+                    ""feature ablation must never permit illegal action execution.""
+                ),
+
+            ""mandatory"":
+                True,
+        },
+        {
+            ""contract_item"":
+                ""expanded_evaluation_reused"",
+
+            ""requirement"":
+                (
+                    ""Evaluate every strategy on the same 184 balanced multi-action ""
+                    ""cases and 92 mirrored pairs.""
+                ),
+
+            ""mandatory"":
+                True,
+        },
+        {
+            ""contract_item"":
+                ""selection_diversity_measured"",
+
+            ""requirement"":
+                (
+                    ""Report Quick Attack share, Ascension share, entropy, and ""
+                    ""effective move count.""
+                ),
+
+            ""mandatory"":
+                True,
+        },
+        {
+            ""contract_item"":
+                ""side_neutrality_measured"",
+
+            ""requirement"":
+                (
+                    ""Require mirrored Player/Opponent move and routing agreement.""
+                ),
+
+            ""mandatory"":
+                True,
+        },
+        {
+            ""contract_item"":
+                ""probability_margin_measured"",
+
+            ""requirement"":
+                (
+                    ""Report Quick Attack minus Ascension probability margins ""
+                    ""for all 184 cases.""
+                ),
+
+            ""mandatory"":
+                True,
+        },
+        {
+            ""contract_item"":
+                ""performance_guardrail"",
+
+            ""requirement"":
+                (
+                    ""Do not accept a strategy that improves diversity by materially ""
+                    ""reducing legality, validation accuracy, or battle performance.""
+                ),
+
+            ""mandatory"":
+                True,
+        },
+    ]
+)"
+86,970,"[""section4whf_acceptance_criteria_df""]","section4whf_acceptance_criteria_df = pd.DataFrame(
+    [
+        {
+            ""metric"":
+                ""illegal_selected_actions"",
+
+            ""required_result"":
+                0,
+
+            ""comparison_rule"":
+                ""EQUAL"",
+
+            ""priority"":
+                ""CRITICAL"",
+        },
+        {
+            ""metric"":
+                ""expanded_cases_completed"",
+
+            ""required_result"":
+                184,
+
+            ""comparison_rule"":
+                ""EQUAL"",
+
+            ""priority"":
+                ""CRITICAL"",
+        },
+        {
+            ""metric"":
+                ""mirrored_pairs_completed"",
+
+            ""required_result"":
+                92,
+
+            ""comparison_rule"":
+                ""EQUAL"",
+
+            ""priority"":
+                ""CRITICAL"",
+        },
+        {
+            ""metric"":
+                ""move_agreement_rate_by_side"",
+
+            ""required_result"":
+                1.0,
+
+            ""comparison_rule"":
+                ""AT_LEAST"",
+
+            ""priority"":
+                ""HIGH"",
+        },
+        {
+            ""metric"":
+                ""quick_attack_selection_share"",
+
+            ""required_result"":
+                0.90,
+
+            ""comparison_rule"":
+                ""BELOW"",
+
+            ""priority"":
+                ""HIGH"",
+        },
+        {
+            ""metric"":
+                ""ascension_selection_count"",
+
+            ""required_result"":
+                1,
+
+            ""comparison_rule"":
+                ""AT_LEAST"",
+
+            ""priority"":
+                ""HIGH"",
+        },
+        {
+            ""metric"":
+                ""normalized_move_entropy"",
+
+            ""required_result"":
+                0.10,
+
+            ""comparison_rule"":
+                ""AT_LEAST"",
+
+            ""priority"":
+                ""HIGH"",
+        },
+        {
+            ""metric"":
+                ""average_probability_margin_reduction"",
+
+            ""required_result"":
+                0.05,
+
+            ""comparison_rule"":
+                ""AT_LEAST"",
+
+            ""priority"":
+                ""MEDIUM"",
+        },
+        {
+            ""metric"":
+                ""validation_accuracy_drop"",
+
+            ""required_result"":
+                0.02,
+
+            ""comparison_rule"":
+                ""AT_MOST"",
+
+            ""priority"":
+                ""HIGH"",
+        },
+        {
+            ""metric"":
+                ""battle_win_rate_drop"",
+
+            ""required_result"":
+                0.02,
+
+            ""comparison_rule"":
+                ""AT_MOST"",
+
+            ""priority"":
+                ""CRITICAL"",
+        },
+    ]
+)"
+86,1220,"[""section4whf_design_text""]","section4whf_design_text = (
+    ""Counterfactual testing showed that legal-move structure produced a much ""
+    ""larger score effect than energy or turn state. The recommended first ""
+    ""remediation is therefore a controlled retraining experiment that removes ""
+    ""encoded legal-move-signature features while preserving external hard ""
+    ""legality enforcement. More aggressive compatibility and action-identity ""
+    ""ablations should be tested only after the low-risk signature ablation.""
+)"
+86,1230,"[""section4whf_summary""]","section4whf_summary = {
+    ""status"":
+        ""LEGAL_SIGNATURE_DEPENDENCE_REMEDIATION_DESIGN_COMPLETE"",
+
+    ""baseline_transformed_features"":
+        int(
+            len(
+                section4whf_feature_importance_df
+            )
+        ),
+
+    ""counterfactual_legal_structure_effect"":
+        float(
+            section4whe_summary[
+                ""legal_structure_average_absolute_effect""
+            ]
+        ),
+
+    ""counterfactual_energy_state_effect"":
+        float(
+            section4whe_summary[
+                ""energy_state_average_absolute_effect""
+            ]
+        ),
+
+    ""counterfactual_turn_state_effect"":
+        float(
+            section4whe_summary[
+                ""turn_state_average_absolute_effect""
+            ]
+        ),
+
+    ""candidate_remediation_strategies"":
+        int(
+            len(
+                section4whf_remediation_catalog_df
+            )
+        ),
+
+    ""primary_experiment_strategies"":
+        int(
+            len(
+                SECTION4WHF_PRIMARY_EXPERIMENT_STRATEGIES
+            )
+        ),
+
+    ""primary_recommendation"":
+        section4whf_primary_recommendation,
+
+    ""secondary_recommendation"":
+        section4whf_secondary_recommendation,
+
+    ""legal_filter_preserved"":
+        True,
+
+    ""frozen_original_model_modified"":
+        False,
+
+    ""remediation_design_diagnosis"":
+        section4whf_design_diagnosis,
+
+    ""remediation_design_text"":
+        section4whf_design_text,
+
+    ""next_stage"":
+        ""CONTROLLED_FEATURE_ABLATION_RETRAINING_EXPERIMENT"",
+}"
+86,1314,"[""section4whf_validation_checks_df""]","section4whf_validation_checks_df = pd.DataFrame(
+    [
+        {
+            ""check"":
+                ""correct_d_drive_report_directory"",
+
+            ""passed"":
+                (
+                    SECTION4WHF_REPORT_DIRECTORY.resolve()
+                    ==
+                    SECTION4WHF_EXPECTED_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""value"":
+                str(
+                    SECTION4WHF_REPORT_DIRECTORY.resolve()
+                ),
+
+            ""expected"":
+                str(
+                    SECTION4WHF_EXPECTED_REPORT_DIRECTORY.resolve()
+                ),
+        },
+        {
+            ""check"":
+                ""all_64_features_classified"",
+
+            ""passed"":
+                len(
+                    section4whf_feature_importance_df
+                ) == 64
+                and
+                section4whf_feature_importance_df[
+                    ""feature_family""
+                ].notna().all(),
+
+            ""value"":
+                len(
+                    section4whf_feature_importance_df
+                ),
+
+            ""expected"":
+                64,
+        },
+        {
+            ""check"":
+                ""six_remediation_strategies_defined"",
+
+            ""passed"":
+                len(
+                    section4whf_remediation_catalog_df
+                ) == 6,
+
+            ""value"":
+                len(
+                    section4whf_remediation_catalog_df
+                ),
+
+            ""expected"":
+                6,
+        },
+        {
+            ""check"":
+                ""control_strategy_present"",
+
+            ""passed"":
+                section4whf_remediation_catalog_df[
+                    ""strategy_id""
+                ].eq(
+                    ""R0_CURRENT_BASELINE""
+                ).any(),
+
+            ""value"":
+                True,
+
+            ""expected"":
+                True,
+        },
+        {
+            ""check"":
+                ""primary_signature_ablation_present"",
+
+            ""passed"":
+                section4whf_remediation_catalog_df[
+                    ""strategy_id""
+                ].eq(
+                    ""R1_REMOVE_LEGAL_SIGNATURE""
+                ).any(),
+
+            ""value"":
+                section4whf_primary_recommendation,
+
+            ""expected"":
+                ""R1_REMOVE_LEGAL_SIGNATURE"",
+        },
+        {
+            ""check"":
+                ""legal_enforcement_preserved"",
+
+            ""passed"":
+                section4whf_summary[
+                    ""legal_filter_preserved""
+                ],
+
+            ""value"":
+                section4whf_summary[
+                    ""legal_filter_preserved""
+                ],
+
+            ""expected"":
+                True,
+        },
+        {
+            ""check"":
+                ""original_model_not_modified"",
+
+            ""passed"":
+                not section4whf_summary[
+                    ""frozen_original_model_modified""
+                ],
+
+            ""value"":
+                section4whf_summary[
+                    ""frozen_original_model_modified""
+                ],
+
+            ""expected"":
+                False,
+        },
+        {
+            ""check"":
+                ""remediation_design_ready"",
+
+            ""passed"":
+                section4whf_design_diagnosis
+                ==
+                ""CONTROLLED_FEATURE_ABLATION_RETRAINING_DESIGN_READY"",
+
+            ""value"":
+                section4whf_design_diagnosis,
+
+            ""expected"":
+                ""CONTROLLED_FEATURE_ABLATION_RETRAINING_DESIGN_READY"",
+        },
+    ]
+)"

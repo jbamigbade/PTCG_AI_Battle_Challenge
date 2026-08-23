@@ -1,0 +1,258 @@
+[
+    {
+        "module": "src.simulator",
+        "object_type": "function",
+        "object_name": "apply_move",
+        "categories": "simulator, legal_move",
+        "signature": "(battle_state: 'BattleState', move: 'Move') -> 'BattleState'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.battle_simulation",
+        "object_type": "function",
+        "object_name": "determine_battle_winner",
+        "categories": "simulator",
+        "signature": "(state: 'BattleState') -> 'Optional[str]'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.battle_simulation",
+        "object_type": "function",
+        "object_name": "simulate_ai_battle",
+        "categories": "simulator",
+        "signature": "(initial_state: 'BattleState', agent: 'PokemonBattleAgent', search_depth: 'int' = 6, max_turns: 'int' = 20, verbose: 'bool' = True) -> 'BattleSimulationResult'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.battle_simulation",
+        "object_type": "function",
+        "object_name": "create_battle_transcript",
+        "categories": "simulator",
+        "signature": "(simulation: 'BattleSimulationResult') -> 'str'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.battle_simulation",
+        "object_type": "class",
+        "object_name": "BattleTurnRecord",
+        "categories": "simulator",
+        "signature": "(turn_number: 'int', acting_side: 'str', pokemon_name: 'str', move_name: 'str', damage: 'float', score: 'float', search_depth: 'int', nodes: 'int', player_hp_after: 'float', opponent_hp_after: 'float', next_side: 'str') -> None",
+        "import_status": "success"
+    },
+    {
+        "module": "src.battle_simulation",
+        "object_type": "class",
+        "object_name": "BattleSimulationResult",
+        "categories": "simulator",
+        "signature": "(final_state: 'BattleState', turns: 'list[BattleTurnRecord]' = <factory>, winner: 'Optional[str]' = None, stop_reason: 'str' = '') -> None",
+        "import_status": "success"
+    },
+    {
+        "module": "src.battle_state",
+        "object_type": "class",
+        "object_name": "PokemonState",
+        "categories": "state",
+        "signature": "(card: 'dict', current_hp: 'float', attached_energy: 'int' = 0, status: 'Optional[str]' = None, damage: 'float' = 0.0, is_active: 'bool' = False) -> None",
+        "import_status": "success"
+    },
+    {
+        "module": "src.battle_state",
+        "object_type": "class",
+        "object_name": "PlayerState",
+        "categories": "state",
+        "signature": "(active: 'PokemonState', bench: 'List[PokemonState]', prize_cards_remaining: 'int' = 6, hand_size: 'int' = 7) -> None",
+        "import_status": "success"
+    },
+    {
+        "module": "src.battle_state",
+        "object_type": "class",
+        "object_name": "BattleState",
+        "categories": "simulator, state",
+        "signature": "(player: 'PlayerState', opponent: 'PlayerState', turn_number: 'int', current_player: 'str') -> None",
+        "import_status": "success"
+    },
+    {
+        "module": "src.legal_moves",
+        "object_type": "function",
+        "object_name": "get_legal_moves",
+        "categories": "legal_move",
+        "signature": "(pokemon_state: 'PokemonState') -> 'List[Move]'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.legal_moves",
+        "object_type": "function",
+        "object_name": "get_current_legal_moves",
+        "categories": "legal_move",
+        "signature": "(battle_state: 'BattleState') -> 'List[Move]'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.adapters",
+        "object_type": "function",
+        "object_name": "generate_moves_adapter",
+        "categories": "legal_move",
+        "signature": "(battle_state: 'BattleState')",
+        "import_status": "success"
+    },
+    {
+        "module": "src.adapters",
+        "object_type": "function",
+        "object_name": "evaluate_state_adapter",
+        "categories": "search, state",
+        "signature": "(battle_state: 'BattleState', root_player: 'str') -> 'float'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.adapters",
+        "object_type": "function",
+        "object_name": "terminal_state_adapter",
+        "categories": "simulator, state",
+        "signature": "(battle_state: 'BattleState') -> 'bool'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.adapters",
+        "object_type": "function",
+        "object_name": "pokemon_state_features",
+        "categories": "state",
+        "signature": "(battle_state: 'BattleState') -> 'Tuple[Hashable, ...]'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "function",
+        "object_name": "search_for_time",
+        "categories": "search",
+        "signature": "(self, state, seconds=1.0, verbose=False, max_depth=100, clear_table=True, clear_killers=True, clear_history=True)",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "class",
+        "object_name": "SearchStats",
+        "categories": "search",
+        "signature": "(nodes: 'int' = 0, leaf_nodes: 'int' = 0, terminal_nodes: 'int' = 0, cutoffs: 'int' = 0, transposition_hits: 'int' = 0, transposition_stores: 'int' = 0, transposition_cutoffs: 'int' = 0, killer_hits: 'int' = 0, killer_stores: 'int' = 0, history_hits: 'int' = 0, history_updates: 'int' = 0, completed_depth: 'int' = 0, elapsed_seconds: 'float' = 0.0, depth_nodes: 'Dict[int, int]' = <factory>, depth_times: 'Dict[int, float]' = <factory>) -> None",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "class",
+        "object_name": "SearchResult",
+        "categories": "search",
+        "signature": "(best_move: 'Optional[Move]', score: 'float', completed_depth: 'int', principal_variation: 'List[Move]' = <factory>, stats: 'SearchStats' = <factory>) -> None",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "class",
+        "object_name": "AdvancedSearchEngine",
+        "categories": "search",
+        "signature": "(generate_moves: 'GenerateMovesFn', apply_move: 'ApplyMoveFn', evaluate_state: 'EvaluateFn', is_terminal: 'IsTerminalFn', current_player: 'CurrentPlayerFn', move_to_string: 'Optional[MoveToStringFn]' = None, state_key: 'Optional[Callable[[State], Hashable]]' = None, use_transposition_table: 'bool' = True, move_order_score: 'Optional[MoveOrderScoreFn]' = None, use_move_ordering: 'bool' = True, move_key: 'Optional[MoveKeyFn]' = None, use_killer_moves: 'bool' = True, killer_slots: 'int' = 2, use_history_heuristic: 'bool' = True, history_multiplier: 'float' = 1000.0) -> 'None'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine._default_move_key",
+        "categories": "legal_move",
+        "signature": "(move: 'Move') -> 'Hashable'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine._safe_moves",
+        "categories": "legal_move",
+        "signature": "(self, state: 'State') -> 'List[Move]'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine.clear_killer_moves",
+        "categories": "legal_move",
+        "signature": "(self) -> 'None'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine.killer_move_count",
+        "categories": "legal_move",
+        "signature": "(self) -> 'int'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine._find_transposition_move",
+        "categories": "legal_move",
+        "signature": "(self, key: 'Hashable') -> 'Optional[Move]'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine._moves_equal",
+        "categories": "legal_move",
+        "signature": "(self, first: 'Optional[Move]', second: 'Optional[Move]') -> 'bool'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine._is_killer_move",
+        "categories": "legal_move",
+        "signature": "(self, move: 'Move', ply: 'int') -> 'bool'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine._store_killer_move",
+        "categories": "legal_move",
+        "signature": "(self, move: 'Move', ply: 'int') -> 'None'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine._order_moves",
+        "categories": "legal_move",
+        "signature": "(self, state: 'State', moves: 'Sequence[Move]', root_player: 'Player', ply: 'int', transposition_move: 'Optional[Move]' = None) -> 'List[Move]'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine.preview_move_order",
+        "categories": "legal_move",
+        "signature": "(self, state: 'State', root_player: 'Optional[Player]' = None, ply: 'int' = 0) -> 'List[Move]'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine._alpha_beta",
+        "categories": "search",
+        "signature": "(self, state: 'State', depth: 'int', alpha: 'float', beta: 'float', root_player: 'Player', ply: 'int' = 0) -> 'Tuple[float, List[Move]]'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.advanced_search",
+        "object_type": "method",
+        "object_name": "AdvancedSearchEngine.search_depth",
+        "categories": "search",
+        "signature": "(self, state: 'State', depth: 'int', root_player: 'Optional[Player]' = None, clear_table: 'bool' = True, clear_killers: 'bool' = True, clear_history: 'bool' = True) -> 'SearchResult'",
+        "import_status": "success"
+    },
+    {
+        "module": "src.engine.timer",
+        "object_type": "class",
+        "object_name": "SearchTimeLimit",
+        "categories": "search",
+        "signature": "(max_seconds: 'float') -> None",
+        "import_status": "success"
+    }
+]

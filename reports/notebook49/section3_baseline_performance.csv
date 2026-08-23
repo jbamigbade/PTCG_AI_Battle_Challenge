@@ -1,0 +1,4 @@
+baseline,games,wins,losses,draws,score,average_turns,average_elapsed_seconds,fallbacks
+Depth-6 Search Baseline,100,58,42,0,0.58,3.74,0.0037415050039998708,0
+Greedy Damage Baseline,100,58,42,0,0.58,3.26,0.0012270470045040798,0
+Random Baseline,100,78,22,0,0.78,3.6,0.001538944001076689,0

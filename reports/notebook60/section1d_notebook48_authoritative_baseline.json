@@ -1,0 +1,132 @@
+{
+  "scheduled_matches": 300,
+  "successful_matches": 300,
+  "failed_matches": 0,
+  "matches_per_baseline": 100,
+  "competitive_wins": 194,
+  "competitive_losses": 106,
+  "draws": 0,
+  "overall_score": 0.6466666666666666,
+  "overall_win_rate": 0.6466666666666666,
+  "average_turns": 3.533333333333333,
+  "fallback_count": 0,
+  "elapsed_seconds": 2.0785619999514893,
+  "matches_per_second": 144.3305516058706,
+  "baseline_results": [
+    {
+      "baseline_name": "Depth-6 Search Baseline",
+      "matches": 100,
+      "competitive_wins": 58,
+      "competitive_losses": 42,
+      "draws": 0,
+      "score": 0.58,
+      "average_turns": 3.74,
+      "median_turns": 3.5,
+      "average_seconds": 0.003741505003999919,
+      "fallback_count": 0,
+      "win_rate": 0.58,
+      "loss_rate": 0.42,
+      "draw_rate": 0.0
+    },
+    {
+      "baseline_name": "Greedy Damage Baseline",
+      "matches": 100,
+      "competitive_wins": 58,
+      "competitive_losses": 42,
+      "draws": 0,
+      "score": 0.58,
+      "average_turns": 3.26,
+      "median_turns": 3.0,
+      "average_seconds": 0.0012270470045041293,
+      "fallback_count": 0,
+      "win_rate": 0.58,
+      "loss_rate": 0.42,
+      "draw_rate": 0.0
+    },
+    {
+      "baseline_name": "Random Baseline",
+      "matches": 100,
+      "competitive_wins": 78,
+      "competitive_losses": 22,
+      "draws": 0,
+      "score": 0.78,
+      "average_turns": 3.6,
+      "median_turns": 3.0,
+      "average_seconds": 0.001538944001076743,
+      "fallback_count": 0,
+      "win_rate": 0.78,
+      "loss_rate": 0.22,
+      "draw_rate": 0.0
+    }
+  ],
+  "side_results": [
+    {
+      "baseline_name": "Depth-6 Search Baseline",
+      "evaluated_agent_side": "Opponent",
+      "matches": 50,
+      "wins": 16,
+      "losses": 34,
+      "draws": 0,
+      "score": 0.32,
+      "average_turns": 4.14,
+      "win_rate": 0.32
+    },
+    {
+      "baseline_name": "Depth-6 Search Baseline",
+      "evaluated_agent_side": "Player",
+      "matches": 50,
+      "wins": 42,
+      "losses": 8,
+      "draws": 0,
+      "score": 0.84,
+      "average_turns": 3.34,
+      "win_rate": 0.84
+    },
+    {
+      "baseline_name": "Greedy Damage Baseline",
+      "evaluated_agent_side": "Opponent",
+      "matches": 50,
+      "wins": 16,
+      "losses": 34,
+      "draws": 0,
+      "score": 0.32,
+      "average_turns": 3.18,
+      "win_rate": 0.32
+    },
+    {
+      "baseline_name": "Greedy Damage Baseline",
+      "evaluated_agent_side": "Player",
+      "matches": 50,
+      "wins": 42,
+      "losses": 8,
+      "draws": 0,
+      "score": 0.84,
+      "average_turns": 3.34,
+      "win_rate": 0.84
+    },
+    {
+      "baseline_name": "Random Baseline",
+      "evaluated_agent_side": "Opponent",
+      "matches": 50,
+      "wins": 32,
+      "losses": 18,
+      "draws": 0,
+      "score": 0.64,
+      "average_turns": 3.78,
+      "win_rate": 0.64
+    },
+    {
+      "baseline_name": "Random Baseline",
+      "evaluated_agent_side": "Player",
+      "matches": 50,
+      "wins": 46,
+      "losses": 4,
+      "draws": 0,
+      "score": 0.92,
+      "average_turns": 3.42,
+      "win_rate": 0.92
+    }
+  ],
+  "results_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\data\\tournaments\\competitive_policy_baseline_tournament.csv",
+  "failure_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook48\\competitive_policy_baseline_tournament_failures.json"
+}

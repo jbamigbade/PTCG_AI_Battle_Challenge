@@ -1,0 +1,24 @@
+{
+  "status": "PDF_LINK_ANNOTATION_STRUCTURE_INSPECTION_COMPLETE",
+  "annotations_inspected": 264,
+  "actionable_annotations": 264,
+  "annotation_destination_count": 264,
+  "action_destination_count": 0,
+  "file_specification_count": 0,
+  "javascript_action_count": 0,
+  "named_destination_count": 0,
+  "embedded_file_count": 0,
+  "action_type_counts": {
+    "": 264
+  },
+  "link_mechanism_status": "INTERNAL_OR_NAMED_DESTINATIONS_DETECTED",
+  "external_actions_executed": false,
+  "files_downloaded": false,
+  "files_extracted": false,
+  "tournament_move_sets_modified": false,
+  "frozen_benchmark_modified": false,
+  "safe_to_expand_actions": false,
+  "validation_checks_passed": 7,
+  "validation_checks_failed": 0,
+  "next_stage": "PDF_DESTINATION_TARGET_RESOLUTION"
+}

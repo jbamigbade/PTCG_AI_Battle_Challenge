@@ -1,0 +1,100 @@
+{
+    "synthetic": false,
+    "state_source": "fresh_production_battle_state",
+    "search_depth": 4,
+    "root_player": "Player",
+    "state": {
+        "turn_number": 1,
+        "current_player": "Player",
+        "player_name": "Pikachu",
+        "player_hp": 120.0,
+        "player_energy": 3,
+        "player_prizes_remaining": 1,
+        "opponent_name": "Charmander",
+        "opponent_hp": 100.0,
+        "opponent_energy": 3,
+        "opponent_prizes_remaining": 1
+    },
+    "legal_moves": [
+        {
+            "name": "Quick Attack",
+            "damage": 30.0,
+            "energy_cost": 1,
+            "effect": null,
+            "type": "dict",
+            "repr": "{'name': 'Quick Attack', 'damage': 30.0, 'energy_cost': 1, 'effect': None}"
+        },
+        {
+            "name": "Thunderbolt",
+            "damage": 90.0,
+            "energy_cost": 2,
+            "effect": null,
+            "type": "dict",
+            "repr": "{'name': 'Thunderbolt', 'damage': 90.0, 'energy_cost': 2, 'effect': None}"
+        }
+    ],
+    "best_move": {
+        "name": "Quick Attack",
+        "damage": 30.0,
+        "energy_cost": 1,
+        "effect": null,
+        "type": "dict",
+        "repr": "{'name': 'Quick Attack', 'damage': 30.0, 'energy_cost': 1, 'effect': None}"
+    },
+    "best_move_is_legal": true,
+    "score": 10000.0,
+    "completed_depth": 4,
+    "principal_variation": [
+        {
+            "name": "Quick Attack",
+            "damage": 30.0,
+            "energy_cost": 1,
+            "effect": null,
+            "type": "dict",
+            "repr": "{'name': 'Quick Attack', 'damage': 30.0, 'energy_cost': 1, 'effect': None}"
+        },
+        {
+            "name": "Scratch",
+            "damage": 20.0,
+            "energy_cost": 1,
+            "effect": null,
+            "type": "dict",
+            "repr": "{'name': 'Scratch', 'damage': 20.0, 'energy_cost': 1, 'effect': None}"
+        },
+        {
+            "name": "Thunderbolt",
+            "damage": 90.0,
+            "energy_cost": 2,
+            "effect": null,
+            "type": "dict",
+            "repr": "{'name': 'Thunderbolt', 'damage': 90.0, 'energy_cost': 2, 'effect': None}"
+        }
+    ],
+    "damage_applied": 30.0,
+    "next_state": {
+        "turn_number": 2,
+        "current_player": "Opponent",
+        "opponent_hp": 70.0
+    },
+    "statistics": {
+        "nodes": 16,
+        "leaf_nodes": 4,
+        "terminal_nodes": 4,
+        "cutoffs": 2,
+        "transposition_hits": 0,
+        "transposition_stores": 8,
+        "transposition_cutoffs": 0,
+        "killer_hits": 1,
+        "killer_stores": 2,
+        "history_hits": 1,
+        "history_updates": 2,
+        "completed_depth": 4,
+        "elapsed_seconds": 0.0013246999587863684,
+        "depth_nodes": {
+            "4": 16
+        },
+        "depth_times": {
+            "4": 0.0013246999587863684
+        }
+    }
+}

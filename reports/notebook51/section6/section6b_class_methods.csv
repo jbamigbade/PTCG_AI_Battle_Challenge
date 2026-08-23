@@ -1,0 +1,48 @@
+file_name,class_name,method_name,signature,line_number,docstring_summary
+advanced_search.py,AdvancedSearchEngine,__init__,"(self, generate_moves: GenerateMovesFn, apply_move: ApplyMoveFn, evaluate_state: EvaluateFn, is_terminal: IsTerminalFn, current_player: CurrentPlayerFn, move_to_string: Optional[MoveToStringFn] = None, state_key: Optional[Callable[[State], Hashable]] = None, use_transposition_table: bool = True, move_order_score: Optional[MoveOrderScoreFn] = None, use_move_ordering: bool = True, move_key: Optional[MoveKeyFn] = None, use_killer_moves: bool = True, killer_slots: int = 2, use_history_heuristic: bool = True, history_multiplier: float = 1000.0) -> None",227,
+advanced_search.py,AdvancedSearchEngine,_default_state_key,(state: State) -> Hashable,255,Use a hashable game state directly as its key.
+advanced_search.py,AdvancedSearchEngine,_default_move_key,(move: Move) -> Hashable,264,Use a hashable move directly as its move key.
+advanced_search.py,AdvancedSearchEngine,_validate_depth,"(self, depth: int) -> None",272,Validate search depth.
+advanced_search.py,AdvancedSearchEngine,_safe_moves,"(self, state: State) -> List[Move]",279,Return generated legal moves as a list.
+advanced_search.py,AdvancedSearchEngine,clear_transposition_table,(self) -> None,286,Remove every cached game position.
+advanced_search.py,AdvancedSearchEngine,clear_killer_moves,(self) -> None,290,Remove all stored killer moves.
+advanced_search.py,AdvancedSearchEngine,clear_history_table,(self) -> None,294,Remove all accumulated history scores.
+advanced_search.py,AdvancedSearchEngine,transposition_table_size,(self) -> int,298,Return the number of cached positions.
+advanced_search.py,AdvancedSearchEngine,killer_move_count,(self) -> int,302,Return the total number of stored killer moves.
+advanced_search.py,AdvancedSearchEngine,history_table_size,(self) -> int,306,Return the number of scored player-move pairs.
+advanced_search.py,AdvancedSearchEngine,_find_transposition_move,"(self, key: Hashable) -> Optional[Move]",310,"Return a cached best move, when available."
+advanced_search.py,AdvancedSearchEngine,_moves_equal,"(self, first: Optional[Move], second: Optional[Move]) -> bool",319,Compare moves using their stable move keys.
+advanced_search.py,AdvancedSearchEngine,_is_killer_move,"(self, move: Move, ply: int) -> bool",331,Return True when a move is stored as a killer at this ply.
+advanced_search.py,AdvancedSearchEngine,_store_killer_move,"(self, move: Move, ply: int) -> None",338,Store a cutoff-producing move at one ply.
+advanced_search.py,AdvancedSearchEngine,_history_key,"(self, player: Player, move: Move) -> Tuple[Player, Hashable]",350,Create a player-specific history-table key.
+advanced_search.py,AdvancedSearchEngine,_get_history_score,"(self, player: Player, move: Move) -> int",354,Return the accumulated history score for a move.
+advanced_search.py,AdvancedSearchEngine,_update_history,"(self, player: Player, move: Move, depth: int) -> None",361,Reward a move that caused an alpha-beta cutoff.
+advanced_search.py,AdvancedSearchEngine,get_history_score,"(self, player: Player, move: Move) -> int",377,Public helper for inspecting one move's history score.
+advanced_search.py,AdvancedSearchEngine,get_history_entries,"(self) -> List[Tuple[Player, Hashable, int]]",383,Return history entries sorted from strongest to weakest.
+advanced_search.py,AdvancedSearchEngine,_order_moves,"(self, state: State, moves: Sequence[Move], root_player: Player, ply: int, transposition_move: Optional[Move] = None) -> List[Move]",391,Order moves using all enabled heuristics.
+advanced_search.py,AdvancedSearchEngine,preview_move_order,"(self, state: State, root_player: Optional[Player] = None, ply: int = 0) -> List[Move]",430,Return the order the engine would search.
+advanced_search.py,AdvancedSearchEngine,_probe_transposition_table,"(self, key: Hashable, depth: int, alpha: float, beta: float) -> Optional[Tuple[float, List[Move]]]",439,Attempt to reuse a cached search result.
+advanced_search.py,AdvancedSearchEngine,_store_transposition_entry,"(self, key: Hashable, depth: int, score: float, alpha_original: float, beta_original: float, best_line: List[Move]) -> None",459,Store a completed node result.
+advanced_search.py,AdvancedSearchEngine,_alpha_beta,"(self, state: State, depth: int, alpha: float, beta: float, root_player: Player, ply: int = 0) -> Tuple[float, List[Move]]",476,Search one position with all enabled optimizations.
+advanced_search.py,AdvancedSearchEngine,search_depth,"(self, state: State, depth: int, root_player: Optional[Player] = None, clear_table: bool = True, clear_killers: bool = True, clear_history: bool = True) -> SearchResult",534,Perform one fixed-depth search.
+advanced_search.py,AdvancedSearchEngine,iterative_deepening,"(self, state: State, max_depth: int, root_player: Optional[Player] = None, verbose: bool = True, clear_table: bool = True, clear_killers: bool = True, clear_history: bool = True) -> SearchResult",558,Search depth 1 through max_depth.
+advanced_search.py,AdvancedSearchEngine,get_principal_variation,(self) -> List[Move],635,Return a copy of the latest principal variation.
+advanced_search.py,SearchResult,as_dict,"(self, move_to_string: Optional[MoveToStringFn] = None) -> Dict[str, Any]",206,Convert the result into a display-friendly dictionary.
+advanced_search.py,SearchStats,reset,(self) -> None,158,Reset every search statistic.
+advanced_search.py,SearchStats,nodes_per_second,(self) -> float,177,Return average nodes searched per second.
+advanced_search.py,SearchStats,transposition_hit_rate,(self) -> float,184,Return transposition hits divided by searched nodes.
+advanced_search.py,SearchStats,as_dict,"(self) -> Dict[str, Any]",190,Return statistics as a display-friendly dictionary.
+advanced_search.py,ZobristHasher,__init__,"(self, state_features: StateFeaturesFn, seed: int = 20260712) -> None",59,Initialize the hasher.
+advanced_search.py,ZobristHasher,clear,(self) -> None,81,Clear generated feature values and restore the original seed.
+advanced_search.py,ZobristHasher,feature_count,(self) -> int,91,Return the number of distinct registered features.
+advanced_search.py,ZobristHasher,_value_for_feature,"(self, feature: Hashable) -> int",97,Return the 64-bit random number assigned to one feature.
+advanced_search.py,ZobristHasher,hash_features,"(self, features: Sequence[Hashable]) -> int",112,Hash a supplied sequence of position features.
+advanced_search.py,ZobristHasher,hash_state,"(self, state: State) -> int",121,Convert a state into features and return its 64-bit hash.
+advanced_search.py,ZobristHasher,__call__,"(self, state: State) -> int",130,Allow the hasher itself to be used as a state_key function.
+agent_decision.py,AgentDecision,summary,"(self) -> dict[str, Any]",19,Return a compact readable decision summary.
+battle_agent.py,PokemonBattleAgent,__init__,"(self, engine: Any) -> None",13,
+battle_agent.py,PokemonBattleAgent,choose_move,"(self, state: Any, depth: int = 6) -> AgentDecision",16,Search the current state and return the selected move.
+battle_simulation.py,BattleSimulationResult,turn_count,(self) -> int,56,
+battle_simulation.py,BattleSimulationResult,as_dict,"(self) -> dict[str, Any]",59,
+battle_simulation.py,BattleTurnRecord,as_dict,"(self) -> dict[str, Any]",30,
+battle_state.py,BattleState,__post_init__,(self) -> None,40,

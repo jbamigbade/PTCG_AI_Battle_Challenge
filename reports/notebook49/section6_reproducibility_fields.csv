@@ -1,0 +1,7 @@
+column,matched_keywords,dtype,unique_count,missing_count,sample_values
+match_id,match_id,int64,106,0,2 | 4 | 6
+player_card,player_card,object,4,0,Charmander | Bulbasaur | Meowth
+opponent_card,opponent_card,object,2,0,Eevee | Eevee | Eevee
+starting_side,"starting_side, side",object,2,0,Player | Opponent | Player
+evaluated_agent_side,side,object,2,0,Opponent | Opponent | Opponent
+normalized_side,side,object,2,0,Opponent | Opponent | Opponent

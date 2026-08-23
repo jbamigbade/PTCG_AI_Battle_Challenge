@@ -1,0 +1,4 @@
+threshold,unique_cases_above_threshold,player_cases_above_threshold,opponent_cases_above_threshold,fraction_of_184_cases
+0.05,145,73,72,0.7880434782608695
+0.1,128,70,58,0.6956521739130435
+0.15,46,24,22,0.25

@@ -1,0 +1,8 @@
+active_card,move_name,legal_occurrences,selected_occurrences,acting_sides,conditions
+Bulbasaur,Bind Down,40,40,"[""Opponent"", ""Player""]","[""BASELINE"", ""ENERGY_PRESSURE"", ""HP_PRESSURE""]"
+Bulbasaur,Pass,30,30,"[""Opponent""]","[""ENERGY_PRESSURE""]"
+Charmander,Live Coal,20,20,"[""Opponent"", ""Player""]","[""BASELINE"", ""ENERGY_PRESSURE"", ""HP_PRESSURE""]"
+Charmander,Pass,15,15,"[""Opponent""]","[""ENERGY_PRESSURE""]"
+Eevee,Ascension,59,36,"[""Opponent"", ""Player""]","[""BASELINE"", ""ENERGY_PRESSURE"", ""HP_PRESSURE""]"
+Eevee,Quick Attack,23,23,"[""Opponent""]","[""BASELINE"", ""HP_PRESSURE""]"
+Meowth,Tuck Tail,46,46,"[""Player""]","[""BASELINE"", ""ENERGY_PRESSURE"", ""HP_PRESSURE""]"

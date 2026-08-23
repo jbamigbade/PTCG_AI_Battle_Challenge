@@ -1,0 +1,6 @@
+check,passed,value,expected
+multiple_model_candidates_scored,True,3,At least 2
+multiple_preprocessor_candidates_scored,True,2,At least 2
+valid_snapshot_combinations_created,True,12,> 0
+prediction_agreement_preserved,True,1.0,1.0
+next_stage_resolved,True,COMPARE_NOTEBOOK54_RUNTIME_MODEL_ASSIGNMENTS,Recognized route

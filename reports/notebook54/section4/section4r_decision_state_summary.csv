@@ -1,0 +1,7 @@
+metric,value
+Total decisions,210
+Player decisions,103
+Opponent decisions,107
+Genuine multi-attack states,23
+Printed attack plus control states,0
+Control-only states,45

@@ -1,0 +1,22 @@
+check,passed,value,expected,details
+all_required_artifacts_exist,True,0,0,[]
+all_required_artifacts_nonempty,True,0,0,[]
+final_dataset_nonempty,True,1060,> 0,
+required_schema_complete,True,0,0,[]
+variant_ids_unique,True,0,0,
+example_ids_unique,True,0,0,
+required_fields_complete,True,0,0,"{""variant_id"": 0, ""example_id"": 0, ""source_scenario_id"": 0, ""variant_name"": 0, ""current_side"": 0, ""player_card"": 0, ""opponent_card"": 0, ""state_key"": 0, ""legal_moves"": 0, ""expert_move"": 0, ""expert_move_key"": 0, ""legal_move_count"": 0, ""value_target"": 0, ""search_depth_requested"": 0, ""search_depth_reached"": 0, ""sample_weight"": 0}"
+all_rows_have_legal_moves,True,0,0,
+all_searches_successful,True,0,0,
+search_depth_valid,True,0,0,
+sample_weights_positive,True,0,0,
+value_targets_finite,True,0,0,
+final_rows_present_in_search_labels,True,0,0,[]
+final_rows_present_in_variant_manifest,True,0,0,[]
+all_search_labels_exported,True,0,0,Search rows not in final should equal the number of rejected Section 8C records.
+side_values_valid,True,0,0,
+side_mode_values_valid,True,0,0,
+both_sides_represented,True,"Player=332, Opponent=728",Both > 0,
+counterfactual_variants_present,True,212,> 0,
+source_scenario_coverage,True,106,106,
+no_batch_search_pending,True,0,0,

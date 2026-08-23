@@ -1,0 +1,5 @@
+active_card,decisions,masked_decisions,legal_raw_predictions,fallback_decisions,average_confidence,average_legal_move_count,masking_rate,raw_legality_rate,fallback_rate
+Bulbasaur,70,70,0,1,0.5996952380952382,1.0,1.0,0.0,0.014285714285714285
+Meowth,46,46,0,0,0.5568115942028985,1.0,1.0,0.0,0.0
+Charmander,35,35,0,0,0.6820190476190475,1.0,1.0,0.0,0.0
+Eevee,59,0,59,0,0.784090395480226,1.3898305084745763,0.0,1.0,0.0

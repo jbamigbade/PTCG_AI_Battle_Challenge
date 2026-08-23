@@ -1,0 +1,7 @@
+check,passed,value,expected
+correct_d_drive_report_directory,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4
+all_counterfactual_rows_created,True,1656,1656
+no_counterfactual_execution_errors,True,0,0
+all_probability_values_valid,True,True,True
+baseline_rows_complete,True,184,184
+counterfactual_diagnosis_recognized,True,LEGAL_STRUCTURE_CAUSAL_EFFECT_DOMINATES,Recognized counterfactual diagnosis

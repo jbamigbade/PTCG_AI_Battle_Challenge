@@ -1,0 +1,11 @@
+check,passed,value,expected
+all_eight_card_images_reviewed,True,8,8
+all_cards_have_printed_attack_profiles,True,8,8
+attack_rows_reconcile,True,10,10
+simulator_profile_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']"
+candidate_matching_covers_all_images,True,8,8
+leading_summary_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']"
+pass_excluded_from_printed_attack_matching,True,True,True
+ocr_not_used,True,False,False
+resolution_status_recognized,True,ALL_SIMULATOR_CARD_VERSIONS_ATTACK_CONFIRMED,Recognized resolution status
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

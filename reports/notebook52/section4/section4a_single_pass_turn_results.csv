@@ -1,0 +1,57 @@
+battle_number,scenario_id,scenario_name,record_number,turn_number,acting_side,pokemon_name,move_name,damage,score,search_depth,nodes,player_hp_after,opponent_hp_after,next_side
+1,T52_S001,Bulbasaur_vs_Eevee_Player_Start,1,1,Player,Bulbasaur,Bind Down,10.0,0.564,0,1,80.0,40.0,Opponent
+1,T52_S001,Bulbasaur_vs_Eevee_Player_Start,2,2,Opponent,Eevee,Quick Attack,20.0,0.7586666666666667,0,1,60.0,40.0,Player
+1,T52_S001,Bulbasaur_vs_Eevee_Player_Start,3,3,Player,Bulbasaur,Bind Down,10.0,0.68,0,1,60.0,30.0,Opponent
+1,T52_S001,Bulbasaur_vs_Eevee_Player_Start,4,4,Opponent,Eevee,Quick Attack,20.0,0.7706666666666667,0,1,40.0,30.0,Player
+1,T52_S001,Bulbasaur_vs_Eevee_Player_Start,5,5,Player,Bulbasaur,Bind Down,10.0,0.632,0,1,40.0,20.0,Opponent
+1,T52_S001,Bulbasaur_vs_Eevee_Player_Start,6,6,Opponent,Eevee,Quick Attack,20.0,0.8973333333333333,0,1,20.0,20.0,Player
+1,T52_S001,Bulbasaur_vs_Eevee_Player_Start,7,7,Player,Bulbasaur,Bind Down,10.0,0.5013333333333333,0,1,20.0,10.0,Opponent
+1,T52_S001,Bulbasaur_vs_Eevee_Player_Start,8,8,Opponent,Eevee,Quick Attack,20.0,0.912,0,1,0.0,10.0,Player
+2,T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,1,1,Opponent,Eevee,Quick Attack,20.0,0.652,0,1,60.0,50.0,Player
+2,T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,2,2,Player,Bulbasaur,Bind Down,10.0,0.7146666666666667,0,1,60.0,40.0,Opponent
+2,T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,3,3,Opponent,Eevee,Quick Attack,20.0,0.7693333333333333,0,1,40.0,40.0,Player
+2,T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,4,4,Player,Bulbasaur,Bind Down,10.0,0.6373333333333333,0,1,40.0,30.0,Opponent
+2,T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,5,5,Opponent,Eevee,Quick Attack,20.0,0.8186666666666667,0,1,20.0,30.0,Player
+2,T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,6,6,Player,Bulbasaur,Bind Down,10.0,0.528,0,1,20.0,20.0,Opponent
+2,T52_S002,Bulbasaur_vs_Eevee_Opponent_Start,7,7,Opponent,Eevee,Quick Attack,20.0,0.8946666666666667,0,1,0.0,20.0,Player
+3,T52_S003,Charmander_vs_Eevee_Player_Start,1,1,Player,Charmander,Live Coal,20.0,0.6013333333333334,0,1,80.0,30.0,Opponent
+3,T52_S003,Charmander_vs_Eevee_Player_Start,2,2,Opponent,Eevee,Quick Attack,20.0,0.7773333333333333,0,1,60.0,30.0,Player
+3,T52_S003,Charmander_vs_Eevee_Player_Start,3,3,Player,Charmander,Live Coal,20.0,0.7213333333333334,0,1,60.0,10.0,Opponent
+3,T52_S003,Charmander_vs_Eevee_Player_Start,4,4,Opponent,Eevee,Quick Attack,20.0,0.8346666666666667,0,1,40.0,10.0,Player
+3,T52_S003,Charmander_vs_Eevee_Player_Start,5,5,Player,Charmander,Live Coal,20.0,0.644,0,1,40.0,0.0,Opponent
+4,T52_S004,Charmander_vs_Eevee_Opponent_Start,1,1,Opponent,Eevee,Quick Attack,20.0,0.668,0,1,60.0,50.0,Player
+4,T52_S004,Charmander_vs_Eevee_Opponent_Start,2,2,Player,Charmander,Live Coal,20.0,0.7546666666666667,0,1,60.0,30.0,Opponent
+4,T52_S004,Charmander_vs_Eevee_Opponent_Start,3,3,Opponent,Eevee,Quick Attack,20.0,0.784,0,1,40.0,30.0,Player
+4,T52_S004,Charmander_vs_Eevee_Opponent_Start,4,4,Player,Charmander,Live Coal,20.0,0.684,0,1,40.0,10.0,Opponent
+4,T52_S004,Charmander_vs_Eevee_Opponent_Start,5,5,Opponent,Eevee,Quick Attack,20.0,0.8493333333333334,0,1,20.0,10.0,Player
+4,T52_S004,Charmander_vs_Eevee_Opponent_Start,6,6,Player,Charmander,Live Coal,20.0,0.5186666666666667,0,1,20.0,0.0,Opponent
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,1,1,Player,Meowth,Tuck Tail,0.0,0.62,0,1,60.0,80.0,Opponent
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,2,2,Opponent,Bulbasaur,Bind Down,10.0,0.804,0,1,50.0,80.0,Player
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,3,3,Player,Meowth,Tuck Tail,0.0,0.7586666666666667,0,1,50.0,80.0,Opponent
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,4,4,Opponent,Bulbasaur,Bind Down,10.0,0.7893333333333333,0,1,40.0,80.0,Player
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,5,5,Player,Meowth,Tuck Tail,0.0,0.7573333333333333,0,1,40.0,80.0,Opponent
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,6,6,Opponent,Bulbasaur,Bind Down,10.0,0.756,0,1,30.0,80.0,Player
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,7,7,Player,Meowth,Tuck Tail,0.0,0.6626666666666666,0,1,30.0,80.0,Opponent
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,8,8,Opponent,Bulbasaur,Bind Down,10.0,0.6773333333333333,0,1,20.0,80.0,Player
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,9,9,Player,Meowth,Tuck Tail,0.0,0.6293333333333333,0,1,20.0,80.0,Opponent
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,10,10,Opponent,Bulbasaur,Bind Down,10.0,0.652,0,1,10.0,80.0,Player
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,11,11,Player,Meowth,Tuck Tail,0.0,0.6306666666666667,0,1,10.0,80.0,Opponent
+5,T52_S005,Meowth_vs_Bulbasaur_Player_Start,12,12,Opponent,Bulbasaur,Bind Down,10.0,0.6533333333333333,0,1,0.0,80.0,Player
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,1,1,Opponent,Bulbasaur,Bind Down,10.0,0.648,0,1,50.0,80.0,Player
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,2,2,Player,Meowth,Tuck Tail,0.0,0.764,0,1,50.0,80.0,Opponent
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,3,3,Opponent,Bulbasaur,Bind Down,10.0,0.7893333333333333,0,1,40.0,80.0,Player
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,4,4,Player,Meowth,Tuck Tail,0.0,0.7586666666666667,0,1,40.0,80.0,Opponent
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,5,5,Opponent,Bulbasaur,Bind Down,10.0,0.7893333333333333,0,1,30.0,80.0,Player
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,6,6,Player,Meowth,Tuck Tail,0.0,0.704,0,1,30.0,80.0,Opponent
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,7,7,Opponent,Bulbasaur,Bind Down,10.0,0.684,0,1,20.0,80.0,Player
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,8,8,Player,Meowth,Tuck Tail,0.0,0.6466666666666666,0,1,20.0,80.0,Opponent
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,9,9,Opponent,Bulbasaur,Bind Down,10.0,0.652,0,1,10.0,80.0,Player
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,10,10,Player,Meowth,Tuck Tail,0.0,0.6306666666666667,0,1,10.0,80.0,Opponent
+6,T52_S006,Meowth_vs_Bulbasaur_Opponent_Start,11,11,Opponent,Bulbasaur,Bind Down,10.0,0.6533333333333333,0,1,0.0,80.0,Player
+7,T52_S007,Critical_HP_Bulbasaur_vs_Eevee,1,9,Opponent,Eevee,Quick Attack,20.0,1.0,0,1,0.0,20.0,Player
+8,T52_S008,Low_Energy_Eevee_vs_Charmander,1,2,Player,Eevee,Ascension,0.0,0.9893333333333333,0,1,50.0,80.0,Opponent
+8,T52_S008,Low_Energy_Eevee_vs_Charmander,2,3,Opponent,Charmander,Live Coal,20.0,0.9453333333333334,0,1,30.0,80.0,Player
+8,T52_S008,Low_Energy_Eevee_vs_Charmander,3,4,Player,Eevee,Ascension,0.0,0.9786666666666667,0,1,30.0,80.0,Opponent
+8,T52_S008,Low_Energy_Eevee_vs_Charmander,4,5,Opponent,Charmander,Live Coal,20.0,0.9386666666666666,0,1,10.0,80.0,Player
+8,T52_S008,Low_Energy_Eevee_vs_Charmander,5,6,Player,Eevee,Ascension,0.0,0.864,0,1,10.0,80.0,Opponent
+8,T52_S008,Low_Energy_Eevee_vs_Charmander,6,7,Opponent,Charmander,Live Coal,20.0,0.8066666666666666,0,1,0.0,80.0,Player

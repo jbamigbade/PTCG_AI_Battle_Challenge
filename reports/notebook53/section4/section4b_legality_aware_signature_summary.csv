@@ -1,0 +1,7 @@
+legal_move_signature,examples,legal_move_count,single_action_examples,multi_action_examples,unique_expert_moves
+ascension,424,1.0,424.0,0.0,1
+ascension | quick attack,318,2.0,0.0,318.0,1
+pass,125,1.0,125.0,0.0,1
+bind down,94,1.0,94.0,0.0,1
+live coal,80,1.0,80.0,0.0,1
+tuck tail,19,1.0,19.0,0.0,1

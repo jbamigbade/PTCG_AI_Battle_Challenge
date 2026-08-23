@@ -1,0 +1,13 @@
+player_card,opponent_card,starting_side,winner,stop_reason,turns,total_decisions,model_driven_decisions,fallback_decisions,model_driven_rate,final_player_hp,final_opponent_hp,action_usage
+Eevee,Bulbasaur,Player,Player,Battle reached a terminal state.,7,7,7,0,1.0,20.0,0.0,"{'Quick Attack': 4, 'Bind Down': 3}"
+Eevee,Bulbasaur,Opponent,Player,Battle reached a terminal state.,8,8,8,0,1.0,10.0,0.0,"{'Bind Down': 4, 'Quick Attack': 4}"
+Eevee,Charmander,Player,Opponent,Battle reached a terminal state.,6,6,6,0,1.0,0.0,20.0,"{'Quick Attack': 3, 'Live Coal': 3}"
+Eevee,Charmander,Opponent,Opponent,Battle reached a terminal state.,5,5,5,0,1.0,0.0,40.0,"{'Live Coal': 3, 'Quick Attack': 2}"
+Eevee,Meowth,Player,Player,Battle reached a terminal state.,5,5,5,0,1.0,50.0,0.0,"{'Quick Attack': 3, 'Tuck Tail': 2}"
+Eevee,Meowth,Opponent,Player,Battle reached a terminal state.,6,6,6,0,1.0,50.0,0.0,"{'Tuck Tail': 3, 'Quick Attack': 3}"
+Bulbasaur,Charmander,Player,Opponent,Battle reached a terminal state.,8,8,8,0,1.0,0.0,40.0,"{'Bind Down': 4, 'Live Coal': 4}"
+Bulbasaur,Charmander,Opponent,Opponent,Battle reached a terminal state.,7,7,7,0,1.0,0.0,50.0,"{'Live Coal': 4, 'Bind Down': 3}"
+Bulbasaur,Meowth,Player,Player,Battle reached a terminal state.,11,11,11,0,1.0,80.0,0.0,"{'Bind Down': 6, 'Tuck Tail': 5}"
+Bulbasaur,Meowth,Opponent,Player,Battle reached a terminal state.,12,12,12,0,1.0,80.0,0.0,"{'Tuck Tail': 6, 'Bind Down': 6}"
+Charmander,Meowth,Player,Player,Battle reached a terminal state.,5,5,5,0,1.0,80.0,0.0,"{'Live Coal': 3, 'Tuck Tail': 2}"
+Charmander,Meowth,Opponent,Player,Battle reached a terminal state.,6,6,6,0,1.0,80.0,0.0,"{'Tuck Tail': 3, 'Live Coal': 3}"

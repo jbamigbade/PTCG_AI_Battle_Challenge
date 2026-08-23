@@ -1,0 +1,3 @@
+raw_feature,unknown_value,affected_rows,first_comparison_case_id,learned_categories
+opponent_card,Bulbasaur,56,4WE_PAIR_001_V01__PLAYER,"[""Charmander"", ""Eevee""]"
+legal_move_signature,Ascension | Quick Attack,184,4WE_PAIR_001_V01__OPPONENT,"[""ascension"", ""ascension | quick attack"", ""bind down"", ""live coal"", ""pass"", ""tuck tail""]"

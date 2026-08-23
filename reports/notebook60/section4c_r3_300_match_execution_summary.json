@@ -1,0 +1,31 @@
+{
+  "notebook": 60,
+  "section": "4C",
+  "purpose": "Execute frozen R3 policy against exact Notebook 48 historical baselines under locked 300-match side-neutral schedule.",
+  "evaluated_policy": "R3_STATE_CENTRIC_POLICY",
+  "model_type": "RandomForestClassifier",
+  "feature_count": 46,
+  "action_classes": [
+    "Ascension",
+    "Bind Down",
+    "Live Coal",
+    "Pass",
+    "Quick Attack",
+    "Tuck Tail"
+  ],
+  "scheduled_matches": 300,
+  "successful_matches": 200,
+  "failed_matches": 100,
+  "outcome_counts": {
+    "LOSS": 183,
+    "WIN": 17
+  },
+  "fallback_count": 373,
+  "elapsed_seconds": 40.382509500021115,
+  "r3_retraining": false,
+  "r3_model_modification": false,
+  "historical_reference_notebook": 48,
+  "historical_reference_win_rate": 0.6466666666666666,
+  "raw_results_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\outputs\\notebook60\\section4c_r3_300_match_raw_results.csv",
+  "failures_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook60\\section4c_r3_300_match_failures.json"
+}

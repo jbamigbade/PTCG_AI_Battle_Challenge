@@ -1,0 +1,11 @@
+check,passed,value,expected,details
+all_destination_pages_reviewed,True,8,8,
+one_selected_image_per_candidate,True,8,8,
+saved_image_summary_covers_all_candidates,True,8,8,
+saved_images_nonempty,True,8,Every saved image has positive size,
+saved_image_paths_unique,True,8,8,
+duplicate_image_content_zero,True,0,0,
+card_profile_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']",
+extraction_status_recognized,True,ALL_OFFICIAL_CANDIDATE_CARD_IMAGES_EXTRACTED,Recognized extraction status,
+pdf_not_modified,True,137654485,> 0,
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",

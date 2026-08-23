@@ -1,0 +1,36 @@
+{
+  "notebook": 63,
+  "cell": 5,
+  "purpose": "ISOLATED_DEPLOYMENT_SIMULATOR_SMOKE_TEST",
+  "runtime_source": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\final_agent\\src",
+  "execution_scope": "TEMPORARY_COPY_ONLY",
+  "policy_type": "DETERMINISTIC_SMOKE_AGENT",
+  "certified_policy_invoked": false,
+  "search_depth": 1,
+  "max_turns": 10,
+  "result": {
+    "imports_pass": true,
+    "state_constructed": true,
+    "agent_constructed": true,
+    "simulation_called": true,
+    "simulation_completed": true,
+    "winner": "Player",
+    "turn_count": 5,
+    "record_count": 5,
+    "final_state_present": true,
+    "exception_type": null,
+    "exception_message": null,
+    "traceback": null,
+    "simulation_type": "BattleSimulationResult",
+    "simulation_attributes": [
+      "as_dict",
+      "final_state",
+      "stop_reason",
+      "turn_count",
+      "turns",
+      "winner"
+    ],
+    "transcript_created": true,
+    "transcript_preview": "======================================================================\nPOK\u00c9MON AI BATTLE TRANSCRIPT\n======================================================================\nTurn 1: Player \u2014 NB63_Player_Mon used NB63_SMOKE_ATTACK\n  Damage: 10.0\n  Search score: 10.00\n  Search depth: 1\n  Nodes searched: 1\n  HP after move \u2014 Player: 30.0, Opponent: 20.0\n  Next side: Opponent\n----------------------------------------------------------------------\nTurn 2: Opponent \u2014 NB63_Opponent_Mon used NB63_SMOKE_ATTACK\n  Damage: 10.0\n  Search score: 10.00\n  Search depth: 1\n  Nodes searched: 1\n  HP after move \u2014 Player: 20.0, Opponent: 20.0\n  Next side: Player\n----------------------------------------------------------------------\nTurn 3: Player \u2014 NB63_Player_Mon used NB63_SMOKE_ATTACK\n  Damage: 10.0\n  Search score: 10.00\n  Search depth: 1\n  Nodes searched: 1\n  HP after move \u2014 Player: 20.0, Opponent: 10.0\n  Next side: Opponent\n----------------------------------------------------------------------\nTurn 4: Oppone"
+  }
+}

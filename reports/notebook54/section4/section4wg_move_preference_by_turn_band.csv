@@ -1,0 +1,5 @@
+turn_band,selected_move,decisions,mirror_pairs,average_confidence,average_acting_energy,turn_band_move_share
+EARLY_1_TO_2,Quick Attack,80,40,0.9012,2.5,1.0
+EARLY_MID_3_TO_5,Quick Attack,80,40,0.8911999999999999,2.5,1.0
+MID_6_TO_10,Quick Attack,24,12,0.8556666666666667,2.5,1.0
+LATE_11_PLUS,Quick Attack,0,0,,,

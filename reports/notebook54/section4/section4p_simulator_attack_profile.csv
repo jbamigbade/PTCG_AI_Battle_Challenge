@@ -1,0 +1,5 @@
+card_name,all_simulator_actions,simulator_printed_attack_candidates,simulator_control_actions,printed_attack_candidate_count
+Bulbasaur,"[""Bind Down"", ""Pass""]","[""Bind Down""]","[""Pass""]",1
+Charmander,"[""Live Coal"", ""Pass""]","[""Live Coal""]","[""Pass""]",1
+Eevee,"[""Ascension"", ""Quick Attack""]","[""Ascension"", ""Quick Attack""]",[],2
+Meowth,"[""Tuck Tail""]","[""Tuck Tail""]",[],1

@@ -1,0 +1,26 @@
+{
+  "status": "ENCODED_FEATURE_FAMILY_PARTITION_COMPLETE",
+  "baseline_feature_count": 64,
+  "feature_family_count": 10,
+  "feature_family_counts": {
+    "CARD_IDENTITY": 14,
+    "DAMAGE_STATE": 9,
+    "ENERGY_STATE": 9,
+    "CARD_ACTION_COMPATIBILITY": 6,
+    "LEGAL_ACTION_FLAG": 6,
+    "LEGAL_MOVE_SIGNATURE": 6,
+    "LEGAL_CHOICE_STRUCTURE": 4,
+    "SIDE_CONTEXT": 4,
+    "TURN_STATE": 4,
+    "RESOURCE_STATE": 2
+  },
+  "legal_move_signature_features": 6,
+  "card_action_compatibility_features": 6,
+  "legal_action_flag_features": 6,
+  "r0_retained_features": 64,
+  "r1_retained_features": 58,
+  "r2_retained_features": 52,
+  "r3_retained_features": 46,
+  "partition_complete": true,
+  "next_stage": "RECOVER_TRAINING_AND_VALIDATION_MATRICES"
+}

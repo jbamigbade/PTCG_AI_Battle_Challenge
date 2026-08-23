@@ -1,0 +1,3 @@
+routing_mode,decisions,original_masking_changes,post_routing_model_masking,legal_routed_moves,model_choices_required,legacy_selector_calls,average_confidence,original_masking_rate,post_routing_masking_rate,legal_route_rate
+MULTI_LEGAL_MODEL,23,0,0,23,23,0,0.8411594202898551,0.0,0.0,1.0
+SINGLE_LEGAL_DIRECT,187,151,0,187,0,0,0.6330338680926916,0.8074866310160428,0.0,1.0

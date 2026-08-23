@@ -1,0 +1,4100 @@
+================================================================================
+GAME 1
+Game ID: a867f751-bbdf-4999-8c1c-392f2a803324
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 2
+Game ID: 148580ca-739b-4be8-a824-5d7934c420c6
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 3
+Game ID: b0b761b7-6a22-4421-9065-54e314aba757
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 4
+Game ID: 0af5bcf3-7d69-415b-95c5-0efbee82e27a
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 5
+Game ID: 5e0832e4-23cd-4c17-a20f-7f0184b0dff2
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 6
+Game ID: bfc9959c-1dbe-4d75-9e65-37256eaf40a4
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 7
+Game ID: 21a9a13b-bc96-4af8-ab0d-a539da5e90c7
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 8
+Game ID: 05fb8555-2f32-474c-84a8-54642bff1e69
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 9
+Game ID: 5c184971-7fbd-4465-a539-a6afd834236c
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 10
+Game ID: 00389a47-f6c9-4959-96c4-4c91bdde1a40
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 11
+Game ID: 65df92b8-a46f-4729-8da9-d946a390d217
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 12
+Game ID: a4b2edc6-ad1c-4d70-9d53-67dfb099dfa7
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 13
+Game ID: 43e5b538-37a3-4c00-acdf-cc05b2a9178d
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 14
+Game ID: 9e635c92-7313-4b76-b9a5-42b2cf4d9ed4
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 15
+Game ID: e38b6172-0632-45cf-b05c-93a4f6b6a1d2
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 16
+Game ID: bc8e516e-ce2c-4978-8847-a663871666f7
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 17
+Game ID: b1d9a31f-7b51-4c1a-b052-6d38b5d670f4
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 18
+Game ID: 2f3edb7c-24e2-49b6-bc38-55f5942e5293
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 19
+Game ID: 9f3db075-885b-46b2-bb0b-2452f3a00a5d
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 20
+Game ID: 186aece4-ee4f-4bb8-ad97-cf15371ba1ee
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 21
+Game ID: 57fed848-da87-4d36-8379-c435067dc7e2
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 22
+Game ID: 37d8b2b2-d2e2-44aa-9fe2-fab9a28e6d5a
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 23
+Game ID: 5fa59a35-5fec-47bc-962f-3fa8bea9ed76
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 24
+Game ID: 6c9d980d-7071-4791-b702-24c632671258
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 25
+Game ID: 820538be-4bcd-4b2d-9ec2-b82e37d0b0d1
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 26
+Game ID: 5cc48730-8ec7-492e-b426-217402f3ed1e
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 27
+Game ID: 7a379a05-9203-425b-98df-7f40152fb0d6
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 28
+Game ID: 3e1eb006-2903-403e-a274-b4286faa4268
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 29
+Game ID: 7086c19f-e1bf-49de-a0df-b2f10d0b967d
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 30
+Game ID: c6527220-16ea-4cc3-9866-535d22de27d5
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 31
+Game ID: 83aafe64-a790-49a5-b9fe-5c0eaeddcd98
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 32
+Game ID: 801dfa44-1887-41a3-8c07-3942d5c19206
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 33
+Game ID: 327da57b-472f-4309-a149-11d585d77eb9
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 34
+Game ID: c5cf7052-861a-4078-96e1-f1ef33ac72c4
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 35
+Game ID: eeccb969-8fb8-4d1f-be27-2dd89e2f9313
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 36
+Game ID: 9d2cee79-0b1f-46ff-9051-352b16d44daa
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 37
+Game ID: c7282231-ed8a-4a7f-bf5a-0199cd293734
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 38
+Game ID: cf31d228-7724-4c61-8e14-27cf79dd8b77
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 39
+Game ID: 5e4df0e3-c3f7-4342-9a64-3fee5d35efd5
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 40
+Game ID: 598891d4-1491-4b33-a281-6cd5307af815
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 41
+Game ID: 24702ea2-4608-43c6-a6db-94656d7116be
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 42
+Game ID: a2609676-5de8-4eb0-90f9-75762ef3b5e2
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 43
+Game ID: 2e491be1-6ad6-43a7-bca6-074d34d0dce4
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 44
+Game ID: 114a94e1-fb08-402d-a523-173543ea23e3
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 45
+Game ID: 8bae3d4c-579d-48d4-9bbc-1e474566a198
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 46
+Game ID: 2c9e7763-bf44-4260-8b85-246a8db8b098
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 47
+Game ID: f1796e6b-090e-4b0a-b0f3-05a8466e31df
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 48
+Game ID: 71661174-e216-4f0a-9959-5bf59cf6ac47
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 49
+Game ID: 23761276-65b1-48a1-a0a4-b030bbfdbcd1
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 50
+Game ID: 0134a89f-0a76-484f-9bad-6f249f7ea1b8
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 51
+Game ID: 298831cc-b3b9-4cc6-844d-6a110fe20241
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 52
+Game ID: da0031d7-48a8-4df4-b4ab-bbd137ea4e45
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 53
+Game ID: 3e72eb99-b08d-4d21-8008-e9e5f6e80f19
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 54
+Game ID: 62cf1076-d838-4417-bc5b-1849473500e9
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 55
+Game ID: 75de995e-52c0-4948-bb01-0a07ab6773a9
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 56
+Game ID: b03736f5-9453-41e2-b822-966ac36d5c09
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 57
+Game ID: 89b5b1d2-3861-453c-a67e-9ce1780280ce
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 58
+Game ID: 905d9026-b5c6-48f6-aa9b-8cdb3ce5ae5c
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 59
+Game ID: 43b00927-c565-4a00-abdf-1668738a51fc
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 60
+Game ID: 796f5d7e-3c1b-4d15-af59-7c43412ff509
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 61
+Game ID: 843e8dda-f13a-4899-92c7-36e23735d3ae
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 62
+Game ID: 4f8df385-829f-4928-84d1-0199713d87fe
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 63
+Game ID: 006fc175-08e4-4c97-b42e-c975c8fe8244
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 64
+Game ID: 9f159572-565a-4224-8521-c1cb4a0356dd
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 65
+Game ID: 49ce6c24-61a7-4415-9637-c42427106818
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 66
+Game ID: 5eda2625-e23b-43e2-83bb-7bfeb3a54c55
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 67
+Game ID: ec00e12e-bbad-4236-a34a-1bf7317d5790
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 68
+Game ID: 267d2791-915a-4895-a728-b0a6098c8c48
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 69
+Game ID: 5a52f7e8-e2b2-472b-ba0f-2257d3714246
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 70
+Game ID: 5b65ea9f-a769-4169-8961-0e5524181605
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 71
+Game ID: afc2f47a-de57-4a6e-934c-78af4dddd002
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 72
+Game ID: d8ca2703-673b-456d-96c2-80600ba2921e
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 73
+Game ID: 20c82c0e-8323-40cb-937f-713d8c3618aa
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 74
+Game ID: 366bd7f5-8188-4b7e-8266-40f729e90877
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 75
+Game ID: 6185d530-2d25-4f6f-a046-a5cb8aca0125
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 76
+Game ID: 39cab634-e451-4c36-93af-fb74f325ba3c
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 77
+Game ID: f3485c43-3328-425a-a179-1f477e711d69
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 78
+Game ID: 2c6151ab-875d-41e3-9f38-d7aafbaca007
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 79
+Game ID: d88f5992-73ee-4c30-858b-7eb4f9f7598e
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 80
+Game ID: 0c177bfc-1ade-480b-a4c9-81aefad6ab91
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 81
+Game ID: 2702ca63-3277-4363-a956-fa060cabd145
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 82
+Game ID: 802793f4-0697-4220-b5fc-65f71dda450a
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 83
+Game ID: da158b8e-0fed-4196-9cd2-294ef31543ff
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 84
+Game ID: af96d5f8-3cd8-4491-be28-32f2f302b012
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 85
+Game ID: 8a0a12a0-3aa9-4fe4-a556-d79552d10f79
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 86
+Game ID: 0b0c0f75-e041-4ac6-8c0a-deca9de7b1ff
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 87
+Game ID: aca7aa10-b7fc-4e32-aa1d-1d1c1d6b28bf
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 88
+Game ID: b9cf7621-a958-472d-bd94-d240149f2ea5
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 89
+Game ID: b3bc1a9e-1e8c-4999-9716-5f30f8f0f7a8
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 90
+Game ID: 215cf4b7-1284-4b7c-b220-b688a7dee88c
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 91
+Game ID: a669741c-0467-4df6-b911-23377ba9b1fc
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 92
+Game ID: 56f09289-5b93-43e1-b0c6-54e9540d6ac1
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 93
+Game ID: 411b9f6a-c184-44f5-88a9-919ec81ce99a
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 94
+Game ID: d8557ee4-76e3-4c94-beec-5c2dafff353b
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 95
+Game ID: 96ed3987-2af2-4c58-9e88-756a194c873c
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 96
+Game ID: bd5b6558-2d8f-4fb5-8e89-87ac01a89177
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 97
+Game ID: f3102fe7-1633-4c06-b067-1fc0d0127b6e
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 98
+Game ID: cb53106f-594d-463e-9580-3bac02e8c4bc
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 99
+Game ID: 780c5e27-cc38-4bec-bc81-573c12a9a1b7
+Winner: TrainingAgent
+Turns: 3
+Final score: 170.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 200.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 633.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 170.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+
+================================================================================
+GAME 100
+Game ID: 60cf5648-3df6-48bb-bc26-1bb20196b640
+Winner: TrainingAgent
+Turns: 4
+Final score: 140.0
+================================================================================
+======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 16
+  HP after move — Player: 170.0, Opponent: 70.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 17
+  HP after move — Player: 170.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Electrike used Thunder Jolt
+  Damage: 30.0
+  Search score: -618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Eevee ex used Evolution Burst
+  Damage: 60.0
+  Search score: 618.00
+  Search depth: 6
+  Nodes searched: 10
+  HP after move — Player: 140.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state.
+

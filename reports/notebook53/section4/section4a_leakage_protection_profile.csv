@@ -1,0 +1,7 @@
+metric,value
+source_rows,1060
+benchmark_rows,210
+source_scenario_ids,0
+benchmark_scenario_ids,24
+overlapping_scenario_ids,0
+benchmark_rows_used_for_training,0

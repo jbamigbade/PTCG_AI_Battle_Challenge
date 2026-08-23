@@ -1,0 +1,174 @@
+[
+  {
+    "scenario_id": "S1_BALANCED_LOW_HP",
+    "description": "Balanced low-HP battle with zero-cost and one-cost attacks.",
+    "schema_version": "AUTHORITATIVE_LEGAL_MOVES_V1",
+    "player": {
+      "name": "S1_Player",
+      "hp": 60.0,
+      "energy": 1,
+      "attacks": [
+        {
+          "Move Name": "Quick Strike",
+          "damage_numeric": 10.0,
+          "energy_cost": 0,
+          "Effect Explanation": null
+        },
+        {
+          "Move Name": "Power Strike",
+          "damage_numeric": 20.0,
+          "energy_cost": 1,
+          "Effect Explanation": null
+        }
+      ]
+    },
+    "opponent": {
+      "name": "S1_Opponent",
+      "hp": 60.0,
+      "energy": 1,
+      "attacks": [
+        {
+          "Move Name": "Quick Jab",
+          "damage_numeric": 10.0,
+          "energy_cost": 0,
+          "Effect Explanation": null
+        },
+        {
+          "Move Name": "Heavy Jab",
+          "damage_numeric": 20.0,
+          "energy_cost": 1,
+          "Effect Explanation": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario_id": "S2_BALANCED_HIGH_HP",
+    "description": "Balanced higher-HP battle to test sustained policy behavior.",
+    "schema_version": "AUTHORITATIVE_LEGAL_MOVES_V1",
+    "player": {
+      "name": "S2_Player",
+      "hp": 120.0,
+      "energy": 2,
+      "attacks": [
+        {
+          "Move Name": "Steady Hit",
+          "damage_numeric": 15.0,
+          "energy_cost": 0,
+          "Effect Explanation": null
+        },
+        {
+          "Move Name": "Heavy Hit",
+          "damage_numeric": 30.0,
+          "energy_cost": 2,
+          "Effect Explanation": null
+        }
+      ]
+    },
+    "opponent": {
+      "name": "S2_Opponent",
+      "hp": 120.0,
+      "energy": 2,
+      "attacks": [
+        {
+          "Move Name": "Steady Blow",
+          "damage_numeric": 15.0,
+          "energy_cost": 0,
+          "Effect Explanation": null
+        },
+        {
+          "Move Name": "Heavy Blow",
+          "damage_numeric": 30.0,
+          "energy_cost": 2,
+          "Effect Explanation": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario_id": "S3_PLAYER_DAMAGE_ADVANTAGE",
+    "description": "Player has stronger attacks; tests whether policy exploits advantage.",
+    "schema_version": "AUTHORITATIVE_LEGAL_MOVES_V1",
+    "player": {
+      "name": "S3_Player",
+      "hp": 90.0,
+      "energy": 1,
+      "attacks": [
+        {
+          "Move Name": "Fast Hit",
+          "damage_numeric": 20.0,
+          "energy_cost": 0,
+          "Effect Explanation": null
+        },
+        {
+          "Move Name": "Finisher",
+          "damage_numeric": 35.0,
+          "energy_cost": 1,
+          "Effect Explanation": null
+        }
+      ]
+    },
+    "opponent": {
+      "name": "S3_Opponent",
+      "hp": 90.0,
+      "energy": 1,
+      "attacks": [
+        {
+          "Move Name": "Weak Hit",
+          "damage_numeric": 10.0,
+          "energy_cost": 0,
+          "Effect Explanation": null
+        },
+        {
+          "Move Name": "Moderate Hit",
+          "damage_numeric": 20.0,
+          "energy_cost": 1,
+          "Effect Explanation": null
+        }
+      ]
+    }
+  },
+  {
+    "scenario_id": "S4_OPPONENT_DAMAGE_ADVANTAGE",
+    "description": "Opponent has stronger attacks; tests policy behavior under disadvantage.",
+    "schema_version": "AUTHORITATIVE_LEGAL_MOVES_V1",
+    "player": {
+      "name": "S4_Player",
+      "hp": 90.0,
+      "energy": 1,
+      "attacks": [
+        {
+          "Move Name": "Weak Hit",
+          "damage_numeric": 10.0,
+          "energy_cost": 0,
+          "Effect Explanation": null
+        },
+        {
+          "Move Name": "Moderate Hit",
+          "damage_numeric": 20.0,
+          "energy_cost": 1,
+          "Effect Explanation": null
+        }
+      ]
+    },
+    "opponent": {
+      "name": "S4_Opponent",
+      "hp": 90.0,
+      "energy": 1,
+      "attacks": [
+        {
+          "Move Name": "Fast Hit",
+          "damage_numeric": 20.0,
+          "energy_cost": 0,
+          "Effect Explanation": null
+        },
+        {
+          "Move Name": "Finisher",
+          "damage_numeric": 35.0,
+          "energy_cost": 1,
+          "Effect Explanation": null
+        }
+      ]
+    }
+  }
+]

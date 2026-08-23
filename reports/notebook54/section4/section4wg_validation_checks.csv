@@ -1,0 +1,8 @@
+check,passed,value,expected
+all_184_cases_analyzed,True,184,184
+all_92_mirror_pairs_analyzed,True,92,92
+all_selected_moves_legal,True,184,184
+move_counts_sum_to_total,True,184,184
+dominant_move_share_valid,True,1.0,Between 0 and 1
+normalized_entropy_valid,True,0.0,Between 0 and 1
+diversity_diagnosis_recognized,True,COMPLETE_MOVE_PREFERENCE_COLLAPSE,Recognized diversity diagnosis

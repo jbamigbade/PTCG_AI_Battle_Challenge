@@ -1,0 +1,17 @@
+{
+    "completed_epochs": 50,
+    "best_epoch": 50,
+    "baseline_validation_loss": 0.4851902233411188,
+    "baseline_validation_accuracy": 0.773972602739726,
+    "baseline_multi_action_accuracy": 0.6796116504854369,
+    "best_validation_loss": 0.3127547539260289,
+    "best_validation_accuracy": 0.8493150684931506,
+    "best_multi_action_accuracy": 0.7864077669902912,
+    "training_seconds": 12.074133499991149,
+    "best_checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\competitive\\competitive_policy_best.pt",
+    "last_checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\competitive\\competitive_policy_last.pt",
+    "history_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook47\\competitive_policy_training_history.csv",
+    "early_stopping_patience": 10,
+    "actor_relative": true,
+    "variable_action": true
+}

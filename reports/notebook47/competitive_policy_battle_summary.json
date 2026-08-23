@@ -1,0 +1,12 @@
+{
+    "checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\competitive\\competitive_policy_best.pt",
+    "agent_name": "Competitive Behavioral-Cloning Agent",
+    "battle": "Pikachu vs Charmander",
+    "winner": "Player",
+    "turn_count": 3,
+    "stop_reason": "Battle reached a terminal state.",
+    "fallback_decisions": 0,
+    "transcript_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook47\\competitive_policy_battle_transcript.txt",
+    "result_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\reports\\notebook47\\competitive_policy_battle_result.pkl",
+    "completed": true
+}

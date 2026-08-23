@@ -1,0 +1,5 @@
+module_name,move_key
+agent_decision,name
+simulator,damage
+battle_simulation,damage
+battle_simulation,name

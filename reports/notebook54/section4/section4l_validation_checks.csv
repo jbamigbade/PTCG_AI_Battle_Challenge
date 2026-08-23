@@ -1,0 +1,8 @@
+check,passed,value,expected,details
+all_annotations_inspected,True,264,264,
+annotation_profile_created,True,1,> 0,
+card_action_summary_covers_all_rows,True,8,8,
+link_mechanism_status_recognized,True,INTERNAL_OR_NAMED_DESTINATIONS_DETECTED,Recognized link-mechanism status,
+no_pdf_actions_executed,True,True,True,Only static PDF dictionary inspection was performed.
+no_files_extracted,True,0,0,
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",

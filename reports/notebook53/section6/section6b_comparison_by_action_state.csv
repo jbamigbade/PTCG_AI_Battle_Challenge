@@ -1,0 +1,3 @@
+action_state_type,decisions,notebook52_legal_predictions,notebook53_legal_predictions,notebook52_masking_changes,notebook53_masking_required,notebook53_selection_matches,notebook53_average_confidence,notebook52_raw_legality_rate,notebook53_raw_legality_rate,notebook52_masking_rate,notebook53_masking_rate,notebook53_selection_agreement_rate
+MULTI_ACTION,23,23,23,0,0,23,0.8723478260869565,1.0,1.0,0.0,0.0,1.0
+SINGLE_ACTION,187,36,151,151,36,187,0.6650374331550802,0.1925133689839572,0.8074866310160428,0.8074866310160428,0.1925133689839572,1.0

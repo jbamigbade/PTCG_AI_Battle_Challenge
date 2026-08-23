@@ -1,0 +1,3 @@
+current_player,decisions,masking_changes,illegal_raw_predictions,fallbacks,average_confidence,average_legal_move_count,masking_rate,raw_illegality_rate,fallback_rate
+Opponent,107,68,68,1,0.6904174454828661,1.2149532710280373,0.6355140186915887,0.6355140186915887,0.009345794392523364
+Player,103,83,83,0,0.6198964401294499,1.0,0.8058252427184466,0.8058252427184466,0.0

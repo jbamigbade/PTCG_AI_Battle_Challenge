@@ -1,0 +1,8 @@
+check,passed,value,expected,details
+all_target_annotations_processed,True,264,264,
+card_destination_summary_covers_all_rows,True,8,8,
+destination_pages_within_pdf,True,"{'minimum': 73, 'maximum': 1128}",Between 1 and 1306,
+destination_status_recognized,True,ALL_CARD_DESTINATIONS_RESOLVED_WITH_IMAGE_TARGETS,Recognized destination-resolution status,
+external_actions_not_executed,True,True,True,
+files_not_downloaded,True,0,0,
+frozen_benchmark_unchanged,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}",

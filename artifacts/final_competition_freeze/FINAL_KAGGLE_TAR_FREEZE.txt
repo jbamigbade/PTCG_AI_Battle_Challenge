@@ -1,0 +1,44 @@
+﻿THE POKÉMON COMPANY — PTCG AI BATTLE CHALLENGE SIMULATION
+
+FINAL KAGGLE TAR FREEZE
+=======================
+
+FINAL ARTIFACT:
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission\ptcg_final_agent.tar.gz
+
+SHA256:
+980795bf6e6a4d70c6df7d25616670d3606625303ebae4304f2ecadb6fa80cc8
+
+SIZE BYTES:
+1295131
+
+FORMAT:
+tar.gz
+
+PACKAGE STRUCTURE:
+- top-level main.py: PASS
+- top-level deck.csv: PASS
+- embedded ZIP files: NONE
+- Python cache artifacts: NONE
+
+OFFICIAL ENGINE VALIDATION:
+- Full official battle: PASS
+- Decisions accepted: 127 / 127
+- Terminal turn: 13
+- Terminal result: 1
+
+INTEGRITY:
+- No training during final review
+- No retraining during final review
+- No model mutation during final review
+
+CERTIFIED BACKUP:
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\backups\final_competition_submission\ptcg_final_agent_CERTIFIED.tar.gz
+
+BACKUP SHA256:
+980795bf6e6a4d70c6df7d25616670d3606625303ebae4304f2ecadb6fa80cc8
+
+FINAL STATUS:
+FROZEN — READY FOR SUBMISSION
+
+DO NOT REBUILD OR MODIFY THIS TAR.

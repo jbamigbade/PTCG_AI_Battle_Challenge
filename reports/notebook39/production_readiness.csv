@@ -1,0 +1,9 @@
+Component,Ready
+CSV Export,True
+Parquet Export,True
+Dataset Object,True
+Mini-Batch Generator,True
+Dataset Split,True
+Integrity Audit,True
+Cross-format Equality,True
+Statistics,True

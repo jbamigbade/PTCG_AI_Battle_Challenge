@@ -1,0 +1,3 @@
+side,active_card,energy_value,energy_observed,energy_attribute,energy_extraction_status
+Player,Meowth,0.0,True,attached_energy,ENERGY_EXTRACTED
+Opponent,Transition Test Dummy,0.0,True,attached_energy,ENERGY_EXTRACTED

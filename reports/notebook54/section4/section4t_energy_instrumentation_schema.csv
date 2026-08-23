@@ -1,0 +1,23 @@
+column_name,required,description
+scenario_id,True,Tournament replay scenario identifier.
+condition_id,True,Tournament condition identifier.
+decision_number,True,Sequential decision index.
+turn_number,True,Battle turn at decision time.
+acting_side,True,Player or Opponent.
+active_card,True,Acting active Pokémon.
+acting_energy,True,Observed energy attached to acting Pokémon.
+acting_energy_observed,True,Whether acting energy was successfully extracted.
+acting_energy_attribute,True,Simulator attribute used to obtain acting energy.
+defending_card,True,Defending active Pokémon.
+defending_energy,True,Observed energy attached to defending Pokémon.
+defending_energy_observed,True,Whether defending energy was extracted.
+defending_energy_attribute,True,Simulator attribute used to obtain defending energy.
+legal_moves,True,Legal actions before selection.
+legal_move_count,True,Number of legal actions.
+selected_move,True,Policy-selected action.
+selected_move_is_control_action,True,Whether selected move is Pass or another control action.
+verified_energy_requirement,True,Official printed energy-symbol count.
+selected_attack_energy_ready,True,Whether observed energy meets verified requirement.
+energy_validation_status,True,Energy validation outcome.
+routing_reason,True,Policy adapter routing reason.
+confidence,True,Policy confidence when available.

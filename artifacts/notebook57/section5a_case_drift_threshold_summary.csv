@@ -1,0 +1,4 @@
+threshold,case_comparisons_above_threshold,fraction_of_all_comparisons
+0.05,531,0.48097826086956524
+0.1,213,0.19293478260869565
+0.15,46,0.041666666666666664

@@ -1,0 +1,5 @@
+current_side,side_mode,examples,source_scenarios,average_value_target,average_sample_weight,average_search_depth
+Opponent,FLIP,40,20,325.0,1.3365,4.0
+Opponent,PRESERVE,688,86,-1.6032703488372106,1.7253749999999999,4.0
+Player,FLIP,172,86,149.50581395348837,0.99,4.0
+Player,PRESERVE,160,20,-242.875,1.2780624999999999,4.0

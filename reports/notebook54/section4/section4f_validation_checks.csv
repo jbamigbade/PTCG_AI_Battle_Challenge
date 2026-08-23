@@ -1,0 +1,5 @@
+check,passed,value,expected
+canonical_pdfs_exist,True,"{'english': True, 'japanese': True}","{'english': True, 'japanese': True}"
+reference_notebooks_exist,True,7,7
+identifier_summary_covers_all_cards,True,"['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']","['Bulbasaur', 'Charmander', 'Eevee', 'Meowth']"
+no_move_sets_modified,True,"{'battles': 24, 'decisions': 210}","{'battles': 24, 'decisions': 210}"

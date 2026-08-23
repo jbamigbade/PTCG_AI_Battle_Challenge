@@ -1,0 +1,9 @@
+card_id,card_name,expansion,collection_number,source_index_page,destination_page_number,destination_type,destination_left,destination_top,image_index,image_name,width,height,pixel_area,size_bytes,extension,extraction_error_type,extraction_error_message,image_bytes_available,image_dimensions_available,recognized_image_extension,candidate_rank_score,candidate_rank
+650,Bulbasaur,MEG,1,20,689,/XYZ,78.0,716.0,0,Im0.jp2,660,920,607200,805688,.jp2,,,True,True,True,1100607200.805688,1
+788,Charmander,PFL,11,24,827,/XYZ,78.0,716.0,0,Im0.jp2,660,920,607200,878654,.jp2,,,True,True,True,1100607200.878654,1
+926,Charmander,ASC,20,29,965,/XYZ,78.0,716.0,0,Im0.jp2,660,920,607200,896165,.jp2,,,True,True,True,1100607200.896165,1
+43,Eevee,TWM,135,2,82,/XYZ,78.0,716.0,0,Im0.jp2,660,920,607200,857708,.jp2,,,True,True,True,1100607200.857708,1
+145,Eevee,SFA,50,5,184,/XYZ,78.0,716.0,0,Im0.jp2,660,920,607200,918463,.jp2,,,True,True,True,1100607200.918463,1
+249,Eevee,EX,PRE,8,288,/XYZ,78.0,716.0,0,Im0.jp2,660,920,607200,1078924,.jp2,,,True,True,True,1100607201.078924,1
+317,Eevee,SSP,143,10,356,/XYZ,78.0,716.0,0,Im0.jp2,660,923,609180,912436,.jp2,,,True,True,True,1100609180.912436,1
+1071,Meowth,EX,POR,33,1110,/XYZ,78.0,716.0,0,Im0.jp2,451,630,284130,479767,.jp2,,,True,True,True,1100284130.479767,1

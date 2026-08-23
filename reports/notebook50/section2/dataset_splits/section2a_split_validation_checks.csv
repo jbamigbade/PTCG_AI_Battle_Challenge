@@ -1,0 +1,14 @@
+check_name,passed,observed_value,expected_value
+all_source_scenarios_assigned,True,106,106
+no_unassigned_scenario_rows,True,0,0
+no_unassigned_policy_rows,True,0,0
+train_validation_scenarios_disjoint,True,0,0
+train_test_scenarios_disjoint,True,0,0
+validation_test_scenarios_disjoint,True,0,0
+all_rows_preserved,True,1060,1060
+training_split_nonempty,True,740,> 0
+validation_split_nonempty,True,160,> 0
+test_split_nonempty,True,160,> 0
+training_scenario_count_expected,True,74,74
+validation_scenario_count_expected,True,16,16
+test_scenario_count_expected,True,16,16

@@ -1,0 +1,39 @@
+{
+    "checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\competitive\\competitive_policy_best.pt",
+    "checkpoint_epoch": 50,
+    "policy_module": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\competitive\\competitive_policy_engine.py",
+    "agent_module": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\competitive\\competitive_policy_agent.py",
+    "package_initializer": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\src\\competitive\\__init__.py",
+    "state_dimension": 8,
+    "move_dimension": 8,
+    "hidden_dimension": 128,
+    "actor_relative": true,
+    "variable_action": true,
+    "simulator_compatible": true,
+    "decision_fields": [
+        "move",
+        "confidence",
+        "selected_move_name",
+        "probabilities",
+        "logits",
+        "move_names",
+        "fallback",
+        "score",
+        "search_depth",
+        "nodes",
+        "reason"
+    ],
+    "legal_move_count": 2,
+    "legal_move_names": [
+        "Quick Attack",
+        "Thunderbolt"
+    ],
+    "selected_move": "Quick Attack",
+    "confidence": 0.5034492015838623,
+    "probabilities": [
+        0.5034492015838623,
+        0.4965507388114929
+    ],
+    "fallback": false,
+    "production_validation_passed": true
+}

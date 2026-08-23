@@ -1,0 +1,13 @@
+{
+  "adapter_name": "Notebook53LegalityAwarePolicy",
+  "adapter_type": "LegalityAwarePolicyAgent",
+  "model_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook53\\legality_aware_random_forest.joblib",
+  "preprocessor_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook53\\legality_aware_preprocessor.joblib",
+  "raw_feature_schema_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook53\\legality_aware_raw_feature_schema.json",
+  "encoded_feature_names_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook53\\legality_aware_encoded_feature_names.json",
+  "single_action_direct_routing": true,
+  "multi_action_model_routing": true,
+  "defensive_legal_selector": true,
+  "validated_benchmark_decisions": 210,
+  "benchmark_rows_used_for_training": 0
+}

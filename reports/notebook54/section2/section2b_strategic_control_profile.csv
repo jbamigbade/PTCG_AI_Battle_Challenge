@@ -1,0 +1,3 @@
+control_type,decisions,scenarios,player_wins,player_losses,draws,average_confidence
+PLAYER_CONTROLLED,0,0,0,0,0,0.0
+OPPONENT_CONTROLLED,23,10,5,18,0,0.940608695652174

@@ -1,0 +1,4 @@
+metric,pearson_correlation,spearman_correlation
+mean_maximum_case_difference,0.5249398836442977,0.5
+mean_l1_case_difference,0.5149833477342577,0.5
+maximum_case_difference,0.21807239916050522,0.5

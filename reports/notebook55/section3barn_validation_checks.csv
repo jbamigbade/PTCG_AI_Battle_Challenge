@@ -1,0 +1,6 @@
+check,passed,value,expected
+runtime_inventory_loaded,True,16,> 0
+model_interface_loaded,True,1,> 0
+original_model_source_recovered,True,globals.notebook53_legality_model,Nonempty source
+original_preprocessor_source_recovered,True,globals.notebook53_preprocessor,Nonempty source
+next_stage_resolved,True,RESTORE_MISSING_ORIGINAL_RUNTIME_BINDINGS,Recognized recovery route

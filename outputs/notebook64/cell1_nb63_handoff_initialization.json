@@ -1,0 +1,52 @@
+{
+  "notebook": 64,
+  "cell": 1,
+  "purpose": "NB63_HANDOFF_AND_STRATEGY_INTERPRETATION_INITIALIZATION",
+  "project_root": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge",
+  "nb63_battle_records": 240,
+  "nb63_scenarios": 4,
+  "nb63_handoff": {
+    "campaign_configuration_sha256": "901d90eb6bb39b6de10848ddd30de86bd64ee9bcadd35f4cf2e638c2b72a2301",
+    "key_runtime_result": "240/240 controlled battles completed with zero runtime failures.",
+    "key_semantic_result": "Unknown Move rate = 0.0 and positive-damage move rate = 1.0.",
+    "key_behavioral_result": "Deployment policy behaviorally matched FIRST_LEGAL_MOVE in all 80 paired controlled battles.",
+    "important_limitation": "Controlled attack-only synthetic environment; not full official Pok\u00e9mon TCG gameplay."
+  },
+  "interpretation_policy": {
+    "purpose": "MATCHUP_DECISION_STRATEGY_INTERPRETATION",
+    "simulation_execution_allowed": false,
+    "training_allowed": false,
+    "retraining_allowed": false,
+    "submission_writes_allowed": false,
+    "certified_model_mutation_allowed": false,
+    "analysis_only": true,
+    "primary_evidence_sources": [
+      "NB57",
+      "NB58",
+      "NB59",
+      "NB60",
+      "NB61",
+      "NB62",
+      "NB63"
+    ],
+    "nb63_role": "Controlled runtime, semantic, side-neutrality, and behavioral evidence.",
+    "nb63_non_claim": "Do not claim policy superiority from NB63.",
+    "required_analysis_dimensions": [
+      "scenario_matchups",
+      "normal_vs_swapped orientation",
+      "damage efficiency",
+      "turn efficiency",
+      "deployment vs deterministic baselines",
+      "decision-pattern equivalence",
+      "controlled-environment limitations",
+      "integration with certified upstream evidence"
+    ]
+  },
+  "main_sha256": "e328508c39b6c48411f46ad43f5ec1ffe34f54f740aed24389f88d8166dc97cd",
+  "certified_rf_sha256": "615baf3d5725ccca0c1c94e37f62fb24a68613248e167bb566bef4a6d50f2581",
+  "deployment_ppo_sha256": "4e6a19861eb5be5f61bc86508dff07dd838a42df9350355d95e8f2dc436ae787",
+  "simulation_executed": false,
+  "training_executed": false,
+  "submission_modified": false,
+  "model_modified": false
+}

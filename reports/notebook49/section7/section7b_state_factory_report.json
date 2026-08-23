@@ -1,0 +1,17 @@
+{
+  "section": "7B",
+  "selected_card_file": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\data\\processed\\pokemon_cards_processed.csv",
+  "selected_card_rows": 2022,
+  "card_name_column": "Card Name",
+  "card_id_column": "Card ID",
+  "card_hp_column": "HP",
+  "move_name_column": "Move Name",
+  "damage_numeric_column": "damage_numeric",
+  "energy_cost_column": "energy_cost",
+  "effect_column": "Effect Explanation",
+  "required_card_count": 4,
+  "resolved_required_card_count": 4,
+  "cards_without_attacks": [],
+  "smoke_test_count": 20,
+  "smoke_tests_with_non_pass_moves": 20
+}

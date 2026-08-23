@@ -1,0 +1,5 @@
+variant_id,variant_description,acting_energy_mode,opposing_energy_mode
+OBSERVED_ENERGY_CONTEXT,Preserve the observed acting and opposing energy values.,SOURCE,SOURCE
+MINIMUM_MULTI_ACTION_ENERGY,Set Eevee to the minimum energy required for both actions.,2.0,SOURCE
+SYMMETRIC_TWO_ENERGY,Give both active Pokémon two attached energy.,2.0,2.0
+EEVEE_ENERGY_ADVANTAGE,Give Eevee three energy against an opponent with two energy.,3.0,2.0

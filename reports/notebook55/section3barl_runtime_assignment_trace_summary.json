@@ -1,0 +1,15 @@
+{
+  "status": "NOTEBOOK54_RUNTIME_MODEL_ASSIGNMENT_TRACE_COMPLETE",
+  "matching_source_cells": 14,
+  "scoring_source_cells": [
+    66,
+    67,
+    70,
+    84
+  ],
+  "predict_proba_calls": 2,
+  "primary_model_expression": "section4wh_model",
+  "direct_primary_model_assignments": 4,
+  "runtime_objects_profiled": 7,
+  "next_stage": "RESTORE_EXACT_NOTEBOOK54_SCORING_RUNTIME_OBJECT"
+}

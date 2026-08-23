@@ -1,0 +1,9 @@
+metric,value
+total_decisions,210.0
+single_action_decisions,187.0
+multi_action_decisions,23.0
+strategic_opportunity_rate,0.10952380952380952
+multi_action_decisions_in_player_losses,18.0
+multi_action_decisions_in_player_wins,5.0
+multi_action_decisions_in_draws,0.0
+average_multi_action_confidence,0.940608695652174

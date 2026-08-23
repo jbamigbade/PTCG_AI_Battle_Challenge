@@ -1,0 +1,8 @@
+check,passed,value,expected
+all_180_decisions_profiled,True,180,180
+all_selected_moves_legal,True,180,180
+player_genuine_choice_count_confirmed,True,0,0
+opponent_genuine_choice_count_confirmed,True,23,23
+decision_opportunity_gap_confirmed,True,23,23
+opportunity_imbalance_detected,True,True,True
+direct_policy_bias_not_claimed,True,False,False

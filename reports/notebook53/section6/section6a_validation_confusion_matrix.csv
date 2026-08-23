@@ -1,0 +1,7 @@
+,predicted__Ascension,predicted__Bind Down,predicted__Live Coal,predicted__Pass,predicted__Quick Attack,predicted__Tuck Tail
+actual__Ascension,44,0,0,0,0,0
+actual__Bind Down,0,12,0,0,0,0
+actual__Live Coal,0,0,6,0,0,0
+actual__Pass,0,0,0,13,0,0
+actual__Quick Attack,0,0,0,0,33,0
+actual__Tuck Tail,0,0,0,0,0,2

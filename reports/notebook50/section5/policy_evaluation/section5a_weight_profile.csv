@@ -1,0 +1,10 @@
+metric,value
+original_weight_min,0.99
+original_weight_mean,1.519902976190476
+original_weight_max,1.8785
+side_weight_min,0.6579381741874708
+side_weight_mean,1.11596093454683
+side_weight_max,2.082897873083254
+combined_weight_min,0.5785463832734514
+combined_weight_mean,1.0
+combined_weight_max,1.9069325054286377

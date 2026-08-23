@@ -1,0 +1,5 @@
+acting_card,opposing_card,evaluation_side,cases,mirror_pairs,variants,scenarios
+Eevee,Bulbasaur,Opponent,56,56,4,6
+Eevee,Bulbasaur,Player,56,56,4,6
+Eevee,Charmander,Opponent,36,36,4,4
+Eevee,Charmander,Player,36,36,4,4

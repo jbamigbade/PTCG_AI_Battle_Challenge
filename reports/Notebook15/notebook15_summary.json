@@ -1,0 +1,14 @@
+{
+    "benchmark_runs": 16,
+    "search_depths": [
+        2,
+        4,
+        6,
+        8
+    ],
+    "average_turns": 3.0,
+    "average_score": 170.0,
+    "average_runtime": 0.0021573249978246167,
+    "minimum_runtime": 0.0008455000061076134,
+    "maximum_runtime": 0.0045854999916628
+}

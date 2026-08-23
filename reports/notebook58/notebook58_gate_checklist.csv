@@ -1,0 +1,11 @@
+Gate,Passed
+Frozen model loaded,True
+46 retained features,True
+Validation accuracy preserved,True
+Test accuracy preserved,True
+Predictions reproduced,True
+Probabilities reproduced,True
+Zero reproduction error,True
+100% agreement with R0,True
+Controlled-validation risk LOW,True
+Release decision GO,True

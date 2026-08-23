@@ -1,0 +1,10 @@
+counterfactual_id,counterfactual_group,description,legal_moves,acting_energy,opposing_energy,turn_number
+BASELINE,BASELINE,Preserve the original expanded case exactly.,SOURCE,SOURCE,SOURCE,SOURCE
+LEGAL_SIGNATURE_ASCENSION_ONLY,LEGAL_STRUCTURE,Expose Ascension as the only legal action.,['Ascension'],SOURCE,SOURCE,SOURCE
+LEGAL_SIGNATURE_QUICK_ATTACK_ONLY,LEGAL_STRUCTURE,Expose Quick Attack as the only legal action.,['Quick Attack'],SOURCE,SOURCE,SOURCE
+LOW_ACTING_ENERGY,ENERGY_STATE,Reduce the acting Pokémon to one attached energy.,SOURCE,1.0,SOURCE,SOURCE
+HIGH_ACTING_ENERGY,ENERGY_STATE,Increase the acting Pokémon to four attached energy.,SOURCE,4.0,SOURCE,SOURCE
+ACTING_ENERGY_DISADVANTAGE,ENERGY_STATE,Set acting energy to two and opposing energy to four.,SOURCE,2.0,4.0,SOURCE
+ACTING_ENERGY_ADVANTAGE,ENERGY_STATE,Set acting energy to four and opposing energy to one.,SOURCE,4.0,1.0,SOURCE
+EARLY_TURN,TURN_STATE,Force the decision context to turn one.,SOURCE,SOURCE,SOURCE,1
+LATE_TURN,TURN_STATE,Force the decision context to turn twelve.,SOURCE,SOURCE,SOURCE,12

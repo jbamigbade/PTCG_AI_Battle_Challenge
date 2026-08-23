@@ -1,0 +1,1424 @@
+line_number,assigned_names,source
+107,['R3_MODEL_PATH'],"R3_MODEL_PATH = (
+    MODEL_55_DIR
+    / ""section3a_r3_state_centric_policy_model.joblib""
+)"
+133,['path_records'],"path_records = [
+    {
+        ""resource"": ""PROJECT_ROOT"",
+        ""path"": str(PROJECT_ROOT),
+        ""exists"": PROJECT_ROOT.exists(),
+    },
+    {
+        ""resource"": ""SRC_DIR"",
+        ""path"": str(SRC_DIR),
+        ""exists"": SRC_DIR.exists(),
+    },
+    {
+        ""resource"": ""NOTEBOOK58_RESULTS"",
+        ""path"": str(NOTEBOOK58_RESULTS_PATH),
+        ""exists"": NOTEBOOK58_RESULTS_PATH.exists(),
+    },
+    {
+        ""resource"": ""R3_MODEL"",
+        ""path"": str(R3_MODEL_PATH),
+        ""exists"": R3_MODEL_PATH.exists(),
+    },
+    {
+        ""resource"": ""ARTIFACTS_59"",
+        ""path"": str(ARTIFACTS_59_DIR),
+        ""exists"": ARTIFACTS_59_DIR.exists(),
+    },
+    {
+        ""resource"": ""REPORTS_59"",
+        ""path"": str(REPORTS_59_DIR),
+        ""exists"": REPORTS_59_DIR.exists(),
+    },
+]"
+251,['r3_package'],"r3_package = joblib.load(
+    R3_MODEL_PATH
+)"
+262,['r3_model'],"r3_model = r3_package.get(
+    ""model""
+)"
+266,['r3_feature_names'],"r3_feature_names = r3_package.get(
+    ""retained_feature_names""
+)"
+1065,['search_terms'],"search_terms = [
+    ""retained_feature_names"",
+    ""decision_features"",
+    ""feature_vector"",
+    ""feature_matrix"",
+    ""build_features"",
+    ""extract_features"",
+    ""transform_features"",
+    ""encode_features"",
+    ""observation_adapter"",
+    ""damage_difference"",
+    ""acting_damage"",
+    ""multi_legal_move_flag"",
+    ""recomputed_legal_move_count"",
+    ""model_choice_required_flag"",
+    ""single_legal_move_flag"",
+    ""absolute_damage_difference"",
+    ""turn_number"",
+    ""hand_size"",
+    ""player_damage"",
+    ""player_energy"",
+    ""opponent_energy"",
+    ""defending_damage"",
+    ""defending_energy"",
+]"
+1091,['feature_search_records'],feature_search_records = []
+1172,['section3f_feature_search_df'],"section3f_feature_search_df = pd.DataFrame(
+    feature_search_records,
+    columns=expected_columns,
+)"
+1207,['priority_terms'],"priority_terms = {
+    ""retained_feature_names"",
+    ""decision_features"",
+    ""feature_vector"",
+    ""feature_matrix"",
+    ""build_features"",
+    ""extract_features"",
+    ""transform_features"",
+    ""observation_adapter"",
+    ""recomputed_legal_move_count"",
+    ""model_choice_required_flag"",
+    ""single_legal_move_flag"",
+    ""damage_difference"",
+    ""absolute_damage_difference"",
+}"
+1297,['R3_MODEL_PATH'],"R3_MODEL_PATH = (
+    PROJECT_ROOT
+    / ""models""
+    / ""notebook55""
+    / ""section3a_r3_state_centric_policy_model.joblib""
+)"
+1317,['r3_live_package'],"r3_live_package = joblib.load(
+    R3_MODEL_PATH
+)"
+1339,['r3_live_model'],"r3_live_model = r3_live_package.get(
+    ""model""
+)"
+1343,['r3_live_feature_names'],"r3_live_feature_names = r3_live_package.get(
+    ""retained_feature_names""
+)"
+1347,['r3_live_feature_indices'],"r3_live_feature_indices = r3_live_package.get(
+    ""retained_feature_indices""
+)"
+1351,['r3_live_strategy_id'],"r3_live_strategy_id = r3_live_package.get(
+    ""strategy_id""
+)"
+1355,['r3_live_training_results'],"r3_live_training_results = r3_live_package.get(
+    ""training_results""
+)"
+1378,['model_feature_count'],"model_feature_count = getattr(
+    r3_live_model,
+    ""n_features_in_"",
+    None,
+)"
+1393,['r3_live_classes'],"r3_live_classes = np.asarray(
+    getattr(
+        r3_live_model,
+        ""classes_"",
+        [],
+    )
+)"
+1409,['section4a_r3_live_validation_df'],"section4a_r3_live_validation_df = pd.DataFrame(
+    [
+        {
+            ""strategy"": (
+                r3_live_strategy_id
+                if r3_live_strategy_id is not None
+                else ""R3_STATE_CENTRIC_POLICY""
+            ),
+            ""model_type"": type(
+                r3_live_model
+            ).__name__,
+            ""model_path"": str(
+                R3_MODEL_PATH
+            ),
+            ""model_exists"": (
+                R3_MODEL_PATH.exists()
+            ),
+            ""retained_feature_count"": len(
+                r3_live_feature_names
+            ),
+            ""model_n_features_in"": (
+                model_feature_count
+            ),
+            ""class_count"": len(
+                r3_live_classes
+            ),
+            ""classes"": list(
+                r3_live_classes
+            ),
+            ""training_results_available"": (
+                isinstance(
+                    r3_live_training_results,
+                    dict,
+                )
+            ),
+        }
+    ]
+)"
+1459,['section4a_r3_feature_order_df'],"section4a_r3_feature_order_df = pd.DataFrame(
+    {
+        ""feature_position"": np.arange(
+            1,
+            len(r3_live_feature_names) + 1,
+        ),
+        ""feature_name"": (
+            r3_live_feature_names
+        ),
+    }
+)"
+1553,['candidate_feature_files'],"candidate_feature_files = [
+    SRC_DIR / ""decision_features"" / ""decision_features.py"",
+    SRC_DIR / ""decision_features"" / ""feature_extractor.py"",
+    SRC_DIR / ""decision_features"" / ""battle_feature_extractor.py"",
+    SRC_DIR / ""observation_adapter"" / ""battle_state_adapter.py"",
+    SRC_DIR / ""observation_adapter"" / ""policy_search_adapter.py"",
+]"
+1562,['existing_feature_files'],"existing_feature_files = [
+    path
+    for path in candidate_feature_files
+    if path.exists()
+]"
+1672,['section4b_feature_interfaces_df'],"section4b_feature_interfaces_df = pd.DataFrame(
+    interface_records
+)"
+1687,['feature_keywords'],"feature_keywords = [
+    ""feature"",
+    ""extract"",
+    ""build"",
+    ""encode"",
+    ""transform"",
+    ""adapt"",
+    ""observation"",
+    ""state"",
+]"
+1738,['r3_feature_contract_df'],"r3_feature_contract_df = pd.DataFrame(
+    {
+        ""feature_position"": np.arange(
+            1,
+            len(r3_live_feature_names) + 1,
+        ),
+        ""feature_name"": r3_live_feature_names,
+    }
+)"
+1767,['feature_reference_records'],feature_reference_records = []
+1810,['section4b_r3_source_coverage_df'],"section4b_r3_source_coverage_df = pd.DataFrame(
+    feature_reference_records
+)"
+1883,['search_directories'],"search_directories = [
+    SRC_DIR / ""decision_features"",
+    SRC_DIR / ""observation_adapter"",
+]"
+2332,['candidate_scripts'],"candidate_scripts = [
+    PROJECT_ROOT / ""scripts"" / ""54_tournament_strength_optimization_clean.py"",
+    PROJECT_ROOT / ""scripts"" / ""55_controlled_feature_ablation_retraining_clean.py"",
+    PROJECT_ROOT / ""scripts"" / ""55_controlled_feature_ablation_retraining_clean_v2.py"",
+]"
+2338,['required_feature_terms'],"required_feature_terms = [
+    ""recomputed_legal_move_count"",
+    ""acting_energy"",
+    ""defending_energy"",
+    ""energy_difference"",
+    ""absolute_energy_difference"",
+    ""acting_damage"",
+    ""defending_damage"",
+    ""damage_difference"",
+    ""absolute_damage_difference"",
+    ""single_legal_move_flag"",
+    ""multi_legal_move_flag"",
+    ""model_choice_required_flag"",
+    ""battle_phase"",
+    ""energy_band"",
+    ""damage_band"",
+    ""active_card"",
+    ""inactive_card"",
+]"
+2431,['section5b_feature_builder_candidates_df'],"section5b_feature_builder_candidates_df = pd.DataFrame(
+    function_records
+)"
+2471,['best_candidate'],"best_candidate = (
+    section5b_feature_builder_candidates_df
+    .sort_values(
+        ""matched_term_count"",
+        ascending=False,
+    )
+    .iloc[0]
+)"
+2518,['missing_terms'],"missing_terms = [
+    term
+    for term in required_feature_terms
+    if term not in best_terms
+]"
+2577,['candidate_scripts'],"candidate_scripts = [
+    PROJECT_ROOT
+    / ""scripts""
+    / ""54_tournament_strength_optimization_clean.py"",
+
+    PROJECT_ROOT
+    / ""scripts""
+    / ""55_controlled_feature_ablation_retraining_clean.py"",
+
+    PROJECT_ROOT
+    / ""scripts""
+    / ""55_controlled_feature_ablation_retraining_clean_v2.py"",
+]"
+2591,['search_terms'],"search_terms = [
+    ""ColumnTransformer"",
+    ""OneHotEncoder"",
+    ""StandardScaler"",
+    ""get_feature_names_out"",
+    ""fit_transform"",
+    ""transform"",
+    ""PREPROCESS_RAW_FEATURES"",
+    ""legality_training_numeric_features"",
+    ""legality_training_categorical_features"",
+]"
+2883,['candidate_scripts'],"candidate_scripts = [
+    PROJECT_ROOT / ""scripts"" / ""54_tournament_strength_optimization_clean.py"",
+    PROJECT_ROOT / ""scripts"" / ""55_controlled_feature_ablation_retraining_clean.py"",
+]"
+2888,['interesting_names'],"interesting_names = [
+    ""PREPROCESS_NUMERIC_FEATURES"",
+    ""PREPROCESS_CATEGORICAL_FEATURES"",
+    ""PREPROCESS_RAW_FEATURES"",
+    ""preprocessor"",
+    ""ColumnTransformer"",
+    ""OneHotEncoder"",
+    ""get_feature_names_out"",
+    ""fit_transform"",
+    ""transform"",
+]"
+3098,['R3_ENCODED_FEATURE_NAMES'],"R3_ENCODED_FEATURE_NAMES = list(
+    r3_live_feature_names
+)"
+3118,['R3_NUMERIC_FEATURES'],"R3_NUMERIC_FEATURES = [
+    feature_name
+    for feature_name in R3_ENCODED_FEATURE_NAMES
+    if feature_name.startswith(
+        ""numeric__""
+    )
+]"
+3126,['R3_CATEGORICAL_FEATURES'],"R3_CATEGORICAL_FEATURES = [
+    feature_name
+    for feature_name in R3_ENCODED_FEATURE_NAMES
+    if feature_name.startswith(
+        ""categorical__""
+    )
+]"
+3169,['R3_CATEGORICAL_SOURCE_COLUMNS'],"R3_CATEGORICAL_SOURCE_COLUMNS = [
+    ""current_side"",
+    ""side_mode"",
+    ""player_card"",
+    ""opponent_card"",
+    ""active_card"",
+    ""inactive_card"",
+    ""battle_phase"",
+    ""energy_band"",
+    ""damage_band"",
+]"
+3183,['R3_CATEGORICAL_SOURCE_COLUMNS'],"R3_CATEGORICAL_SOURCE_COLUMNS = sorted(
+    R3_CATEGORICAL_SOURCE_COLUMNS,
+    key=len,
+    reverse=True,
+)"
+3423,['numeric_raw_columns'],"numeric_raw_columns = [
+    name.replace(
+        ""numeric__"",
+        """",
+        1,
+    )
+    for name in (
+        R3_NUMERIC_FEATURES
+    )
+]"
+3444,['section6b_encoder_contract_df'],"section6b_encoder_contract_df = (
+    pd.DataFrame(
+        [
+            {
+                ""contract"":
+                    ""R3 retained features"",
+
+                ""value"":
+                    len(
+                        R3_ENCODED_FEATURE_NAMES
+                    ),
+
+                ""expected"":
+                    46,
+
+                ""passed"":
+                    (
+                        len(
+                            R3_ENCODED_FEATURE_NAMES
+                        )
+                        == 46
+                    ),
+            },
+
+            {
+                ""contract"":
+                    ""R3 numeric features"",
+
+                ""value"":
+                    len(
+                        R3_NUMERIC_FEATURES
+                    ),
+
+                ""expected"":
+                    19,
+
+                ""passed"":
+                    (
+                        len(
+                            R3_NUMERIC_FEATURES
+                        )
+                        == 19
+                    ),
+            },
+
+            {
+                ""contract"":
+                    ""R3 categorical indicators"",
+
+                ""value"":
+                    len(
+                        R3_CATEGORICAL_FEATURES
+                    ),
+
+                ""expected"":
+                    27,
+
+                ""passed"":
+                    (
+                        len(
+                            R3_CATEGORICAL_FEATURES
+                        )
+                        == 27
+                    ),
+            },
+
+            {
+                ""contract"":
+                    ""R3 model input features"",
+
+                ""value"":
+                    int(
+                        r3_live_model
+                        .n_features_in_
+                    ),
+
+                ""expected"":
+                    46,
+
+                ""passed"":
+                    (
+                        int(
+                            r3_live_model
+                            .n_features_in_
+                        )
+                        == 46
+                    ),
+            },
+        ]
+    )
+)"
+3606,['required_objects_6c'],"required_objects_6c = [
+    ""build_legality_aware_feature_row"",
+    ""encode_r3_feature_row"",
+    ""r3_live_model"",
+    ""r3_live_feature_names"",
+]"
+3670,['section6c_raw_feature_row'],"section6c_raw_feature_row = (
+    build_legality_aware_feature_row(
+        section6c2_test_state,
+        section6c2_legal_moves,
+    )
+)"
+3710,['section6c_r3_matrix'],"section6c_r3_matrix = (
+    encode_r3_feature_row(
+        section6c_raw_feature_row
+    )
+)"
+3716,['section6c_r3_matrix'],"section6c_r3_matrix = np.asarray(
+    section6c_r3_matrix,
+    dtype=np.float64,
+)"
+3750,['section6c_encoded_df'],"section6c_encoded_df = pd.DataFrame(
+    section6c_r3_matrix,
+    columns=r3_live_feature_names,
+)"
+3762,['section6c_prediction'],"section6c_prediction = (
+    r3_live_model.predict(
+        section6c_r3_matrix
+    )
+)"
+3796,['section6c_probabilities'],"section6c_probabilities = (
+    r3_live_model.predict_proba(
+        section6c_r3_matrix
+    )
+)"
+3809,['section6c_classes'],"section6c_classes = list(
+    r3_live_model.classes_
+)"
+3862,['section6c_validation_df'],"section6c_validation_df = pd.DataFrame(
+    [
+        {
+            ""validation"":
+                ""raw_feature_row_shape"",
+
+            ""observed"":
+                str(
+                    section6c_raw_feature_row.shape
+                ),
+
+            ""expected"":
+                ""(1, 41)"",
+
+            ""passed"":
+                section6c_raw_feature_row.shape
+                == (1, 41),
+        },
+
+        {
+            ""validation"":
+                ""r3_encoded_matrix_shape"",
+
+            ""observed"":
+                str(
+                    section6c_r3_matrix.shape
+                ),
+
+            ""expected"":
+                ""(1, 46)"",
+
+            ""passed"":
+                section6c_r3_matrix.shape
+                == (1, 46),
+        },
+
+        {
+            ""validation"":
+                ""r3_feature_name_count"",
+
+            ""observed"":
+                len(
+                    r3_live_feature_names
+                ),
+
+            ""expected"":
+                46,
+
+            ""passed"":
+                len(
+                    r3_live_feature_names
+                ) == 46,
+        },
+
+        {
+            ""validation"":
+                ""prediction_count"",
+
+            ""observed"":
+                len(
+                    section6c_prediction
+                ),
+
+            ""expected"":
+                1,
+
+            ""passed"":
+                len(
+                    section6c_prediction
+                ) == 1,
+        },
+
+        {
+            ""validation"":
+                ""probability_sum"",
+
+            ""observed"":
+                float(
+                    np.sum(
+                        section6c_probability_vector
+                    )
+                ),
+
+            ""expected"":
+                1.0,
+
+            ""passed"":
+                np.isclose(
+                    float(
+                        np.sum(
+                            section6c_probability_vector
+                        )
+                    ),
+                    1.0,
+                    atol=1e-9,
+                ),
+        },
+    ]
+)"
+4009,['candidate_scripts'],"candidate_scripts = [
+    PROJECT_ROOT / ""scripts"" / ""54_tournament_strength_optimization_clean.py"",
+    PROJECT_ROOT / ""scripts"" / ""55_controlled_feature_ablation_retraining_clean.py"",
+]"
+4014,['target_function_name'],"target_function_name = ""build_legality_aware_feature_row"""
+4120,['TARGET_FUNCTION'],"TARGET_FUNCTION = ""build_legality_aware_feature_row"""
+4122,['candidate_scripts'],"candidate_scripts = [
+    PROJECT_ROOT
+    / ""scripts""
+    / ""54_tournament_strength_optimization_clean.py"",
+
+    PROJECT_ROOT
+    / ""scripts""
+    / ""55_controlled_feature_ablation_retraining_clean.py"",
+]"
+4275,['section6c2_raw_row'],"section6c2_raw_row = (
+    build_legality_aware_feature_row(
+        section6c2_test_state,
+        section6c2_legal_moves,
+    )
+)"
+4357,['candidate_scripts'],"candidate_scripts = [
+    PROJECT_ROOT / ""scripts"" / ""54_tournament_strength_optimization_clean.py"",
+    PROJECT_ROOT / ""scripts"" / ""55_controlled_feature_ablation_retraining_clean.py"",
+]"
+4444,['candidate_scripts'],"candidate_scripts = [
+    PROJECT_ROOT / ""scripts"" / ""54_tournament_strength_optimization_clean.py"",
+    PROJECT_ROOT / ""scripts"" / ""55_controlled_feature_ablation_retraining_clean.py"",
+]"
+4523,['candidate_scripts'],"candidate_scripts = [
+    PROJECT_ROOT / ""scripts"" / ""54_tournament_strength_optimization_clean.py"",
+    PROJECT_ROOT / ""scripts"" / ""55_controlled_feature_ablation_retraining_clean.py"",
+]"
+4602,['candidate_scripts'],"candidate_scripts = [
+    PROJECT_ROOT / ""scripts"" / ""54_tournament_strength_optimization_clean.py"",
+    PROJECT_ROOT / ""scripts"" / ""55_controlled_feature_ablation_retraining_clean.py"",
+]"
+4783,['TARGET_FUNCTION'],"TARGET_FUNCTION = ""build_legality_aware_feature_row"""
+4984,['POLICY_ACTION_CLASSES'],"POLICY_ACTION_CLASSES = [
+    str(action)
+    for action in r3_live_model.classes_
+]"
+5048,['TARGET_FUNCTION'],"TARGET_FUNCTION = ""build_legality_aware_feature_row"""
+5205,['POLICY_ACTION_CLASSES'],"POLICY_ACTION_CLASSES = [
+    str(value)
+    for value in r3_live_model.classes_
+]"
+5258,['key_dependencies'],"key_dependencies = [
+    ""get_state_value"",
+    ""get_card_name"",
+    ""get_attached_energy"",
+    ""get_pokemon_damage"",
+    ""extract_move_name"",
+    ""normalize_action_name"",
+    ""action_feature_name"",
+    ""build_legality_aware_feature_row"",
+]"
+5322,['SEARCH_NAME'],"SEARCH_NAME = ""action_feature_name"""
+5436,['ACTION_FEATURE_SOURCE_FILE'],"ACTION_FEATURE_SOURCE_FILE = (
+    PROJECT_ROOT
+    / ""scripts""
+    / ""53_legality_aware_policy_optimization.py""
+)"
+5455,['source_text'],"source_text = ACTION_FEATURE_SOURCE_FILE.read_text(
+    encoding=""utf-8"",
+    errors=""ignore"",
+)"
+5460,['parsed_source'],"parsed_source = ast.parse(
+    source_text,
+    filename=str(
+        ACTION_FEATURE_SOURCE_FILE
+    ),
+)"
+5522,['compiled_function'],"compiled_function = compile(
+    ast.Module(
+        body=[
+            target_node
+        ],
+        type_ignores=[],
+    ),
+    filename=str(
+        ACTION_FEATURE_SOURCE_FILE
+    ),
+    mode=""exec"",
+)"
+5700,['TARGET_NAMES_6C2L'],"TARGET_NAMES_6C2L = [
+    ""legality_training_numeric_features"",
+    ""legality_training_categorical_features"",
+    ""PREPROCESS_NUMERIC_FEATURES"",
+    ""PREPROCESS_CATEGORICAL_FEATURES"",
+    ""PREPROCESS_RAW_FEATURES"",
+]"
+5984,['critical_dependencies_6c2l'],"critical_dependencies_6c2l = [
+    ""build_legality_aware_feature_row"",
+    ""get_state_value"",
+    ""get_card_name"",
+    ""get_attached_energy"",
+    ""get_pokemon_damage"",
+    ""extract_move_name"",
+    ""normalize_action_name"",
+    ""action_feature_name"",
+    ""POLICY_ACTION_CLASSES"",
+    ""training_active_card_action_map"",
+]"
+6093,['section4vb_action_indicator_features'],section4vb_action_indicator_features = []
+6137,['PREPROCESS_NUMERIC_FEATURES'],"PREPROCESS_NUMERIC_FEATURES = (
+    list(
+        legality_training_numeric_features
+    )
+    +
+    list(
+        section4vb_action_indicator_features
+    )
+)"
+6147,['PREPROCESS_CATEGORICAL_FEATURES'],"PREPROCESS_CATEGORICAL_FEATURES = list(
+    legality_training_categorical_features
+)"
+6151,['PREPROCESS_RAW_FEATURES'],"PREPROCESS_RAW_FEATURES = (
+    PREPROCESS_NUMERIC_FEATURES
+    +
+    PREPROCESS_CATEGORICAL_FEATURES
+)"
+6246,['section6c2m_schema_validation_df'],"section6c2m_schema_validation_df = pd.DataFrame(
+    [
+        {
+            ""schema_component"":
+                ""base_numeric"",
+
+            ""count"":
+                len(
+                    legality_training_numeric_features
+                ),
+
+            ""expected"":
+                19,
+
+            ""passed"":
+                len(
+                    legality_training_numeric_features
+                ) == 19,
+        },
+
+        {
+            ""schema_component"":
+                ""action_indicators"",
+
+            ""count"":
+                len(
+                    section4vb_action_indicator_features
+                ),
+
+            ""expected"":
+                12,
+
+            ""passed"":
+                len(
+                    section4vb_action_indicator_features
+                ) == 12,
+        },
+
+        {
+            ""schema_component"":
+                ""preprocess_numeric"",
+
+            ""count"":
+                len(
+                    PREPROCESS_NUMERIC_FEATURES
+                ),
+
+            ""expected"":
+                31,
+
+            ""passed"":
+                len(
+                    PREPROCESS_NUMERIC_FEATURES
+                ) == 31,
+        },
+
+        {
+            ""schema_component"":
+                ""preprocess_categorical"",
+
+            ""count"":
+                len(
+                    PREPROCESS_CATEGORICAL_FEATURES
+                ),
+
+            ""expected"":
+                10,
+
+            ""passed"":
+                len(
+                    PREPROCESS_CATEGORICAL_FEATURES
+                ) == 10,
+        },
+
+        {
+            ""schema_component"":
+                ""raw_total"",
+
+            ""count"":
+                len(
+                    PREPROCESS_RAW_FEATURES
+                ),
+
+            ""expected"":
+                41,
+
+            ""passed"":
+                len(
+                    PREPROCESS_RAW_FEATURES
+                ) == 41,
+        },
+    ]
+)"
+6382,['required_dependencies_6d'],"required_dependencies_6d = [
+    ""build_legality_aware_feature_row"",
+    ""encode_r3_feature_row"",
+    ""r3_live_model"",
+    ""r3_live_feature_names"",
+    ""extract_move_name"",
+    ""normalize_action_name"",
+]"
+6861,['r3_live_policy_engine'],"r3_live_policy_engine = (
+    R3LivePolicyEngine(
+        model=r3_live_model,
+        retained_feature_names=
+            r3_live_feature_names,
+    )
+)"
+6905,['section6d_result'],"section6d_result = (
+    r3_live_policy_engine.score_moves(
+        battle_state=
+            section6c2_test_state,
+
+        legal_moves=
+            section6c2_legal_moves,
+    )
+)"
+7029,['section6d_validation_df'],"section6d_validation_df = pd.DataFrame(
+    [
+        {
+            ""validation"":
+                ""engine_instantiated"",
+
+            ""passed"":
+                isinstance(
+                    r3_live_policy_engine,
+                    R3LivePolicyEngine,
+                ),
+        },
+
+        {
+            ""validation"":
+                ""score_moves_contract_complete"",
+
+            ""passed"":
+                len(
+                    missing_contract_keys_6d
+                ) == 0,
+        },
+
+        {
+            ""validation"":
+                ""legal_probability_count"",
+
+            ""passed"":
+                len(
+                    section6d_probabilities
+                )
+                ==
+                len(
+                    section6c2_legal_moves
+                ),
+        },
+
+        {
+            ""validation"":
+                ""legal_probabilities_sum_to_one"",
+
+            ""passed"":
+                np.isclose(
+                    section6d_probabilities.sum(),
+                    1.0,
+                    atol=1e-9,
+                ),
+        },
+
+        {
+            ""validation"":
+                ""selected_move_is_legal"",
+
+            ""passed"":
+                (
+                    section6d_result[
+                        ""selected_move_name""
+                    ]
+                    in
+                    section6d_move_names
+                ),
+        },
+
+        {
+            ""validation"":
+                ""fallback_not_required"",
+
+            ""passed"":
+                not bool(
+                    section6d_result[
+                        ""fallback""
+                    ]
+                ),
+        },
+    ]
+)"
+7546,['r3_engine_signature_7b'],"r3_engine_signature_7b = str(
+    inspect.signature(
+        r3_live_policy_engine.choose_move
+    )
+)"
+7552,['bridge_required_7b'],"bridge_required_7b = (
+    existing_agent_signature_7b
+    !=
+    r3_engine_signature_7b
+)"
+7788,['r3_live_battle_agent'],"r3_live_battle_agent = (
+    R3LiveBattleAgent(
+        policy_engine=
+            r3_live_policy_engine,
+
+        name=
+            ""Team Jesus R3 Live Agent"",
+    )
+)"
+7803,['r3_agent_signature_7c'],"r3_agent_signature_7c = (
+    inspect.signature(
+        R3LiveBattleAgent.choose_move
+    )
+)"
+7821,['section7c_validation_df'],"section7c_validation_df = pd.DataFrame(
+    [
+        {
+            ""validation"":
+                ""R3 battle agent instantiated"",
+
+            ""passed"":
+                isinstance(
+                    r3_live_battle_agent,
+                    R3LiveBattleAgent,
+                ),
+        },
+
+        {
+            ""validation"":
+                ""choose_move callable"",
+
+            ""passed"":
+                callable(
+                    r3_live_battle_agent.choose_move
+                ),
+        },
+
+        {
+            ""validation"":
+                ""legal move resolver callable"",
+
+            ""passed"":
+                callable(
+                    get_current_legal_moves
+                ),
+        },
+
+        {
+            ""validation"":
+                ""R3 policy engine connected"",
+
+            ""passed"":
+                (
+                    r3_live_battle_agent.policy_engine
+                    is
+                    r3_live_policy_engine
+                ),
+        },
+
+        {
+            ""validation"":
+                ""AgentDecision available"",
+
+            ""passed"":
+                AgentDecision is not None,
+        },
+
+        {
+            ""validation"":
+                ""state argument supported"",
+
+            ""passed"":
+                (
+                    ""state""
+                    in
+                    r3_agent_signature_7c.parameters
+                ),
+        },
+
+        {
+            ""validation"":
+                ""depth argument supported"",
+
+            ""passed"":
+                (
+                    ""depth""
+                    in
+                    r3_agent_signature_7c.parameters
+                ),
+        },
+    ]
+)"
+8774,['r3_live_initial_state'],"r3_live_initial_state = BattleState(
+    player=player_state_7d3b,
+    opponent=opponent_state_7d3b,
+    turn_number=1,
+    current_player=""Player"",
+)"
+8834,['r3_live_initial_legal_moves'],"r3_live_initial_legal_moves = (
+    get_current_legal_moves(
+        r3_live_initial_state
+    )
+)"
+8861,['r3_live_initial_decision'],"r3_live_initial_decision = (
+    r3_live_battle_agent.choose_move(
+        state=r3_live_initial_state,
+        depth=6,
+    )
+)"
+8897,['r3_live_next_state'],"r3_live_next_state = apply_move(
+    r3_live_initial_state,
+    r3_live_initial_decision.move,
+)"
+8945,['section7d3b_validation_df'],"section7d3b_validation_df = pd.DataFrame(
+    [
+        {
+            ""validation"": ""BattleState created"",
+            ""passed"": isinstance(
+                r3_live_initial_state,
+                BattleState,
+            ),
+        },
+        {
+            ""validation"": ""legal moves generated"",
+            ""passed"": len(
+                r3_live_initial_legal_moves
+            ) >= 1,
+        },
+        {
+            ""validation"": ""R3 decision returned"",
+            ""passed"": hasattr(
+                r3_live_initial_decision,
+                ""move"",
+            ),
+        },
+        {
+            ""validation"": ""selected move legal"",
+            ""passed"": (
+                r3_live_initial_decision.move
+                in r3_live_initial_legal_moves
+            ),
+        },
+        {
+            ""validation"": ""turn advanced"",
+            ""passed"": (
+                r3_live_next_state.turn_number
+                ==
+                r3_live_initial_state.turn_number + 1
+            ),
+        },
+        {
+            ""validation"": ""side switched"",
+            ""passed"": (
+                r3_live_next_state.current_player
+                !=
+                r3_live_initial_state.current_player
+            ),
+        },
+    ]
+)"
+9031,['last_policy_result_7d4'],"last_policy_result_7d4 = (
+    r3_live_battle_agent
+    .get_last_policy_result()
+)"
+9139,['R3_ACTION_CLASSES_7D5'],"R3_ACTION_CLASSES_7D5 = [
+    str(value)
+    for value in r3_live_model.classes_
+]"
+9552,['section7d6_policy_result'],"section7d6_policy_result = (
+    r3_live_policy_engine.score_moves(
+        section7d6_battle_state,
+        section7d6_legal_moves,
+    )
+)"
+9764,['required_7e1_objects'],"required_7e1_objects = {
+    ""simulate_ai_battle"": simulate_ai_battle,
+    ""determine_battle_winner"": determine_battle_winner,
+    ""create_battle_transcript"": create_battle_transcript,
+    ""r3_live_battle_agent"": r3_live_battle_agent,
+    ""section7d6_battle_state"": section7d6_battle_state,
+}"
+9866,['section7e1_result'],"section7e1_result = simulate_ai_battle(
+    initial_state=section7e1_initial_state,
+    agent=r3_live_battle_agent,
+    search_depth=6,
+    max_turns=6,
+    verbose=False,
+)"
+10243,['section7e2_agent'],"section7e2_agent = (
+    R3LoggingBattleAgent(
+        policy_engine=
+            r3_live_policy_engine,
+
+        name=
+            ""Team Jesus R3 Logging Agent"",
+    )
+)"
+10672,['R3_CARD_LIBRARY_8A'],"R3_CARD_LIBRARY_8A = {
+    ""Bulbasaur"": {
+        ""Card ID"": 650,
+        ""Card Name"": ""Bulbasaur"",
+        ""name"": ""Bulbasaur"",
+        ""HP"": 80.0,
+        ""hp"": 80.0,
+        ""attacks"": [
+            {
+                ""Move Name"": ""Bind Down"",
+                ""damage_numeric"": 10.0,
+                ""energy_cost"": 1,
+                ""Effect Explanation"":
+                    ""During your opponent's next turn, ""
+                    ""the Defending Pokémon can't retreat."",
+            }
+        ],
+    },
+
+    ""Eevee"": {
+        ""Card ID"": 43,
+        ""Card Name"": ""Eevee"",
+        ""name"": ""Eevee"",
+        ""HP"": 50.0,
+        ""hp"": 50.0,
+        ""attacks"": [
+            {
+                ""Move Name"": ""Ascension"",
+                ""damage_numeric"": 0.0,
+                ""energy_cost"": 1,
+                ""Effect Explanation"":
+                    ""Search your deck for a card that evolves ""
+                    ""from this Pokémon and put it onto this Pokémon."",
+            },
+            {
+                ""Move Name"": ""Quick Attack"",
+                ""damage_numeric"": 20.0,
+                ""energy_cost"": 3,
+                ""Effect Explanation"":
+                    ""Flip a coin. If heads, this attack does ""
+                    ""20 more damage."",
+            },
+        ],
+    },
+
+    ""Charmander"": {
+        ""Card ID"": 4,
+        ""Card Name"": ""Charmander"",
+        ""name"": ""Charmander"",
+        ""HP"": 80.0,
+        ""hp"": 80.0,
+        ""attacks"": [
+            {
+                ""Move Name"": ""Live Coal"",
+                ""damage_numeric"": 20.0,
+                ""energy_cost"": 1,
+                ""Effect Explanation"": None,
+            }
+        ],
+    },
+
+    ""Meowth"": {
+        ""Card ID"": 52,
+        ""Card Name"": ""Meowth"",
+        ""name"": ""Meowth"",
+        ""HP"": 60.0,
+        ""hp"": 60.0,
+        ""attacks"": [
+            {
+                ""Move Name"": ""Tuck Tail"",
+                ""damage_numeric"": 0.0,
+                ""energy_cost"": 1,
+                ""Effect Explanation"":
+                    ""Move all Energy from this Pokémon ""
+                    ""to one of your Benched Pokémon."",
+            }
+        ],
+    },
+}"
+12701,['RESULTS_PATH_59'],"RESULTS_PATH_59 = (
+    NOTEBOOK59_OUTPUT_DIR
+    / ""r3_controlled_battle_results.csv""
+)"
+12706,['CARD_RANKING_PATH_59'],"CARD_RANKING_PATH_59 = (
+    NOTEBOOK59_OUTPUT_DIR
+    / ""r3_controlled_card_ranking.csv""
+)"
+12711,['PAIRWISE_PATH_59'],"PAIRWISE_PATH_59 = (
+    NOTEBOOK59_OUTPUT_DIR
+    / ""r3_pairwise_matchup_summary.csv""
+)"
+12716,['SIDE_EFFECT_PATH_59'],"SIDE_EFFECT_PATH_59 = (
+    NOTEBOOK59_OUTPUT_DIR
+    / ""r3_starting_side_summary.csv""
+)"
+12721,['ACTION_USAGE_PATH_59'],"ACTION_USAGE_PATH_59 = (
+    NOTEBOOK59_OUTPUT_DIR
+    / ""r3_action_usage.csv""
+)"
+12726,['SUMMARY_PATH_59'],"SUMMARY_PATH_59 = (
+    NOTEBOOK59_OUTPUT_DIR
+    / ""notebook59_r3_live_integration_summary.json""
+)"
+12766,['final_metrics_59'],"final_metrics_59 = {
+    ""notebook"":
+        59,
+
+    ""purpose"":
+        ""R3 live simulator integration and controlled competitive validation"",
+
+    ""production_strategy"":
+        ""R3_STATE_CENTRIC_POLICY"",
+
+    ""production_model_type"":
+        type(
+            r3_live_model
+        ).__name__,
+
+    ""retained_feature_count"":
+        int(
+            len(
+                r3_live_feature_names
+            )
+        ),
+
+    ""model_class_count"":
+        int(
+            len(
+                r3_live_model.classes_
+            )
+        ),
+
+    ""model_classes"":
+        [
+            str(value)
+            for value
+            in r3_live_model.classes_
+        ],
+
+    ""controlled_battles"":
+        int(
+            section8a_total_battles
+        ),
+
+    ""total_live_decisions"":
+        int(
+            section8a_total_decisions
+        ),
+
+    ""model_driven_decisions"":
+        int(
+            section8a_total_model_driven
+        ),
+
+    ""fallback_decisions"":
+        int(
+            section8a_total_fallbacks
+        ),
+
+    ""model_driven_rate"":
+        float(
+            section8a_model_driven_rate
+        ),
+
+    ""fallback_rate"":
+        float(
+            fallback_rate_8b
+        ),
+
+    ""terminal_battle_rate"":
+        float(
+            terminal_rate_8b
+        ),
+
+    ""average_battle_turns"":
+        float(
+            section8a_average_turns
+        ),
+
+    ""pairwise_winner_side_consistency"":
+        float(
+            side_consistency_rate_8b
+        ),
+
+    ""controlled_ranking"":
+        (
+            section8b_ranking_df[
+                [
+                    ""rank"",
+                    ""card"",
+                    ""wins"",
+                    ""losses"",
+                    ""win_rate"",
+                ]
+            ]
+            .to_dict(
+                orient=""records""
+            )
+        ),
+
+    ""integration_status"":
+        ""PASSED"",
+
+    ""benchmark_status"":
+        ""READY_FOR_NOTEBOOK_60"",
+
+    ""created_at"":
+        datetime.now().isoformat(
+            timespec=""seconds""
+        ),
+}"
+12893,['final_validation_59'],"final_validation_59 = pd.DataFrame(
+    [
+        {
+            ""requirement"":
+                ""R3 production model loaded"",
+
+            ""observed"":
+                type(
+                    r3_live_model
+                ).__name__,
+
+            ""expected"":
+                ""RandomForestClassifier"",
+
+            ""passed"":
+                type(
+                    r3_live_model
+                ).__name__
+                ==
+                ""RandomForestClassifier"",
+        },
+
+        {
+            ""requirement"":
+                ""46-feature live contract"",
+
+            ""observed"":
+                len(
+                    r3_live_feature_names
+                ),
+
+            ""expected"":
+                46,
+
+            ""passed"":
+                len(
+                    r3_live_feature_names
+                )
+                == 46,
+        },
+
+        {
+            ""requirement"":
+                ""Controlled battles completed"",
+
+            ""observed"":
+                section8a_total_battles,
+
+            ""expected"":
+                12,
+
+            ""passed"":
+                section8a_total_battles
+                == 12,
+        },
+
+        {
+            ""requirement"":
+                ""All battles terminal"",
+
+            ""observed"":
+                terminal_rate_8b,
+
+            ""expected"":
+                1.0,
+
+            ""passed"":
+                np.isclose(
+                    terminal_rate_8b,
+                    1.0,
+                ),
+        },
+
+        {
+            ""requirement"":
+                ""All decisions model-driven"",
+
+            ""observed"":
+                section8a_model_driven_rate,
+
+            ""expected"":
+                1.0,
+
+            ""passed"":
+                np.isclose(
+                    section8a_model_driven_rate,
+                    1.0,
+                ),
+        },
+
+        {
+            ""requirement"":
+                ""Zero fallback decisions"",
+
+            ""observed"":
+                section8a_total_fallbacks,
+
+            ""expected"":
+                0,
+
+            ""passed"":
+                section8a_total_fallbacks
+                == 0,
+        },
+
+        {
+            ""requirement"":
+                ""Pairwise side consistency"",
+
+            ""observed"":
+                side_consistency_rate_8b,
+
+            ""expected"":
+                1.0,
+
+            ""passed"":
+                np.isclose(
+                    side_consistency_rate_8b,
+                    1.0,
+                ),
+        },
+    ]
+)"

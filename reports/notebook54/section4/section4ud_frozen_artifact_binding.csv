@@ -1,0 +1,3 @@
+binding_name,expected_type,bound_type,same_object_identity
+Frozen legality-aware model,RandomForestClassifier,RandomForestClassifier,True
+Frozen legality-aware preprocessor,ColumnTransformer,ColumnTransformer,True

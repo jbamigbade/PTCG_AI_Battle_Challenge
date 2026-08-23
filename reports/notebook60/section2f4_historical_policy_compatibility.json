@@ -1,0 +1,20 @@
+{
+  "historical_policy": "CompetitivePolicyAgent",
+  "historical_checkpoint": "models/competitive/competitive_policy_best.pt",
+  "historical_framework": "PyTorch",
+  "historical_import_available": false,
+  "historical_import_error": "ModuleNotFoundError: No module named 'torch'",
+  "install_torch_for_notebook60": false,
+  "historical_policy_recreation_required": false,
+  "historical_baselines_available": true,
+  "historical_match_runner_available": true,
+  "historical_state_builder_available": true,
+  "historical_card_templates_available": true,
+  "historical_benchmark_structure_available": true,
+  "historical_benchmark_results_available": true,
+  "current_evaluated_policy": "R3_STATE_CENTRIC_POLICY",
+  "current_model_type": "RandomForestClassifier",
+  "evaluation_strategy": "Use frozen R3 policy as evaluated agent against exact Notebook 48 baseline agents under reconstructed Notebook 48 tournament structure.",
+  "r3_retraining": false,
+  "r3_model_modification": false
+}

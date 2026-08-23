@@ -1,0 +1,12 @@
+declared_damage,candidate_moves,cards,transitions_passed
+60.0,2,"[""Meowth""]",2
+50.0,4,"[""Charmander""]",4
+46.0,2,"[""Bulbasaur""]",2
+33.0,2,"[""Meowth""]",2
+31.0,2,"[""Eevee""]",2
+30.0,4,"[""Bulbasaur""]",4
+28.0,2,"[""Bulbasaur""]",2
+20.0,8,"[""Charmander"", ""Eevee"", ""Meowth""]",8
+18.0,2,"[""Eevee""]",2
+16.0,2,"[""Charmander""]",2
+8.0,2,"[""Meowth""]",2

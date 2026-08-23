@@ -1,0 +1,25 @@
+{
+  "notebook": 60,
+  "section": "4C.2",
+  "benchmark": "clean_locked_300_match_r3_side_neutral",
+  "scheduled_matches": 300,
+  "successful_matches": 300,
+  "failed_matches": 0,
+  "elapsed_seconds": 65.57295350008644,
+  "historical_random_seed": 4801,
+  "historical_tournament_seed": 4804,
+  "matches_per_baseline": 100,
+  "matches_per_side_per_baseline": 50,
+  "feature_count": 46,
+  "classes": [
+    "Ascension",
+    "Bind Down",
+    "Live Coal",
+    "Pass",
+    "Quick Attack",
+    "Tuck Tail"
+  ],
+  "r3_retraining": false,
+  "r3_model_modification": false,
+  "benchmark_accepted": true
+}

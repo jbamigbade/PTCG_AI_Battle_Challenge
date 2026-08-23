@@ -1,0 +1,60 @@
+﻿THE POKÉMON COMPANY — PTCG AI BATTLE CHALLENGE SIMULATION
+
+FINAL COMPETITION CERTIFICATION
+================================
+
+FINAL STATUS:
+READY FOR KAGGLE SUBMISSION
+
+FINAL SUBMISSION:
+D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\submission\ptcg_final_agent.zip
+
+FINAL ZIP SHA256:
+36e0cc17e421ed8f8e1ca9dd1ec78c2a3f7f73802f090fc91b690a1469ef6a7f
+
+CERTIFIED MAIN.PY SHA256:
+e328508c39b6c48411f46ad43f5ec1ffe34f54f740aed24389f88d8166dc97cd
+
+DECK.CSV SHA256:
+b4464eb525a25e6598a972d00efc5e5b5156372e77f51853f4076d8ebb34fd7d
+
+CERTIFIED RANDOM FOREST SHA256:
+615baf3d5725ccca0c1c94e37f62fb24a68613248e167bb566bef4a6d50f2581
+
+DEPLOYMENT PPO SHA256:
+4e6a19861eb5be5f61bc86508dff07dd838a42df9350355d95e8f2dc436ae787
+
+OFFICIAL ENGINE VALIDATION:
+- Official battle initialization: PASS
+- Packaged agent import: PASS
+- Initial deck request: PASS
+- Official card-ID validation: PASS
+- Single real decision acceptance: PASS
+- 25-decision official rollout: 25 / 25 accepted
+- Full battle execution: PASS
+- Full battle decisions: 127
+- Official accepted decisions: 127 / 127
+- Terminal turn: 13
+- Terminal result: 1
+- Runtime failures during final battle: 0
+
+INTEGRITY:
+- Final ZIP unchanged after validation
+- main.py unchanged
+- Certified RF unchanged
+- PPO unchanged
+- deck.csv unchanged
+- No training/retraining performed
+- No model mutation performed
+- Submission cache-clean
+
+CLAIM BOUNDARY:
+This certification verifies package integrity, official runtime
+compatibility, legal action generation, official engine acceptance,
+and successful full battle termination.
+
+It does not independently claim competitive superiority.
+
+FINAL DECISION:
+SUBMISSION PACKAGE CERTIFIED.
+READY FOR KAGGLE SUBMISSION.

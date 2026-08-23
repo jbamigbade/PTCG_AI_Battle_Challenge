@@ -1,0 +1,25 @@
+scenario_number,scenario_id,condition_id,player_card,opponent_card,starting_side,notebook52_winner,notebook53_winner,winner_matches,notebook52_turns,notebook53_turns,turn_count_matches,termination_reason,policy_decisions,single_action_direct_decisions,model_decisions,selector_decisions,fallback_decisions,fallback_rate,final_player_hp,final_opponent_hp,replay_success
+1,T52_S001__BASELINE,BASELINE,Bulbasaur,Eevee,Player,Opponent,Opponent,True,8,8,True,Battle reached a terminal state.,8,4,4,0,0,0.0,0.0,10.0,True
+2,T52_S001__HP_PRESSURE,HP_PRESSURE,Bulbasaur,Eevee,Player,Opponent,Opponent,True,4,4,True,Battle reached a terminal state.,4,2,2,0,0,0.0,0.0,30.0,True
+3,T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,Bulbasaur,Eevee,Player,Player,Player,True,9,9,True,Battle reached a terminal state.,9,9,0,0,0,0.0,80.0,0.0,True
+4,T52_S002__BASELINE,BASELINE,Bulbasaur,Eevee,Opponent,Opponent,Opponent,True,7,7,True,Battle reached a terminal state.,7,3,4,0,0,0.0,0.0,20.0,True
+5,T52_S002__HP_PRESSURE,HP_PRESSURE,Bulbasaur,Eevee,Opponent,Opponent,Opponent,True,3,3,True,Battle reached a terminal state.,3,1,2,0,0,0.0,0.0,40.0,True
+6,T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,Bulbasaur,Eevee,Opponent,Player,Player,True,10,10,True,Battle reached a terminal state.,10,10,0,0,0,0.0,80.0,0.0,True
+7,T52_S003__BASELINE,BASELINE,Charmander,Eevee,Player,Player,Player,True,5,5,True,Battle reached a terminal state.,5,3,2,0,0,0.0,40.0,0.0,True
+8,T52_S003__HP_PRESSURE,HP_PRESSURE,Charmander,Eevee,Player,Opponent,Opponent,True,4,4,True,Battle reached a terminal state.,4,2,2,0,0,0.0,0.0,10.0,True
+9,T52_S003__ENERGY_PRESSURE,ENERGY_PRESSURE,Charmander,Eevee,Player,Player,Player,True,5,5,True,Battle reached a terminal state.,5,5,0,0,0,0.0,80.0,0.0,True
+10,T52_S004__BASELINE,BASELINE,Charmander,Eevee,Opponent,Player,Player,True,6,6,True,Battle reached a terminal state.,6,3,3,0,0,0.0,20.0,0.0,True
+11,T52_S004__HP_PRESSURE,HP_PRESSURE,Charmander,Eevee,Opponent,Opponent,Opponent,True,3,3,True,Battle reached a terminal state.,3,1,2,0,0,0.0,0.0,30.0,True
+12,T52_S004__ENERGY_PRESSURE,ENERGY_PRESSURE,Charmander,Eevee,Opponent,Player,Player,True,6,6,True,Battle reached a terminal state.,6,6,0,0,0,0.0,80.0,0.0,True
+13,T52_S005__BASELINE,BASELINE,Meowth,Bulbasaur,Player,Opponent,Opponent,True,12,12,True,Battle reached a terminal state.,12,12,0,0,0,0.0,0.0,80.0,True
+14,T52_S005__HP_PRESSURE,HP_PRESSURE,Meowth,Bulbasaur,Player,Opponent,Opponent,True,6,6,True,Battle reached a terminal state.,6,6,0,0,0,0.0,0.0,80.0,True
+15,T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,Meowth,Bulbasaur,Player,Draw,Draw,True,30,30,True,Maximum turn limit reached.,30,30,0,0,0,0.0,60.0,80.0,True
+16,T52_S006__BASELINE,BASELINE,Meowth,Bulbasaur,Opponent,Opponent,Opponent,True,11,11,True,Battle reached a terminal state.,11,11,0,0,0,0.0,0.0,80.0,True
+17,T52_S006__HP_PRESSURE,HP_PRESSURE,Meowth,Bulbasaur,Opponent,Opponent,Opponent,True,5,5,True,Battle reached a terminal state.,5,5,0,0,0,0.0,0.0,80.0,True
+18,T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,Meowth,Bulbasaur,Opponent,Draw,Draw,True,30,30,True,Maximum turn limit reached.,30,30,0,0,0,0.0,60.0,80.0,True
+19,T52_S007__BASELINE,BASELINE,Bulbasaur,Eevee,Opponent,Opponent,Opponent,True,1,1,True,Battle reached a terminal state.,1,0,1,0,0,0.0,0.0,20.0,True
+20,T52_S007__HP_PRESSURE,HP_PRESSURE,Bulbasaur,Eevee,Opponent,Opponent,Opponent,True,1,1,True,Battle reached a terminal state.,1,0,1,0,0,0.0,0.0,20.0,True
+21,T52_S007__ENERGY_PRESSURE,ENERGY_PRESSURE,Bulbasaur,Eevee,Opponent,Player,Player,True,4,4,True,Battle reached a terminal state.,4,4,0,0,0,0.0,20.0,0.0,True
+22,T52_S008__BASELINE,BASELINE,Eevee,Charmander,Player,Opponent,Opponent,True,6,6,True,Battle reached a terminal state.,6,6,0,0,0,0.0,0.0,80.0,True
+23,T52_S008__HP_PRESSURE,HP_PRESSURE,Eevee,Charmander,Player,Opponent,Opponent,True,4,4,True,Battle reached a terminal state.,4,4,0,0,0,0.0,0.0,80.0,True
+24,T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,Eevee,Charmander,Player,Draw,Draw,True,30,30,True,Maximum turn limit reached.,30,30,0,0,0,0.0,50.0,80.0,True

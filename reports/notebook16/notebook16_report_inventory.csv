@@ -1,0 +1,10 @@
+filename,rows,size_bytes,exists,path
+notebook16_environment.csv,1.0,250,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook16\notebook16_environment.csv
+notebook16_project_paths.csv,7.0,680,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook16\notebook16_project_paths.csv
+notebook16_sample_submission_files.csv,3.0,437,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook16\notebook16_sample_submission_files.csv
+notebook16_build_paths.csv,3.0,421,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook16\notebook16_build_paths.csv
+notebook16_archive_manifest.csv,10.0,316,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook16\notebook16_archive_manifest.csv
+notebook16_archive_validation.csv,1.0,390,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook16\notebook16_archive_validation.csv
+notebook16_completion_summary.csv,10.0,371,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook16\notebook16_completion_summary.csv
+notebook16_summary.json,1.0,524,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook16\notebook16_summary.json
+notebook16_executive_report.md,,641,True,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook16\notebook16_executive_report.md

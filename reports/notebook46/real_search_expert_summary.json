@@ -1,0 +1,32 @@
+{
+    "records": 1000,
+    "unique_states": 1000,
+    "battles_generated": 364,
+    "failed_positions": 0,
+    "state_dimension": 8,
+    "move_dimension": 8,
+    "search_depth": 4,
+    "average_legal_moves": 1.704,
+    "average_search_score": 606.71836,
+    "average_damage_applied": 17.732,
+    "terminal_positions": 316,
+    "average_nodes": 9.527,
+    "average_cutoffs": 0.327,
+    "generation_seconds": 0.7915780999464914,
+    "records_per_second": 1263.2992247607626,
+    "selected_move_distribution": {
+        "Scratch": 137,
+        "Vine Whip": 113,
+        "Tail Whap": 110,
+        "Bite": 106,
+        "Quick Attack": 104,
+        "Water Pulse": 84,
+        "Tackle": 78,
+        "Flame Tail": 75,
+        "Fury Swipes": 71,
+        "Razor Leaf": 64,
+        "Thunderbolt": 58
+    },
+    "synthetic_labels": 0,
+    "label_source": "advanced_search_engine"
+}

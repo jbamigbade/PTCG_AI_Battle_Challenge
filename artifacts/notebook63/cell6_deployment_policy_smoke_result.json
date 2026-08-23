@@ -1,0 +1,84 @@
+{
+  "notebook": 63,
+  "cell": 6,
+  "purpose": "CORRECTED_DEPLOYMENT_POLICY_SINGLE_BATTLE_SMOKE_TEST",
+  "deployment_namespace": "src",
+  "deployment_agent_class": "FinalPPOBattleAgent",
+  "selected_checkpoint": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\submission\\final_agent\\models\\ppo_training_loop.pkl",
+  "selected_checkpoint_sha256": "4e6a19861eb5be5f61bc86508dff07dd838a42df9350355d95e8f2dc436ae787",
+  "selected_checkpoint_size": 232534,
+  "certified_rf_model": "D:\\02_AI_and_Data\\Kaggle-AI-Agents\\PTCG_AI_Battle_Challenge\\models\\notebook60\\notebook60_certified_61_feature_random_forest.joblib",
+  "certified_rf_model_sha256": "615baf3d5725ccca0c1c94e37f62fb24a68613248e167bb566bef4a6d50f2581",
+  "certified_rf_used_as_ppo_checkpoint": false,
+  "temporary_execution_only": true,
+  "search_depth": 1,
+  "max_turns": 12,
+  "result": {
+    "sys_path_root": "C:\\Users\\johnb\\AppData\\Local\\Temp\\ptcg_nb63_cell6_2f74rjzr\\final_agent",
+    "imports_pass": true,
+    "import_error": null,
+    "checkpoint_candidates": [
+      "C:\\Users\\johnb\\AppData\\Local\\Temp\\ptcg_nb63_cell6_2f74rjzr\\final_agent\\models\\ppo_training_loop.pkl"
+    ],
+    "checkpoint_attempts": [
+      {
+        "checkpoint": "C:\\Users\\johnb\\AppData\\Local\\Temp\\ptcg_nb63_cell6_2f74rjzr\\final_agent\\models\\ppo_training_loop.pkl",
+        "name": "ppo_training_loop.pkl",
+        "constructed": true,
+        "choose_move_pass": true,
+        "error": null,
+        "decision_type": "AgentDecision",
+        "move": {
+          "name": "Unknown Move",
+          "damage": 0.0,
+          "energy_cost": 0,
+          "effect": null
+        },
+        "score": -0.0007240623235702515
+      }
+    ],
+    "selected_checkpoint": "C:\\Users\\johnb\\AppData\\Local\\Temp\\ptcg_nb63_cell6_2f74rjzr\\final_agent\\models\\ppo_training_loop.pkl",
+    "selected_checkpoint_name": "ppo_training_loop.pkl",
+    "agent_constructed": true,
+    "state_constructed": true,
+    "legal_move_count": 2,
+    "legal_moves": [
+      {
+        "name": "Unknown Move",
+        "damage": 0.0,
+        "energy_cost": 0,
+        "effect": null
+      },
+      {
+        "name": "Unknown Move",
+        "damage": 0.0,
+        "energy_cost": 1,
+        "effect": null
+      }
+    ],
+    "choose_move_probe_pass": true,
+    "choose_move_probe": {
+      "decision_type": "AgentDecision",
+      "move": {
+        "name": "Unknown Move",
+        "damage": 0.0,
+        "energy_cost": 0,
+        "effect": null
+      },
+      "score": -0.0007240623235702515,
+      "search_depth": 1,
+      "nodes": 1
+    },
+    "simulation_called": true,
+    "simulation_completed": true,
+    "winner": null,
+    "turn_count": 12,
+    "record_count": 12,
+    "stop_reason": "Maximum turn limit reached.",
+    "transcript_created": true,
+    "transcript_preview": "======================================================================\nPOK\u00c9MON AI BATTLE TRANSCRIPT\n======================================================================\nTurn 1: Player \u2014 NB63_POLICY_PLAYER used Unknown Move\n  Damage: 0.0\n  Search score: -0.00\n  Search depth: 1\n  Nodes searched: 1\n  HP after move \u2014 Player: 90.0, Opponent: 90.0\n  Next side: Opponent\n----------------------------------------------------------------------\nTurn 2: Opponent \u2014 NB63_POLICY_OPPONENT used Unknown Move\n  Damage: 0.0\n  Search score: -0.00\n  Search depth: 1\n  Nodes searched: 1\n  HP after move \u2014 Player: 90.0, Opponent: 90.0\n  Next side: Player\n----------------------------------------------------------------------\nTurn 3: Player \u2014 NB63_POLICY_PLAYER used Unknown Move\n  Damage: 0.0\n  Search score: -0.00\n  Search depth: 1\n  Nodes searched: 1\n  HP after move \u2014 Player: 90.0, Opponent: 90.0\n  Next side: Opponent\n----------------------------------------------------------------------\nTurn 4: Opponent \u2014 NB63_POLICY_OPPONENT used Unknown Move\n  Damage: 0.0\n  Search score: -0.00\n  Search depth: 1\n  Nodes searched: 1\n  HP after move \u2014 Player: 90.0, Opponent: 90.0\n  Next side: Player\n----------------------------------------------------------------------\nTurn 5: Player \u2014 NB63_POLICY_PLAYER used Unknown Move\n  Damage: 0.0\n  Search score: -0.00\n  Search depth: 1\n  Nodes searched: 1\n  HP after move \u2014 Player: 90.0, Opponent: 90.0\n  Next side: Opponent\n--------------------------------------------------------",
+    "exception_type": null,
+    "exception_message": null,
+    "traceback": null
+  }
+}

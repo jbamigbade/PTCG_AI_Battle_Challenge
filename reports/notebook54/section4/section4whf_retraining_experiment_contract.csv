@@ -1,0 +1,11 @@
+contract_item,requirement,mandatory
+experimental_control,R0_CURRENT_BASELINE must reproduce the current trained model metrics.,True
+fixed_training_rows,Use identical training and validation rows for R0 through R3.,True
+fixed_random_seed,Use the same Random Forest random_state for every strategy.,True
+fixed_estimator_parameters,"Keep tree count, depth, class weighting, and all other estimator settings unchanged.",True
+legal_filter_preserved,Legal-action filtering remains an external hard constraint; feature ablation must never permit illegal action execution.,True
+expanded_evaluation_reused,Evaluate every strategy on the same 184 balanced multi-action cases and 92 mirrored pairs.,True
+selection_diversity_measured,"Report Quick Attack share, Ascension share, entropy, and effective move count.",True
+side_neutrality_measured,Require mirrored Player/Opponent move and routing agreement.,True
+probability_margin_measured,Report Quick Attack minus Ascension probability margins for all 184 cases.,True
+performance_guardrail,"Do not accept a strategy that improves diversity by materially reducing legality, validation accuracy, or battle performance.",True

@@ -1,0 +1,18 @@
+{
+  "status": "LEGALITY_AWARE_FEATURE_SCHEMA_READY",
+  "row_count": 210,
+  "numeric_feature_count": 27,
+  "categorical_feature_count": 10,
+  "total_raw_feature_count": 37,
+  "legal_action_flag_count": 6,
+  "active_card_compatibility_flag_count": 6,
+  "unique_active_cards": 4,
+  "unique_legal_move_signatures": 6,
+  "single_action_states": 187,
+  "multi_action_states": 23,
+  "missing_feature_values": 0,
+  "target_class_count": 6,
+  "schema_reproducible": true,
+  "ready_for_dataset_rebuild": true,
+  "next_stage": "LEGALITY_AWARE_DATASET_REBUILD"
+}

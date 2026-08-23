@@ -1,0 +1,20 @@
+[
+  "numeric__turn_number",
+  "numeric__player_energy",
+  "numeric__opponent_energy",
+  "numeric__player_damage",
+  "numeric__opponent_damage",
+  "numeric__prize_cards_remaining",
+  "numeric__hand_size",
+  "numeric__legal_move_count",
+  "categorical__current_side_Opponent",
+  "categorical__current_side_Player",
+  "categorical__side_mode_FLIP",
+  "categorical__side_mode_PRESERVE",
+  "categorical__player_card_Bulbasaur",
+  "categorical__player_card_Charmander",
+  "categorical__player_card_Eevee",
+  "categorical__player_card_Meowth",
+  "categorical__opponent_card_Charmander",
+  "categorical__opponent_card_Eevee"
+]

@@ -1,0 +1,10 @@
+check,passed,value,expected
+all_23_source_pairs_used,True,23,23
+four_expansion_variants_created,True,4,4
+exactly_92_expanded_pairs_created,True,92,92
+exactly_184_balanced_cases_created,True,184,184
+player_and_opponent_case_counts_balanced,True,"{'player': 92, 'opponent': 92}","{'player': 92, 'opponent': 92}"
+all_expanded_pair_contexts_matched,True,92,92
+all_cases_have_two_legal_moves,True,184,184
+all_cases_multi_action_energy_ready,True,184,184
+balanced_expansion_ready,True,BALANCED_MULTI_ACTION_EXPANSION_READY,BALANCED_MULTI_ACTION_EXPANSION_READY

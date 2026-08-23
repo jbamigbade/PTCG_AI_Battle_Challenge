@@ -1,0 +1,4 @@
+dataset_split,policy_target,row_count,scenario_count,sample_weight_sum,within_split_fraction
+test,pass_0_0_0_no_legal_attack_was_available,160,16,227.293,1.0
+train,pass_0_0_0_no_legal_attack_was_available,740,74,1081.212,1.0
+validation,pass_0_0_0_no_legal_attack_was_available,160,16,232.683,1.0

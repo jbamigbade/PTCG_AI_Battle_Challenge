@@ -1,0 +1,21 @@
+{
+  "status": "LEGALITY_AWARE_PREPROCESSING_COMPLETE",
+  "raw_feature_count": 41,
+  "numeric_feature_count": 31,
+  "categorical_feature_count": 10,
+  "encoded_feature_count": 64,
+  "training_rows": 840,
+  "validation_rows": 110,
+  "test_rows": 110,
+  "training_matrix_finite": true,
+  "validation_matrix_finite": true,
+  "test_matrix_finite": true,
+  "unseen_validation_categories": 0,
+  "unseen_test_categories": 0,
+  "validation_checks_passed": 17,
+  "validation_checks_failed": 0,
+  "benchmark_rows_used_for_training": 0,
+  "scenario_overlap_count": 0,
+  "ready_for_model_training": true,
+  "next_stage": "LEGALITY_AWARE_MODEL_TRAINING"
+}

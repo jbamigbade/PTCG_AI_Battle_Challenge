@@ -1,0 +1,6500 @@
+file,object_type,name,line_number,source
+scripts\10_minimax_opponent_ai.py,CLASS,SearchStatistics,1419,"class SearchStatistics:
+    """"""Performance measurements for one search.""""""
+
+    nodes_visited: int = 0
+    leaf_nodes: int = 0
+    terminal_nodes: int = 0
+    maximum_depth_reached: int = 0"
+scripts\11_advanced_search_engine.py,CLASS,SearchStats,106,"class SearchStats:
+    """"""
+    Statistics collected during one complete search.
+    """"""
+
+    nodes: int = 0
+    leaf_nodes: int = 0
+    terminal_nodes: int = 0
+    cutoffs: int = 0
+
+    completed_depth: int = 0
+    elapsed_seconds: float = 0.0
+
+    depth_nodes: Dict[int, int] = field(default_factory=dict)
+    depth_times: Dict[int, float] = field(default_factory=dict)
+
+    def reset(self) -> None:
+        """"""Reset all statistics.""""""
+
+        self.nodes = 0
+        self.leaf_nodes = 0
+        self.terminal_nodes = 0
+        self.cutoffs = 0
+
+        self.completed_depth = 0
+        self.elapsed_seconds = 0.0
+
+        self.depth_nodes.clear()
+        self.depth_times.clear()
+
+    @property
+    def nodes_per_second(self) -> float:
+        """"""Return the average number of searched nodes per second.""""""
+
+        if self.elapsed_seconds <= 0:
+            return 0.0
+
+        return self.nodes / self.elapsed_seconds
+
+    def as_dict(self) -> Dict[str, Any]:
+        """"""Return statistics in dictionary form.""""""
+
+        return {
+            ""nodes"": self.nodes,
+            ""leaf_nodes"": self.leaf_nodes,
+            ""terminal_nodes"": self.terminal_nodes,
+            ""cutoffs"": self.cutoffs,
+            ""completed_depth"": self.completed_depth,
+            ""elapsed_seconds"": round(self.elapsed_seconds, 6),
+            ""nodes_per_second"": round(self.nodes_per_second, 2),
+            ""depth_nodes"": dict(self.depth_nodes),
+            ""depth_times"": {
+                depth: round(seconds, 6)
+                for depth, seconds in self.depth_times.items()
+            },
+        }"
+scripts\11_advanced_search_engine.py,CLASS,SearchResult,170,"class SearchResult:
+    """"""
+    Final result returned by the search engine.
+    """"""
+
+    best_move: Optional[Move]
+    score: float
+    completed_depth: int
+
+    principal_variation: List[Move] = field(default_factory=list)
+    stats: SearchStats = field(default_factory=SearchStats)
+
+    def as_dict(
+        self,
+        move_to_string: Optional[MoveToStringFn] = None,
+    ) -> Dict[str, Any]:
+        """"""
+        Convert the result into a display-friendly dictionary.
+        """"""
+
+        formatter = move_to_string or str
+
+        return {
+            ""best_move"": (
+                formatter(self.best_move)
+                if self.best_move is not None
+                else None
+            ),
+            ""score"": self.score,
+            ""completed_depth"": self.completed_depth,
+            ""principal_variation"": [
+                formatter(move)
+                for move in self.principal_variation
+            ],
+            ""stats"": self.stats.as_dict(),
+        }"
+scripts\11_advanced_search_engine.py,CLASS,AdvancedSearchEngine,222,"class AdvancedSearchEngine:
+    """"""
+    Advanced adversarial search engine for the PokÃ©mon TCG simulator.
+
+    The engine communicates with the game through callback functions.
+    Therefore, it does not depend on one specific GameState class.
+
+    Notebook 11 will progressively add:
+
+    - Iterative deepening
+    - Transposition tables
+    - Zobrist hashing
+    - Move ordering
+    - Killer moves
+    - History heuristic
+    - Principal variation extraction
+    - Time limits
+    """"""
+
+    def __init__(
+        self,
+        generate_moves: GenerateMovesFn,
+        apply_move: ApplyMoveFn,
+        evaluate_state: EvaluateFn,
+        is_terminal: IsTerminalFn,
+        current_player: CurrentPlayerFn,
+        move_to_string: Optional[MoveToStringFn] = None,
+    ) -> None:
+        """"""
+        Initialize the search engine.
+
+        Parameters
+        ----------
+        generate_moves:
+            Returns all legal moves for a state.
+
+        apply_move:
+            Returns the successor state produced by a move.
+
+            Important:
+            This function should not permanently modify the original state.
+            It should either return a copied state or use the safe state-copy
+            behavior established in the earlier notebooks.
+
+        evaluate_state:
+            Evaluates the state from the root player's perspective.
+
+            Positive score:
+                Favors the root player.
+
+            Negative score:
+                Favors the opponent.
+
+        is_terminal:
+            Returns True when the game is over.
+
+        current_player:
+            Returns the player whose turn it is.
+
+        move_to_string:
+            Optional function for displaying moves.
+        """"""
+
+        self.generate_moves = generate_moves
+        self.apply_move = apply_move
+        self.evaluate_state = evaluate_state
+        self.is_terminal = is_terminal
+        self.current_player = current_player
+        self.move_to_string = move_to_string or str
+
+        self.stats = SearchStats()
+
+        # Stores the best line found during the current depth search.
+        self._principal_variation: List[Move] = []
+
+    def _validate_depth(self, depth: int) -> None:
+        """"""Validate a requested search depth.""""""
+
+        if not isinstance(depth, int):
+            raise TypeError(
+                f""Search depth must be an integer, received {type(depth).__name__}.""
+            )
+
+        if depth < 1:
+            raise ValueError(
+                f""Search depth must be at least 1, received {depth}.""
+            )
+
+    def _safe_moves(self, state: State) -> List[Move]:
+        """"""
+        Generate legal moves and convert them to a normal list.
+        """"""
+
+        moves = self.generate_moves(state)
+
+        if moves is None:
+            return []
+
+        return list(moves)
+
+    def _alpha_beta(
+        self,
+        state: State,
+        depth: int,
+        alpha: float,
+        beta: float,
+        root_player: Player,
+    ) -> Tuple[float, List[Move]]:
+        """"""
+        Search one position using alpha-beta pruning.
+
+        Returns
+        -------
+        score:
+            Evaluation of the position.
+
+        line:
+            Best move sequence discovered from this position.
+        """"""
+
+        self.stats.nodes += 1
+
+        if self.is_terminal(state):
+            self.stats.terminal_nodes += 1
+
+            score = float(
+                self.evaluate_state(state, root_player)
+            )
+
+            return score, []
+
+        if depth <= 0:
+            self.stats.leaf_nodes += 1
+
+            score = float(
+                self.evaluate_state(state, root_player)
+            )
+
+            return score, []
+
+        legal_moves = self._safe_moves(state)
+
+        # A position with no legal moves is treated like a leaf.
+        if not legal_moves:
+            self.stats.leaf_nodes += 1
+
+            score = float(
+                self.evaluate_state(state, root_player)
+            )
+
+            return score, []
+
+        player_to_move = self.current_player(state)
+        maximizing = player_to_move == root_player
+
+        if maximizing:
+            best_score = -math.inf
+            best_line: List[Move] = []
+
+            for move in legal_moves:
+                child_state = self.apply_move(state, move)
+
+                child_score, child_line = self._alpha_beta(
+                    state=child_state,
+                    depth=depth - 1,
+                    alpha=alpha,
+                    beta=beta,
+                    root_player=root_player,
+                )
+
+                if child_score > best_score:
+                    best_score = child_score
+                    best_line = [move] + child_line
+
+                alpha = max(alpha, best_score)
+
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+                    break
+
+            return best_score, best_line
+
+        best_score = math.inf
+        best_line = []
+
+        for move in legal_moves:
+            child_state = self.apply_move(state, move)
+
+            child_score, child_line = self._alpha_beta(
+                state=child_state,
+                depth=depth - 1,
+                alpha=alpha,
+                beta=beta,
+                root_player=root_player,
+            )
+
+            if child_score < best_score:
+                best_score = child_score
+                best_line = [move] + child_line
+
+            beta = min(beta, best_score)
+
+            if alpha >= beta:
+                self.stats.cutoffs += 1
+                break
+
+        return best_score, best_line
+
+    def search_depth(
+        self,
+        state: State,
+        depth: int,
+        root_player: Optional[Player] = None,
+    ) -> SearchResult:
+        """"""
+        Perform one fixed-depth alpha-beta search.
+        """"""
+
+        self._validate_depth(depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        start_time = time.perf_counter()
+
+        score, principal_variation = self._alpha_beta(
+            state=state,
+            depth=depth,
+            alpha=-math.inf,
+            beta=math.inf,
+            root_player=root_player,
+        )
+
+        elapsed = time.perf_counter() - start_time
+
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+        self.stats.depth_nodes[depth] = self.stats.nodes
+        self.stats.depth_times[depth] = elapsed
+
+        best_move = (
+            principal_variation[0]
+            if principal_variation
+            else None
+        )
+
+        self._principal_variation = principal_variation
+
+        return SearchResult(
+            best_move=best_move,
+            score=score,
+            completed_depth=depth,
+            principal_variation=principal_variation,
+            stats=self.stats,
+        )
+
+    def iterative_deepening(
+        self,
+        state: State,
+        max_depth: int,
+        root_player: Optional[Player] = None,
+        verbose: bool = True,
+    ) -> SearchResult:
+        """"""
+        Search successively from depth 1 through max_depth.
+
+        The result from the deepest completed search is returned.
+        """"""
+
+        self._validate_depth(max_depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        overall_start = time.perf_counter()
+
+        best_move: Optional[Move] = None
+        best_score = float(
+            self.evaluate_state(state, root_player)
+        )
+        best_line: List[Move] = []
+
+        total_nodes = 0
+        total_leaf_nodes = 0
+        total_terminal_nodes = 0
+        total_cutoffs = 0
+
+        depth_nodes: Dict[int, int] = {}
+        depth_times: Dict[int, float] = {}
+
+        completed_depth = 0
+
+        for depth in range(1, max_depth + 1):
+            # Reset counters for this individual iteration.
+            self.stats.nodes = 0
+            self.stats.leaf_nodes = 0
+            self.stats.terminal_nodes = 0
+            self.stats.cutoffs = 0
+
+            depth_start = time.perf_counter()
+
+            score, principal_variation = self._alpha_beta(
+                state=state,
+                depth=depth,
+                alpha=-math.inf,
+                beta=math.inf,
+                root_player=root_player,
+            )
+
+            depth_elapsed = time.perf_counter() - depth_start
+
+            iteration_nodes = self.stats.nodes
+
+            depth_nodes[depth] = iteration_nodes
+            depth_times[depth] = depth_elapsed
+
+            total_nodes += self.stats.nodes
+            total_leaf_nodes += self.stats.leaf_nodes
+            total_terminal_nodes += self.stats.terminal_nodes
+            total_cutoffs += self.stats.cutoffs
+
+            completed_depth = depth
+            best_score = score
+            best_line = principal_variation
+
+            if principal_variation:
+                best_move = principal_variation[0]
+
+            if verbose:
+                move_name = (
+                    self.move_to_string(best_move)
+                    if best_move is not None
+                    else ""None""
+                )
+
+                pv_text = "" -> "".join(
+                    self.move_to_string(move)
+                    for move in principal_variation
+                )
+
+                print(
+                    f""Depth {depth:>2} | ""
+                    f""Score {score:>10.2f} | ""
+                    f""Nodes {iteration_nodes:>8,} | ""
+                    f""Time {depth_elapsed:>8.4f}s | ""
+                    f""Best move: {move_name}""
+                )
+
+                if pv_text:
+                    print(f""         PV: {pv_text}"")
+
+        overall_elapsed = time.perf_counter() - overall_start
+
+        final_stats = SearchStats(
+            nodes=total_nodes,
+            leaf_nodes=total_leaf_nodes,
+            terminal_nodes=total_terminal_nodes,
+            cutoffs=total_cutoffs,
+            completed_depth=completed_depth,
+            elapsed_seconds=overall_elapsed,
+            depth_nodes=depth_nodes,
+            depth_times=depth_times,
+        )
+
+        self.stats = final_stats
+        self._principal_variation = best_line
+
+        return SearchResult(
+            best_move=best_move,
+            score=best_score,
+            completed_depth=completed_depth,
+            principal_variation=best_line,
+            stats=final_stats,
+        )
+
+    def get_principal_variation(self) -> List[Move]:
+        """"""
+        Return a copy of the best line from the most recent search.
+        """"""
+
+        return list(self._principal_variation)"
+scripts\11_advanced_search_engine.py,CLASS,SearchStats,883,"class SearchStats:
+    """"""
+    Statistics collected during one complete search.
+    """"""
+
+    nodes: int = 0
+    leaf_nodes: int = 0
+    terminal_nodes: int = 0
+    cutoffs: int = 0
+
+    transposition_hits: int = 0
+    transposition_stores: int = 0
+    transposition_cutoffs: int = 0
+
+    completed_depth: int = 0
+    elapsed_seconds: float = 0.0
+
+    depth_nodes: Dict[int, int] = field(default_factory=dict)
+    depth_times: Dict[int, float] = field(default_factory=dict)
+
+    def reset(self) -> None:
+        """"""Reset all statistics.""""""
+
+        self.nodes = 0
+        self.leaf_nodes = 0
+        self.terminal_nodes = 0
+        self.cutoffs = 0
+
+        self.transposition_hits = 0
+        self.transposition_stores = 0
+        self.transposition_cutoffs = 0
+
+        self.completed_depth = 0
+        self.elapsed_seconds = 0.0
+
+        self.depth_nodes.clear()
+        self.depth_times.clear()
+
+    @property
+    def nodes_per_second(self) -> float:
+        """"""Return the average searched nodes per second.""""""
+
+        if self.elapsed_seconds <= 0:
+            return 0.0
+
+        return self.nodes / self.elapsed_seconds
+
+    @property
+    def transposition_hit_rate(self) -> float:
+        """"""
+        Return cache hits as a fraction of searched nodes.
+        """"""
+
+        if self.nodes <= 0:
+            return 0.0
+
+        return self.transposition_hits / self.nodes
+
+    def as_dict(self) -> Dict[str, Any]:
+        """"""Return statistics in dictionary form.""""""
+
+        return {
+            ""nodes"": self.nodes,
+            ""leaf_nodes"": self.leaf_nodes,
+            ""terminal_nodes"": self.terminal_nodes,
+            ""cutoffs"": self.cutoffs,
+            ""transposition_hits"": self.transposition_hits,
+            ""transposition_stores"": self.transposition_stores,
+            ""transposition_cutoffs"": self.transposition_cutoffs,
+            ""transposition_hit_rate"": round(
+                self.transposition_hit_rate,
+                6,
+            ),
+            ""completed_depth"": self.completed_depth,
+            ""elapsed_seconds"": round(
+                self.elapsed_seconds,
+                6,
+            ),
+            ""nodes_per_second"": round(
+                self.nodes_per_second,
+                2,
+            ),
+            ""depth_nodes"": dict(self.depth_nodes),
+            ""depth_times"": {
+                depth: round(seconds, 6)
+                for depth, seconds in self.depth_times.items()
+            },
+        }"
+scripts\11_advanced_search_engine.py,CLASS,AdvancedSearchEngine,978,"class AdvancedSearchEngine:
+    """"""
+    Advanced adversarial search engine with iterative deepening
+    and transposition-table support.
+    """"""
+
+    def __init__(
+        self,
+        generate_moves: GenerateMovesFn,
+        apply_move: ApplyMoveFn,
+        evaluate_state: EvaluateFn,
+        is_terminal: IsTerminalFn,
+        current_player: CurrentPlayerFn,
+        move_to_string: Optional[MoveToStringFn] = None,
+        state_key: Optional[Callable[[State], Hashable]] = None,
+        use_transposition_table: bool = True,
+    ) -> None:
+        """"""
+        Initialize the search engine.
+
+        state_key
+        ---------
+        Converts a state into a stable hashable key.
+
+        When state_key is omitted, the engine attempts to use the state
+        object itself as the dictionary key. This works for immutable,
+        hashable states such as frozen dataclasses.
+        """"""
+
+        self.generate_moves = generate_moves
+        self.apply_move = apply_move
+        self.evaluate_state = evaluate_state
+        self.is_terminal = is_terminal
+        self.current_player = current_player
+        self.move_to_string = move_to_string or str
+
+        self.state_key = state_key or self._default_state_key
+        self.use_transposition_table = use_transposition_table
+
+        self.stats = SearchStats()
+
+        self.transposition_table: Dict[
+            Hashable,
+            TranspositionEntry,
+        ] = {}
+
+        self._principal_variation: List[Move] = []
+
+    @staticmethod
+    def _default_state_key(state: State) -> Hashable:
+        """"""
+        Use the state itself as its cache key.
+
+        Raises a clear error when the state is not hashable.
+        """"""
+
+        try:
+            hash(state)
+        except TypeError as exc:
+            raise TypeError(
+                ""The game state is not hashable. Supply a state_key ""
+                ""function when creating AdvancedSearchEngine.""
+            ) from exc
+
+        return state
+
+    def _validate_depth(self, depth: int) -> None:
+        """"""Validate a requested search depth.""""""
+
+        if not isinstance(depth, int):
+            raise TypeError(
+                ""Search depth must be an integer, ""
+                f""received {type(depth).__name__}.""
+            )
+
+        if depth < 1:
+            raise ValueError(
+                f""Search depth must be at least 1, received {depth}.""
+            )
+
+    def _safe_moves(self, state: State) -> List[Move]:
+        """"""
+        Generate legal moves and convert them to a list.
+        """"""
+
+        moves = self.generate_moves(state)
+
+        if moves is None:
+            return []
+
+        return list(moves)
+
+    def clear_transposition_table(self) -> None:
+        """"""
+        Remove every cached position.
+        """"""
+
+        self.transposition_table.clear()
+
+    def transposition_table_size(self) -> int:
+        """"""
+        Return the number of cached positions.
+        """"""
+
+        return len(self.transposition_table)
+
+    def _probe_transposition_table(
+        self,
+        key: Hashable,
+        depth: int,
+        alpha: float,
+        beta: float,
+    ) -> Optional[Tuple[float, List[Move]]]:
+        """"""
+        Attempt to reuse a cached search result.
+        """"""
+
+        if not self.use_transposition_table:
+            return None
+
+        entry = self.transposition_table.get(key)
+
+        if entry is None:
+            return None
+
+        if entry.depth < depth:
+            return None
+
+        self.stats.transposition_hits += 1
+
+        if entry.bound_type is BoundType.EXACT:
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        if (
+            entry.bound_type is BoundType.LOWER_BOUND
+            and entry.score >= beta
+        ):
+            self.stats.transposition_cutoffs += 1
+
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        if (
+            entry.bound_type is BoundType.UPPER_BOUND
+            and entry.score <= alpha
+        ):
+            self.stats.transposition_cutoffs += 1
+
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        return None
+
+    def _store_transposition_entry(
+        self,
+        key: Hashable,
+        depth: int,
+        score: float,
+        alpha_original: float,
+        beta_original: float,
+        best_line: List[Move],
+    ) -> None:
+        """"""
+        Store a completed node search in the cache.
+        """"""
+
+        if not self.use_transposition_table:
+            return
+
+        if score <= alpha_original:
+            bound_type = BoundType.UPPER_BOUND
+        elif score >= beta_original:
+            bound_type = BoundType.LOWER_BOUND
+        else:
+            bound_type = BoundType.EXACT
+
+        existing = self.transposition_table.get(key)
+
+        # Prefer deeper search results over shallower ones.
+        if existing is not None and existing.depth > depth:
+            return
+
+        best_move = best_line[0] if best_line else None
+
+        self.transposition_table[key] = TranspositionEntry(
+            depth=depth,
+            score=score,
+            bound_type=bound_type,
+            best_move=best_move,
+            principal_variation=list(best_line),
+        )
+
+        self.stats.transposition_stores += 1
+
+    def _alpha_beta(
+        self,
+        state: State,
+        depth: int,
+        alpha: float,
+        beta: float,
+        root_player: Player,
+    ) -> Tuple[float, List[Move]]:
+        """"""
+        Search one position using alpha-beta pruning and caching.
+        """"""
+
+        self.stats.nodes += 1
+
+        if self.is_terminal(state):
+            self.stats.terminal_nodes += 1
+
+            score = float(
+                self.evaluate_state(state, root_player)
+            )
+
+            return score, []
+
+        if depth <= 0:
+            self.stats.leaf_nodes += 1
+
+            score = float(
+                self.evaluate_state(state, root_player)
+            )
+
+            return score, []
+
+        key = self.state_key(state)
+
+        cached_result = self._probe_transposition_table(
+            key=key,
+            depth=depth,
+            alpha=alpha,
+            beta=beta,
+        )
+
+        if cached_result is not None:
+            return cached_result
+
+        legal_moves = self._safe_moves(state)
+
+        if not legal_moves:
+            self.stats.leaf_nodes += 1
+
+            score = float(
+                self.evaluate_state(state, root_player)
+            )
+
+            return score, []
+
+        alpha_original = alpha
+        beta_original = beta
+
+        player_to_move = self.current_player(state)
+        maximizing = player_to_move == root_player
+
+        if maximizing:
+            best_score = -math.inf
+            best_line: List[Move] = []
+
+            for move in legal_moves:
+                child_state = self.apply_move(state, move)
+
+                child_score, child_line = self._alpha_beta(
+                    state=child_state,
+                    depth=depth - 1,
+                    alpha=alpha,
+                    beta=beta,
+                    root_player=root_player,
+                )
+
+                if child_score > best_score:
+                    best_score = child_score
+                    best_line = [move] + child_line
+
+                alpha = max(alpha, best_score)
+
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+                    break
+
+        else:
+            best_score = math.inf
+            best_line = []
+
+            for move in legal_moves:
+                child_state = self.apply_move(state, move)
+
+                child_score, child_line = self._alpha_beta(
+                    state=child_state,
+                    depth=depth - 1,
+                    alpha=alpha,
+                    beta=beta,
+                    root_player=root_player,
+                )
+
+                if child_score < best_score:
+                    best_score = child_score
+                    best_line = [move] + child_line
+
+                beta = min(beta, best_score)
+
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+                    break
+
+        self._store_transposition_entry(
+            key=key,
+            depth=depth,
+            score=best_score,
+            alpha_original=alpha_original,
+            beta_original=beta_original,
+            best_line=best_line,
+        )
+
+        return best_score, best_line
+
+    def search_depth(
+        self,
+        state: State,
+        depth: int,
+        root_player: Optional[Player] = None,
+        clear_table: bool = True,
+    ) -> SearchResult:
+        """"""
+        Perform one fixed-depth alpha-beta search.
+        """"""
+
+        self._validate_depth(depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        start_time = time.perf_counter()
+
+        score, principal_variation = self._alpha_beta(
+            state=state,
+            depth=depth,
+            alpha=-math.inf,
+            beta=math.inf,
+            root_player=root_player,
+        )
+
+        elapsed = time.perf_counter() - start_time
+
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+        self.stats.depth_nodes[depth] = self.stats.nodes
+        self.stats.depth_times[depth] = elapsed
+
+        best_move = (
+            principal_variation[0]
+            if principal_variation
+            else None
+        )
+
+        self._principal_variation = principal_variation
+
+        return SearchResult(
+            best_move=best_move,
+            score=score,
+            completed_depth=depth,
+            principal_variation=principal_variation,
+            stats=self.stats,
+        )
+
+    def iterative_deepening(
+        self,
+        state: State,
+        max_depth: int,
+        root_player: Optional[Player] = None,
+        verbose: bool = True,
+        clear_table: bool = True,
+    ) -> SearchResult:
+        """"""
+        Search successively from depth 1 through max_depth.
+
+        The transposition table is retained between depth iterations so
+        earlier searches can help deeper searches.
+        """"""
+
+        self._validate_depth(max_depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        overall_start = time.perf_counter()
+
+        best_move: Optional[Move] = None
+        best_score = float(
+            self.evaluate_state(state, root_player)
+        )
+        best_line: List[Move] = []
+
+        total_nodes = 0
+        total_leaf_nodes = 0
+        total_terminal_nodes = 0
+        total_cutoffs = 0
+
+        total_tt_hits = 0
+        total_tt_stores = 0
+        total_tt_cutoffs = 0
+
+        depth_nodes: Dict[int, int] = {}
+        depth_times: Dict[int, float] = {}
+
+        completed_depth = 0
+
+        for depth in range(1, max_depth + 1):
+            self.stats.nodes = 0
+            self.stats.leaf_nodes = 0
+            self.stats.terminal_nodes = 0
+            self.stats.cutoffs = 0
+
+            self.stats.transposition_hits = 0
+            self.stats.transposition_stores = 0
+            self.stats.transposition_cutoffs = 0
+
+            depth_start = time.perf_counter()
+
+            score, principal_variation = self._alpha_beta(
+                state=state,
+                depth=depth,
+                alpha=-math.inf,
+                beta=math.inf,
+                root_player=root_player,
+            )
+
+            depth_elapsed = (
+                time.perf_counter() - depth_start
+            )
+
+            iteration_nodes = self.stats.nodes
+
+            depth_nodes[depth] = iteration_nodes
+            depth_times[depth] = depth_elapsed
+
+            total_nodes += self.stats.nodes
+            total_leaf_nodes += self.stats.leaf_nodes
+            total_terminal_nodes += self.stats.terminal_nodes
+            total_cutoffs += self.stats.cutoffs
+
+            total_tt_hits += self.stats.transposition_hits
+            total_tt_stores += self.stats.transposition_stores
+            total_tt_cutoffs += (
+                self.stats.transposition_cutoffs
+            )
+
+            completed_depth = depth
+            best_score = score
+            best_line = principal_variation
+
+            if principal_variation:
+                best_move = principal_variation[0]
+
+            if verbose:
+                move_name = (
+                    self.move_to_string(best_move)
+                    if best_move is not None
+                    else ""None""
+                )
+
+                pv_text = "" -> "".join(
+                    self.move_to_string(move)
+                    for move in principal_variation
+                )
+
+                print(
+                    f""Depth {depth:>2} | ""
+                    f""Score {score:>10.2f} | ""
+                    f""Nodes {iteration_nodes:>8,} | ""
+                    f""TT hits ""
+                    f""{self.stats.transposition_hits:>6,} | ""
+                    f""Time {depth_elapsed:>8.4f}s | ""
+                    f""Best move: {move_name}""
+                )
+
+                if pv_text:
+                    print(f""         PV: {pv_text}"")
+
+        overall_elapsed = (
+            time.perf_counter() - overall_start
+        )
+
+        final_stats = SearchStats(
+            nodes=total_nodes,
+            leaf_nodes=total_leaf_nodes,
+            terminal_nodes=total_terminal_nodes,
+            cutoffs=total_cutoffs,
+            transposition_hits=total_tt_hits,
+            transposition_stores=total_tt_stores,
+            transposition_cutoffs=total_tt_cutoffs,
+            completed_depth=completed_depth,
+            elapsed_seconds=overall_elapsed,
+            depth_nodes=depth_nodes,
+            depth_times=depth_times,
+        )
+
+        self.stats = final_stats
+        self._principal_variation = best_line
+
+        return SearchResult(
+            best_move=best_move,
+            score=best_score,
+            completed_depth=completed_depth,
+            principal_variation=best_line,
+            stats=final_stats,
+        )
+
+    def get_principal_variation(self) -> List[Move]:
+        """"""
+        Return a copy of the best line from the latest search.
+        """"""
+
+        return list(self._principal_variation)"
+scripts\11_advanced_search_engine.py,CLASS,AdvancedSearchEngine,2923,"class AdvancedSearchEngine:
+    """"""
+    Advanced adversarial search engine with:
+
+    - Alpha-beta pruning
+    - Iterative deepening
+    - Transposition tables
+    - Move ordering
+    - Principal-variation tracking
+    """"""
+
+    def __init__(
+        self,
+        generate_moves: GenerateMovesFn,
+        apply_move: ApplyMoveFn,
+        evaluate_state: EvaluateFn,
+        is_terminal: IsTerminalFn,
+        current_player: CurrentPlayerFn,
+        move_to_string: Optional[MoveToStringFn] = None,
+        state_key: Optional[Callable[[State], Hashable]] = None,
+        use_transposition_table: bool = True,
+        move_order_score: Optional[MoveOrderScoreFn] = None,
+        use_move_ordering: bool = True,
+    ) -> None:
+        """"""
+        Initialize the search engine.
+
+        move_order_score
+        ----------------
+        Optional callback that returns a numeric move-ordering priority.
+
+        Higher scores are searched first.
+
+        use_move_ordering
+        -----------------
+        Enables or disables all move ordering without removing the
+        configured callback.
+        """"""
+
+        self.generate_moves = generate_moves
+        self.apply_move = apply_move
+        self.evaluate_state = evaluate_state
+        self.is_terminal = is_terminal
+        self.current_player = current_player
+        self.move_to_string = move_to_string or str
+
+        self.state_key = (
+            state_key
+            or self._default_state_key
+        )
+
+        self.use_transposition_table = (
+            use_transposition_table
+        )
+
+        self.move_order_score = move_order_score
+        self.use_move_ordering = use_move_ordering
+
+        self.stats = SearchStats()
+
+        self.transposition_table: Dict[
+            Hashable,
+            TranspositionEntry,
+        ] = {}
+
+        self._principal_variation: List[Move] = []
+
+        # Previous completed iterative-deepening line.
+        self._previous_iteration_pv: List[Move] = []
+
+    @staticmethod
+    def _default_state_key(
+        state: State,
+    ) -> Hashable:
+        """"""
+        Use the state itself as its cache key.
+        """"""
+
+        try:
+            hash(state)
+        except TypeError as exc:
+            raise TypeError(
+                ""The game state is not hashable. ""
+                ""Supply a state_key function when creating ""
+                ""AdvancedSearchEngine.""
+            ) from exc
+
+        return state
+
+    def _validate_depth(
+        self,
+        depth: int,
+    ) -> None:
+        """"""Validate a requested search depth.""""""
+
+        if not isinstance(depth, int):
+            raise TypeError(
+                ""Search depth must be an integer, ""
+                f""received {type(depth).__name__}.""
+            )
+
+        if depth < 1:
+            raise ValueError(
+                ""Search depth must be at least 1, ""
+                f""received {depth}.""
+            )
+
+    def _safe_moves(
+        self,
+        state: State,
+    ) -> List[Move]:
+        """"""
+        Generate legal moves and convert them to a list.
+        """"""
+
+        moves = self.generate_moves(state)
+
+        if moves is None:
+            return []
+
+        return list(moves)
+
+    def clear_transposition_table(
+        self,
+    ) -> None:
+        """"""Remove every cached position.""""""
+
+        self.transposition_table.clear()
+
+    def transposition_table_size(
+        self,
+    ) -> int:
+        """"""Return the number of cached positions.""""""
+
+        return len(self.transposition_table)
+
+    def _find_transposition_move(
+        self,
+        key: Hashable,
+    ) -> Optional[Move]:
+        """"""
+        Return the cached best move for a position, when available.
+        """"""
+
+        if not self.use_transposition_table:
+            return None
+
+        entry = self.transposition_table.get(key)
+
+        if entry is None:
+            return None
+
+        return entry.best_move
+
+    def _moves_equal(
+        self,
+        first: Optional[Move],
+        second: Optional[Move],
+    ) -> bool:
+        """"""
+        Safely compare two moves.
+
+        This supports dictionary moves as well as immutable moves.
+        """"""
+
+        if first is None or second is None:
+            return False
+
+        try:
+            return bool(first == second)
+        except Exception:
+            return False
+
+    def _order_moves(
+        self,
+        state: State,
+        moves: Sequence[Move],
+        root_player: Player,
+        ply: int,
+        transposition_move: Optional[Move] = None,
+    ) -> List[Move]:
+        """"""
+        Order legal moves from most promising to least promising.
+
+        Priority:
+
+        1. Transposition-table best move
+        2. Previous-iteration principal-variation move
+        3. Custom move-order score
+        4. Original generation order
+        """"""
+
+        ordered_moves = list(moves)
+
+        if (
+            not self.use_move_ordering
+            or len(ordered_moves) <= 1
+        ):
+            return ordered_moves
+
+        pv_move: Optional[Move] = None
+
+        if ply < len(self._previous_iteration_pv):
+            pv_move = self._previous_iteration_pv[ply]
+
+        scored_moves = []
+
+        for original_index, move in enumerate(
+            ordered_moves
+        ):
+            priority = 0.0
+
+            # The transposition-table move receives the
+            # strongest ordering bonus.
+            if self._moves_equal(
+                move,
+                transposition_move,
+            ):
+                priority += 10_000_000_000.0
+
+            # The previous principal-variation move receives
+            # the next strongest bonus.
+            if self._moves_equal(
+                move,
+                pv_move,
+            ):
+                priority += 1_000_000_000.0
+
+            if self.move_order_score is not None:
+                custom_score = self.move_order_score(
+                    state,
+                    move,
+                    root_player,
+                )
+
+                priority += float(custom_score)
+
+            scored_moves.append(
+                (
+                    priority,
+                    -original_index,
+                    move,
+                )
+            )
+
+        scored_moves.sort(
+            key=lambda item: (
+                item[0],
+                item[1],
+            ),
+            reverse=True,
+        )
+
+        return [
+            move
+            for _, _, move in scored_moves
+        ]
+
+    def preview_move_order(
+        self,
+        state: State,
+        root_player: Optional[Player] = None,
+        ply: int = 0,
+    ) -> List[Move]:
+        """"""
+        Return the move order that the engine would search.
+
+        This is useful for debugging and validation.
+        """"""
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        legal_moves = self._safe_moves(state)
+
+        key = self.state_key(state)
+
+        transposition_move = (
+            self._find_transposition_move(key)
+        )
+
+        return self._order_moves(
+            state=state,
+            moves=legal_moves,
+            root_player=root_player,
+            ply=ply,
+            transposition_move=transposition_move,
+        )
+
+    def _probe_transposition_table(
+        self,
+        key: Hashable,
+        depth: int,
+        alpha: float,
+        beta: float,
+    ) -> Optional[Tuple[float, List[Move]]]:
+        """"""
+        Attempt to reuse a cached search result.
+        """"""
+
+        if not self.use_transposition_table:
+            return None
+
+        entry = self.transposition_table.get(key)
+
+        if entry is None:
+            return None
+
+        if entry.depth < depth:
+            return None
+
+        self.stats.transposition_hits += 1
+
+        if entry.bound_type is BoundType.EXACT:
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        if (
+            entry.bound_type
+            is BoundType.LOWER_BOUND
+            and entry.score >= beta
+        ):
+            self.stats.transposition_cutoffs += 1
+
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        if (
+            entry.bound_type
+            is BoundType.UPPER_BOUND
+            and entry.score <= alpha
+        ):
+            self.stats.transposition_cutoffs += 1
+
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        return None
+
+    def _store_transposition_entry(
+        self,
+        key: Hashable,
+        depth: int,
+        score: float,
+        alpha_original: float,
+        beta_original: float,
+        best_line: List[Move],
+    ) -> None:
+        """"""
+        Store a completed node search in the cache.
+        """"""
+
+        if not self.use_transposition_table:
+            return
+
+        if score <= alpha_original:
+            bound_type = BoundType.UPPER_BOUND
+
+        elif score >= beta_original:
+            bound_type = BoundType.LOWER_BOUND
+
+        else:
+            bound_type = BoundType.EXACT
+
+        existing = self.transposition_table.get(key)
+
+        if (
+            existing is not None
+            and existing.depth > depth
+        ):
+            return
+
+        best_move = (
+            best_line[0]
+            if best_line
+            else None
+        )
+
+        self.transposition_table[key] = (
+            TranspositionEntry(
+                depth=depth,
+                score=score,
+                bound_type=bound_type,
+                best_move=best_move,
+                principal_variation=list(
+                    best_line
+                ),
+            )
+        )
+
+        self.stats.transposition_stores += 1
+
+    def _alpha_beta(
+        self,
+        state: State,
+        depth: int,
+        alpha: float,
+        beta: float,
+        root_player: Player,
+        ply: int = 0,
+    ) -> Tuple[float, List[Move]]:
+        """"""
+        Search one position with alpha-beta pruning,
+        transposition tables, and move ordering.
+        """"""
+
+        self.stats.nodes += 1
+
+        if self.is_terminal(state):
+            self.stats.terminal_nodes += 1
+
+            score = float(
+                self.evaluate_state(
+                    state,
+                    root_player,
+                )
+            )
+
+            return score, []
+
+        if depth <= 0:
+            self.stats.leaf_nodes += 1
+
+            score = float(
+                self.evaluate_state(
+                    state,
+                    root_player,
+                )
+            )
+
+            return score, []
+
+        key = self.state_key(state)
+
+        cached_result = (
+            self._probe_transposition_table(
+                key=key,
+                depth=depth,
+                alpha=alpha,
+                beta=beta,
+            )
+        )
+
+        if cached_result is not None:
+            return cached_result
+
+        legal_moves = self._safe_moves(state)
+
+        if not legal_moves:
+            self.stats.leaf_nodes += 1
+
+            score = float(
+                self.evaluate_state(
+                    state,
+                    root_player,
+                )
+            )
+
+            return score, []
+
+        transposition_move = (
+            self._find_transposition_move(key)
+        )
+
+        legal_moves = self._order_moves(
+            state=state,
+            moves=legal_moves,
+            root_player=root_player,
+            ply=ply,
+            transposition_move=transposition_move,
+        )
+
+        alpha_original = alpha
+        beta_original = beta
+
+        player_to_move = self.current_player(
+            state
+        )
+
+        maximizing = (
+            player_to_move == root_player
+        )
+
+        if maximizing:
+            best_score = -math.inf
+            best_line: List[Move] = []
+
+            for move in legal_moves:
+                child_state = self.apply_move(
+                    state,
+                    move,
+                )
+
+                child_score, child_line = (
+                    self._alpha_beta(
+                        state=child_state,
+                        depth=depth - 1,
+                        alpha=alpha,
+                        beta=beta,
+                        root_player=root_player,
+                        ply=ply + 1,
+                    )
+                )
+
+                if child_score > best_score:
+                    best_score = child_score
+                    best_line = (
+                        [move] + child_line
+                    )
+
+                alpha = max(
+                    alpha,
+                    best_score,
+                )
+
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+                    break
+
+        else:
+            best_score = math.inf
+            best_line = []
+
+            for move in legal_moves:
+                child_state = self.apply_move(
+                    state,
+                    move,
+                )
+
+                child_score, child_line = (
+                    self._alpha_beta(
+                        state=child_state,
+                        depth=depth - 1,
+                        alpha=alpha,
+                        beta=beta,
+                        root_player=root_player,
+                        ply=ply + 1,
+                    )
+                )
+
+                if child_score < best_score:
+                    best_score = child_score
+                    best_line = (
+                        [move] + child_line
+                    )
+
+                beta = min(
+                    beta,
+                    best_score,
+                )
+
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+                    break
+
+        self._store_transposition_entry(
+            key=key,
+            depth=depth,
+            score=best_score,
+            alpha_original=alpha_original,
+            beta_original=beta_original,
+            best_line=best_line,
+        )
+
+        return best_score, best_line
+
+    def search_depth(
+        self,
+        state: State,
+        depth: int,
+        root_player: Optional[Player] = None,
+        clear_table: bool = True,
+    ) -> SearchResult:
+        """"""
+        Perform one fixed-depth search.
+        """"""
+
+        self._validate_depth(depth)
+
+        if root_player is None:
+            root_player = self.current_player(
+                state
+            )
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        self._previous_iteration_pv = []
+
+        start_time = time.perf_counter()
+
+        score, principal_variation = (
+            self._alpha_beta(
+                state=state,
+                depth=depth,
+                alpha=-math.inf,
+                beta=math.inf,
+                root_player=root_player,
+                ply=0,
+            )
+        )
+
+        elapsed = (
+            time.perf_counter()
+            - start_time
+        )
+
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+        self.stats.depth_nodes[depth] = (
+            self.stats.nodes
+        )
+        self.stats.depth_times[depth] = elapsed
+
+        best_move = (
+            principal_variation[0]
+            if principal_variation
+            else None
+        )
+
+        self._principal_variation = (
+            principal_variation
+        )
+
+        return SearchResult(
+            best_move=best_move,
+            score=score,
+            completed_depth=depth,
+            principal_variation=(
+                principal_variation
+            ),
+            stats=self.stats,
+        )
+
+    def iterative_deepening(
+        self,
+        state: State,
+        max_depth: int,
+        root_player: Optional[Player] = None,
+        verbose: bool = True,
+        clear_table: bool = True,
+    ) -> SearchResult:
+        """"""
+        Search successively from depth 1 through max_depth.
+        """"""
+
+        self._validate_depth(max_depth)
+
+        if root_player is None:
+            root_player = self.current_player(
+                state
+            )
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        self._previous_iteration_pv = []
+
+        overall_start = time.perf_counter()
+
+        best_move: Optional[Move] = None
+
+        best_score = float(
+            self.evaluate_state(
+                state,
+                root_player,
+            )
+        )
+
+        best_line: List[Move] = []
+
+        total_nodes = 0
+        total_leaf_nodes = 0
+        total_terminal_nodes = 0
+        total_cutoffs = 0
+
+        total_tt_hits = 0
+        total_tt_stores = 0
+        total_tt_cutoffs = 0
+
+        depth_nodes: Dict[int, int] = {}
+        depth_times: Dict[int, float] = {}
+
+        completed_depth = 0
+
+        for depth in range(
+            1,
+            max_depth + 1,
+        ):
+            self.stats.nodes = 0
+            self.stats.leaf_nodes = 0
+            self.stats.terminal_nodes = 0
+            self.stats.cutoffs = 0
+
+            self.stats.transposition_hits = 0
+            self.stats.transposition_stores = 0
+            self.stats.transposition_cutoffs = 0
+
+            depth_start = time.perf_counter()
+
+            score, principal_variation = (
+                self._alpha_beta(
+                    state=state,
+                    depth=depth,
+                    alpha=-math.inf,
+                    beta=math.inf,
+                    root_player=root_player,
+                    ply=0,
+                )
+            )
+
+            depth_elapsed = (
+                time.perf_counter()
+                - depth_start
+            )
+
+            iteration_nodes = (
+                self.stats.nodes
+            )
+
+            depth_nodes[depth] = (
+                iteration_nodes
+            )
+            depth_times[depth] = (
+                depth_elapsed
+            )
+
+            total_nodes += self.stats.nodes
+            total_leaf_nodes += (
+                self.stats.leaf_nodes
+            )
+            total_terminal_nodes += (
+                self.stats.terminal_nodes
+            )
+            total_cutoffs += (
+                self.stats.cutoffs
+            )
+
+            total_tt_hits += (
+                self.stats.transposition_hits
+            )
+            total_tt_stores += (
+                self.stats.transposition_stores
+            )
+            total_tt_cutoffs += (
+                self.stats.transposition_cutoffs
+            )
+
+            completed_depth = depth
+            best_score = score
+            best_line = principal_variation
+
+            if principal_variation:
+                best_move = (
+                    principal_variation[0]
+                )
+
+            # The completed line becomes the ordering guide
+            # for the next iteration.
+            self._previous_iteration_pv = list(
+                principal_variation
+            )
+
+            if verbose:
+                move_name = (
+                    self.move_to_string(
+                        best_move
+                    )
+                    if best_move is not None
+                    else ""None""
+                )
+
+                pv_text = "" -> "".join(
+                    self.move_to_string(move)
+                    for move
+                    in principal_variation
+                )
+
+                print(
+                    f""Depth {depth:>2} | ""
+                    f""Score {score:>10.2f} | ""
+                    f""Nodes {iteration_nodes:>8,} | ""
+                    f""TT hits ""
+                    f""{self.stats.transposition_hits:>6,} | ""
+                    f""Time {depth_elapsed:>8.4f}s | ""
+                    f""Best move: {move_name}""
+                )
+
+                if pv_text:
+                    print(
+                        f""         PV: {pv_text}""
+                    )
+
+        overall_elapsed = (
+            time.perf_counter()
+            - overall_start
+        )
+
+        final_stats = SearchStats(
+            nodes=total_nodes,
+            leaf_nodes=total_leaf_nodes,
+            terminal_nodes=total_terminal_nodes,
+            cutoffs=total_cutoffs,
+            transposition_hits=total_tt_hits,
+            transposition_stores=total_tt_stores,
+            transposition_cutoffs=(
+                total_tt_cutoffs
+            ),
+            completed_depth=completed_depth,
+            elapsed_seconds=overall_elapsed,
+            depth_nodes=depth_nodes,
+            depth_times=depth_times,
+        )
+
+        self.stats = final_stats
+        self._principal_variation = (
+            best_line
+        )
+
+        return SearchResult(
+            best_move=best_move,
+            score=best_score,
+            completed_depth=completed_depth,
+            principal_variation=best_line,
+            stats=final_stats,
+        )
+
+    def get_principal_variation(
+        self,
+    ) -> List[Move]:
+        """"""
+        Return a copy of the best line from the latest search.
+        """"""
+
+        return list(
+            self._principal_variation
+        )"
+scripts\11_advanced_search_engine.py,CLASS,SearchStats,4078,"class SearchStats:
+    """"""
+    Statistics collected during one complete search.
+    """"""
+
+    nodes: int = 0
+    leaf_nodes: int = 0
+    terminal_nodes: int = 0
+    cutoffs: int = 0
+
+    transposition_hits: int = 0
+    transposition_stores: int = 0
+    transposition_cutoffs: int = 0
+
+    killer_hits: int = 0
+    killer_stores: int = 0
+
+    completed_depth: int = 0
+    elapsed_seconds: float = 0.0
+
+    depth_nodes: Dict[int, int] = field(default_factory=dict)
+    depth_times: Dict[int, float] = field(default_factory=dict)
+
+    def reset(self) -> None:
+        """"""Reset all statistics.""""""
+
+        self.nodes = 0
+        self.leaf_nodes = 0
+        self.terminal_nodes = 0
+        self.cutoffs = 0
+
+        self.transposition_hits = 0
+        self.transposition_stores = 0
+        self.transposition_cutoffs = 0
+
+        self.killer_hits = 0
+        self.killer_stores = 0
+
+        self.completed_depth = 0
+        self.elapsed_seconds = 0.0
+
+        self.depth_nodes.clear()
+        self.depth_times.clear()
+
+    @property
+    def nodes_per_second(self) -> float:
+        if self.elapsed_seconds <= 0:
+            return 0.0
+
+        return self.nodes / self.elapsed_seconds
+
+    @property
+    def transposition_hit_rate(self) -> float:
+        if self.nodes <= 0:
+            return 0.0
+
+        return self.transposition_hits / self.nodes
+
+    def as_dict(self) -> Dict[str, Any]:
+        return {
+            ""nodes"": self.nodes,
+            ""leaf_nodes"": self.leaf_nodes,
+            ""terminal_nodes"": self.terminal_nodes,
+            ""cutoffs"": self.cutoffs,
+            ""transposition_hits"": self.transposition_hits,
+            ""transposition_stores"": self.transposition_stores,
+            ""transposition_cutoffs"": self.transposition_cutoffs,
+            ""transposition_hit_rate"": round(
+                self.transposition_hit_rate,
+                6,
+            ),
+            ""killer_hits"": self.killer_hits,
+            ""killer_stores"": self.killer_stores,
+            ""completed_depth"": self.completed_depth,
+            ""elapsed_seconds"": round(
+                self.elapsed_seconds,
+                6,
+            ),
+            ""nodes_per_second"": round(
+                self.nodes_per_second,
+                2,
+            ),
+            ""depth_nodes"": dict(self.depth_nodes),
+            ""depth_times"": {
+                depth: round(seconds, 6)
+                for depth, seconds in self.depth_times.items()
+            },
+        }"
+scripts\11_advanced_search_engine.py,CLASS,AdvancedSearchEngine,4201,"class AdvancedSearchEngine:
+    """"""
+    Advanced adversarial search engine with:
+
+    - Alpha-beta pruning
+    - Iterative deepening
+    - Transposition tables
+    - Move ordering
+    - Killer move heuristic
+    - Principal-variation tracking
+    """"""
+
+    def __init__(
+        self,
+        generate_moves: GenerateMovesFn,
+        apply_move: ApplyMoveFn,
+        evaluate_state: EvaluateFn,
+        is_terminal: IsTerminalFn,
+        current_player: CurrentPlayerFn,
+        move_to_string: Optional[MoveToStringFn] = None,
+        state_key: Optional[Callable[[State], Hashable]] = None,
+        use_transposition_table: bool = True,
+        move_order_score: Optional[MoveOrderScoreFn] = None,
+        use_move_ordering: bool = True,
+        move_key: Optional[MoveKeyFn] = None,
+        use_killer_moves: bool = True,
+        killer_slots: int = 2,
+    ) -> None:
+        self.generate_moves = generate_moves
+        self.apply_move = apply_move
+        self.evaluate_state = evaluate_state
+        self.is_terminal = is_terminal
+        self.current_player = current_player
+        self.move_to_string = move_to_string or str
+
+        self.state_key = state_key or self._default_state_key
+
+        self.use_transposition_table = use_transposition_table
+        self.move_order_score = move_order_score
+        self.use_move_ordering = use_move_ordering
+
+        self.move_key = move_key or self._default_move_key
+        self.use_killer_moves = use_killer_moves
+
+        if killer_slots < 1:
+            raise ValueError(
+                ""killer_slots must be at least 1.""
+            )
+
+        self.killer_slots = killer_slots
+
+        self.stats = SearchStats()
+
+        self.transposition_table: Dict[
+            Hashable,
+            TranspositionEntry,
+        ] = {}
+
+        self.killer_moves: Dict[
+            int,
+            List[Move],
+        ] = {}
+
+        self._principal_variation: List[Move] = []
+        self._previous_iteration_pv: List[Move] = []
+
+    @staticmethod
+    def _default_state_key(
+        state: State,
+    ) -> Hashable:
+        try:
+            hash(state)
+        except TypeError as exc:
+            raise TypeError(
+                ""The game state is not hashable. ""
+                ""Supply a state_key function.""
+            ) from exc
+
+        return state
+
+    @staticmethod
+    def _default_move_key(
+        move: Move,
+    ) -> Hashable:
+        try:
+            hash(move)
+        except TypeError as exc:
+            raise TypeError(
+                ""The move is not hashable. ""
+                ""Supply a move_key function.""
+            ) from exc
+
+        return move
+
+    def _validate_depth(
+        self,
+        depth: int,
+    ) -> None:
+        if not isinstance(depth, int):
+            raise TypeError(
+                ""Search depth must be an integer.""
+            )
+
+        if depth < 1:
+            raise ValueError(
+                ""Search depth must be at least 1.""
+            )
+
+    def _safe_moves(
+        self,
+        state: State,
+    ) -> List[Move]:
+        moves = self.generate_moves(state)
+
+        if moves is None:
+            return []
+
+        return list(moves)
+
+    def clear_transposition_table(
+        self,
+    ) -> None:
+        self.transposition_table.clear()
+
+    def clear_killer_moves(
+        self,
+    ) -> None:
+        self.killer_moves.clear()
+
+    def transposition_table_size(
+        self,
+    ) -> int:
+        return len(self.transposition_table)
+
+    def killer_move_count(
+        self,
+    ) -> int:
+        return sum(
+            len(moves)
+            for moves in self.killer_moves.values()
+        )
+
+    def _find_transposition_move(
+        self,
+        key: Hashable,
+    ) -> Optional[Move]:
+        if not self.use_transposition_table:
+            return None
+
+        entry = self.transposition_table.get(key)
+
+        if entry is None:
+            return None
+
+        return entry.best_move
+
+    def _moves_equal(
+        self,
+        first: Optional[Move],
+        second: Optional[Move],
+    ) -> bool:
+        if first is None or second is None:
+            return False
+
+        try:
+            return (
+                self.move_key(first)
+                == self.move_key(second)
+            )
+        except Exception:
+            try:
+                return bool(first == second)
+            except Exception:
+                return False
+
+    def _is_killer_move(
+        self,
+        move: Move,
+        ply: int,
+    ) -> bool:
+        if not self.use_killer_moves:
+            return False
+
+        killers = self.killer_moves.get(
+            ply,
+            [],
+        )
+
+        return any(
+            self._moves_equal(move, killer)
+            for killer in killers
+        )
+
+    def _store_killer_move(
+        self,
+        move: Move,
+        ply: int,
+    ) -> None:
+        if not self.use_killer_moves:
+            return
+
+        killers = self.killer_moves.setdefault(
+            ply,
+            [],
+        )
+
+        for existing in killers:
+            if self._moves_equal(
+                move,
+                existing,
+            ):
+                return
+
+        killers.insert(
+            0,
+            move,
+        )
+
+        del killers[
+            self.killer_slots:
+        ]
+
+        self.stats.killer_stores += 1
+
+    def _order_moves(
+        self,
+        state: State,
+        moves: Sequence[Move],
+        root_player: Player,
+        ply: int,
+        transposition_move: Optional[Move] = None,
+    ) -> List[Move]:
+        ordered_moves = list(moves)
+
+        if (
+            not self.use_move_ordering
+            or len(ordered_moves) <= 1
+        ):
+            return ordered_moves
+
+        pv_move: Optional[Move] = None
+
+        if ply < len(self._previous_iteration_pv):
+            pv_move = self._previous_iteration_pv[ply]
+
+        scored_moves = []
+
+        for original_index, move in enumerate(
+            ordered_moves
+        ):
+            priority = 0.0
+
+            if self._moves_equal(
+                move,
+                transposition_move,
+            ):
+                priority += 10_000_000_000.0
+
+            if self._moves_equal(
+                move,
+                pv_move,
+            ):
+                priority += 1_000_000_000.0
+
+            if self._is_killer_move(
+                move,
+                ply,
+            ):
+                priority += 100_000_000.0
+                self.stats.killer_hits += 1
+
+            if self.move_order_score is not None:
+                priority += float(
+                    self.move_order_score(
+                        state,
+                        move,
+                        root_player,
+                    )
+                )
+
+            scored_moves.append(
+                (
+                    priority,
+                    -original_index,
+                    move,
+                )
+            )
+
+        scored_moves.sort(
+            key=lambda item: (
+                item[0],
+                item[1],
+            ),
+            reverse=True,
+        )
+
+        return [
+            move
+            for _, _, move in scored_moves
+        ]
+
+    def preview_move_order(
+        self,
+        state: State,
+        root_player: Optional[Player] = None,
+        ply: int = 0,
+    ) -> List[Move]:
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        legal_moves = self._safe_moves(state)
+        key = self.state_key(state)
+
+        transposition_move = (
+            self._find_transposition_move(key)
+        )
+
+        return self._order_moves(
+            state=state,
+            moves=legal_moves,
+            root_player=root_player,
+            ply=ply,
+            transposition_move=transposition_move,
+        )
+
+    def _probe_transposition_table(
+        self,
+        key: Hashable,
+        depth: int,
+        alpha: float,
+        beta: float,
+    ) -> Optional[Tuple[float, List[Move]]]:
+        if not self.use_transposition_table:
+            return None
+
+        entry = self.transposition_table.get(key)
+
+        if entry is None:
+            return None
+
+        if entry.depth < depth:
+            return None
+
+        self.stats.transposition_hits += 1
+
+        if entry.bound_type is BoundType.EXACT:
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        if (
+            entry.bound_type
+            is BoundType.LOWER_BOUND
+            and entry.score >= beta
+        ):
+            self.stats.transposition_cutoffs += 1
+
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        if (
+            entry.bound_type
+            is BoundType.UPPER_BOUND
+            and entry.score <= alpha
+        ):
+            self.stats.transposition_cutoffs += 1
+
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        return None
+
+    def _store_transposition_entry(
+        self,
+        key: Hashable,
+        depth: int,
+        score: float,
+        alpha_original: float,
+        beta_original: float,
+        best_line: List[Move],
+    ) -> None:
+        if not self.use_transposition_table:
+            return
+
+        if score <= alpha_original:
+            bound_type = BoundType.UPPER_BOUND
+        elif score >= beta_original:
+            bound_type = BoundType.LOWER_BOUND
+        else:
+            bound_type = BoundType.EXACT
+
+        existing = self.transposition_table.get(key)
+
+        if (
+            existing is not None
+            and existing.depth > depth
+        ):
+            return
+
+        best_move = (
+            best_line[0]
+            if best_line
+            else None
+        )
+
+        self.transposition_table[key] = (
+            TranspositionEntry(
+                depth=depth,
+                score=score,
+                bound_type=bound_type,
+                best_move=best_move,
+                principal_variation=list(best_line),
+            )
+        )
+
+        self.stats.transposition_stores += 1
+
+    def _alpha_beta(
+        self,
+        state: State,
+        depth: int,
+        alpha: float,
+        beta: float,
+        root_player: Player,
+        ply: int = 0,
+    ) -> Tuple[float, List[Move]]:
+        self.stats.nodes += 1
+
+        if self.is_terminal(state):
+            self.stats.terminal_nodes += 1
+
+            return (
+                float(
+                    self.evaluate_state(
+                        state,
+                        root_player,
+                    )
+                ),
+                [],
+            )
+
+        if depth <= 0:
+            self.stats.leaf_nodes += 1
+
+            return (
+                float(
+                    self.evaluate_state(
+                        state,
+                        root_player,
+                    )
+                ),
+                [],
+            )
+
+        key = self.state_key(state)
+
+        cached_result = (
+            self._probe_transposition_table(
+                key=key,
+                depth=depth,
+                alpha=alpha,
+                beta=beta,
+            )
+        )
+
+        if cached_result is not None:
+            return cached_result
+
+        legal_moves = self._safe_moves(state)
+
+        if not legal_moves:
+            self.stats.leaf_nodes += 1
+
+            return (
+                float(
+                    self.evaluate_state(
+                        state,
+                        root_player,
+                    )
+                ),
+                [],
+            )
+
+        transposition_move = (
+            self._find_transposition_move(key)
+        )
+
+        legal_moves = self._order_moves(
+            state=state,
+            moves=legal_moves,
+            root_player=root_player,
+            ply=ply,
+            transposition_move=transposition_move,
+        )
+
+        alpha_original = alpha
+        beta_original = beta
+
+        maximizing = (
+            self.current_player(state)
+            == root_player
+        )
+
+        if maximizing:
+            best_score = -math.inf
+            best_line: List[Move] = []
+
+            for move in legal_moves:
+                child_state = self.apply_move(
+                    state,
+                    move,
+                )
+
+                child_score, child_line = (
+                    self._alpha_beta(
+                        state=child_state,
+                        depth=depth - 1,
+                        alpha=alpha,
+                        beta=beta,
+                        root_player=root_player,
+                        ply=ply + 1,
+                    )
+                )
+
+                if child_score > best_score:
+                    best_score = child_score
+                    best_line = [move] + child_line
+
+                alpha = max(
+                    alpha,
+                    best_score,
+                )
+
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+                    self._store_killer_move(
+                        move,
+                        ply,
+                    )
+                    break
+
+        else:
+            best_score = math.inf
+            best_line = []
+
+            for move in legal_moves:
+                child_state = self.apply_move(
+                    state,
+                    move,
+                )
+
+                child_score, child_line = (
+                    self._alpha_beta(
+                        state=child_state,
+                        depth=depth - 1,
+                        alpha=alpha,
+                        beta=beta,
+                        root_player=root_player,
+                        ply=ply + 1,
+                    )
+                )
+
+                if child_score < best_score:
+                    best_score = child_score
+                    best_line = [move] + child_line
+
+                beta = min(
+                    beta,
+                    best_score,
+                )
+
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+                    self._store_killer_move(
+                        move,
+                        ply,
+                    )
+                    break
+
+        self._store_transposition_entry(
+            key=key,
+            depth=depth,
+            score=best_score,
+            alpha_original=alpha_original,
+            beta_original=beta_original,
+            best_line=best_line,
+        )
+
+        return best_score, best_line
+
+    def search_depth(
+        self,
+        state: State,
+        depth: int,
+        root_player: Optional[Player] = None,
+        clear_table: bool = True,
+        clear_killers: bool = True,
+    ) -> SearchResult:
+        self._validate_depth(depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        if clear_killers:
+            self.clear_killer_moves()
+
+        self._previous_iteration_pv = []
+
+        start_time = time.perf_counter()
+
+        score, principal_variation = (
+            self._alpha_beta(
+                state=state,
+                depth=depth,
+                alpha=-math.inf,
+                beta=math.inf,
+                root_player=root_player,
+                ply=0,
+            )
+        )
+
+        elapsed = (
+            time.perf_counter()
+            - start_time
+        )
+
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+        self.stats.depth_nodes[depth] = self.stats.nodes
+        self.stats.depth_times[depth] = elapsed
+
+        best_move = (
+            principal_variation[0]
+            if principal_variation
+            else None
+        )
+
+        self._principal_variation = principal_variation
+
+        return SearchResult(
+            best_move=best_move,
+            score=score,
+            completed_depth=depth,
+            principal_variation=principal_variation,
+            stats=self.stats,
+        )
+
+    def iterative_deepening(
+        self,
+        state: State,
+        max_depth: int,
+        root_player: Optional[Player] = None,
+        verbose: bool = True,
+        clear_table: bool = True,
+        clear_killers: bool = True,
+    ) -> SearchResult:
+        self._validate_depth(max_depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        if clear_killers:
+            self.clear_killer_moves()
+
+        self._previous_iteration_pv = []
+
+        overall_start = time.perf_counter()
+
+        best_move: Optional[Move] = None
+        best_score = float(
+            self.evaluate_state(
+                state,
+                root_player,
+            )
+        )
+        best_line: List[Move] = []
+
+        total_nodes = 0
+        total_leaf_nodes = 0
+        total_terminal_nodes = 0
+        total_cutoffs = 0
+
+        total_tt_hits = 0
+        total_tt_stores = 0
+        total_tt_cutoffs = 0
+
+        total_killer_hits = 0
+        total_killer_stores = 0
+
+        depth_nodes: Dict[int, int] = {}
+        depth_times: Dict[int, float] = {}
+
+        completed_depth = 0
+
+        for depth in range(1, max_depth + 1):
+            self.stats.nodes = 0
+            self.stats.leaf_nodes = 0
+            self.stats.terminal_nodes = 0
+            self.stats.cutoffs = 0
+
+            self.stats.transposition_hits = 0
+            self.stats.transposition_stores = 0
+            self.stats.transposition_cutoffs = 0
+
+            self.stats.killer_hits = 0
+            self.stats.killer_stores = 0
+
+            depth_start = time.perf_counter()
+
+            score, principal_variation = (
+                self._alpha_beta(
+                    state=state,
+                    depth=depth,
+                    alpha=-math.inf,
+                    beta=math.inf,
+                    root_player=root_player,
+                    ply=0,
+                )
+            )
+
+            depth_elapsed = (
+                time.perf_counter()
+                - depth_start
+            )
+
+            depth_nodes[depth] = self.stats.nodes
+            depth_times[depth] = depth_elapsed
+
+            total_nodes += self.stats.nodes
+            total_leaf_nodes += self.stats.leaf_nodes
+            total_terminal_nodes += self.stats.terminal_nodes
+            total_cutoffs += self.stats.cutoffs
+
+            total_tt_hits += self.stats.transposition_hits
+            total_tt_stores += self.stats.transposition_stores
+            total_tt_cutoffs += (
+                self.stats.transposition_cutoffs
+            )
+
+            total_killer_hits += self.stats.killer_hits
+            total_killer_stores += self.stats.killer_stores
+
+            completed_depth = depth
+            best_score = score
+            best_line = principal_variation
+
+            if principal_variation:
+                best_move = principal_variation[0]
+
+            self._previous_iteration_pv = list(
+                principal_variation
+            )
+
+            if verbose:
+                move_name = (
+                    self.move_to_string(best_move)
+                    if best_move is not None
+                    else ""None""
+                )
+
+                pv_text = "" -> "".join(
+                    self.move_to_string(move)
+                    for move in principal_variation
+                )
+
+                print(
+                    f""Depth {depth:>2} | ""
+                    f""Score {score:>10.2f} | ""
+                    f""Nodes {self.stats.nodes:>8,} | ""
+                    f""TT hits ""
+                    f""{self.stats.transposition_hits:>6,} | ""
+                    f""Killer hits ""
+                    f""{self.stats.killer_hits:>5,} | ""
+                    f""Time {depth_elapsed:>8.4f}s | ""
+                    f""Best move: {move_name}""
+                )
+
+                if pv_text:
+                    print(
+                        f""         PV: {pv_text}""
+                    )
+
+        overall_elapsed = (
+            time.perf_counter()
+            - overall_start
+        )
+
+        final_stats = SearchStats(
+            nodes=total_nodes,
+            leaf_nodes=total_leaf_nodes,
+            terminal_nodes=total_terminal_nodes,
+            cutoffs=total_cutoffs,
+            transposition_hits=total_tt_hits,
+            transposition_stores=total_tt_stores,
+            transposition_cutoffs=total_tt_cutoffs,
+            killer_hits=total_killer_hits,
+            killer_stores=total_killer_stores,
+            completed_depth=completed_depth,
+            elapsed_seconds=overall_elapsed,
+            depth_nodes=depth_nodes,
+            depth_times=depth_times,
+        )
+
+        self.stats = final_stats
+        self._principal_variation = best_line
+
+        return SearchResult(
+            best_move=best_move,
+            score=best_score,
+            completed_depth=completed_depth,
+            principal_variation=best_line,
+            stats=final_stats,
+        )
+
+    def get_principal_variation(
+        self,
+    ) -> List[Move]:
+        return list(
+            self._principal_variation
+        )"
+scripts\11_advanced_search_engine.py,CLASS,SearchStats,5188,"class SearchStats:
+    """"""
+    Statistics collected during one complete search.
+    """"""
+
+    nodes: int = 0
+    leaf_nodes: int = 0
+    terminal_nodes: int = 0
+    cutoffs: int = 0
+
+    transposition_hits: int = 0
+    transposition_stores: int = 0
+    transposition_cutoffs: int = 0
+
+    killer_hits: int = 0
+    killer_stores: int = 0
+
+    history_hits: int = 0
+    history_updates: int = 0
+
+    completed_depth: int = 0
+    elapsed_seconds: float = 0.0
+
+    depth_nodes: Dict[int, int] = field(default_factory=dict)
+    depth_times: Dict[int, float] = field(default_factory=dict)
+
+    def reset(self) -> None:
+        """"""Reset every search statistic.""""""
+
+        self.nodes = 0
+        self.leaf_nodes = 0
+        self.terminal_nodes = 0
+        self.cutoffs = 0
+
+        self.transposition_hits = 0
+        self.transposition_stores = 0
+        self.transposition_cutoffs = 0
+
+        self.killer_hits = 0
+        self.killer_stores = 0
+
+        self.history_hits = 0
+        self.history_updates = 0
+
+        self.completed_depth = 0
+        self.elapsed_seconds = 0.0
+
+        self.depth_nodes.clear()
+        self.depth_times.clear()
+
+    @property
+    def nodes_per_second(self) -> float:
+        """"""Return average nodes searched per second.""""""
+
+        if self.elapsed_seconds <= 0:
+            return 0.0
+
+        return self.nodes / self.elapsed_seconds
+
+    @property
+    def transposition_hit_rate(self) -> float:
+        """"""Return transposition hits divided by searched nodes.""""""
+
+        if self.nodes <= 0:
+            return 0.0
+
+        return self.transposition_hits / self.nodes
+
+    def as_dict(self) -> Dict[str, Any]:
+        """"""Return statistics as a display-friendly dictionary.""""""
+
+        return {
+            ""nodes"": self.nodes,
+            ""leaf_nodes"": self.leaf_nodes,
+            ""terminal_nodes"": self.terminal_nodes,
+            ""cutoffs"": self.cutoffs,
+
+            ""transposition_hits"": self.transposition_hits,
+            ""transposition_stores"": self.transposition_stores,
+            ""transposition_cutoffs"": self.transposition_cutoffs,
+            ""transposition_hit_rate"": round(
+                self.transposition_hit_rate,
+                6,
+            ),
+
+            ""killer_hits"": self.killer_hits,
+            ""killer_stores"": self.killer_stores,
+
+            ""history_hits"": self.history_hits,
+            ""history_updates"": self.history_updates,
+
+            ""completed_depth"": self.completed_depth,
+            ""elapsed_seconds"": round(
+                self.elapsed_seconds,
+                6,
+            ),
+            ""nodes_per_second"": round(
+                self.nodes_per_second,
+                2,
+            ),
+
+            ""depth_nodes"": dict(self.depth_nodes),
+            ""depth_times"": {
+                depth: round(seconds, 6)
+                for depth, seconds in self.depth_times.items()
+            },
+        }"
+scripts\11_advanced_search_engine.py,CLASS,AdvancedSearchEngine,5304,"class AdvancedSearchEngine:
+    """"""
+    Advanced adversarial search engine with:
+
+    - Alpha-beta pruning
+    - Iterative deepening
+    - Transposition tables
+    - Tactical move ordering
+    - Killer move heuristic
+    - History heuristic
+    - Principal-variation tracking
+    """"""
+
+    def __init__(
+        self,
+        generate_moves: GenerateMovesFn,
+        apply_move: ApplyMoveFn,
+        evaluate_state: EvaluateFn,
+        is_terminal: IsTerminalFn,
+        current_player: CurrentPlayerFn,
+        move_to_string: Optional[MoveToStringFn] = None,
+        state_key: Optional[Callable[[State], Hashable]] = None,
+        use_transposition_table: bool = True,
+        move_order_score: Optional[MoveOrderScoreFn] = None,
+        use_move_ordering: bool = True,
+        move_key: Optional[MoveKeyFn] = None,
+        use_killer_moves: bool = True,
+        killer_slots: int = 2,
+        use_history_heuristic: bool = True,
+        history_multiplier: float = 1_000.0,
+    ) -> None:
+        self.generate_moves = generate_moves
+        self.apply_move = apply_move
+        self.evaluate_state = evaluate_state
+        self.is_terminal = is_terminal
+        self.current_player = current_player
+        self.move_to_string = move_to_string or str
+
+        self.state_key = (
+            state_key
+            or self._default_state_key
+        )
+
+        self.use_transposition_table = (
+            use_transposition_table
+        )
+
+        self.move_order_score = move_order_score
+        self.use_move_ordering = use_move_ordering
+
+        self.move_key = (
+            move_key
+            or self._default_move_key
+        )
+
+        self.use_killer_moves = use_killer_moves
+
+        if killer_slots < 1:
+            raise ValueError(
+                ""killer_slots must be at least 1.""
+            )
+
+        self.killer_slots = killer_slots
+
+        self.use_history_heuristic = (
+            use_history_heuristic
+        )
+
+        if history_multiplier < 0:
+            raise ValueError(
+                ""history_multiplier cannot be negative.""
+            )
+
+        self.history_multiplier = float(
+            history_multiplier
+        )
+
+        self.stats = SearchStats()
+
+        self.transposition_table: Dict[
+            Hashable,
+            TranspositionEntry,
+        ] = {}
+
+        self.killer_moves: Dict[
+            int,
+            List[Move],
+        ] = {}
+
+        self.history_table: Dict[
+            Tuple[Player, Hashable],
+            int,
+        ] = {}
+
+        self._principal_variation: List[Move] = []
+        self._previous_iteration_pv: List[Move] = []
+
+    @staticmethod
+    def _default_state_key(
+        state: State,
+    ) -> Hashable:
+        """"""Use a hashable game state directly as its key.""""""
+
+        try:
+            hash(state)
+        except TypeError as exc:
+            raise TypeError(
+                ""The game state is not hashable. ""
+                ""Supply a state_key function.""
+            ) from exc
+
+        return state
+
+    @staticmethod
+    def _default_move_key(
+        move: Move,
+    ) -> Hashable:
+        """"""Use a hashable move directly as its move key.""""""
+
+        try:
+            hash(move)
+        except TypeError as exc:
+            raise TypeError(
+                ""The move is not hashable. ""
+                ""Supply a move_key function.""
+            ) from exc
+
+        return move
+
+    def _validate_depth(
+        self,
+        depth: int,
+    ) -> None:
+        """"""Validate search depth.""""""
+
+        if not isinstance(depth, int):
+            raise TypeError(
+                ""Search depth must be an integer.""
+            )
+
+        if depth < 1:
+            raise ValueError(
+                ""Search depth must be at least 1.""
+            )
+
+    def _safe_moves(
+        self,
+        state: State,
+    ) -> List[Move]:
+        """"""Return generated legal moves as a list.""""""
+
+        moves = self.generate_moves(state)
+
+        if moves is None:
+            return []
+
+        return list(moves)
+
+    def clear_transposition_table(
+        self,
+    ) -> None:
+        """"""Remove every cached game position.""""""
+
+        self.transposition_table.clear()
+
+    def clear_killer_moves(
+        self,
+    ) -> None:
+        """"""Remove all stored killer moves.""""""
+
+        self.killer_moves.clear()
+
+    def clear_history_table(
+        self,
+    ) -> None:
+        """"""Remove all accumulated history scores.""""""
+
+        self.history_table.clear()
+
+    def transposition_table_size(
+        self,
+    ) -> int:
+        """"""Return the number of cached positions.""""""
+
+        return len(self.transposition_table)
+
+    def killer_move_count(
+        self,
+    ) -> int:
+        """"""Return the total number of stored killer moves.""""""
+
+        return sum(
+            len(moves)
+            for moves in self.killer_moves.values()
+        )
+
+    def history_table_size(
+        self,
+    ) -> int:
+        """"""Return the number of scored player-move pairs.""""""
+
+        return len(self.history_table)
+
+    def _find_transposition_move(
+        self,
+        key: Hashable,
+    ) -> Optional[Move]:
+        """"""Return a cached best move, when available.""""""
+
+        if not self.use_transposition_table:
+            return None
+
+        entry = self.transposition_table.get(key)
+
+        if entry is None:
+            return None
+
+        return entry.best_move
+
+    def _moves_equal(
+        self,
+        first: Optional[Move],
+        second: Optional[Move],
+    ) -> bool:
+        """"""Compare moves using their stable move keys.""""""
+
+        if first is None or second is None:
+            return False
+
+        try:
+            return (
+                self.move_key(first)
+                == self.move_key(second)
+            )
+        except Exception:
+            try:
+                return bool(first == second)
+            except Exception:
+                return False
+
+    def _is_killer_move(
+        self,
+        move: Move,
+        ply: int,
+    ) -> bool:
+        """"""Return True when a move is stored as a killer at this ply.""""""
+
+        if not self.use_killer_moves:
+            return False
+
+        killers = self.killer_moves.get(
+            ply,
+            [],
+        )
+
+        return any(
+            self._moves_equal(move, killer)
+            for killer in killers
+        )
+
+    def _store_killer_move(
+        self,
+        move: Move,
+        ply: int,
+    ) -> None:
+        """"""Store a cutoff-producing move at one ply.""""""
+
+        if not self.use_killer_moves:
+            return
+
+        killers = self.killer_moves.setdefault(
+            ply,
+            [],
+        )
+
+        for existing in killers:
+            if self._moves_equal(
+                move,
+                existing,
+            ):
+                return
+
+        killers.insert(
+            0,
+            move,
+        )
+
+        del killers[
+            self.killer_slots:
+        ]
+
+        self.stats.killer_stores += 1
+
+    def _history_key(
+        self,
+        player: Player,
+        move: Move,
+    ) -> Tuple[Player, Hashable]:
+        """"""Create a player-specific history-table key.""""""
+
+        return (
+            player,
+            self.move_key(move),
+        )
+
+    def _get_history_score(
+        self,
+        player: Player,
+        move: Move,
+    ) -> int:
+        """"""Return the accumulated history score for a move.""""""
+
+        if not self.use_history_heuristic:
+            return 0
+
+        key = self._history_key(
+            player,
+            move,
+        )
+
+        return self.history_table.get(
+            key,
+            0,
+        )
+
+    def _update_history(
+        self,
+        player: Player,
+        move: Move,
+        depth: int,
+    ) -> None:
+        """"""
+        Reward a move that caused an alpha-beta cutoff.
+
+        Standard history bonus:
+
+        depthÂ²
+        """"""
+
+        if not self.use_history_heuristic:
+            return
+
+        safe_depth = max(
+            1,
+            int(depth),
+        )
+
+        bonus = safe_depth * safe_depth
+
+        key = self._history_key(
+            player,
+            move,
+        )
+
+        self.history_table[key] = (
+            self.history_table.get(key, 0)
+            + bonus
+        )
+
+        self.stats.history_updates += 1
+
+    def get_history_score(
+        self,
+        player: Player,
+        move: Move,
+    ) -> int:
+        """"""
+        Public helper for inspecting one move's history score.
+        """"""
+
+        return self._get_history_score(
+            player,
+            move,
+        )
+
+    def get_history_entries(
+        self,
+    ) -> List[
+        Tuple[Player, Hashable, int]
+    ]:
+        """"""
+        Return history entries sorted from strongest to weakest.
+        """"""
+
+        rows = [
+            (
+                player,
+                move_key,
+                score,
+            )
+            for (
+                player,
+                move_key,
+            ), score in self.history_table.items()
+        ]
+
+        rows.sort(
+            key=lambda row: row[2],
+            reverse=True,
+        )
+
+        return rows
+
+    def _order_moves(
+        self,
+        state: State,
+        moves: Sequence[Move],
+        root_player: Player,
+        ply: int,
+        transposition_move: Optional[Move] = None,
+    ) -> List[Move]:
+        """"""
+        Order moves using all enabled heuristics.
+
+        Priority:
+
+        1. Transposition-table move
+        2. Previous principal-variation move
+        3. Killer move
+        4. History heuristic
+        5. PokÃ©mon-specific tactical score
+        """"""
+
+        ordered_moves = list(moves)
+
+        if (
+            not self.use_move_ordering
+            or len(ordered_moves) <= 1
+        ):
+            return ordered_moves
+
+        pv_move: Optional[Move] = None
+
+        if ply < len(self._previous_iteration_pv):
+            pv_move = self._previous_iteration_pv[ply]
+
+        player_to_move = self.current_player(
+            state
+        )
+
+        scored_moves = []
+
+        for original_index, move in enumerate(
+            ordered_moves
+        ):
+            priority = 0.0
+
+            if self._moves_equal(
+                move,
+                transposition_move,
+            ):
+                priority += 10_000_000_000.0
+
+            if self._moves_equal(
+                move,
+                pv_move,
+            ):
+                priority += 1_000_000_000.0
+
+            if self._is_killer_move(
+                move,
+                ply,
+            ):
+                priority += 100_000_000.0
+                self.stats.killer_hits += 1
+
+            history_score = self._get_history_score(
+                player_to_move,
+                move,
+            )
+
+            if history_score > 0:
+                priority += (
+                    history_score
+                    * self.history_multiplier
+                )
+
+                self.stats.history_hits += 1
+
+            if self.move_order_score is not None:
+                priority += float(
+                    self.move_order_score(
+                        state,
+                        move,
+                        root_player,
+                    )
+                )
+
+            scored_moves.append(
+                (
+                    priority,
+                    -original_index,
+                    move,
+                )
+            )
+
+        scored_moves.sort(
+            key=lambda item: (
+                item[0],
+                item[1],
+            ),
+            reverse=True,
+        )
+
+        return [
+            move
+            for _, _, move in scored_moves
+        ]
+
+    def preview_move_order(
+        self,
+        state: State,
+        root_player: Optional[Player] = None,
+        ply: int = 0,
+    ) -> List[Move]:
+        """"""Return the order the engine would search.""""""
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        legal_moves = self._safe_moves(state)
+
+        key = self.state_key(state)
+
+        transposition_move = (
+            self._find_transposition_move(key)
+        )
+
+        return self._order_moves(
+            state=state,
+            moves=legal_moves,
+            root_player=root_player,
+            ply=ply,
+            transposition_move=transposition_move,
+        )
+
+    def _probe_transposition_table(
+        self,
+        key: Hashable,
+        depth: int,
+        alpha: float,
+        beta: float,
+    ) -> Optional[Tuple[float, List[Move]]]:
+        """"""Attempt to reuse a cached search result.""""""
+
+        if not self.use_transposition_table:
+            return None
+
+        entry = self.transposition_table.get(key)
+
+        if entry is None:
+            return None
+
+        if entry.depth < depth:
+            return None
+
+        self.stats.transposition_hits += 1
+
+        if entry.bound_type is BoundType.EXACT:
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        if (
+            entry.bound_type
+            is BoundType.LOWER_BOUND
+            and entry.score >= beta
+        ):
+            self.stats.transposition_cutoffs += 1
+
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        if (
+            entry.bound_type
+            is BoundType.UPPER_BOUND
+            and entry.score <= alpha
+        ):
+            self.stats.transposition_cutoffs += 1
+
+            return (
+                entry.score,
+                list(entry.principal_variation),
+            )
+
+        return None
+
+    def _store_transposition_entry(
+        self,
+        key: Hashable,
+        depth: int,
+        score: float,
+        alpha_original: float,
+        beta_original: float,
+        best_line: List[Move],
+    ) -> None:
+        """"""Store a completed node result.""""""
+
+        if not self.use_transposition_table:
+            return
+
+        if score <= alpha_original:
+            bound_type = BoundType.UPPER_BOUND
+
+        elif score >= beta_original:
+            bound_type = BoundType.LOWER_BOUND
+
+        else:
+            bound_type = BoundType.EXACT
+
+        existing = self.transposition_table.get(key)
+
+        if (
+            existing is not None
+            and existing.depth > depth
+        ):
+            return
+
+        best_move = (
+            best_line[0]
+            if best_line
+            else None
+        )
+
+        self.transposition_table[key] = (
+            TranspositionEntry(
+                depth=depth,
+                score=score,
+                bound_type=bound_type,
+                best_move=best_move,
+                principal_variation=list(best_line),
+            )
+        )
+
+        self.stats.transposition_stores += 1
+
+    def _alpha_beta(
+        self,
+        state: State,
+        depth: int,
+        alpha: float,
+        beta: float,
+        root_player: Player,
+        ply: int = 0,
+    ) -> Tuple[float, List[Move]]:
+        """"""
+        Search one position with all enabled optimizations.
+        """"""
+
+        self.stats.nodes += 1
+
+        if self.is_terminal(state):
+            self.stats.terminal_nodes += 1
+
+            return (
+                float(
+                    self.evaluate_state(
+                        state,
+                        root_player,
+                    )
+                ),
+                [],
+            )
+
+        if depth <= 0:
+            self.stats.leaf_nodes += 1
+
+            return (
+                float(
+                    self.evaluate_state(
+                        state,
+                        root_player,
+                    )
+                ),
+                [],
+            )
+
+        key = self.state_key(state)
+
+        cached_result = (
+            self._probe_transposition_table(
+                key=key,
+                depth=depth,
+                alpha=alpha,
+                beta=beta,
+            )
+        )
+
+        if cached_result is not None:
+            return cached_result
+
+        legal_moves = self._safe_moves(state)
+
+        if not legal_moves:
+            self.stats.leaf_nodes += 1
+
+            return (
+                float(
+                    self.evaluate_state(
+                        state,
+                        root_player,
+                    )
+                ),
+                [],
+            )
+
+        transposition_move = (
+            self._find_transposition_move(key)
+        )
+
+        legal_moves = self._order_moves(
+            state=state,
+            moves=legal_moves,
+            root_player=root_player,
+            ply=ply,
+            transposition_move=transposition_move,
+        )
+
+        alpha_original = alpha
+        beta_original = beta
+
+        player_to_move = self.current_player(
+            state
+        )
+
+        maximizing = (
+            player_to_move == root_player
+        )
+
+        if maximizing:
+            best_score = -math.inf
+            best_line: List[Move] = []
+
+            for move in legal_moves:
+                child_state = self.apply_move(
+                    state,
+                    move,
+                )
+
+                child_score, child_line = (
+                    self._alpha_beta(
+                        state=child_state,
+                        depth=depth - 1,
+                        alpha=alpha,
+                        beta=beta,
+                        root_player=root_player,
+                        ply=ply + 1,
+                    )
+                )
+
+                if child_score > best_score:
+                    best_score = child_score
+                    best_line = [move] + child_line
+
+                alpha = max(
+                    alpha,
+                    best_score,
+                )
+
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+
+                    self._store_killer_move(
+                        move,
+                        ply,
+                    )
+
+                    self._update_history(
+                        player=player_to_move,
+                        move=move,
+                        depth=depth,
+                    )
+
+                    break
+
+        else:
+            best_score = math.inf
+            best_line = []
+
+            for move in legal_moves:
+                child_state = self.apply_move(
+                    state,
+                    move,
+                )
+
+                child_score, child_line = (
+                    self._alpha_beta(
+                        state=child_state,
+                        depth=depth - 1,
+                        alpha=alpha,
+                        beta=beta,
+                        root_player=root_player,
+                        ply=ply + 1,
+                    )
+                )
+
+                if child_score < best_score:
+                    best_score = child_score
+                    best_line = [move] + child_line
+
+                beta = min(
+                    beta,
+                    best_score,
+                )
+
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+
+                    self._store_killer_move(
+                        move,
+                        ply,
+                    )
+
+                    self._update_history(
+                        player=player_to_move,
+                        move=move,
+                        depth=depth,
+                    )
+
+                    break
+
+        self._store_transposition_entry(
+            key=key,
+            depth=depth,
+            score=best_score,
+            alpha_original=alpha_original,
+            beta_original=beta_original,
+            best_line=best_line,
+        )
+
+        return best_score, best_line
+
+    def search_depth(
+        self,
+        state: State,
+        depth: int,
+        root_player: Optional[Player] = None,
+        clear_table: bool = True,
+        clear_killers: bool = True,
+        clear_history: bool = True,
+    ) -> SearchResult:
+        """"""Perform one fixed-depth search.""""""
+
+        self._validate_depth(depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        if clear_killers:
+            self.clear_killer_moves()
+
+        if clear_history:
+            self.clear_history_table()
+
+        self._previous_iteration_pv = []
+
+        start_time = time.perf_counter()
+
+        score, principal_variation = (
+            self._alpha_beta(
+                state=state,
+                depth=depth,
+                alpha=-math.inf,
+                beta=math.inf,
+                root_player=root_player,
+                ply=0,
+            )
+        )
+
+        elapsed = (
+            time.perf_counter()
+            - start_time
+        )
+
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+
+        self.stats.depth_nodes[depth] = (
+            self.stats.nodes
+        )
+
+        self.stats.depth_times[depth] = elapsed
+
+        best_move = (
+            principal_variation[0]
+            if principal_variation
+            else None
+        )
+
+        self._principal_variation = (
+            principal_variation
+        )
+
+        return SearchResult(
+            best_move=best_move,
+            score=score,
+            completed_depth=depth,
+            principal_variation=principal_variation,
+            stats=self.stats,
+        )
+
+    def iterative_deepening(
+        self,
+        state: State,
+        max_depth: int,
+        root_player: Optional[Player] = None,
+        verbose: bool = True,
+        clear_table: bool = True,
+        clear_killers: bool = True,
+        clear_history: bool = True,
+    ) -> SearchResult:
+        """"""Search depth 1 through max_depth.""""""
+
+        self._validate_depth(max_depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        if clear_killers:
+            self.clear_killer_moves()
+
+        if clear_history:
+            self.clear_history_table()
+
+        self._previous_iteration_pv = []
+
+        overall_start = time.perf_counter()
+
+        best_move: Optional[Move] = None
+
+        best_score = float(
+            self.evaluate_state(
+                state,
+                root_player,
+            )
+        )
+
+        best_line: List[Move] = []
+
+        total_nodes = 0
+        total_leaf_nodes = 0
+        total_terminal_nodes = 0
+        total_cutoffs = 0
+
+        total_tt_hits = 0
+        total_tt_stores = 0
+        total_tt_cutoffs = 0
+
+        total_killer_hits = 0
+        total_killer_stores = 0
+
+        total_history_hits = 0
+        total_history_updates = 0
+
+        depth_nodes: Dict[int, int] = {}
+        depth_times: Dict[int, float] = {}
+
+        completed_depth = 0
+
+        for depth in range(
+            1,
+            max_depth + 1,
+        ):
+            self.stats.nodes = 0
+            self.stats.leaf_nodes = 0
+            self.stats.terminal_nodes = 0
+            self.stats.cutoffs = 0
+
+            self.stats.transposition_hits = 0
+            self.stats.transposition_stores = 0
+            self.stats.transposition_cutoffs = 0
+
+            self.stats.killer_hits = 0
+            self.stats.killer_stores = 0
+
+            self.stats.history_hits = 0
+            self.stats.history_updates = 0
+
+            depth_start = time.perf_counter()
+
+            score, principal_variation = (
+                self._alpha_beta(
+                    state=state,
+                    depth=depth,
+                    alpha=-math.inf,
+                    beta=math.inf,
+                    root_player=root_player,
+                    ply=0,
+                )
+            )
+
+            depth_elapsed = (
+                time.perf_counter()
+                - depth_start
+            )
+
+            depth_nodes[depth] = (
+                self.stats.nodes
+            )
+
+            depth_times[depth] = (
+                depth_elapsed
+            )
+
+            total_nodes += self.stats.nodes
+            total_leaf_nodes += self.stats.leaf_nodes
+            total_terminal_nodes += self.stats.terminal_nodes
+            total_cutoffs += self.stats.cutoffs
+
+            total_tt_hits += (
+                self.stats.transposition_hits
+            )
+
+            total_tt_stores += (
+                self.stats.transposition_stores
+            )
+
+            total_tt_cutoffs += (
+                self.stats.transposition_cutoffs
+            )
+
+            total_killer_hits += (
+                self.stats.killer_hits
+            )
+
+            total_killer_stores += (
+                self.stats.killer_stores
+            )
+
+            total_history_hits += (
+                self.stats.history_hits
+            )
+
+            total_history_updates += (
+                self.stats.history_updates
+            )
+
+            completed_depth = depth
+            best_score = score
+            best_line = principal_variation
+
+            if principal_variation:
+                best_move = principal_variation[0]
+
+            self._previous_iteration_pv = list(
+                principal_variation
+            )
+
+            if verbose:
+                move_name = (
+                    self.move_to_string(best_move)
+                    if best_move is not None
+                    else ""None""
+                )
+
+                pv_text = "" -> "".join(
+                    self.move_to_string(move)
+                    for move in principal_variation
+                )
+
+                print(
+                    f""Depth {depth:>2} | ""
+                    f""Score {score:>10.2f} | ""
+                    f""Nodes {self.stats.nodes:>8,} | ""
+                    f""TT {self.stats.transposition_hits:>4,} | ""
+                    f""Killer {self.stats.killer_hits:>4,} | ""
+                    f""History {self.stats.history_hits:>4,} | ""
+                    f""Time {depth_elapsed:>8.4f}s | ""
+                    f""Best: {move_name}""
+                )
+
+                if pv_text:
+                    print(
+                        f""         PV: {pv_text}""
+                    )
+
+        overall_elapsed = (
+            time.perf_counter()
+            - overall_start
+        )
+
+        final_stats = SearchStats(
+            nodes=total_nodes,
+            leaf_nodes=total_leaf_nodes,
+            terminal_nodes=total_terminal_nodes,
+            cutoffs=total_cutoffs,
+
+            transposition_hits=total_tt_hits,
+            transposition_stores=total_tt_stores,
+            transposition_cutoffs=total_tt_cutoffs,
+
+            killer_hits=total_killer_hits,
+            killer_stores=total_killer_stores,
+
+            history_hits=total_history_hits,
+            history_updates=total_history_updates,
+
+            completed_depth=completed_depth,
+            elapsed_seconds=overall_elapsed,
+            depth_nodes=depth_nodes,
+            depth_times=depth_times,
+        )
+
+        self.stats = final_stats
+        self._principal_variation = best_line
+
+        return SearchResult(
+            best_move=best_move,
+            score=best_score,
+            completed_depth=completed_depth,
+            principal_variation=best_line,
+            stats=final_stats,
+        )
+
+    def get_principal_variation(
+        self,
+    ) -> List[Move]:
+        """"""Return a copy of the latest principal variation.""""""
+
+        return list(
+            self._principal_variation
+        )"
+scripts\11_advanced_search_engine.py,CLASS,SearchTimeLimit,6818,"class SearchTimeLimit:
+    max_seconds: float
+
+    def start(self):
+        self.start_time = time.perf_counter()
+
+    def elapsed(self):
+        return time.perf_counter() - self.start_time
+
+    def remaining(self):
+        return max(
+            0.0,
+            self.max_seconds - self.elapsed(),
+        )
+
+    def expired(self):
+        return self.elapsed() >= self.max_seconds"
+scripts\11_advanced_search_engine.py,FUNCTION,search_for_time,6883,"def search_for_time(
+    self,
+    state,
+    seconds=1.0,
+    verbose=False,
+    max_depth=100,
+    clear_table=True,
+    clear_killers=True,
+    clear_history=True,
+):
+    """"""
+    Run iterative deepening until the time budget expires.
+
+    The deepest fully completed search result is returned.
+    Time is checked between completed depths.
+    """"""
+
+    if seconds <= 0:
+        raise ValueError(
+            ""seconds must be greater than 0.""
+        )
+
+    if max_depth < 1:
+        raise ValueError(
+            ""max_depth must be at least 1.""
+        )
+
+    timer = SearchTimeLimit(
+        max_seconds=float(seconds)
+    )
+    timer.start()
+
+    if clear_table:
+        self.clear_transposition_table()
+
+    if clear_killers:
+        self.clear_killer_moves()
+
+    if clear_history:
+        self.clear_history_table()
+
+    best_result = None
+
+    for depth in range(1, max_depth + 1):
+        if timer.expired():
+            break
+
+        depth_start = time.perf_counter()
+
+        result = self.search_depth(
+            state=state,
+            depth=depth,
+            clear_table=False,
+            clear_killers=False,
+            clear_history=False,
+        )
+
+        depth_elapsed = (
+            time.perf_counter() - depth_start
+        )
+
+        best_result = result
+
+        if verbose:
+            best_move_name = (
+                self.move_to_string(
+                    result.best_move
+                )
+                if result.best_move is not None
+                else ""None""
+            )
+
+            print(
+                f""Depth {depth:>2} | ""
+                f""Score {result.score:>8.2f} | ""
+                f""Nodes {result.stats.nodes:>6,} | ""
+                f""Depth time {depth_elapsed:.4f}s | ""
+                f""Elapsed {timer.elapsed():.4f}s | ""
+                f""Remaining {timer.remaining():.4f}s | ""
+                f""Best: {best_move_name}""
+            )
+
+        if timer.expired():
+            break
+
+    # Guarantee a result even if the time budget was extremely small.
+    if best_result is None:
+        best_result = self.search_depth(
+            state=state,
+            depth=1,
+            clear_table=False,
+            clear_killers=False,
+            clear_history=False,
+        )
+
+    self._principal_variation = list(
+        best_result.principal_variation
+    )
+
+    return best_result"
+scripts\11_advanced_search_engine.py,FUNCTION,search_depth,430,"def search_depth(
+        self,
+        state: State,
+        depth: int,
+        root_player: Optional[Player] = None,
+    ) -> SearchResult:
+        """"""
+        Perform one fixed-depth alpha-beta search.
+        """"""
+
+        self._validate_depth(depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        start_time = time.perf_counter()
+
+        score, principal_variation = self._alpha_beta(
+            state=state,
+            depth=depth,
+            alpha=-math.inf,
+            beta=math.inf,
+            root_player=root_player,
+        )
+
+        elapsed = time.perf_counter() - start_time
+
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+        self.stats.depth_nodes[depth] = self.stats.nodes
+        self.stats.depth_times[depth] = elapsed
+
+        best_move = (
+            principal_variation[0]
+            if principal_variation
+            else None
+        )
+
+        self._principal_variation = principal_variation
+
+        return SearchResult(
+            best_move=best_move,
+            score=score,
+            completed_depth=depth,
+            principal_variation=principal_variation,
+            stats=self.stats,
+        )"
+scripts\11_advanced_search_engine.py,FUNCTION,search_depth,1301,"def search_depth(
+        self,
+        state: State,
+        depth: int,
+        root_player: Optional[Player] = None,
+        clear_table: bool = True,
+    ) -> SearchResult:
+        """"""
+        Perform one fixed-depth alpha-beta search.
+        """"""
+
+        self._validate_depth(depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        start_time = time.perf_counter()
+
+        score, principal_variation = self._alpha_beta(
+            state=state,
+            depth=depth,
+            alpha=-math.inf,
+            beta=math.inf,
+            root_player=root_player,
+        )
+
+        elapsed = time.perf_counter() - start_time
+
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+        self.stats.depth_nodes[depth] = self.stats.nodes
+        self.stats.depth_times[depth] = elapsed
+
+        best_move = (
+            principal_variation[0]
+            if principal_variation
+            else None
+        )
+
+        self._principal_variation = principal_variation
+
+        return SearchResult(
+            best_move=best_move,
+            score=score,
+            completed_depth=depth,
+            principal_variation=principal_variation,
+            stats=self.stats,
+        )"
+scripts\11_advanced_search_engine.py,FUNCTION,search_depth,3495,"def search_depth(
+        self,
+        state: State,
+        depth: int,
+        root_player: Optional[Player] = None,
+        clear_table: bool = True,
+    ) -> SearchResult:
+        """"""
+        Perform one fixed-depth search.
+        """"""
+
+        self._validate_depth(depth)
+
+        if root_player is None:
+            root_player = self.current_player(
+                state
+            )
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        self._previous_iteration_pv = []
+
+        start_time = time.perf_counter()
+
+        score, principal_variation = (
+            self._alpha_beta(
+                state=state,
+                depth=depth,
+                alpha=-math.inf,
+                beta=math.inf,
+                root_player=root_player,
+                ply=0,
+            )
+        )
+
+        elapsed = (
+            time.perf_counter()
+            - start_time
+        )
+
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+        self.stats.depth_nodes[depth] = (
+            self.stats.nodes
+        )
+        self.stats.depth_times[depth] = elapsed
+
+        best_move = (
+            principal_variation[0]
+            if principal_variation
+            else None
+        )
+
+        self._principal_variation = (
+            principal_variation
+        )
+
+        return SearchResult(
+            best_move=best_move,
+            score=score,
+            completed_depth=depth,
+            principal_variation=(
+                principal_variation
+            ),
+            stats=self.stats,
+        )"
+scripts\11_advanced_search_engine.py,FUNCTION,search_depth,4796,"def search_depth(
+        self,
+        state: State,
+        depth: int,
+        root_player: Optional[Player] = None,
+        clear_table: bool = True,
+        clear_killers: bool = True,
+    ) -> SearchResult:
+        self._validate_depth(depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        if clear_killers:
+            self.clear_killer_moves()
+
+        self._previous_iteration_pv = []
+
+        start_time = time.perf_counter()
+
+        score, principal_variation = (
+            self._alpha_beta(
+                state=state,
+                depth=depth,
+                alpha=-math.inf,
+                beta=math.inf,
+                root_player=root_player,
+                ply=0,
+            )
+        )
+
+        elapsed = (
+            time.perf_counter()
+            - start_time
+        )
+
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+        self.stats.depth_nodes[depth] = self.stats.nodes
+        self.stats.depth_times[depth] = elapsed
+
+        best_move = (
+            principal_variation[0]
+            if principal_variation
+            else None
+        )
+
+        self._principal_variation = principal_variation
+
+        return SearchResult(
+            best_move=best_move,
+            score=score,
+            completed_depth=depth,
+            principal_variation=principal_variation,
+            stats=self.stats,
+        )"
+scripts\11_advanced_search_engine.py,FUNCTION,search_depth,6139,"def search_depth(
+        self,
+        state: State,
+        depth: int,
+        root_player: Optional[Player] = None,
+        clear_table: bool = True,
+        clear_killers: bool = True,
+        clear_history: bool = True,
+    ) -> SearchResult:
+        """"""Perform one fixed-depth search.""""""
+
+        self._validate_depth(depth)
+
+        if root_player is None:
+            root_player = self.current_player(state)
+
+        self.stats.reset()
+
+        if clear_table:
+            self.clear_transposition_table()
+
+        if clear_killers:
+            self.clear_killer_moves()
+
+        if clear_history:
+            self.clear_history_table()
+
+        self._previous_iteration_pv = []
+
+        start_time = time.perf_counter()
+
+        score, principal_variation = (
+            self._alpha_beta(
+                state=state,
+                depth=depth,
+                alpha=-math.inf,
+                beta=math.inf,
+                root_player=root_player,
+                ply=0,
+            )
+        )
+
+        elapsed = (
+            time.perf_counter()
+            - start_time
+        )
+
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+
+        self.stats.depth_nodes[depth] = (
+            self.stats.nodes
+        )
+
+        self.stats.depth_times[depth] = elapsed
+
+        best_move = (
+            principal_variation[0]
+            if principal_variation
+            else None
+        )
+
+        self._principal_variation = (
+            principal_variation
+        )
+
+        return SearchResult(
+            best_move=best_move,
+            score=score,
+            completed_depth=depth,
+            principal_variation=principal_variation,
+            stats=self.stats,
+        )"
+scripts\16_kaggle_submission_compatibility.py,FUNCTION,create_baseline_build,551,"def create_baseline_build(
+    source_dir: Path,
+    build_dir: Path,
+) -> Path:
+    """"""
+    Create a clean Team Jesus baseline submission folder.
+    """"""
+
+    required_items = [
+        source_dir / ""main.py"",
+        source_dir / ""deck.csv"",
+        source_dir / ""cg"",
+    ]
+
+    missing_items = [
+        path for path in required_items
+        if not path.exists()
+    ]
+
+    if missing_items:
+        missing_text = ""\n"".join(
+            f""- {path}"" for path in missing_items
+        )
+        raise FileNotFoundError(
+            ""Cannot create the baseline build. ""
+            f""Missing:\n{missing_text}""
+        )
+
+    if build_dir.exists():
+        shutil.rmtree(build_dir)
+
+    build_dir.mkdir(parents=True, exist_ok=True)
+
+    shutil.copy2(
+        source_dir / ""main.py"",
+        build_dir / ""main.py"",
+    )
+
+    shutil.copy2(
+        source_dir / ""deck.csv"",
+        build_dir / ""deck.csv"",
+    )
+
+    shutil.copytree(
+        source_dir / ""cg"",
+        build_dir / ""cg"",
+    )
+
+    return build_dir"
+scripts\17_official_card_knowledge_base.py,FUNCTION,search_names,1216,"def search_names(
+        self,
+        query: str,
+        *,
+        limit: int = 20,
+    ) -> list[CardRecord]:
+        normalized_query = normalize_card_name(query)
+
+        matches = [
+            card
+            for card in self._records.values()
+            if normalized_query
+            in normalize_card_name(card.name)
+        ]
+
+        return sorted(
+            matches,
+            key=lambda card: (
+                normalize_card_name(card.name),
+                card.card_id,
+            ),
+        )[:limit]"
+scripts\32_mixed_opponent_self_play_benchmarks.py,FUNCTION,baseline_match_factory,1075,"def baseline_match_factory(
+    game_index: int,
+) -> TournamentMatch:
+
+    return TournamentMatch(
+        player_agent=baseline_player_agent,
+        opponent_agent=baseline_opponent_agent,
+        player_name=""TrainingAgent"",
+        opponent_name=""TrainingOpponent"",
+    )"
+scripts\32_mixed_opponent_self_play_benchmarks.py,CLASS,PolicySearchEngineAdapter,1364,"class PolicySearchEngineAdapter:
+
+    def __init__(
+        self,
+        policy_agent,
+    ) -> None:
+        self.policy_agent = policy_agent
+
+    def search_depth(
+        self,
+        *,
+        state: BattleState,
+        depth: int,
+        clear_table: bool = True,
+    ) -> SearchResult:
+
+        legal_moves = get_current_legal_moves(
+            state
+        )
+
+        if not legal_moves:
+            return SearchResult(
+                best_move=None,
+                score=0.0,
+                completed_depth=depth,
+                principal_variation=[],
+                stats=SearchStats(),
+            )
+
+        policy_state = build_policy_state(
+            state,
+            legal_moves,
+        )
+
+        decision = self.policy_agent.choose_move(
+            state=policy_state,
+            legal_moves=(
+                policy_state[""policy_legal_moves""]
+            ),
+        )
+
+        selected_move = policy_state[
+            ""move_lookup""
+        ][decision.move]
+
+        return SearchResult(
+            best_move=selected_move,
+            score=float(decision.score),
+            completed_depth=depth,
+            principal_variation=[
+                selected_move
+            ],
+            stats=SearchStats(
+                nodes=1,
+            ),
+        )"
+scripts\32_mixed_opponent_self_play_benchmarks.py,FUNCTION,search_depth,1372,"def search_depth(
+        self,
+        *,
+        state: BattleState,
+        depth: int,
+        clear_table: bool = True,
+    ) -> SearchResult:
+
+        legal_moves = get_current_legal_moves(
+            state
+        )
+
+        if not legal_moves:
+            return SearchResult(
+                best_move=None,
+                score=0.0,
+                completed_depth=depth,
+                principal_variation=[],
+                stats=SearchStats(),
+            )
+
+        policy_state = build_policy_state(
+            state,
+            legal_moves,
+        )
+
+        decision = self.policy_agent.choose_move(
+            state=policy_state,
+            legal_moves=(
+                policy_state[""policy_legal_moves""]
+            ),
+        )
+
+        selected_move = policy_state[
+            ""move_lookup""
+        ][decision.move]
+
+        return SearchResult(
+            best_move=selected_move,
+            score=float(decision.score),
+            completed_depth=depth,
+            principal_variation=[
+                selected_move
+            ],
+            stats=SearchStats(
+                nodes=1,
+            ),
+        )"
+scripts\46_competitive_policy_dataset_generation.py,FUNCTION,create_random_battle_state,4217,"def create_random_battle_state(
+    battle_index: int,
+) -> BattleState:
+    player_card, opponent_card = (
+        random.sample(
+            CARD_TEMPLATES,
+            2,
+        )
+    )
+
+    player_card = copy.deepcopy(
+        player_card
+    )
+
+    opponent_card = copy.deepcopy(
+        opponent_card
+    )
+
+    player_max_hp = safe_float(
+        player_card[""hp""]
+    )
+
+    opponent_max_hp = safe_float(
+        opponent_card[""hp""]
+    )
+
+    player_start_hp = random.randint(
+        max(
+            1,
+            int(
+                player_max_hp * 0.50
+            ),
+        ),
+        int(player_max_hp),
+    )
+
+    opponent_start_hp = random.randint(
+        max(
+            1,
+            int(
+                opponent_max_hp * 0.50
+            ),
+        ),
+        int(opponent_max_hp),
+    )
+
+    player_pokemon = PokemonState(
+        card=player_card,
+        current_hp=float(
+            player_start_hp
+        ),
+        attached_energy=random.randint(
+            1,
+            4,
+        ),
+        status=None,
+        damage=float(
+            player_max_hp
+            - player_start_hp
+        ),
+        is_active=True,
+    )
+
+    opponent_pokemon = PokemonState(
+        card=opponent_card,
+        current_hp=float(
+            opponent_start_hp
+        ),
+        attached_energy=random.randint(
+            1,
+            4,
+        ),
+        status=None,
+        damage=float(
+            opponent_max_hp
+            - opponent_start_hp
+        ),
+        is_active=True,
+    )
+
+    player = PlayerState(
+        active=player_pokemon,
+        bench=[],
+        prize_cards_remaining=random.randint(
+            1,
+            6,
+        ),
+        hand_size=random.randint(
+            0,
+            10,
+        ),
+    )
+
+    opponent = PlayerState(
+        active=opponent_pokemon,
+        bench=[],
+        prize_cards_remaining=random.randint(
+            1,
+            6,
+        ),
+        hand_size=random.randint(
+            0,
+            10,
+        ),
+    )
+
+    return BattleState(
+        player=player,
+        opponent=opponent,
+        turn_number=random.randint(
+            1,
+            15,
+        ),
+        current_player=(
+            ""Player""
+            if battle_index % 2 == 0
+            else ""Opponent""
+        ),
+    )"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,CLASS,RandomLegalMoveAgent,1882,"class RandomLegalMoveAgent:
+    def __init__(
+        self,
+        seed: int = RANDOM_SEED,
+        name: str = ""Random Legal Agent"",
+    ) -> None:
+        self.name = name
+        self.random = random.Random(
+            seed
+        )
+        self.last_decision = None
+
+    def choose_move(
+        self,
+        state: Any = None,
+        depth: int | None = None,
+        battle_state: Any = None,
+        **kwargs: Any,
+    ) -> TournamentDecision:
+        resolved_state = (
+            state
+            if state is not None
+            else battle_state
+        )
+
+        if resolved_state is None:
+            raise ValueError(
+                ""A battle state is required.""
+            )
+
+        legal_moves = (
+            get_current_legal_moves(
+                resolved_state
+            )
+        )
+
+        if not legal_moves:
+            self.last_decision = (
+                TournamentDecision(
+                    move=None,
+                    score=0.0,
+                    search_depth=int(
+                        depth or 0
+                    ),
+                    nodes=0,
+                    confidence=0.0,
+                    selected_move_name=None,
+                    fallback=True,
+                    reason=
+                        ""No legal moves available."",
+                )
+            )
+
+            return self.last_decision
+
+        selected_move = (
+            self.random.choice(
+                legal_moves
+            )
+        )
+
+        confidence = (
+            1.0
+            / len(legal_moves)
+        )
+
+        self.last_decision = (
+            TournamentDecision(
+                move=
+                    selected_move,
+
+                score=
+                    confidence,
+
+                search_depth=int(
+                    depth or 0
+                ),
+
+                nodes=0,
+
+                confidence=
+                    confidence,
+
+                selected_move_name=
+                    tournament_move_name(
+                        selected_move
+                    ),
+
+                fallback=False,
+            )
+        )
+
+        return self.last_decision
+
+    def get_last_decision(
+        self,
+    ) -> TournamentDecision | None:
+        return self.last_decision"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,CLASS,GreedyDamageAgent,1986,"class GreedyDamageAgent:
+    def __init__(
+        self,
+        name: str = ""Greedy Damage Agent"",
+    ) -> None:
+        self.name = name
+        self.last_decision = None
+
+    def choose_move(
+        self,
+        state: Any = None,
+        depth: int | None = None,
+        battle_state: Any = None,
+        **kwargs: Any,
+    ) -> TournamentDecision:
+        resolved_state = (
+            state
+            if state is not None
+            else battle_state
+        )
+
+        if resolved_state is None:
+            raise ValueError(
+                ""A battle state is required.""
+            )
+
+        legal_moves = (
+            get_current_legal_moves(
+                resolved_state
+            )
+        )
+
+        if not legal_moves:
+            self.last_decision = (
+                TournamentDecision(
+                    move=None,
+                    score=0.0,
+                    search_depth=int(
+                        depth or 0
+                    ),
+                    nodes=0,
+                    confidence=0.0,
+                    selected_move_name=None,
+                    fallback=True,
+                    reason=
+                        ""No legal moves available."",
+                )
+            )
+
+            return self.last_decision
+
+        selected_index = max(
+            range(
+                len(legal_moves)
+            ),
+            key=lambda index: (
+                tournament_move_damage(
+                    legal_moves[index]
+                ),
+                -index,
+            ),
+        )
+
+        selected_move = (
+            legal_moves[
+                selected_index
+            ]
+        )
+
+        maximum_damage = (
+            tournament_move_damage(
+                selected_move
+            )
+        )
+
+        self.last_decision = (
+            TournamentDecision(
+                move=
+                    selected_move,
+
+                score=
+                    maximum_damage,
+
+                search_depth=int(
+                    depth or 0
+                ),
+
+                nodes=0,
+
+                confidence=1.0,
+
+                selected_move_name=
+                    tournament_move_name(
+                        selected_move
+                    ),
+
+                fallback=False,
+            )
+        )
+
+        return self.last_decision
+
+    def get_last_decision(
+        self,
+    ) -> TournamentDecision | None:
+        return self.last_decision"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,CLASS,SearchAgentAdapter,2329,"class SearchAgentAdapter:
+    def __init__(
+        self,
+        search_depth: int =
+            SIMULATOR_SEARCH_DEPTH,
+        name: str =
+            ""Production Search Agent"",
+    ) -> None:
+        self.name = name
+
+        self.search_depth = int(
+            search_depth
+        )
+
+        self.search_engine = (
+            AdvancedSearchEngine(
+                generate_moves=
+                    generate_moves_adapter,
+
+                apply_move=
+                    apply_move,
+
+                evaluate_state=
+                    evaluate_state_adapter,
+
+                is_terminal=
+                    terminal_state_adapter,
+
+                current_player=
+                    current_player_adapter,
+
+                state_key=
+                    tournament_state_key,
+
+                move_key=
+                    tournament_move_key,
+            )
+        )
+
+        self.inner_agent = (
+            PokemonBattleAgent(
+                engine=
+                    self.search_engine
+            )
+        )
+
+        self.last_decision = None
+
+    def choose_move(
+        self,
+        state: Any = None,
+        depth: int | None = None,
+        battle_state: Any = None,
+        **kwargs: Any,
+    ) -> Any:
+        resolved_state = (
+            state
+            if state is not None
+            else battle_state
+        )
+
+        if resolved_state is None:
+            raise ValueError(
+                ""A battle state is required.""
+            )
+
+        resolved_depth = int(
+            depth
+            if depth is not None
+            else self.search_depth
+        )
+
+        self.last_decision = (
+            self.inner_agent
+            .choose_move(
+                state=
+                    resolved_state,
+
+                depth=
+                    resolved_depth,
+            )
+        )
+
+        return self.last_decision
+
+    def get_last_decision(
+        self,
+    ) -> Any:
+        return self.last_decision"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,FUNCTION,create_random_baseline,3281,"def create_random_baseline(
+    seed: int,
+) -> RandomLegalMoveAgent:
+    return RandomLegalMoveAgent(
+        seed=seed,
+        name=""Random Baseline"",
+    )"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,FUNCTION,create_greedy_baseline,3290,"def create_greedy_baseline() -> GreedyDamageAgent:
+    return GreedyDamageAgent(
+        name=""Greedy Damage Baseline"",
+    )"
+scripts\48_tournament_evaluation_and_elo_benchmarking.py,FUNCTION,create_search_baseline,3296,"def create_search_baseline() -> SearchAgentAdapter:
+    return SearchAgentAdapter(
+        search_depth=
+            SIMULATOR_SEARCH_DEPTH,
+
+        name=
+            ""Depth-6 Search Baseline"",
+    )"
+scripts\49_side_balanced_search_guided_self_play.py,FUNCTION,baseline_strength_weight,2532,"def baseline_strength_weight(
+    baseline_name: object,
+) -> float:
+    text = str(
+        baseline_name
+    ).strip().lower()
+
+    if (
+        ""depth"" in text
+        or ""search"" in text
+    ):
+        return 1.50
+
+    if ""greedy"" in text:
+        return 1.20
+
+    if ""random"" in text:
+        return 0.75
+
+    return 1.00"
+scripts\49_side_balanced_search_guided_self_play.py,FUNCTION,get_baseline_strength,6319,"def get_baseline_strength(
+    baseline_name: Any,
+) -> float:
+    text = normalize_text(
+        baseline_name
+    ).lower()
+
+    for keyword, value in baseline_strength_map.items():
+        if keyword in text:
+            return float(
+                value
+            )
+
+    return 1.5"
+scripts\49_side_balanced_search_guided_self_play.py,FUNCTION,parse_search_result,13697,"def parse_search_result(
+    search_result: Any,
+) -> dict[str, Any]:
+
+    best_move = first_available_attribute(
+        search_result,
+        [
+            ""best_move"",
+            ""move"",
+            ""selected_move"",
+            ""recommended_move"",
+            ""action"",
+        ],
+    )
+
+    score = first_available_attribute(
+        search_result,
+        [
+            ""score"",
+            ""value"",
+            ""evaluation"",
+            ""best_score"",
+            ""utility"",
+        ],
+    )
+
+    depth_reached = first_available_attribute(
+        search_result,
+        [
+            ""depth"",
+            ""depth_reached"",
+            ""completed_depth"",
+            ""search_depth"",
+        ],
+    )
+
+    nodes = first_available_attribute(
+        search_result,
+        [
+            ""nodes"",
+            ""nodes_searched"",
+            ""node_count"",
+            ""positions"",
+        ],
+    )
+
+    principal_variation = first_available_attribute(
+        search_result,
+        [
+            ""principal_variation"",
+            ""pv"",
+            ""line"",
+            ""best_line"",
+        ],
+        default=[],
+    )
+
+    elapsed_seconds = first_available_attribute(
+        search_result,
+        [
+            ""elapsed_seconds"",
+            ""elapsed_time"",
+            ""seconds"",
+            ""duration"",
+        ],
+    )
+
+    timed_out = first_available_attribute(
+        search_result,
+        [
+            ""timed_out"",
+            ""timeout"",
+            ""was_interrupted"",
+        ],
+        default=False,
+    )
+
+    return {
+        ""search_result_type"":
+            type(
+                search_result
+            ).__name__,
+
+        ""search_result_module"":
+            type(
+                search_result
+            ).__module__,
+
+        ""best_move"":
+            best_move,
+
+        ""best_move_repr"":
+            move_display_string(
+                best_move
+            ),
+
+        ""best_move_key"":
+            (
+                notebook49_move_key(
+                    best_move
+                )
+                if best_move is not None
+                else None
+            ),
+
+        ""score"":
+            score,
+
+        ""depth_reached"":
+            depth_reached,
+
+        ""nodes"":
+            nodes,
+
+        ""principal_variation"":
+            principal_variation,
+
+        ""elapsed_seconds_reported"":
+            elapsed_seconds,
+
+        ""timed_out"":
+            bool(
+                timed_out
+            ),
+
+        ""raw_result"":
+            json_safe_value(
+                search_result,
+                maximum_depth=6,
+            ),
+    }"
+scripts\49_side_balanced_search_guided_self_play.py,FUNCTION,search_one_variant,14128,"def search_one_variant(
+    variant_row: Mapping[str, Any],
+) -> tuple[dict[str, Any] | None, dict[str, Any] | None]:
+
+    variant_id = str(
+        variant_row[
+            ""variant_id""
+        ]
+    )
+
+    started_at = time.perf_counter()
+
+    try:
+
+        battle_state, state_metadata, legal_moves = (
+            reconstruct_variant_state(
+                variant_row
+            )
+        )
+
+        if not legal_moves:
+
+            raise ValueError(
+                ""Reconstructed state has no legal moves.""
+            )
+
+        search_result = search_engine.search_depth(
+            state=battle_state,
+            depth=SECTION8B_SEARCH_DEPTH,
+            root_player=battle_state.current_player,
+            clear_table=SECTION8B_CLEAR_TABLE_EACH_STATE,
+            clear_killers=SECTION8B_CLEAR_KILLERS_EACH_STATE,
+            clear_history=SECTION8B_CLEAR_HISTORY_EACH_STATE,
+        )
+
+        elapsed_seconds = (
+            time.perf_counter()
+            - started_at
+        )
+
+        parsed_result = parse_search_result(
+            search_result
+        )
+
+        result_record = {
+            ""variant_id"":
+                variant_id,
+
+            ""source_scenario_id"":
+                variant_row[
+                    ""source_scenario_id""
+                ],
+
+            ""variant_name"":
+                variant_row[
+                    ""variant_name""
+                ],
+
+            ""side_mode"":
+                variant_row[
+                    ""side_mode""
+                ],
+
+            ""source_normalized_side"":
+                variant_row[
+                    ""source_normalized_side""
+                ],
+
+            ""variant_normalized_side"":
+                variant_row[
+                    ""variant_normalized_side""
+                ],
+
+            ""current_player"":
+                battle_state.current_player,
+
+            ""baseline_name"":
+                variant_row.get(
+                    ""baseline_name""
+                ),
+
+            ""player_card"":
+                variant_row[
+                    ""player_card""
+                ],
+
+            ""opponent_card"":
+                variant_row[
+                    ""opponent_card""
+                ],
+
+            ""turn_number"":
+                int(
+                    variant_row[
+                        ""turn_number""
+                    ]
+                ),
+
+            ""player_energy"":
+                int(
+                    variant_row[
+                        ""player_energy""
+                    ]
+                ),
+
+            ""opponent_energy"":
+                int(
+                    variant_row[
+                        ""opponent_energy""
+                    ]
+                ),
+
+            ""player_damage"":
+                float(
+                    variant_row[
+                        ""player_damage""
+                    ]
+                ),
+
+            ""opponent_damage"":
+                float(
+                    variant_row[
+                        ""opponent_damage""
+                    ]
+                ),
+
+            ""prize_cards_remaining"":
+                int(
+                    variant_row[
+                        ""prize_cards_remaining""
+                    ]
+                ),
+
+            ""hand_size"":
+                int(
+                    variant_row[
+                        ""hand_size""
+                    ]
+                ),
+
+            ""legal_move_count"":
+                int(
+                    len(
+                        legal_moves
+                    )
+                ),
+
+            ""legal_move_reprs"":
+                json.dumps(
+                    [
+                        move_display_string(
+                            move
+                        )
+                        for move in legal_moves
+                    ],
+                    ensure_ascii=False,
+                ),
+
+            ""search_depth_requested"":
+                int(
+                    SECTION8B_SEARCH_DEPTH
+                ),
+
+            ""search_elapsed_seconds"":
+                float(
+                    elapsed_seconds
+                ),
+
+            ""search_result_type"":
+                parsed_result[
+                    ""search_result_type""
+                ],
+
+            ""search_result_module"":
+                parsed_result[
+                    ""search_result_module""
+                ],
+
+            ""search_best_move_repr"":
+                parsed_result[
+                    ""best_move_repr""
+                ],
+
+            ""search_best_move_key"":
+                json.dumps(
+                    json_safe_value(
+                        parsed_result[
+                            ""best_move_key""
+                        ]
+                    ),
+                    ensure_ascii=False,
+                ),
+
+            ""search_score"":
+                parsed_result[
+                    ""score""
+                ],
+
+            ""search_depth_reached"":
+                parsed_result[
+                    ""depth_reached""
+                ],
+
+            ""search_nodes"":
+                parsed_result[
+                    ""nodes""
+                ],
+
+            ""search_timed_out"":
+                parsed_result[
+                    ""timed_out""
+                ],
+
+            ""principal_variation"":
+                json.dumps(
+                    json_safe_value(
+                        parsed_result[
+                            ""principal_variation""
+                        ]
+                    ),
+                    ensure_ascii=False,
+                ),
+
+            ""state_key"":
+                json.dumps(
+                    json_safe_value(
+                        notebook49_state_key(
+                            battle_state
+                        )
+                    ),
+                    ensure_ascii=False,
+                ),
+
+            ""raw_result"":
+                json.dumps(
+                    parsed_result[
+                        ""raw_result""
+                    ],
+                    ensure_ascii=False,
+                    default=str,
+                ),
+
+            ""status"":
+                ""COMPLETED"",
+        }
+
+        return (
+            result_record,
+            None,
+        )
+
+    except Exception as exc:
+
+        elapsed_seconds = (
+            time.perf_counter()
+            - started_at
+        )
+
+        failure_record = {
+            ""variant_id"":
+                variant_id,
+
+            ""source_scenario_id"":
+                variant_row.get(
+                    ""source_scenario_id""
+                ),
+
+            ""variant_name"":
+                variant_row.get(
+                    ""variant_name""
+                ),
+
+            ""player_card"":
+                variant_row.get(
+                    ""player_card""
+                ),
+
+            ""opponent_card"":
+                variant_row.get(
+                    ""opponent_card""
+                ),
+
+            ""current_side"":
+                variant_row.get(
+                    ""variant_normalized_side""
+                ),
+
+            ""search_depth"":
+                SECTION8B_SEARCH_DEPTH,
+
+            ""elapsed_seconds"":
+                elapsed_seconds,
+
+            ""error_type"":
+                type(
+                    exc
+                ).__name__,
+
+            ""error"":
+                str(
+                    exc
+                ),
+
+            ""status"":
+                ""FAILED"",
+        }
+
+        return (
+            None,
+            failure_record,
+        )"
+src\agents\policies.py,CLASS,RandomPolicy,48,"class RandomPolicy(BasePolicy):
+
+    def choose_move(
+        self,
+        state: Mapping[str, Any],
+        legal_moves: Sequence[Any],
+    ) -> AgentDecision:
+
+        self.validate_legal_moves(legal_moves)
+
+        move = self._rng.choice(
+            list(legal_moves)
+        )
+
+        return AgentDecision(
+            move=move,
+            score=0.0,
+            reason=""Random legal move"",
+            metadata={""policy"": self.name},
+        )"
+src\agents\policies.py,CLASS,GreedyPolicy,70,"class GreedyPolicy(BasePolicy):
+
+    def choose_move(
+        self,
+        state: Mapping[str, Any],
+        legal_moves: Sequence[Any],
+    ) -> AgentDecision:
+
+        self.validate_legal_moves(legal_moves)
+
+        scores = state.get(
+            ""move_scores"",
+            {},
+        )
+
+        best_move = max(
+            legal_moves,
+            key=lambda move: scores.get(
+                move,
+                0.0,
+            ),
+        )
+
+        return AgentDecision(
+            move=best_move,
+            score=float(
+                scores.get(best_move, 0.0)
+            ),
+            reason=""Highest immediate value"",
+            metadata={""policy"": self.name},
+        )"
+src\agents\policies.py,CLASS,SearchPolicy,136,"class SearchPolicy(BasePolicy):
+
+    def choose_move(
+        self,
+        state: Mapping[str, Any],
+        legal_moves: Sequence[Any],
+    ) -> AgentDecision:
+
+        self.validate_legal_moves(legal_moves)
+
+        scores = state.get(
+            ""search_scores"",
+            {},
+        )
+
+        best_move = max(
+            legal_moves,
+            key=lambda move: scores.get(
+                move,
+                float(""-inf""),
+            ),
+        )
+
+        return AgentDecision(
+            move=best_move,
+            score=float(
+                scores.get(best_move, 0.0)
+            ),
+            reason=""Search engine recommendation"",
+            metadata={
+                ""policy"": self.name,
+                ""search_depth"": (
+                    self.config.search_depth
+                ),
+            },
+        )"
+src\card_database\notebook17_export.py,FUNCTION,search_names,1216,"def search_names(
+        self,
+        query: str,
+        *,
+        limit: int = 20,
+    ) -> list[CardRecord]:
+        normalized_query = normalize_card_name(query)
+
+        matches = [
+            card
+            for card in self._records.values()
+            if normalized_query
+            in normalize_card_name(card.name)
+        ]
+
+        return sorted(
+            matches,
+            key=lambda card: (
+                normalize_card_name(card.name),
+                card.card_id,
+            ),
+        )[:limit]"
+src\card_database\repository.py,FUNCTION,search_names,77,"def search_names(
+        self,
+        query: str,
+        *,
+        limit: int = 20,
+    ) -> list[CardRecord]:
+        """"""Return partial normalized-name matches.""""""
+
+        if limit < 1:
+            return []
+
+        normalized_query = normalize_card_name(query)
+
+        if not normalized_query:
+            return []
+
+        matches = [
+            card
+            for card in self._records.values()
+            if normalized_query
+            in normalize_card_name(card.name)
+        ]
+
+        return sorted(
+            matches,
+            key=lambda card: (
+                normalize_card_name(card.name),
+                card.card_id,
+            ),
+        )[:limit]"
+src\card_database\search.py,FUNCTION,search_cards,26,"def search_cards(
+    query: str,
+    limit: int = 10,
+):
+    """"""Return partial card-name matches.""""""
+    return get_repository().search_names(
+        query,
+        limit=limit,
+    )"
+src\engine\advanced_search.py,CLASS,SearchStats,138,"class SearchStats:
+    """"""
+    Statistics collected during one complete search.
+    """"""
+    nodes: int = 0
+    leaf_nodes: int = 0
+    terminal_nodes: int = 0
+    cutoffs: int = 0
+    transposition_hits: int = 0
+    transposition_stores: int = 0
+    transposition_cutoffs: int = 0
+    killer_hits: int = 0
+    killer_stores: int = 0
+    history_hits: int = 0
+    history_updates: int = 0
+    completed_depth: int = 0
+    elapsed_seconds: float = 0.0
+    depth_nodes: Dict[int, int] = field(default_factory=dict)
+    depth_times: Dict[int, float] = field(default_factory=dict)
+
+    def reset(self) -> None:
+        """"""Reset every search statistic.""""""
+        self.nodes = 0
+        self.leaf_nodes = 0
+        self.terminal_nodes = 0
+        self.cutoffs = 0
+        self.transposition_hits = 0
+        self.transposition_stores = 0
+        self.transposition_cutoffs = 0
+        self.killer_hits = 0
+        self.killer_stores = 0
+        self.history_hits = 0
+        self.history_updates = 0
+        self.completed_depth = 0
+        self.elapsed_seconds = 0.0
+        self.depth_nodes.clear()
+        self.depth_times.clear()
+
+    @property
+    def nodes_per_second(self) -> float:
+        """"""Return average nodes searched per second.""""""
+        if self.elapsed_seconds <= 0:
+            return 0.0
+        return self.nodes / self.elapsed_seconds
+
+    @property
+    def transposition_hit_rate(self) -> float:
+        """"""Return transposition hits divided by searched nodes.""""""
+        if self.nodes <= 0:
+            return 0.0
+        return self.transposition_hits / self.nodes
+
+    def as_dict(self) -> Dict[str, Any]:
+        """"""Return statistics as a display-friendly dictionary.""""""
+        return {'nodes': self.nodes, 'leaf_nodes': self.leaf_nodes, 'terminal_nodes': self.terminal_nodes, 'cutoffs': self.cutoffs, 'transposition_hits': self.transposition_hits, 'transposition_stores': self.transposition_stores, 'transposition_cutoffs': self.transposition_cutoffs, 'transposition_hit_rate': round(self.transposition_hit_rate, 6), 'killer_hits': self.killer_hits, 'killer_stores': self.killer_stores, 'history_hits': self.history_hits, 'history_updates': self.history_updates, 'completed_depth': self.completed_depth, 'elapsed_seconds': round(self.elapsed_seconds, 6), 'nodes_per_second': round(self.nodes_per_second, 2), 'depth_nodes': dict(self.depth_nodes), 'depth_times': {depth: round(seconds, 6) for depth, seconds in self.depth_times.items()}}"
+src\engine\advanced_search.py,CLASS,SearchResult,196,"class SearchResult:
+    """"""
+    Final result returned by the search engine.
+    """"""
+    best_move: Optional[Move]
+    score: float
+    completed_depth: int
+    principal_variation: List[Move] = field(default_factory=list)
+    stats: SearchStats = field(default_factory=SearchStats)
+
+    def as_dict(self, move_to_string: Optional[MoveToStringFn]=None) -> Dict[str, Any]:
+        """"""
+        Convert the result into a display-friendly dictionary.
+        """"""
+        formatter = move_to_string or str
+        return {'best_move': formatter(self.best_move) if self.best_move is not None else None, 'score': self.score, 'completed_depth': self.completed_depth, 'principal_variation': [formatter(move) for move in self.principal_variation], 'stats': self.stats.as_dict()}"
+src\engine\advanced_search.py,CLASS,AdvancedSearchEngine,214,"class AdvancedSearchEngine:
+    """"""
+    Advanced adversarial search engine with:
+
+    - Alpha-beta pruning
+    - Iterative deepening
+    - Transposition tables
+    - Tactical move ordering
+    - Killer move heuristic
+    - History heuristic
+    - Principal-variation tracking
+    """"""
+
+    def __init__(self, generate_moves: GenerateMovesFn, apply_move: ApplyMoveFn, evaluate_state: EvaluateFn, is_terminal: IsTerminalFn, current_player: CurrentPlayerFn, move_to_string: Optional[MoveToStringFn]=None, state_key: Optional[Callable[[State], Hashable]]=None, use_transposition_table: bool=True, move_order_score: Optional[MoveOrderScoreFn]=None, use_move_ordering: bool=True, move_key: Optional[MoveKeyFn]=None, use_killer_moves: bool=True, killer_slots: int=2, use_history_heuristic: bool=True, history_multiplier: float=1000.0) -> None:
+        self.generate_moves = generate_moves
+        self.apply_move = apply_move
+        self.evaluate_state = evaluate_state
+        self.is_terminal = is_terminal
+        self.current_player = current_player
+        self.move_to_string = move_to_string or str
+        self.state_key = state_key or self._default_state_key
+        self.use_transposition_table = use_transposition_table
+        self.move_order_score = move_order_score
+        self.use_move_ordering = use_move_ordering
+        self.move_key = move_key or self._default_move_key
+        self.use_killer_moves = use_killer_moves
+        if killer_slots < 1:
+            raise ValueError('killer_slots must be at least 1.')
+        self.killer_slots = killer_slots
+        self.use_history_heuristic = use_history_heuristic
+        if history_multiplier < 0:
+            raise ValueError('history_multiplier cannot be negative.')
+        self.history_multiplier = float(history_multiplier)
+        self.stats = SearchStats()
+        self.transposition_table: Dict[Hashable, TranspositionEntry] = {}
+        self.killer_moves: Dict[int, List[Move]] = {}
+        self.history_table: Dict[Tuple[Player, Hashable], int] = {}
+        self._principal_variation: List[Move] = []
+        self._previous_iteration_pv: List[Move] = []
+
+    @staticmethod
+    def _default_state_key(state: State) -> Hashable:
+        """"""Use a hashable game state directly as its key.""""""
+        try:
+            hash(state)
+        except TypeError as exc:
+            raise TypeError('The game state is not hashable. Supply a state_key function.') from exc
+        return state
+
+    @staticmethod
+    def _default_move_key(move: Move) -> Hashable:
+        """"""Use a hashable move directly as its move key.""""""
+        try:
+            hash(move)
+        except TypeError as exc:
+            raise TypeError('The move is not hashable. Supply a move_key function.') from exc
+        return move
+
+    def _validate_depth(self, depth: int) -> None:
+        """"""Validate search depth.""""""
+        if not isinstance(depth, int):
+            raise TypeError('Search depth must be an integer.')
+        if depth < 1:
+            raise ValueError('Search depth must be at least 1.')
+
+    def _safe_moves(self, state: State) -> List[Move]:
+        """"""Return generated legal moves as a list.""""""
+        moves = self.generate_moves(state)
+        if moves is None:
+            return []
+        return list(moves)
+
+    def clear_transposition_table(self) -> None:
+        """"""Remove every cached game position.""""""
+        self.transposition_table.clear()
+
+    def clear_killer_moves(self) -> None:
+        """"""Remove all stored killer moves.""""""
+        self.killer_moves.clear()
+
+    def clear_history_table(self) -> None:
+        """"""Remove all accumulated history scores.""""""
+        self.history_table.clear()
+
+    def transposition_table_size(self) -> int:
+        """"""Return the number of cached positions.""""""
+        return len(self.transposition_table)
+
+    def killer_move_count(self) -> int:
+        """"""Return the total number of stored killer moves.""""""
+        return sum((len(moves) for moves in self.killer_moves.values()))
+
+    def history_table_size(self) -> int:
+        """"""Return the number of scored player-move pairs.""""""
+        return len(self.history_table)
+
+    def _find_transposition_move(self, key: Hashable) -> Optional[Move]:
+        """"""Return a cached best move, when available.""""""
+        if not self.use_transposition_table:
+            return None
+        entry = self.transposition_table.get(key)
+        if entry is None:
+            return None
+        return entry.best_move
+
+    def _moves_equal(self, first: Optional[Move], second: Optional[Move]) -> bool:
+        """"""Compare moves using their stable move keys.""""""
+        if first is None or second is None:
+            return False
+        try:
+            return self.move_key(first) == self.move_key(second)
+        except Exception:
+            try:
+                return bool(first == second)
+            except Exception:
+                return False
+
+    def _is_killer_move(self, move: Move, ply: int) -> bool:
+        """"""Return True when a move is stored as a killer at this ply.""""""
+        if not self.use_killer_moves:
+            return False
+        killers = self.killer_moves.get(ply, [])
+        return any((self._moves_equal(move, killer) for killer in killers))
+
+    def _store_killer_move(self, move: Move, ply: int) -> None:
+        """"""Store a cutoff-producing move at one ply.""""""
+        if not self.use_killer_moves:
+            return
+        killers = self.killer_moves.setdefault(ply, [])
+        for existing in killers:
+            if self._moves_equal(move, existing):
+                return
+        killers.insert(0, move)
+        del killers[self.killer_slots:]
+        self.stats.killer_stores += 1
+
+    def _history_key(self, player: Player, move: Move) -> Tuple[Player, Hashable]:
+        """"""Create a player-specific history-table key.""""""
+        return (player, self.move_key(move))
+
+    def _get_history_score(self, player: Player, move: Move) -> int:
+        """"""Return the accumulated history score for a move.""""""
+        if not self.use_history_heuristic:
+            return 0
+        key = self._history_key(player, move)
+        return self.history_table.get(key, 0)
+
+    def _update_history(self, player: Player, move: Move, depth: int) -> None:
+        """"""
+        Reward a move that caused an alpha-beta cutoff.
+
+        Standard history bonus:
+
+        depthÂ²
+        """"""
+        if not self.use_history_heuristic:
+            return
+        safe_depth = max(1, int(depth))
+        bonus = safe_depth * safe_depth
+        key = self._history_key(player, move)
+        self.history_table[key] = self.history_table.get(key, 0) + bonus
+        self.stats.history_updates += 1
+
+    def get_history_score(self, player: Player, move: Move) -> int:
+        """"""
+        Public helper for inspecting one move's history score.
+        """"""
+        return self._get_history_score(player, move)
+
+    def get_history_entries(self) -> List[Tuple[Player, Hashable, int]]:
+        """"""
+        Return history entries sorted from strongest to weakest.
+        """"""
+        rows = [(player, move_key, score) for (player, move_key), score in self.history_table.items()]
+        rows.sort(key=lambda row: row[2], reverse=True)
+        return rows
+
+    def _order_moves(self, state: State, moves: Sequence[Move], root_player: Player, ply: int, transposition_move: Optional[Move]=None) -> List[Move]:
+        """"""
+        Order moves using all enabled heuristics.
+
+        Priority:
+
+        1. Transposition-table move
+        2. Previous principal-variation move
+        3. Killer move
+        4. History heuristic
+        5. PokÃ©mon-specific tactical score
+        """"""
+        ordered_moves = list(moves)
+        if not self.use_move_ordering or len(ordered_moves) <= 1:
+            return ordered_moves
+        pv_move: Optional[Move] = None
+        if ply < len(self._previous_iteration_pv):
+            pv_move = self._previous_iteration_pv[ply]
+        player_to_move = self.current_player(state)
+        scored_moves = []
+        for original_index, move in enumerate(ordered_moves):
+            priority = 0.0
+            if self._moves_equal(move, transposition_move):
+                priority += 10000000000.0
+            if self._moves_equal(move, pv_move):
+                priority += 1000000000.0
+            if self._is_killer_move(move, ply):
+                priority += 100000000.0
+                self.stats.killer_hits += 1
+            history_score = self._get_history_score(player_to_move, move)
+            if history_score > 0:
+                priority += history_score * self.history_multiplier
+                self.stats.history_hits += 1
+            if self.move_order_score is not None:
+                priority += float(self.move_order_score(state, move, root_player))
+            scored_moves.append((priority, -original_index, move))
+        scored_moves.sort(key=lambda item: (item[0], item[1]), reverse=True)
+        return [move for _, _, move in scored_moves]
+
+    def preview_move_order(self, state: State, root_player: Optional[Player]=None, ply: int=0) -> List[Move]:
+        """"""Return the order the engine would search.""""""
+        if root_player is None:
+            root_player = self.current_player(state)
+        legal_moves = self._safe_moves(state)
+        key = self.state_key(state)
+        transposition_move = self._find_transposition_move(key)
+        return self._order_moves(state=state, moves=legal_moves, root_player=root_player, ply=ply, transposition_move=transposition_move)
+
+    def _probe_transposition_table(self, key: Hashable, depth: int, alpha: float, beta: float) -> Optional[Tuple[float, List[Move]]]:
+        """"""Attempt to reuse a cached search result.""""""
+        if not self.use_transposition_table:
+            return None
+        entry = self.transposition_table.get(key)
+        if entry is None:
+            return None
+        if entry.depth < depth:
+            return None
+        self.stats.transposition_hits += 1
+        if entry.bound_type is BoundType.EXACT:
+            return (entry.score, list(entry.principal_variation))
+        if entry.bound_type is BoundType.LOWER_BOUND and entry.score >= beta:
+            self.stats.transposition_cutoffs += 1
+            return (entry.score, list(entry.principal_variation))
+        if entry.bound_type is BoundType.UPPER_BOUND and entry.score <= alpha:
+            self.stats.transposition_cutoffs += 1
+            return (entry.score, list(entry.principal_variation))
+        return None
+
+    def _store_transposition_entry(self, key: Hashable, depth: int, score: float, alpha_original: float, beta_original: float, best_line: List[Move]) -> None:
+        """"""Store a completed node result.""""""
+        if not self.use_transposition_table:
+            return
+        if score <= alpha_original:
+            bound_type = BoundType.UPPER_BOUND
+        elif score >= beta_original:
+            bound_type = BoundType.LOWER_BOUND
+        else:
+            bound_type = BoundType.EXACT
+        existing = self.transposition_table.get(key)
+        if existing is not None and existing.depth > depth:
+            return
+        best_move = best_line[0] if best_line else None
+        self.transposition_table[key] = TranspositionEntry(depth=depth, score=score, bound_type=bound_type, best_move=best_move, principal_variation=list(best_line))
+        self.stats.transposition_stores += 1
+
+    def _alpha_beta(self, state: State, depth: int, alpha: float, beta: float, root_player: Player, ply: int=0) -> Tuple[float, List[Move]]:
+        """"""
+        Search one position with all enabled optimizations.
+        """"""
+        self.stats.nodes += 1
+        if self.is_terminal(state):
+            self.stats.terminal_nodes += 1
+            return (float(self.evaluate_state(state, root_player)), [])
+        if depth <= 0:
+            self.stats.leaf_nodes += 1
+            return (float(self.evaluate_state(state, root_player)), [])
+        key = self.state_key(state)
+        cached_result = self._probe_transposition_table(key=key, depth=depth, alpha=alpha, beta=beta)
+        if cached_result is not None:
+            return cached_result
+        legal_moves = self._safe_moves(state)
+        if not legal_moves:
+            self.stats.leaf_nodes += 1
+            return (float(self.evaluate_state(state, root_player)), [])
+        transposition_move = self._find_transposition_move(key)
+        legal_moves = self._order_moves(state=state, moves=legal_moves, root_player=root_player, ply=ply, transposition_move=transposition_move)
+        alpha_original = alpha
+        beta_original = beta
+        player_to_move = self.current_player(state)
+        maximizing = player_to_move == root_player
+        if maximizing:
+            best_score = -math.inf
+            best_line: List[Move] = []
+            for move in legal_moves:
+                child_state = self.apply_move(state, move)
+                child_score, child_line = self._alpha_beta(state=child_state, depth=depth - 1, alpha=alpha, beta=beta, root_player=root_player, ply=ply + 1)
+                if child_score > best_score:
+                    best_score = child_score
+                    best_line = [move] + child_line
+                alpha = max(alpha, best_score)
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+                    self._store_killer_move(move, ply)
+                    self._update_history(player=player_to_move, move=move, depth=depth)
+                    break
+        else:
+            best_score = math.inf
+            best_line = []
+            for move in legal_moves:
+                child_state = self.apply_move(state, move)
+                child_score, child_line = self._alpha_beta(state=child_state, depth=depth - 1, alpha=alpha, beta=beta, root_player=root_player, ply=ply + 1)
+                if child_score < best_score:
+                    best_score = child_score
+                    best_line = [move] + child_line
+                beta = min(beta, best_score)
+                if alpha >= beta:
+                    self.stats.cutoffs += 1
+                    self._store_killer_move(move, ply)
+                    self._update_history(player=player_to_move, move=move, depth=depth)
+                    break
+        self._store_transposition_entry(key=key, depth=depth, score=best_score, alpha_original=alpha_original, beta_original=beta_original, best_line=best_line)
+        return (best_score, best_line)
+
+    def search_depth(self, state: State, depth: int, root_player: Optional[Player]=None, clear_table: bool=True, clear_killers: bool=True, clear_history: bool=True) -> SearchResult:
+        """"""Perform one fixed-depth search.""""""
+        self._validate_depth(depth)
+        if root_player is None:
+            root_player = self.current_player(state)
+        self.stats.reset()
+        if clear_table:
+            self.clear_transposition_table()
+        if clear_killers:
+            self.clear_killer_moves()
+        if clear_history:
+            self.clear_history_table()
+        self._previous_iteration_pv = []
+        start_time = time.perf_counter()
+        score, principal_variation = self._alpha_beta(state=state, depth=depth, alpha=-math.inf, beta=math.inf, root_player=root_player, ply=0)
+        elapsed = time.perf_counter() - start_time
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+        self.stats.depth_nodes[depth] = self.stats.nodes
+        self.stats.depth_times[depth] = elapsed
+        best_move = principal_variation[0] if principal_variation else None
+        self._principal_variation = principal_variation
+        return SearchResult(best_move=best_move, score=score, completed_depth=depth, principal_variation=principal_variation, stats=self.stats)
+
+    def iterative_deepening(self, state: State, max_depth: int, root_player: Optional[Player]=None, verbose: bool=True, clear_table: bool=True, clear_killers: bool=True, clear_history: bool=True) -> SearchResult:
+        """"""Search depth 1 through max_depth.""""""
+        self._validate_depth(max_depth)
+        if root_player is None:
+            root_player = self.current_player(state)
+        self.stats.reset()
+        if clear_table:
+            self.clear_transposition_table()
+        if clear_killers:
+            self.clear_killer_moves()
+        if clear_history:
+            self.clear_history_table()
+        self._previous_iteration_pv = []
+        overall_start = time.perf_counter()
+        best_move: Optional[Move] = None
+        best_score = float(self.evaluate_state(state, root_player))
+        best_line: List[Move] = []
+        total_nodes = 0
+        total_leaf_nodes = 0
+        total_terminal_nodes = 0
+        total_cutoffs = 0
+        total_tt_hits = 0
+        total_tt_stores = 0
+        total_tt_cutoffs = 0
+        total_killer_hits = 0
+        total_killer_stores = 0
+        total_history_hits = 0
+        total_history_updates = 0
+        depth_nodes: Dict[int, int] = {}
+        depth_times: Dict[int, float] = {}
+        completed_depth = 0
+        for depth in range(1, max_depth + 1):
+            self.stats.nodes = 0
+            self.stats.leaf_nodes = 0
+            self.stats.terminal_nodes = 0
+            self.stats.cutoffs = 0
+            self.stats.transposition_hits = 0
+            self.stats.transposition_stores = 0
+            self.stats.transposition_cutoffs = 0
+            self.stats.killer_hits = 0
+            self.stats.killer_stores = 0
+            self.stats.history_hits = 0
+            self.stats.history_updates = 0
+            depth_start = time.perf_counter()
+            score, principal_variation = self._alpha_beta(state=state, depth=depth, alpha=-math.inf, beta=math.inf, root_player=root_player, ply=0)
+            depth_elapsed = time.perf_counter() - depth_start
+            depth_nodes[depth] = self.stats.nodes
+            depth_times[depth] = depth_elapsed
+            total_nodes += self.stats.nodes
+            total_leaf_nodes += self.stats.leaf_nodes
+            total_terminal_nodes += self.stats.terminal_nodes
+            total_cutoffs += self.stats.cutoffs
+            total_tt_hits += self.stats.transposition_hits
+            total_tt_stores += self.stats.transposition_stores
+            total_tt_cutoffs += self.stats.transposition_cutoffs
+            total_killer_hits += self.stats.killer_hits
+            total_killer_stores += self.stats.killer_stores
+            total_history_hits += self.stats.history_hits
+            total_history_updates += self.stats.history_updates
+            completed_depth = depth
+            best_score = score
+            best_line = principal_variation
+            if principal_variation:
+                best_move = principal_variation[0]
+            self._previous_iteration_pv = list(principal_variation)
+            if verbose:
+                move_name = self.move_to_string(best_move) if best_move is not None else 'None'
+                pv_text = ' -> '.join((self.move_to_string(move) for move in principal_variation))
+                print(f'Depth {depth:>2} | Score {score:>10.2f} | Nodes {self.stats.nodes:>8,} | TT {self.stats.transposition_hits:>4,} | Killer {self.stats.killer_hits:>4,} | History {self.stats.history_hits:>4,} | Time {depth_elapsed:>8.4f}s | Best: {move_name}')
+                if pv_text:
+                    print(f'         PV: {pv_text}')
+        overall_elapsed = time.perf_counter() - overall_start
+        final_stats = SearchStats(nodes=total_nodes, leaf_nodes=total_leaf_nodes, terminal_nodes=total_terminal_nodes, cutoffs=total_cutoffs, transposition_hits=total_tt_hits, transposition_stores=total_tt_stores, transposition_cutoffs=total_tt_cutoffs, killer_hits=total_killer_hits, killer_stores=total_killer_stores, history_hits=total_history_hits, history_updates=total_history_updates, completed_depth=completed_depth, elapsed_seconds=overall_elapsed, depth_nodes=depth_nodes, depth_times=depth_times)
+        self.stats = final_stats
+        self._principal_variation = best_line
+        return SearchResult(best_move=best_move, score=best_score, completed_depth=completed_depth, principal_variation=best_line, stats=final_stats)
+
+    def get_principal_variation(self) -> List[Move]:
+        """"""Return a copy of the latest principal variation.""""""
+        return list(self._principal_variation)"
+src\engine\advanced_search.py,FUNCTION,search_for_time,640,"def search_for_time(self, state, seconds=1.0, verbose=False, max_depth=100, clear_table=True, clear_killers=True, clear_history=True):
+    """"""
+    Run iterative deepening until the time budget expires.
+
+    The deepest fully completed search result is returned.
+    Time is checked between completed depths.
+    """"""
+    if seconds <= 0:
+        raise ValueError('seconds must be greater than 0.')
+    if max_depth < 1:
+        raise ValueError('max_depth must be at least 1.')
+    timer = SearchTimeLimit(max_seconds=float(seconds))
+    timer.start()
+    if clear_table:
+        self.clear_transposition_table()
+    if clear_killers:
+        self.clear_killer_moves()
+    if clear_history:
+        self.clear_history_table()
+    best_result = None
+    for depth in range(1, max_depth + 1):
+        if timer.expired():
+            break
+        depth_start = time.perf_counter()
+        result = self.search_depth(state=state, depth=depth, clear_table=False, clear_killers=False, clear_history=False)
+        depth_elapsed = time.perf_counter() - depth_start
+        best_result = result
+        if verbose:
+            best_move_name = self.move_to_string(result.best_move) if result.best_move is not None else 'None'
+            print(f'Depth {depth:>2} | Score {result.score:>8.2f} | Nodes {result.stats.nodes:>6,} | Depth time {depth_elapsed:.4f}s | Elapsed {timer.elapsed():.4f}s | Remaining {timer.remaining():.4f}s | Best: {best_move_name}')
+        if timer.expired():
+            break
+    if best_result is None:
+        best_result = self.search_depth(state=state, depth=1, clear_table=False, clear_killers=False, clear_history=False)
+    self._principal_variation = list(best_result.principal_variation)
+    return best_result"
+src\engine\advanced_search.py,FUNCTION,search_depth,534,"def search_depth(self, state: State, depth: int, root_player: Optional[Player]=None, clear_table: bool=True, clear_killers: bool=True, clear_history: bool=True) -> SearchResult:
+        """"""Perform one fixed-depth search.""""""
+        self._validate_depth(depth)
+        if root_player is None:
+            root_player = self.current_player(state)
+        self.stats.reset()
+        if clear_table:
+            self.clear_transposition_table()
+        if clear_killers:
+            self.clear_killer_moves()
+        if clear_history:
+            self.clear_history_table()
+        self._previous_iteration_pv = []
+        start_time = time.perf_counter()
+        score, principal_variation = self._alpha_beta(state=state, depth=depth, alpha=-math.inf, beta=math.inf, root_player=root_player, ply=0)
+        elapsed = time.perf_counter() - start_time
+        self.stats.completed_depth = depth
+        self.stats.elapsed_seconds = elapsed
+        self.stats.depth_nodes[depth] = self.stats.nodes
+        self.stats.depth_times[depth] = elapsed
+        best_move = principal_variation[0] if principal_variation else None
+        self._principal_variation = principal_variation
+        return SearchResult(best_move=best_move, score=score, completed_depth=depth, principal_variation=principal_variation, stats=self.stats)"
+src\engine\timer.py,CLASS,SearchTimeLimit,10,"class SearchTimeLimit:
+    """"""High-resolution timer used by time-limited search.""""""
+
+    max_seconds: float
+    start_time: float | None = field(
+        default=None,
+        init=False,
+        repr=False,
+    )
+
+    def __post_init__(self) -> None:
+        self.max_seconds = float(self.max_seconds)
+
+        if self.max_seconds <= 0:
+            raise ValueError(
+                ""max_seconds must be greater than 0.""
+            )
+
+    def start(self) -> None:
+        """"""Start or restart the timer.""""""
+
+        self.start_time = time.perf_counter()
+
+    def _require_started(self) -> float:
+        if self.start_time is None:
+            raise RuntimeError(
+                ""The timer has not been started.""
+            )
+
+        return self.start_time
+
+    def elapsed(self) -> float:
+        """"""Return elapsed seconds.""""""
+
+        start_time = self._require_started()
+
+        return time.perf_counter() - start_time
+
+    def remaining(self) -> float:
+        """"""Return the remaining nonnegative time.""""""
+
+        return max(
+            0.0,
+            self.max_seconds - self.elapsed(),
+        )
+
+    def expired(self) -> bool:
+        """"""Return whether the time budget has expired.""""""
+
+        return self.elapsed() >= self.max_seconds"
+src\observation_adapter\policy_search_adapter.py,CLASS,PolicySearchEngineAdapter,12,"class PolicySearchEngineAdapter:
+    def __init__(
+        self,
+        policy_agent: Any,
+    ) -> None:
+        self.policy_agent = policy_agent
+
+    def search_depth(
+        self,
+        *,
+        state: BattleState,
+        depth: int,
+        clear_table: bool = True,
+    ) -> SearchResult:
+        legal_moves = get_current_legal_moves(
+            state
+        )
+
+        if not legal_moves:
+            return SearchResult(
+                best_move=None,
+                score=0.0,
+                completed_depth=depth,
+                principal_variation=[],
+                stats=SearchStats(),
+            )
+
+        policy_state = build_policy_state(
+            state,
+            legal_moves,
+        )
+
+        decision = self.policy_agent.choose_move(
+            state=policy_state,
+            legal_moves=(
+                policy_state[""policy_legal_moves""]
+            ),
+        )
+
+        selected_move = policy_state[
+            ""move_lookup""
+        ][decision.move]
+
+        return SearchResult(
+            best_move=selected_move,
+            score=float(decision.score),
+            completed_depth=depth,
+            principal_variation=[
+                selected_move
+            ],
+            stats=SearchStats(
+                nodes=1,
+            ),
+        )"
+src\observation_adapter\policy_search_adapter.py,FUNCTION,search_depth,19,"def search_depth(
+        self,
+        *,
+        state: BattleState,
+        depth: int,
+        clear_table: bool = True,
+    ) -> SearchResult:
+        legal_moves = get_current_legal_moves(
+            state
+        )
+
+        if not legal_moves:
+            return SearchResult(
+                best_move=None,
+                score=0.0,
+                completed_depth=depth,
+                principal_variation=[],
+                stats=SearchStats(),
+            )
+
+        policy_state = build_policy_state(
+            state,
+            legal_moves,
+        )
+
+        decision = self.policy_agent.choose_move(
+            state=policy_state,
+            legal_moves=(
+                policy_state[""policy_legal_moves""]
+            ),
+        )
+
+        selected_move = policy_state[
+            ""move_lookup""
+        ][decision.move]
+
+        return SearchResult(
+            best_move=selected_move,
+            score=float(decision.score),
+            completed_depth=depth,
+            principal_variation=[
+                selected_move
+            ],
+            stats=SearchStats(
+                nodes=1,
+            ),
+        )"
+src\ppo\ppo_policy_engine.py,FUNCTION,search_depth,504,"def search_depth(
+        self,
+        state: Any,
+        depth: int = 1,
+        clear_table: bool = True,
+    ) -> PPOPolicyResult:
+        """"""
+        Search-compatible entry point.
+
+        depth and clear_table are accepted for compatibility with the
+        existing PokemonBattleAgent interface.
+        """"""
+
+        del depth
+        del clear_table
+
+        return self.select_move(state)"

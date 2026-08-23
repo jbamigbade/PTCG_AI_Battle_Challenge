@@ -1,0 +1,1801 @@
+scenario_id,condition_id,transcript
+T52_S001__BASELINE,BASELINE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.87
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.87
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 20.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.98
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 7: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 8: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S001__HP_PRESSURE,HP_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.98
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.99
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 20.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 7: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 8: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 9: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state."
+T52_S002__BASELINE,BASELINE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.86
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 50.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.89
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.99
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 20.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 7: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S002__HP_PRESSURE,HP_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.96
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 50.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.99
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 50.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 40.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 40.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 20.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 7: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 8: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 9: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 10: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state."
+T52_S003__BASELINE,BASELINE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.87
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.87
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state."
+T52_S003__HP_PRESSURE,HP_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.97
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.97
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S003__ENERGY_PRESSURE,ENERGY_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state."
+T52_S004__BASELINE,BASELINE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.86
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 50.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.87
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.96
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state."
+T52_S004__HP_PRESSURE,HP_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.96
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 50.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.99
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S004__ENERGY_PRESSURE,ENERGY_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 50.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 30.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 80.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state."
+T52_S005__BASELINE,BASELINE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 30.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 7: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 30.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 8: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 9: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 10: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 11: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 12: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S005__HP_PRESSURE,HP_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 30.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 7: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 8: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 9: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 10: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 11: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 12: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 13: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 14: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 15: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 16: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 17: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 18: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 19: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 20: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 21: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 22: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 23: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 24: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 25: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 26: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 27: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 28: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 29: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 30: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: None
+Stop reason: Maximum turn limit reached."
+T52_S006__BASELINE,BASELINE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 40.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 30.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 30.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 7: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 8: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 9: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 10: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 11: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S006__HP_PRESSURE,HP_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 5: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 6: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 7: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 8: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 9: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 10: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 11: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 12: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 13: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 14: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 15: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 16: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 17: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 18: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 19: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 20: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 21: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 22: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 23: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 24: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 25: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 26: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 27: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 28: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 29: Opponent — Bulbasaur used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 30: Player — Meowth used Tuck Tail
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 60.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: None
+Stop reason: Maximum turn limit reached."
+T52_S007__BASELINE,BASELINE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.97
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S007__HP_PRESSURE,HP_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Quick Attack
+  Damage: 20.0
+  Search score: 0.97
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S007__ENERGY_PRESSURE,ENERGY_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 20.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 2: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 10.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 3: Opponent — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 10.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 4: Player — Bulbasaur used Bind Down
+  Damage: 10.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 20.0, Opponent: 0.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Winner: Player
+Stop reason: Battle reached a terminal state."
+T52_S008__BASELINE,BASELINE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 30.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 30.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 10.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S008__HP_PRESSURE,HP_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 25.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 5.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 5.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Charmander used Live Coal
+  Damage: 20.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 0.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: Opponent
+Stop reason: Battle reached a terminal state."
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,"======================================================================
+POKÉMON AI BATTLE TRANSCRIPT
+======================================================================
+Turn 1: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 2: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 3: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 4: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 5: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 6: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 7: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 8: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 9: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 10: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 11: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 12: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 13: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 14: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 15: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 16: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 17: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 18: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 19: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 20: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 21: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 22: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 23: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 24: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 25: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 26: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 27: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 28: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Turn 29: Player — Eevee used Ascension
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Opponent
+----------------------------------------------------------------------
+Turn 30: Opponent — Charmander used Pass
+  Damage: 0.0
+  Search score: 1.00
+  Search depth: 0
+  Nodes searched: 1
+  HP after move — Player: 50.0, Opponent: 80.0
+  Next side: Player
+----------------------------------------------------------------------
+Winner: None
+Stop reason: Maximum turn limit reached."

@@ -1,0 +1,9 @@
+{
+  "notebook": 30,
+  "policy_count": 4,
+  "agent_class_count": 1,
+  "factory_pattern": true,
+  "search_policy_available": true,
+  "ready_for_mixed_opponents": true,
+  "ready_for_self_play_integration": true
+}

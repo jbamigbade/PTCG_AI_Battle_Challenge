@@ -1,0 +1,3 @@
+source_condition_id,selected_move,decisions,source_scenarios,mirror_pairs,average_confidence,average_turn,average_acting_energy,condition_move_share
+BASELINE,Quick Attack,112,5,56,0.8574285714285714,3.7142857142857144,2.5,1.0
+HP_PRESSURE,Quick Attack,72,5,36,0.9430000000000001,2.3333333333333335,2.5,1.0

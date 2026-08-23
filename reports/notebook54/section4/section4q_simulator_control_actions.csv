@@ -1,0 +1,3 @@
+card_name,official_card_id,printed_card_name,expansion,collection_number,attack_order,action_name,normalized_action_name,printed_damage,base_damage,variable_damage,energy_symbol_count,attack_effect_summary,action_source,source_confirmed,is_control_action,simulator_action_available,missing_from_simulator,action_availability_status
+Bulbasaur,650,Bulbasaur,MEG,1,0,Pass,pass,,0,False,0,Simulator control action; not a printed Pokémon attack.,SIMULATOR_CONTROL_ACTION,True,True,True,False,SIMULATOR_CONTROL_ACTION_AVAILABLE
+Charmander,788,Charmander,PFL,11,0,Pass,pass,,0,False,0,Simulator control action; not a printed Pokémon attack.,SIMULATOR_CONTROL_ACTION,True,True,True,False,SIMULATOR_CONTROL_ACTION_AVAILABLE

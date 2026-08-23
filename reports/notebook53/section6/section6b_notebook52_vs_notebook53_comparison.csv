@@ -1,0 +1,211 @@
+scenario_id,condition_id,turn_number,current_side,active_card,legal_move_signature,legal_move_count,notebook52_raw_prediction,notebook52_selected_move,notebook52_raw_prediction_legal,notebook52_masking_changed_action,notebook53_raw_prediction,notebook53_raw_confidence,notebook53_raw_prediction_legal,notebook53_routed_move,notebook53_routing_reason,notebook53_model_used,notebook53_matches_notebook52_selection,notebook53_raw_masking_required,notebook53_routed_move_legal,action_state_type
+T52_S001__BASELINE,BASELINE,1.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.75,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__BASELINE,BASELINE,2.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.872,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S001__BASELINE,BASELINE,3.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.798,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__BASELINE,BASELINE,4.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.872,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S001__BASELINE,BASELINE,5.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.798,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__BASELINE,BASELINE,6.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.874,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S001__BASELINE,BASELINE,7.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__BASELINE,BASELINE,8.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.876,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S001__HP_PRESSURE,HP_PRESSURE,5.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.798,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__HP_PRESSURE,HP_PRESSURE,6.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.874,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S001__HP_PRESSURE,HP_PRESSURE,7.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__HP_PRESSURE,HP_PRESSURE,8.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.876,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,3.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.798,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,4.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,5.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.798,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,6.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,7.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,8.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.98,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,9.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,10.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.978,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S001__ENERGY_PRESSURE,ENERGY_PRESSURE,11.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__BASELINE,BASELINE,1.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.858,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S002__BASELINE,BASELINE,2.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.79,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__BASELINE,BASELINE,3.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.872,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S002__BASELINE,BASELINE,4.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.798,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__BASELINE,BASELINE,5.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.872,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S002__BASELINE,BASELINE,6.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__BASELINE,BASELINE,7.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.874,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S002__HP_PRESSURE,HP_PRESSURE,5.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.872,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S002__HP_PRESSURE,HP_PRESSURE,6.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__HP_PRESSURE,HP_PRESSURE,7.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.874,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,3.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,4.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.798,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,5.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,6.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,7.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,8.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,9.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.978,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,10.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,11.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.978,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S002__ENERGY_PRESSURE,ENERGY_PRESSURE,12.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S003__BASELINE,BASELINE,1.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.802,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S003__BASELINE,BASELINE,2.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.872,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S003__BASELINE,BASELINE,3.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S003__BASELINE,BASELINE,4.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.872,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S003__BASELINE,BASELINE,5.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S003__HP_PRESSURE,HP_PRESSURE,5.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S003__HP_PRESSURE,HP_PRESSURE,6.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.874,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S003__HP_PRESSURE,HP_PRESSURE,7.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S003__HP_PRESSURE,HP_PRESSURE,8.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.876,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S003__ENERGY_PRESSURE,ENERGY_PRESSURE,3.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S003__ENERGY_PRESSURE,ENERGY_PRESSURE,4.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S003__ENERGY_PRESSURE,ENERGY_PRESSURE,5.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S003__ENERGY_PRESSURE,ENERGY_PRESSURE,6.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S003__ENERGY_PRESSURE,ENERGY_PRESSURE,7.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S004__BASELINE,BASELINE,1.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.858,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S004__BASELINE,BASELINE,2.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.842,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S004__BASELINE,BASELINE,3.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.872,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S004__BASELINE,BASELINE,4.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S004__BASELINE,BASELINE,5.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.872,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S004__BASELINE,BASELINE,6.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S004__HP_PRESSURE,HP_PRESSURE,5.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.872,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S004__HP_PRESSURE,HP_PRESSURE,6.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S004__HP_PRESSURE,HP_PRESSURE,7.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.874,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S004__ENERGY_PRESSURE,ENERGY_PRESSURE,3.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S004__ENERGY_PRESSURE,ENERGY_PRESSURE,4.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S004__ENERGY_PRESSURE,ENERGY_PRESSURE,5.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S004__ENERGY_PRESSURE,ENERGY_PRESSURE,6.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S004__ENERGY_PRESSURE,ENERGY_PRESSURE,7.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S004__ENERGY_PRESSURE,ENERGY_PRESSURE,8.0,Player,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.846,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,1.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.356,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,2.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.562,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,3.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.318,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,4.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,5.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.306,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,6.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,7.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Tuck Tail,0.304,True,Tuck Tail,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,8.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,9.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Tuck Tail,0.324,True,Tuck Tail,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,10.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,11.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Tuck Tail,0.324,True,Tuck Tail,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__BASELINE,BASELINE,12.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__HP_PRESSURE,HP_PRESSURE,5.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.306,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__HP_PRESSURE,HP_PRESSURE,6.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__HP_PRESSURE,HP_PRESSURE,7.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Tuck Tail,0.304,True,Tuck Tail,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__HP_PRESSURE,HP_PRESSURE,8.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__HP_PRESSURE,HP_PRESSURE,9.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Tuck Tail,0.324,True,Tuck Tail,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__HP_PRESSURE,HP_PRESSURE,10.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,3.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.374,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,4.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,5.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.362,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,6.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,7.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.358,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,8.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,9.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,10.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,11.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,12.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,13.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,14.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,15.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,16.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,17.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,18.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,19.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,20.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,21.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,22.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,23.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,24.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,25.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,26.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,27.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,28.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,29.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,30.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,31.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S005__ENERGY_PRESSURE,ENERGY_PRESSURE,32.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,1.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.534,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,2.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.32,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,3.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,4.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.306,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,5.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,6.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Tuck Tail,0.304,True,Tuck Tail,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,7.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,8.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Tuck Tail,0.324,True,Tuck Tail,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,9.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,10.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Tuck Tail,0.324,True,Tuck Tail,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__BASELINE,BASELINE,11.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__HP_PRESSURE,HP_PRESSURE,5.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__HP_PRESSURE,HP_PRESSURE,6.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Tuck Tail,0.304,True,Tuck Tail,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__HP_PRESSURE,HP_PRESSURE,7.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__HP_PRESSURE,HP_PRESSURE,8.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Tuck Tail,0.324,True,Tuck Tail,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__HP_PRESSURE,HP_PRESSURE,9.0,Opponent,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.57,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,3.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.702,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,4.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.362,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,5.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,6.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.358,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,7.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,8.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,9.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,10.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,11.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,12.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,13.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,14.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,15.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,16.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,17.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,18.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,19.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,20.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,21.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,22.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,23.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,24.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,25.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,26.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,27.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,28.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,29.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,30.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,31.0,Opponent,Bulbasaur,pass,1.0,Ascension,Pass,False,True,Pass,0.7,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S006__ENERGY_PRESSURE,ENERGY_PRESSURE,32.0,Player,Meowth,tuck tail,1.0,Ascension,Tuck Tail,False,True,Pass,0.344,False,Tuck Tail,ONLY_LEGAL_MOVE,False,True,True,True,SINGLE_ACTION
+T52_S007__BASELINE,BASELINE,9.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.878,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S007__HP_PRESSURE,HP_PRESSURE,13.0,Opponent,Eevee,ascension | quick attack,2.0,Quick Attack,Quick Attack,True,False,Quick Attack,0.878,True,Quick Attack,LEGAL_MODEL_PREDICTION,True,True,False,True,MULTI_ACTION
+T52_S007__ENERGY_PRESSURE,ENERGY_PRESSURE,11.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.978,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S007__ENERGY_PRESSURE,ENERGY_PRESSURE,12.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S007__ENERGY_PRESSURE,ENERGY_PRESSURE,13.0,Opponent,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.978,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S007__ENERGY_PRESSURE,ENERGY_PRESSURE,14.0,Player,Bulbasaur,bind down,1.0,Ascension,Bind Down,False,True,Bind Down,0.796,True,Bind Down,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__BASELINE,BASELINE,2.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__BASELINE,BASELINE,3.0,Opponent,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.848,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__BASELINE,BASELINE,4.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__BASELINE,BASELINE,5.0,Opponent,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.848,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__BASELINE,BASELINE,6.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__BASELINE,BASELINE,7.0,Opponent,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.848,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__HP_PRESSURE,HP_PRESSURE,6.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.988,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__HP_PRESSURE,HP_PRESSURE,7.0,Opponent,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.848,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__HP_PRESSURE,HP_PRESSURE,8.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.98,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__HP_PRESSURE,HP_PRESSURE,9.0,Opponent,Charmander,live coal,1.0,Ascension,Live Coal,False,True,Live Coal,0.848,True,Live Coal,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,4.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.898,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,5.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.622,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,6.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.898,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,7.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.622,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,8.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.89,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,9.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,10.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,11.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,12.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,13.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,14.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,15.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,16.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,17.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,18.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,19.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,20.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,21.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,22.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,23.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,24.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,25.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,26.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,27.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,28.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,29.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,30.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,31.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,32.0,Player,Eevee,ascension,1.0,Ascension,Ascension,True,False,Ascension,0.888,True,Ascension,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION
+T52_S008__ENERGY_PRESSURE,ENERGY_PRESSURE,33.0,Opponent,Charmander,pass,1.0,Ascension,Pass,False,True,Pass,0.618,True,Pass,ONLY_LEGAL_MOVE,False,True,False,True,SINGLE_ACTION

@@ -1,0 +1,15 @@
+{
+  "status": "NOTEBOOK52_HANDOFF_VALIDATED",
+  "handoff_status": "READY_FOR_POLICY_OPTIMIZATION",
+  "battle_count": 24,
+  "policy_decisions": 210,
+  "masking_change_rate": 0.719047619047619,
+  "fallback_rate": 0.004761904761904762,
+  "average_confidence": 0.6558285714285714,
+  "primary_optimization_target": "Reduce legal-action masking dependence",
+  "weakest_player_card": "Eevee",
+  "weakest_condition": "HP_PRESSURE",
+  "validation_checks_passed": 22,
+  "validation_checks_failed": 0,
+  "next_stage": "MASKING_ERROR_ANALYSIS"
+}

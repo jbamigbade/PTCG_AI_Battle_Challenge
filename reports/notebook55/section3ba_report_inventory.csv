@@ -1,0 +1,8 @@
+report_name,report_path,exists,size_bytes
+expanded_case_results,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4\section4wf_expanded_case_results.csv,True,61041
+expanded_case_errors,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4\section4wf_expanded_case_errors.csv,True,99
+expanded_paired_results,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4\section4wf_expanded_paired_results.csv,True,29989
+variant_summary,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4\section4wf_variant_evaluation_summary.csv,True,728
+move_distribution,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4\section4wf_move_distribution_by_variant_and_side.csv,True,837
+score_cases,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4\section4whb_case_probability_scores.csv,True,45949
+counterfactual_cases,D:\02_AI_and_Data\Kaggle-AI-Agents\PTCG_AI_Battle_Challenge\reports\notebook54\section4\section4whe_counterfactual_case_results.csv,True,643346

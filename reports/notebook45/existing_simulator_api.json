@@ -1,0 +1,221 @@
+[
+  {
+    "file": "src\\simulator.py",
+    "exists": true,
+    "classes": [],
+    "functions": [
+      {
+        "name": "apply_move",
+        "signature": "battle_state, move"
+      }
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\battle_simulation.py",
+    "exists": true,
+    "classes": [
+      {
+        "name": "BattleTurnRecord",
+        "methods": [
+          {
+            "name": "as_dict",
+            "signature": "self"
+          }
+        ]
+      },
+      {
+        "name": "BattleSimulationResult",
+        "methods": [
+          {
+            "name": "turn_count",
+            "signature": "self"
+          },
+          {
+            "name": "as_dict",
+            "signature": "self"
+          }
+        ]
+      }
+    ],
+    "functions": [
+      {
+        "name": "determine_battle_winner",
+        "signature": "state"
+      },
+      {
+        "name": "simulate_ai_battle",
+        "signature": "initial_state, agent, search_depth=6, max_turns=20, verbose=True"
+      },
+      {
+        "name": "create_battle_transcript",
+        "signature": "simulation"
+      }
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\battle_state.py",
+    "exists": true,
+    "classes": [
+      {
+        "name": "PokemonState",
+        "methods": []
+      },
+      {
+        "name": "PlayerState",
+        "methods": []
+      },
+      {
+        "name": "BattleState",
+        "methods": [
+          {
+            "name": "__post_init__",
+            "signature": "self"
+          }
+        ]
+      }
+    ],
+    "functions": [],
+    "error": null
+  },
+  {
+    "file": "src\\battle_agent.py",
+    "exists": true,
+    "classes": [
+      {
+        "name": "PokemonBattleAgent",
+        "methods": [
+          {
+            "name": "__init__",
+            "signature": "self, engine"
+          },
+          {
+            "name": "choose_move",
+            "signature": "self, state, depth=6"
+          }
+        ]
+      }
+    ],
+    "functions": [],
+    "error": null
+  },
+  {
+    "file": "src\\legal_moves.py",
+    "exists": true,
+    "classes": [],
+    "functions": [
+      {
+        "name": "get_legal_moves",
+        "signature": "pokemon_state"
+      },
+      {
+        "name": "get_current_side_pokemon",
+        "signature": "battle_state"
+      },
+      {
+        "name": "get_current_legal_moves",
+        "signature": "battle_state"
+      }
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\adapters.py",
+    "exists": true,
+    "classes": [],
+    "functions": [
+      {
+        "name": "generate_moves_adapter",
+        "signature": "battle_state"
+      },
+      {
+        "name": "evaluate_state_adapter",
+        "signature": "battle_state, root_player"
+      },
+      {
+        "name": "current_player_adapter",
+        "signature": "battle_state"
+      },
+      {
+        "name": "terminal_state_adapter",
+        "signature": "battle_state"
+      },
+      {
+        "name": "pokemon_state_features",
+        "signature": "battle_state"
+      }
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\observation_adapter\\battle_state_adapter.py",
+    "exists": true,
+    "classes": [],
+    "functions": [
+      {
+        "name": "move_label",
+        "signature": "move"
+      },
+      {
+        "name": "numeric_move_value",
+        "signature": "move, *candidate_names, default=0.0"
+      },
+      {
+        "name": "build_policy_state",
+        "signature": "battle_state, legal_moves"
+      }
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\observation_adapter\\policy_search_adapter.py",
+    "exists": true,
+    "classes": [
+      {
+        "name": "PolicySearchEngineAdapter",
+        "methods": [
+          {
+            "name": "__init__",
+            "signature": "self, policy_agent"
+          },
+          {
+            "name": "search_depth",
+            "signature": "self, state, depth, clear_table=True"
+          }
+        ]
+      }
+    ],
+    "functions": [],
+    "error": null
+  },
+  {
+    "file": "src\\training\\self_play.py",
+    "exists": true,
+    "classes": [
+      {
+        "name": "SelfPlayRunSummary",
+        "methods": []
+      }
+    ],
+    "functions": [
+      {
+        "name": "run_self_play_session",
+        "signature": "match_factory, initial_state_factory, num_games, verbose=False"
+      }
+    ],
+    "error": null
+  },
+  {
+    "file": "src\\tournament\\runner.py",
+    "exists": true,
+    "classes": [],
+    "functions": [
+      {
+        "name": "run_two_agent_match",
+        "signature": "match, initial_state, verbose=False"
+      }
+    ],
+    "error": null
+  }
+]
