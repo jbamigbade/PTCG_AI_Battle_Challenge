@@ -1,6 +1,13 @@
 # Pokémon TCG AI Battle Challenge
 
+> **Portfolio Project:** End-to-end AI/ML engineering system for Pokémon TCG battle-agent development, combining supervised learning, PyTorch-based PPO reinforcement learning, battle simulation, explainability, robustness testing, tournament benchmarking, deployment engineering, and official-engine validation.
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![PyTorch](https://img.shields.io/badge/PyTorch-PPO%20%2F%20RL-red)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-Random%20Forest-orange)
+![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
+![Validation](https://img.shields.io/badge/Official%20Decisions-127%2F127%20Accepted-brightgreen)
 
 ## End-to-End AI Battle Agent, Machine Learning, Reinforcement Learning, Explainability, and Competition Deployment
 
@@ -12,6 +19,14 @@ This repository documents an end-to-end artificial intelligence project develope
 
 The project explores data-driven and agentic decision-making for the Pokémon Trading Card Game (PTCG), progressing from card-data engineering and battle-state representation through machine-learning policy development, reinforcement-learning components, explainability, robustness testing, tournament-scale evaluation, deployment adaptation, controlled battle validation, and final competition certification.
 
+## Project Highlights
+
+- Built an end-to-end AI battle-agent pipeline spanning data engineering, modeling, simulation, evaluation, and deployment.
+- Developed supervised ML policies with scikit-learn and PPO / reinforcement-learning components with PyTorch.
+- Completed a controlled **240-battle evaluation campaign with 0 runtime failures**.
+- Validated **127 / 127 sequential decisions** through the competition-engine interface.
+- Implemented model explainability, feature attribution, ablation analysis, robustness testing, calibration, and behavioral analysis.
+- Used SHA-256 validation, frozen artifacts, manifests, and isolated runtime tests to preserve certified deployment assets.
 
 
 ---
@@ -693,6 +708,4 @@ Pokémon and Pokémon Trading Card Game are trademarks of their respective owner
 
 
 This repository represents an independent competition and research project and is not an official product of The Pokémon Company.
-
-
 
