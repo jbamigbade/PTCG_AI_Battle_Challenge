@@ -584,6 +584,30 @@ The displayed feature-importance analysis represents the **64-feature developmen
 The controlled 61-feature adapter achieved a **61.0% win rate** in the Notebook 60 benchmark. For descriptive comparison, the evaluated baselines produced win rates of **75.0% for the Random Baseline, 50.0% for the Greedy Damage Baseline, and 58.0% for the Depth-6 Search Baseline**.
 
 These baseline results are reported as controlled experimental evidence and should not be interpreted as universal rankings of agent strength across arbitrary environments, matchups, or evaluation protocols.
+### Real-Engine Deployment Validation
+
+The frozen agent was subsequently exercised against the available competition engine in an isolated clean-room environment.
+
+![Real-engine observation validation](docs/images/real_engine_observation_validation.jpg)
+
+The competition engine successfully initialized a real battle and supplied the official observation structure to the agent. The agent returned a valid integer-list decision through the engine interface.
+
+![Real-engine self-play validation](docs/images/real_engine_self_play.jpg)
+
+A complete self-play battle reached a terminal engine state after **145 engine selections**. During the run, the validation harness checked decision type, required selection cardinality, and option-index legality before each engine selection.
+
+```text
+FULL REAL-ENGINE SELF-PLAY : PASS
+Terminal result            : 1
+Engine selections          : 145
+Decision type              : list[int]
+Legality checks            : PASS
+Engine cleanup             : PASS
+```
+
+This validation was performed after the competition artifact had been frozen and was used as deployment verification only. It did not retrain the model or modify the historical Kaggle submission.
+
+For the complete deployment-validation record, see [Official Engine Validation](docs/OFFICIAL_ENGINE_VALIDATION.md).
 
 ---
 
