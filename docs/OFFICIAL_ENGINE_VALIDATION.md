@@ -1,4 +1,4 @@
-﻿# Official Engine Validation
+# Official Engine Validation
 
 ## Purpose
 
@@ -17,8 +17,6 @@ Return type    : list
 Returned cards : 60
 All integers   : True
 Status         : PASS
-
-
 ```
 
 This confirmed that the agent returned a 60-card deck represented as integer card identifiers.

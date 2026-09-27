@@ -612,41 +612,27 @@ For the complete deployment-validation record, see [Official Engine Validation](
 ---
 
 ## Repository Structure
-PTCG\_AI\_Battle\_Challenge/
 
+```text
+PTCG_AI_Battle_Challenge/
 |
-
 |-- artifacts/        # Persisted notebook evidence and validation artifacts
-
 |-- data/             # Project data
-
 |-- docs/             # Portfolio documentation and visual evidence
-|   `-- images/       # Benchmark and explainability figures
-
+|   `-- images/       # Benchmark, explainability, and validation figures
 |-- models/           # Model-related project structure
-
 |-- notebooks/        # Experimental and development notebooks
-
 |-- outputs/          # Generated evaluation outputs
-
 |-- reports/          # Analysis and certification reports
-
 |-- scripts/          # Exported and reusable project scripts
-
 |-- src/              # Reusable project source code
-
-|-- submission/       # Competition deployment source structure|
-
+|-- submission/       # Competition deployment source structure
 |-- README.md
-
 |-- requirements.txt
-
 `-- .gitignore
-
-
+```
 
 Large competition reference files, local virtual environments, temporary files, selected model binaries, and certified archive backups may be intentionally excluded from GitHub.
-
 
 ## Quick Start
 
