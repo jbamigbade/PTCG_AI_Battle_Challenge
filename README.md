@@ -387,27 +387,59 @@ Importantly, this campaign was not interpreted as proof of universal policy supe
 ---
 ## Official-Engine Validation
 
+The completed agent was validated through the available competition-engine interface after the research and competition artifact had been frozen. These checks were used as deployment verification; they did **not** retrain the model or alter the historical competition submission.
 
+### Sequential Interface Validation
 
-The final deployment artifact was also exercised through the available competition-engine interface.
-
-
-
-The recorded validation completed a terminal battle with:
-
-
+The earlier packaged-agent validation completed a terminal battle through the expected interface with:
 
 ```text
-
 Accepted sequential decisions : 127 / 127
-
 Rejected decisions            : 0
-
-
-
-This provided end-to-end evidence that the packaged agent could participate through the expected competition interface.
 ```
 
+This established that the packaged agent could repeatedly return accepted decisions through the competition interface.
+
+### Clean-Room Real-Engine Self-Play
+
+A later isolated clean-room test exercised the agent directly against the available `cg.game` engine.
+
+The validation confirmed:
+
+- 60-card deck request returned successfully
+- All returned card IDs were integers
+- Official observation schema was accepted
+- `battle_start()` initialized a real engine battle
+- Agent decisions were returned as `list[int]`
+- Selection cardinality was checked against `minCount` and `maxCount`
+- Every selected index was checked against the available option range
+- Full self-play reached a terminal battle result
+- Terminal result: `1`
+- Engine selections executed before termination: `145`
+- `battle_finish()` completed successfully
+
+```text
+FULL REAL-ENGINE SELF-PLAY : PASS
+Terminal result            : 1
+Engine selections          : 145
+Decision type              : list[int]
+Legality checks            : PASS
+Engine cleanup             : PASS
+```
+
+### Frozen Agent Archive Fingerprint
+
+The locally preserved final agent archive used for this validation was:
+
+```text
+ptcg_final_agent.tar.gz
+SHA-256:
+980795BF6E6A4D70C6DF7D25616670D3606625303EBAE4304F2ECADB6FA80CC8
+```
+
+The archive fingerprint is recorded to make the validated local artifact identifiable. This post-certification validation should not be interpreted as a new Kaggle submission or as evidence that the historical competition submission was modified after submission.
+
+For the complete validation record, see [Official Engine Validation](docs/OFFICIAL_ENGINE_VALIDATION.md).
 ## Model Integrity and Reproducibility
 A major focus of the project was preserving validated assets and separating experimentation from certified deployment.
 
